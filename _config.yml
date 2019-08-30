@@ -1,0 +1,64 @@
+title: "Bundoora Scout Group"
+description: ""
+email: "info@bundoorascouts.org"
+encoding: utf-8
+
+#Outputting
+permalink: pretty
+markdown: kramdown
+highlighter: rouge
+timezone: "Australia/Melbourne"
+
+# Build settings
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: default
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: default
+      permalink: /:basename
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+
+# Includes
+include:
+  - _pages
+
+# Excludes
+exclude:
+  - LICENSE
+  - CNAME
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+ 
+ # Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+
+kramdown:
+  hard_wrap: false
+  input: GFM
+#  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+sass:
+  style: compressed

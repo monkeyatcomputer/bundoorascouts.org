@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+{% include header.html %}
+
+<div class="site-content">
+
+    <div class="container">
+
+        <!-- Site Title
+        ================================================== -->
+
+        <div class="mainheading" style="display:none;">
+            <h1 class="sitetitle">{{ site.title }}</h1>
+            <p class="lead">
+                {{ site.description }}
+            </p>
+        </div>
+
+
+        <!-- Content
+        ================================================== --> 
+        <div class="main-content">
+            {{ content }}
+        </div>
+
+    </div><!-- /.container --> 
+
+
+
+    <!-- Before Footer
+    ================================================== --> 
+    <div class="beforefooter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h3>Thinking About Joining Bundoora Scout Group?</h3>
+                    <p>New members are welcome to attend on section meeting nights with your first three nights free! Conditions apply.</p>
+                    <a class="btn btn-primary btn-lg" href="mailto:gl.bundoora@scoutsvictoria.com.au">Contact Us</a>
+                </div>
+                <div class="col-md-4 text-right footersocial">
+                    <h5>Connect with Us</h5>
+                    <a href="https://www.facebook.com/Bundoorascouts/"><i class="fa fa-facebook"></i></a>
+                    <a href="mailto:gl.bundoora@scoutsvictoria.com.au"><i class="fa fa-at"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+</div> <!-- /.site-content> -->
+{% include scripts.html %}
+</body>
+</html>
