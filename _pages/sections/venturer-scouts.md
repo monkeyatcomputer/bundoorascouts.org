@@ -1,9 +1,9 @@
 ---
 title: Venturers
-permalink: /sections/venturers
+permalink: /sections/venturer-scouts
 ---
 
-# Venturers
+# Venturer Scouts
 ## Teenagers 14-17 Years
 ### Meeting times: Not currently meeting
 
