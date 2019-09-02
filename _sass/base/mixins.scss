@@ -1,0 +1,22 @@
+// Mixins
+// Background Cover Mixin
+@mixin background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// Font Mixins
+@mixin serif-font {
+  font-family: 'Nunito Sans', sans-serif;
+}
+@mixin script-font {
+  font-family: 'Nunito Sans', sans-serif;
+}
+@mixin body-font {
+  font-family: 'Nunito Sans', sans-serif;
+}
+@mixin heading-font {
+  font-family: 'Nunito Sans', sans-serif;
+}

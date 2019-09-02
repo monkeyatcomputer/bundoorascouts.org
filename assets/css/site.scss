@@ -1,0 +1,24 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+// Core variables and mixins
+
+@import "base/variables";
+@import "base/mixins";
+
+// Global CSS
+@import "base/global";
+
+// Components
+@import "components/navbar.scss";
+@import "components/hero.scss";
+
+// Layout
+@import "layout/masthead";
+@import "layout/services";
+@import "layout/callout";
+@import "layout/portfolio";
+@import "layout/footer";
+
+// Overrides
+@import "base/bootstrap-overrides";
