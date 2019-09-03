@@ -1,5 +1,5 @@
 ---
-title: Venturers
+title: Venturer Scouts
 permalink: /sections/venturer-scouts
 ---
 

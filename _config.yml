@@ -1,6 +1,6 @@
 title: "Bundoora Scout Group"
 description: ""
-email: "info@bundoorascouts.org"
+email: "gl.bundoora@scoutsvictoria.com.au"
 encoding: utf-8
 
 #Outputting
@@ -9,23 +9,35 @@ markdown: kramdown
 highlighter: rouge
 timezone: "Australia/Melbourne"
 
+# Collections
+collections:
+  people:
+    output: true
+
 # Build settings
 defaults:
-  - scope:
+  - 
+    scope:
+      path: ""
+      type: people
+    values:
+      layout: text-page
+  - 
+    scope:
       path: ""
       type: posts
     values:
       layout: text-page
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: text-page
-      permalink: /:basename
-  - scope:
+  - 
+    scope:
       path: "assets/images"
     values:
       image: true
+  - 
+    scope:
+      path: ""
+    values:
+      layout: text-page
 
 # Includes
 include:

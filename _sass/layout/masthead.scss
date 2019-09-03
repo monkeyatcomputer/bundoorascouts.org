@@ -1,22 +1,25 @@
 .masthead {
-  min-height: 30rem;
+  min-height: 20rem;
   position: relative;
   display: table;
   width: 100%;
-  height: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  background: linear-gradient(90deg, fade-out($white, 0.9) 0%, fade-out($white, 0.9) 100%), url('../images/head.jpg');
+  padding-top: 12rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(90deg, fade-out($white, 0.9) 0%, fade-out($white, 0.9) 100%), url('../images/hero-1.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
+  text-align: center;
   h1 {
     font-size: 4rem;
     margin: 0;
     padding: 0;
+    text-shadow: 2px 2px 2px #3a3a3a;
   }
   @media (min-width: 992px) {
-    height: 100vh;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
     h1 {
       font-size: 5.5rem;
     }
