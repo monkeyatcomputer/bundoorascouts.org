@@ -4,7 +4,7 @@ permalink: /sections/cub-scouts
 ---
 
 # Cub Scouts
-## Boys & Girls 8-10 Years
+## Boys & Girls Aged 8-11 Years
 ### Meeting times: Monday 7:00pm – 8:30pm during school term
 
 Positive Development! The Cub Scout program is specifically designed to meet the developmental needs of 8 to 10 year old children. It provides opportunities for young people to develop and grow as individuals and as members of a team. Cub Scout activities are planned to cover a broad range of interests and topics to trigger their imagination and curiosity.

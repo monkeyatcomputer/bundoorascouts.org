@@ -4,7 +4,7 @@ permalink: /sections/joey-scouts
 ---
 
 # Joey Scouts
-## Boys & Girls 5-7 Years
+## Boys & Girls Aged 5-7 Years
 ### Meeting Times: Monday 5:30pm to 6:30pm during school term
 
 Joey Scouts is the youngest section of the Scouting movement. For Joey Scouts, life is an exciting adventure. They explore the wider world, stimulate their imagination and develop skills in team work.
