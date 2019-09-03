@@ -7,12 +7,13 @@
 	background-size: cover;
 	-o-background-size: cover;
 	.site-heading {
-		padding: 100px 0 50px;
+		padding-top: 12rem;
+		padding-bottom: 4rem;
 		color: white;
 		text-align: center;
 		h1 {
 			margin-top: 0;
-            font-size: 2em;
+            font-size: 3em;
             text-shadow: 2px 2px 2px #3a3a3a;
 		}
 		.subheading {
@@ -24,10 +25,11 @@
 		}
 	}
 	.post-heading {
-		padding: 100px 0 50px;
+		padding-top: 12rem;
+		padding-bottom: 4rem;
 		color: white;
 		h1 {
-            font-size: 2em;
+            font-size: 3em;
             text-shadow: 2px 2px 2px #3a3a3a;
 		}
 		.subheading {
@@ -49,12 +51,13 @@
 		}
 	}
 	.page-heading {
-		padding: 100px 0 50px;
+		padding-top: 12rem;
+		padding-bottom: 4rem;
 		color: white;
 		text-align: center;
 		h1 {
 			margin-top: 0;
-            font-size: 2em;
+            font-size: 3em;
             text-shadow: 2px 2px 2px #3a3a3a;
 		}
 		.subheading {
@@ -66,27 +69,36 @@
 		}
 	}
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
 	.intro-header {
 		.site-heading {
-			padding: 150px 0;
+			padding-top: 10rem;
+			padding-bottom: 8rem;
 			h1 {
-				font-size: 80px;
+				font-size: 5.5rem;
+			}
+			.subheading {
+				font-size: 3rem;
 			}
 		}
 		.post-heading {
-			padding: 150px 0;
+			padding-top: 10rem;
+			padding-bottom: 8rem;
 			h1 {
-				font-size: 55px;
+				font-size: 5.5rem;
 			}
 			.subheading {
-				font-size: 30px;
+				font-size: 3rem;
 			}
 		}
 		.page-heading {
-			padding: 150px 0;
+			padding-top: 10rem;
+			padding-bottom: 8rem;
 			h1 {
-				font-size: 80px;
+				font-size: 5.5rem;
+			}
+			.subheading {
+				font-size: 3rem;
 			}
 		}
 	}
