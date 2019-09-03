@@ -61,7 +61,6 @@ h6 {
 }
 
 /* Map */
-
 .map {
   height: 20rem;
 }
@@ -74,35 +73,6 @@ h6 {
 
 .map iframe {
   pointer-events: none;
-}
-
-// Scroll to top button
-.scroll-to-top {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-
-  display: none;
-
-  width: 50px;
-  height: 50px;
-
-  text-align: center;
-
-  color: white;
-  background: fade-out($gray-800, .5);
-
-  line-height: 45px;
-  &:focus,
-  &:hover {
-    color: white;
-  }
-  &:hover {
-    background: $gray-800;
-  }
-  i {
-    font-weight: 800;
-  }
 }
 
 hr.small {
