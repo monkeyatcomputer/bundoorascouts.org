@@ -1,6 +1,6 @@
 ---
-title: Our Leaders
-subHeading: The people that make it happen
+title: "Our Leaders"
+subHeading: ""
 permalink: /about-us/our-leaders
 layout: people
 ---

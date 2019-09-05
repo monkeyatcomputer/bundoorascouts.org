@@ -1,5 +1,6 @@
 ---
 title: Cub Scouts
+subHeading: "Do Your Best"
 permalink: /sections/cub-scouts
 ---
 
@@ -25,16 +26,16 @@ Cub Scouts activities include:
 Do Your Best
 
 ### Cub Scout Promise
-On my honour
-I promise that I will do my best
-To do my duty to my God, and
-To the Queen of Australia (or To Australia)
-To help other people
-To live by the Cub Scout Law
+On my honour\
+I promise that I will do my best\
+To do my duty to my God, and\
+To the Queen of Australia (or To Australia)\
+To help other people\
+To live by the Cub Scout Law\
 
 ### Cub Scout Law
-Cub Scouts are loyal and obedient
-Cub Scouts do not give in to themselves
+Cub Scouts are loyal and obedient\
+Cub Scouts do not give in to themselves\
 
 *The commencement for advancement in Sections may vary up to 6 months.*
 

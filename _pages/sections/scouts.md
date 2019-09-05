@@ -1,5 +1,6 @@
 ---
 title: Scouts
+subHeading: "Be Prepared"
 permalink: /sections/scouts
 ---
 
