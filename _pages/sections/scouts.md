@@ -18,24 +18,24 @@ Scout Troops usually meet every week to discuss their progress and work towards 
 Be Prepared
 
 ### Scouts Promise
-On my honour
-I promise that I will do my best
-To do my duty to my God, and
-To the Queen of Australia (or To Australia)
-To help other people
-To live by the Scout Law
+On my honour  
+I promise that I will do my best  
+To do my duty to my God, and  
+To the Queen of Australia (or To Australia)  
+To help other people  
+To live by the Scout Law  
 
 ### Scouts Law
-A Scout is trustworthy
-A Scout is loyal
-A Scout is helpful
-A Scout is friendly
-A Scout is cheerful
-A Scout is considerate
-A Scout is thrifty
-A Scout is courageous
-A Scout is respectful
-A Scout cares for the environment
+A Scout is trustworthy  
+A Scout is loyal  
+A Scout is helpful  
+A Scout is friendly  
+A Scout is cheerful  
+A Scout is considerate  
+A Scout is thrifty  
+A Scout is courageous  
+A Scout is respectful  
+A Scout cares for the environment  
 
 *The commencement for advancement in Sections may vary up to 6 months.*
 

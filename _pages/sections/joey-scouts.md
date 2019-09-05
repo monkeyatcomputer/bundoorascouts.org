@@ -25,18 +25,18 @@ Joey Scout activities include:
 * Making new friends
 
 ### Joey Scout Motto
-Help Other People\
+Help Other People  
 (HOP)
 
 ### Joey Scout Promise
-I promise\
-To do my best\
-To love my God\
-And be helpful\
+I promise  
+To do my best  
+To love my God  
+And be helpful  
 
 ### Joey Scout Law
-A Joey Scout cares\
-A Joey Scout shares\
+A Joey Scout cares  
+A Joey Scout shares  
 
 *The commencement for advancement in Sections may vary up to 6 months.*
 
