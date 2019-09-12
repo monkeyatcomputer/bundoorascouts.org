@@ -10,8 +10,8 @@
 @import "base/global";
 
 // Components
-@import "components/navbar.scss";
-@import "components/intro-header.scss";
+@import "components/navbar";
+@import "components/intro-header";
 
 // Layout
 @import "layout/masthead";
@@ -20,6 +20,7 @@
 @import "layout/sections";
 @import "layout/footer";
 @import "layout/team";
+@import "layout/parallax";
 
 // Overrides
 @import "base/bootstrap-overrides";

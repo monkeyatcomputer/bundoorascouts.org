@@ -37,6 +37,12 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
+  $('.parallax-background').jarallax({
+    speed: 0.5,
+    imgWidth: 1366,
+    imgHeight: 768
+    });
+
 })(jQuery); // End of use strict
 
 // Disable Google Maps scrolling

@@ -46,6 +46,11 @@ body {
   }
 }
 
+.empty-section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
 // Typography
 h1,
 h2,
@@ -80,4 +85,14 @@ hr.small {
 	margin: 15px auto;
 	border-width: 4px;
 	border-color: white;
+}
+.overlay {
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity: .5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
 }
