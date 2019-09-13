@@ -15,17 +15,31 @@ At Scouts you’ll become a member of a Scout Patrol and your Patrol will work w
 Scout Troops usually meet every week to discuss their progress and work towards achieving their goals. Scout meetings consist of team-building activities, playing games, developing specialised skills and knowledge, and planning for weekend adventures and campouts. At meetings Troop members share stories and experiences of their recent adventures and offer advice to one another. Scout Leaders teach safety lessons on how to use equipment correctly and inspire their Scouts to be the best individuals and team players that they can be.
 
 #### Scouts Motto
+
 Be Prepared
 
 #### Scouts Promise
-On my honour  
+
+**There are two versions of the Australian Scout Promise. Individuals may select which version they wish to make.**
+
+On my honour, I promise  
+To do my best,  
+To be true to my spiritual beliefs,  
+To contribute to my community and our world,  
+To help other people,  
+And to live by the Scout Law.
+
+**OR**
+
+On my Honour  
 I promise that I will do my best  
 To do my duty to my God, and  
-To the Queen of Australia (or To Australia)  
-To help other people  
-To live by the Scout Law  
+To the Queen of Australia,  
+To help other people,  
+And to live by the Scout Law. 
 
 #### Scouts Law
+
 A Scout is trustworthy  
 A Scout is loyal  
 A Scout is helpful  
@@ -38,6 +52,7 @@ A Scout is respectful
 A Scout cares for the environment  
 
 ### Award Scheme
+
 The Scout Award Scheme provides the main focus for Patrol and Troop activities and gives suitable recognition to Scouts for achievement.
 
 There are three levels of Target badges. To achieve the Pioneer, Explorer or Adventurer Badge, the Scout must complete the two compulsory Campcraft and Citizenship Target badges, plus one of the six elective Target badges at each level.
@@ -51,9 +66,11 @@ The Australian Scout Medallion is the highest award in the Scout Section. It is 
 * Achieve the Adventurer Cord.
 
 ### Fees
+
 Detailed information regarding fees is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}).
 
 ### Uniform
+
 Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available from on the Youth Badge Placement PDF.
 
 Detailed information regarding uniform requirements is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}).

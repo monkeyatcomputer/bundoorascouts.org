@@ -15,19 +15,21 @@ Venturer Scouts Meetings: Venturer Scout Units meet on a regular basis and Ventu
 
 Socialising is a must and strong bonds are formed through teamwork and a common desire to ensure that everyone becomes the best person they can be. If you’re a Venturer Scout your only limits are the ones that you set for yourself.
 
-* Adventurous Activities
-Exploring a cave, Learning to fly, Rock climbing, Abseiling, Prusiking.
-* Leadership Development
-Develop leadership and management skills, Prepare for your career.
-* Personal Growth
-Editing your own film, Discussing issues like marriage and drugs, Making a sculpture.
-* Community Involvement
-Gain your First Aid Certificate, Plant a Rainforest.
+ * Adventurous Activities
+  Exploring a cave, Learning to fly, Rock climbing, Abseiling, Prusiking.
+ * Leadership Development
+  Develop leadership and management skills, Prepare for your career.
+ * Personal Growth
+  Editing your own film, Discussing issues like marriage and drugs, Making a sculpture.
+ * Community Involvement
+  Gain your First Aid Certificate, Plant a Rainforest.
 
 #### Venturer Scout Motto
+
 Be Prepared
 
 #### Venturer Scout Promise
+
 On my honour
 I promise that I will do my best
 To do my duty to my God, and
@@ -36,6 +38,7 @@ To help other people
 To live by the Scout Law
 
 #### Venturer Scout Law
+
 A Scout is trustworthy
 A Scout is loyal
 A Scout is helpful
@@ -48,6 +51,7 @@ A Scout is respectful
 A Scout cares for the environment
 
 ### Award Scheme
+
 The Venturer Scout Award Scheme is designed to widen Venturers’ interests and knowledge, while challenging them at the same time. It assists in planning a balanced program based on the Aims and Methods of Scouting. The Award Scheme is not compulsory for Venturer Scouts, but those who do attempt it find they have a lot of fun while discovering new things.
 
 There are four main components to the Award Scheme. These consist of the Venturing Skills Award, the Venturer Award, the Endeavour Award and the Queen’s Scout Award. In addition, Venturers may earn a number of special badges depending on their interests.
@@ -57,9 +61,11 @@ Queen’s Scout Award: The Queen’s Scout Award is highly regarded in the commu
 To achieve this award you must be able to: Set a goal, Plan your progress towards that goal, Organise yourself and others, and Maintain the determination to complete the task while overcoming setbacks and difficulties.
 
 ### Fees
+
 Detailed information regarding fees is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}).
 
 ### Uniform
+
 Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings).
 
 Detailed information regarding uniform requirements is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}).
