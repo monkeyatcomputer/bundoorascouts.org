@@ -5,7 +5,7 @@ permalink: /about-scouting/parent-caregiver-information
 ---
 
 ## Welcome
-Congratulations on joining your local Scout Group!
+Congratulations on joining Bundoora Scout Group! If you haven't yet joined, that's ok. We hope the information on this page is helpful to you.
 
 Your child is now part of a global organisation which today has more than 50 million members.
 
@@ -18,6 +18,17 @@ Our Scout Groups are run by local families who help make Scouting the best possi
 In this Guide you’ll find some details about how Scouting works. In particular, there are some suggestions on how parents and caregivers can help their children get the most from their time in Scouting.
 
 Welcome to Scouting! We wish your family lots of fun, friendship, adventure, and safe times ahead.
+
+## Contents
+- [The benefits of Scouting](#the-benefits-of-scouting)
+- [What is Scouting?](#what-is-scouting-)
+- [What is the program?](#what-is-the-program-)
+- [What is the uniform?](#what-is-the-uniform-)
+- [What is the cost?](#what-is-the-cost-)
+- [Values](#values)
+  * [The Scout Law](#the-scout-law)
+  * [The Scout Promise](#the-scout-promise)
+  * [How we treat each other in Scouting](#how-we-treat-each-other-in-scouting)
 
 ## The benefits of Scouting
 
