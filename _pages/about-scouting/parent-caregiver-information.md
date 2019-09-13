@@ -83,7 +83,7 @@ Scouts Australia is currently transitioning toward a new program, One Program fo
 
 # What is the uniform?
 
-The basic uniform is the shirt and scarf (which is usually held together by a woggle, often a piece of leather). The shirt is available from The Scout Shop (scoutshop.com.au) for A$36.95 (incl-GST) for Joeys to A$51.95 (incl-GST) for Rovers. The scarf is usually supplied by your Group. (Every Scout Group is proud of its own colours.)
+The basic uniform is the shirt and scarf (which is usually held together by a woggle, often a piece of leather). The shirt is available from [The Scout Shop](http://scoutshop.com.au/) for A$36.95 (incl-GST) for Joeys to A$51.95 (incl-GST) for Rovers. The scarf is usually supplied by your Group. (Every Scout Group is proud of its own colours.)
 
 Check with your Leader if you also need to order a woggle A$3.95 (incl-GST) and belt A$14.95 (incl-GST).
 
