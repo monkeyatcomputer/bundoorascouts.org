@@ -6,7 +6,7 @@ permalink: /sections/scouts
 
 ## Scouts
 ### Boys & Girls Aged 11-14 Years
-#### Meeting times: Wednesday 7:00pm – 9:00pm during school term
+#### Meeting Time: Wednesday 7:00pm – 9:00pm during school term
 
 "Action Plus" is the best way to describe the life of a Scout. Scouts have the opportunity to experience numerous adventures. Many discover they have a special interest in one or more of the extensive range of activities and interests available in Scouting. They are able to follow these through with the help of the Scout Leaders and fellow Patrol Members. Scouting is a constant round of adventure, abseiling, flying, hiking, camping, canoeing and fishing. Importantly, with the help and support of professionally trained Scout Leaders, Scouts not only face the action, but they learn to do it safely.
 
@@ -37,10 +37,6 @@ A Scout is courageous
 A Scout is respectful  
 A Scout cares for the environment  
 
-*The commencement for advancement in Sections may vary up to 6 months.*
-
-Scouts may commence transition (Link Badge) any time after their 14th birthday and have progressed to Venturer Scouts by the time they are 15 years of age. Extensions beyond age range may be granted in accordance with the Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
-
 ### Award Scheme
 The Scout Award Scheme provides the main focus for Patrol and Troop activities and gives suitable recognition to Scouts for achievement.
 
@@ -55,7 +51,7 @@ The Australian Scout Medallion is the highest award in the Scout Section. It is 
 * Achieve the Adventurer Cord.
 
 ### Fees
-Detailed information regarding fees is provided on the Parent Information Page.
+Detailed information regarding fees is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}).
 
 ### Uniform
 Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available from on the Youth Badge Placement PDF.
@@ -75,6 +71,10 @@ From Scouts Victoria: The style of clothing to be worn below the waist should be
 These occasions are defined as: Awards Ceremonies e.g. Queen Scout’s, BP Awards, Leader Awards etc.; Government House; ANZAC Day; Any public event; Jamborees, Moots, Ventures etc.; Interstate and overseas travel; Youth Forums and National Youth Council.
 
 Navy blue, grey slacks, knee length shorts or skirts may be worn for Group meetings. Neat, practical footwear is to be worn. Individual choice of black or brown shoes; boots or joggers.
+
+**The commencement for advancement in Sections may vary up to 6 months.**
+
+Scouts may commence transition (Link Badge) any time after their 14th birthday and have progressed to Venturer Scouts by the time they are 15 years of age. Extensions beyond age range may be granted in accordance with the Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
 
 **All Members should dress appropriately for the type of activity in which they are participating.**
 

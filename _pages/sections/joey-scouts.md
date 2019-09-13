@@ -6,7 +6,7 @@ permalink: /sections/joey-scouts
 
 ## Joey Scouts
 ### Boys & Girls Aged 5-7 Years
-#### Meeting Times: Monday 5:30pm to 6:30pm during school term
+#### Meeting Time: Monday 5:30pm to 6:30pm during school term
 
 Joey Scouts is the youngest section of the Scouting movement. For Joey Scouts, life is an exciting adventure. They explore the wider world, stimulate their imagination and develop skills in team work.
 
@@ -15,7 +15,6 @@ The Joey Scout Mob meets once a week for approximately 1 to 1.5 hours under the 
 Joey Scout activities include:
 * Playing new games
 * Learning how to make craft projects
-* Going on exciting outings
 * Learning new songs
 * Dressing up
 * Storytelling, miming, and acting
@@ -32,15 +31,11 @@ Help Other People
 I promise  
 To do my best  
 To love my God  
-And be helpful  
+And be helpful
 
 #### Joey Scout Law
 A Joey Scout cares  
 A Joey Scout shares  
-
-*The commencement for advancement in Sections may vary up to 6 months.*
-
-Joey Scouts may commence transition (Link Badge) any time after their 7th birthday and have progressed to Cub Scouts by their 8th birthday. Extensions beyond age range may be granted in accordance with the Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
 
 ### Award Scheme
 There is no award scheme for Joey Scouts however there are several participation challenge badges available that Joeys can earn as a Mob. These badges are built into the weekly programs, and cover special activities including:
@@ -57,7 +52,7 @@ The aim of this challenge is to allow older Joey Scouts to gain a greater unders
 The challenge requires the Joey Scout to complete certain elements, such as research and discussion with their parents and Leaders, away from the Mob meetings. The Joey will also be required to give a presentation to the Mob on completion of the task.
 
 ### Fees
-Detailed information regarding fees is provided on the Parent Information Page
+Detailed information regarding fees is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}).
 
 ### Uniform
 Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available from on the Youth Badge Placement PDF.
@@ -80,6 +75,10 @@ Navy blue, grey slacks, knee length shorts or skirts may be worn for Group meeti
 
 All Members should dress appropriately for the type of activity in which they are participating.
 
-**New members are requested to E-mail our Group Leader prior to attending a meeting night.**
+**The commencement for advancement in Sections may vary up to 6 months.**
+
+Joey Scouts may commence transition (Link Badge) any time after their 7th birthday and have progressed to Cub Scouts by their 8th birthday. Extensions beyond age range may be granted in accordance with the Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
+
+**New members are requested to [contact our Group Leader]({{ site.baseurl }}{% link _pages/contact-us.md %}) prior to attending a meeting night.**
 
 To join the Bundoora Scout Group’s Joey Mob please [contact our Group Leader]({{ site.baseurl }}{% link _pages/contact-us.md %}).
