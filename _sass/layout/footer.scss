@@ -4,7 +4,7 @@ footer.footer {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	background-color: #171e27;
-	padding: 30px 0px 30px 0;
+	padding: 3rem 0;
 	a {
 		color: inherit;
 		&:hover {
@@ -19,8 +19,8 @@ footer.footer {
   }
   
   .footer-widget {
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     font-size: 15px;
     h5.title {
       font-size: 18px;
@@ -46,7 +46,7 @@ footer.footer {
 }
 
 .copyright {
-	padding-top: 1.5rem;
+	padding-top: 1rem;
 	font-size: 0.9em;
 	a {
 		color: #eee;
@@ -59,11 +59,6 @@ footer.footer {
 @media(max-width:575.98px) {
   footer.footer {
     text-align: center;
-
-    .footer-widget {
-      margin-bottom: 1rem;
-      margin-top: 1rem;
-      font-size: 15px;
-    }
+    padding: 1rem 0;
   }
 }
