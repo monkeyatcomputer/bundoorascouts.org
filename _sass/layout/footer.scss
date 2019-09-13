@@ -59,5 +59,11 @@ footer.footer {
 @media(max-width:575.98px) {
   footer.footer {
     text-align: center;
+
+    .footer-widget {
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      font-size: 15px;
+    }
   }
 }
