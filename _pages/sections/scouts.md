@@ -56,21 +56,9 @@ Detailed information regarding fees is provided on the [Parent and Caregiver Inf
 ### Uniform
 Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available from on the Youth Badge Placement PDF.
 
-Parents and/or guardians are required to purchase a uniform shirt prior to their youth member being invested.
+Detailed information regarding uniform requirements is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}).
 
-The current price for a Scout button-up shirt is $44.95. These shirts are available from size 10 to 22. Size Charts are available from The Scout Shop website (see link below). Belts are available in three sizes; 80cm, 120cm and 160cm, with all sizes priced at $14.95.
-
-Prices are current as at 28th of August 2017. These prices are subject to change; please confirm current pricing prior to ordering.
-
-Scarves, woggles, shirt badges and Record Books are provided from Section funds upon investiture.
-
-Parents and/or guardians will be required to replace any of these items at their own expense if lost or damaged.
-
-From Scouts Victoria: The style of clothing to be worn below the waist should be tailored slacks or skirt; however, the colour requirement is that these garments for all official occasions and functions should be black or Navy blue.
-
-These occasions are defined as: Awards Ceremonies e.g. Queen Scout’s, BP Awards, Leader Awards etc.; Government House; ANZAC Day; Any public event; Jamborees, Moots, Ventures etc.; Interstate and overseas travel; Youth Forums and National Youth Council.
-
-Navy blue, grey slacks, knee length shorts or skirts may be worn for Group meetings. Neat, practical footwear is to be worn. Individual choice of black or brown shoes; boots or joggers.
+*All Members should dress appropriately for the type of activity in which they are participating.*
 
 **The commencement for advancement in Sections may vary up to 6 months.**
 
