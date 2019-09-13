@@ -13,9 +13,9 @@ Over the past 110 years more than two billion young people have benefited from t
 
 In Victoria there are Scout Groups like yours in 400 local communities.
 
-Our Scout Groups are run by local families who help make Scouting the best possible experience for their children.
+Bundoora Scout Group is run by [local families]({{ site.baseurl }}{% link _pages/about-us/our-leaders.md %}) who help make Scouting the best possible experience for their children.
 
-In this Guide you’ll find some details about how Scouting works. In particular, there are some suggestions on how parents and caregivers can help their children get the most from their time in Scouting.
+In this guide you’ll find some details about how Scouting works. In particular, there are some suggestions on how parents and caregivers can help their children get the most from their time in Scouting.
 
 Welcome to Scouting! We wish your family lots of fun, friendship, adventure, and safe times ahead.
 

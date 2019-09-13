@@ -2,6 +2,7 @@ title: "Bundoora Scout Group"
 description: ""
 email: "gl.bundoora@scoutsvictoria.com.au"
 encoding: utf-8
+url: "https://bundoorascouts.org"
 
 #Outputting
 permalink: pretty
@@ -22,6 +23,7 @@ defaults:
       type: people
     values:
       layout: text-page
+      sitemap: false
   - 
     scope:
       path: ""
