@@ -3,9 +3,9 @@ title: Venturer Scouts
 permalink: /sections/venturer-scouts
 ---
 
-# Venturer Scouts
-## Teenagers Aged 14-17 Years
-### Meeting times: Not currently meeting
+## Venturer Scouts
+### Teenagers Aged 14-17 Years
+#### Meeting times: Not currently meeting
 
 Life as a Venturer Scout: Venturer Scouts never turn down a challenge, in fact, they make their own! Scaling a 30m rock-face or abseiling into caves may frighten most people but Venturer Scouts face the challenge head on and then go white water kayaking!
 
@@ -24,10 +24,10 @@ Editing your own film, Discussing issues like marriage and drugs, Making a sculp
 * Community Involvement
 Gain your First Aid Certificate, Plant a Rainforest.
 
-### Venturer Scout Motto
+#### Venturer Scout Motto
 Be Prepared
 
-### Venturer Scout Promise
+#### Venturer Scout Promise
 On my honour
 I promise that I will do my best
 To do my duty to my God, and
@@ -35,7 +35,7 @@ To the Queen of Australia (or To Australia)
 To help other people
 To live by the Scout Law
 
-### Venturer Scout Law
+#### Venturer Scout Law
 A Scout is trustworthy
 A Scout is loyal
 A Scout is helpful
@@ -51,7 +51,7 @@ A Scout cares for the environment
 
 Venturer Scouts may commence the transition (Link Badge) to Rover Scouts at 17.5 years, and have progressed by their 18th birthday. Extensions beyond age range may be granted in accordance with The Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
 
-## Award Scheme
+### Award Scheme
 The Venturer Scout Award Scheme is designed to widen Venturers’ interests and knowledge, while challenging them at the same time. It assists in planning a balanced program based on the Aims and Methods of Scouting. The Award Scheme is not compulsory for Venturer Scouts, but those who do attempt it find they have a lot of fun while discovering new things.
 
 There are four main components to the Award Scheme. These consist of the Venturing Skills Award, the Venturer Award, the Endeavour Award and the Queen’s Scout Award. In addition, Venturers may earn a number of special badges depending on their interests.
@@ -60,10 +60,10 @@ Queen’s Scout Award: The Queen’s Scout Award is highly regarded in the commu
 
 To achieve this award you must be able to: Set a goal, Plan your progress towards that goal, Organise yourself and others, and Maintain the determination to complete the task while overcoming setbacks and difficulties.
 
-## Fees
+### Fees
 Detailed information regarding fees is provided on the Parent Information Page
 
-## Uniform
+### Uniform
 Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available from on the Youth Badge Placement PDF.
 
 Parents and/or guardians are required to purchase a uniform shirt prior to their youth member being invested.
@@ -86,4 +86,4 @@ All Members should dress appropriately for the type of activity in which they ar
 
 **New members are requested to E-mail our Group Leader prior to attending a meeting night.**
 
-To join the Bundoora Scout Group please E-mail our Group Leader gl.bundoora@scoutsvictoria.com.au
+To join the Bundoora Scout Group please [contact our Group Leader]({{ site.baseurl }}{% link _pages/contact-us.md %}).
