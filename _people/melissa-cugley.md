@@ -1,6 +1,6 @@
 ---
-title: Marth Dean
+title: Melissa Cugley
 role: Assistant Joey Scouts Leader
-alias: "Koala"
+alias: "Eagle"
 section: joey-scouts
 ---

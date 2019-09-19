@@ -1,6 +1,6 @@
 ---
-title: Kristy Parr
+title: Kirsty Parr
 role: Scout Leader
-alias: ""
+alias: "Eagle"
 section: scouts
 ---

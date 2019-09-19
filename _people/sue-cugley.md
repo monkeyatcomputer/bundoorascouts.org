@@ -1,6 +1,6 @@
 ---
 title: Sue Cugley
 role: Joey Scouts Leader
-alias: ""
+alias: "Platypus"
 section: joey-scouts
 ---
