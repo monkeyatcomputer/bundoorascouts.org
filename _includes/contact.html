@@ -1,0 +1,60 @@
+<form id="contactForm" action="https://formspree.io/{{include.email}}" name="sentMessage" novalidate="novalidate" method="POST">
+    <div class="row justify-content-center">
+        <div class="col-md-6 card">
+            <h5>Please contact me...</h5>
+            <div class="form-group">
+                <input class="form-control" id="name" name="name" type="text" placeholder="Name *" required="required" data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="email" name="email" type="email" placeholder="Email *" required="required" data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="phone" name="phone" type="tel" placeholder="Phone Number *" required="required" data-validation-required-message="Please enter your phone number.">
+                <p class="help-block text-danger"></p>
+            </div>
+            {%- case include.section -%}
+                {% when 'HallHire' %}
+                <input type="hidden" name="sectionHallHire" value="Hall Hire">
+                {% else %}
+            <h5>About...</h5>
+            <div class="form-check">
+                <input class="form-check-input" name="sectionJoeys" type="checkbox" id="sectionJoeys" value="Joey Scouts - 5 to 7 Years">
+                <label for="sectionJoeys"> Joey Scouts - 5 to 7 Years</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" name="sectionCubs" type="checkbox" id="sectionCubs" value="Cub Scouts - 8 to 10 Years">
+                <label for="sectionCubs"> Cub Scouts - 8 to 10 Years</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" name="sectionScouts" type="checkbox" id="sectionScouts" value="Scouts - 10 to 14 Years">
+                <label for="sectionScouts"> Scouts - 10 to 14 Years</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" name="sectionVenturers" type="checkbox" id="sectionVenturers" value="Venturer Scouts - 14 to 17 Years">
+                <label for="sectionVenturers"> Venturer Scouts - 14 to 17 Years</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" name="sectionLeaders" type="checkbox" id="sectionLeaders" value="Leaders and Adult Members">
+                <label for="sectionLeaders"> Leaders and Adult Members</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" name="sectionHallHire" type="checkbox" id="sectionHallHire" value="Hall Hire">
+                <label for="sectionHallHire"> Hall Hire</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" name="sectionOther" type="checkbox" id="sectionOther" value="Other">
+                <label for="sectionOther"> Other</label>
+            </div>
+            {% endcase %}
+            <h5>Comments?</h5>
+            <div class="form-group">
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comments" data-validation-required-message="Any additional comments?"></textarea>
+                <p class="help-block text-danger"></p>
+            </div>
+            <div id="success"></div>
+            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+        </div>
+    </div>
+</form>

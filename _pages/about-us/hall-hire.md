@@ -19,3 +19,5 @@ Hire of our hall is subject to the following conditions:
 ## Enquire
 
 To enquire about hiring our hall, fill in your details below. This form is the first step in the hall hire process and should be submitted at least two weeks prior to when the hall is required. This must be completed if you are wishing to hire our Scout Hall.
+
+{% include contact.html email=site.email section='HallHire' %}
