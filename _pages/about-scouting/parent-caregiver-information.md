@@ -21,14 +21,15 @@ Welcome to Scouting! We wish your family lots of fun, friendship, adventure, and
 
 ## Contents
 - [The benefits of Scouting](#the-benefits-of-scouting)
-- [What is Scouting?](#what-is-scouting-)
-- [What is the program?](#what-is-the-program-)
-- [What is the uniform?](#what-is-the-uniform-)
-- [What is the cost?](#what-is-the-cost-)
+- [What is Scouting?](#what-is-scouting)
+- [What is the program?](#what-is-the-program)
+- [What is the uniform?](#what-is-the-uniform)
+- [What is the cost?](#what-is-the-cost)
 - [Values](#values)
   * [The Scout Law](#the-scout-law)
   * [The Scout Promise](#the-scout-promise)
   * [How we treat each other in Scouting](#how-we-treat-each-other-in-scouting)
+- [Our commitment to child protection](#our-commitment-to-child-protection)
 
 ## The benefits of Scouting
 
@@ -172,3 +173,83 @@ We all have rights and we all have responsibilities. These include:
 | To have fun | We have fun in Scouting but that must not impact negatively on others. |
 | To be safe | We don’t harass others, physically or verbally or online. Or let others do this. |
 
+## Our commitment to child protection
+
+Scouts Victoria is a Child Safe organisation. We take a zero-tolerance approach to any form of abuse or neglect. We also celebrate and value diversity amongst our members, regardless of their gender, sexuality, race, religion, or ability.
+
+Scouts Victoria is dedicated to ensuring that we develop the appropriate culture and supportive environment to make Scouting a safe place for young people.
+
+Here are some of the things that we do to make our organisation safe for children:
+
+Every adult member (anyone registered as a member and over the age of 18) is required to hold a Working with Children Check (WWCC). This includes our volunteer Leaders, Adult Helpers, Rover Scouts and staff. Key office bearer roles with access to information are also required to hold a Working with Children Check.
+
+In addition, all Leaders and Adult Helpers are required to undergo a National Police Records Check every three years, and, when applying for membership, must provide three referees, even if they are already a member of Scouting. Referees are asked about the applicant’s suitability for the role.
+
+Our Adult Members must also uphold our Code of Ethics, Code of Conduct and our Child Safe Scouting Commitment. Any breach of these codes can result in a termination of membership. Our adult members must review and reaffirm their commitment to these codes every 12 months.
+
+All adult members are required to undertake training, including training in Child Safe practices, so they know what to do if a young person discloses abuse, harm or neglect, and how to adequately support the child or young person. Child Safe training has to be renewed every three years.
+
+Other aspects of Child Safe Scouting include:
+ * 'Two adult leadership' – At least two adults should be present when working with youth. In some cases, more are required.
+ * 'Within sight, out of hearing' – Adults are expected to avoid any situation where they are alone with a child, except where strictly necessary. When a one-on-one  conversation is necessary this should be in sight, but out of hearing.
+
+We empower our young people through Youth Leading and Adult Supporting. Youth members are active participants in decision-making in Scouting. This encourages them to have confidence that they will be heard.
+
+Any reports of child abuse, harm or neglect are taken seriously and dealt with promptly, reported to relevant authorities, and corrective action undertaken.
+
+The safety of our members is our highest priority. It is everyone’s responsibility to ensure this.
+
+### How to report
+Anyone can report any incident of unacceptable behaviour to our Child Safety Team immediately on 1800 870 772 (24 hours a day, 7 days a week). Or email us at <childsafe@scoutsvictoria.com.au>.
+
+The safety of our members is our highest priority. It is everyone’s responsibility to ensure this.
+
+To find out more about how we create a Child Safe organisation, visit [Child Safe Scouting](https://scoutsvictoria.com.au/join-the-adventure/child-safe-scouting/) on the [Scouts Victoria](https://scoutsvictoria.com.au/) site.
+
+## Unacceptable behaviours
+
+It is important that the young people in our care are safe, and that they feel safe.
+
+It is also important that adults are safe.
+
+The following behaviours are unacceptable by Adults in Scouting.
+
+ * Any form of physical, emotional, psychological, sexual, cultural, racial or religious abuse
+ * Entering an area where children are changing or showering, or entering youth members’ tents or sleeping areas on camp when young people are in bed (without a valid reason, such as an emergency)
+ * Transporting an individual youth member alone (unless their own child, or in an emergency)
+ * Communicating one-on-one with youth members outside of Scouts through text messaging or via social media
+ * Developing special relationships, including one-on-one catch up sessions for missed Scouting activities
+ * Distributing inappropriate materials via any channel
+ * Engaging in discussions with young people that are not age-appropriate
+ * Encouraging the use or consumption of alcohol, smoking, or use of illicit substances by youth members
+ * Being under the influence of alcohol or illicit substances while undertaking duties as an Adult in Scouting
+ * Behaving towards a youth member in a manner that makes them uncomfortable
+ * Breaching the Scouts Australia Code of Conduct.
+
+Adults in Scouting also commit to our Code of Ethics.
+
+Anyone can report any incident of unacceptable behaviour to our Child Safety Team immediately on 1800 870 772 (24 hours a day, 7 days a week). Or email us at <childsafe@scoutsvictoria.com.au>.
+
+## Code of Conduct
+
+**This Code of Conduct is a personal commitment.**
+
+Its purpose is to protect all members of Scouting.
+
+It applies to all members over the age of 18, regardless of location and role, when engaging with young people and adults in any form.
+
+This includes face to face contact and using technology such as online formats.
+
+Parents and guardians who wish to actively participate in Scouting activities must also follow this Code.
+
+I will set an example that I would wish others to follow.
+
+Therefore, I will:
+
+ * respect the dignity of myself and others.
+ * demonstrate a high degree of individual responsibility.
+ * recognise at all times that my words and actions are an example to other members of the Movement.
+ * act at all times in accordance with the Promise and Law, Code of Ethics and this Code of Conduct, thereby setting a suitable example for all.
+ * not use the Movement to promote my own beliefs, behaviours and practices where these are not compatible with Scouting Principles.
+ * adhere to the [Scouts Australia Child Protection Policy](https://scouts.com.au/child-safe/) and provide a safe environment for youth members participating in the Scout Program, their parents or guardians and visitors.
+ * report any conduct seen or heard that does not comply with this Code of Conduct to the appropriate Scouting person.
