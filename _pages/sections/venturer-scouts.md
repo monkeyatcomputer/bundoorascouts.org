@@ -1,6 +1,8 @@
 ---
 title: Venturer Scouts
 permalink: /sections/venturer-scouts
+published: false
+sitemap: false
 ---
 
 ## Venturer Scouts

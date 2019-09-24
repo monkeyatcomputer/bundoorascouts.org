@@ -1,6 +1,8 @@
 ---
 title: Rovers
 permalink: /sections/rovers
+published: false
+sitemap: false
 ---
 
 ## Rovers
