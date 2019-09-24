@@ -1,0 +1,21 @@
+/* Map */
+.map {
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        pointer-events: none;
+    }
+}
+
+@media(max-width: 992px) {
+    .map {
+        height: 15rem;
+    }
+}
