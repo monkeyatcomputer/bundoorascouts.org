@@ -11,7 +11,7 @@ description: "Information for members in our Joey Scouts section"
 ### Boys & Girls Aged 5-7 Years
 {:.no_toc}
 
-#### Meeting Time: Monday 5:30pm to 6:30pm during school term
+#### Meeting Time: Monday 5:45pm to 6:45pm during school term
 {:.no_toc}
 
 - TOC
