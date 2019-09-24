@@ -2,6 +2,7 @@
 title: Cub Scouts
 subHeading: "Do Your Best"
 permalink: /sections/cub-scouts
+description: "Information for members in our Cub Scouts section"
 ---
 
 ## Cub Scouts

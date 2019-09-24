@@ -1,6 +1,7 @@
 ---
 title: "Scout Hall Hire"
 permalink: /about-us/hall-hire
+description: "Hire our Bundoora Scout Hall"
 ---
 
 ## Hire our Bundoora Scout Hall
