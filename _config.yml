@@ -24,6 +24,7 @@ defaults:
     values:
       layout: text-page
       sitemap: false
+      permalink: /about-us/our-leaders/:title
   - 
     scope:
       path: ""
