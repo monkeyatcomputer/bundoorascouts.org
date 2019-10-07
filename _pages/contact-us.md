@@ -1,7 +1,7 @@
 ---
 title: Contact Us
+subTitle: "We would love to hear from you!"
 permalink: /contact-us
-subHeading: "We would love to hear from you!"
 layout: contact
 description: "Contact Bundoora Scout Group"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Joey Scouts"
-subHeading: "Help Other People"
+subTitle: "Help Other People"
 permalink: /sections/joey-scouts
 description: "Information for members in our Joey Scouts section"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Our Values"
-subHeading: "What It Means to be a Scout"
+subTitle: "What It Means to be a Scout"
 permalink: /about-us/our-values
 published: false
 sitemap: false
