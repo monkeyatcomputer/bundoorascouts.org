@@ -30,6 +30,8 @@ defaults:
       type: posts
     values:
       layout: text-page
+      sitemap: false
+      permalink: /the-campfire/:year/:month/:title
   - 
     scope:
       path: "assets/images"
