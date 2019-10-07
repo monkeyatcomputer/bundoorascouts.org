@@ -12,7 +12,7 @@ Bundoora Scout Hall is available for hire to the public on application. Ideally 
  - Secure vehicle access to side and rear of property
  - Thirty two (32) parking spaces shared with community hall and church
  - Large 13m x 18.5m (240m²) hall with 4m high ceiling
- - Open plan kitchen including dishwasher, two (2) electric ovens and 4 plate electric cooktop
+ - Open plan kitchen including dishwasher, two (2) electric ovens and four (4) plate electric cooktop
  - Ladies and gents toilets.
 
  {% include image-gallery.html folder='/uploads/hall-hire' %}
