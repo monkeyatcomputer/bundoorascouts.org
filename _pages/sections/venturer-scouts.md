@@ -2,8 +2,8 @@
 title: Venturer Scouts
 subTitle: "Be Prepared"
 permalink: /sections/venturer-scouts
-published: false
-sitemap: false
+published: true
+sitemap: true
 ---
 
 ## Venturer Scouts
@@ -81,4 +81,6 @@ Venturer Scouts may commence the transition (Link Badge) to Rovers at 17.5 years
 
 **New members are requested to [contact our Group Leader]({{ site.baseurl }}{% link _pages/contact-us.md %}) prior to attending a meeting night.**
 
-To join the Bundoora Scout Group please [contact our Group Leader]({{ site.baseurl }}{% link _pages/contact-us.md %}).
+To join the Bundoora Scout Group's Venturer Troop, simply fill in your details below and our Group Leader will get in touch soon.
+
+{% include contact.html email=site.email section='Venturers' %}

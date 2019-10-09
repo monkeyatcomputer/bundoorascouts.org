@@ -83,4 +83,6 @@ Joey Scouts may commence transition (Link Badge) any time after their 7th birthd
 
 **New members are requested to [contact our Group Leader]({{ site.baseurl }}{% link _pages/contact-us.md %}) prior to attending a meeting night.**
 
-To join the Bundoora Scout Group’s Joey Mob please [contact our Group Leader]({{ site.baseurl }}{% link _pages/contact-us.md %}).
+To join the Bundoora Scout Group's Joey Mob, simply fill in your details below and our Group Leader will get in touch soon.
+
+{% include contact.html email=site.email section='Joeys' %}

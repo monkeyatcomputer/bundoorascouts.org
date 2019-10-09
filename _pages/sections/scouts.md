@@ -92,4 +92,6 @@ Scouts may commence transition (Link Badge) any time after their 14th birthday a
 
 **All Members should dress appropriately for the type of activity in which they are participating.**
 
-To join the Bundoora Scout Group's Scout Troop please [contact our Group Leader]({{ site.baseurl }}{% link _pages/contact-us.md %}).
+To join the Bundoora Scout Group's Scout Troop, simply fill in your details below and our Group Leader will get in touch soon.
+
+{% include contact.html email=site.email section='Scouts' %}
