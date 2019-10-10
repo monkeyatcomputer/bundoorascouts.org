@@ -1,6 +1,6 @@
 ---
 title: What is Scouting?
-subTitle: ""
+subtitle: ""
 permalink: /about-scouting/what-is-scouting
 published: false
 sitemap: false

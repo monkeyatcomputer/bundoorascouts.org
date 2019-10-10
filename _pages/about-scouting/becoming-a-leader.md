@@ -1,6 +1,6 @@
 ---
 title: Becoming a Leader
-subTitle: ""
+subtitle: ""
 permalink: /about-scouting/becoming-a-leader
 published: false
 sitemap: false

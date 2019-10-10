@@ -1,6 +1,6 @@
 ---
 title: "Scout Hall Hire"
-subTitle: "20 Noorong Ave, Bundoora"
+subtitle: "20 Noorong Ave, Bundoora"
 permalink: /about-us/hall-hire
 description: "Hire our Hall"
 ---

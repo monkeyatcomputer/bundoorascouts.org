@@ -1,6 +1,6 @@
 ---
 title: Welcome to Scouting
-subTitle: A Guide For Parents and Caregivers
+subtitle: A Guide For Parents and Caregivers
 permalink: /about-scouting/parent-caregiver-information
 description: "Welcome to Scouting - A guide for Parents and Caregivers" 
 ---

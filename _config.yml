@@ -3,12 +3,15 @@ description: ""
 email: "gl.bundoora@scoutsvictoria.com.au"
 encoding: utf-8
 url: "https://bundoorascouts.org"
+author: "Bundoora Scout Group"
 
 #Outputting
 permalink: pretty
 markdown: kramdown
 highlighter: rouge
 timezone: "Australia/Melbourne"
+paginate: 5
+paginate_path: "/the-campfire/page/:num/"
 
 # Collections
 collections:

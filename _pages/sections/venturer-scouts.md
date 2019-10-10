@@ -1,6 +1,6 @@
 ---
 title: Venturer Scouts
-subTitle: "Be Prepared"
+subtitle: "Be Prepared"
 permalink: /sections/venturer-scouts
 published: true
 sitemap: true

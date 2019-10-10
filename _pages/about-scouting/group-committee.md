@@ -1,6 +1,6 @@
 ---
 title: Group Committee
-subTitle: ""
+subtitle: ""
 permalink: /about-scouting/group-committee
 published: false
 sitemap: false

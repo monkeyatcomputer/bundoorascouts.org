@@ -1,6 +1,6 @@
 ---
 title: Cub Scouts
-subTitle: "Do Your Best"
+subtitle: "Do Your Best"
 permalink: /sections/cub-scouts
 description: "Information for members in our Cub Scouts section"
 ---
