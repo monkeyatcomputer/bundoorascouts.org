@@ -33,7 +33,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: text-page
+      layout: post
       sitemap: false
       permalink: /the-campfire/:year/:month/:title
   - 
