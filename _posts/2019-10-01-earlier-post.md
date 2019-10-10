@@ -12,7 +12,6 @@ categories:
     - group
 tags:
     - earlier post
-sitemap: false
 ---
 
 ## Earlier Post

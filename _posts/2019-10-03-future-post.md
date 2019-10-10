@@ -12,7 +12,6 @@ categories:
     - group
 tags:
     - future post
-sitemap: false
 ---
 
 ## Future Post

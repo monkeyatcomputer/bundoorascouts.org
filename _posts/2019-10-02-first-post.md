@@ -12,7 +12,6 @@ categories:
     - group
 tags:
     - first post
-sitemap: false
 ---
 
 ## First Post
