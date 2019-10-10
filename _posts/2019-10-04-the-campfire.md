@@ -6,6 +6,7 @@ author:
 categories: 
     - cub scouts
 tags: 
+    - first post
     - test
 ---
 
