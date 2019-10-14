@@ -86,11 +86,13 @@ Detailed information regarding uniform requirements is provided on the [Parent a
 
 *All Members should dress appropriately for the type of activity in which they are participating.*
 
+### Link Badge
+
 **The commencement for advancement in Sections may vary up to 6 months.**
 
 Scouts may commence transition (Link Badge) any time after their 14th birthday and have progressed to Venturer Scouts by the time they are 15 years of age. Extensions beyond age range may be granted in accordance with the Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
 
-**All Members should dress appropriately for the type of activity in which they are participating.**
+### Join the Fun!
 
 To join the Bundoora Scout Group's Scout Troop, simply fill in your details below and our Group Leader will get in touch soon.
 
