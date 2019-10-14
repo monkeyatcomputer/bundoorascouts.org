@@ -11,6 +11,8 @@ categories:
     - Group
 tags:
     - Working Bee
+redirect_from:
+    - /the-campfire/2019/10/October-Working-Bee
 ---
 
 Thank you parents and members of Bundoora Scout Group that helped on Saturday. Our hall and grounds are looking better than ever thanks to your efforts. Thanks again Chris Parr for coordinating our working bee day.
