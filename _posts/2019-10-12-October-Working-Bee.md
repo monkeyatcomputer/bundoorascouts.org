@@ -21,6 +21,7 @@ Everyone pitched in to help:
  - Pack tents away
  - Mow the grass
  - Wash the windows
+ - Finish emptying the Rover Den store
  - Clean up all debris around the new fence
  - Cut back bushes.
 
