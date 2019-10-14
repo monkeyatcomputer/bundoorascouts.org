@@ -3,14 +3,14 @@ title: "Scout Hall Working Bee"
 subtitle: "October 2019"
 heroimage: /uploads/hero/spring-cleaning.jpg
 author:
-    - Tristan
+    - Bundoora Scout Group
 categories:
-    - joey scouts
-    - cub scouts
-    - scouts
-    - group
+    - Joey Scouts
+    - Cub Scouts
+    - Scouts
+    - Group
 tags:
-    - working bee
+    - Working Bee
 ---
 
 Thank you parents and members of Bundoora Scout Group that helped on Saturday. Our hall and grounds are looking better than ever thanks to your efforts. Thanks again Chris Parr for coordinating our working bee day.

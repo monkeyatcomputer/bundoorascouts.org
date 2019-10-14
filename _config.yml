@@ -66,6 +66,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-include-cache
 
 whitelist:
   - jekyll-paginate
@@ -73,6 +74,7 @@ whitelist:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-include-cache
 
 kramdown:
   hard_wrap: false
@@ -88,6 +90,9 @@ jekyll-archives:
     - categories
     - tags
   layout: default
+  layouts:
+    tag: tags
+    category: categories
   permalinks:
     year: '/the-campfire/:year/'
     month: '/the-campfire/:year/:month/'
