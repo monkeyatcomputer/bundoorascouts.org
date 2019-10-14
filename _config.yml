@@ -81,3 +81,16 @@ kramdown:
 
 sass:
   style: compressed
+
+jekyll-archives:
+  enabled:
+    - year
+    - categories
+    - tags
+  layout: default
+  permalinks:
+    year: '/the-campfire/:year/'
+    month: '/the-campfire/:year/:month/'
+    day: '/the-campfire/:year/:month/:day/'
+    tag: '/the-campfire/tag/:name/'
+    category: '/the-campfire/category/:name/'

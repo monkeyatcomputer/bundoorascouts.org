@@ -41,6 +41,10 @@ layout: default
                     <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next <span class="d-none d-md-inline">Post</span> &rarr;</a>
                     {% endif %}
                 </div>
+
+{% include category-list.html %}
+
+{% include tag-list.html %}
             </div>
         </div>
     </div>
