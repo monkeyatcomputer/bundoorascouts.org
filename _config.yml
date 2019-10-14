@@ -65,16 +65,16 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-include-cache
+#  - jekyll-archives
+#  - jekyll-include-cache
 
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-include-cache
+#  - jekyll-archives
+#  - jekyll-include-cache
 
 kramdown:
   hard_wrap: false
@@ -84,18 +84,18 @@ kramdown:
 sass:
   style: compressed
 
-jekyll-archives:
-  enabled:
-    - year
-    - categories
-    - tags
-  layout: default
-  layouts:
-    tag: tags
-    category: categories
-  permalinks:
-    year: '/the-campfire/:year/'
-    month: '/the-campfire/:year/:month/'
-    day: '/the-campfire/:year/:month/:day/'
-    tag: '/the-campfire/tag/:name/'
-    category: '/the-campfire/category/:name/'
+#jekyll-archives:
+#  enabled:
+#    - year
+#    - categories
+#    - tags
+#  layout: default
+#  layouts:
+#    tag: tags
+#    category: categories
+#  permalinks:
+#    year: '/the-campfire/:year/'
+#    month: '/the-campfire/:year/:month/'
+#    day: '/the-campfire/:year/:month/:day/'
+#    tag: '/the-campfire/tag/:name/'
+#    category: '/the-campfire/category/:name/'
