@@ -17,7 +17,7 @@ Thank you parents and members of Bundoora Scout Group that helped on Saturday. O
 
 Everyone pitched in to help:
  - Finish the kitchen and move stuff back in
- - Label all the boxes in the resource Room
+ - Label all the boxes in the resource room
  - Pack tents away
  - Mow the grass
  - Wash the windows
@@ -25,6 +25,6 @@ Everyone pitched in to help:
  - Clean up all debris around the new fence
  - Cut back bushes.
 
-One of our Cubs, Daniel, recorded surprise man-on-the-street interviews of everyone hard at work cooking lunch, creating a lockable storage space for a weekly hall hire group, cleaning up and organising equipment in our new kitchen. Thanks Daniel!
+One of our Cubs, Daniel, recorded surprise man-on-the-street interviews of everyone hard at work cooking lunch, creating a lockable storage space for a weekly hall hire group, cleaning up, and organising equipment in our new kitchen. Thanks Daniel!
 
 {% include youtube.html code='8cvMQSQBRHs' %}
