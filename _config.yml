@@ -34,7 +34,6 @@ defaults:
       type: posts
     values:
       layout: post
-      sitemap: false
       permalink: /the-campfire/:year/:month/:title
   - 
     scope:
