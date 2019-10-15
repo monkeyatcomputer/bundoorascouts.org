@@ -83,8 +83,8 @@ kramdown:
   input: GFM
   smart_quotes: lsquo,rsquo,ldquo,rdquo
 
-sass:
-  style: compressed
+#sass:
+#  style: compressed
 
 #jekyll-archives:
 #  enabled:
