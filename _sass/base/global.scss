@@ -90,11 +90,11 @@ hr.small {
 }
 
 // offset due to collapsing navbar
-*[id]:before 
-{ 
-  display: block; 
-  content: " "; 
-  margin-top: -115px; 
-  height: 115px; 
-  visibility: hidden; 
-}
+//*[id]:before 
+//{ 
+//  display: block; 
+//  content: " "; 
+//  margin-top: -115px; 
+//  height: 115px; 
+//  visibility: hidden; 
+//}
