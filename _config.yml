@@ -86,6 +86,13 @@ kramdown:
 sass:
   style: compressed
 
+category_archive:
+  type: liquid
+  path: /the-campfire/category/
+tag_archive:
+  type: liquid
+  path: /the-campfire/tag/
+
 #jekyll-archives:
 #  enabled:
 #    - year
