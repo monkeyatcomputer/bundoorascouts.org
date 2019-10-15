@@ -1,5 +1,6 @@
 #share-buttons {
-    display: inline-block; vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 
     :after {content: ""; display: block; clear: both;}
     > div {
