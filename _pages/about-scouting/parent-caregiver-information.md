@@ -22,6 +22,8 @@ In this guide you'll find some details about how Scouting works. In particular, 
 
 Welcome to Scouting! We wish your family lots of fun, friendship, adventure, and safe times ahead.
 
+*Information republished from Scouts Victoria's [Parent and Caregiver Guide](https://www.scoutsvictoria.com.au/parent-guide) with permission.*
+
 ## Contents
 {:.no_toc}
 
