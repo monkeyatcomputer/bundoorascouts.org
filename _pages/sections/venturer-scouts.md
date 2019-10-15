@@ -81,7 +81,7 @@ Detailed information regarding uniform requirements is provided on the [Parent a
 
 Venturer Scouts may commence the transition (Link Badge) to Rovers at 17.5 years, and have progressed by their 18th birthday. Extensions beyond age range may be granted in accordance with The Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
 
-### Join the Fun!
+### Join the Adventure!
 
 **New members are requested to [contact our Group Leader]({{ site.baseurl }}{% link _pages/contact-us.md %}) prior to attending a meeting night.**
 

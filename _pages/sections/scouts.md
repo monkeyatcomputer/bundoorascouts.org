@@ -92,7 +92,7 @@ Detailed information regarding uniform requirements is provided on the [Parent a
 
 Scouts may commence transition (Link Badge) any time after their 14th birthday and have progressed to Venturer Scouts by the time they are 15 years of age. Extensions beyond age range may be granted in accordance with the Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
 
-### Join the Fun!
+### Join the Adventure!
 
 To join the Bundoora Scout Group's Scout Troop, simply fill in your details below and our Group Leader will get in touch soon.
 
