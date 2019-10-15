@@ -80,7 +80,7 @@
   <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
   <meta property="og:url" content="{{ canonical_url }}">
   {% if seo_description %}<meta property="og:description" content="{{ seo_description }}">{% endif %}
-  <meta property="og:image" content="{{ page_large_image | default: page_teaser_image | default: '/assets/images/favicon-96x96.png' | prepend: site.baseurl }}">
+  <meta property="og:image" content="{{ page_large_image | default: page_teaser_image | default: '/assets/images/hero-1.jpg' | prepend: site.baseurl }}">
   {% if page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
   {% if og_type == "article" and page.last_modified_at %}<meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
   <link rel="canonical" href="{{ canonical_url }}">
