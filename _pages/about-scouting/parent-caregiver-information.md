@@ -36,11 +36,11 @@ There are many lifelong advantages that young people get from their years enjoyi
 
 **Resilience**
 
-In 2018 the Resilient Youth Australia survey of our youth members highlighted some of the benefits of Scouting. These are included in the centre pages of this Parent Guide. The main benefit is above-average Resilience – the strength to deal with the challenges of modern life.
+In 2018 the Resilient Youth Australia survey of our youth members highlighted some of the benefits of Scouting. The main benefit is above-average Resilience – the strength to deal with the challenges of modern life.
 
 **Mental Health**
 
-The 2016 UK Childhood Study found that former Scouts are 18% less likely to suffer mood or anxiety disorders than nonScouts, even decades later, as adults. The study said programs like Scouting that support resilience, social mobility, ‘soft' non-cognitive skills, self-reliance, collaboration, and activities in natural environments may help protect mental health in adulthood.
+The 2016 UK Childhood Study found that former Scouts are 18% less likely to suffer mood or anxiety disorders than non-Scouts, even decades later, as adults. The study said programs like Scouting that support resilience, social mobility, 'soft' non-cognitive skills, self-reliance, collaboration, and activities in natural environments may help protect mental health in adulthood.
 
 **Leadership**
 
@@ -94,20 +94,22 @@ Scouts Australia is currently transitioning toward a new program, One Program fo
 
 ## What is the uniform?
 
-The basic uniform is the shirt and scarf (which is usually held together by a woggle, often a piece of leather). The shirt is available from [The Scout Shop](http://scoutshop.com.au/) for A$36.95 (incl-GST) for Joeys to A$51.95 (incl-GST) for Rovers. The scarf is usually supplied by your Group. (Every Scout Group is proud of its own colours.)
+The basic uniform is the shirt and scarf (which is usually held together by a woggle, often a piece of leather). The shirt is available from [The Scout Shop](http://scoutshop.com.au/) for AU$36.95 (incl-GST) for Joeys to AU$51.95 (incl-GST) for Rovers. The scarf is usually supplied by Bundoora Scout Group. (Every Scout Group is proud of its own colours.)
 
-Check with your Leader if you also need to order a woggle A$3.95 (incl-GST) and belt A$14.95 (incl-GST).
+Check with your Leader if you also need to order a woggle AU$3.95 (incl-GST) and belt AU$14.95 (incl-GST).
 
 **All prices are subject to change.**
 
 ## What is the cost?
+
 Every Scout Group charges an annual (or term-by-term) fee which covers the annual fee payable to Scouts Victoria, and a Group fee to cover costs such as rates, power, equipment, insurance, Leader training, and more. This varies from Group to Group depending on local factors such as how much fundraising the Group does, other financial pressures (eg hall maintenance).
 
-Annual fees in Victoria range from A$300 to A$500+ (inc-GST).
+Annual fees for Bundoora Scout Group is approximately AU$450 (inc-GST).
 
 There is also the cost of activities such as camps. These are kept as low as possible because we usually use our own campsites and Leaders are unpaid volunteers. Major events held every few years (like Cuboree and Jamboree) cost more because of the scale of the program and entertainment, but most Groups work together to lower the individual cost, through fundraising. Financial issues should not be a barrier to any child being a Scout.  If you have any concerns, please speak with your Group Leader to discuss payment options.
 
 ## Values
+
 Scouting is a values-based organisation.
 
 The Scout Promise and the Scout Law underpin this. Every member of Scouting in the world makes the Scout Promise when they first join Scouting, and at major milestones in their Scouting journey. This includes an undertaking to live by the Scout Law.
@@ -116,7 +118,7 @@ The **Scout Law** is a simple code for living.
 
 The **Scout Promise** comes in two forms, and members choose which version they wish to make.
 
-That is, the version which best aligns with their beliefs. Both versions include a pledge to ‘help other people', as helping others is a fundamental value of Scouting.
+That is, the version which best aligns with their beliefs. Both versions include a pledge to 'help other people', as helping others is a fundamental value of Scouting.
 
 ### The Scout Law
 
@@ -225,7 +227,7 @@ The following behaviours are unacceptable by Adults in Scouting.
  * Behaving towards a youth member in a manner that makes them uncomfortable
  * Breaching the Scouts Australia Code of Conduct.
 
-Adults in Scouting also commit to our Code of Ethics.
+Adults in Scouting also commit to our [Code of Ethics](https://scoutsvictoria.com.au/about-us/policies/scouts-australia-policies-and-resources/).
 
 Anyone can report any incident of unacceptable behaviour to our Child Safety Team immediately on 1800 870 772 (24 hours a day, 7 days a week). Or email us at <childsafe@scoutsvictoria.com.au>.
 
@@ -248,7 +250,7 @@ Therefore, I will:
  * respect the dignity of myself and others.
  * demonstrate a high degree of individual responsibility.
  * recognise at all times that my words and actions are an example to other members of the Movement.
- * act at all times in accordance with the Promise and Law, Code of Ethics and this Code of Conduct, thereby setting a suitable example for all.
+ * act at all times in accordance with the [Promise](#the-scout-promise) and [Law](#the-scout-law), [Code of Ethics](https://scoutsvictoria.com.au/about-us/policies/scouts-australia-policies-and-resources/) and this Code of Conduct, thereby setting a suitable example for all.
  * not use the Movement to promote my own beliefs, behaviours and practices where these are not compatible with Scouting Principles.
  * adhere to the [Scouts Australia Child Protection Policy](https://scouts.com.au/child-safe/) and provide a safe environment for youth members participating in the Scout Program, their parents or guardians and visitors.
  * report any conduct seen or heard that does not comply with this Code of Conduct to the appropriate Scouting person.
@@ -265,7 +267,7 @@ There are many ways parents can help their children get the most from Scouting.
  * Help out with transport. Driving a carload of kids to or from a camp can be an entertaining insight!
  * Helping with fundraising to keep the cost of Scouting down.
  
-Your Scout Group is like the local franchise of the worldwide Scout organisation.
+Your Bundoora Scout Group is like the local franchise of the worldwide Scout organisation.
 
 **Scouts Victoria provides:**
 
@@ -294,7 +296,7 @@ Now that your child has joined Scouting, you are a part of the broader Scouting 
 Parents and guardians sometimes wish to attend ongoing activity evenings (more than the occasional visit every couple of months) or an overnight activity. Just like our volunteer Leaders, to help us ensure young people's safety, all adults need to get a Working With Children Check, with Scouts Victoria listed as the
 organisation you are working with.
 
-**Other ways that parents help their local Scout Group include:**
+**Other ways that parents help their local Bundoora Scout Group include:**
 
  * volunteering as Leaders
  * volunteering as Adult Helpers (screened, less training, not uniformed)
@@ -302,7 +304,7 @@ organisation you are working with.
  * volunteering on the Group Support Committee (usually meets monthly)
  * helping with occasional fundraising, maintenance etc.
 
-**When parents help their Scout Group, the Leaders are free to focus on delivering great program to the Joeys, Cubs, Scouts, Venturers and Rovers.**
+**When parents help Bundoora Scout Group, the Leaders are free to focus on delivering great program to the Joeys, Cubs, Scouts, Venturers and Rovers.**
 
 **If you want Scouting to be a great experience for your children, please help your Group be a great Group.**
 
@@ -318,9 +320,9 @@ organisation you are working with.
  * And all can earn "trophies" - our peak awards like the Promise Challenge, Grey Wolf, and others.
 
 Parents are also very welcome to participate.  
-In fact, they are integral to the success of the local Scout Group and your child's Scouting experience.
+In fact, they are integral to the success of Bundoora Scout Group and your child's Scouting experience.
 
-Parents and Leaders, and others who lead the local Scout Group, are on the same team.
+Parents and Leaders, and others who lead Bundoora Scout Group, are on the same team.
 
  * Many parents are Leaders and Adult Helpers.
  * Most Leaders are parents
@@ -346,9 +348,9 @@ Please be aware that meeting nights are busy - sometimes it is difficult to have
 
 Of course, if there is a safety issue, you should get the attention of your child's Leader immediately, and let them know.
 
-**If you still need information or your child's Section Leader is unable to help, the next contact is the Group Leader of your Scout Group.**
+**If you still need information or your child's Section Leader is unable to help, the next contact is the [Group Leader]({% link _pages/contact-us.md %}) of Bundoora Scout Group.**
 
-Your Group Leader is the most senior local Scouting volunteer, responsible for all the youth members and Leaders in all Sections of your Group.
+Your Group Leader is the most senior local Scouting volunteer, responsible for all the youth members and Leaders in all Sections of Bundoora Scout Group.
 
 If that doesn't work out - or the Group Leader is unavailable – you are welcome to contact our State Office on 03 8543 9800 and we can put you in touch with your local District Commissioner, the senior Scouting volunteer who coordinates all the Scout Groups in your local area.
 
@@ -357,16 +359,16 @@ This process doesn't apply if you believe there is a breach of Child Safety. Any
 ## Scout talk
 Scouting has its own language! Here are some terms you may hear:
 
-Joey Scouts
+[Joey Scouts]({{ site.baseurl }}{% link _pages/sections/joey-scouts.md %})
 : Our youngest Scouts are boys and girls aged 5-8. They meet each week as a Joey Scout Mob. Every two years they have a Statewide weekend camp called a Kangaree. Joeys can earn a major award called the Promise Challenge.
 
-Cub Scouts
+[Cub Scouts]({{ site.baseurl }}{% link _pages/sections/cub-scouts.md %})
 : Cubs are boys and girls aged 8-11. They meet as a Cub Scout Pack, where they operate in small teams called Sixes. Each Six is led by an older Cub called a Sixer. Sixers and their Leaders meet to plan their program. This group is called the Pack Council. Every three years more than 3600 Victorian Cubs enjoy a huge week-long camp called a Cuboree. Cubs can earn a major award called the Grey Wolf.
 
-Scouts
+[Scouts]({{ site.baseurl }}{% link _pages/sections/scouts.md %})
 : Scouts, aged 11-14, are the original Section of Scouting and have been co-ed since 1988. Scouts began at a trial camp in England in August 1907. Scouts meet as a Scout Troop, which is comprised of small teams called Patrols, led by an elected Patrol Leader. PLs meet with their Leaders as the Troop Council, to plan their program and other aspects of the Troop. By now, youth members are increasingly taking over the running of their Section - planning their program, managing finance, and even dealing with any behaviour problems. Every three years Scouts from around Australia and beyond gather for a two-week camp called a Jamboree. Scouts can earn the award called the Australian Scout Medallion.
 
-Venturer Scouts
+[Venturer Scouts]({{ site.baseurl }}{% link _pages/sections/venturer-scouts.md %})
 : Venturers, aged 14-18, are also co-ed, and have a much larger say in their own activities. Venturers meet as
 a Venturer Unit. Members of the Unit elect the Unit Chair, Secretary, Treasurer and other office bearers, who
 meet as the Unit Council, to plan their program and other aspects of the Unit.
@@ -380,7 +382,7 @@ Rover Scouts
 and much more. They have a strong annual program including motor sport and social events. Their major
 events are called Moots. The peak award in this Section is the Baden-Powell Rover Scout award.
 
-Leaders
+[Leaders]({{ site.baseurl }}{% link _pages/about-us/our-leaders.md %})
 : Leaders are the adult volunteers who put many hours into Scouting each week - and in return get great
 satisfaction, friendships, skills, and experiences. Most Leaders are parents. All Leaders go through several
 stages of screening (which are renewed regularly), and do training programs, which must also be kept up to
@@ -427,12 +429,12 @@ technology, marketing, communications, child safety management, community develo
 facilities management. For more about our State organisation, see the back cover.
 
 Gilwell Park, Clifford Park, Treetops, Eumeralla, Mafeking Park
-: Gilwell Park near Gembrook, Clifford Park near Wonga Park, Treetops near Macedon, Eumeralla near Anglesea,
-and Mafeking Park near Yea are just five of more than 80 Scout-owned campsites across Victoria. Your child
+: [Gilwell Park](https://www.google.com/maps/search/?api=1&query=Gilwell+Park+Scout+Camp) near Gembrook, [Clifford Park](https://www.google.com/maps/search/?api=1&query=Clifford+Park+Activity+Centre) near Wonga Park, [Treetops](https://www.google.com/maps/search/?api=1&query=Treetops+Scout+Camp) near Macedon, [Eumeralla](https://www.google.com/maps/search/?api=1&query=Eumeralla+Scout+Camp) near Anglesea,
+and [Mafeking Park](https://www.google.com/maps/search/?api=1&query=Mafeking+Rover+Park) near Yea are just five of more than 80 Scout-owned campsites across Victoria. Your child
 may visit many of them for weekend adventure.
 
 Care Monkey
-: CareMonkey is the electronic system used by Scouts Victoria for parents/carers/individuals to share member
+: [CareMonkey](https://groups.caremonkey.com) is the electronic system used by Scouts Victoria for parents/carers/individuals to share member
 health records, permission forms and contact details. Your child's school may also use this system. It is
 increasingly being used by Groups for internal communication with members, particularly for events and
 activities.
