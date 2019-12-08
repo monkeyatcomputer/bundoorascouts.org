@@ -1,6 +1,6 @@
 ---
-title: "December Group Camp"
-subtitle: "Their Service - Our Heritage Badge"
+title: "Group Camp"
+subtitle: "December 2019"
 heroimage: 
 author:
     - Bundoora Scout Group
