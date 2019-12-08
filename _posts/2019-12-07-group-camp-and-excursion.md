@@ -1,7 +1,7 @@
 ---
 title: "Group Camp"
 subtitle: "December 2019"
-heroimage: 
+heroimage: /uploads/hero/medals.jpg
 author:
     - Bundoora Scout Group
 categories:
