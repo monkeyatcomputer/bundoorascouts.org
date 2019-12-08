@@ -19,7 +19,7 @@ description: "Information for members in our Joey Scouts section"
 
 Joey Scouts is the youngest section of the Scouting movement. For Joey Scouts, life is an exciting adventure. They explore the wider world, stimulate their imagination and develop skills in team work.
 
-The Joey Scout Mob meets once a week for approximately 1 to 1.5 hours under the care and supervision of professionally trained Joey Scout Leaders. Parents and Guardians are welcome to join in the road to adventure with their Joey Scouts and share many new discoveries.
+The Joey Scout Mob meets once a week for 1 hours under the care and supervision of professionally trained Joey Scout Leaders. Parents and Guardians are welcome to join in the road to adventure with their Joey Scouts and share many new discoveries.
 
 Joey Scout activities include:
 

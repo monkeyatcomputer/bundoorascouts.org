@@ -19,7 +19,7 @@ description: "Information for members in our Scouts section"
 
 "Action Plus" is the best way to describe the life of a Scout. Scouts have the opportunity to experience numerous adventures. Many discover they have a special interest in one or more of the extensive range of activities and interests available in Scouting. They are able to follow these through with the help of the Scout Leaders and fellow Patrol Members. Scouting is a constant round of adventure, abseiling, flying, hiking, camping, canoeing and fishing. Importantly, with the help and support of professionally trained Scout Leaders, Scouts not only face the action, but they learn to do it safely.
 
-At Scouts you’ll become a member of a Scout Patrol and your Patrol will work with other Patrols to form a larger Scout Troop. Together you’ll make important decisions, set critical goals, and depend on each other to succeed. And when you do succeed, you can earn achievement badges!
+At Scouts you'll become a member of a Scout Patrol and your Patrol will work with other Patrols to form a larger Scout Troop. Together you'll make important decisions, set critical goals, and depend on each other to succeed. And when you do succeed, you can earn achievement badges!
 
 Scout Troops usually meet every week to discuss their progress and work towards achieving their goals. Scout meetings consist of team-building activities, playing games, developing specialised skills and knowledge, and planning for weekend adventures and campouts. At meetings Troop members share stories and experiences of their recent adventures and offer advice to one another. Scout Leaders teach safety lessons on how to use equipment correctly and inspire their Scouts to be the best individuals and team players that they can be.
 

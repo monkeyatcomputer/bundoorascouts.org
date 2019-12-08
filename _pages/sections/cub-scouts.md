@@ -19,7 +19,7 @@ description: "Information for members in our Cub Scouts section"
 
 Positive Development! The Cub Scout program is specifically designed to meet the developmental needs of 8 to 10 year old children. It provides opportunities for young people to develop and grow as individuals and as members of a team. Cub Scout activities are planned to cover a broad range of interests and topics to trigger their imagination and curiosity.
 
-As a member of a ‘Six’ you and your Pack will work together to explore the world. Your Cub Scout Leader will help you along the way and encourage you to participate in Scouting activities. You’ll learn life-long skills, participate in the Cub Scout’s Award Scheme, earn badges, make friends and have fun!
+As a member of a 'Six' you and your Pack will work together to explore the world. Your Cub Scout Leader will help you along the way and encourage you to participate in Scouting activities. You'll learn life-long skills, participate in the Cub Scout's Award Scheme, earn badges, make friends and have fun!
 
 Cub Scouts activities include:
 
@@ -67,7 +67,7 @@ The major components of the Cub Scout Award Scheme are the Bronze, Silver and Go
 
 Cub Scouts can set challenges for themselves to earn Achievement Badges from the areas of Arts and Literature, Nature, Science and Technology, Sports and Recreation, and Our World. There are also a number of Special Interest badges.
 
-Grey Wolf Award: This is the pinnacle of achievement in the Cub Scout Section. To earn the Grey Wolf Award a Cub Scout must hold a Gold Boomerang badge, participate in a minimum of four outdoor activities and attend two Pack Councils in the previous 12 months, complete four Level 2 Achievement badges (one from each category) and one Special Interest badge, and develop and present a resource for the Six or Pack based on the Cub Scout’s understanding of The Jungle Book.
+Grey Wolf Award: This is the pinnacle of achievement in the Cub Scout Section. To earn the Grey Wolf Award a Cub Scout must hold a Gold Boomerang badge, participate in a minimum of four outdoor activities and attend two Pack Councils in the previous 12 months, complete four Level 2 Achievement badges (one from each category) and one Special Interest badge, and develop and present a resource for the Six or Pack based on the Cub Scout's understanding of The Jungle Book.
 
 ### Fees
 
