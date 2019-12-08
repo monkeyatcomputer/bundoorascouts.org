@@ -7,6 +7,8 @@ heroimage: /uploads/hero/campfire.jpg
 
 {% for post in paginator.posts %}
 
+<hr/>
+
 <article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
     <h2 class="post-title">{{ post.title }}</h2>
@@ -26,8 +28,6 @@ heroimage: /uploads/hero/campfire.jpg
     on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read-time.html content=post.content %}
   </p>
 </article>
-
-<hr>
 
 {% endfor %}
 
