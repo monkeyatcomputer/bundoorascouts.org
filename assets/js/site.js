@@ -28,6 +28,8 @@
     imgWidth: 1366,
     imgHeight: 768
     });
+  
+    $('.image-gallery a').simpleLightbox();
 
 })(jQuery); // End of use strict
 
