@@ -1,7 +1,7 @@
 ---
 title: Melissa Cugley
 role: Assistant Joey Scouts Leader
-alias: "Eagle"
+alias: "Kangaroo"
 section: joey-scouts
 ---
 

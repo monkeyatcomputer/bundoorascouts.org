@@ -27,6 +27,6 @@ Early Saturday morning we boarded a bus, train and tram to the [Shrine of Rememb
 
 Sunday morning everyone pitched in again to pack up tents after breakfast, before heading home (to catch up on sleep).
 
-Many thanks to; our [Shrine of Rememberence](https://www.shrine.org.au/) guide Barry, *Eagle's* (Kirsty) awesome planning, and our leaders *Akela* (Hamish), *Bagheera* (Peter), *Eagle* (Melissa), *Mang* (Sarah), *Platypus* (Sue), and our group leader *Rafiki* (Chris).
+Many thanks to; our [Shrine of Rememberence](https://www.shrine.org.au/) guide Barry, *Eagle's* (Kirsty) awesome planning, and our leaders *Akela* (Hamish), *Bagheera* (Peter), *Kangaroo* (Melissa), *Mang* (Sarah), *Platypus* (Sue), and our group leader *Rafiki* (Chris).
 
 {% include image-gallery.html folder='/uploads/2019-12-07-group-camp-and-excursion' %}
