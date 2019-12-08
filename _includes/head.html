@@ -68,8 +68,7 @@
   <!-- Jarallax -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jarallax/1.11.0/jarallax.css" integrity="sha256-V2A9O7C7s/tmDXB19fUyCJhPNsZ+dXw+xsoG73GezyQ=" crossorigin="anonymous" />
 
-  <!-- Simple Lightbox -->
-  <link href="//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css" rel="stylesheet" type="text/css">
+{% if page.custom_css %}{% for stylesheet in page.custom_css %}<link rel="stylesheet" href="/css/{{ stylesheet }}.css" media="screen" type="text/css">{% endfor %}{% endif %}
 
   <!-- Site CSS -->
   <link href="{{site.baseurl}}/assets/css/site.css" rel="stylesheet" type="text/css">

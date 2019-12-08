@@ -3,6 +3,10 @@ title: "Scout Hall Hire"
 subtitle: "20 Noorong Ave, Bundoora"
 permalink: /about-us/hall-hire
 description: "Hire our Hall"
+custom_css:
+    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
+custom_js:
+    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
 ---
 
 ## Hire our Bundoora Scout Hall

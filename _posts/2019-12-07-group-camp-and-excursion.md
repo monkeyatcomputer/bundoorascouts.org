@@ -13,8 +13,10 @@ tags:
     - Excursion
     - Group Camp
     - Their Service - Our Heritage
-#redirect_from:
-#    - /the-campfire/2019/10/October-Working-Bee
+custom_css:
+    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
+custom_js:
+    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
 ---
 
 Bundoora Scout Group held our end of year group camp on the 6th, 7th and 8th of December at the Bundoora Scout Hall with all sections.

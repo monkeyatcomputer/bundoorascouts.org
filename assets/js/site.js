@@ -29,8 +29,9 @@
     imgHeight: 768
     });
   
+  if ($.fn.simpleLightbox) {
     $('.image-gallery a').simpleLightbox();
-
+  }
 })(jQuery); // End of use strict
 
 // Disable Google Maps scrolling
