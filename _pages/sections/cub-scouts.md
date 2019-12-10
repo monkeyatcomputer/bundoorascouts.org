@@ -8,7 +8,7 @@ description: "Information for members in our Cub Scouts section"
 ## Cub Scouts
 {:.no_toc}
 
-### Boys & Girls Aged 8-11 Years
+### Boys & Girls Aged 8-10 Years
 {:.no_toc}
 
 #### Meeting Time: Monday 7:00pm – 8:30pm during school term
