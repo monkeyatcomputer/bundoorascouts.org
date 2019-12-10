@@ -7,7 +7,7 @@ sitemap: true
 ---
 
 ## Venturer Scouts
-### Teenagers Aged 14-17 Years
+### Teenagers Aged 15-17 Years
 #### Meeting Time: Not currently meeting
 
 Life as a Venturer Scout: Venturer Scouts never turn down a challenge, in fact, they make their own! Scaling a 30m rock-face or abseiling into caves may frighten most people but Venturer Scouts face the challenge head on and then go white water kayaking!
