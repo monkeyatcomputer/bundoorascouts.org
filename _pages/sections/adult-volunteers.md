@@ -31,4 +31,4 @@ For those who have enjoyed the Scouting adventure, it’s an unforgettable exper
 
 To join the Bundoora Scout Group as a Leader or Adult Helper, simply fill in your details below and our Group Leader will get in touch soon.
 
-{% include contact.html email=site.email section='Adults' %}
+{% include contact.html email=site.email section='Leaders' %}
