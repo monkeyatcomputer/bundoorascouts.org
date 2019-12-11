@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         header: {
         left: 'prevYear,prev,next,nextYear today',
         center: 'title',
-        right: 'dayGridMonth,dayGridWeek,dayGridDay'
+        right: ''
         },
         navLinks: true, // can click day/week names to navigate views
         editable: false,
