@@ -1,7 +1,13 @@
 <script src="//code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jarallax/1.11.0/jarallax.min.js" type="text/javascript" integrity="sha256-bNL7abArAf9qApPjGFQ8apa/1S8fbdVdgNzrS9j3pcg=" crossorigin="anonymous"></script>
-{% if page.custom_js %}{% for js_file in page.custom_js %}<script src='{{ js_file }}' type="text/javascript"></script>{% endfor %}{% endif %}
+{% if page.custom_js %}
+<!-- Page JS -->
+{% for js_file in page.custom_js %}
+<script src='{{ js_file }}' type="text/javascript"></script>
+{% endfor %}
+{% endif %}
+<!-- Site JS -->
 <script src="{{site.baseurl}}/assets/js/site.js" type="text/javascript"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
