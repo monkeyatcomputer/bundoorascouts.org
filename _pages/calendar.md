@@ -18,4 +18,3 @@ redirect_from:
     - /sections/cub-scouts/calendar
 ---
 
-Test calendar integrated with Google Apps calendar...
