@@ -1,28 +1,64 @@
 ---
-layout: text-page
+layout: default
 ---
-
-{{ content }}
-
-<!--<div class="container">
-    <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-            <input type="checkbox" name="fancy-checkbox-default" id="fancy-checkbox-default" autocomplete="off" />
-            <div class="btn-group">
-                <label for="fancy-checkbox-default" class="btn btn-default">
-                    <span class="glyphicon glyphicon-ok"></span>
-                    <span> </span>
-                </label>
-                <label for="fancy-checkbox-default" class="btn btn-default active">
-                    Default Checkbox
-                </label>
+<!-- Intro Header -->
+<header class="intro-header" style="background-image: url('{{site.baseurl}}/assets/images/hero-2.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="page-heading">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
-</div>-->
+</header>
+<section class="page-section" id="eventFilter">
+    <div class="container" id="filterResults">
+        <div class="row text-center">
+            <div class="col-sm-3">
+                <div class="checkbox checkbox-circle checkbox-group">
+                    <input id="checkbox1" type="checkbox" checked>
+                    <label>Group</label>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="checkbox checkbox-circle checkbox-joeys">
+                    <input id="checkbox2" type="checkbox" checked>
+                    <label>Joey Scouts</label>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="checkbox checkbox-circle checkbox-cubs">
+                    <input id="checkbox3" type="checkbox" checked>
+                    <label>Cub Scouts</label>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="checkbox checkbox-circle checkbox-scouts">
+                    <input id="checkbox4" type="checkbox" checked>
+                    <label>Scouts</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light page-section" id="page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="calendar"></div>
 
-<div id="calendar"></div>
-
+{% include share-buttons.html %}
+    
+{% include top-link.html %}
+            </div>
+        </div>
+    </div>
+</section>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
@@ -42,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 // Group
                 googleCalendarId: 'bundoorascouts.org_a0aqsgr4p885kj0fj7640t17cg@group.calendar.google.com',
-                color: '#9e69af'
+                color: '#91daf7'
             },
             {
                 // Joey Scouts
