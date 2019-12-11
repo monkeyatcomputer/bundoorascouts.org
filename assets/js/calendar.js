@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
         eventSources: [
             {
                 googleCalendarId: 'bundoorascouts.org_2mhtchtdtun49c5ig1f8c6pikk@group.calendar.google.com'
+            },
+            {
+                googleCalendarId: '31t24q8tfjnp5cc6olb1cu5qtaaspdft@import.calendar.google.com'
             }
         ]
     });
