@@ -13,7 +13,6 @@ custom_js:
     - "//cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"
     - "//cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.js"
     - "//cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/google-calendar/main.min.js"
-    - "/assets/js/calendar.js"
 sitemap: false
 redirect_from:
     - /sections/cub-scouts/calendar
