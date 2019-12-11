@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
-        plugins: [ 'googleCalendar','dayGrid' ],
+        plugins: [ 'googleCalendar','list' ],
+        defaultView: 'listMonth',
         header: {
-        left: 'prevYear,prev,next,nextYear today',
-        center: 'title',
-        right: ''
+            left: 'prev,next today',
+            center: 'title',
+            right: ''
         },
         navLinks: true, // can click day/week names to navigate views
         editable: false,
