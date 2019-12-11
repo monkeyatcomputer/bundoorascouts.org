@@ -1,7 +1,7 @@
 ---
-title: Group Calendar
-subtitle: "What we are up to at Bundoora"
-description: "Calendar for the Bundoora Scout Group adventures"
+title: Calendar
+subtitle: "Adventures @ Bundoora Scout Group"
+description: "Calendar of our Bundoora Scout Group adventures"
 layout: calendar
 permalink: /calendar
 custom_css:
