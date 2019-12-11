@@ -90,7 +90,6 @@ layout: default
             <div class="col-lg-12 mx-auto">
                 <!-- Home Post List -->
 				{% for post in site.posts limit : 5 %}
-				<hr>
 				<article class="post-preview">
 					<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
 						<h2 class="post-title">{{ post.title }}</h2>
@@ -111,10 +110,8 @@ layout: default
 						{{ post.date | date: '%B %d, %Y' }} &middot; {% include read-time.html content=post.content %}            
 					</p>
 				</article>
-
+				{% unless forloop.last %}<hr>{% endunless%}
 				{% endfor %}
-
-				<hr>
 
 				<!-- Pager -->
 				<div class="clearfix">

@@ -7,7 +7,7 @@ heroimage: /uploads/hero/campfire.jpg
 
 {% for post in paginator.posts %}
 
-<hr/>
+{% unless forloop.first %}<hr/>{% endunless%}
 
 <article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
