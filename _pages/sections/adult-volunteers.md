@@ -9,17 +9,17 @@ description: "Information for Leaders and Adult Volunteers"
 
 Scouting offers adults a host of rewarding opportunities to help make a difference in young people's lives.
 
-You're never too old to join the adventurous life of Scouting, even if you haven't been involved before.
+You're never too old to join the adventurous life of Scouting at Bundoora Scout Group, even if you haven't been involved before.
 
-If a leadership role isn't for you, there are many other ways to get involved in the world's largest youth movement; Adult Helper, [Victorian Scout Foundation](https://scoutsvictoria.com.au/age-sections-adults/adults-in-scouting/victorian-scout-foundation/) or [Friends of Scouting](https://scoutsvictoria.com.au/age-sections-adults/adults-in-scouting/friends-of-scouting/)
+If a leadership role isn't for you, there are many other ways to get involved at Bundoora Scout Group; Adult Helper, [Victorian Scout Foundation](https://scoutsvictoria.com.au/age-sections-adults/adults-in-scouting/victorian-scout-foundation/) or [Friends of Scouting](https://scoutsvictoria.com.au/age-sections-adults/adults-in-scouting/friends-of-scouting/)
 
-There are also endless opportunities for all adults over 18 who step up into roles as Scout Leaders. Many of our 3500 Adult Leaders are parents of members, but many are just energetic people who thrive in a positive, supportive atmosphere and enjoy helping young people be the best they can.
+There are also endless opportunities for all adults over 18 who step up into roles as Bundoora Scout Group Leaders. Many of our Adult Leaders are parents of members, while others are just energetic people who thrive in a positive, supportive atmosphere and enjoy helping young people be the best they can.
 
 The personal satisfaction of helping young people to achieve their goals is immense, and your sense of personal achievement when you help them through a hurdle is nearly as strong as theirs!
 
 Where else can you take part in abseiling, rock climbing, scuba diving, and countless other adventurous activities with wonderful company and low costs?
 
-Scouting Leaders have incredible travel opportunities, interstate and overseas, to share discoveries with youth members.
+Bundoora Scout Group Leaders have incredible travel opportunities, interstate and overseas, to share discoveries with youth members.
 
 And you're never alone, with thousands of fellow Leaders to turn to in a giant, supportive network of friends. 
 
