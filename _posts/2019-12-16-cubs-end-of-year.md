@@ -14,7 +14,6 @@ custom_css:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
 custom_js:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
-sitemap: false
 ---
 
 Bundoora Cub Scout Pack held our end of year meeting at Latitude in Bundoora. Much bouncing was had combined with dodgeball, basketball, ninja warrior and a high wire obstacle course. We also invested our newest member Adam and welcomed Syrus to the pack.
