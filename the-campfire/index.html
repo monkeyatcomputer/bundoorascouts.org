@@ -5,7 +5,8 @@ subtitle: "Bundoora Scout Group Blog"
 heroimage: /uploads/hero/campfire.jpg
 ---
 
-{% for post in paginator.posts %}
+{% assign sorted = paginator.posts | where_exp: "item","item.sitemap != false" %}
+{% for post in sorted %}
 
 {% unless forloop.first %}<hr/>{% endunless%}
 

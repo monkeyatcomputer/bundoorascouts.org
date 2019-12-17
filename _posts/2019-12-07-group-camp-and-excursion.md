@@ -29,4 +29,4 @@ Sunday morning everyone pitched in again to pack up tents after breakfast, befor
 
 Many thanks to; our [Shrine of Remembrance](https://www.shrine.org.au/) guide Barry, *Eagle's* (Kirsty) awesome planning, and our leaders *Akela* (Hamish), *Bagheera* (Peter), *Kangaroo* (Melissa), *Mang* (Sarah), *Platypus* (Sue), and our group leader *Rafiki* (Chris).
 
-{% include image-gallery.html folder='/uploads/2019-12-07-group-camp-and-excursion' %}
+{% include image-gallery.html folder='/uploads/2019-12-07-group-camp-and-excursion/' %}
