@@ -1,6 +1,6 @@
 ---
 title: Hamish Lucas
-role: Cub Scout Leader
+role: Scouts Leader
 alias: Akela
 section: cub-scouts
 ---

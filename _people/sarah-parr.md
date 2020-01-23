@@ -1,6 +1,6 @@
 ---
 title: Sarah Parr
-role: Assistant Cub Scout Leader
+role: Cub Scouts Leader
 alias: "Mang"
 section: cub-scouts
 ---
