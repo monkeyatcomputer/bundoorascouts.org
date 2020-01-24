@@ -8,7 +8,7 @@ description: "Information for members in our Scouts section"
 ## Scouts
 {:.no_toc}
 
-### Boys & Girls Aged 11-14 Years
+### Children and Teenagers Aged 11-14 Years
 {:.no_toc}
 
 #### Meeting Time: Wednesday 7:00pm – 9:00pm during school term
