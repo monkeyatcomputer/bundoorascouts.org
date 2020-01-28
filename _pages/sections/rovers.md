@@ -8,4 +8,4 @@ sitemap: false
 
 ## Rovers
 ### Adults Aged 18+ Years
-#### Meeting times: Not currently meeting
+#### Meeting times: Please enquire
