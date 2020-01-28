@@ -6,6 +6,12 @@ description: "Information for Leaders and Adult Volunteers"
 ---
 
 ## Adults in Scouting
+{:.no_toc}
+
+- TOC
+{:toc}
+
+<img class="float-right" src="/assets/images/logo-venturer-scouts.png" />
 
 Scouting offers adults a host of rewarding opportunities to help make a difference in young people's lives.
 

@@ -8,7 +8,7 @@ description: "Information for members in our Scouts section"
 ## Scouts
 {:.no_toc}
 
-### Boys & Girls Aged 11-14 Years
+### Children and Teenagers Aged 11-14 Years
 {:.no_toc}
 
 #### Meeting Time: Wednesday 7:00pm – 9:00pm during school term
@@ -16,6 +16,8 @@ description: "Information for members in our Scouts section"
 
 - TOC
 {:toc}
+
+<img class="float-right" src="/assets/images/logo-scouts.png" />
 
 "Action Plus" is the best way to describe the life of a Scout. Scouts have the opportunity to experience numerous adventures. Many discover they have a special interest in one or more of the extensive range of activities and interests available in Scouting. They are able to follow these through with the help of the Scout Leaders and fellow Patrol Members. Scouting is a constant round of adventure, abseiling, flying, hiking, camping, canoeing and fishing. Importantly, with the help and support of professionally trained Scout Leaders, Scouts not only face the action, but they learn to do it safely.
 
@@ -80,7 +82,7 @@ Detailed information regarding fees is provided on the [Parent and Caregiver Inf
 
 ### Uniform
 
-Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available from on the [Youth Badge Placement](https://scoutsvictoria.com.au/age-sections-adults/scouts/uniform-and-badge-placement/).
+Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available from at [Youth Badge Placement](https://scoutsvictoria.com.au/age-sections-adults/scouts/uniform-and-badge-placement/).
 
 Detailed information regarding uniform requirements is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}#what-is-the-uniform).
 

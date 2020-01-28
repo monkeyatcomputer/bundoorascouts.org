@@ -1,8 +1,8 @@
 ---
 title: Hamish Lucas
 role: Scouts Leader
-alias: Akela
-section: cub-scouts
+alias: "Termite"
+section: scouts
 ---
 
 Started Scouting when?

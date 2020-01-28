@@ -8,7 +8,7 @@ description: "Information for members in our Joey Scouts section"
 ## Joey Scouts
 {:.no_toc}
 
-### Boys & Girls Aged 5-7 Years
+### Children Aged 5-7 Years
 {:.no_toc}
 
 #### Meeting Time: Thursday 6:00pm to 7:00pm during school term
@@ -16,6 +16,8 @@ description: "Information for members in our Joey Scouts section"
 
 - TOC
 {:toc}
+
+<img class="float-right" src="/assets/images/logo-joey-scouts.png" />
 
 Joey Scouts is the youngest section of the Scouting movement. For Joey Scouts, life is an exciting adventure. They explore the wider world, stimulate their imagination and develop skills in team work.
 
@@ -71,7 +73,7 @@ Detailed information regarding fees is provided on the [Parent and Caregiver Inf
 
 ### Uniform
 
-Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available from on the [Youth Badge Placement](https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/uniform-and-badge-placement/).
+Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available at [Youth Badge Placement](https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/uniform-and-badge-placement/).
 
 Detailed information regarding uniform requirements is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}#what-is-the-uniform).
 

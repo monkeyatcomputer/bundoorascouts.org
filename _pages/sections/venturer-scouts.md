@@ -2,13 +2,22 @@
 title: Venturer Scouts
 subtitle: "Be Prepared"
 permalink: /sections/venturer-scouts
-published: true
-sitemap: true
+description: "Information for members in our Venturer Scouts section"
 ---
 
 ## Venturer Scouts
+{:.no_toc}
+
 ### Teenagers Aged 15-17 Years
-#### Meeting Time: Not currently meeting
+{:.no_toc}
+
+#### Meeting Time: Please enquire
+{:.no_toc}
+
+- TOC
+{:toc}
+
+<img class="float-right" src="/assets/images/logo-venturer-scouts.png" />
 
 Life as a Venturer Scout: Venturer Scouts never turn down a challenge, in fact, they make their own! Scaling a 30m rock-face or abseiling into caves may frighten most people but Venturer Scouts face the challenge head on and then go white water kayaking!
 
@@ -69,9 +78,9 @@ Detailed information regarding fees is provided on the [Parent and Caregiver Inf
 
 ### Uniform
 
-Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings).
+Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available at [Youth Badge Placement](https://scoutsvictoria.com.au/age-sections-adults/venturers/uniform-and-badge-placement/).
 
-Detailed information regarding uniform requirements is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}).
+Detailed information regarding uniform requirements is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}#what-is-the-uniform).
 
 *All Members should dress appropriately for the type of activity in which they are participating.*
 

@@ -8,7 +8,7 @@ permalink: /sections/cub-scouts
 ## Cub Scouts
 {:.no_toc}
 
-### Boys & Girls Aged 8-10 Years
+### Children Aged 8-10 Years
 {:.no_toc}
 
 #### Meeting Time: Monday 7:00pm – 8:30pm during school term
@@ -16,6 +16,8 @@ permalink: /sections/cub-scouts
 
 - TOC
 {:toc}
+
+<img class="float-right" src="/assets/images/logo-cub-scouts.png" />
 
 Positive Development! The Cub Scout program is specifically designed to meet the developmental needs of 8 to 10 year old children. It provides opportunities for young people to develop and grow as individuals and as members of a team. Cub Scout activities are planned to cover a broad range of interests and topics to trigger their imagination and curiosity.
 
@@ -75,7 +77,7 @@ Detailed information regarding fees is provided on the [Parent and Caregiver Inf
 
 ### Uniform
 
-Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available from the [Youth Badge Placement](https://scoutsvictoria.com.au/age-sections-adults/cub-scouts/uniform-and-badge-placement/).
+Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available at [Youth Badge Placement](https://scoutsvictoria.com.au/age-sections-adults/cub-scouts/uniform-and-badge-placement/).
 
 Detailed information regarding uniform requirements is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}#what-is-the-uniform).
 
