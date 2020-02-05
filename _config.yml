@@ -4,6 +4,7 @@ email: "gl.bundoora@scoutsvictoria.com.au"
 encoding: utf-8
 url: "https://bundoorascouts.org"
 author: "Bundoora Scout Group"
+repository: monkeyatcomputer/bundoorascouts.org
 
 #Outputting
 permalink: pretty
