@@ -4,6 +4,7 @@ subtitle: "Support from our community"
 permalink: /about-us/sponsors
 layout: sponsors
 description: "Bundoora Scout Group sponsors"
+heroimage: /uploads/hero/passion.jpg
 ---
 We're so thankful for the dedication and generosity of our family of sponsors. This is more than just a
 listing of logos – this is a group of organizations who truly support their community and our Scouting
