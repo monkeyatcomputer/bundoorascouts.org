@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+{%- assign heroimage = '/assets/images/hero-2.jpg' -%}
+{%- if page.heroimage -%}
+    {% assign heroimage = page.heroimage %}
+{%- endif -%}
+<!-- Intro Header -->
+<header class="intro-header" style="background-image: url('{{site.baseurl}}{{heroimage}}')">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <div class="post-heading">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="page-section" id="sponsors">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {{ content }}
+            </div>
+        </div>
+        <div class="row">
+            {%- for sponsor in site.data.sponsors -%}
+            <div class="col-lg-4 d-flex align-items-center justify-content-around mt-4">
+                <div class="sponsor-item">
+                    <a href="{{ sponsor.url }}" target="_blank">
+                        <img class="img-fluid" src="{{site.baseurl}}/assets/images/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+                    </a>
+
+                    <p class="text-muted">{{ sponsor.description }}</p>
+                </div>
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>

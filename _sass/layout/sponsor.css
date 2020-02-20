@@ -1,0 +1,12 @@
+.sponsor-item {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.sponsor-item h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+.sponsor-item p {
+  margin-top: 5px;
+}
