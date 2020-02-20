@@ -35,11 +35,21 @@ layout: default
                     <a href="{{ sponsor.url }}" target="_blank">
                         <img class="img-fluid" src="{{site.baseurl}}/assets/images/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.name }}">
                     </a>
-
+                    {% if sponsor.description %}
                     <p class="text-muted">{{ sponsor.description }}</p>
+                    {% endif %}
                 </div>
             </div>
             {%- endfor -%}
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr>
+
+{% include share-buttons.html %}
+
+{% include top-link.html %}
+            </div>
         </div>
     </div>
 </section>
