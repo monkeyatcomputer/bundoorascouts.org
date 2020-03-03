@@ -1,6 +1,6 @@
 ---
 title: Phil Lighter
-role: Parent Volunteer
+role: Adult Helper
 alias: 
 section: group
 ---

@@ -1,6 +1,6 @@
 ---
 title: Tristan Griffiths
-role: Parent Volunteer
+role: Adult Helper
 alias: Baloo
 section: group
 ---
