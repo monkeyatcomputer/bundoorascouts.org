@@ -360,10 +360,10 @@ This process doesn't apply if you believe there is a breach of Child Safety. Any
 Scouting has its own language! Here are some terms you may hear:
 
 [Joey Scouts]({{ site.baseurl }}{% link _pages/sections/joey-scouts.md %})
-: Our youngest Scouts are boys and girls aged 5-8. They meet each week as a Joey Scout Mob. Every two years they have a Statewide weekend camp called a Kangaree. Joeys can earn a major award called the Promise Challenge.
+: Our youngest Scouts are children aged 5-8. They meet each week as a Joey Scout Mob. Every two years they have a Statewide weekend camp called a Kangaree. Joeys can earn a major award called the Promise Challenge.
 
 [Cub Scouts]({{ site.baseurl }}{% link _pages/sections/cub-scouts.md %})
-: Cubs are boys and girls aged 8-11. They meet as a Cub Scout Pack, where they operate in small teams called Sixes. Each Six is led by an older Cub called a Sixer. Sixers and their Leaders meet to plan their program. This group is called the Pack Council. Every three years more than 3600 Victorian Cubs enjoy a huge week-long camp called a Cuboree. Cubs can earn a major award called the Grey Wolf.
+: Cubs are children aged 8-11. They meet as a Cub Scout Pack, where they operate in small teams called Sixes. Each Six is led by an older Cub called a Sixer. Sixers and their Leaders meet to plan their program. This group is called the Pack Council. Every three years more than 3600 Victorian Cubs enjoy a huge week-long camp called a Cuboree. Cubs can earn a major award called the Grey Wolf.
 
 [Scouts]({{ site.baseurl }}{% link _pages/sections/scouts.md %})
 : Scouts, aged 11-14, are the original Section of Scouting and have been co-ed since 1988. Scouts began at a trial camp in England in August 1907. Scouts meet as a Scout Troop, which is comprised of small teams called Patrols, led by an elected Patrol Leader. PLs meet with their Leaders as the Troop Council, to plan their program and other aspects of the Troop. By now, youth members are increasingly taking over the running of their Section - planning their program, managing finance, and even dealing with any behaviour problems. Every three years Scouts from around Australia and beyond gather for a two-week camp called a Jamboree. Scouts can earn the award called the Australian Scout Medallion.
