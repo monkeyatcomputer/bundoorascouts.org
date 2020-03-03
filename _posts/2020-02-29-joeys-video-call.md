@@ -1,7 +1,7 @@
 ---
 title: "Joeys Video Call"
 subtitle: "@ Bundoora Scout Hall"
-heroimage: /uploads/hero/clean-up-australia.jpg
+heroimage: /uploads/hero/joeys-video-call.jpg
 author:
     - Sue
 categories:
