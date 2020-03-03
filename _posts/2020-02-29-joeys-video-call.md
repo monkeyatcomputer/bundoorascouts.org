@@ -1,6 +1,6 @@
 ---
 title: "Joeys and Beavers Meet"
-subtitle: "Over the Internet!"
+subtitle: "Over The Internet!"
 heroimage: /uploads/hero/joeys-video-call.jpg
 author:
     - Sue
