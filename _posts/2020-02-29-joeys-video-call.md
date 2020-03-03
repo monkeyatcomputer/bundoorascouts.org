@@ -1,6 +1,6 @@
 ---
-title: "Joeys Video Call"
-subtitle: "@ Bundoora Scout Hall"
+title: "Joeys and Beavers Meet"
+subtitle: "Over the Internet!"
 heroimage: /uploads/hero/joeys-video-call.jpg
 author:
     - Sue
