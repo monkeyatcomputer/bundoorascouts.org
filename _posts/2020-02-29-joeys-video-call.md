@@ -15,10 +15,10 @@ custom_css:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
 custom_js:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
-sitemap: false
+sitemap: true
 ---
 
-...
+Our Joey Scout mob held a sleep over at the hall as practise for Kangaree the following weekend. Before bed we cooked pancakes in the new kitchen and watched a movie. The next morning, we up early for breakfast followed by a very special video call with a Beaver Scout pack in England! As it was also Cleanup Australia day, we did our part to cleanup N.J. Telfer reserve which surrounds the Bundoora Scout Hall.
 
 {% include image-gallery.html folder='/uploads/2020-02-29-joeys-video-call/' %}
 
