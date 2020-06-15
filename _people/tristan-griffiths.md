@@ -1,6 +1,6 @@
 ---
 title: Tristan Griffiths
-role: Adult Helper
+role: Assistant Group Leader
 alias: Baloo
 section: group
 ---
@@ -12,7 +12,7 @@ Reason for joining the Scouting movement?
 : Re-joined in 2019 as a parent helper as my son is a member of the Bundoora Scouts Cub Pack.
 
 Most likely to be heard saying?
-: Can I get you to fill out the website questions for your pofiles please?
+: Can I get you to fill out the website questions for your profiles please?
 
 Does not like?
 : The smell of seafood. Please no Tuna in a microwave near me.
