@@ -1,4 +1,4 @@
 # bundoorascouts.org
 Bundoora Scout Group public website
 
-![workflow-badge](https://github.com/monkeyatcomputer/bundoorascouts.org/workflows/deploy/badge.svg)
+![Jekyll Deploy](https://github.com/monkeyatcomputer/bundoorascouts.org/workflows/Jekyll%20Deploy/badge.svg?branch=master)
