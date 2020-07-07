@@ -101,6 +101,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport (>= 6.0.3.1)
+  jekyll (~> 4.0)
   jekyll-feed
   jekyll-gist
   jekyll-paginate
