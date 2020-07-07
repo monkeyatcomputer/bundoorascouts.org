@@ -11,8 +11,22 @@ permalink: pretty
 markdown: kramdown
 highlighter: rouge
 timezone: "Australia/Melbourne"
-paginate: 5
-paginate_path: "/the-campfire/page/:num/"
+# Explicitly turn off the old code
+#paginate: nil
+#paginate_path: nil
+#paginate: 5
+#paginate_path: "/the-campfire/page/:num/"
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 4
+  offset: 0
+  permalink: '/page/:num/'
+  title: ':title - Page :num'
+  limit: 100
+  sort_field: 'date'
+  sort_reverse: true
 
 # Collections
 collections:
@@ -70,21 +84,19 @@ exclude:
  
  # Plugins
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-redirect-from
-#  - jekyll-archives
 #  - jekyll-include-cache
 
 whitelist:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-redirect-from
-#  - jekyll-archives
 #  - jekyll-include-cache
 
 kramdown:
