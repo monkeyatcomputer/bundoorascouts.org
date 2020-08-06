@@ -92,6 +92,7 @@ defaults:
 # Includes
 include:
   - _pages
+  - CNAME
 
 # Excludes
 exclude:
