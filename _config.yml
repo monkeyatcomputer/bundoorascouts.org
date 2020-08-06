@@ -92,12 +92,10 @@ defaults:
 # Includes
 include:
   - _pages
-  - CNAME
 
 # Excludes
 exclude:
   - LICENSE
-  - CNAME
   - README.md
   - .gitignore
  
