@@ -6,13 +6,17 @@ layout: default
 {%- if page.heroimage -%}
     {% assign heroimage = page.heroimage %}
 {%- endif -%}
+{%- assign pageTitle = page.title -%}
+{%- if page.autopages -%}
+    {% assign pageTitle = page.autopages.display_name %}
+{%- endif -%}
 <!-- Intro Header -->
 <header class="intro-header" style="background-image: url('{{site.baseurl}}{{heroimage}}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="page-heading">
-                    <h1>{{ page.title }}</h1>
+                    <h1>{{ pageTitle }}</h1>
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}

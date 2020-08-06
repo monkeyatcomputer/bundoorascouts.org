@@ -23,10 +23,28 @@ pagination:
   per_page: 4
   offset: 0
   permalink: '/page/:num/'
-  title: ':title - Page :num'
+  title: ':title Page :num'
   limit: 100
   sort_field: 'date'
   sort_reverse: true
+
+# AutoPages
+autopages:
+  enabled: true
+  categories:
+    layouts:
+      - blog.html
+    permalink: /the-campfire/section/:cat
+    slugify:
+      mode: pretty
+  collections:
+    enabled: false
+  tags:
+    layouts:
+      - blog.html
+    permalink: /the-campfire/tag/:tag
+    slugify:
+      mode: pretty
 
 # Collections
 collections:
@@ -89,7 +107,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-redirect-from
-#  - jekyll-include-cache
+  - jekyll-include-cache
 
 whitelist:
   - jekyll-paginate-v2
@@ -97,7 +115,7 @@ whitelist:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-redirect-from
-#  - jekyll-include-cache
+  - jekyll-include-cache
 
 kramdown:
   hard_wrap: false
