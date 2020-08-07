@@ -1,6 +1,6 @@
 ---
 title: Venturer Scouts
-subtitle: "Be Prepared"
+subtitle: "Look Wide"
 permalink: /sections/venturer-scouts
 description: "Information for members in our Venturer Scouts section"
 ---

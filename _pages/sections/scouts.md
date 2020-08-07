@@ -1,6 +1,6 @@
 ---
 title: Scouts
-subtitle: "Be Prepared"
+subtitle: "Explore the Unknown"
 permalink: /sections/scouts
 description: "Information for members in our Scouts section"
 ---

@@ -1,6 +1,6 @@
 ---
 title: Rovers
-subtitle: ""
+subtitle: "Beyond the Horizon"
 permalink: /sections/rovers
 published: false
 sitemap: false
