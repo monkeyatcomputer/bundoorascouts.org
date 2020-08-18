@@ -1,6 +1,6 @@
 ---
 title: Tristan Griffiths
-role: Assistant Group Leader
+role: Adult Helper
 alias: Baloo
 section: group
 ---
