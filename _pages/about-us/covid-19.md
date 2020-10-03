@@ -8,9 +8,11 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 ## Current Restrictions
 
-Due to the announcement by the State Government of Victoria to enforce Stage 4 restrictions and the declared State of Emergency, from midnight Wednesday August 5 there is no face-to-face Scouting across the whole of Victoria. This includes all indoor or outdoor Scouting for youth and/or adult members.
+Metropolitan Melbourne moved to Step 2 on September 28.
 
-**Bundoora Scouts has returned to Scouting using the Zoom Online Video Conferencing platform in Term 3 2020.**
+**In Step 2, there is no face-to-face Scouting in Metropolitan Melbourne, this includes all indoor or outdoor Scouting for youth and/or adult members.**
+
+**Bundoora Scouts will return to Scouting using the Zoom Online Video Conferencing platform in Term 4 2020.**
 
 Links have been posted to the Facebook Group section pages and a calendar invite sent to your e-mail address from CareMonkey.
 
