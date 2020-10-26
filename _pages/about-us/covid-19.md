@@ -8,11 +8,9 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 ## Current Restrictions
 
-Metropolitan Melbourne moved to Step 2 on September 28.
+Metropolitan Melbourne will move to Step 3 on October 28 with additional easing of restrictions on November 9.
 
-**In Step 2, there is no face-to-face Scouting in Metropolitan Melbourne, this includes all indoor or outdoor Scouting for youth and/or adult members.**
-
-**Bundoora Scouts will return to Scouting using the Zoom Online Video Conferencing platform in Term 4 2020.**
+**Bundoora Scouts will continue Scouting using the Zoom Online Video Conferencing platform in Term 4 2020 until official advice is provided by Scouts Victoria.**
 
 Links have been posted to the Facebook Group section pages and a calendar invite sent to your e-mail address from CareMonkey.
 
