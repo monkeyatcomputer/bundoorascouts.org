@@ -29,7 +29,7 @@ Victoria, including Metropolitan Melbourne, has moved to Step 3 on November 9. W
  * Face to Face outdoor Scouting can be undertaken in groups of up to 50 participants and events can go ahead with a maximum of 500, split into groups of 50 participants
  * Indoors Scouting participation limits will increase
 
- ### More Information
+### More Information
 
 For the latest updates on the rules for Scouting at the Bundoora Scout Group and across the whole of Victoria, please visit the [Scouts Victoria COVID 19 update](https://scoutsvictoria.com.au/about-us/news/covid-19-update/).
 
