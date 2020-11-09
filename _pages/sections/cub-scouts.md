@@ -3,6 +3,7 @@ title: Cub Scouts
 subtitle: "Create the Path"
 description: "Information for members in our Cub Scouts section"
 permalink: /sections/cub-scouts
+heroimage: /assets/images/hero-cub-scouts.jpg
 ---
 
 ## Cub Scouts

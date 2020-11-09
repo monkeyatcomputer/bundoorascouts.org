@@ -3,6 +3,7 @@ title: "Joey Scouts"
 subtitle: "Discover Adventure"
 permalink: /sections/joey-scouts
 description: "Information for members in our Joey Scouts section"
+heroimage: /assets/images/hero-joey-scouts.jpg
 ---
 
 ## Joey Scouts

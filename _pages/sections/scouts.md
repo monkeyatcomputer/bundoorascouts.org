@@ -3,6 +3,7 @@ title: Scouts
 subtitle: "Explore the Unknown"
 permalink: /sections/scouts
 description: "Information for members in our Scouts section"
+heroimage: /assets/images/hero-scouts.jpg
 ---
 
 ## Scouts
