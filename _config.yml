@@ -6,7 +6,7 @@ url: "https://bundoorascouts.org"
 author: "Bundoora Scout Group"
 repository: monkeyatcomputer/bundoorascouts.org
 formspree_action: "https://formspree.io/f/mbjpklgn"
-recapcha_site_key: "6Le9luEZAAAAAOLvQKScGICRfZyyULhtjGUfrCo8"
+recapcha_site_key: "6LdSneEZAAAAALUuwv9omWFHmY2GipMHjMdzBD-D"
 
 #Outputting
 permalink: pretty
