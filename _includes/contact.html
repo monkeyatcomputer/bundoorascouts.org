@@ -1,4 +1,4 @@
-<form id="contactForm" action="https://formspree.io/{{include.email}}" name="sentMessage" novalidate="novalidate" method="POST">
+<form id="contactForm" action="{{include.formspree_action}}" name="sentMessage" novalidate="novalidate" method="POST">
     <div class="row justify-content-center">
         <div class="col-md-6 card">
             <h5>Please contact me...</h5>
@@ -7,7 +7,7 @@
                 <p class="help-block text-danger"></p>
             </div>
             <div class="form-group">
-                <input class="form-control" id="email" name="email" type="email" placeholder="Email *" required="required" data-validation-required-message="Please enter your email address.">
+                <input class="form-control" id="email" name="_replyto" type="email" placeholder="Email *" required="required" data-validation-required-message="Please enter your email address.">
                 <p class="help-block text-danger"></p>
             </div>
             <div class="form-group">
@@ -66,7 +66,7 @@
             {% endcase %}
             <h5>Comments?</h5>
             <div class="form-group">
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comments" data-validation-required-message="Any additional comments?"></textarea>
+                <textarea class="form-control" id="comments" name="message" placeholder="Comments" data-validation-required-message="Any additional comments?"></textarea>
                 <p class="help-block text-danger"></p>
             </div>
             <div id="success"></div>
