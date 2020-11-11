@@ -4,6 +4,8 @@ subtitle: "Explore the Unknown"
 permalink: /sections/scouts
 description: "Information for members in our Scouts section"
 heroimage: /assets/images/hero-scouts.jpg
+custom_js:
+    - "//www.google.com/recaptcha/api.js"
 ---
 
 ## Scouts

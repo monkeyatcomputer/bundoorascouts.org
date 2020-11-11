@@ -4,6 +4,8 @@ subtitle: "Create the Path"
 description: "Information for members in our Cub Scouts section"
 permalink: /sections/cub-scouts
 heroimage: /assets/images/hero-cub-scouts.jpg
+custom_js:
+    - "//www.google.com/recaptcha/api.js"
 ---
 
 ## Cub Scouts

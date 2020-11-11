@@ -4,6 +4,8 @@ subtitle: "Beyond the Horizon"
 permalink: /sections/rovers
 published: false
 sitemap: false
+custom_js:
+    - "//www.google.com/recaptcha/api.js"
 ---
 
 ## Rovers

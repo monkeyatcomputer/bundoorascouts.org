@@ -3,6 +3,8 @@ title: Adult Volunteers
 subtitle: "Volunteer with us"
 permalink: /sections/adult-volunteers
 description: "Information for Leaders and Adult Volunteers"
+custom_js:
+    - "//www.google.com/recaptcha/api.js"
 ---
 
 ## Adults in Scouting
