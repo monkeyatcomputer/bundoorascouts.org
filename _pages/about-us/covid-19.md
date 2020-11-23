@@ -8,7 +8,7 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 ## Current Restrictions
 
-Victoria, including Metropolitan Melbourne, has moved to Step 3 on November 9. We're now allowed to return to indoor face-to-face Scouting at the hall!
+Victoria, including Metropolitan Melbourne, has moved to the last step from November 23rd.
 
 ### Bundoora Scout Hall
 
@@ -19,17 +19,19 @@ Victoria, including Metropolitan Melbourne, has moved to Step 3 on November 9. W
 
 ### Outdoor Scouting
 
- * Face-to-face outdoor Scouting can be undertaken as a whole Unit but split into Patrols or small groups of 10 participants*.
- * A reasonable distance (10 metres) between each Patrol or small group must be maintained at all times
- * Youth participants are not required to physically distance within Patrols when outdoors
- * Overnight camping for one or more nights is permitted in groups of up to 10 with adults in single-person tents and youth members sharing no more than 2 to a tent
+ * Face-to-face outdoor Scouting can be undertaken as a whole Unit (up to 50 participants*). Units no longer need to be split into Patrols or small groups for outdoor activities.
+ * Face masks do not need to be worn outdoors unless physical distancing cannot be achieved for an extended period
+ * Overnight camping for one or more nights is permitted in Patrols or small groups of up to 15 participants*. Tents, cabins or bunkhouses can be used and shared amongst the 15 participant group.
 
-### From November 23
-
- * Face to Face outdoor Scouting can be undertaken in groups of up to 50 participants and events can go ahead with a maximum of 500, split into groups of 50 participants
- * Indoors Scouting participation limits will increase
+\* Limits for youth program activities only apply to participants and spectators/parents. Those required to run the activity, such as Leaders, adult helpers, trainers, rostered parents, carers, etc are not included in the limits.
 
 ### More Information
+
+Further directions on Scouting during the current Step can be found here:
+
+ * [Return to Indoor Scouting Directions](https://scoutsvictoria.com.au/media/4969/return-to-indoor-scouting-directions-nov-23.pdf) (Updated Nov 23)
+ * [Return to Outdoor Scouting Directions](https://scoutsvictoria.com.au/media/4967/return-to-outdoor-scouting-directions-nov-23.pdf) (Updated Nov 23)
+ * [Campsite Directions](https://scoutsvictoria.com.au/media/4968/campsite-directions-nov-23.pdf) (Updated Nov 23)
 
 For the latest updates on the rules for Scouting at the Bundoora Scout Group and across the whole of Victoria, please visit the [Scouts Victoria COVID 19 update](https://scoutsvictoria.com.au/about-us/news/covid-19-update/).
 
