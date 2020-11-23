@@ -10,6 +10,8 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 Victoria, including Metropolitan Melbourne, has moved to the last step from November 23rd.
 
+Bundoora Scout Group has implemented the Scouts Victoria COVIDSafe plans for indoor and outdoor Scouting.
+
 ### Bundoora Scout Hall
 
  * Can open for indoor Scouting and hall hires subject to density limits and physical distancing
