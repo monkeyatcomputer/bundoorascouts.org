@@ -29,6 +29,12 @@ Victoria, including Metropolitan Melbourne, has moved to a COVIDSafe Summer from
 
 ### More Information
 
+Further directions on Scouting during the current Step can be found here:
+
+ * [Return to Indoor Scouting Directions](https://scoutsvictoria.com.au/media/4969/return-to-indoor-scouting-directions-nov-23.pdf) (Updated Nov 23)
+ * [Return to Outdoor Scouting Directions](https://scoutsvictoria.com.au/media/4967/return-to-outdoor-scouting-directions-nov-23.pdf) (Updated Nov 23)
+ * [Campsite Directions](https://scoutsvictoria.com.au/media/4968/campsite-directions-nov-23.pdf) (Updated Nov 23)
+
 For the latest updates on the rules for Scouting at the Bundoora Scout Group and across the whole of Victoria, please visit the [Scouts Victoria COVID 19 update](https://scoutsvictoria.com.au/about-us/news/covid-19-update/).
 
 For further queries about this direction or any other coronavirus related issues, please contact [coronavirus@scoutsvictoria.com.au](mailto:coronavirus@scoutsvictoria.com.au).
