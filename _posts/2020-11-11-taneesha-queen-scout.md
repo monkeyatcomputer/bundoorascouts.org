@@ -1,7 +1,7 @@
 ---
 title: "Taneesha Queen Scout"
 subtitle: "Congratulations!"
-heroimage: /uploads/hero/clean-up-australia.jpg
+heroimage: /assets/images/hero-venturer-scouts.jpg
 author:
     - Chris Parr
 categories:
