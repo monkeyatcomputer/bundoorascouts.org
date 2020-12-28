@@ -8,6 +8,10 @@ categories:
     - Venturer Scouts
 tags:
     - Queen Scout Award
+custom_css:
+    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
+custom_js:
+    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
 ---
 
 In November 2020, Bundoora Venturer Scouts' very own Taneesha was awarded the Queen Scout Award. A massive BRAVO to Taneesha for all the hard work especially given the interesting year that 2020 has been.
