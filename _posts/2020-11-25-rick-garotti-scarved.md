@@ -12,8 +12,6 @@ custom_css:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
 custom_js:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
-sitemap: false
-hidden: true
 ---
 
 On the 25th of November 2020, Bundoora Scouts was pleased to host the new Banyule Council Mayor, Councillor Rick Garotti to be presented with the State Scouts Scarf. We are extremely grateful for the support that Banyule Council, and our local counciller and now Mayor, Cr Rick Garotti, has given to Bundoora Scout Group over the past few years. We look forward to many more opportunities to help Banyule Council build resilience and leadership in the local community.
