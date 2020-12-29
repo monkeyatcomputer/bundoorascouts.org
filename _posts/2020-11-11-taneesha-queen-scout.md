@@ -1,5 +1,5 @@
 ---
-title: "Taneesha Queen Scout"
+title: "Taneesha's Queen's Scout"
 subtitle: "Congratulations!"
 heroimage: /assets/images/hero-venturer-scouts.jpg
 author:
