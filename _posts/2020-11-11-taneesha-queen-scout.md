@@ -14,6 +14,10 @@ custom_js:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
 ---
 
-In November 2020, Bundoora Venturer Scouts' very own Taneesha was awarded the Queen Scout Award. A massive BRAVO to Taneesha for all the hard work especially given the interesting year that 2020 has been.
+### CONGRATULATIONS TO: Taneesha Pattison
+
+Bundoora Scout Group is very excited to announce that, for the first time since 1992, we have a Queen's Scout. We are very proud to announce that Taneesha Pattison has been approved for the prestigious award having completed all the technical requirements and undergoing a rigorous character check, Taneesha will, sometime in February be invested as a Queens Scout. An amazing feat during a year of Covid and (almost) on her own.
+
+A massive congratulations to Taneesha for all her hard work from everyone at Bundoora Scouts.
 
 {% include image-gallery.html folder='/uploads/2020-11-11-taneesha-queen-scout/' %}
