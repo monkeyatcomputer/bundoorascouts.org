@@ -8,7 +8,9 @@ heroimage: /uploads/hero/coronavirus2.jpg
 
 ## Current Restrictions
 
-Victoria, including Metropolitan Melbourne, has moved to a COVIDSafe Summer from February 27.
+Victoria, including Metropolitan Melbourne, has returned to a COVIDSafe Summer from February 27.
+
+**Scouting can return to COVIDSafe Summer restrictions. Sleepovers and accommodation are now limited to 30 people in a single indoor space and face masks only need to be worn in high risk locations or where 1.5m physical distancing cannot be maintained for an extended period.**
 
 ### Bundoora Scout Hall
 
