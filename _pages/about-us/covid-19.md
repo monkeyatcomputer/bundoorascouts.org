@@ -6,24 +6,21 @@ description: "Bundooa Scouts COVID-19 Information"
 heroimage: /uploads/hero/coronavirus2.jpg
 ---
 
-## Current Restrictions
+## Current Advice
 
-Victoria, including Metropolitan Melbourne, has returned to a COVIDSafe Summer from February 27.
-
-**Scouting can return to COVIDSafe Summer restrictions. Sleepovers and accommodation are now limited to 30 people in a single indoor space and face masks only need to be worn in high risk locations or where 1.5m physical distancing cannot be maintained for an extended period.**
+We're back enjoying our Scouting adventures in a COVID safe way. We welcome all children aged from 5 years up to join us for camping, outdoor activities, our weekly meetings and much more. New members are welcome to attend on the meeting night with your first 3 nights free!
 
 ### Bundoora Scout Hall
 
  * Can open for indoor Scouting and hall hires subject to density limits and physical distancing.
  * The hall and rooms allow 1 participant* per 2 sqm with a QR Code, otherwise 1 participant* per 4 sqm. Refer [refer to FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/record-keeping-and-qr-codes/) for QR codes.
- * Can be used for sleepovers, limited to **30** people *including* Leaders. [Refer to FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/scout-halls/) for Halls.
+ * Can be used for sleepovers, limited to **100** people *including* Leaders. [Refer to FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/scout-halls/) for Halls.
 
 ### Outdoor Scouting
 
- * Outdoor activities can be undertaken in groups of up to 100 participants*. Outdoor activities with more than 100 participants should be split into multiple groups of 100.
- * Larger events can go ahead as community sport or in line with the Public Events Framework. You must obtain prior approval from [coronavirus@scoutsvictoria.com.au](mailto:coronavirus@scoutsvictoria.com.au) for an event over 100 participants*.
- * Overnight camping for one or more nights is permitted but must be split into Patrols or small groups of up to 30 participants*. Tents, cabins or bunkhouses can be used and shared amongst the 30 participant patrol.
- * There is a limit of **30** people sleeping in any one indoor area such as a bunkhouse room, cabin or tent.
+ * Outdoor activities no longer need to be split and are just subject to a density limit of 1 person per 2 sqm.
+ * Overnight accommodation in tents, cabins etc must be undertaken in Patrols or split into cohorts of up to 100 participants*.
+ * A limit of 6 is still recommended in tents.
 
 ### Face Masks
 
@@ -33,9 +30,9 @@ Victoria, including Metropolitan Melbourne, has returned to a COVIDSafe Summer f
 
 Further directions on Scouting during the current Step can be found here:
 
- * [Return to Indoor Scouting Directions](https://scoutsvictoria.com.au/media/5298/return-to-indoor-scouting-directions-feb-18.pdf) (Updated February 18)
- * [Return to Outdoor Scouting Directions](https://scoutsvictoria.com.au/media/5299/return-to-outdoor-scouting-directions-feb-18.pdf) (Updated February 18)
- * [Campsite Directions](https://scoutsvictoria.com.au/media/5297/campsite-directions-feb-18.pdf) (Updated February 18)
+ * [Return to Indoor Scouting Directions](https://scoutsvictoria.com.au/media/5383/return-to-indoor-scouting-directions-mar-26.pdf) (Updated March 26)
+ * [Return to Outdoor Scouting Directions](https://scoutsvictoria.com.au/media/5384/return-to-outdoor-scouting-directions-mar-26.pdf) (Updated March 26)
+ * [Campsite Directions](https://scoutsvictoria.com.au/media/5382/campsite-directions-mar-26.pdf) (Updated March 26)
 
 For the latest updates on the rules for Scouting at the Bundoora Scout Group and across the whole of Victoria, please visit the [Scouts Victoria COVID 19 update](https://scoutsvictoria.com.au/about-us/news/covid-19-update/).
 
