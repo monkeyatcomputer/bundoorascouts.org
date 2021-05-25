@@ -25,7 +25,7 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 ### Face Masks
 
- * **Face masks must to be worn indoors** by everyone 12 years and older. Refer to further information on Face Masks [in the FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/face-masks/).
+ * **Face masks must be worn indoors** by everyone 12 years and older. Refer to further information on Face Masks [in the FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/face-masks/).
 
 ### More Information
 
