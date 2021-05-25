@@ -10,9 +10,22 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 **From 6pm on the 25th of May, additional COVIDSafe measures are in place across Greater Melbourne to help keep Victorians safe.**
 
+*The following guidance is subject to change as further information is provided by the Victorian Government.*
+
+Scouting activities indoors and outdoors can continue as per the current restrictions with the precautions listed in the Scouts Victoria COVIDSafe Plan.
+
+Face masks must be worn be worn indoors within Metropolitan Melbourne if you are *12 years old* or over unless an exemption applies.
+
+Record keeping must be in place for all indoor and outdoor activities using either the Victorian Government QR Code Service or attendance records for youth members.
+
+Within Metropolitan Melbourne, the following activities are affected by the Government Changes:
+
+ * Scouting activities can only be undertaken within private residences with a maximum of 5 participants
+ * Private hall hires are limited to one household and up to 5 guests
+ * New private bookings at campsites for families or tourism are limited to one house plus an additional 5 guests (this does not apply to Scout activities at campsites)
+
 ### Bundoora Scout Hall
 
- * Face masks must be worn by everyone 12 years and older.
  * Can open for indoor Scouting and hall hires subject to density limits and physical distancing.
  * The hall and rooms allow 1 participant* per 2 sqm with a QR Code, otherwise 1 participant* per 4 sqm. Refer [refer to FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/record-keeping-and-qr-codes/) for QR codes.
  * Can be used for sleepovers, limited to **100** people *including* Leaders. [Refer to FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/scout-halls/) for Halls.
@@ -25,7 +38,7 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 ### Face Masks
 
- * **Face masks must be worn indoors** by everyone 12 years and older. Refer to further information on Face Masks [in the FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/face-masks/).
+ * **Face masks must be worn indoors** by everyone 12 years and older unless an exemption applies. Refer to further information on Face Masks [in the FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/face-masks/).
 
 ### More Information
 
