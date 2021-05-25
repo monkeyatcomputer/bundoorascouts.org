@@ -14,7 +14,7 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 Scouting activities indoors and outdoors can continue as per the current restrictions with the precautions listed in the Scouts Victoria COVIDSafe Plan.
 
-Face masks must be worn be worn indoors within Metropolitan Melbourne if you are *12 years old* or over unless an exemption applies.
+Face masks must be worn indoors within Metropolitan Melbourne if you are *12 years old* or over unless an exemption applies.
 
 Record keeping must be in place for all indoor and outdoor activities using either the Victorian Government QR Code Service or attendance records for youth members.
 
