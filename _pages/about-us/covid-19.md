@@ -3,15 +3,16 @@ title: "COVID-19"
 subtitle: "Information"
 permalink: /about-us/covid-19
 description: "Bundooa Scouts COVID-19 Information"
-heroimage: /uploads/hero/coronavirus2.jpg
+heroimage: /uploads/hero/coronavirus.jpg
 ---
 
 ## Current Advice
 
-We're back enjoying our Scouting adventures in a COVID safe way. We welcome all children aged from 5 years up to join us for camping, outdoor activities, our weekly meetings and much more. New members are welcome to attend on the meeting night with your first 3 nights free!
+**From 6pm on the 25th of May, additional COVIDSafe measures are in place across Greater Melbourne to help keep Victorians safe.**
 
 ### Bundoora Scout Hall
 
+ * Face masks must be worn by everyone 12 years and older.
  * Can open for indoor Scouting and hall hires subject to density limits and physical distancing.
  * The hall and rooms allow 1 participant* per 2 sqm with a QR Code, otherwise 1 participant* per 4 sqm. Refer [refer to FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/record-keeping-and-qr-codes/) for QR codes.
  * Can be used for sleepovers, limited to **100** people *including* Leaders. [Refer to FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/scout-halls/) for Halls.
@@ -24,7 +25,7 @@ We're back enjoying our Scouting adventures in a COVID safe way. We welcome all 
 
 ### Face Masks
 
- * **Face masks do not need to be worn indoors or outdoors** unless physical distancing cannot be achieved for an extended period or you are in a high risk location. Refer to further information on Face Masks [in the FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/face-masks/).
+ * **Face masks must to be worn indoors** by everyone 12 years and older. Refer to further information on Face Masks [in the FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/face-masks/).
 
 ### More Information
 
