@@ -1,7 +1,7 @@
 ---
-title: Melissa Cugley
-role: Assistant Joey Scouts Leader
-alias: "Kangaroo"
+title: Brooke Vakulcyzk
+role: Leader in Training
+alias: ""
 section: joey-scouts
 ---
 
