@@ -8,21 +8,18 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 ## Current Advice
 
-**From 11:59 pm June 10, 2021, Metropolitan Melbourne moves out of lockdown**
+**From 11:59 pm June 17, 2021, face-to-face Scouting activities indoors and outdoors in Metropolitan Melbourne can resume within limits.**
 
-**Face-to-face Scouting activities indoors and outdoors in Metropolitan Melbourne can resume within strict limits.**
+ * Outdoor activities for up to 150 participants\* in patrols or small groups of up to 20.
+ * Indoor activities for a maximum of 50 per venue, subject to 1 person per 4sqm density quotient, in patrols or small groups of up to 10 participants\*.
+ * Overnight camping in groups of up to 20* with a maximum of three people sharing a tent or other accommodation.
+ * Campsites can accept private bookings from a single household plus two additional adults and their dependents.
+ * Masks still need to be worn indoors unless an exemption applies.
+ * Hall hires can resume but they must follow the restrictions for the relevant industry sector. Private hall hires are not permitted.
 
- * Outdoor activities for up to 50 youth participants* in patrols or small groups of up to 10.
- * Indoor activities in groups of up to 10 participants* in a single indoor space.
- * Overnight camping in groups of up to 10* in single person tents.
- * Campsites can accept private bookings from a single household.
- * School camps where there is exclusive use of a campsite by a single school.
- * Members from Metropolitan Melbourne cannot attend face-to-face scouting in Regional Victoria and activities must be undertaken within 25km.
- * Masks still need to be worn **indoors and outdoors** unless an exemption applies.
+\***Limits for youth program activities only apply to participants and spectators/parents. Those required to run the activity, such as Leaders, adult helpers, trainers, rostered parents, carers, etc are not included in the limits.**
 
-\***Participant numbers are in addition to those required to run the activity**
-
-**From June 18, 2021, unless otherwise advised, we expect further relaxation of face-to-face scouting. The advice above will be updated once the post-lockdown restrictions are known.**
+**From June 25, 2021 we expect further relaxation of face-to-face scouting.**
 
 For the latest updates on the rules for Scouting at the Bundoora Scout Group and across the whole of Victoria, please visit the [Scouts Victoria COVID 19 update](https://scoutsvictoria.com.au/about-us/news/covid-19-update/).
 
