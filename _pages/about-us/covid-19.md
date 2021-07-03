@@ -20,8 +20,6 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 \* **Limits for youth program activities only apply to participants and spectators/parents. Those required to run the activity, such as Leaders, adult helpers, trainers, rostered parents, carers, etc are not included in the limits.**
 
-**From July 9, 2021 we expect further relaxation of face-to-face scouting.**
-
 For the latest updates on the rules for Scouting at the Bundoora Scout Group and across the whole of Victoria, please visit the [Scouts Victoria COVID 19 update](https://scoutsvictoria.com.au/about-us/news/covid-19-update/).
 
 For further queries about this direction or any other coronavirus related issues, please contact [coronavirus@scoutsvictoria.com.au](mailto:coronavirus@scoutsvictoria.com.au).
