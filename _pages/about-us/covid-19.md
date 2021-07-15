@@ -8,15 +8,14 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 ## Current Advice
 
-**From 11:59 pm June 24, 2021 the COVID restrictions across Victoria will relax significantly.**
+**From 11:59 pm July 08, 2021 the COVID there is a small relaxation of restrictions across Victoria. We expect these restrictions to be in place for at least 2 weeks.**
 
-* Outdoor activities for up to 1,000 participants* with no requirement to split into smaller groups.
-* Indoor activities for a maximum of 300 participants* per indoor space subject to 1 person per 4sqm density quotient. No requirement to split into smaller groups.
-* Indoor activities for a maximum of 150 participants* per indoor space subject to 1 person per 2sqm density quotient as long as a COVID Check-in Marshal is in place. No requirement to split into smaller groups.
+* Outdoor activities for up to 1,000 participants* with no requirement to split into smaller groups. You should contact coronavirus@scoutsvictoria.com.au for any event with over 300 participants.
+* Indoor activities subject to 1 person per 2sqm where a COVID Check-in Marshal is in place, otherwise 1 person per 4sqm. You should contact coronavirus@scoutsvictoria.com.au if you have over 300 participants* in a single indoor space.
 * Overnight camping under canvas for up to 1,000 participants* camping in cohorts of up to 50 with no more than 6 sharing a tent.
-* Overnight accommodation with a maximum of 16 participants* sharing a single accommodation space, such as a room or bunkhouse.
-* Masks still need to be worn indoors unless an exemption applies.
-* Hall hires can resume but they must follow the restrictions for the relevant industry sector. Private hall hires are permitted. Hall hires are limited to a maximum of 1 person per 4sqm unless a COVID check-in Marshal is in place.
+* Overnight indoor accommodation with a maximum of 16 participants* sharing a single accommodation space, such as a room or bunkhouse.
+* **Until we receive further information, face masks still need to be worn indoors unless an exemption applies.**
+* Hall hires can resume but they must follow the restrictions for the relevant industry sector. Private hall hires are permitted. Hall hires are limited to a maximum of 1 person per 4sqm unless a COVID Check-in Marshal is in place.
 
 \* **Limits for youth program activities only apply to participants and spectators/parents. Those required to run the activity, such as Leaders, adult helpers, trainers, rostered parents, carers, etc are not included in the limits.**
 
