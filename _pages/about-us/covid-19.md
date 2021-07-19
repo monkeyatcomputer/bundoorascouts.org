@@ -8,7 +8,7 @@ heroimage: /uploads/hero/coronavirus.jpg
 
 ## Current Advice
 
-**From 11:59 pm July 15, 2021 Victoria entered a State-wide lockdown. We expect the lockdown to be in place until 11:59 pm Tuesday July 15, 2021.**
+**From 11:59 pm July 15, 2021 Victoria entered a State-wide lockdown. We expect the lockdown to be in place until 11:59 pm Sunday July 25, 2021.**
 
  * All face-to-face Scouting must cease for the duration of the lockdown.
  * Further information on restrictions after lockdown will be provided as soon as available.
