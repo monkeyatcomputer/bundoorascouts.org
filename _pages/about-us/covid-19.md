@@ -13,7 +13,7 @@ heroimage: /uploads/hero/coronavirus.jpg
 Face-to-face Scouting activities indoors and outdoors in Victoria can resume within strict limits.
 
  * Outdoor activities for up to **300** youth participants\* in multiple Units or groups of up to **50** participants\* each.
- * Indoor activities for a maximum of **100** per indoor space, subject to 1 person per 4sqm density quotient.
+ * Indoor activities for a maximum of **100** per indoor space, subject to 1 person per 4<sup>2</sup> density quotient.
  * Nominated COVID Check-in Marshal required to ensure use of QR Code or attendance record for youth members.
  * Overnight camping in groups of up to **50** participants\* in single person tents.
  * Masks still need to be worn indoors and outdoors unless an exemption applies.
