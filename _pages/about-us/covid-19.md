@@ -21,8 +21,8 @@ heroimage: /uploads/hero/coronavirus.jpg
 * It is likely that some restrictions will only be relaxed for fully vaccinated Leaders and/or youth.
 * The final Phase is expected when Victoria achieves 80% (including 12yo+) fully vaccinated (~Nov 19). Restrictions will relax even further, and Major Events can take place under COVIDSafe Public Event framework.
 
-The Scouts Victoria Roadmap for COVID can be accessed here can be accessed [here]().
+The Scouts Victoria Roadmap for COVID can be accessed here can be accessed [here](https://scoutsvictoria.com.au/media/6297/scouts-victoria-roadmap-for-covid-sep19.pdf).
 
-For the latest updates on the rules for Scouting at the Bundoora Scout Group and across the whole of Victoria, please visit the [Scouts Victoria COVID 19 update](https://scoutsvictoria.com.au/media/6297/scouts-victoria-roadmap-for-covid-sep19.pdf).
+For the latest updates on the rules for Scouting at the Bundoora Scout Group and across the whole of Victoria, please visit the [Scouts Victoria COVID 19 update](https://scoutsvictoria.com.au/about-us/news/covid-19-update/).
 
 For further queries about this direction or any other coronavirus related issues, please contact [coronavirus@scoutsvictoria.com.au](mailto:coronavirus@scoutsvictoria.com.au).
