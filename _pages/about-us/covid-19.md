@@ -3,26 +3,42 @@ title: "COVID-19"
 subtitle: "Information"
 permalink: /about-us/covid-19
 description: "Bundooa Scouts COVID-19 Information"
-heroimage: /uploads/hero/coronavirus.jpg
+heroimage: /uploads/hero/coronavirus3.jpg
 ---
 
 ## Current Advice
 
-**Metro Melbourne is currently in lockdown, with the following restrictions in place:**
+**From October 15 2021, unvaccinated volunteer workers are unable to undertake face-to-face Scouting unless:**
 
-* All face-to-face Scouting must cease for the duration of the lockdown.
-* Members who reside in locked down areas should not participate in face-to-face Scouting in Regional Victoria.
-* Worker Permits are required for any activities that are undertaken during lockdown at halls, campsites and other property.
+* they have a confirmed booking for a 1st dose by October 22 2021, or
+* they are an excepted person holding certification from a medical practitioner that they are unable to receive a vaccination due to a medical contraindication or an acute medical illness.
 
-**On September 19, the Victorian government released Victoria’s Roadmap: Delivering the National Plan providing indicative dates and restrictions for opening up Victoria. Scouts Victoria's current interpretation of the plan is:**
+The [COVID-19 Mandatory Vaccination (Workers) Directions](https://www.dhhs.vic.gov.au/sites/default/files/documents/202110/covid-19-mandatory-vaccination-%28workers%29-directions.pdf) affect all Scouts Victoria employees and volunteer workers engaged in Scouting state-wide, including Leaders, helpers, committee members, fellowship, etc. It does not apply to youth members unless they are involved as workers (such as youth helpers, or Rovers who are also Leaders or are helping on activities).
 
-* Metro Melbourne will remain in lockdown until 70% fully vaccinated (~Oct 26), after which there will be some limited face-face Scouting.
-* Restrictions will further relax state-wide when Victoria achieves 80% fully vaccinated (~Nov 5), allowing sharing tents, larger events can occur, and masks will only be required indoors, etc.
+Under the Directions, Scouts Victoria is also required to collect and record the vaccination status of all volunteers.
+
+Further guidance on Vaccination for Scouting is available in the [Vaccination FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/vaccination/).
+
+**Scouts Victoria has developed a [Scouting Roadmap](https://scoutsvictoria.com.au/media/6342/scouts-victoria-roadmap-for-covid-oct12.pdf) to provide guidance on how [Victoria’s Roadmap: Delivering the National Plan](https://www.coronavirus.vic.gov.au/victorias-roadmap) may affect a return to face-to-face Scouting. The key milestones are:**
+
+* Regional Victoria will have limited indoor and outdoor Scouting until Victoria achieves 70% fully vaccinated, ~October 26, after which some restrictions will relax outdoors.
+* Metro Melbourne will remain in lockdown until 70% fully vaccinated, ~October 26, after which there will be outdoor face-to-face Scouting (but no indoor activities).
+* Restrictions will further relax state-wide when Victoria achieves 80% fully vaccinated, ~November 5, including allowing indoor activities, sharing tents, larger events, and face masks will only be required indoors, etc.
 * It is likely that some restrictions will only be relaxed for fully vaccinated Leaders and/or youth.
-* The final Phase is expected when Victoria achieves 80% (including 12yo+) fully vaccinated (~Nov 19). Restrictions will relax even further, and Major Events can take place under COVIDSafe Public Event framework.
+* The final Phase is expected when Victoria achieves 80% (including 12yo+) fully vaccinated, ~November 19. Restrictions will relax even further, and Major Events can take place under COVIDSafe Public Event framework.
 
-The Scouts Victoria Roadmap for COVID can be accessed here can be accessed [here](https://scoutsvictoria.com.au/media/6297/scouts-victoria-roadmap-for-covid-sep19.pdf).
+**The following restrictions are in place Metropolitan Melbourne (and locked down areas of Regional Victoria):**
+
+* All face-to-face Scouting within locked down areas must cease for the duration of the lockdown.
+* Members who reside in locked down areas should not participate in face-to-face Scouting in Regional Victoria.
+* Worker Permits are required for any work that needs to be undertaken during lockdown at halls, campsites and other property until Victoria achieves 70% fully vaccinated.
+
+**Further COVID guidance for Scouting is available on the [Summary of Restrictions](https://scoutsvictoria.com.au/covid-19-lockdown-faq/summary-of-changes/) page or in the [COVID-19 Lockdown FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/).**
 
 For the latest updates on the rules for Scouting at the Bundoora Scout Group and across the whole of Victoria, please visit the [Scouts Victoria COVID 19 update](https://scoutsvictoria.com.au/about-us/news/covid-19-update/).
+
+*\* Limits for youth program activities only apply to participants. Those required to run the activity, such as Leaders, adult helpers, trainers, rostered parents, carers, etc are in addition to the limits. For adult meetings and non-youth program activities (such as fundraising, ARAP, etc), the limit applied to all in attendance.*
+
+*Any reference to Victoria’s vaccination targets refers to the percentage of the population aged 16 years old and above.*
 
 For further queries about this direction or any other coronavirus related issues, please contact [coronavirus@scoutsvictoria.com.au](mailto:coronavirus@scoutsvictoria.com.au).
