@@ -7,13 +7,13 @@
 -
   name: Bunnings Warehouse
   description: "Australia's DIY, Garden & Hardware Store"
-  url: "https://www.bunnings.com.au/""
+  url: "https://www.bunnings.com.au/"
   logo: bunnings.png
   notes: "Special thanks to Bunnings Warehouse for dontacted kitchen with installation, as well as our regular Bunnings BBQs."
 -
   name: Generation-e
   description: "Unified Communications, Digital Collaboration, Audio Visual."
-  url: "https://www.generation-e.com.au/""
+  url: "https://www.generation-e.com.au/"
   logo: generation-e.png
   notes: "Special thanks to Generation-e and Biagio for donated A/V equipment."
 
