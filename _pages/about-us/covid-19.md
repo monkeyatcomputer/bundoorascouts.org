@@ -13,11 +13,15 @@ heroimage: /uploads/hero/coronavirus3.jpg
 * No indoor Scouting
 * Outdoor Scouting limited to groups of 50 and density of 1 per 4m<sup>2</sup>*
 * Face masks must be work indoors and outdoors
-* Unvaccinated volunteers are unable to participate in face-to-face Scouting
 
-**From October 15 2021, unvaccinated volunteer workers are unable to undertake face-to-face Scouting unless:**
+**From October 22 2021, unvaccinated volunteer workers are unable to undertake face-to-face Scouting unless:**
 
-* they have a confirmed booking for a 1st dose by October 22 2021, or
+* they have received a 1st dose by October 22 2021, or
+* they are an excepted person holding certification from a medical practitioner that they are unable to receive a vaccination due to a medical contraindication or an acute medical illness.
+
+**From November 26 2021, unvaccinated volunteer workers are unable to undertake face-to-face Scouting unless:**
+
+* they have received a 2nd dose by November 26 2021, or
 * they are an excepted person holding certification from a medical practitioner that they are unable to receive a vaccination due to a medical contraindication or an acute medical illness.
 
 The [COVID-19 Mandatory Vaccination (Workers) Directions](https://www.dhhs.vic.gov.au/sites/default/files/documents/202110/covid-19-mandatory-vaccination-%28workers%29-directions.pdf) affect all Scouts Victoria employees and volunteer workers engaged in Scouting state-wide, including Leaders, helpers, committee members, fellowship, etc. It does not apply to youth members unless they are involved as workers (such as youth helpers, or Rovers who are also Leaders or are helping on activities).
