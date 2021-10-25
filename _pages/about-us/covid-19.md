@@ -40,7 +40,7 @@ Further guidance on Vaccination for Scouting is available in the [Vaccination FA
 * 6 people can share a tent or 10 people can share a cabin or bunkhouse at a campsite
 * Face masks will no longer be required outdoors
 * Activities away from the hall/grounds must be registered in Out and About
-* Travel between Metropolitan Melbourne and Regional Victoria is permitted without a worker permits.
+* Travel between Metropolitan Melbourne and Regional Victoria is permitted without a worker permit.
 
 **Scouts Victoria has developed a [Scouting Roadmap](https://scoutsvictoria.com.au/media/6342/scouts-victoria-roadmap-for-covid-oct12.pdf) to provide guidance on how [Victoria’s Roadmap: Delivering the National Plan](https://www.coronavirus.vic.gov.au/victorias-roadmap) may affect a return to face-to-face Scouting. The key milestones are:**
 
