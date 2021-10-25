@@ -8,12 +8,6 @@ heroimage: /uploads/hero/coronavirus3.jpg
 
 ## Current Advice
 
-**From October 22 2021, Metropolitan Melbourne is no longer in lockdown.**
-
-* No indoor Scouting
-* Outdoor Scouting limited to groups of 50 and density of 1 per 4m<sup>2</sup>*
-* Face masks must be work indoors and outdoors
-
 **From October 22 2021, unvaccinated volunteer workers are unable to undertake face-to-face Scouting unless:**
 
 * they have received a 1st dose by October 22 2021, or
@@ -30,11 +24,25 @@ Under the Directions, Scouts Victoria is also required to collect and record the
 
 Further guidance on Vaccination for Scouting is available in the [Vaccination FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/vaccination/).
 
-**Scouts Victoria has developed a [Scouting Roadmap](https://scoutsvictoria.com.au/media/6342/scouts-victoria-roadmap-for-covid-oct12.pdf) to provide guidance on how [Victoria’s Roadmap: Delivering the National Plan](https://www.coronavirus.vic.gov.au/victorias-roadmap) may affect a return to face-to-face Scouting. The key milestones are:**
+**The following restrictions are currently in place and will be further extended from 6pm on October 29, 2021.**
 
-* Restrictions will further relax state-wide when Victoria achieves 80% fully vaccinated, ~November 5, including allowing indoor activities, sharing tents, larger events, and face masks will only be required indoors, etc.
-* It is likely that some restrictions will only be relaxed for fully vaccinated Leaders and/or youth.
-* The final Phase is expected when Victoria achieves 80% (including 12yo+) fully vaccinated, ~November 19. Restrictions will relax even further, and Major Events can take place under COVIDSafe Public Event framework.
+* Indoor Scouting is not permitted
+* Outdoor Scouting can be undertaken with up to 50 participants*
+* 6 people can share a tent or 10 people can share a cabin or bunkhouse at a campsite
+* Activities away from the hall/grounds must be registered in Out and About
+* Worker Permits are required to travel between Metropolitan Melbourne and Regional Victoria
+
+**From 6pm on October 29 2021, we expect the following restrictions will apply.**
+
+* Indoor Scouting for up to 150 participants* subject to a 1 person per 4sqm density quotient
+* Hall hires can resume
+* Outdoor Scouting with up to 500 participants*
+* 6 people can share a tent or 10 people can share a cabin or bunkhouse at a campsite
+* Face masks will no longer be required outdoors
+* Activities away from the hall/grounds must be registered in Out and About
+* Travel between Metropolitan Melbourne and Regional Victoria is permitted without a worker permits.
+
+**Scouts Victoria has developed a [Scouting Roadmap](https://scoutsvictoria.com.au/media/6342/scouts-victoria-roadmap-for-covid-oct12.pdf) to provide guidance on how [Victoria’s Roadmap: Delivering the National Plan](https://www.coronavirus.vic.gov.au/victorias-roadmap) may affect a return to face-to-face Scouting. The key milestones are:**
 
 **Further COVID guidance for Scouting is available on the [Summary of Restrictions](https://scoutsvictoria.com.au/covid-19-lockdown-faq/summary-of-changes/) page or in the [COVID-19 Lockdown FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/).**
 
