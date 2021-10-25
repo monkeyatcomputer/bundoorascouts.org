@@ -13,7 +13,12 @@ heroimage: /uploads/hero/coronavirus3.jpg
 * they have received a 1st dose by October 22 2021, or
 * they are an excepted person holding certification from a medical practitioner that they are unable to receive a vaccination due to a medical contraindication or an acute medical illness.
 
-**From November 26 2021, unvaccinated volunteer workers are unable to undertake face-to-face Scouting unless:**
+**From 6pm October 26 2021, unvaccinated and partially vaccinated volunteer workers are unable to undertake *indoor* face-to-face Scouting unless:**
+
+* they have received a 2nd dose by 6pm October 26 2021, or
+* they are an excepted person holding certification from a medical practitioner that they are unable to receive a vaccination due to a medical contraindication or an acute medical illness.
+
+**From November 26 2021, unvaccinated volunteer workers are unable to undertake *outdoor* face-to-face Scouting unless:**
 
 * they have received a 2nd dose by November 26 2021, or
 * they are an excepted person holding certification from a medical practitioner that they are unable to receive a vaccination due to a medical contraindication or an acute medical illness.
