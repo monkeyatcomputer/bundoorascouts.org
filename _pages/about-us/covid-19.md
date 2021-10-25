@@ -42,7 +42,7 @@ Further guidance on Vaccination for Scouting is available in the [Vaccination FA
 * Activities away from the hall/grounds must be registered in Out and About
 * Travel between Metropolitan Melbourne and Regional Victoria is permitted without a worker permit.
 
-**Scouts Victoria has developed a [Scouting Roadmap](https://scoutsvictoria.com.au/media/6342/scouts-victoria-roadmap-for-covid-oct12.pdf) to provide guidance on how [Victoria’s Roadmap: Delivering the National Plan](https://www.coronavirus.vic.gov.au/victorias-roadmap) may affect a return to face-to-face Scouting. The key milestones are:**
+**Scouts Victoria has developed a [Scouting Roadmap](https://scoutsvictoria.com.au/media/6373/scouts-victoria-roadmap-for-covid-oct24.pdf) to provide guidance on how [Victoria’s Roadmap: Delivering the National Plan](https://www.coronavirus.vic.gov.au/victorias-roadmap) may affect a return to face-to-face Scouting. The key milestones are:**
 
 **Further COVID guidance for Scouting is available on the [Summary of Restrictions](https://scoutsvictoria.com.au/covid-19-lockdown-faq/summary-of-changes/) page or in the [COVID-19 Lockdown FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/).**
 
