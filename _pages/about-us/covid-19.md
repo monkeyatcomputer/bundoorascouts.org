@@ -26,7 +26,7 @@ heroimage: /uploads/hero/coronavirus3.jpg
 * Rovers acting in a leader or service role are workers and must be at least partially vaccinated outdoors, otherwise they are participants
 * Venturers are participants and not workers, irrespective of their role at an activity, so do not need to be vaccinated for outdoor activities
 
-The [COVID-19 Mandatory Vaccination (Workers) Directions](https://www.dhhs.vic.gov.au/sites/default/files/documents/202110/covid-19-mandatory-vaccination-%28workers%29-directions.pdf) affect all Scouts Victoria employees and volunteer workers engaged in Scouting state-wide, including Leaders, helpers, committee members, fellowship, etc. It does not apply to youth members unless they are involved as workers (such as youth helpers, or Rovers who are also Leaders or are helping on activities).
+The [COVID-19 Mandatory Vaccination (Workers) Directions](https://www.health.vic.gov.au/sites/default/files/2021-10/covid-19-mandatory-vaccination-workers-directions-no-6.pdf) affect all Scouts Victoria employees and volunteer workers engaged in Scouting state-wide, including Leaders, helpers, committee members, fellowship, etc. It does not apply to youth members unless they are involved as workers (such as youth helpers, or Rovers who are also Leaders or are helping on activities).
 
 Under the Directions, Scouts Victoria is also required to collect and record the vaccination status of all volunteers.
 
