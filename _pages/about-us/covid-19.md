@@ -8,50 +8,69 @@ heroimage: /uploads/hero/coronavirus3.jpg
 
 ## Current Advice
 
-**The following vaccination requirements are in place for Scouts Victoria members and visitors.**
+**The following vaccination requirements are in place for Scouts Victoria members and visitors**
+
+* From November 19, 2021 the fully vaccinated requirements for youth members is extended to include those aged 12 and over if they are participating in indoor Scouting, attending major events or sharing tents
+* **Until December 3, 2021, there is a two week grace period from the vaccination requirements for members aged 12 to 15 attending indoor section meetings and unit camps (including VicJam units).**
+* **Note that third party venues and owners of leased halls may require the fully vaccinated restrictions on those aged 12-15 in to be implemented immediately and the two week grace period in Scouting will not apply**
+* Youth members who have just turned 12 have until they reach 12 years and 2 months before they are required to comply with the vaccination requirements
+* Youth members can either record their vaccination status in Operoo or show their vaccination status each time they attend an activity
+* Registered leaders, helpers, etc must have their vaccination status recorded in Operoo otherwise they have to be classified as unvaccinated and are unable to undertake face-to-face Scouting
+* Where it is not explicitly stated, those who are unable to be vaccinated due to a medical exemption are classified as vaccinated
+
+Further COVID guidance for Scouting is available on the [Summary of Restrictions](https://scoutsvictoria.com.au/covid-19-lockdown-faq/summary-of-changes/) page or in the [COVID-19 FAQs](https://scoutsvictoria.com.au/covid-19-faq/).
 
 **Indoor Scouting**
 
-* All Leaders, helpers, visitors, etc aged 16 or over must be fully vaccinated or have a medical exception
-* Venturers aged 16 or over and Rovers must be fully vaccinated or have a medical exception
-* Parents must be fully vaccinated to enter a hall to spectate, help out, drop off/ pick up, etc - otherwise they must remain outside
-* All attendees for a Hall Hire aged 16 or over must be fully vaccinated or have a medical exception
+The following people must be fully vaccinated have a medical exception to attend Indoor Scouting:
+
+* All Leaders, helpers, visitors, etc
+* Rovers, Venturers and Scouts aged 12 or over
+* Parents to spectate, help out, drop off/ pick up, etc – otherwise they must remain outside
+* All attendees aged 12 or over for a Hall Hire unless they are an essential public support group
+
+Halls must have a COVID Check-in Marshal to confirm vaccination status of participants, parents and visitors
+
+Until November 26, if there are no youth members or public present, leaders and other workers can undertake maintenance indoors or attend indoor leader/ committee meetings or leader training if they are at least partially vaccinated. From November 26, they must be fully vaccinated.
+
+Unvaccinated people can enter a hall to access bathrooms, to shelter from severe weather or to escape from an unsafe situation / emergency   
+
+Further guidance on Indoor Scouting is available in the [Scout Halls FAQs](https://scoutsvictoria.com.au/covid-19-faq/scout-halls/).
 
 **Outdoor Scouting**
 
-* All workers including Leaders, adult helpers, rostered parents, etc must be at least partially vaccinated or have a medical exception. This includes unregistered parents or visitors who are helping out with the activity on an ad-hoc basis.
-* Registered leaders, helpers, etc must have their vaccination status recorded in Operoo. For unregistered parents or visitors, confirm their vaccination status using a QR Code check-in or sight their documentation.
-* Youth members who are participating in an outdoor activity do not require to be vaccinated at this stage
+* Until November 26, all workers including Leaders, adult helpers, rostered parents, etc must be at least partially vaccinated or have a medical exception. This includes unregistered parents or visitors who are helping out with the activity on an ad-hoc basis. From November 26, all workers must be fully vaccinated.
+* Youth members who are participating in an outdoor activity do not require to be vaccinated unless attending a major event or sharing a tent
 * Parents who are only spectating or dropping off do not require to be vaccinated, unless they are helping out with the activity
 * Rovers acting in a leader or service role are workers and must be at least partially vaccinated outdoors, otherwise they are participants
-* Venturers are participants and not workers, irrespective of their role at an activity, so do not need to be vaccinated for outdoor activities
+* Scouts and Venturers are participants and not workers, irrespective of their role at an activity, so do not need to be vaccinated for outdoor activities
+* [Refer to Outdoor Activities FAQs](https://scoutsvictoria.com.au/covid-19-faq/outdoor-activities/).
 
-The [COVID-19 Mandatory Vaccination (Workers) Directions](https://www.health.vic.gov.au/sites/default/files/2021-10/covid-19-mandatory-vaccination-workers-directions-no-6.pdf) affect all Scouts Victoria employees and volunteer workers engaged in Scouting state-wide, including Leaders, helpers, committee members, fellowship, etc. It does not apply to youth members unless they are involved as workers (such as youth helpers, or Rovers who are also Leaders or are helping on activities).
+**Outdoor events where physical distancing cannot be maintained or with over 500 participants**
 
-Under the Directions, Scouts Victoria is also required to collect and record the vaccination status of all volunteers.
+* Anybody aged 12 or over must be fully vaccinated to attend an event or activity where physical distancing cannot be maintained for extended periods, such as outdoor seated events, events with evening entertainment or activities in enclosed / restricted spaces, etc
+* All members aged 12 or over must be fully vaccinated to attend an event with greater than 500 participants
+* You must contact [coronavirus@scoutsvictoria.com.au](mailto:coronavirus@scoutsvictoria.com.au) for any planned event over 200 participants
 
-Further guidance on Vaccination for Scouting is available in the [Vaccination FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/vaccination/).
+Further guidance on Vaccination for Scouting is available in the [Vaccination Requirements FAQs](https://scoutsvictoria.com.au/covid-19-faq/vaccination-requirements/).
 
-**The following restrictions are in place state-wide from 6pm on October 29, 2021.**
+**In addition to the vaccination requirements, the following restrictions are in place state-wide from 11:59 pm on November 18, 2021.**
 
-The vaccination requirements above apply in addition to the following:
+There are no density quotients or limits on the or number of participants for
 
-* Indoor Scouting subject to a 1 person per 4sqm density quotient, with a limit of 150 participants*
-* Hall hires subject to a 1 person per 4sqm density limit, with a limit of 150
-* Outdoor Scouting for up to 500 participants*
-* 6 people can share a tent or 10 people can share a cabin or bunkhouse at a campsite
-* Face masks are no longer be required outdoors
-* Activities away from your hall/grounds must be registered in Out and About
+* Indoor Scouting
+* Hall hires
+* Outdoor Scouting
+* Sharing a tent, cabin, bunkhouse, etc
+* Sleepovers in the hall etc
 
-When Victoria reaches 90% of 12+ fully vaccinated (expected from November 24, 2021), restrictions will lift significantly for those who are fully vaccinated or have a medical exception. From that date there will be no density quotients, no capacity limits, requirements, no restrictions on sharing tents or accommodation and face masks will no longer be required for Scouting.
-
-Refer to the updated Scouts Victoria [Scouting Roadmap](https://scoutsvictoria.com.au/media/6372/scouts-victoria-roadmap-for-covid-oct22.pdf)
+Activities away from your **District** must be registered in Out and About, even if they are at a Scout campsite
 
 **Face Masks**
 
-From **6pm on October 29, 2021**, face masks are only required to be worn indoors.
+Face masks are no longer required at Scouting except when travelling on public transport or when serving food.
 
-Primary School children in Years 3 to 6 are required to wear face masks when indoors at school and are recommended by Public Health authorities in other situations, but this is not a requirement for Scouting, whether indoors or outdoors.  
+Primary School children in Years 3 to 6 are required to wear face masks when indoors at school and on public transport and are recommended by Public Health authorities in other situations. Wearing face masks is not a requirement for indoor or outdoor Scouting. However, in line with public transport requirements, face masks are highly recommended for Primary School aged youth members when travelling on buses for extended periods.
 
 Refer to further information in the [Face Masks FAQs](https://scoutsvictoria.com.au/covid-19-faq/face-masks/).
 
