@@ -3,7 +3,7 @@ title: "End of Year BBQ"
 subtitle: "That's a wrap on 2021!"
 heroimage: /uploads/hero/end-of-year-bbq.jpg
 author:
-    - Bundoora Scout Group
+    - Chris Parr
 categories:
     - Group
 tags:
