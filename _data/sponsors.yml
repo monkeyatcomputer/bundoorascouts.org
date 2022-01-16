@@ -11,6 +11,12 @@
   logo: bunnings.png
   notes: "Special thanks to Bunnings Warehouse for donated kitchen with installation, as well as our regular Bunnings BBQs."
 -
+  name: Camec
+  description: "Providing high quality caravan appliances, parts and accessories."
+  url: "https://www.camec.com.au/"
+  logo: camec.jpg
+  notes: "Special thanks to Camec and David for their continued support."
+-
   name: Generation-e
   description: "Unified Communications, Digital Collaboration, Audio Visual."
   url: "https://www.generation-e.com.au/"
@@ -22,9 +28,3 @@
   url: "mailto:sam@msec.group"
   logo: msec.png
   notes: "Special thanks to MSEC Group and Sam for Scouts and Schools Monster Raffle support."
--
-  name: Camec
-  description: "Providing high quality caravan appliances, parts and accessories."
-  url: "https://www.camec.com.au/"
-  logo: camec.jpg
-  notes: "Special thanks to Camec and David for their continued support."
