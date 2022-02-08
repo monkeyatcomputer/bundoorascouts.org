@@ -1,8 +1,8 @@
 ---
-title: Sarah Parr
-role: Cub Scouts Leader
-alias: "Mang"
-section: cub-scouts
+title: Annette Bennett
+role: Leader in Training
+alias: ""
+section: venturer-scouts
 ---
 
 Started Scouting when?

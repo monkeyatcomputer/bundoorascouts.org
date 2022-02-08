@@ -103,3 +103,26 @@ layout: default
         </div>
     </div>
 </section>
+<!-- Venturers Grid -->
+<section class="bg-light page-section" id="people">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="section-heading text-uppercase">Venturer Scouts</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            {%- assign people = site.people | where: 'section', 'venturer-scouts' -%}
+            {%- for person in people -%}
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="{{site.baseurl}}/assets/images/team/{{ person.slug }}.jpg"
+                        alt="">
+                    <h4>{{ person.title}}</h4>
+                    <p class="text-muted">{{ person.role }}</p>
+                </div>
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
