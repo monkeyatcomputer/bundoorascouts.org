@@ -8,18 +8,22 @@ heroimage: /uploads/hero/coronavirus3.jpg
 
 ## Current Advice
 
-From 11:59 pm on April 22, 2022, COVID-19 restrictions have significantly relaxed across Victoria. The following requirements apply to Scouts Victoria members, supporters and visitors. Further guidance is available in the [Summary of Restrictions](https://scoutsvictoria.com.au/covid-19-lockdown-faq/summary-of-changes/).
+If a Positive Case attends Bundoora Scouts, please refer to the [Positive Cases and Contacts FAQs](https://scoutsvictoria.com.au/covid-19-lockdown-faq/managing-positive-cases-and-close-contacts/).
+
+From 11:59 pm on June 24, 2022, COVID-19 vaccinations are no longer required to attend Bundoora Scouts. The following requirements apply to Bundoora Scouts members, supporters and visitors.
 
 **Key Changes**
 
-* Only Leaders, adult helpers and other workers (such as campsite workers, etc) need to be fully vaccinated and have received at least 2 doses of COVID vaccine or have a medical exemption
+* Leaders, adult helpers and other workers (such as campsite workers, etc) are no longer required to be vaccinated, unless their role includes disability care
 * Parents (including rostered parents), young adult members (ie Rovers) and youth members are not required to be vaccinated
-* QR Code Check-in and COVID Check-in Marshals are no longer required
-* Face masks are not required unless travelling on a bus or public transport
+* Face masks are still required if travelling on a bus or public transport
+* You only need to notify Bundoora Scouts of a positive case attending if the positive case shared accommodation or if there was more than one positive case
+
+Further guidance is available in the [Summary of Restrictions](https://scoutsvictoria.com.au/covid-19-faq/summary-of-restrictions/).
 
 **Close Contacts**
 
-Close contacts can now leave seven-day self-quarantine as long as they comply with specific requirements. Close contacts can attend Scouting if they:
+Close contacts can now leave seven-day self-quarantine as long as they comply with specific requirements. Close contacts can attend Bundoora Scouts if they:
 
 * are not showing any COVID-like symptoms, and
 * have received a negative result from a Rapid Antigen test undertaken on the day of attendance (and each subsequent day for an overnight event), and
@@ -32,7 +36,8 @@ It is recommended that all attendees (including youth members, young adult membe
 
 * Sharing a tent or other accommodation such as cabins or bunkhouses
 * Sleepover at a hall or similar property
-* COVID Testing may also be required at some Major Events (see below).
+
+COVID Testing may also be required at some Major Events.
 
 A COVID test undertaken as part of work or school surveillance is acceptable to demonstrate a negative COVID test.
 
