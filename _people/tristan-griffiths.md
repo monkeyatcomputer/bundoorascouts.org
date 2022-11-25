@@ -1,7 +1,7 @@
 ---
 title: Tristan Griffiths
 role: Adult Helper
-alias: Baloo
+alias: Bear / Baloo
 section: group
 ---
 
