@@ -1,8 +1,8 @@
 ---
-title: Chetan Kumar Srinivasa Rao
-role: Adult Helper
+title: Sally James
+role: Leader in Training
 alias: ""
-section: parent
+section: joey-scouts
 ---
 
 Started Scouting when?

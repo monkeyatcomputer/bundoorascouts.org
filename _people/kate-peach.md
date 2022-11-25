@@ -1,6 +1,6 @@
 ---
 title: Kate Peach
-role: Assistant Cub Scouts Leader
+role: Cub Scouts Leader
 alias: Kaa
 section: cub-scouts
 ---
