@@ -2,13 +2,25 @@
 title: Bruce Wolfe
 role: Adult Helper
 alias: 
-section: group
+section: parent
 ---
 
 Started Scouting when?
 : 
 
+Time in Scouting?
+: 
+
+Past scouting experiences?
+: 
+
 Reason for joining the Scouting movement?
+: 
+
+External qualifications relevant to Scouting?
+: 
+
+Your three words to describe Scouting?
 : 
 
 Most likely to be heard saying?

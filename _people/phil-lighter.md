@@ -2,7 +2,7 @@
 title: Phil Lighter
 role: Adult Helper
 alias: 
-section: group
+section: parent
 ---
 
 Started Scouting when?
