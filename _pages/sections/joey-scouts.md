@@ -45,10 +45,23 @@ Help Other People
 
 #### Joey Scout Promise
 
-I promise  
-To do my best  
-To love my God  
-And be helpful
+**There are two versions of the Australian Scout Promise. Individuals may select which version they wish to make.**
+
+On my honour, I promise  
+To do my best,  
+To be true to my spiritual beliefs,  
+To contribute to my community and our world,  
+To help other people,  
+And to live by the Joey Scout Law.  
+
+**OR**
+
+On my honour  
+I promise that I will do my best  
+To do my duty to my God, and  
+To the King of Australia,  
+To help other people,  
+And to live by the Joey Scout Law.  
 
 #### Joey Scout Law
 

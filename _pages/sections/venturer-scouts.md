@@ -45,25 +45,37 @@ Be Prepared
 
 #### Venturer Scout Promise
 
+**There are two versions of the Australian Scout Promise. Individuals may select which version they wish to make.**
+
+On my honour, I promise  
+To do my best,  
+To be true to my spiritual beliefs,  
+To contribute to my community and our world,  
+To help other people,  
+And to live by the Venturer Scout Law.  
+
+**OR**
+
 On my honour  
 I promise that I will do my best  
 To do my duty to my God, and  
-To the Queen of Australia (or To Australia)  
-To help other people  
-To live by the Scout Law
+To the King of Australia,  
+To help other people,  
+And to live by the Venturer Scout Law.  
 
 #### Venturer Scout Law
 
-A Scout is trustworthy  
-A Scout is loyal  
-A Scout is helpful  
-A Scout is friendly  
-A Scout is cheerful  
-A Scout is considerate  
-A Scout is thrifty  
-A Scout is courageous  
-A Scout is respectful  
-A Scout cares for the environment
+**Be Respectful**  
+Be friendly and considerate  
+Care for others and the environment  
+
+**Do What is Right**  
+Be trustworthy, honest and fair  
+Use resources wisely  
+
+**Believe in Myself**  
+Learn from my experiences  
+Face challenges with courage  
 
 ### Award Scheme
 

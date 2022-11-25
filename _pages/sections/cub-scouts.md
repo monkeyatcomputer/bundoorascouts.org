@@ -43,23 +43,23 @@ Do Your Best
 
 #### Cub Scout Promise
 
-**There are two versions of the Cub Scout Promise. Individuals may select which version they wish to make.**
+**There are two versions of the Australian Scout Promise. Individuals may select which version they wish to make.**
 
-On my honour  
-I promise that I will do my best  
-To do my duty to my God and,  
-The queen of Australia,  
-To help other people, and  
-To live by the Cub Scout Law
+On my honour, I promise  
+To do my best,  
+To be true to my spiritual beliefs,  
+To contribute to my community and our world,  
+To help other people,  
+And to live by the Cub Scout Law.  
 
 **OR**
 
-On my honour,  
-I promise that I will do my best,  
+On my honour  
+I promise that I will do my best  
 To do my duty to my God, and  
-To Australia  
-To help other people, and  
-To live by the Cub Scout Law
+To the King of Australia,  
+To help other people,  
+And to live by the Cub Scout Law.  
 
 #### Cub Scout Law
 
