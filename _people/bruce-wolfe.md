@@ -2,7 +2,7 @@
 title: Bruce Wolfe
 role: Adult Helper
 alias: 
-section: parent
+section: adult-helpers
 ---
 
 Started Scouting when?

@@ -2,7 +2,7 @@
 title: Tristan Griffiths
 role: Adult Helper
 alias: Bear / Baloo
-section: parent
+section: adult-helpers
 ---
 
 Started Scouting when?
