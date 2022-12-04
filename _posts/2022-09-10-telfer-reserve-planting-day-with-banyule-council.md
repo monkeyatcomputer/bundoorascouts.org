@@ -18,4 +18,4 @@ custom_js:
 
 Many thanks to everyone who attended our planting day at the NJ Telfer reserve in Bundoora. With the help of Banyule Council and our very own local councillor, Rick Garotti, we planted four garden beds to help improve the landscape under the high voltage power lines.
 
-{% include image-gallery.html folder='/uploads/2022-09-telfer-reserve-planting-day-with-banyule-council/' %}
+{% include image-gallery.html folder='/uploads/2022-09-10-telfer-reserve-planting-day-with-banyule-council/' %}
