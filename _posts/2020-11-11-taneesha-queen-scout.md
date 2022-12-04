@@ -8,7 +8,7 @@ categories:
     - Venturer Scouts
 tags:
     - Award
-    - Queen Scout
+    - Queen Scout Award
 last_modified_at: 2020-12-29T00:00:00+10:00
 custom_css:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"

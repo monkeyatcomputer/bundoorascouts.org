@@ -8,7 +8,7 @@ categories:
     - Group
 tags:
     - Award
-    - Silver Kangaroo Service
+    - Silver Kangaroo Service Award
     - Assistant Group Leader
     - World Scout Day
 custom_css:
