@@ -23,7 +23,7 @@ Plenty of space for more honour boards too!
 
 <style>
     .image-gallery {overflow: auto; margin-left: -1%!important}
-    .image-gallery a {float: left; display: block; margin: 0 0 1% 1%; width: 50%; text-align: center; text-decoration: none!important;}
+    .image-gallery a {float: left; display: block; margin: 0 0 1% 1%; width: 48%; text-align: center; text-decoration: none!important;}
     .image-gallery a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
     .image-gallery a img {width: 100%; display: block;}
 </style>
