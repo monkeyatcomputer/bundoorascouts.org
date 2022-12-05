@@ -17,7 +17,7 @@ custom_js:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
 ---
 
-Just showing off our new honour wall at Bundoora Scout Group located in the hallway next to the renovated kitchen. Thanks to everyone who contributed time to getting this together, and of course congratulations to all current and former members that have found a place on our honour wall.
+Just showing off our new honour wall at Bundoora Scout Group located in the hallway next to the renovated kitchen. Thanks to everyone who contributed time to getting this together, and of course congratulations to all current and former members that earned a place on our honour wall.
 
 Plenty of space for more honour boards!
 
