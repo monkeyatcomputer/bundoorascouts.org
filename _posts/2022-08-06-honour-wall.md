@@ -9,7 +9,7 @@ categories:
 tags:
     - Award
     - Queen's Scout Award
-    - Grey Wolf
+    - Grey Wolf Award
 custom_css:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
 custom_js:
