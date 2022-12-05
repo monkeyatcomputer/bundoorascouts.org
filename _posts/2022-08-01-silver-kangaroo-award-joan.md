@@ -1,6 +1,7 @@
 ---
 title: "Silver Kangaroo Service Award for Joan"
 subtitle: "Congratulations!"
+description: "Congratulations to Joan on being honoured with the Scouts Australia Silver Kangaroo Service Award on World Scout Day"
 heroimage: /assets/images/hero-3.jpg
 author:
     - Chris Parr

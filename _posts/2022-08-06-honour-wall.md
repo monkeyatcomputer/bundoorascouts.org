@@ -1,6 +1,7 @@
 ---
 title: "Honour Wall"
 subtitle: "@ Bundoora Scouts"
+description: "New honour wall at Bundoora Scout Group"
 heroimage: /assets/images/hero-2.jpg
 author:
     - Chris Parr

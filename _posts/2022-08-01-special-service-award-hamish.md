@@ -1,6 +1,7 @@
 ---
 title: "Special Service Award for Hamish"
 subtitle: "Congratulations!"
+description: "Congratulations to Hamish on being honoured with the Scouts Australia Special Service Award on World Scout Day"
 heroimage: /assets/images/hero-3.jpg
 author:
     - Chris Parr

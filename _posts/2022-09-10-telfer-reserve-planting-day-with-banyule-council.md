@@ -1,6 +1,7 @@
 ---
 title: "Telfer Reserve Planting with Banyule Council"
 subtitle: "Caring for the Environment"
+description: "Bundoora Scouts and Banyule Council held a planting day at NJ Telfer reserve in Bundoora"
 heroimage: /uploads/hero/telfer-reserve-planting-day.jpg
 author:
     - Chris Parr
