@@ -1,7 +1,7 @@
 ---
 title: "Honour Wall"
-subtitle: "@ Bundoora Scouts"
-description: "New honour wall at Bundoora Scout Group"
+subtitle: "@ Bundoora Scout Hall"
+description: "New honour wall at Bundoora Scout Hall"
 heroimage: /assets/images/hero-2.jpg
 author:
     - Chris Parr
@@ -13,7 +13,7 @@ tags:
     - Grey Wolf Award
 ---
 
-Just showing off our new honour wall at Bundoora Scout Group located in the hallway next to the renovated kitchen. Thanks to everyone who contributed time to getting this together, and of course congratulations to all current and former members that earned a place on our honour wall.
+Just showing off our new honour wall at Bundoora Scout Hall located in the hallway next to the renovated kitchen. Thanks to everyone who contributed time to getting this together, and of course congratulations to all current and former members that earned a place on our honour wall.
 
 Plenty of space for more honour boards too!
 
