@@ -18,5 +18,5 @@ Just showing off our new honour wall at Bundoora Scout Hall located in the hallw
 Plenty of space for more honour boards too!
 
 <p>
-    <img src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}/uploads/2022-08-06-honour-wall/01-honour-wall.jpg&w=600&h=600&output=jpg&q=50&t=inside&we" alt="Honour Wall" title="Honour Wall" class="img-fluid rounded mx-auto d-block" />
+    <img src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}/uploads/2022-08-06-honour-wall/02-honour-wall.jpg&w=600&h=600&output=jpg&q=50&t=inside&we" alt="Honour Wall" title="Honour Wall" class="img-fluid rounded mx-auto d-block" />
 </p>
