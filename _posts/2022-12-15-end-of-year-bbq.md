@@ -1,7 +1,7 @@
 ---
 title: "End of Year BBQ"
 subtitle: "That's a wrap on 2022!"
-heroimage: /uploads/hero/end-of-year-bbq.jpg
+heroimage: /uploads/hero/end-of-year-bbq-2022.jpg
 author:
     - Chris Parr
 categories:
