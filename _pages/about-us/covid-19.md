@@ -2,7 +2,7 @@
 title: "COVID-19"
 subtitle: "Information"
 permalink: /about-us/covid-19
-description: "Bundooa Scouts COVID-19 Information"
+description: "Bundoora Scouts COVID-19 Information"
 heroimage: /uploads/hero/coronavirus3.jpg
 ---
 
