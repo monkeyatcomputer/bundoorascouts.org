@@ -13,7 +13,7 @@ tags:
     - Grey Wolf Award
 ---
 
-Bundoora Scouts  is proud to announce the completion of its new Honour Board Wall, a testament to the hard work and dedication of its members over the years. The wall, located near the kitchen, is a fitting tribute to the achievements and contributions of Scouts both past and present.
+Bundoora Scouts is proud to announce the completion of its new Honour Board Wall, a testament to the hard work and dedication of its members over the years. The wall, located near the kitchen, is a fitting tribute to the achievements and contributions of Scouts both past and present.
 
 The Honour Board Wall is comprised of a series of plaques, each bearing the names of Scouts who have earned a top award or recognition within the group. The awards include the Queen's Scout Award, and the Grey Wolf Award.
 
