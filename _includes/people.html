@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row text-center">
+{%- assign people = site.people | where: 'section', include.section -%}
+{%- for person in people -%}
+        <!-- People -->
+        <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img src="{{site.baseurl}}/assets/images/team/{{ person.slug }}.jpg" alt="" width="125" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">{{ person.title}}</h5>
+                <span class="small text-muted">
+                    {% if person.alias %}<strong>{{ person.alias }}</strong><br/>{% endif %}
+                    {{ person.role }}
+                </span>
+            </div>
+        </div>
+        <!-- /People -->
+{%- endfor -%}
+    </div>
+</div>

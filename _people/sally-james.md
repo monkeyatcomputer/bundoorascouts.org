@@ -1,7 +1,7 @@
 ---
 title: Sally James
 role: Leader in Training
-alias: ""
+alias: 
 section: joey-scouts
 ---
 

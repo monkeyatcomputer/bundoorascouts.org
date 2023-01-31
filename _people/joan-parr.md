@@ -1,7 +1,7 @@
 ---
 title: Joan Parr
 role: Treasurer
-alias: "Jacala"
+alias: Jacala
 section: group
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Chetan Kumar Srinivasa Rao
 role: Adult Helper
-alias: ""
+alias: 
 section: adult-helpers
 ---
 

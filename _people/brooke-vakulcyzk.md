@@ -1,7 +1,7 @@
 ---
 title: Brooke Vakulcyzk
 role: Leader in Training
-alias: ""
+alias: 
 section: joey-scouts
 ---
 

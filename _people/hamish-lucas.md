@@ -1,7 +1,7 @@
 ---
 title: Hamish Lucas
 role: Scouts Leader
-alias: "Termite"
+alias: Termite
 section: scouts
 ---
 

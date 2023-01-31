@@ -1,7 +1,7 @@
 ---
 title: Megz Niko
 role: Leader in Training
-alias: ""
+alias: 
 section: joey-scouts
 ---
 

@@ -105,6 +105,10 @@ Detailed information regarding uniform requirements is provided on the [Parent a
 
 Venturer Scouts may commence the transition (Link Badge) to Rovers at 17.5 years, and have progressed by their 18th birthday. Extensions beyond age range may be granted in accordance with The Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
 
+### Section Leaders
+
+{% include people.html section='venturer-scouts' %}
+
 ### Join the Adventure!
 
 To join the Bundoora Scout Group's Venturer Troop, simply fill in your details below and our Group Leader will get in touch soon.

@@ -37,6 +37,10 @@ Our adult support network is boosted by two great groups of friends who are pass
 
 For those who have enjoyed the Scouting adventure, it’s an unforgettable experience. No matter what direction your career and family have taken you, the Scouting network can always be part of your life.
 
+### Group and Committee Leaders
+
+{% include people.html section='group' %}
+
 To join the Bundoora Scout Group as a Leader or Adult Helper, simply fill in your details below and our Group Leader will get in touch soon.
 
 {% include contact.html email=site.email section='Leaders' %}
