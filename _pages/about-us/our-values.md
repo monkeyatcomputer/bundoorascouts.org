@@ -17,7 +17,7 @@ Scouts Victoria proudly supports the values of Scouts Australia:
  - The importance of not exposing young people to harm or exploitation.
  - The importance of individuals and the community adopting a lifestyle that allows ecologically sustainable development through preventing environmental overload, environmental degradation and resource depletion.
  - The importance of respect for and equity in dealings with all people, irrespective of culture, gender, religion or impairment.
- - The importance of mutual support and help between members of a community to maximise the quality of life for all.
+ - The importance of mutual support and help between members of a community to maximize the quality of life for all.
  - The importance of the development of understanding between individuals as a contribution to peace between nations.
  - The importance of gainful employment in contributing to the sense of dignity and self-worth of the individual.
 
