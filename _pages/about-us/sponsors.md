@@ -14,4 +14,4 @@ In addition to financial support, our sponsors have also been instrumental in pr
 
 Bundoora Scouts are proud to have such dedicated and supportive sponsors, and we are deeply grateful for all that they do for our organization. We look forward to continuing our partnership with them and making a positive impact in the lives of the young people we serve.
 
-On behalf of the entire Bundoora Scouts community, we would like to say thank you to our sponsors for their generosity and support. We are truly blessed to have such wonderful partners in our mission to empower and inspire youth through scouting.
+On behalf of the entire Bundoora Scouts community, we would like to say thank you to our sponsors for their generosity and support. We are truly blessed to have such wonderful partners in our mission to empower and inspire youth through Scouting.
