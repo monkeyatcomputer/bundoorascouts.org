@@ -377,7 +377,7 @@ New Zealand Venture. Venturers and older Scouts also attend World Jamborees wher
 Scouts from around the world gather.
 Venturers can earn a major award called the Queen's Scout award.
 
-Rover Scouts
+[Rover Scouts]({{ site.baseurl }}{% link _pages/sections/rover-scouts.md %})
 : Rovers are young men and women, aged 18-26, who run their own program, finances, property, major events
 and much more. They have a strong annual program including motor sport and social events. Their major
 events are called Moots. The peak award in this Section is the Baden-Powell Rover Scout award.
