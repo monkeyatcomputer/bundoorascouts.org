@@ -1,6 +1,6 @@
 ---
 title: Annette Bennett
-role: Leader in Training
+role: Venturer Scouts Leader
 alias: ""
 section: venturer-scouts
 ---
