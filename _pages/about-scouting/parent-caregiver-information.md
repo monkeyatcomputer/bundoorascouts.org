@@ -433,8 +433,8 @@ Gilwell Park, Clifford Park, Treetops, Eumeralla, Mafeking Park
 and [Mafeking Park](https://www.google.com/maps/search/?api=1&query=Mafeking+Rover+Park) near Yea are just five of more than 80 Scout-owned campsites across Victoria. Your child
 may visit many of them for weekend adventure.
 
-Care Monkey
-: [CareMonkey](https://groups.caremonkey.com) is the electronic system used by Scouts Victoria for parents/carers/individuals to share member
+Operoo (Care Monkey)
+: [Operoo](https://groups.operoo.com) (Care Monkey) is the electronic system used by Scouts Victoria for parents/carers/individuals to share member
 health records, permission forms and contact details. Your child's school may also use this system. It is
 increasingly being used by Groups for internal communication with members, particularly for events and
 activities.
