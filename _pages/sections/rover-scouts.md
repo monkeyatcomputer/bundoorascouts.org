@@ -24,8 +24,6 @@ custom_js:
 
 **Bundoora Scout Group is pleased to announce the Handfield Rover Crew will be hosted at the Bundoora Scout Hall Rover Den!**
 
-**Are You Ready For NEW Adventure? Look Wide!**
-
 Handfield Rover Crew welcomes young adults from 18 to 25 years. You don't need to have any Scouting experience, but you do need to keep up with some adventurous people and their adrenalin-packed adventures! A Rover Scouts time in the Unit ends by their 26th birthday.
 
 Every Unit is different. Each has its own traditions, special interests and personalities. A Rover Unit runs itself, with an elected Unit Leader and executive.
@@ -80,6 +78,6 @@ Face challenges with courage
 
 ### Join the Adventure!
 
-To join the Hadifield Rover Crew, simply fill in your details below and Lisa, our Unit Leader, will get in touch soon.
+To join the Handfield Rover Crew, simply fill in your details below and Lisa, our Unit Leader, will get in touch soon.
 
 {% include contact.html email=site.email section='Rovers' %}
