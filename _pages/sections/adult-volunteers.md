@@ -13,7 +13,7 @@ custom_js:
 - TOC
 {:toc}
 
-<img class="float-right" src="/assets/images/logo-venturer-scouts.png" />
+<img class="float-right" src="/assets/images/logo-adults.png" />
 
 Scouting offers adults a host of rewarding opportunities to help make a difference in young people's lives.
 
@@ -33,7 +33,7 @@ And you're never alone, with thousands of fellow Leaders to turn to in a giant, 
 
 ## Other Options for Adults in Scouting
 
-Our adult support network is boosted by two great groups of friends who are passionate about Scouting (even if some supporters have never donned a Scout scarf). The [Australian Scout Fellowship](https://scoutsvictoria.com.au/age-sections-adults/adults-in-scouting/fellowship/) and the [Friends of Scouting](https://scoutsvictoria.com.au/age-sections-adults/adults-in-scouting/friends-of-scouting/) organisation are two great ways to be involved in Scouting.
+Our adult support network is boosted by two great groups of friends who are passionate about Scouting (even if some supporters have never donned a Scout scarf). The [Australian Scout Fellowship](https://scoutsvictoria.com.au/age-sections-adults/adults-in-scouting/fellowship/) and the [Friends of Scouting](https://scoutsvictoria.com.au/age-sections-adults/adults-in-scouting/friends-of-scouting/) organization are two great ways to be involved in Scouting.
 
 For those who have enjoyed the Scouting adventure, it’s an unforgettable experience. No matter what direction your career and family have taken you, the Scouting network can always be part of your life.
 
