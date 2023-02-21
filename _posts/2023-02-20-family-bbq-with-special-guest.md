@@ -30,4 +30,4 @@ Overall, the Bundoora Scouts family BBQ was a huge success, thanks to the hard w
 Yours in Scouting,  
 Chris
 
-{% include image-gallery.html folder='/uploads/2023-family-bbq-with-special-guest/' %}
+{% include image-gallery.html folder='/uploads/2023-02-20-family-bbq-with-special-guest/' %}
