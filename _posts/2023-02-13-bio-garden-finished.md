@@ -2,6 +2,7 @@
 title: "Bio Garden"
 subtitle: "at Bundoora Scouts"
 heroimage: /uploads/hero/bio-garden.jpg
+socialimage: /uploads/social/bio-garden.jpg
 author:
     - Kate Peach
 categories:
