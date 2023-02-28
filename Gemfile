@@ -15,6 +15,7 @@ group :jekyll_plugins do
     gem "jekyll-seo-tag"
     gem "jekyll-redirect-from"
     gem "jekyll-include-cache"
+    gem "jekyll-last-modified-at"
 end
 
 
