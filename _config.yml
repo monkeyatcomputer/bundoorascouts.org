@@ -126,6 +126,12 @@ kramdown:
 sass:
   style: compressed
 
+# Feed
+feed:
+  disable_in_development: true
+  excerpt_only: true
+  tags: true
+
 #jekyll-archives:
 #  enabled:
 #    - year
