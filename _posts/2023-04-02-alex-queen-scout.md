@@ -6,6 +6,7 @@ author:
     - Chris Parr
 categories:
     - Rover Scouts
+    - Venturer Scouts
 tags:
     - Award
     - Queen Scout Award
