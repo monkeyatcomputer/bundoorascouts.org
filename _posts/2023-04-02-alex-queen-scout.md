@@ -29,5 +29,5 @@ Yours in Scouting,
 Chris
 
 <p>
-    <img src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}/uploads/2023-04-02-alex-queen-scout/alex-queen-scout.jpg&w=600&h=600&output=jpg&q=50&t=inside&we" alt="Alex's Queen's Scout" title="Alex Queen's Scout" class="img-fluid rounded mx-auto d-block" />
+    <img src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}/uploads/2023-04-02-alex-queen-scout/alex-queen-scout-award.jpg&w=600&h=600&output=jpg&q=50&t=inside&we" alt="Alex's Queen's Scout" title="Alex Queen's Scout" class="img-fluid rounded mx-auto d-block" />
 </p>
