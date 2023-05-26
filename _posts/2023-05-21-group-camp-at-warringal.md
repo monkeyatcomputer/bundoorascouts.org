@@ -27,23 +27,23 @@ Rain poured from the heavens as the Bundoora Scouts arrived at the Warringal Sco
 ### Campfires and Singing
 One of the highlights of any Scout camp is the campfire. Despite the challenging weather conditions, the Bundoora Scouts gathered around the roaring fire, sharing stories, jokes, and songs that echoed through the forest. The flickering flames warmed their hearts as they belted out their favorite campfire tunes, strengthening the bond among the different sections of the group. The shared experience of singing and laughter in the face of the rain created a sense of unity and camaraderie among the Scouts that will last a lifetime.
 
-{% include image-gallery.html folder='/uploads/2023-02-13-group-camp-at-warringal/campfire/' %}
+{% include image-gallery.html folder='/uploads/2023-05-21-group-camp-at-warringal/campfire/' %}
 
 ### Mock Emergency First Aid Training
 Scouting is not just about outdoor adventures; it's also about equipping young individuals with life-saving skills. During the camp, the Bundoora Scouts had the opportunity to participate in mock emergency first aid training. Led by experienced leaders, they learned how to assess situations, provide basic first aid, and work together as a team during challenging scenarios. This practical training not only enhanced their knowledge but also instilled a sense of responsibility and the importance of being prepared for unforeseen circumstances.
 
-{% include image-gallery.html folder='/uploads/2023-02-13-group-camp-at-warringal/first-aid/' %}
+{% include image-gallery.html folder='/uploads/2023-05-21-group-camp-at-warringal/first-aid/' %}
 
 ### Archery and Target Practice
 Rain or shine, Scouts are always up for a challenge. The Bundoora Scouts braved the elements and took part in archery sessions at the camp. With bows in hand, they aimed for the bullseye, testing their focus and precision. The cheers of encouragement reverberated through the air as arrows soared through the raindrops, hitting their marks with impressive accuracy. The archery sessions not only honed their skills but also taught them patience, concentration, and the importance of perseverance.
 
-{% include image-gallery.html folder='/uploads/2023-02-13-group-camp-at-warringal/archery/' %}
+{% include image-gallery.html folder='/uploads/2023-05-21-group-camp-at-warringal/archery/' %}
 
 ### Small Wall Challenge
 
 While the rain persisted, the Joey Section of the Bundoora Scouts sought their own thrilling adventure in the form of a small wall challenge at Warringal Scout Camp. Undeterred by the wet weather, these young adventurers set their sights on conquering the small, yet still exciting, climbing wall.
 
-{% include image-gallery.html folder='/uploads/2023-02-13-group-camp-at-warringal/climbing-wall/' %}
+{% include image-gallery.html folder='/uploads/2023-05-21-group-camp-at-warringal/climbing-wall/' %}
 
 ### An Exhilarating Hike
 Exploring nature and the great outdoors is a fundamental aspect of Scouting. Despite the inclement weather, the Bundoora Scouts embarked on an exhilarating hike through the scenic trails surrounding the camp. Equipped with waterproof gear and an adventurous spirit, they trekked through muddy paths, crossed streams, and embraced the serenity of the rain-soaked wilderness. The hike not only allowed them to connect with nature but also taught them resilience, adaptability, and the beauty of embracing the unexpected.
