@@ -1,6 +1,6 @@
 ---
 title: Peter Richardson
-role: Assistant Cub Scouts Leader
+role: Assistant Cub Scout Leader
 alias: Bagheera
 section: cub-scouts
 ---

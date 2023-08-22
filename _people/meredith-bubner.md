@@ -1,6 +1,6 @@
 ---
 title: Meredith Bubner
-role: Assistant Cub Scouts Leader
+role: Assistant Cub Scout Leader
 alias: 
 section: cub-scouts
 ---
