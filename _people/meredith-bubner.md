@@ -1,8 +1,8 @@
 ---
-title: Chetan Kumar Srinivasa Rao
-role: Adult Helper
+title: Meredith Bubner
+role: Assistant Cub Scouts Leader
 alias: 
-section: adult-helpers
+section: cub-scouts
 ---
 
 Started Scouting when?

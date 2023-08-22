@@ -1,6 +1,6 @@
 ---
 title: Kirsty Parr
-role: Assistant Scouts Leader
+role: Assistant Scout Leader
 alias: Eagle
 section: scouts
 ---

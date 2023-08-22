@@ -1,6 +1,6 @@
 ---
 title: Sally James
-role: Leader in Training
+role: Joey Scouts Leader
 alias: 
 section: joey-scouts
 ---
