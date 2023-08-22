@@ -11,10 +11,10 @@ custom_js:
 ## Rover Scouts
 {:.no_toc}
 
-### Adults Aged 18+ Years
+### Adults Aged 18-25 Years
 {:.no_toc}
 
-#### Meeting times: Please enquire
+#### Meeting times: Thursday 7:30pm to 10:00pm
 {:.no_toc}
 
 - TOC

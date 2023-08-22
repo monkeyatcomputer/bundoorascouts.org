@@ -14,7 +14,7 @@ custom_js:
 ### Teenagers Aged 15-17 Years
 {:.no_toc}
 
-#### Meeting Time: Please enquire
+#### Meeting Time: Wednesday 7:00pm to 9:00pm during school term
 {:.no_toc}
 
 - TOC
