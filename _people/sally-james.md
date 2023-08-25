@@ -1,7 +1,7 @@
 ---
 title: Sally James
 role: Joey Scout Leader
-alias: Shark
+alias: Roo
 section: joey-scouts
 ---
 
