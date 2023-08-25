@@ -1,7 +1,7 @@
 ---
 title: Bruce Wolfe
 role: Adult Helper
-alias: 
+alias: Shark
 section: adult-helpers
 ---
 
