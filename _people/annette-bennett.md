@@ -1,7 +1,7 @@
 ---
 title: Annette Bennett
 role: Venturer Scout Leader
-alias: 
+alias: Koala
 section: venturer-scouts
 ---
 
