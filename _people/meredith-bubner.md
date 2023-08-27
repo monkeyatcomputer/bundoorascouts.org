@@ -1,7 +1,7 @@
 ---
 title: Meredith Bubner
 role: Assistant Cub Scout Leader
-alias: 
+alias: Burrunan
 section: cub-scouts
 ---
 

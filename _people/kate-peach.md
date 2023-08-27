@@ -1,7 +1,7 @@
 ---
 title: Kate Peach
 role: Cub Scout Leader
-alias: Kaa
+alias: Akela
 section: cub-scouts
 ---
 
