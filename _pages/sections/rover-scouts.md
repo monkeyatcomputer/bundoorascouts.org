@@ -1,8 +1,8 @@
 ---
-title: Handfield Rover Crew
+title: Handfield/Snowy Morcom Rovers
 subtitle: "Beyond the Horizon"
 permalink: /sections/rover-scouts
-description: "Information for members in the Handfield Rover Crew"
+description: "Information for members in the Handfield and Snowy Morcom Rover Unit"
 heroimage: /assets/images/hero-rover-scouts.jpg
 custom_js:
     - "//www.google.com/recaptcha/api.js"
@@ -22,21 +22,21 @@ custom_js:
 
 <img class="float-right" src="/assets/images/logo-rover-scouts.png" />
 
-**Bundoora Scout Group is pleased to announce the Handfield Rover Crew will be hosted at the Bundoora Scout Hall Rover Den!**
+**Bundoora Scout Group is pleased to announce the Handfield Rover Unit will be hosted at the Bundoora Scout Hall Rover Den!**
 
-Handfield Rover Crew welcomes young adults from 18 to 25 years. You don't need to have any Scouting experience, but you do need to keep up with some adventurous people and their adrenalin-packed adventures! A Rover Scouts time in the Unit ends by their 26th birthday.
+Handfield and Snowy Morcom Rover Unit welcomes young adults from 18 to 25 years. You don't need to have any Scouting experience, but you do need to keep up with some adventurous people and their adrenalin-packed adventures! A Rover Scouts time in the Unit ends by their 26th birthday.
 
 Every Unit is different. Each has its own traditions, special interests and personalities. A Rover Unit runs itself, with an elected Unit Leader and executive.
 
-Handfield Rovers enjoy helping others, having a great time and taking on new challenges. You'll need a 'give it a go' attitude and you'll be rewarded with some serious fun.
+Handfield and Snowy Morcom enjoy helping others, having a great time and taking on new challenges. You'll need a 'give it a go' attitude and you'll be rewarded with some serious fun.
 
-Handfield Rovers get down and dirty each year in a mud bash and costumed chaos reigns at the annual ball. There's a surfing camp at Anglesea, or an Easter hiking challenge. Plus you can enjoy our own ski chalet near Falls Creek.
+Handfield and Snowy Morcom get down and dirty each year in a mud bash and costumed chaos reigns at the annual ball. There's a surfing camp at Anglesea, or an Easter hiking challenge. Plus you can enjoy our own ski chalet near Falls Creek.
 
 Every three years, Rovers converge on one location for a ten-day extravaganza of activities at the National Moot.
 
 There are Rover Councils at regional and state level, helping to shape our organisation. And there are many training opportunities to build skills that are widely recognised outside Scouting. Our motto is 'Service'.
 
-The Scouting movement is all about producing leaders, and here's where Handfield Rovers get to shine. You'll be able to help lead activities with younger Scout groups and make a difference in young people's lives. This means a Working with Children check for all over 18s, but it's a small price to pay for the rewards of leadership. You'll also have opportunities to bring about positive change in your community.
+The Scouting movement is all about producing leaders, and here's where Handfield and Snowy Morcom get to shine. You'll be able to help lead activities with younger Scout groups and make a difference in young people's lives. This means a Working with Children check for all over 18s, but it's a small price to pay for the rewards of leadership. You'll also have opportunities to bring about positive change in your community.
 
 #### Rover Scout Motto
 
@@ -78,6 +78,6 @@ Face challenges with courage
 
 ### Join the Adventure!
 
-To join the Handfield Rover Crew, simply fill in your details below and Lisa, our Unit Leader, will get in touch soon.
+To join the Handfield or Snowy Morcom Rover Unit, simply fill in your details below and Lisa, our Unit Leader, will get in touch soon.
 
 {% include contact.html email=site.email section='Rovers' %}
