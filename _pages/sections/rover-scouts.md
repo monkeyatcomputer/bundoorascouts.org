@@ -1,5 +1,5 @@
 ---
-title: Handfield/Snowy Morcom Rovers
+title: Handfield / Snowy Morcom Rovers
 subtitle: "Beyond the Horizon"
 permalink: /sections/rover-scouts
 description: "Information for members in the Handfield and Snowy Morcom Rover Unit"
