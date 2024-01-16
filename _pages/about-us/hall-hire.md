@@ -32,12 +32,12 @@ A different agreement is used for longer term hire and the proposed hirer is req
 
 ## Conditions
 
-Hire of our hall is subject to the following conditions:
+Our hall is situated on Banyule Council land and is subject to the following conditions:
 
- - 18th and 21st Birthday parties and schoolies celebrations are **not permitted**. 
- - Parties for other older children/teenage birthdays will only be an 'Approved Use' if the young person is a current member of Scouts Victoria and the function is open to a broad range of youth and adults, and has adult supervision.
- - Hire for commercial and retail entities are also **not permitted**.
- - The use does not impact on Scouting and is not contrary to Scout policy or any conditions contained in the relevant Council Lease under which Bundoora Scout Group occupies the land.
+ - Private celebrations are **not permitted** - eg. birthday parties, schoolies, family reuninions.
+ - For-profit organisations are permitted if permittion is obtained from Banyule Council.
+ - Operating hours are Sunday to Thursday 9am to 10pm, and Friday and Saturday 9am to midnight.
+ - The use does not impact on Scouting and is not contrary to Scout policy or any conditions contained in the Banyule Council Lease under which Bundoora Scout Group occupies the land.
 
 ## Enquire
 
