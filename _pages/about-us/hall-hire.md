@@ -24,9 +24,10 @@ A different agreement is used for longer term hire and the proposed hirer is req
  - Secure vehicle access to side and rear of property.
  - Thirty two (32) parking spaces (shared with community hall and church).
  - Large 13m x 18.5m (240m²) hall with 4m high ceiling.
- - Kitchen including dishwasher, two (2) electric ovens, four (4) plate electric cooktop, microwave, fridge, freezer, kettle, toaster, electric urn and pie warmer. A BBQ is also available.
+ - Kitchen including dishwasher, two (2) electric ovens, four (4) plate electric cooktop, microwave, fridge, freezer, kettle, toaster, and electric urn. A BBQ is also available.
  - Trestle tables and chairs to seat around 60 people.
  - Ladies and gents toilets.
+ - Limited reverse cycle air conditioning.
 
 {% include image-gallery.html folder='/uploads/hall-hire' %}
 
