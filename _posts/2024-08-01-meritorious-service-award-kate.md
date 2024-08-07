@@ -31,7 +31,7 @@ As we celebrate Kate's achievement, we also look forward to the future with exci
 
 Join us in congratulating Kate on this outstanding accomplishment and in celebrating the spirit of Scouting that she embodies so beautifully.
 
-**Congratulations, Kate, and thanks  for all you do for us at Bundoora Scout Group!**
+**Congratulations Kate, and thanks for all you do for us at Bundoora Scout Group!**
 
 <p>
     <img src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}/uploads/2024-08-01-meritorious-service-award-kate/kate.jpg&w=600&h=600&output=jpg&q=50&t=inside&we" alt="Kate Meritorious Service Award" title="Kate Meritorious Service Award" class="img-fluid rounded mx-auto d-block" />
