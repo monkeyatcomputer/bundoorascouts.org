@@ -7,6 +7,7 @@ author:
     - Chris Parr
 categories:
     - Group
+    - Cub Scouts
 tags:
     - Award
     - Meritorious Service Award
@@ -15,15 +16,15 @@ tags:
 
 ### CONGRATULATIONS TO: Kate
 
-We are thrilled to announce that our dedicated Cub Scout Leader, Kate, has been honored with the prestigious Meritorious Service Award on World Scout Day. This accolade is a testament to her unwavering commitment, exceptional leadership, and the positive impact she has made on our scouting community.
+We are thrilled to announce that our dedicated Cub Scout Leader, Kate, has been honored with the prestigious [Meritorious Service Award](https://scouts.com.au/about/what-is-scouting/awards/) on [World Scout Day](https://scoutsvictoria.com.au/age-sections-adults/leader-resources/marketing/worldscoutday/). This accolade is a testament to her unwavering commitment, exceptional leadership, and the positive impact she has made on our Scouting community.
 
 **A Leader Par Excellence**
 
-Kate has been a cornerstone of our Cub Scout pack for several years. Her passion for Scouting and her dedication to nurturing young minds have been truly inspiring. She has consistently gone above and beyond to ensure that every cub scout under her guidance learns valuable life skills, develops a sense of responsibility, and, most importantly, has fun.
+Kate has been a cornerstone of our Cub Scout pack for several years. Her passion for Scouting and her dedication to nurturing young minds have been truly inspiring. She has consistently gone above and beyond to ensure that every Cub Scout under her guidance learns valuable life skills, develops a sense of responsibility, and, most importantly, has fun.
 
 **The Meritorious Service Award**
 
-The [Scouts Australia](https://scouts.com.au/) [Meritorious Service Award](https://scouts.com.au/about/what-is-scouting/awards/) is one of the highest honors in scouting, recognizing individuals who have rendered outstanding service to the scouting movement. Awarded to both Adult Members and Supporters for meritorious or praiseworthy service to Scouts Australia for a period of around six to eight years. 'Meritorious Service' is defined as performing to a higher standard for longer or more intensely, than would be reasonably expected. Kate's receipt of this award is a reflection of her tireless efforts and the countless hours she has devoted to making our pack a vibrant and supportive community.
+The [Scouts Australia](https://scouts.com.au/) [Meritorious Service Award](https://scouts.com.au/about/what-is-scouting/awards/) is one of the highest honors in Scouting, recognizing individuals who have rendered outstanding service to the Scouting movement. 'Meritorious Service' is defined as performing to a higher standard for longer or more intensely, than would be reasonably expected. Kate's receipt of this award is a reflection of her tireless efforts and the countless hours she has devoted to making our pack a vibrant and supportive community.
 
 **Looking Ahead**
 
