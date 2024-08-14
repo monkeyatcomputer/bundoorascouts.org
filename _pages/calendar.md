@@ -3,6 +3,8 @@ title: Event Calendar
 subtitle: "Adventures @ Bundoora Scout Group"
 description: "Event calendar of our Bundoora Scout Group adventures"
 layout: calendar
+published: false
+sitemap: false
 permalink: /calendar
 custom_css:
     - "//cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css"
