@@ -37,9 +37,9 @@ The Rover section is run by Rovers at regional and state level Rover Councils, w
 
 Every Rover Unit is different as each has their own traditions, special interests and personalities. A Rover Unit runs itself, with an elected Unit Leader and Unit executive: the Unit Council.
 
-Handfield/Snowy Morcom Rover Unit is made up of keen people with 'give it a go' attitudes who are willing to take on new challenges for some serious fun.
+Handfield Rover Unit is made up of keen people with 'give it a go' attitudes who are willing to take on new challenges for some serious fun.
 
-Handfield/Snowy Morcom Rover Unit welcomes all young adults from 18 to 25 years. You don’t need to have any Scouting experience, but you do need to keep up with some adventurous people and their adrenaline-packed adventures! A Rover Scout’s time in the Unit ends when they turn 26.
+Handfield Rover Unit welcomes all young adults from 18 to 25 years. You don’t need to have any Scouting experience, but you do need to keep up with some adventurous people and their adrenaline-packed adventures! A Rover Scout’s time in the Unit ends when they turn 26.
 
 All adult members of Scouting need a Working with Children Check, but this is a small price to pay for the rewards of leadership, personal development, and the opportunity to bring a positive change to the people around you.
 
