@@ -21,7 +21,7 @@ email: 'handfieldrc@gmail.com'
 - TOC
 {:toc}
 
-<img class="float-right" src="/assets/images/logo-hsm-rovers.png" />
+<!--<img class="float-right" src="/assets/images/logo-hsm-rovers.png" />-->
 
 **Bundoora Scout Group is pleased to announce the Handfield Rover Unit will be hosted at the Bundoora Scout Hall Rover Den!**
 
@@ -43,7 +43,7 @@ Handfield/Snowy Morcom Rover Unit welcomes all young adults from 18 to 25 years.
 
 All adult members of Scouting need a Working with Children Check, but this is a small price to pay for the rewards of leadership, personal development, and the opportunity to bring a positive change to the people around you.
 
-The Scouting movement is all about producing leaders, and here’s where Handfield/Snowy Morcom Unit shines. As part of the Scouting Achievement Pathway, and in line with our motto 'Service', you’ll be able to help lead activities with younger sections and other Scout Groups, contributing to the youth in the community and giving back to where we came from. 
+The Scouting movement is all about producing leaders, and here’s where Handfield Rover Unit shines. As part of the Scouting Achievement Pathway, and in line with our motto 'Service', you’ll be able to help lead activities with younger sections and other Scout Groups, contributing to the youth in the community and giving back to where we came from. 
 
 #### Rover Scout Motto
 
@@ -85,6 +85,6 @@ Face challenges with courage
 
 ### Join the Adventure!
 
-Are you interested in joining Handfield/Snowy Morcom Rover Unit or have any questions? Simply fill out your details below and Lisa, our Unit Leader, will get in touch soon.
+Are you interested in joining Handfield Rover Unit or have any questions? Simply fill out your details below and Lisa, our Unit Leader, will get in touch soon.
 
 {% include contact.html email=site.email section='Rovers' %}
