@@ -85,6 +85,6 @@ Face challenges with courage
 
 ### Join the Adventure!
 
-Are you interested in joining Handfield Rover Unit or have any questions? Simply fill out your details below and Lisa, our Unit Leader, will get in touch soon.
+Are you interested in joining Handfield Rover Unit or have any questions? Simply fill out your details below and Drew, our Unit Leader, will get in touch soon.
 
 {% include contact.html email=site.email section='Rovers' %}
