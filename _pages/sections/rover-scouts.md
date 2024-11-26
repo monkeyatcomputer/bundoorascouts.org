@@ -21,7 +21,8 @@ email: 'handfieldrc@gmail.com'
 - TOC
 {:toc}
 
-<img class="float-right" src="/assets/images/logo-rover-scouts.png" />
+<div class="float-right"><img src="/assets/images/logo-handfield-rovers.png" /><br/>
+<img src="/assets/images/logo-rover-scouts.png" /></div>
 
 **Bundoora Scout Group is pleased to announce the Handfield Rover Unit will be hosted at the Bundoora Scout Hall Rover Den!**
 
