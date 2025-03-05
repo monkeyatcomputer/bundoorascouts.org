@@ -33,7 +33,11 @@ layout: default
             <div class="col-lg-4 d-flex align-items-center justify-content-around mt-4">
                 <div class="sponsor-item">
                     <a href="{{ sponsor.url }}" target="_blank">
+                        {% if sponsor.logo %}
                         <img class="img-fluid" src="{{site.baseurl}}/assets/images/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+                        {% else %}
+                            {{ sponsor.name }}
+                        {% endif %}
                     </a>
                     {% if sponsor.description %}
                     <p class="text-muted">{{ sponsor.description }}</p>
