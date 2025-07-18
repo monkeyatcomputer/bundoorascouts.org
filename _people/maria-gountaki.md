@@ -1,6 +1,6 @@
 ---
 title: Maria Gountaki
-role: Quartermaster / Adult Helper
+role: Quartermaster
 alias:
 section: adult-helpers
 ---
