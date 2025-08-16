@@ -193,25 +193,6 @@ layout: default
     </div>
 </section>
 <script type="text/javascript">
-    // Add fade-in animation to cards when they come into view
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px",
-}
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("fade-in-up")
-    }
-  })
-}, observerOptions)
-
-// Observe all activity cards
-document.querySelectorAll(".activity-card").forEach((card) => {
-  observer.observe(card)
-})
-
 // Add some interactive hover effects
 document.querySelectorAll(".scout-badge").forEach((badge) => {
   badge.addEventListener("mouseenter", function () {
@@ -221,18 +202,5 @@ document.querySelectorAll(".scout-badge").forEach((badge) => {
   badge.addEventListener("mouseleave", function () {
     this.style.transform = "scale(1) rotate(0deg)"
   })
-})
-
-// Add loading animation for images
-document.querySelectorAll("img").forEach((img) => {
-  img.addEventListener("load", function () {
-    this.style.opacity = "1"
-    this.style.transform = "scale(1)"
-  })
-
-  // Set initial state
-  img.style.opacity = "0"
-  img.style.transform = "scale(0.9)"
-  img.style.transition = "opacity 0.3s ease, transform 0.3s ease"
 })
 </script>
