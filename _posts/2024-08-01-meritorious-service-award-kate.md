@@ -4,7 +4,7 @@ subtitle: "Congratulations!"
 description: "Congratulations to Kate on being honoured with the Scouts Australia Meritorious Service Award on World Scout Day"
 heroimage: /assets/images/hero-3.jpg
 author:
-    - Chris Parr
+    - Group
 categories:
     - Group
     - Cub Scouts

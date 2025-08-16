@@ -3,7 +3,7 @@ title: "Cub Scouts End of Year"
 subtitle: "@ Latitude"
 heroimage: /uploads/hero/latitude.jpg
 author:
-    - Bundoora Scout Group
+    - Group
 categories:
     - Cub Scouts
 tags:

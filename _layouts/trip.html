@@ -6,20 +6,24 @@ layout: default
 {%- if page.heroimage -%}
     {% assign heroimage = page.heroimage %}
 {%- endif -%}
-
+{%- assign pageTitle = page.title -%}
+{%- if page.autopages -%}
+    {% assign pageTitle = page.autopages.display_name %}
+{%- endif -%}
 <!-- Intro Header -->
 <header class="intro-header" style="background-image: url('{{site.baseurl}}{{heroimage}}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <div class="post-heading">
-                    <h1>{{ page.title }}</h1>
+                <div class="page-heading">
+                    <h1>{{ pageTitle }}</h1>
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
-                    <span class="meta">
-                        {% if page.trip_date %}<i class="fas fa-fw fa-calendar-alt"></i> {{ page.trip_date }}{% endif %}
-                        {% if page.location %}<i class="fas fa-fw fa-map-marker-alt ml-3"></i> {{ page.location }}{% endif %}
+                    <span class="meta">Posted by
+                        {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}
+                        on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read-time.html
+                        content=page.content %}
                     </span>
                 </div>
             </div>
@@ -27,55 +31,326 @@ layout: default
     </div>
 </header>
 
-<article class="content-section" id="page" itemscope itemtype="http://schema.org/CreativeWork">
+<!-- Content Section -->
+ <section class="content-section" id="page">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-lg-8">
-                        {% if page.status == 'past' %}
-                            <h2 class="section-heading">Trip Report</h2>
-                        {% else %}
-                            <h2 class="section-heading">Trip Information</h2>
-                        {% endif %}
-                        {{ content }}
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card my-4">
-                            <h5 class="card-header">Trip Details</h5>
-                            <div class="card-body">
-                                {% if page.trip_date %}<p><strong>Date:</strong> {{ page.trip_date }}</p>{% endif %}
-                                {% if page.location %}<p><strong>Location:</strong> {{ page.location }}</p>{% endif %}
-                                {% if page.cost %}<p><strong>Cost:</strong> {{ page.cost }}</p>{% endif %}
-                                {% if page.sections %}
-                                    <p><strong>For Sections:</strong></p>
-                                    <ul>
-                                    {% for section in page.sections %}
-                                        <li>{{ section | replace: '-', ' ' | capitalize }}</li>
-                                    {% endfor %}
-                                    </ul>
-                                {% endif %}
-                                {% if page.status != 'past' %}
-                                    {% if page.registration_link %}<a href="{{ page.registration_link }}" class="btn btn-primary btn-block mb-2">Register Now</a>{% endif %}
-                                    {% if page.permission_form %}<a href="{{ page.permission_form }}" class="btn btn-info btn-block">Download Permission Form</a>{% endif %}
-                                {% endif %}
-                            </div>
+                {{ content }}
+            </div> 
+        </div>
+    </div>
+</section>
+
+<!-- Who Can Attend Section -->
+<section class="page-section py-5" style="background-color: var(--color-muted);">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold" style="color: var(--color-primary);">
+            Who Can Attend?
+        </h2>
+        <p class="text-center">This trip is open to registered members of the <b>Scout</b> and <b>Venturer Scout</b> sections who will be of age at the time of the trip. This is a significant expedition and will require a good level of maturity, fitness, and a commitment to teamwork.</p>
+    </div>
+</section>
+
+<!-- Itinerary Section -->
+<section id="itinerary" class="page-section py-5" style="background-color: var(--color-muted);">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold" style="color: var(--color-primary);">
+            Our Epic Journey
+        </h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <div class="card-body text-center p-4">
+                        <div class="scout-badge">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
+                        <h4 class="card-title fw-bold mb-3">Broken Hill</h4>
+                        <p class="card-text">Our first major stop! Explore the historic mining town and prepare for the outback adventure ahead.</p>
                     </div>
                 </div>
-
-                {% if page.status == 'past' and page.gallery_path %}
-                    <hr>
-                    <h2 class="section-heading">Photo Gallery</h2>
-                    <p><em>A photo gallery can be added here. You can create a reusable <code>gallery.html</code> include to display images from the <code>page.gallery_path</code>.</em></p>
-                {% endif %}
-
-                <hr>
-
-                {% include share-buttons.html %}
-
-                {% include top-link.html %}
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <div class="card-body text-center p-4">
+                        <div class="scout-badge">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Coober Pedy</h4>
+                        <p class="card-text">The underground opal capital! Experience the unique underground lifestyle and hunt for precious opals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <div class="card-body text-center p-4">
+                        <div class="scout-badge">
+                            <i class="fas fa-campground"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-3">Curtin Springs</h4>
+                        <p class="card-text">Our home base! Perfect location for day trips to Uluru and all the amazing activities we have planned.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</article>
+</section>
+
+<!-- Activities Section -->
+<section id="activities" class="page-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold" style="color: var(--color-primary);">
+            Amazing Activities
+        </h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/uploads/2025-08-16-uluru-adventure-2026/helicopter-tour.jpg" class="card-img-top" alt="Helicopter Ride">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">🚁 Helicopter Ride</h5>
+                        <p class="card-text">See Uluru from above in an unforgettable aerial adventure!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Camel Ride">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">🐪 Camel Ride</h5>
+                        <p class="card-text">Experience the outback the traditional way on a gentle camel trek.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Art Gallery">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">🎨 Art Gallery</h5>
+                        <p class="card-text">Discover amazing Aboriginal art and learn about local culture.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Opal Mining">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">💎 Mining for Opals</h5>
+                        <p class="card-text">Try your luck finding precious opals in the famous Coober Pedy mines!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Kings Canyon">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">🥾 Hiking Kings Canyon</h5>
+                        <p class="card-text">Challenge yourself with spectacular canyon views and ancient rock formations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Uluru Hiking">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">🏔️ Hiking Uluru</h5>
+                        <p class="card-text">Walk around the base of the iconic Uluru and feel its ancient power.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Waterhole Swimming">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">🏊 Swimming at Waterhole</h5>
+                        <p class="card-text">Cool off in a refreshing natural waterhole after a day of adventure.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Salt Lake">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">🧂 Visiting Salt Lake</h5>
+                        <p class="card-text">Witness the stunning white expanse of an ancient salt lake.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Ghost Town">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">👻 Ghost Town</h5>
+                        <p class="card-text">Explore an abandoned town and imagine life in the old outback days.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Ancient Jail">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">⛓️ Ancient Abandoned Jail</h5>
+                        <p class="card-text">Step back in time and explore a historic jail from Australia's past.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Silver Mine">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">⛏️ 200-Year-Old Silver Mine</h5>
+                        <p class="card-text">Venture underground into a historic silver mine and discover mining history.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scout Groups Section -->
+<section id="groups" class="page-section py-5" style="background-color: var(--color-muted);">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold" style="color: var(--color-primary);">
+            Scout Groups Joining Us
+        </h2>
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="scout-badge mx-auto"><img src="/assets/images/logo.png"></div>
+                <h5 class="fw-bold">Bundoora Scout Group</h5>
+                <p class="text-muted">Trip Organizers</p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="scout-badge mx-auto">CSG</div>
+                <h5 class="fw-bold">Carlton Scout Group</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="scout-badge mx-auto">ESG</div>
+                <h5 class="fw-bold">Eaglemont Scout Group</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="scout-badge mx-auto">GSG</div>
+                <h5 class="fw-bold">Gembrook Scout Group</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="scout-badge mx-auto">GhSG</div>
+                <h5 class="fw-bold">Greenhills Scout Group</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="scout-badge mx-auto">GrSG</div>
+                <h5 class="fw-bold">Grovedale Scout Group</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="scout-badge mx-auto">HSG</div>
+                <h5 class="fw-bold">Heany Park Scout Group</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="scout-badge mx-auto">WSG</div>
+                <h5 class="fw-bold">Watsonia Scout Group</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Safety & Trust Section -->
+<section class="page-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold" style="color: var(--color-primary);">
+            Safety & Experience You Can Trust
+        </h2>
+        <div class="row">
+            <div class="col-lg-4 text-center mb-4">
+                <i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--color-accent);"></i>
+                <h4 class="fw-bold">Qualified Leaders</h4>
+                <p>All our leaders are fully trained and certified in first aid and outdoor activities.</p>
+            </div>
+            <div class="col-lg-4 text-center mb-4">
+                <i class="fas fa-users fa-3x mb-3" style="color: var(--color-accent);"></i>
+                <h4 class="fw-bold">Small Groups</h4>
+                <p>We maintain small group sizes to ensure personal attention and safety for every scout.</p>
+            </div>
+            <div class="col-lg-4 text-center mb-4">
+                <i class="fas fa-phone-alt fa-3x mb-3" style="color: var(--color-accent);"></i>
+                <h4 class="fw-bold">Communication</h4>
+                <p>Parents receive regular updates and can contact us anytime during the trip.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<section class="bg-light page-section" id="finally">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>For more information about our Uluru Adventure 2026 trip, simply fill in your details below and we will get in touch soon.</p>
+
+{% include contact.html email=site.email section="Other" %}
+
+                <hr>
+
+                <div class="clearfix">
+                    {% if page.previous.url %}
+                    <a class="btn btn-primary float-left" href="{{ page.previous.url | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous <span class="d-none d-md-inline">Post</span></a>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <a class="btn btn-primary float-right" href="{{ page.next.url | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next <span class="d-none d-md-inline">Post</span> &rarr;</a>
+                    {% endif %}
+                </div>
+
+{% include share-buttons.html %}
+
+{% include category-list.html %}
+
+{% include tag-list.html %}
+
+{% include post-date.html %}
+
+{% include top-link.html %}
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    // Add fade-in animation to cards when they come into view
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px",
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-in-up")
+    }
+  })
+}, observerOptions)
+
+// Observe all activity cards
+document.querySelectorAll(".activity-card").forEach((card) => {
+  observer.observe(card)
+})
+
+// Add some interactive hover effects
+document.querySelectorAll(".scout-badge").forEach((badge) => {
+  badge.addEventListener("mouseenter", function () {
+    this.style.transform = "scale(1.05) rotate(10deg)"
+  })
+
+  badge.addEventListener("mouseleave", function () {
+    this.style.transform = "scale(1) rotate(0deg)"
+  })
+})
+
+// Add loading animation for images
+document.querySelectorAll("img").forEach((img) => {
+  img.addEventListener("load", function () {
+    this.style.opacity = "1"
+    this.style.transform = "scale(1)"
+  })
+
+  // Set initial state
+  img.style.opacity = "0"
+  img.style.transform = "scale(0.9)"
+  img.style.transition = "opacity 0.3s ease, transform 0.3s ease"
+})
+console.log("Uluru Adventure 2026 - Landing page loaded successfully! 🏕️")
+</script>

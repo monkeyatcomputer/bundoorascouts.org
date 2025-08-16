@@ -3,7 +3,7 @@ title: "End of Year Reflection"
 subtitle: "Bundoora Scouts 2022"
 heroimage: /uploads/hero/end-of-year-bbq-2022.jpg
 author:
-    - Chris Parr
+    - Group
 categories:
     - Group
 tags:

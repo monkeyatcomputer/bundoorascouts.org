@@ -4,7 +4,7 @@ subtitle: "Promoting Environmental Awareness"
 heroimage: /uploads/hero/bio-garden.jpg
 socialimage: /uploads/social/bio-garden.jpg
 author:
-    - Kate Peach
+    - Group
 categories:
     - Cub Scouts
     - Group

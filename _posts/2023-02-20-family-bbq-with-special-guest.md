@@ -4,7 +4,7 @@ subtitle: "with Special Guest"
 heroimage: /uploads/hero/family-bbq-2023.jpg
 socialimage: /uploads/social/family-bbq-2023.jpg
 author:
-    - Chris Parr
+    - Group
 categories:
     - Group
 tags:

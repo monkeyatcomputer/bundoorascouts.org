@@ -3,7 +3,7 @@ title: "Rick Garotti Scarf Presentation"
 subtitle: "By Banyule District Scouts"
 heroimage: /uploads/hero/scarving.jpg
 author:
-    - Bundoora Scout Group
+    - Group
 categories:
     - Group
 tags:

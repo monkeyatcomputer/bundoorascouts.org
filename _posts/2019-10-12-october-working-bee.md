@@ -3,7 +3,7 @@ title: "Scout Hall Working Bee"
 subtitle: "October 2019"
 heroimage: /uploads/hero/spring-cleaning.jpg
 author:
-    - Bundoora Scout Group
+    - Group
 categories:
     - Joey Scouts
     - Cub Scouts

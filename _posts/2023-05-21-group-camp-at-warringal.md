@@ -3,7 +3,7 @@ title: "Group Camp at Warringal"
 subtitle: "Embracing Adversity, Building Bonds, and Conquering the Great Outdoors"
 heroimage: /uploads/hero/group-camp.jpg
 author:
-    - Chris Parr
+    - Group
 categories:
     - Joey Scouts
     - Cub Scouts

@@ -4,7 +4,7 @@ subtitle: "@ Bundoora Scout Hall"
 description: "New honour wall at Bundoora Scout Hall"
 heroimage: /assets/images/hero-2.jpg
 author:
-    - Chris Parr
+    - Group
 categories:
     - Group
 tags:

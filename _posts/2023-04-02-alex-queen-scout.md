@@ -3,7 +3,7 @@ title: "Alex's Queen's Scout"
 subtitle: "Congratulations!"
 heroimage: /assets/images/hero-rover-scouts.jpg
 author:
-    - Chris Parr
+    - Group
 categories:
     - Rover Scouts
     - Venturer Scouts
