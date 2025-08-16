@@ -41,61 +41,30 @@ layout: default
         </div>
     </div>
 </section>
-
-<!-- Who Can Attend Section -->
-<section class="page-section py-5" style="background-color: var(--color-muted);">
-    <div class="container">
-        <h2 class="text-center mb-5 fw-bold" style="color: var(--color-primary);">
-            Who Can Attend?
-        </h2>
-        <p class="text-center">This trip is open to registered members of the <b>Scout</b> and <b>Venturer Scout</b> sections who will be of age at the time of the trip. This is a significant expedition and will require a good level of maturity, fitness, and a commitment to teamwork.</p>
-    </div>
-</section>
-
+{%- if page.itinerary -%}
 <!-- Itinerary Section -->
-<section id="itinerary" class="page-section py-5" style="background-color: var(--color-muted);">
+<section id="itinerary" class="page-section py-5">
     <div class="container">
-        <h2 class="text-center mb-5 fw-bold" style="color: var(--color-primary);">
+        <h2 class="text-center mb-5 fw-bold">
             Our Epic Journey
         </h2>
-        <div class="row">
-            <div class="col-lg-4 mb-4">
+        <div class="row g-4">
+            {%- for item in page.itinerary -%}
+            <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <div class="card-body text-center p-4">
-                        <div class="scout-badge">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4 class="card-title fw-bold mb-3">Broken Hill</h4>
-                        <p class="card-text">Our first major stop! Explore the historic mining town and prepare for the outback adventure ahead.</p>
+                    <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold mb-3">{{ item.title }}</h4>
+                        <p class="card-text">{{ item.description }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <div class="card-body text-center p-4">
-                        <div class="scout-badge">
-                            <i class="fas fa-gem"></i>
-                        </div>
-                        <h4 class="card-title fw-bold mb-3">Coober Pedy</h4>
-                        <p class="card-text">The underground opal capital! Experience the unique underground lifestyle and hunt for precious opals.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <div class="card-body text-center p-4">
-                        <div class="scout-badge">
-                            <i class="fas fa-campground"></i>
-                        </div>
-                        <h4 class="card-title fw-bold mb-3">Curtin Springs</h4>
-                        <p class="card-text">Our home base! Perfect location for day trips to Uluru and all the amazing activities we have planned.</p>
-                    </div>
-                </div>
-            </div>
+            {%- endfor -%}
         </div>
     </div>
 </section>
-
+{%- endif -%}
+{%- if page.activities -%}
 <!-- Activities Section -->
 <section id="activities" class="page-section py-5">
     <div class="container">
@@ -103,109 +72,22 @@ layout: default
             Amazing Activities
         </h2>
         <div class="row g-4">
+            {%- for item in page.activities -%}
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/uploads/2025-08-16-uluru-adventure-2026/helicopter-tour.jpg" class="card-img-top" alt="Helicopter Tour">
+                    <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">🚁 Helicopter Tour</h5>
-                        <p class="card-text">See Uluru from above in an unforgettable aerial adventure!</p>
+                        <h5 class="card-title fw-bold">{{ item.title }}</h5>
+                        <p class="card-text">{{ item.description }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Camel Ride">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">🐪 Camel Ride</h5>
-                        <p class="card-text">Experience the outback the traditional way on a gentle camel trek.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Art Gallery">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">🎨 Art Gallery</h5>
-                        <p class="card-text">Discover amazing Aboriginal art and learn about local culture.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Opal Mining">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">💎 Mining for Opals</h5>
-                        <p class="card-text">Try your luck finding precious opals in the famous Coober Pedy mines!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Kings Canyon">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">🥾 Hiking Kings Canyon</h5>
-                        <p class="card-text">Challenge yourself with spectacular canyon views and ancient rock formations.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Uluru Hiking">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">🏔️ Hiking Uluru</h5>
-                        <p class="card-text">Walk around the base of the iconic Uluru and feel its ancient power.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Waterhole Swimming">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">🏊 Swimming at Waterhole</h5>
-                        <p class="card-text">Cool off in a refreshing natural waterhole after a day of adventure.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Salt Lake">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">🧂 Visiting Salt Lake</h5>
-                        <p class="card-text">Witness the stunning white expanse of an ancient salt lake.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Ghost Town">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">👻 Ghost Town</h5>
-                        <p class="card-text">Explore an abandoned town and imagine life in the old outback days.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Ancient Jail">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">⛓️ Ancient Abandoned Jail</h5>
-                        <p class="card-text">Step back in time and explore a historic jail from Australia's past.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
-                    <img src="/assets/images/placeholder.svg?height=200&width=300" class="card-img-top" alt="Silver Mine">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">⛏️ 200-Year-Old Silver Mine</h5>
-                        <p class="card-text">Venture underground into a historic silver mine and discover mining history.</p>
-                    </div>
-                </div>
-            </div>
+            {%- endfor -%}
         </div>
     </div>
 </section>
-
+{%- endif -%}
+{%- if page.groups -%}
 <!-- Scout Groups Section -->
 <section id="groups" class="page-section py-5" style="background-color: var(--color-muted);">
     <div class="container">
@@ -213,43 +95,27 @@ layout: default
             Scout Groups Joining Us
         </h2>
         <div class="row text-center">
+            {%- for group in page.groups -%}
             <div class="col-md-3 col-sm-6 mb-4">
-                <div class="scout-badge mx-auto"><img src="/assets/images/logo.png"></div>
-                <h5 class="fw-bold">Bundoora Scout Group</h5>
-                <p class="text-muted">Trip Organizers</p>
+                <div class="scout-badge mx-auto">
+                    {%- if group.image -%}
+                    <img src="{{ group.image }}" width="100" height="100" alt="{{ group.name }}">
+                    {%- else -%}
+                    {{ group.initials }}
+                    {%- endif -%}
+                </div>
+                <h5 class="fw-bold">{{ group.name }}</h5>
+                {%- if group.description -%}
+                <p class="text-muted">{{ group.description }}</p>
+                {%- endif -%}
             </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="scout-badge mx-auto">CSG</div>
-                <h5 class="fw-bold">Carlton Scout Group</h5>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="scout-badge mx-auto">ESG</div>
-                <h5 class="fw-bold">Eaglemont Scout Group</h5>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="scout-badge mx-auto">GSG</div>
-                <h5 class="fw-bold">Gembrook Scout Group</h5>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="scout-badge mx-auto">GhSG</div>
-                <h5 class="fw-bold">Greenhills Scout Group</h5>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="scout-badge mx-auto">GrSG</div>
-                <h5 class="fw-bold">Grovedale Scout Group</h5>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="scout-badge mx-auto">HSG</div>
-                <h5 class="fw-bold">Heany Park Scout Group</h5>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="scout-badge mx-auto">WSG</div>
-                <h5 class="fw-bold">Watsonia Scout Group</h5>
-            </div>
+            {%- endfor -%}
         </div>
     </div>
 </section>
+{%- endif -%}
 
+{%- if page.safety -%}
 <!-- Safety & Trust Section -->
 <section class="page-section py-5">
     <div class="container">
@@ -275,13 +141,13 @@ layout: default
         </div>
     </div>
 </section>
-
+{%- endif -%}
 <!-- Footer Section -->
 <section class="bg-light page-section" id="finally">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <p>For more information about our Uluru Adventure 2026 trip, simply fill in your details below and we will get in touch soon.</p>
+                <p>For more information about our trip, simply fill in your details below and we will get in touch soon.</p>
 
 {% include contact.html email=site.email section="Other" %}
 

@@ -11,7 +11,7 @@ categories:
     - Venturer Scouts
     - Group
 tags:
-    - Camp
+    - camp
 custom_css:
     - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
 custom_js:

@@ -1,0 +1,27 @@
+// Activity Cards
+.activity-card {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover .card-img-top {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .activity-card:hover {
+    transform: translateY(-5px);
+  }
+}
