@@ -1,5 +1,5 @@
 ---
-title: Ashlea Dyson
+title: Glenn
 role: Adult Helper
 alias:
 section: adult-helpers
@@ -8,19 +8,7 @@ section: adult-helpers
 Started Scouting when?
 : 
 
-Time in Scouting?
-: 
-
-Past scouting experiences?
-: 
-
 Reason for joining the Scouting movement?
-: 
-
-External qualifications relevant to Scouting?
-: 
-
-Your three words to describe Scouting?
 : 
 
 Most likely to be heard saying?

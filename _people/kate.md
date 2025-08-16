@@ -1,8 +1,8 @@
 ---
-title: Kirsty Parr
-role: Assistant Scout Leader
-alias: Eagle
-section: scouts
+title: Kate
+role: Cub Scout Leader
+alias: Akela
+section: cub-scouts
 ---
 
 Started Scouting when?

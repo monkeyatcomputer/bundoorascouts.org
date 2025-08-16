@@ -1,8 +1,8 @@
 ---
-title: Kate Peach
-role: Cub Scout Leader
-alias: Akela
-section: cub-scouts
+title: Bruce
+role: Adult Helper
+alias: Shark
+section: adult-helpers
 ---
 
 Started Scouting when?

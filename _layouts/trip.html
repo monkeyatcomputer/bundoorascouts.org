@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+{%- assign heroimage = '/assets/images/hero-3.jpg' -%}
+{%- if page.heroimage -%}
+    {% assign heroimage = page.heroimage %}
+{%- endif -%}
+
+<!-- Intro Header -->
+<header class="intro-header" style="background-image: url('{{site.baseurl}}{{heroimage}}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="post-heading">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% endif %}
+                    <span class="meta">
+                        {% if page.trip_date %}<i class="fas fa-fw fa-calendar-alt"></i> {{ page.trip_date }}{% endif %}
+                        {% if page.location %}<i class="fas fa-fw fa-map-marker-alt ml-3"></i> {{ page.location }}{% endif %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<article class="content-section" id="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-8">
+                        {% if page.status == 'past' %}
+                            <h2 class="section-heading">Trip Report</h2>
+                        {% else %}
+                            <h2 class="section-heading">Trip Information</h2>
+                        {% endif %}
+                        {{ content }}
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card my-4">
+                            <h5 class="card-header">Trip Details</h5>
+                            <div class="card-body">
+                                {% if page.trip_date %}<p><strong>Date:</strong> {{ page.trip_date }}</p>{% endif %}
+                                {% if page.location %}<p><strong>Location:</strong> {{ page.location }}</p>{% endif %}
+                                {% if page.cost %}<p><strong>Cost:</strong> {{ page.cost }}</p>{% endif %}
+                                {% if page.sections %}
+                                    <p><strong>For Sections:</strong></p>
+                                    <ul>
+                                    {% for section in page.sections %}
+                                        <li>{{ section | replace: '-', ' ' | capitalize }}</li>
+                                    {% endfor %}
+                                    </ul>
+                                {% endif %}
+                                {% if page.status != 'past' %}
+                                    {% if page.registration_link %}<a href="{{ page.registration_link }}" class="btn btn-primary btn-block mb-2">Register Now</a>{% endif %}
+                                    {% if page.permission_form %}<a href="{{ page.permission_form }}" class="btn btn-info btn-block">Download Permission Form</a>{% endif %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% if page.status == 'past' and page.gallery_path %}
+                    <hr>
+                    <h2 class="section-heading">Photo Gallery</h2>
+                    <p><em>A photo gallery can be added here. You can create a reusable <code>gallery.html</code> include to display images from the <code>page.gallery_path</code>.</em></p>
+                {% endif %}
+
+                <hr>
+
+                {% include share-buttons.html %}
+
+                {% include top-link.html %}
+            </div>
+        </div>
+    </div>
+</article>

@@ -88,6 +88,10 @@ Face challenges with courage
 
 [Handfield Rover Unit on Facebook](https://www.facebook.com/HSMRU23)
 
+### Section Leaders
+
+{% include people.html section='rover-scouts' %}
+
 ### Join the Adventure!
 
 Are you interested in joining Handfield Rover Unit or have any questions? Simply fill out your details below and Drew, our Unit Leader, will get in touch soon.

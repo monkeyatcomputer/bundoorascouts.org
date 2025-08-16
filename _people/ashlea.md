@@ -1,8 +1,8 @@
 ---
-title: Lisa Hogan
-role: Cub Scout Assistant Leader
+title: Ashlea
+role: Assistant Venturer Leader
 alias: 
-section: cub-scouts
+section: venturer-scouts
 ---
 
 Started Scouting when?

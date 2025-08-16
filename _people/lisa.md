@@ -1,8 +1,8 @@
 ---
-title: Chris Parr
-role: Group Leader
-alias: Rafiki
-section: group
+title: Lisa
+role: Cub Scout Assistant Leader
+alias: 
+section: cub-scouts
 ---
 
 Started Scouting when?
@@ -37,4 +37,3 @@ Best memory in Scouting?
 
 Most looking forward to?
 : 
-

@@ -1,8 +1,8 @@
 ---
-title: Hamish Lucas
-role: Scout Leader
-alias: Termite
-section: scouts
+title: Siobhan
+role: Assistant Cub Scouts Leader
+alias: 
+section: cub-scouts
 ---
 
 Started Scouting when?

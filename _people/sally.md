@@ -1,8 +1,8 @@
 ---
-title: Joan Parr
-role: Treasurer
-alias: Jacala
-section: group
+title: Sally
+role: Joey Scout Leader
+alias: Roo
+section: joey-scouts
 ---
 
 Started Scouting when?

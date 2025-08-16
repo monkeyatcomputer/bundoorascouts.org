@@ -1,8 +1,8 @@
 ---
-title: Sally James
-role: Joey Scout Leader
-alias: Roo
-section: joey-scouts
+title: Hamish
+role: Scout Leader
+alias: Termite
+section: scouts
 ---
 
 Started Scouting when?
