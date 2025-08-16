@@ -13,6 +13,9 @@ tags:
     - uluru
     - trip
     - camp
+trip_details:
+  dates: "28th June &mdash; 11th July 2026"
+  cost: "$1900 per scout"
 itinerary:
   - image: "/uploads/2025-08-16-uluru-adventure-2026/bus.jpg"
     title: "The Transport"

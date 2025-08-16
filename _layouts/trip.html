@@ -41,6 +41,25 @@ layout: default
         </div>
     </div>
 </section>
+{%- if page.trip_details -%}
+<!-- Trip Details Section -->
+<section id="trip-details" class="page-section py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-6 mb-4">
+                <i class="fas fa-calendar-alt fa-3x mb-3"></i>
+                <h4 class="fw-bold">Dates</h4>
+                <p>{{ page.trip_details.dates }}</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <i class="fas fa-dollar-sign fa-3x mb-3"></i>
+                <h4 class="fw-bold">Cost</h4>
+                <p>{{ page.trip_details.cost }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{%- endif -%}
 {%- if page.itinerary -%}
 <!-- Itinerary Section -->
 <section id="itinerary" class="page-section py-5">
@@ -51,7 +70,7 @@ layout: default
         <div class="row g-4">
             {%- for item in page.itinerary -%}
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                <div class="card h-100 shadow-sm activity-card" style="border: none;">
                     <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
                     <div class="card-body">
                         <h4 class="card-title fw-bold mb-3">{{ item.title }}</h4>
@@ -68,13 +87,13 @@ layout: default
 <!-- Activities Section -->
 <section id="activities" class="page-section py-5">
     <div class="container">
-        <h2 class="text-center mb-5 fw-bold" style="color: var(--color-primary);">
+        <h2 class="text-center mb-5 fw-bold"">
             Amazing Activities
         </h2>
         <div class="row g-4">
             {%- for item in page.activities -%}
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="background-color: var(--color-card); border: none;">
+                <div class="card h-100 shadow-sm activity-card" style="border: none;">
                     <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">{{ item.title }}</h5>
@@ -89,9 +108,9 @@ layout: default
 {%- endif -%}
 {%- if page.groups -%}
 <!-- Scout Groups Section -->
-<section id="groups" class="page-section py-5" style="background-color: var(--color-muted);">
+<section id="groups" class="page-section py-5"">
     <div class="container">
-        <h2 class="text-center mb-5 fw-bold" style="color: var(--color-primary);">
+        <h2 class="text-center mb-5 fw-bold"">
             Scout Groups Joining Us
         </h2>
         <div class="row text-center">
@@ -119,22 +138,22 @@ layout: default
 <!-- Safety & Trust Section -->
 <section class="page-section py-5">
     <div class="container">
-        <h2 class="text-center mb-5 fw-bold" style="color: var(--color-primary);">
+        <h2 class="text-center mb-5 fw-bold"">
             Safety & Experience You Can Trust
         </h2>
         <div class="row">
             <div class="col-lg-4 text-center mb-4">
-                <i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--color-accent);"></i>
+                <i class="fas fa-shield-alt fa-3x mb-3"></i>
                 <h4 class="fw-bold">Qualified Leaders</h4>
                 <p>All our leaders are fully trained and certified in first aid and outdoor activities.</p>
             </div>
             <div class="col-lg-4 text-center mb-4">
-                <i class="fas fa-users fa-3x mb-3" style="color: var(--color-accent);"></i>
+                <i class="fas fa-users fa-3x mb-3"></i>
                 <h4 class="fw-bold">Small Groups</h4>
                 <p>We maintain small group sizes to ensure personal attention and safety for every scout.</p>
             </div>
             <div class="col-lg-4 text-center mb-4">
-                <i class="fas fa-phone-alt fa-3x mb-3" style="color: var(--color-accent);"></i>
+                <i class="fas fa-phone-alt fa-3x mb-3"></i>
                 <h4 class="fw-bold">Communication</h4>
                 <p>Parents receive regular updates and can contact us anytime during the trip.</p>
             </div>
