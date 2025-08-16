@@ -77,10 +77,10 @@ layout: default
         <h2 class="text-center mb-5 fw-bold">
             Our Epic Journey
         </h2>
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
             {%- for item in page.itinerary -%}
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="border: none;">
+                <div class="card h-100 shadow-sm activity-card">
                     <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
                     <div class="card-body">
                         <h4 class="card-title fw-bold mb-3">{{ item.title }}</h4>
@@ -97,13 +97,13 @@ layout: default
 <!-- Activities Section -->
 <section id="activities" class="page-section py-5">
     <div class="container">
-        <h2 class="text-center mb-5 fw-bold"">
+        <h2 class="text-center mb-5 fw-bold">
             Amazing Activities
         </h2>
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
             {%- for item in page.activities -%}
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm activity-card" style="border: none;">
+                <div class="card h-100 shadow-sm activity-card">
                     <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">{{ item.title }}</h5>
