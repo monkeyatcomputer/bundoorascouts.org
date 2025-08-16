@@ -106,6 +106,33 @@ layout: default
     </div>
 </section>
 {%- endif -%}
+{%- if page.groups -%}
+<!-- Scout Groups Section -->
+<section id="groups" class="page-section py-5"">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold"">
+            Scout Groups Joining Us
+        </h2>
+        <div class="row text-center">
+            {%- for group in page.groups -%}
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="scout-badge mx-auto">
+                    {%- if group.image -%}
+                    <img src="{{ group.image }}" width="100" height="100" alt="{{ group.name }}">
+                    {%- else -%}
+                    {{ group.initials }}
+                    {%- endif -%}
+                </div>
+                <h5 class="fw-bold">{{ group.name }}</h5>
+                {%- if group.description -%}
+                <p class="text-muted">{{ group.description }}</p>
+                {%- endif -%}
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
+{%- endif -%}
 {%- if page.safety -%}
 <section class="page-section py-5">
     <div class="container">
@@ -208,5 +235,4 @@ document.querySelectorAll("img").forEach((img) => {
   img.style.transform = "scale(0.9)"
   img.style.transition = "opacity 0.3s ease, transform 0.3s ease"
 })
-console.log("Uluru Adventure 2026 - Landing page loaded successfully! 🏕️")
 </script>
