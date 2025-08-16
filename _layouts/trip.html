@@ -31,6 +31,16 @@ layout: default
     </div>
 </header>
 
+{%- if page.trip_full_banner -%}
+<!-- Trip Full Banner -->
+<section class="bg-warning text-dark">
+    <div class="container text-center py-4">
+        <h4 class="fw-bold">All Seats Taken!</h4>
+        <p class="lead mb-0">All seats for this trip have now been filled. If you would like to be notified of any cancellations, please get in touch using the contact form at the bottom of this page.</p>
+    </div>
+</section>
+{%- endif -%}
+
 <!-- Content Section -->
  <section class="content-section" id="page">
     <div class="container">
@@ -164,10 +174,15 @@ layout: default
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <p>For more information about our trip, simply fill in your details below and we will get in touch soon.</p>
-
+{%- if page.contactform -%}
+                {%- if page.trip_full_banner -%}
+                <p>To be added to the cancellation list for this trip, simply fill in your details below and we will get in touch if a spot becomes available.</p>
 {% include contact.html email=site.email section="Other" %}
-
+                {%- else -%}
+                <p>For more information about our trip, simply fill in your details below and we will get in touch soon.</p>
+{% include contact.html email=site.email section="Other" %}
+                {%- endif -%}
+{%- endif -%}
                 <hr>
 
                 <div class="clearfix">
