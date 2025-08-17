@@ -32,7 +32,7 @@ testimonials:
 - TOC
 {:toc}
 
-<img class="float-right" src="/assets/images/logo-joey-scouts-full.png" />
+<img class="float-md-right mx-auto d-block" src="/assets/images/logo-joey-scouts-full.png" />
 
 Joey Scouts is the youngest section of the Scouting movement. For Joey Scouts, life is an exciting adventure. They explore the wider world, stimulate their imagination and develop skills in team work.
 

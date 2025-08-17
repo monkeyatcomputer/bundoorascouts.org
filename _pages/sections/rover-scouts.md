@@ -33,7 +33,7 @@ testimonials:
 - TOC
 {:toc}
 
-<div class="float-right"><img src="/assets/images/logo-handfield-rovers.png" /><br/>
+<div class="float-md-right mx-auto d-block"><img src="/assets/images/logo-handfield-rovers.png" /><br/>
 <img src="/assets/images/logo-rover-scouts-full.png" /></div>
 
 **Bundoora Scout Group is pleased to announce the Handfield Rover Unit will be hosted at the Bundoora Scout Hall Rover Den!**

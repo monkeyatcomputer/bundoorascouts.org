@@ -32,7 +32,7 @@ testimonials:
 - TOC
 {:toc}
 
-<img class="float-right" src="/assets/images/logo-scouts-full.png" />
+<img class="float-md-right mx-auto d-block" src="/assets/images/logo-scouts-full.png" />
 
 "Action Plus" is the best way to describe the life of a Scout. Scouts have the opportunity to experience numerous adventures. Many discover they have a special interest in one or more of the extensive range of activities and interests available in Scouting. They are able to follow these through with the help of the Scout Leaders and fellow Patrol Members. Scouting is a constant round of adventure, abseiling, flying, hiking, camping, canoeing and fishing. Importantly, with the help and support of professionally trained Scout Leaders, Scouts not only face the action, but they learn to do it safely.
 

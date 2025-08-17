@@ -32,7 +32,7 @@ testimonials:
 - TOC
 {:toc}
 
-<img class="float-right" src="/assets/images/logo-cub-scouts-full.png" />
+<img class="float-md-right mx-auto d-block" src="/assets/images/logo-cub-scouts-full.png" />
 
 Positive Development! The Cub Scout program is specifically designed to meet the developmental needs of 8 to 10 year old children. It provides opportunities for young people to develop and grow as individuals and as members of a team. Cub Scout activities are planned to cover a broad range of interests and topics to trigger their imagination and curiosity.
 
