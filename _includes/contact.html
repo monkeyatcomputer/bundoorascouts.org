@@ -71,9 +71,11 @@
                 <textarea class="form-control" id="comments" name="message" placeholder="Comments" data-validation-required-message="Any additional comments?"></textarea>
                 <p class="help-block text-danger"></p>
             </div>
+            {%- if jekyll.environment != "development" -%}
             <div class="form-group">
                 <div class="g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}" data-callback="onSubmit" data-action="submit"></div>
             </div>
+            {%- endif -%}
             <div id="success"></div>
             <input type="hidden" name="_subject" value="New contact from bundoorascouts.org website" />
             <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>

@@ -6,21 +6,33 @@ description: "Information for members in our Venturer Scouts section"
 image: /assets/images/hero-venturer-scouts.jpg
 custom_js:
     - "//www.google.com/recaptcha/api.js"
+
+# Page-specific data
+callout:
+  title: "Venturer Scouts (Ages 15-17)"
+  content: "**Meeting Time:** Wednesday 7:00pm to 9:00pm during school term."
+
+activity_cards:
+  - title: "Adventurous Activities"
+    text: "Exploring a cave, Learning to fly, Rock climbing, Abseiling, Prusiking."
+  - title: "Leadership Development"
+    text: "Develop leadership and management skills, Prepare for your career."
+  - title: "Personal Growth"
+    text: "Editing your own film, Discussing issues like marriage and drugs, Making a sculpture."
+  - title: "Community Involvement"
+    text: "Gain your First Aid Certificate, Plant a Rainforest."
+
+testimonial:
+  quote: "I've learned so much and made friends for life. Venturers is the best!"
+  source: "A Venturer Scout"
 ---
 
-## Venturer Scouts
-{:.no_toc}
-
-### Teenagers Aged 15-17 Years
-{:.no_toc}
-
-#### Meeting Time: Wednesday 7:00pm to 9:00pm during school term
-{:.no_toc}
+{% include components/callout.html title=page.callout.title content=page.callout.content %}
 
 - TOC
 {:toc}
 
-<img class="float-right" src="/assets/images/logo-venturer-scouts.png" />
+<img class="float-right" src="/assets/images/logo-venturer-scouts.png" alt="Venturer Scouts section logo" />
 
 Life as a Venturer Scout: Venturer Scouts never turn down a challenge, in fact, they make their own! Scaling a 30m rock-face or abseiling into caves may frighten most people but Venturer Scouts face the challenge head on and then go white water kayaking!
 
@@ -30,15 +42,17 @@ Venturer Scouts Meetings: Venturer Scout Units meet on a regular basis and Ventu
 
 Socialising is a must and strong bonds are formed through teamwork and a common desire to ensure that everyone becomes the best person they can be. If you’re a Venturer Scout your only limits are the ones that you set for yourself.
 
- * Adventurous Activities
-  Exploring a cave, Learning to fly, Rock climbing, Abseiling, Prusiking.
- * Leadership Development
-  Develop leadership and management skills, Prepare for your career.
- * Personal Growth
-  Editing your own film, Discussing issues like marriage and drugs, Making a sculpture.
- * Community Involvement
-  Gain your First Aid Certificate, Plant a Rainforest.
+### What Do Venturers Do
 
+{% include components/activity_cards.html cards=page.activity_cards %}
+
+### What Our Venturers Say
+
+{% include components/testimonial.html quote=page.testimonial.quote source=page.testimonial.source %}
+
+### Our Promise and Law
+
+{% capture left_col %}
 #### Venturer Scout Motto
 
 Be Prepared
@@ -75,9 +89,11 @@ Use resources wisely
 
 **Believe in Myself**  
 Learn from my experiences  
-Face challenges with courage  
+Face challenges with courage
+{% endcapture %}
 
-### Award Scheme
+{% capture right_col %}
+#### Award Scheme
 
 The Venturer Scout Award Scheme is designed to widen Venturers’ interests and knowledge, while challenging them at the same time. It assists in planning a balanced program based on the Aims and Methods of Scouting. The Award Scheme is not compulsory for Venturer Scouts, but those who do attempt it find they have a lot of fun while discovering new things.
 
@@ -86,31 +102,40 @@ There are four main components to the Award Scheme. These consist of the Venturi
 Queen’s Scout Award: The Queen’s Scout Award is highly regarded in the community at large and the Royal Certificate is presented to the Venturer Scout by a representative of the Queen. The requirements are designed to be inspiring and challenging and to take you to a much higher and demanding level. In some States and Territories, your Queen’s Scout Award could be registered on your School Exit Certificate.
 
 To achieve this award you must be able to: Set a goal, Plan your progress towards that goal, Organise yourself and others, and Maintain the determination to complete the task while overcoming setbacks and difficulties.
+{% endcapture %}
 
-### Fees
+{% include layout/two-col.html left=left_col right=right_col %}
+
+### Other Information
+
+{% capture col1 %}
+#### Fees
 
 Detailed information regarding fees is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}).
+{% endcapture %}
 
-### Uniform
+{% capture col2 %}
+#### Uniform
 
 Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available at [Youth Badge Placement](https://scoutsvictoria.com.au/age-sections-adults/venturers/uniform-and-badge-placement/).
 
 Detailed information regarding uniform requirements is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}#what-is-the-uniform).
 
 *All Members should dress appropriately for the type of activity in which they are participating.*
+{% endcapture %}
 
-### Link Badge
+{% capture col3 %}
+#### Link Badge
 
 **The commencement for advancement in Sections may vary up to 6 months.**
 
 Venturer Scouts may commence the transition (Link Badge) to Rovers at 17.5 years, and have progressed by their 18th birthday. Extensions beyond age range may be granted in accordance with The Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
+{% endcapture %}
+
+{% include layout/three-col.html col1=col1 col2=col2 col3=col3 %}
 
 ### Section Leaders
 
 {% include people.html section='venturer-scouts' %}
 
-### Join the Adventure!
-
-To join the Bundoora Scout Group's Venturer Troop, simply fill in your details below and our Group Leader will get in touch soon.
-
-{% include contact.html email=site.email section='Venturers' %}
+{% include components/join_cta.html %}
