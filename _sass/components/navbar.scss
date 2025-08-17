@@ -9,6 +9,18 @@
     color: white;
     border: 0;
     background-color: $primary;
+    .navbar-brand {
+      font-size: 1.75em;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      img {
+        max-height: 100px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+    }
     @include heading-font;
   }
   .navbar-brand {
@@ -37,6 +49,14 @@
       }
     }
   }
+  &.navbar-shrink {
+    .navbar-brand {
+      img {
+        max-height: 60px;
+      }
+    }
+
+  }
 }
 @media(min-width:992px) {
   #mainNav {
@@ -52,6 +72,12 @@
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
+      img {
+        max-height: 100px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
     }
     .navbar-nav {
       .nav-item {
@@ -68,6 +94,9 @@
         font-size: 1.25em;
         padding-top: 5px;
         padding-bottom: 5px;
+        img {
+          max-height: 60px;
+        }
       }
       
     }
