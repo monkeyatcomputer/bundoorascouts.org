@@ -33,7 +33,7 @@ testimonials:
 - TOC
 {:toc}
 
-<img class="float-right" src="/assets/images/logo-sv-full.png" alt="Scouts Victoria Logo" />
+<img class="float-right img-fluid" src="/assets/images/logo-sv-full.png" alt="Scouts Victoria Logo" />
 
 The personal satisfaction of helping young people to achieve their goals is immense, and your sense of personal achievement when you help them through a hurdle is nearly as strong as theirs!
 
