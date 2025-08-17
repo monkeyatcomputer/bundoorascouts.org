@@ -21,17 +21,12 @@ pagination:
         </a>
         <div class="post-card-body">
           <h2 class="post-title"><a href="{{ post.url | replace: '//', '/' }}">{{ post.title }}</a></h2>
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          <p class="post-excerpt">{{ post.content | markdownify | strip_html | truncatewords: 40 }}</p>
           <div class="post-card-footer text-muted">
             <small>
               {% if post.author %}
                 {% for author in post.author %}
-                  {% assign person = site.people | where: 'title', author | first %}
-                  {% if person %}
-                    <a href="{{ person.url }}">{{ person.title }}</a> &middot;
-                  {% else %}
-                    {{ author }} &middot;
-                  {% endif %}
+                  {{ author }} &middot;
                 {% endfor %}
               {% endif %}
               {{ post.date | date: '%B %d, %Y' }} &middot; {% include read-time.html content=post.content %}
