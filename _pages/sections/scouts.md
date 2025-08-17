@@ -23,8 +23,8 @@ activity_cards:
     text: "Gain your First Aid Certificate, plant a Rainforest."
 
 testimonials:
-  - quote: "I've learned so much and made friends for life. Scouts is the best!"
-    source: "A Scout"
+  - quote: "Scouts is the best part of my week — we get to try new things, go on adventures, and make heaps of friends. Every camp feels like a new story waiting to happen!"
+    source: "A Scout, Bundoora Scout Group"
 ---
 
 {% include callout.html title=page.callout.title content=page.callout.content %}

@@ -23,8 +23,8 @@ activity_cards:
     text: "Gain your First Aid Certificate, Plant a Rainforest."
 
 testimonials:
-  - quote: "I've learned so much and made friends for life. Venturers is the best!"
-    source: "A Venturer Scout"
+  - quote: "Venturers is where things get real. We plan our own adventures, push our limits, and learn stuff that actually matters — all while having a laugh with mates who’ve got your back."
+    source: "A Venturer Scout, Bundoora Scout Group"
 ---
 
 {% include callout.html title=page.callout.title content=page.callout.content %}
