@@ -120,10 +120,12 @@ layout: default
 			{% for post in sorted_posts limit: 4 %}
 			<div class="col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
 				<a class="post-card" href="{{ post.url | relative_url }}" title="{{ post.title }}">
-					{%- if post.image -%}
+					{%- if jekyll.environment == "development" -%}
+					<img class="post-card-img-top" src="/assets/images/logo-xl.png" alt="Post image for {{ post.title }}" width="400" height="180">
+					{%- elsif post.image -%}
 					<img class="post-card-img-top" src="//images.weserv.nl/?url={{ site.url | append: site.baseurl | append: post.image }}&w=400&h=180&fit=cover&output=jpg&q=85" alt="Post image for {{ post.title }}">
 					{%- else -%}
-					<img class="post-card-img-top" src="//images.weserv.nl/?url={{ site.url | append: site.baseurl }}/assets/images/logo-scouts.png&w=400&h=180&fit=contain&pad=20&output=jpg&q=85&bg=ffffff" alt="Bundoora Scouts">
+					<img class="post-card-img-top" src="//images.weserv.nl/?url={{ site.url | append: site.baseurl }}/assets/images/logo-xl.png&w=400&h=180&fit=contain&pad=20&output=jpg&q=85&bg=ffffff" alt="Bundoora Scouts">
 					{%- endif -%}
 					<div class="post-card-body">
 						<h4 class="post-title">{{ post.title }}</h4>
