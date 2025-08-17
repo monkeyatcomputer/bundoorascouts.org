@@ -10,9 +10,7 @@ categories:
     - Scouts
     - Venturer Scouts
 tags:
-    - uluru
-    - trip
-    - camp
+    - Camp
 trip_details:
   dates: "28th June &mdash; 11th July 2026"
   cost: "$1900 per scout"
