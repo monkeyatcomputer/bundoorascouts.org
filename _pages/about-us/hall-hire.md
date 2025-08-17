@@ -34,6 +34,10 @@ A different agreement is used for longer term hire and the proposed hirer is req
 *   **Seated:** 100 people
 *   **Standing:** 200 people
 
+### Availability
+
+**Hall hire is only available when the venue is not in use by the Bundoora Scout Group, Handfield Rover Unit, and Greensborough Girl Guides.** Availability typically includes weekends, weekdays during standard business hours, and extended periods during school holidays.
+
 ### Conditions of Hire
 
 Hire of our hall is subject to the following conditions:
@@ -42,7 +46,6 @@ Hire of our hall is subject to the following conditions:
 *   Parties for other older children/teenage birthdays will only be an "Approved Use" if the young person is a current member of Scouts Victoria and the function is open to a broad range of youth and adults, and has adult supervision.
 *   Hire for commercial and retail entities are also **not permitted**.
 *   The use does not impact on Scouting and is not contrary to Scout policy or any conditions contained in the relevant Council Lease under which Bundoora Scout Group occupies the land.
-*   **Hall hire is only available when the venue is not in use by Scouts or Girl Guides.** Availability typically includes weekends, weekdays during standard business hours, and extended periods during school holidays.
 
 ### Gallery
 
