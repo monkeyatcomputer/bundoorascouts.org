@@ -24,7 +24,7 @@ activity_cards:
 
 testimonials:
   - quote: "I've learned so much and made friends for life. Venturers is the best!"
-  - source: "A Venturer Scout"
+    source: "A Venturer Scout"
 ---
 
 {% include callout.html title=page.callout.title content=page.callout.content %}

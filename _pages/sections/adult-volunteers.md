@@ -22,10 +22,10 @@ roles:
     text: "A way for supporters of the Group to stay connected and provide help in a more casual way."
 
 testimonials:
-  - quote: "A truly welcoming and friendly Scout group. Always feel welcome when I walk through the doors."
-    source: "Wayne Green"
-  - quote: "A great place for your child to have fun and adventures. My child is thriving at Bundoora scouts and learning life skills. I highly recommend scouts."
-    source: "Lyall Haynes"
+  - quote: "It is always good to see kids learning new skills."
+    source: "Peter"
+  - quote: "An excellent scout group, with Joey, cub, and scout sections."
+    source: "Hamish"
 ---
 
 {% include callout.html title=page.callout.title content=page.callout.content %}
