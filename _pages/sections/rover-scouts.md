@@ -7,22 +7,34 @@ image: /assets/images/hero-rover-scouts.jpg
 custom_js:
     - "//www.google.com/recaptcha/api.js"
 email: 'handfieldrc@gmail.com'
+
+# Page-specific data
+callout:
+  title: "Rovers (Ages 18-25)"
+  content: "**Meeting Time:** Thursday 7:30pm to 10:00pm."
+
+activity_cards:
+  - title: "Motorsports"
+    text: "Get down and dirty with the rest of Victoria’s Rovers for motorsports at Mudbash."
+  - title: "Social Events"
+    text: "Costumed chaos reigns at MARB, the annual Rover Ball, and the annual Surfmoot camp at Anglesea."
+  - title: "Outdoor Adventures"
+    text: "The Armstrong 500 hiking competition, and our very own Rover Bogong Ski Chalet near Falls Creek."
+  - title: "National Events"
+    text: "Converge with Rovers from all over Australia for a ten-day activity extravaganza at the tri-annual National Moot."
+
+testimonials:
+  - quote: "Rovers is a great way to meet new people and have amazing experiences."
+    source: "A Rover"
 ---
 
-## Rover Scouts
-{:.no_toc}
-
-### Adults Aged 18-25 Years
-{:.no_toc}
-
-#### Meeting times: Thursday 7:30pm to 10:00pm
-{:.no_toc}
+{% include callout.html title=page.callout.title content=page.callout.content %}
 
 - TOC
 {:toc}
 
 <div class="float-right"><img src="/assets/images/logo-handfield-rovers.png" /><br/>
-<img src="/assets/images/logo-rover-scouts.png" /></div>
+<img src="/assets/images/logo-rover-scouts-full.png" /></div>
 
 **Bundoora Scout Group is pleased to announce the Handfield Rover Unit will be hosted at the Bundoora Scout Hall Rover Den!**
 
@@ -44,8 +56,21 @@ Handfield Rover Unit welcomes all young adults from 18 to 25 years. You don’t 
 
 All adult members of Scouting need a Working with Children Check, but this is a small price to pay for the rewards of leadership, personal development, and the opportunity to bring a positive change to the people around you.
 
-The Scouting movement is all about producing leaders, and here’s where Handfield Rover Unit shines. As part of the Scouting Achievement Pathway, and in line with our motto 'Service', you’ll be able to help lead activities with younger sections and other Scout Groups, contributing to the youth in the community and giving back to where we came from. 
+The Scouting movement is all about producing leaders, and here’s where Handfield Rover Unit shines. As part of the Scouting Achievement Pathway, and in line with our motto 'Service', you’ll be able to help lead activities with younger sections and other Scout Groups, contributing to the youth in the community and giving back to where we came from.
 
+<div class="clearfix"></div>
+
+### What Do Rovers Do?
+
+{% include activity_cards.html cards=page.activity_cards %}
+
+### What Our Rovers Say
+
+{% include testimonial.html testimonials=page.testimonials %}
+
+### Our Promise and Law
+
+{% capture left_col %}
 #### Rover Scout Motto
 
 Service
@@ -72,28 +97,61 @@ And to live by the Rover Scout Law.
 
 #### Rover Scout Law
 
-**Be Respectful**  
+**Be Respectful**
 Be friendly and considerate
 Care for others and the environment
 
-**Do What is Right**  
+**Do What is Right**
 Be trustworthy, honest and fair
 Use resources wisely
 
-**Believe in Myself**  
+**Believe in Myself**
 Learn from my experiences
 Face challenges with courage
+{% endcapture %}
 
-### Get updated
+{% capture right_col %}
+#### Award Scheme
+
+There are three award levels that a Rover can achieve, the St George Award, the Baden-Powell Scout Award, and the World Scout Award.
+
+**The St George Award** is the highest award available to Youth Members in Australia, and is recognised worldwide.
+
+**The Baden-Powell Scout Award** is the highest award available to members of the Rover Section, and is recognised worldwide.
+
+**The World Scout Award** is a global award that recognises a Rover's contribution to their community.
+{% endcapture %}
+
+{% include two-col.html left=left_col right=right_col %}
+
+### Other Information
+
+{% capture col1 %}
+#### Fees
+
+Detailed information regarding fees is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}).
+{% endcapture %}
+
+{% capture col2 %}
+#### Uniform
+
+Youth members, young adults and Leaders are required to attend in full uniform, which includes section specific shirt, belt, scarf, woggle and enclosed shoes (unless otherwise advised for individual meetings). Uniform requirements are available at [Youth Badge Placement](https://scoutsvictoria.com.au/age-sections-adults/rovers/uniform-and-badge-placement/).
+
+Detailed information regarding uniform requirements is provided on the [Parent and Caregiver Information Page]({{ site.baseurl }}{% link _pages/about-scouting/parent-caregiver-information.md %}#what-is-the-uniform).
+
+*All Members should dress appropriately for the type of activity in which they are participating.*
+{% endcapture %}
+
+{% capture col3 %}
+#### Get updated
 
 [Handfield Rover Unit on Facebook](https://www.facebook.com/HSMRU23)
+{% endcapture %}
+
+{% include three-col.html col1=col1 col2=col2 col3=col3 %}
 
 ### Section Leaders
 
 {% include people.html section='rover-scouts' %}
 
-### Join the Adventure!
-
-Are you interested in joining Handfield Rover Unit or have any questions? Simply fill out your details below and Drew, our Unit Leader, will get in touch soon.
-
-{% include contact.html email=site.email section='Rovers' %}
+{% include join_cta.html section='Rover Scouts' %}

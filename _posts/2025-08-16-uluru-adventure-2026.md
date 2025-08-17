@@ -84,6 +84,8 @@ groups:
 safety: true
 contactform: true
 trip_full_banner: true
+custom_js:
+    - "//www.google.com/recaptcha/api.js"
 ---
 
 Get ready for an expedition to the spiritual heart of Australia! Bundoora Scouts is planning a major trip to Uluru and the surrounding Central Australian landscape in 2026. This is a fantastic opportunity for our Scouts and Venturer Scouts to experience the rich culture and breathtaking scenery of the Australian Outback.

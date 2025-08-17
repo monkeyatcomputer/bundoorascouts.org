@@ -22,17 +22,17 @@ activity_cards:
   - title: "Community Involvement"
     text: "Gain your First Aid Certificate, Plant a Rainforest."
 
-testimonial:
-  quote: "I've learned so much and made friends for life. Venturers is the best!"
-  source: "A Venturer Scout"
+testimonials:
+  - quote: "I've learned so much and made friends for life. Venturers is the best!"
+  - source: "A Venturer Scout"
 ---
 
-{% include components/callout.html title=page.callout.title content=page.callout.content %}
+{% include callout.html title=page.callout.title content=page.callout.content %}
 
 - TOC
 {:toc}
 
-<img class="float-right" src="/assets/images/logo-venturer-scouts.png" alt="Venturer Scouts section logo" />
+<img class="float-right" src="/assets/images/logo-venturer-scouts-full.png" alt="Venturer Scouts section logo" />
 
 Life as a Venturer Scout: Venturer Scouts never turn down a challenge, in fact, they make their own! Scaling a 30m rock-face or abseiling into caves may frighten most people but Venturer Scouts face the challenge head on and then go white water kayaking!
 
@@ -42,13 +42,15 @@ Venturer Scouts Meetings: Venturer Scout Units meet on a regular basis and Ventu
 
 Socialising is a must and strong bonds are formed through teamwork and a common desire to ensure that everyone becomes the best person they can be. If you’re a Venturer Scout your only limits are the ones that you set for yourself.
 
+<div class="clearfix"></div>
+
 ### What Do Venturers Do
 
-{% include components/activity_cards.html cards=page.activity_cards %}
+{% include activity_cards.html cards=page.activity_cards %}
 
 ### What Our Venturers Say
 
-{% include components/testimonial.html quote=page.testimonial.quote source=page.testimonial.source %}
+{% include testimonial.html testimonials=page.testimonials %}
 
 ### Our Promise and Law
 
@@ -104,7 +106,7 @@ Queen’s Scout Award: The Queen’s Scout Award is highly regarded in the commu
 To achieve this award you must be able to: Set a goal, Plan your progress towards that goal, Organise yourself and others, and Maintain the determination to complete the task while overcoming setbacks and difficulties.
 {% endcapture %}
 
-{% include layout/two-col.html left=left_col right=right_col %}
+{% include two-col.html left=left_col right=right_col %}
 
 ### Other Information
 
@@ -132,10 +134,10 @@ Detailed information regarding uniform requirements is provided on the [Parent a
 Venturer Scouts may commence the transition (Link Badge) to Rovers at 17.5 years, and have progressed by their 18th birthday. Extensions beyond age range may be granted in accordance with The Victorian Branch Scouting Instructions (VBSI) Section 2.1.12. Further information is available from our Group Leader.
 {% endcapture %}
 
-{% include layout/three-col.html col1=col1 col2=col2 col3=col3 %}
+{% include three-col.html col1=col1 col2=col2 col3=col3 %}
 
 ### Section Leaders
 
 {% include people.html section='venturer-scouts' %}
 
-{% include components/join_cta.html %}
+{% include join_cta.html section='Venturer Scouts' %}
