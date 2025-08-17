@@ -8,9 +8,6 @@ custom_js:
     - "//www.google.com/recaptcha/api.js"
 
 # Page-specific data
-callout:
-  title: "Joey Scouts (Ages 5-7)"
-  content: "**Meeting Time:** Thursday 6:00pm to 7:00pm during school term."
 
 activity_cards:
   - title: "Games & Activities"
