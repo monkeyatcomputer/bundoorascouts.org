@@ -25,7 +25,7 @@
 {%- assign author = page.author | default: page.authors[0] | default: site.author -%}
 {%- assign author = site.data.authors[author] | default: author -%}
 
-{%- assign page_large_image = page.socialimage | default: page.heroimage -%}
+{%- assign page_large_image = page.socialimage | default: page.image -%}
 {%- unless page_large_image contains '://' -%}
   {%- assign page_large_image = page_large_image | absolute_url -%}
 {%- endunless -%}

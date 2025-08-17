@@ -1,7 +1,7 @@
 ---
 title: "Clean Up Australia Day"
 subtitle: "@ Gresswell Forest"
-heroimage: /uploads/hero/clean-up-australia.jpg
+image: /uploads/hero/clean-up-australia.jpg
 author:
     - Group
 categories:

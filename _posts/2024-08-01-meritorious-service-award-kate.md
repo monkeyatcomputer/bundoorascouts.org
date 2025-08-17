@@ -2,7 +2,7 @@
 title: "Meritorious Service Award for Kate"
 subtitle: "Congratulations!"
 description: "Congratulations to Kate on being honoured with the Scouts Australia Meritorious Service Award on World Scout Day"
-heroimage: /assets/images/hero-3.jpg
+image: /assets/images/hero-3.jpg
 author:
     - Group
 categories:

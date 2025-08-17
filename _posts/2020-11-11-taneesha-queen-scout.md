@@ -1,7 +1,7 @@
 ---
 title: "Taneesha's Queen's Scout"
 subtitle: "Congratulations!"
-heroimage: /assets/images/hero-venturer-scouts.jpg
+image: /assets/images/hero-venturer-scouts.jpg
 author:
     - Group
 categories:

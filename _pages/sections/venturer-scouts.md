@@ -3,7 +3,7 @@ title: Venturer Scouts
 subtitle: "Look Wide"
 permalink: /sections/venturer-scouts
 description: "Information for members in our Venturer Scouts section"
-heroimage: /assets/images/hero-venturer-scouts.jpg
+image: /assets/images/hero-venturer-scouts.jpg
 custom_js:
     - "//www.google.com/recaptcha/api.js"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Group Camp"
 subtitle: "December 2019"
-heroimage: /uploads/hero/medals.jpg
+image: /uploads/hero/medals.jpg
 author:
     - Group
 categories:

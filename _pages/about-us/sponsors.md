@@ -4,7 +4,7 @@ subtitle: "Support from our community"
 permalink: /about-us/sponsors
 layout: sponsors
 description: "Bundoora Scout Group sponsors"
-heroimage: /uploads/hero/we-like-you.jpg
+image: /uploads/hero/we-like-you.jpg
 ---
 Bundoora Scouts would like to extend their heartfelt gratitude to all of their sponsors for their unwavering support and generosity. Without the help of these kind-hearted individuals and organizations, our Scout group would not be able to provide the enriching and exciting experiences that our youth members have come to know and love.
 

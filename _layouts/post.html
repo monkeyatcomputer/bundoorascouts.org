@@ -3,8 +3,8 @@ layout: default
 ---
 
 {%- assign heroimage = '/assets/images/hero-3.jpg' -%}
-{%- if page.heroimage -%}
-    {% assign heroimage = page.heroimage %}
+{%- if page.image -%}
+    {% assign heroimage = page.image %}
 {%- endif -%}
 <!-- Intro Header -->
 <header class="intro-header" style="background-image: url('{{site.baseurl}}{{heroimage}}')">

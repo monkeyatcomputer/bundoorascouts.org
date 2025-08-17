@@ -1,7 +1,7 @@
 ---
 title: "Scout Hall Working Bee"
 subtitle: "October 2019"
-heroimage: /uploads/hero/spring-cleaning.jpg
+image: /uploads/hero/spring-cleaning.jpg
 author:
     - Group
 categories:

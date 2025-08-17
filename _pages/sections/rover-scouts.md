@@ -3,7 +3,7 @@ title: Handfield Rover Unit
 subtitle: "Beyond the Horizon"
 permalink: /sections/rover-scouts
 description: "Information for members in the Handfield Rover Unit"
-heroimage: /assets/images/hero-rover-scouts.jpg
+image: /assets/images/hero-rover-scouts.jpg
 custom_js:
     - "//www.google.com/recaptcha/api.js"
 email: 'handfieldrc@gmail.com'

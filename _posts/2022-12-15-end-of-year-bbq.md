@@ -1,7 +1,7 @@
 ---
 title: "End of Year Reflection"
 subtitle: "Bundoora Scouts 2022"
-heroimage: /uploads/hero/end-of-year-bbq-2022.jpg
+image: /uploads/hero/end-of-year-bbq-2022.jpg
 author:
     - Group
 categories:
