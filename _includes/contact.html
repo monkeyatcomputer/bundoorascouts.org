@@ -73,7 +73,7 @@
             </div>
             {%- if jekyll.environment != "development" -%}
             <div class="form-group">
-                <div class="g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}" data-callback="onSubmit" data-action="submit"></div>
+                <div class="g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}" data-callback="onSubmit" data-action="submit" data-size="compact"></div>
             </div>
             {%- endif -%}
             <div id="success"></div>
