@@ -1,3 +1,5 @@
 _site
 .sass_cache
 .jekyll-cache
+.vscode
+.cspell
