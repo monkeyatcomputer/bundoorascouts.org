@@ -8,9 +8,6 @@ custom_js:
     - "//www.google.com/recaptcha/api.js"
 
 # Page-specific data
-callout:
-  title: "Cub Scouts (Ages 8-10)"
-  content: "**Meeting Time:** Monday 7:00pm – 8:30pm during school term."
 
 activity_cards:
   - title: "Team Games"
@@ -27,7 +24,10 @@ testimonials:
     source: "A Cub Scout Parent"
 ---
 
-{% include callout.html title=page.callout.title content=page.callout.content %}
+{%- assign section = site.data.sections['cub-scouts'] -%}
+{%- assign ctitle = section.name | append: " (Ages " | append: section.age | append: ")" -%}
+{%- assign ccontent = "**Meeting Time:** " | append: section.time | append: " during school term." -%}
+{%- include callout.html title=ctitle content=ccontent -%}
 
 - TOC
 {:toc}

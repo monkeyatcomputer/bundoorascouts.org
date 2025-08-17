@@ -1,0 +1,30 @@
+joey-scouts:
+  name: "Joey Scouts"
+  shortname: "Joeys"
+  age: "5 to 7"
+  time: "Thursday – 6.00pm to 7.00pm"
+  active: true
+cub-scouts:
+  name: "Cub Scouts"
+  shortname: "Cubs"
+  age: "8 to 10"
+  time: "Monday – 7.00pm to 8.30pm"
+  active: true
+scouts:
+  name: "Scouts"
+  shortname: "Scouts"
+  age: "11 to 14"
+  time: "Wednesday – 7.00pm to 9.00pm"
+  active: true
+venturer-scouts:
+  name: "Venturer Scouts"
+  shortname: "Venturers"
+  age: "15 to 17"
+  time: "Wednesday – 7.00pm to 9.00pm"
+  active: true
+rover-scouts:
+  name: "Handfield Rover Unit"
+  shortname: "Handfield Rovers"
+  age: "18 to 25"
+  time: "Thursday – 7.30pm to 10.00pm"
+  active: true

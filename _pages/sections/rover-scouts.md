@@ -9,9 +9,6 @@ custom_js:
 email: 'handfieldrc@gmail.com'
 
 # Page-specific data
-callout:
-  title: "Rovers (Ages 18-25)"
-  content: "**Meeting Time:** Thursday 7:30pm to 10:00pm."
 
 activity_cards:
   - title: "Motorsports"
@@ -28,7 +25,10 @@ testimonials:
     source: "A Rover"
 ---
 
-{% include callout.html title=page.callout.title content=page.callout.content %}
+{%- assign section = site.data.sections['rover-scouts'] -%}
+{%- assign ctitle = section.name | append: " (Ages " | append: section.age | append: ")" -%}
+{%- assign ccontent = "**Meeting Time:** " | append: section.time | append: " during school term." -%}
+{%- include callout.html title=ctitle content=ccontent -%}
 
 - TOC
 {:toc}

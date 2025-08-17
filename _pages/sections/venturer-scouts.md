@@ -8,9 +8,6 @@ custom_js:
     - "//www.google.com/recaptcha/api.js"
 
 # Page-specific data
-callout:
-  title: "Venturer Scouts (Ages 15-17)"
-  content: "**Meeting Time:** Wednesday 7:00pm to 9:00pm during school term."
 
 activity_cards:
   - title: "Adventurous Activities"
@@ -27,7 +24,10 @@ testimonials:
     source: "A Venturer Scout, Bundoora Scout Group"
 ---
 
-{% include callout.html title=page.callout.title content=page.callout.content %}
+{%- assign section = site.data.sections['joey-scouts'] -%}
+{%- assign ctitle = section.name | append: " (Ages " | append: section.age | append: ")" -%}
+{%- assign ccontent = "**Meeting Time:** " | append: section.time | append: " during school term." -%}
+{%- include callout.html title=ctitle content=ccontent -%}
 
 - TOC
 {:toc}

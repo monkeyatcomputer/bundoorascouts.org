@@ -20,6 +20,10 @@
   }
 }
 
+.activity-card-wrapper {
+  margin-bottom: 1.5rem;
+}
+
 @media (max-width: 768px) {
   .activity-card:hover {
     transform: translateY(-5px);
