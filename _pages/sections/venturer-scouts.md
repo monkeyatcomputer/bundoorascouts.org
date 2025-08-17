@@ -24,7 +24,7 @@ testimonials:
     source: "A Venturer Scout, Bundoora Scout Group"
 ---
 
-{%- assign section = site.data.sections['joey-scouts'] -%}
+{%- assign section = site.data.sections['venturer-scouts'] -%}
 {%- assign ctitle = section.name | append: " (Ages " | append: section.age | append: ")" -%}
 {%- assign ccontent = "**Meeting Time:** " | append: section.time | append: " during school term." -%}
 {%- include callout.html title=ctitle content=ccontent -%}

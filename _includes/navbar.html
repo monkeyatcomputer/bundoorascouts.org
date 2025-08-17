@@ -20,11 +20,26 @@
                         href="#"
                         id="navbarNavDropdownSectionsLink">Sections</a>
                     <div class="dropdown-menu" aria-labelledby="navbarNavDropdownSectionsLink">
+                        {%- assign section = site.data.sections['joey-scouts'] -%}
+                        {%- if section.active -%}
                         <a class="dropdown-item" href="{% link _pages/sections/joey-scouts.md %}">Joey Scouts</a>
+                        {%- endif -%}
+                        {%- assign section = site.data.sections['cub-scouts'] -%}
+                        {%- if section.active -%}
                         <a class="dropdown-item" href="{% link _pages/sections/cub-scouts.md %}">Cub Scouts</a>
+                        {%- endif -%}
+                        {%- assign section = site.data.sections['scouts'] -%}
+                        {%- if section.active -%}
                         <a class="dropdown-item" href="{% link _pages/sections/scouts.md %}">Scouts</a>
+                        {%- endif -%}
+                        {%- assign section = site.data.sections['venturer-scouts'] -%}
+                        {%- if section.active -%}
                         <a class="dropdown-item" href="{% link _pages/sections/venturer-scouts.md %}">Venturer Scouts</a>
+                        {%- endif -%}
+                        {%- assign section = site.data.sections['rover-scouts'] -%}
+                        {%- if section.active -%}
                         <a class="dropdown-item" href="{% link _pages/sections/rover-scouts.md %}">Handfield Rover Unit</a>
+                        {%- endif -%}
                         <a class="dropdown-item" href="{% link _pages/sections/adult-volunteers.md %}">Adult Volunteers</a>
                     </div>
                 </li>
