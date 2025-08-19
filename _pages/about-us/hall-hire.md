@@ -36,7 +36,7 @@ A different agreement is used for longer term hire and the proposed hirer is req
 
 ### Availability
 
-**Hall hire is only available when the venue is not in use by the Bundoora Scout Group, Handfield Rover Unit, and Greensborough Girl Guides.** Availability typically includes weekends, weekdays during standard business hours, and extended periods during school holidays.
+**Hall hire is only available when the venue is not in use by the Bundoora Scout Group, Handfield Rover Unit, and long term hall hires.** Availability typically includes weekends, weekdays during standard business hours, and extended periods during school holidays.
 
 ### Conditions of Hire
 
