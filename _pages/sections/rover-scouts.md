@@ -145,7 +145,7 @@ Detailed information regarding uniform requirements is provided on the [Parent a
 {% capture col3 %}
 #### Get updated
 
-[Handfield Rover Unit on Facebook](https://www.facebook.com/HSMRU23)
+[Handfield Rover Unit on Facebook](https://www.facebook.com/Handfieldroverunit)
 {% endcapture %}
 
 {% include three-col.html col1=col1 col2=col2 col3=col3 %}
