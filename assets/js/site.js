@@ -53,4 +53,11 @@
   }
   // Enable map zooming with mouse scroll when the user clicks the map
   $('.map').on('click', onMapClickHandler);
+
+  // Add some interactive hover effects to the scout badges
+  $(".scout-badge").hover(function(){
+    $(this).css({"transform": "scale(1.05) rotate(10deg)"});
+    }, function(){
+    $(this).css({"transform": "scale(1) rotate(0deg)"});
+  });
 })(jQuery); // End of use strict
