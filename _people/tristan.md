@@ -1,8 +1,8 @@
 ---
 title: Tristan
-role: Adult Helper
+role: Adult Supporter
 alias: Bear / Baloo
-section: adult-helpers
+section: adult-volunteer
 ---
 
 Started Scouting when?

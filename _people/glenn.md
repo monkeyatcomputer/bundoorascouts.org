@@ -1,8 +1,8 @@
 ---
 title: Glenn
-role: Adult Helper
+role: Adult Supporter
 alias:
-section: adult-helpers
+section: adult-volunteer
 ---
 
 Started Scouting when?
