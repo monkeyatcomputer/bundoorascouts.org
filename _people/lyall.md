@@ -1,8 +1,8 @@
 ---
-title: Lisa
-role: Assistant Cub Scout Leader
+title: Lyall
+role: Assistant Joey Scout Leader
 alias: 
-section: cub-scouts
+section: joey-scouts
 ---
 
 Started Scouting when?
