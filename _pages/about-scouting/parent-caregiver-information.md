@@ -94,17 +94,13 @@ Scouts Australia is currently transitioning toward a new program, One Program fo
 
 ## What is the uniform?
 
-The basic uniform is the shirt and scarf (which is usually held together by a woggle, often a piece of leather). The shirt is available from [The Scout Shop](http://scoutshop.com.au/) for AU$36.95 (incl-GST) for Joeys to AU$51.95 (incl-GST) for Rovers. The scarf is usually supplied by Bundoora Scout Group. (Every Scout Group is proud of its own colours.)
-
-Check with your Leader if you also need to order a woggle AU$3.95 (incl-GST) and belt AU$14.95 (incl-GST).
+The basic uniform is the shirt and scarf (which is usually held together by a woggle, often a piece of leather). The shirt is available from [The Scout Shop](http://scoutshop.com.au/) and the scarf is supplied by Bundoora Scout Group (Every Scout Group is proud of its own colours).
 
 **All prices are subject to change.**
 
 ## What is the cost?
 
 Every Scout Group charges an annual (or term-by-term) fee which covers the annual fee payable to Scouts Victoria, and a Group fee to cover costs such as rates, power, equipment, insurance, Leader training, and more. This varies from Group to Group depending on local factors such as how much fundraising the Group does, other financial pressures (eg hall maintenance).
-
-Annual fees for Bundoora Scout Group is approximately AU$450 (inc-GST).
 
 There is also the cost of activities such as camps. These are kept as low as possible because we usually use our own campsites and Leaders are unpaid volunteers. Major events held every few years (like Cuboree and Jamboree) cost more because of the scale of the program and entertainment, but most Groups work together to lower the individual cost, through fundraising. Financial issues should not be a barrier to any child being a Scout.  If you have any concerns, please speak with your Group Leader to discuss payment options.
 
