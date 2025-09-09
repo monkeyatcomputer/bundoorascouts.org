@@ -32,7 +32,7 @@ layout: default
 {%- assign mod = sectionnum | modulo: 2 -%}
 {%- assign people = site.people | where: 'section', 'group' -%}
 {%- if people.size > 0 -%}
-<section class="{%- if mod == 0 -%}bg-light{%- endif -%} page-section" id="people">
+<section class="{% if mod == 0 %}bg-light {% endif %}page-section" id="people">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -53,7 +53,7 @@ layout: default
 {%- assign people = site.people | where: 'section', 'joey-scouts' -%}
 {%- if people.size > 0 -%}
 <!-- Joey Scouts Grid -->
-<section class="{%- if mod == 0 -%}bg-light{%- endif -%} page-section" id="people">
+<section class="{% if mod == 0 %}bg-light {% endif %}page-section" id="people">
 	<div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -73,7 +73,7 @@ layout: default
 {%- assign people = site.people | where: 'section', 'cub-scouts' -%}
 {%- if people.size > 0 -%}
 <!-- Cub Scouts Grid -->
-<section class="{%- if mod == 0 -%}bg-light{%- endif -%} page-section" id="people">
+<section class="{% if mod == 0 %}bg-light {% endif %}page-section" id="people">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -93,7 +93,7 @@ layout: default
 {%- assign people = site.people | where: 'section', 'scouts' -%}
 {%- if people.size > 0 -%}
 <!-- Scouts Grid -->
-<section class="{%- if mod == 0 -%}bg-light{%- endif -%} page-section" id="people">
+<section class="{% if mod == 0 %}bg-light {% endif %}page-section" id="people">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -113,7 +113,7 @@ layout: default
 {%- assign people = site.people | where: 'section', 'venturer-scouts' -%}
 {%- if people.size > 0 -%}
 <!-- Venturers Grid -->
-<section class="{%- if mod == 0 -%}bg-light{%- endif -%} page-section" id="people">
+<section class="{% if mod == 0 %}bg-light {% endif %}page-section" id="people">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -133,7 +133,7 @@ layout: default
 {%- assign people = site.people | where: 'section', 'rover-scouts' -%}
 {%- if people.size > 0 -%}
 <!-- Rover Scouts Grid -->
-<section class="{%- if mod == 0 -%}bg-light{%- endif -%} page-section" id="people">
+<section class="{% if mod == 0 %}bg-light {% endif %}page-section" id="people">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -153,7 +153,7 @@ layout: default
 {%- assign people = site.people | where: 'section', 'adult-volunteer' -%}
 {%- if people.size > 0 -%}
 <!-- Adult Volunteers Grid -->
-<section class="{%- if mod == 0 -%}bg-light{%- endif -%} page-section" id="people">
+<section class="{% if mod == 0 %}bg-light {% endif %}page-section" id="people">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
