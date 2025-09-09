@@ -1,7 +1,7 @@
 <div class="card bg-primary my-5 py-4 text-center">
   <div class="card-body">
     <h3 class="text-white m-0">Join the Adventure!</h3>
-    <p class="text-white">To join the Bundoora Scout Group's {{ include.section }}, simply fill in your details below and our Group Leader will get in touch soon.</p>
-    {% include contact.html email=site.email section=include.section %}
+    <p class="text-white">Ready to join the Bundoora Scout Group's {{ include.section | default: '' }}? Register for a trial or join today!</p>
+    <a href="https://extranet.scoutsvictoria.com.au/scoutonline/public/onboarding_registration/trial-registration?sectionid={{ include.sectionid | default: '3360101M1' }}" class="btn btn-light btn-lg" target="blank"><i class="fas fa-id-card"></i>&nbsp;Register for a Trial or Join</a>
   </div>
 </div>

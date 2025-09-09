@@ -154,4 +154,4 @@ Detailed information regarding uniform requirements is provided on the [Parent a
 
 {% include people.html section='rover-scouts' %}
 
-{% include join_cta.html section='Rover Scouts' %}
+{% include contact.html section='Rover Scouts' %}

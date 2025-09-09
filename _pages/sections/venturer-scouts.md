@@ -140,4 +140,4 @@ Venturer Scouts may commence the transition (Link Badge) to Rovers at 17.5 years
 
 {% include people.html section='venturer-scouts' %}
 
-{% include join_cta.html section='Venturer Scouts' %}
+{% include join_cta.html section='Venturer Scouts' sectionid='3360101U1' %}

@@ -65,4 +65,4 @@ Below are our dedicated Group and Committee Leaders.
 
 {% endunless %}
 
-{% include join_cta.html section='Leaders' %}
+{% include contact.html section='Leaders' %}

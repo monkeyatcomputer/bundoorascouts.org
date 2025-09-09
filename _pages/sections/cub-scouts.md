@@ -125,4 +125,4 @@ Cub Scouts may commence transition (Link Badge) any time after their 10th birthd
 
 {% include people.html section='cub-scouts' %}
 
-{% include join_cta.html section='Cub Scouts' %}
+{% include join_cta.html section='Cub Scouts' sectionid='3360101P1' %}
