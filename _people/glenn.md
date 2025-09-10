@@ -1,7 +1,7 @@
 ---
 title: Glenn
 role: Adult Supporter
-alias:
+alias: Varmint
 section: adult-volunteer
 ---
 
