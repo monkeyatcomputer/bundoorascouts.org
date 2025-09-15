@@ -147,3 +147,7 @@ feed:
 #    day: '/the-campfire/:year/:month/:day/'
 #    tag: '/the-campfire/tag/:name/'
 #    category: '/the-campfire/category/:name/'
+
+# Redirect from plugin
+redirect_from:
+  json: false
