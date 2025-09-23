@@ -1,6 +1,6 @@
 ---
 title: Siobhan
-role: Assistant Cub Scouts Leader
+role: Assistant Cub Scout Leader
 alias: Kaa
 section: cub-scouts
 ---
