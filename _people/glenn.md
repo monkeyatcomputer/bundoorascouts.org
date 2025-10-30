@@ -1,8 +1,8 @@
 ---
 title: Glenn
-role: Adult Supporter
+role: Scout Leader
 alias: Varmint
-section: adult-volunteer
+section: scouts
 ---
 
 Started Scouting when?

@@ -1,6 +1,6 @@
 ---
 title: Lisa
-role: Assistant Cub Scout Leader
+role: Cub Scout Leader
 alias: Fox
 section: cub-scouts
 ---

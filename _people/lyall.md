@@ -1,6 +1,6 @@
 ---
 title: Lyall
-role: Assistant Joey Scout Leader
+role: Joey Scout Leader
 alias: Bilby
 section: joey-scouts
 ---
