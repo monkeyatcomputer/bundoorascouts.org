@@ -1,8 +1,8 @@
 ---
 title: Bruce
-role: Adult Supporter
+role: Group Leader
 alias: Shark
-section: adult-volunteer
+section: group
 ---
 
 Started Scouting when?
