@@ -74,16 +74,10 @@ collections:
 
 # Exclude from build
 exclude:
-  - samples/
-  - branding-kit/
   - Gemfile
   - Gemfile.lock
-  - AGENTS.md
-  - DESIGN.md
   - .jekyll-cache/
-  - vendor/
-  - _pages/
-  - _old_posts/
+  - artifacts/
 
 # Build settings
 defaults:
