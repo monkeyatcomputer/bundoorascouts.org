@@ -1,0 +1,196 @@
+---
+layout: default
+---
+<!-- Hero Section -->
+<section class="relative w-full min-h-[500px] flex items-center bg-primary-container overflow-hidden mb-12 shadow-ambient-lg">
+  <div class="absolute inset-0 z-0">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHXw1B00pi49bVZwX7lXst0lCd2K-uNjRBm0zG9OB4eW6ypPZTEmBEUNepc1BX9MWkGRfNc26GcyB6l8huVLHjbnMmBdISKy2cXpGNS2NKvGYBPdxdrDUCdnMzkLQunzqFhW74TTn1MmbnDnPGauxRpYDf9ea3PJ5Wlq4D0UTm4dh3O1tHsEEdqFmC0yNlusFRmjUKXebC3-Ca7AnHeQIxtAnaqb9x3N3orChQ7AL1d4_COzGidNaedweMwSvZN2xr7m0BQEcYCM4" 
+         alt="Campfire background" 
+         class="w-full h-full object-cover opacity-40 mix-blend-multiply"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 pb-20 md:pt-48 md:pb-24">
+    <div class="max-w-3xl">
+      <span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary text-on-primary text-sm font-bold tracking-widest uppercase shadow-sm">
+        The Campfire
+      </span>
+      <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-6 leading-tight tracking-tight">
+        Gather 'Round the <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary-container">Campfire</span>
+      </h1>
+      <p class="text-xl text-primary-fixed-dim leading-relaxed mb-10 font-body">
+        {% if page.autopage %}
+          Exploring stories tagged with <span class="text-secondary font-bold">#{{ page.autopage.display_name }}</span>.
+        {% else %}
+          Stories of adventure, community updates, and trail guides from the Bundoora Scouts family. Pull up a log and stay a while.
+        {% endif %}
+      </p>
+      
+      <div class="flex flex-wrap gap-3">
+        <a href="/the-campfire/" class="px-4 py-2 rounded-full {% if page.url == '/the-campfire/' %}bg-secondary text-on-primary{% else %}bg-surface-container-highest/20 backdrop-blur-sm text-on-primary border border-white/10{% endif %} text-sm font-bold uppercase tracking-widest hover:bg-secondary hover:text-on-primary transition-all">All Stories</a>
+        {% assign categories = site.posts | map: 'categories' | flatten | uniq %}
+        {% for category in categories %}
+          <a href="/the-campfire/section/{{ category | slugify }}/" class="px-4 py-2 rounded-full bg-surface-container-highest/20 backdrop-blur-sm text-on-primary text-sm font-bold uppercase tracking-widest border border-white/10 hover:bg-secondary transition-colors">
+            {{ category }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="flex-grow w-full max-w-7xl mx-auto px-6 md:px-12 py-12">
+
+  <!-- Content -->
+  <div class="w-full">
+    {{ content }}
+    
+    <!-- Post Grid -->
+    {% assign posts_to_show = posts | default: paginator.posts | default: site.posts %}
+    {% if posts_to_show.size > 0 %}
+      
+      <!-- Featured Post -->
+      {% assign featured = posts_to_show | first %}
+      <div class="mb-16" data-gsap="reveal">
+        <article class="flex flex-col lg:flex-row bg-surface-container-low rounded-3xl overflow-hidden group hover:shadow-ambient-lg transition-all duration-500 border border-outline-variant/10">
+          <!-- Thumbnail Container -->
+          <div class="lg:w-3/5 aspect-video lg:aspect-auto overflow-hidden relative">
+            {% if featured.image %}
+              <img src="{{ featured.image }}" alt="{{ featured.title }}" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"/>
+            {% else %}
+              <div class="w-full h-full bg-primary/10 flex flex-col items-center justify-center text-primary/40">
+                <span class="material-symbols-outlined text-8xl mb-2 filled">local_fire_department</span>
+              </div>
+            {% endif %}
+            <div class="absolute top-6 left-6 flex flex-wrap gap-2">
+              <span class="px-4 py-1.5 bg-secondary text-white text-xs font-black uppercase tracking-tighter rounded-full shadow-lg">
+                Featured Story
+              </span>
+            </div>
+          </div>
+
+          <!-- Content Box -->
+          <div class="lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-6 text-xs font-bold text-on-surface-variant uppercase tracking-widest opacity-60">
+              <span class="material-symbols-outlined text-sm">calendar_today</span>
+              {{ featured.date | date: "%B %d, %Y" }}
+            </div>
+
+            <h2 class="text-3xl md:text-5xl font-black text-primary mb-6 leading-tight tracking-tighter group-hover:text-secondary transition-colors">
+              <a href="{{ featured.url }}">{{ featured.title }}</a>
+            </h2>
+
+            <p class="text-on-surface-variant text-lg leading-relaxed mb-10">
+              {{ featured.excerpt | strip_html | truncate: 180 }}
+            </p>
+
+            <div class="mt-auto flex items-center justify-between pt-8 border-t border-outline-variant/20">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center border border-outline-variant/20">
+                  <span class="material-symbols-outlined text-primary text-xl">person</span>
+                </div>
+                <span class="text-sm font-black text-primary uppercase tracking-tighter">{{ featured.author | first }}</span>
+              </div>
+              
+              <a href="{{ featured.url }}" class="bg-primary text-white px-8 py-3 rounded-xl font-bold hover:scale-105 transition-transform flex items-center gap-2 shadow-ambient-md">
+                Read Full Story <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Remaining Posts Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for post in posts_to_show offset:1 %}
+          <div data-gsap="reveal" data-delay="{{ forloop.index0 | modulo: 3 | times: 0.1 }}">
+            {% include blog-card.html post=post %}
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="text-center py-24 bg-surface-container-low rounded-3xl border border-dashed border-outline-variant">
+        <span class="material-symbols-outlined text-6xl text-outline-variant mb-4">local_fire_department</span>
+        <h3 class="text-2xl font-bold text-primary">No stories found</h3>
+        <p class="text-on-surface-variant">Check back later for more updates from the trail.</p>
+      </div>
+    {% endif %}
+
+    <!-- Pagination / Load More -->
+    {% if paginator.total_pages > 1 %}
+    <div id="pagination-container" class="mt-16 flex justify-center">
+      {% if paginator.next_page %}
+        <button id="load-more-btn" 
+                data-next-page="{{ paginator.next_page_path }}"
+                class="group relative px-12 py-4 bg-primary text-white rounded-2xl font-headline font-bold text-lg hover:shadow-ambient-lg transition-all active:scale-95 flex items-center gap-3 overflow-hidden">
+          <span class="relative z-10">Load More Stories</span>
+          <span class="material-symbols-outlined relative z-10 group-hover:translate-y-1 transition-transform">expand_more</span>
+          <div class="absolute inset-0 bg-secondary translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+        </button>
+      {% endif %}
+    </div>
+
+    <script>
+      (function() {
+        const btn = document.getElementById('load-more-btn');
+        const grid = document.querySelector('.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3');
+        if (!btn || !grid) return;
+
+        btn.addEventListener('click', async () => {
+          const nextPageUrl = btn.getAttribute('data-next-page');
+          if (!nextPageUrl) return;
+
+          // Loading state
+          btn.disabled = true;
+          const originalText = btn.innerHTML;
+          btn.innerHTML = '<span class="animate-spin material-symbols-outlined">sync</span> Loading...';
+
+          try {
+            const response = await fetch(nextPageUrl);
+            const html = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            // 1. Get all new post cards from the grid (skipping the first one if it's a featured post on page 1, 
+            // but usually on page 2+ all posts are in the grid)
+            const newCards = doc.querySelectorAll('[data-gsap="reveal"]');
+            
+            // Filter out the featured post if it's accidentally grabbed (optional)
+            const filteredCards = Array.from(newCards).filter(card => !card.closest('.mb-16'));
+
+            // 2. Append them to our grid
+            filteredCards.forEach((card, index) => {
+              // Ensure we don't duplicate the featured post from the new page if it's there
+              // In our layout, page 2+ usually doesn't have a featured post block
+              grid.appendChild(card);
+              
+              // 3. Trigger GSAP Reveal
+              gsap.fromTo(card, 
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.8, delay: index * 0.1, ease: "power3.out" }
+              );
+            });
+
+            // 4. Update the button for the NEXT page
+            const nextBtnOnNewPage = doc.getElementById('load-more-btn');
+            if (nextBtnOnNewPage) {
+              const nextNextPage = nextBtnOnNewPage.getAttribute('data-next-page');
+              btn.setAttribute('data-next-page', nextNextPage);
+              btn.innerHTML = originalText;
+              btn.disabled = false;
+            } else {
+              // No more pages!
+              btn.parentElement.innerHTML = '<p class="text-on-surface-variant font-bold opacity-40 uppercase tracking-widest text-sm">You\'ve reached the end of the trail</p>';
+            }
+
+          } catch (error) {
+            console.error('Error loading more posts:', error);
+            btn.innerHTML = 'Error. Try again?';
+            btn.disabled = false;
+          }
+        });
+      })();
+    </script>
+    {% endif %}
+  </div>
+</main>

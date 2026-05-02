@@ -1,0 +1,199 @@
+---
+layout: default
+---
+<main>
+  <!-- Post Hero -->
+  <header
+    class="relative w-full min-h-[600px] flex items-center bg-primary-container overflow-hidden shadow-ambient-lg">
+    <div class="absolute inset-0 z-0">
+      {% if page.image %}
+      <img src="{{ page.image }}" alt="{{ page.title }}"
+        class="w-full h-full object-cover opacity-60 mix-blend-multiply" />
+      {% else %}
+      <div class="w-full h-full bg-primary flex items-center justify-center">
+        <span class="material-symbols-outlined text-[12rem] text-white/10 filled">local_fire_department</span>
+      </div>
+      {% endif %}
+      <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-48 pb-24 md:pt-60 md:pb-32">
+      <div class="max-w-4xl">
+        <div
+          class="inline-flex items-center space-x-2 bg-secondary text-on-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          {% if page.categories %}
+          <a href="/the-campfire/section/{{ page.categories | first | slugify }}/"
+            class="hover:text-tertiary transition-colors">{{ page.categories | first }}</a>
+          {% else %}
+          <span>The Campfire</span>
+          {% endif %}
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-8 leading-tight tracking-tight">
+          {{ page.title }}
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-6 text-primary-fixed-dim">
+          {% if page.author %}
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center bg-white/10 overflow-hidden">
+              <span class="material-symbols-outlined text-white">person</span>
+            </div>
+            <span class="font-bold text-sm">{{ page.author | join: ", " }}</span>
+          </div>
+          {% endif %}
+
+          <div class="flex items-center space-x-2 text-sm font-semibold opacity-90">
+            <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+            <span>{{ page.date | date: "%B %d, %Y" }}</span>
+          </div>
+
+          <div class="flex items-center space-x-2 text-sm font-semibold opacity-90">
+            <span class="material-symbols-outlined text-[18px]">schedule</span>
+            <span>{{ content | number_of_words | divided_by: 180 | plus: 1 }} min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Centered Single Column Content -->
+  <div class="max-w-[800px] mx-auto px-6 py-20">
+    <article class="prose prose-lg max-w-none text-on-surface leading-relaxed font-body
+                    prose-headings:font-headline prose-headings:text-primary prose-headings:tracking-tight prose-headings:font-black
+                    prose-p:text-on-surface prose-p:leading-relaxed
+                    prose-a:text-secondary prose-a:font-bold prose-a:no-underline hover:prose-a:text-primary prose-a:transition-colors
+                    prose-blockquote:border-l-4 prose-blockquote:border-on-tertiary-container prose-blockquote:bg-surface-container-low prose-blockquote:rounded-r-xl prose-blockquote:py-4 prose-blockquote:px-8 prose-blockquote:italic prose-blockquote:text-2xl prose-blockquote:font-bold prose-blockquote:text-primary
+                    prose-img:rounded-xl prose-img:shadow-2xl">
+
+      {% if page.subtitle %}
+      <p class="text-xl md:text-2xl font-light text-on-surface-variant mb-12 drop-cap">
+        {{ page.subtitle }}
+      </p>
+      {% endif %}
+
+      {{ content }}
+
+      <!-- Tags Section -->
+      {% if page.tags %}
+      <div class="pt-8 flex flex-wrap gap-3 items-center border-t border-outline-variant mt-16">
+        {% for tag in page.tags %}
+        <a href="/the-campfire/tag/{{ tag | slugify }}/"
+          class="px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold hover:bg-secondary hover:text-on-primary transition-all">
+          {{ tag }}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </article>
+
+    <!-- Horizontal Share Bar -->
+    <div class="mt-16 py-8 border-y border-outline-variant w-full">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div>
+          <h4 class="text-xl font-bold text-primary mb-1">Spread the word</h4>
+          <p class="text-on-surface-variant text-sm">Enjoyed this story? Share it with your troop.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | url_encode }}{{ page.url | url_encode }}"
+            target="_blank" rel="noopener"
+            class="flex items-center gap-2 px-4 py-2.5 bg-[#1877F2] text-white rounded-xl font-bold text-xs hover:opacity-90 transition-all shadow-sm">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+            <span>Facebook</span>
+          </a>
+
+          <!-- X (Twitter) -->
+          <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url | url_encode }}{{ page.url | url_encode }}"
+            target="_blank" rel="noopener"
+            class="flex items-center gap-2 px-4 py-2.5 bg-black text-white rounded-xl font-bold text-xs hover:opacity-90 transition-all shadow-sm">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+            <span>Post to X</span>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:?subject={{ page.title | url_encode }}&body=Check out this story from Bundoora Scouts: {{ site.url }}{{ page.url }}"
+            class="flex items-center gap-2 px-4 py-2.5 bg-secondary text-white rounded-xl font-bold text-xs hover:opacity-90 transition-all shadow-sm">
+            <span class="material-symbols-outlined text-sm">mail</span>
+            <span>Email</span>
+          </a>
+
+          <!-- Copy Link -->
+          <button id="copy-link-btn" data-url="{{ site.url }}{{ page.url }}"
+            class="flex items-center gap-2 px-4 py-2.5 bg-white text-primary border border-outline-variant rounded-xl font-bold text-xs hover:border-primary transition-all shadow-sm">
+            <span class="material-symbols-outlined text-sm">link</span>
+            <span id="copy-btn-text">Copy Link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Copy to Clipboard
+      document.getElementById('copy-link-btn')?.addEventListener('click', function () {
+        const url = this.getAttribute('data-url');
+        const text = document.getElementById('copy-btn-text');
+
+        navigator.clipboard.writeText(url).then(() => {
+          const originalText = text.innerText;
+          text.innerText = 'Copied!';
+          setTimeout(() => { text.innerText = originalText; }, 2000);
+        });
+      });
+    </script>
+    <!-- Post Navigation -->
+    <nav class="my-16 flex flex-col sm:flex-row gap-6 border-t border-b border-outline-variant/10 py-12">
+      <div class="flex-1">
+        {% if page.previous %}
+        <a href="{{ page.previous.url }}"
+          class="group flex flex-col gap-3 p-6 bg-surface-container-low rounded-2xl hover:bg-secondary-container transition-all shadow-sm">
+          <span class="flex items-center gap-2 text-xs font-black text-secondary uppercase tracking-tighter">
+            <span class="material-symbols-outlined text-sm">arrow_back</span>
+            Previous Adventure
+          </span>
+          <span
+            class="text-xl font-bold text-primary leading-tight group-hover:text-primary transition-colors line-clamp-2">
+            {{ page.previous.title }}
+          </span>
+        </a>
+        {% endif %}
+      </div>
+
+      <div class="flex-1 text-right">
+        {% if page.next %}
+        <a href="{{ page.next.url }}"
+          class="group flex flex-col gap-3 p-6 bg-surface-container-low rounded-2xl hover:bg-secondary-container transition-all shadow-sm items-end">
+          <span class="flex items-center gap-2 text-xs font-black text-secondary uppercase tracking-tighter">
+            Next Adventure
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </span>
+          <span
+            class="text-xl font-bold text-primary leading-tight group-hover:text-primary transition-colors line-clamp-2">
+            {{ page.next.title }}
+          </span>
+        </a>
+        {% endif %}
+      </div>
+    </nav>
+  </div>
+</main>
+
+<style>
+  .drop-cap::first-letter {
+    float: left;
+    font-size: 5rem;
+    line-height: 4rem;
+    padding-top: 0.5rem;
+    padding-right: 0.75rem;
+    font-weight: 800;
+    color: #262661;
+  }
+</style>

@@ -1,0 +1,12 @@
+{% if include.id %}
+<div class="my-8 rounded-xl overflow-hidden aspect-video shadow-[0_40px_60px_rgba(16,14,76,0.08)]">
+  <iframe
+    src="https://www.youtube.com/embed/{{ include.id }}"
+    title="{{ include.title | default: 'YouTube video' }}"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    class="w-full h-full">
+  </iframe>
+</div>
+{% endif %}

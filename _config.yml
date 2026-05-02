@@ -1,0 +1,106 @@
+title: Bundoora Scouts
+email: info@bundoorascouts.org
+description: >-
+  Bundoora Scouts — The Modern Trailfinder. Empowering youth in Melbourne's
+  north through adventure, leadership, and community service.
+baseurl: ""
+url: "https://bundoorascouts.org"
+author: "Bundoora Scout Group"
+repository: monkeyatcomputer/bundoorascouts.org
+formspree_action: "https://formspree.io/f/mbjpklgn"
+recapcha_site_key: "6LdSneEZAAAAALUuwv9omWFHmY2GipMHjMdzBD-D"
+onboarding_url: "https://extranet.scoutsvictoria.com.au/scoutonline/public/onboarding_registration/trial-registration?sectionid="
+
+# Build settings
+theme: null
+
+#Outputting
+permalink: pretty
+markdown: kramdown
+highlighter: rouge
+timezone: "Australia/Melbourne"
+
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-include-cache
+
+whitelist:
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-include-cache
+
+# Pagination
+pagination:
+  enabled: true
+  per_page: 4
+  offset: 0
+  permalink: '/page/:num/'
+  title: ':title Page :num'
+  limit: 100
+  sort_field: 'date'
+  sort_reverse: true
+
+# AutoPages
+autopages:
+  enabled: true
+  categories:
+    layouts:
+      - blog.html
+    permalink: /the-campfire/section/:cat
+    slugify:
+      mode: pretty
+  collections:
+    enabled: false
+  tags:
+    layouts:
+      - blog.html
+    permalink: /the-campfire/tag/:tag
+    slugify:
+      mode: pretty
+
+# Collections
+collections:
+  people:
+    output: true
+  awards:
+    output: true
+
+# Exclude from build
+exclude:
+  - samples/
+  - branding-kit/
+  - Gemfile
+  - Gemfile.lock
+  - AGENTS.md
+  - DESIGN.md
+  - .jekyll-cache/
+  - vendor/
+  - _pages/
+  - _old_posts/
+
+# Build settings
+defaults:
+  - 
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /the-campfire/:year/:month/:title
+  - 
+    scope:
+      path: "assets/images"
+    values:
+      image: true
+  - 
+    scope:
+      path: ""
+    values:
+      layout: default

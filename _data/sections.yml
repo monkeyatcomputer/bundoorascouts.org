@@ -1,0 +1,84 @@
+- name: Joey Scouts
+  shortname: Joeys
+  slug: joeys
+  url: /sections/joeys/
+  age_range: "5 to 7"
+  time: "Thursday – 6.00pm to 7.00pm"
+  colour: "#F4A261"
+  colour_dark: "#C16733"
+  icon: child_care
+  material_icon: child_care
+  description: The first step in the Scouting journey. Focus on fun, friendship, and discovering the world around them.
+  tagline: Discover the world around you.
+  active: true
+  sectionid: 3360101M1
+  logo: /assets/images/logo-joey-scouts-full.png
+  logo-simple: /assets/images/logo-joey-scouts.png
+
+- name: Cub Scouts
+  shortname: Cubs
+  slug: cubs
+  url: /sections/cubs/
+  age_range: "8 to 10"
+  time: "Monday – 7.00pm to 8.30pm"
+  colour: "#E9C46A"
+  colour_dark: "#FFCD00"
+  icon: forest
+  material_icon: forest
+  description: Learning practical skills, working in small teams (Sixes), and exploring the great outdoors.
+  tagline: Learn new skills. Explore the outdoors.
+  active: true
+  sectionid: 3360101P1
+  logo: /assets/images/logo-cub-scouts-full.png
+  logo-simple: /assets/images/logo-cub-scouts.png
+
+- name: Scouts
+  shortname: Scouts
+  slug: scouts
+  url: /sections/scouts/
+  age_range: "11 to 14"
+  time: "Wednesday – 7.00pm to 9.00pm"
+  colour: "#2A9D8F"
+  colour_dark: "#00A94F"
+  icon: explore
+  material_icon: explore
+  description: Taking charge of their own adventures, developing leadership skills, and tackling bigger challenges.
+  tagline: Take charge of your own journey.
+  active: true
+  sectionid: 3360101T1
+  logo: /assets/images/logo-scouts-full.png
+  logo-simple: /assets/images/logo-scouts.png
+
+- name: Venturer Scouts
+  shortname: Venturers
+  slug: venturers
+  url: /sections/venturers/
+  age_range: "15 to 17"
+  time: "Wednesday – 7.00pm to 9.00pm"
+  colour: "#A6264C"
+  colour_dark: "#A6264C"
+  icon: hiking
+  material_icon: hiking
+  description: Self-directed program focused on personal growth, major expeditions, and vocational skills.
+  tagline: Lead your own adventure.
+  active: false
+  sectionid: 3360101U1
+  logo: /assets/images/logo-venturer-scouts-full.png
+  logo-simple: /assets/images/logo-venturer-scouts.png
+
+- name: Handfield Rover Unit
+  shortname: Handfield Rovers
+  slug: rovers
+  url: /sections/rovers/
+  age_range: "18 to 25"
+  time: "Thursday – 7.30pm to 9.30pm"
+  colour: "#DC291E"
+  colour_dark: "#DC291E"
+  icon: directions_bike
+  material_icon: directions_bike
+  description: Service, adventure, and fellowship. Rovers give back to the community while pursuing their own goals.
+  tagline: Service, adventure, fellowship.
+  active: true
+  sectionid: 3360101C1
+  logo: /assets/images/logo-rover-scouts-full.png
+  logo-simple: /assets/images/logo-handfield-rovers.png
