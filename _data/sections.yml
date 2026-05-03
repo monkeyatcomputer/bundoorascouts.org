@@ -82,3 +82,19 @@
   sectionid: 3360101C1
   logo: /assets/images/logo-rover-scouts-full.png
   logo-simple: /assets/images/logo-handfield-rovers.png
+
+- name: Adult Volunteers
+  shortname: Leaders
+  slug: adult
+  url: /sections/adult/
+  age_range: "18+"
+  time: "Flexible - Enquire for details"
+  colour: "#3f5e94"
+  colour_dark: "#100e4c"
+  icon: volunteer_activism
+  material_icon: volunteer_activism
+  description: Scouting isn't just for kids. As a volunteer leader, you'll gain new skills, build community, and help shape the next generation of trailfinders.
+  tagline: Lead the Adventure.
+  active: true
+  logo: /assets/images/logo-sv-full.png
+  logo-simple: /assets/images/logo-sv.png
