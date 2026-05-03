@@ -16,7 +16,7 @@ description: "Explore all five Bundoora Scouts youth sections — from Joey Scou
   <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 pb-20 md:pt-48 md:pb-24">
     <div class="max-w-3xl">
       <span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary text-on-primary text-sm font-bold tracking-widest uppercase shadow-sm">
-        Ages 5 to 25
+        Our Sections
       </span>
       <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-6 leading-tight tracking-tight">
         A Journey of <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary-container">Discovery.</span>
