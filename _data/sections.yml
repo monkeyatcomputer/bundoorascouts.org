@@ -1,8 +1,23 @@
+- name: Group Leadership
+  shortname: Group
+  slug: group
+  time: null
+  colour: "#100e4c"
+  icon: corporate_fare
+  material_icon: corporate_fare
+  description: The strategic core of Bundoora Scouts, ensuring the group thrives and provides the best experience for all members.
+  leader_tagline: The strategic core of Bundoora Scouts.
+  active: false
+  show_on_leaders: true
+  logo-light: /assets/images/logo.png
+  logo-dark: /assets/images/logo.png
+  logo-crop: /assets/images/logo.png
+
 - name: Joey Scouts
   shortname: Joeys
   slug: joeys
   url: /sections/joeys/
-  age_range: "5 to 7"
+  age_range: "5 to 8"
   time: "Thursday – 6.00pm to 7.00pm"
   colour: "#F4A261"
   colour_dark: "#C16733"
@@ -10,7 +25,9 @@
   material_icon: child_care
   description: The first step in the Scouting journey. Focus on fun, friendship, and discovering the world around them.
   tagline: Discover the world around you.
+  leader_tagline: Leaders for our 5 to 8 year old explorers.
   active: true
+  show_on_leaders: true
   sectionid: 3360101M1
   logo-light: /assets/images/logo-joey-light.svg
   logo-dark: /assets/images/logo-joey-dark.svg
@@ -20,7 +37,7 @@
   shortname: Cubs
   slug: cubs
   url: /sections/cubs/
-  age_range: "8 to 10"
+  age_range: "8 to 11"
   time: "Monday – 7.00pm to 8.30pm"
   colour: "#E9C46A"
   colour_dark: "#FFCD00"
@@ -28,7 +45,9 @@
   material_icon: forest
   description: Learning practical skills, working in small teams (Sixes), and exploring the great outdoors.
   tagline: Learn new skills. Explore the outdoors.
+  leader_tagline: Leaders for our 8 to 11 year old adventurers.
   active: true
+  show_on_leaders: true
   sectionid: 3360101P1
   logo-light: /assets/images/logo-cub-light.svg
   logo-dark: /assets/images/logo-cub-dark.svg
@@ -38,7 +57,7 @@
   shortname: Scouts
   slug: scouts
   url: /sections/scouts/
-  age_range: "11 to 14"
+  age_range: "11 to 15"
   time: "Wednesday – 7.00pm to 9.00pm"
   colour: "#2A9D8F"
   colour_dark: "#00A94F"
@@ -46,7 +65,9 @@
   material_icon: explore
   description: Taking charge of their own adventures, developing leadership skills, and tackling bigger challenges.
   tagline: Take charge of your own journey.
+  leader_tagline: Mentors for our 11 to 15 year old scouts.
   active: true
+  show_on_leaders: true
   sectionid: 3360101T1
   logo-light: /assets/images/logo-scout-light.svg
   logo-dark: /assets/images/logo-scout-dark.svg
@@ -56,15 +77,17 @@
   shortname: Venturers
   slug: venturers
   url: /sections/venturers/
-  age_range: "15 to 17"
-  time: "Wednesday – 7.00pm to 9.00pm"
+  age_range: "15 to 18"
+  time: null
   colour: "#A6264C"
   colour_dark: "#A6264C"
   icon: hiking
   material_icon: hiking
   description: Self-directed program focused on personal growth, major expeditions, and vocational skills.
   tagline: Lead your own adventure.
+  leader_tagline: Advisors for our 15 to 18 year old pioneers.
   active: false
+  show_on_leaders: true
   sectionid: 3360101U1
   logo-light: /assets/images/logo-venturer-light.svg
   logo-dark: /assets/images/logo-venturer-dark.svg
@@ -74,7 +97,7 @@
   shortname: Handfield Rovers
   slug: rovers
   url: /sections/rovers/
-  age_range: "18 to 25"
+  age_range: "18 to 26"
   time: "Thursday – 7.30pm to 9.30pm"
   colour: "#DC291E"
   colour_dark: "#DC291E"
@@ -82,14 +105,16 @@
   material_icon: directions_bike
   description: Service, adventure, and fellowship. Rovers give back to the community while pursuing their own goals.
   tagline: Service, adventure, fellowship.
+  leader_tagline: Supporting our 18 to 26 year old Rovers.
   active: true
+  show_on_leaders: true
   sectionid: 3360101C1
   logo-light: /assets/images/logo-handfield-rovers.png
   logo-dark: /assets/images/logo-handfield-rovers.png
   logo-crop: /assets/images/logo-handfield-rovers.png
 
 - name: Adult Volunteers
-  shortname: Leaders
+  shortname: Adults
   slug: adult
   url: /sections/adult/
   age_range: "18+"
@@ -100,7 +125,9 @@
   material_icon: volunteer_activism
   description: Scouting isn't just for kids. As a volunteer leader, you'll gain new skills, build community, and help shape the next generation of trailfinders.
   tagline: Lead the Adventure.
+  leader_tagline: Valued volunteers assisting our group operations.
   active: true
+  show_on_leaders: true
   logo-light: /assets/images/logo-sv-light.svg
   logo-dark: /assets/images/logo-sv-dark.svg
   logo-crop: /assets/images/logo-sv-crop.svg

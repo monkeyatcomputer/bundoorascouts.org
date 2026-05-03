@@ -2,7 +2,7 @@
 title: Tristan
 role: Quartermaster
 alias: Bear / Baloo
-section: adult-volunteer
+section: adult
 ---
 
 Started Scouting when?

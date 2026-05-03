@@ -2,7 +2,7 @@
 title: Sally
 role: Joey Scout Leader
 alias: Roo
-section: joey-scouts
+section: joeys
 ---
 
 Started Scouting when?

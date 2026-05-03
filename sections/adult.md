@@ -8,6 +8,7 @@ colour: "#3f5e94"
 colour_dark: "#100e4c"
 icon: volunteer_activism
 section_slug: adult
+leader_slug: group
 features:
   - icon: psychology
     title: Skills for Life
@@ -72,22 +73,6 @@ features:
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-20">
-  <div class="max-w-5xl mx-auto bg-primary rounded-3xl p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
-    <div class="absolute top-0 right-0 w-64 h-64 bg-secondary opacity-20 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
-    <div class="absolute bottom-0 left-0 w-48 h-48 bg-tertiary-container opacity-30 blur-2xl rounded-full translate-y-1/2 -translate-x-1/2"></div>
-    <h2 class="text-3xl md:text-5xl font-black text-white mb-6 relative z-10">Thinking About Joining?</h2>
-    <p class="text-primary-fixed text-lg md:text-xl max-w-2xl mx-auto mb-10 opacity-90 relative z-10">
-      Come down for a visit, meet the team, and see how you can make a difference. No prior scouting experience required!
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-      <a href="/contact/" class="px-10 py-4 bg-white text-primary font-black rounded-xl hover:bg-surface-container-low transition-colors shadow-lg active:scale-95">
-        Contact Us Today
-      </a>
     </div>
   </div>
 </section>

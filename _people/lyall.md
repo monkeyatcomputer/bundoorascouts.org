@@ -2,7 +2,7 @@
 title: Lyall
 role: Joey Scout Leader
 alias: Bilby
-section: joey-scouts
+section: joeys
 ---
 
 Started Scouting when?

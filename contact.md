@@ -1,7 +1,9 @@
 ---
 layout: page
 title: "Contact Us"
+badge: "Get in touch"
 description: "Whether you want to enrol your child, volunteer as a leader, or just find out more — we'd love to hear from you."
+hero_image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHXw1B00pi49bVZwX7lXst0lCd2K-uNjRBm0zG9OB4eW6ypPZTEmBEUNepc1BX9MWkGRfNc26GcyB6l8huVLHjbnMmBdISKy2cXpGNS2NKvGYBPdxdrDUCdnMzkLQunzqFhW74TTn1MmbnDnPGauxRpYDf9ea3PJ5Wlq4D0UTm4dh3O1tHsEEdqFmC0yNlusFRmjUKXebC3-Ca7AnHeQIxtAnaqb9x3N3orChQ7AL1d4_COzGidNaedweMwSvZN2xr7m0BQEcYCM4"
 ---
 
 <div class="max-w-[1440px] mx-auto">
@@ -81,17 +83,13 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
           <div class="flex-1">
             <h3 class="mt-0 font-headline font-bold text-primary text-2xl mb-3 leading-tight">Meeting Times</h3>
             <div class="space-y-3">
-              {% for section in site.data.sections %}
+              {% assign meeting_sections = site.data.sections | where_exp: "item", "item.time" %}
+              {% for section in meeting_sections %}
               <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-4 pb-2 border-b border-outline-variant/10 last:border-0 last:pb-0">
                 <div class="flex items-center gap-2">
                   <span class="font-bold text-xs uppercase tracking-wider" style="color: {{ section.colour }};">
                     {{ section.name }}
                   </span>
-                  {% if section.active %}
-                    <span class="text-[9px] bg-teal-50 text-teal-700 px-1.5 py-0.5 rounded border border-teal-100 uppercase font-bold">Active</span>
-                  {% else %}
-                    <span class="text-[9px] bg-surface-container text-on-surface-variant/70 px-1.5 py-0.5 rounded border border-outline-variant/20 uppercase font-bold">Inactive</span>
-                  {% endif %}
                 </div>
                 <span class="text-on-surface-variant text-xs font-medium">{{ section.time }}</span>
               </div>

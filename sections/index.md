@@ -49,35 +49,6 @@ description: "Explore all five Bundoora Scouts youth sections — from Joey Scou
     </div>
   </div>
 
-  <!-- Progression timeline -->
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12 mt-32">
-    <div class="bg-surface-container-low rounded-3xl p-12 relative overflow-hidden">
-      <div class="absolute -right-20 -top-20 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
-      
-      <div class="relative z-10 text-center mb-16">
-        <h2 class="text-3xl md:text-5xl font-black text-primary tracking-tighter">The Scouting <br/><span class="text-on-tertiary-container">Journey.</span></h2>
-        <p class="text-on-surface-variant mt-2 text-lg">A progressive path to leadership and resilience.</p>
-      </div>
-
-      <div class="relative z-10 flex flex-col md:flex-row items-stretch gap-4 md:gap-0">
-        {% for section in site.data.sections %}
-        <div class="flex-1 relative flex flex-col items-center text-center px-4 py-8 group">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-ambient-md group-hover:scale-110 transition-transform"
-               style="background-color: {{ section.colour }};">
-            <span class="material-symbols-outlined text-white filled" style="font-size: 2rem;">{{ section.material_icon }}</span>
-          </div>
-          <h3 class="font-headline font-bold text-primary text-lg mb-1">{{ section.name }}</h3>
-          <p class="text-xs text-on-surface-variant font-bold uppercase tracking-widest">Ages {{ section.age_range }}</p>
-          
-          {% unless forloop.last %}
-          <div class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 text-outline-variant/30">
-            <span class="material-symbols-outlined" style="font-size: 2rem;">arrow_forward</span>
-          </div>
-          {% endunless %}
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
+  {% include scouting-journey.html %}
 
 </div>

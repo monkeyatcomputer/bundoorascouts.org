@@ -2,7 +2,7 @@
 title: Kate
 role: Cub Scout Leader
 alias: Akela
-section: cub-scouts
+section: cubs
 ---
 
 Started Scouting when?

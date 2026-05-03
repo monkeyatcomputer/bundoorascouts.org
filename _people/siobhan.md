@@ -2,7 +2,7 @@
 title: Siobhan
 role: Cub Scout Leader
 alias: Kaa
-section: cub-scouts
+section: cubs
 ---
 
 Started Scouting when?

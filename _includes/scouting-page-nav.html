@@ -1,0 +1,59 @@
+{% assign current_url = page.url %}
+{% assign scouting_slugs = "index,what-is-scouting,benefits-and-impact,the-program,costs-and-uniform,child-safety,working-together,glossary" | split: "," %}
+
+{% assign current_page_name = current_url | split: "/" | last %}
+{% if current_page_name == "scouting" or current_page_name == "" %}{% assign current_page_name = "index" %}{% endif %}
+
+{% for slug in scouting_slugs %}
+  {% if slug == current_page_name %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% assign prev_index = current_index | minus: 1 %}
+{% assign next_index = current_index | plus: 1 %}
+
+{% if prev_index >= 0 %}
+  {% assign prev_slug = scouting_slugs[prev_index] %}
+  {% assign prev_url = "/scouting/" %}
+  {% if prev_slug != 'index' %}{% assign prev_url = prev_url | append: prev_slug | append: "/" %}{% endif %}
+  {% assign prev_page_obj = site.pages | where: "url", prev_url | first %}
+{% endif %}
+
+{% if next_index < scouting_slugs.size %}
+  {% assign next_slug = scouting_slugs[next_index] %}
+  {% assign next_url = "/scouting/" | append: next_slug | append: "/" %}
+  {% assign next_page_obj = site.pages | where: "url", next_url | first %}
+{% endif %}
+
+<div class="mt-16 pt-8 border-t border-outline-variant/30 not-prose">
+  <div class="flex flex-col sm:flex-row justify-between gap-4">
+    {% if prev_slug %}
+      <a href="{{ prev_url }}" class="flex-1 group p-4 rounded-xl border border-outline-variant/30 hover:border-primary/30 hover:bg-surface-container-low transition-all">
+        <div class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Previous</div>
+        <div class="flex items-center gap-2 text-primary group-hover:translate-x-[-4px] transition-transform">
+          <span class="material-symbols-outlined">arrow_back</span>
+          <span class="font-black">
+            {% if prev_page_obj %}{{ prev_page_obj.title }}{% else %}{{ prev_slug | replace: "-", " " | capitalize }}{% endif %}
+          </span>
+        </div>
+      </a>
+    {% else %}
+      <div class="flex-1"></div>
+    {% endif %}
+
+    {% if next_slug %}
+      <a href="{{ next_url }}" class="flex-1 group p-4 rounded-xl border border-outline-variant/30 hover:border-primary/30 hover:bg-surface-container-low transition-all text-right">
+        <div class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Next</div>
+        <div class="flex items-center justify-end gap-2 text-primary group-hover:translate-x-[4px] transition-transform">
+          <span class="font-black">
+            {% if next_page_obj %}{{ next_page_obj.title }}{% else %}{{ next_slug | replace: "-", " " | capitalize }}{% endif %}
+          </span>
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </div>
+      </a>
+    {% else %}
+      <div class="flex-1"></div>
+    {% endif %}
+  </div>
+</div>

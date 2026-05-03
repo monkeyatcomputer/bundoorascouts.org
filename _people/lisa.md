@@ -2,7 +2,7 @@
 title: Lisa
 role: Cub Scout Leader
 alias: Fox
-section: cub-scouts
+section: cubs
 ---
 
 Started Scouting when?

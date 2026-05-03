@@ -1,7 +1,9 @@
 ---
 layout: page
 title: "About Us"
+badge: "Meet the Group"
 description: "Bundoora Scouts has been empowering young people in Melbourne's north since the 1960s. Learn about our history, our leaders, and what makes us tick."
+hero_image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCnJp-ZCAR8tI6YeV7nSQUR3i7p9x5mQ3EF5cTkAEXD_Mn6zS8h11fZ0Gi5uaqsKxu_g0OM5Y4XeUjPz4MMj4EkKXNYzCSVU-xQPBZjLNf5X5cBKEbDKruG9Gi7FTIv-Uv-mroIKweqcJfhxP4F-WnEFLPhLNsm1FnoTq350nTa2lSQJQvcBfhUU-2zN0DAPVHBGuwdvOyNG4a5gRbwQrU1vg0e7OVgQI_tR3Hh9mQbLaSjN4-n3iZTO6LtyBpAACMOTIfxw2rrk"
 ---
 
 ## Our Story
