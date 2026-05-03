@@ -12,8 +12,9 @@
   tagline: Discover the world around you.
   active: true
   sectionid: 3360101M1
-  logo: /assets/images/logo-joey-scouts-full.png
-  logo-simple: /assets/images/logo-joey-scouts.png
+  logo-light: /assets/images/logo-joey-light.svg
+  logo-dark: /assets/images/logo-joey-dark.svg
+  logo-crop: /assets/images/logo-joey-crop.svg
 
 - name: Cub Scouts
   shortname: Cubs
@@ -29,8 +30,9 @@
   tagline: Learn new skills. Explore the outdoors.
   active: true
   sectionid: 3360101P1
-  logo: /assets/images/logo-cub-scouts-full.png
-  logo-simple: /assets/images/logo-cub-scouts.png
+  logo-light: /assets/images/logo-cub-light.svg
+  logo-dark: /assets/images/logo-cub-dark.svg
+  logo-crop: /assets/images/logo-cub-crop.svg
 
 - name: Scouts
   shortname: Scouts
@@ -46,8 +48,9 @@
   tagline: Take charge of your own journey.
   active: true
   sectionid: 3360101T1
-  logo: /assets/images/logo-scouts-full.png
-  logo-simple: /assets/images/logo-scouts.png
+  logo-light: /assets/images/logo-scout-light.svg
+  logo-dark: /assets/images/logo-scout-dark.svg
+  logo-crop: /assets/images/logo-scout-crop.svg
 
 - name: Venturer Scouts
   shortname: Venturers
@@ -63,8 +66,9 @@
   tagline: Lead your own adventure.
   active: false
   sectionid: 3360101U1
-  logo: /assets/images/logo-venturer-scouts-full.png
-  logo-simple: /assets/images/logo-venturer-scouts.png
+  logo-light: /assets/images/logo-venturer-light.svg
+  logo-dark: /assets/images/logo-venturer-dark.svg
+  logo-crop: /assets/images/logo-venturer-crop.svg
 
 - name: Handfield Rover Unit
   shortname: Handfield Rovers
@@ -80,8 +84,9 @@
   tagline: Service, adventure, fellowship.
   active: true
   sectionid: 3360101C1
-  logo: /assets/images/logo-rover-scouts-full.png
-  logo-simple: /assets/images/logo-handfield-rovers.png
+  logo-light: /assets/images/logo-rover-light.svg
+  logo-dark: /assets/images/logo-rover-dark.svg
+  logo-crop: /assets/images/logo-rover-crop.svg
 
 - name: Adult Volunteers
   shortname: Leaders
@@ -96,5 +101,6 @@
   description: Scouting isn't just for kids. As a volunteer leader, you'll gain new skills, build community, and help shape the next generation of trailfinders.
   tagline: Lead the Adventure.
   active: true
-  logo: /assets/images/logo-sv-full.png
-  logo-simple: /assets/images/logo-sv.png
+  logo-light: /assets/images/logo-sv-light.svg
+  logo-dark: /assets/images/logo-sv-dark.svg
+  logo-crop: /assets/images/logo-sv-crop.svg

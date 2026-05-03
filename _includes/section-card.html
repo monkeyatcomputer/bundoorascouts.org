@@ -9,10 +9,10 @@
     style="background-color: {{ s.colour }}20;"></div>
 
   <!-- Decorative Section Logo -->
-  {% if s.logo-simple %}
+  {% if s.logo-crop %}
   <div
     class="absolute -right-10 -top-10 w-64 h-64 pointer-events-none transition-all duration-700 group-hover:scale-105">
-    <img src="{{ s.logo-simple | relative_url }}" alt=""
+    <img src="{{ s.logo-crop | relative_url }}" alt=""
       class="absolute right-4 top-4 w-48 h-48 object-contain opacity-20 group-hover:opacity-35 transition-opacity duration-700"
       style="mask-image: radial-gradient(circle at center, black 30%, transparent 90%); -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 90%);">
   </div>
