@@ -1,20 +1,35 @@
-- name: "Bundoora Community Bank"
-  logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuDiUxVw0HfN4pzUK3jZ4sJvJlAGEhvzF6um_r1JsSxYg5TWNGEAGHDLFir80ot5ow0819lr_Qoii1lVm_9RobKC3J2-fMmH3rVWjW-p2RXI6v_YKFvt6mzG7QHUtsor6nNUp2Zxq42PNVHKnV28RQakmvqtX9wjE8CKOlYwPYW4BzvF5cjtdPtYfq93HZtL2CMV9LU8Bl3HA2f3tqdhPPkETd6uUHNiDGk8aewYEVyxE3PPm0JAixMFZhF_1hG19GwdWntfv-fTDqo"
-  description: "Providing critical funding for our new camping gear and supporting our annual leadership training weekend for senior scouts."
-  tier: "Gold Sponsor"
-- name: "Northern Hardware Supplies"
-  logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuAEoiE0xJ9woHTqOvNlfjwnz1OxZwvaW0MK-u0bbGUa6_a2OxK4-8FVUMjMuR5Id8hRH01ujI9jG4J3uAcuObVW8yKJONbMnvgXQALTszdn1Gq0l25Q1VT1HKvHRmAgDkc3F0FMykbVEQCtgOV9DVV0WczHZIXSr5fKW0WdTSmIzouIO105zy4BtJJFlFtie4UAMaFJaCc3GIiR7D7OO4LTIsD_DhlUYtKI7KqkFvVmKDaocgD1iXWMNmxjHe8TUp-nRdEJteUlWuk"
-  description: "Supplying materials for our hall maintenance and providing tools for our pioneer badge activities."
-  tier: "Equipment Partner"
-- name: "Greenway Landscaping"
-  logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuCzSCGdfkUx-RmrUg4c2SmR93vrIGxwi-NIwQW618JQftsDIJBNxK5lx8fdnKeKa-ZXc97-U0qWKLBX-ppH6YJrE8UiIF_nsqrGERFswWow4AKHvuEjUuY5gJRQ8nlCWLED7zSYHAfwIRE9neva5HB1AtMMFe04IGBqKBbpSKUrMiF8wPOulfiDcVsrT9GZlAvNjrUGAS6kfFlacalUAtINDO1_V83EowhmLiL4Tg0a5M97itYEjn9cXCavj98dhWNbUK3Nt7rt2Qg"
-  description: "Helping us maintain the scout hall grounds and supporting our environmental conservation projects in the local parklands."
-  tier: "Community Partner"
-- name: "Bundoora Auto Repairs"
-  logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuBTB2uRogRrPVWKEpndOXEJY3K-bEKbP0zWjLY94CuhjvTyHcmZ5bVVfhZ8xkRc-pcouke6IAcdN3kDlHR2cF23l3IrgsYVy8MMSCPi5nzHZEkxAZRJ_tJJX2pZNwAUxetXIL6YrD0KgSkreFiHXgYzX9CdvH0wHnUmosp3nS_-wXxj_aZEmONBM2XvQEG-5hpUHHRudmGn5BE-ChVSaXpdRUu_u2GW-VXHyXl2Z5OUIY_vyWXNhXFADTO0WZqtEIADJd5rsa9fI7A"
-  description: "Keeping our equipment trailer roadworthy and safe for all our weekend excursions."
-  tier: "Service Partner"
-- name: "TechForward Solutions"
-  logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuBPQlKCvzT9bEs5msgwd0baxoPi2AoBkc4d9ILCluQpFasOYEioOSGcCQE0R40ZHPRcMp8ES29CF4CRc25RLrBARjUD8a53IAyMPy8j2uR9cR3A5huSHSzWmBRj2SjYBfw6Ygqvn1rmEAjL3tUDDvqs52HfuTi2OG2wwDsMcBLLCuq99jaKNDeF9vLE7DIM5Ea2-_NEQ5aQb-6uYzh5fdQKC677u4jOZYKLwMSnIrxwu5rmVay9kUdboZfR2FhqG00qgWqthJse-5s"
-  description: "Providing digital infrastructure support and sponsoring our STEM badge activities for the Cub Scouts."
-  tier: "Tech Partner"
+- name: Banyule City Council
+  description: ""
+  url: "https://www.banyule.vic.gov.au/Home"
+  logo: banyule-city-council.png
+  notes: ""
+- name: Bunnings Warehouse
+  description: "Australia's DIY, Garden & Hardware Store"
+  url: "https://www.bunnings.com.au/"
+  logo: bunnings.png
+  notes: "Special thanks to Bunnings Warehouse for donated kitchen with installation, as well as our regular Bunnings BBQs."
+- name: Camec
+  description: "Providing high quality caravan appliances, parts and accessories."
+  url: "https://www.camec.com.au/"
+  logo: camec.jpg
+  notes: "Special thanks to Camec and David for their continued support."
+- name: Generation-e
+  description: "Unified Communications, Digital Collaboration, Audio Visual."
+  url: "https://www.generation-e.com.au/"
+  logo: generation-e.png
+  notes: "Special thanks to Generation-e and Biagio for donated A/V equipment."
+- name: MSEC Group
+  description: "Builders, Project Managers, Infrastructure Planners and Development Consultants"
+  url: "mailto:sam@msec.group"
+  logo: msec.png
+  notes: "Special thanks to MSEC Group and Sam for Scouts and Schools Monster Raffle support."
+- name: bcon services
+  description: "BCON Services is a provider of rail measuring equipment and services to the rail sector in Australia, New Zealand & Ireland. BCON Services specialises rail infrastructure inspection, management, and track maintenance."
+  url: "https://www.bcon.au/"
+  logo: bcon.png
+  notes: "Special thanks to BCON Services for loan of earthmoving equipment used extensively for our Bundoora Scout Centre improvements."
+- name: GR Davis Plumbing
+  description: "Commercial, Industrial, Domestic Plumbing, and Licensed Gas Fitting"
+  url: "mailto:grdavisplumbing@hotmail.com"
+  logo: 
+  notes: "Special thanks to GR Davis Plumbing who have resolved many of our long standing issues and installed new services at Bundoora Scout Centre."

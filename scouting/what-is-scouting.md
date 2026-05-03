@@ -3,7 +3,6 @@ layout: page
 title: "What is Scouting?"
 badge: "Our Foundations"
 description: "Learn about the Scout Method, our values, and the Promise and Law that underpin everything we do in the global Scouting movement."
-hero_image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHXw1B00pi49bVZwX7lXst0lCd2K-uNjRBm0zG9OB4eW6ypPZTEmBEUNepc1BX9MWkGRfNc26GcyB6l8huVLHjbnMmBdISKy2cXpGNS2NKvGYBPdxdrDUCdnMzkLQunzqFhW74TTn1MmbnDnPGauxRpYDf9ea3PJ5Wlq4D0UTm4dh3O1tHsEEdqFmC0yNlusFRmjUKXebC3-Ca7AnHeQIxtAnaqb9x3N3orChQ7AL1d4_COzGidNaedweMwSvZN2xr7m0BQEcYCM4"
 ---
 
 <div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">

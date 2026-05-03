@@ -7,7 +7,7 @@ description: Meet the dedicated volunteer team behind Bundoora Scouts. Highly tr
 <!-- Hero Section -->
 <header class="relative w-full min-h-[500px] flex items-center bg-primary-container overflow-hidden mb-12 shadow-ambient-lg">
   <div class="absolute inset-0 z-0">
-    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnJp-ZCAR8tI6YeV7nSQUR3i7p9x5mQ3EF5cTkAEXD_Mn6zS8h11fZ0Gi5uaqsKxu_g0OM5Y4XeUjPz4MMj4EkKXNYzCSVU-xQPBZjLNf5X5cBKEbDKruG9Gi7FTIv-Uv-mroIKweqcJfhxP4F-WnEFLPhLNsm1FnoTq350nTa2lSQJQvcBfhUU-2zN0DAPVHBGuwdvOyNG4a5gRbwQrU1vg0e7OVgQI_tR3Hh9mQbLaSjN4-n3iZTO6LtyBpAACMOTIfxw2rrk" 
+    <img src="{{ page.image }}" 
          alt="Scouts around campfire" 
          class="w-full h-full object-cover opacity-40 mix-blend-multiply"/>
     <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>

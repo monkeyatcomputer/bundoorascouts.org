@@ -2,12 +2,13 @@
 layout: default
 title: "Our Sections — Bundoora Scouts"
 description: "Explore all five Bundoora Scouts youth sections — from Joey Scouts (ages 5–8) all the way through to Rovers (18–26). Find the right section for your child."
+image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAnIAnfVpIno6p_Yg629u1Z_G_O98U6-6S0v1Y_8Z2x_O6X87MsenFKDnKcJNQsnxr3Fp-2t3fQx85Uk__-0ZgqRKDbJzbj_N6mXwzZWor57nvhPMWz4D_ixdGtv-cT13sqUREL2R_DlRUaUAuUMTr1ytn5BcSWGHsO3Ls-ImTy-RbeQKDapsajiWMerbozm1cvvEGOtLPlkFpKbYz2h_nlN7pgT3raDPzBNOyJQddTWZbI47Tx681w-5bn3lB2A"
 ---
 
 <!-- Hero Section -->
 <section class="relative w-full min-h-[500px] flex items-center bg-primary-container overflow-hidden mb-12 shadow-ambient-lg">
   <div class="absolute inset-0 z-0">
-    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnIAnfVpIno6p_Yg629u1Z_G_O98U6-6S0v1Y_8Z2x_O6X87MsenFKDnKcJNQsnxr3Fp-2t3fQx85Uk__-0ZgqRKDbJzbj_N6mXwzZWor57nvhPMWz4D_ixdGtv-cT13sqUREL2R_DlRUaUAuUMTr1ytn5BcSWGHsO3Ls-ImTy-RbeQKDapsajiWMerbozm1cvvEGOtLPlkFpKbYz2h_nlN7pgT3raDPzBNOyJQddTWZbI47Tx681w-5bn3lB2A" 
+    <img src="{{ page.image }}" 
          alt="Scouting discovery background" 
          class="w-full h-full object-cover opacity-40 mix-blend-multiply"/>
     <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>

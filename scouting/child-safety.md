@@ -3,7 +3,6 @@ layout: page
 title: "Child Safety"
 badge: "Zero Tolerance"
 description: "Our commitment to ensuring Scouting is a safe place for young people through strict protocols, training, and a zero-tolerance approach to abuse."
-hero_image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCnJp-ZCAR8tI6YeV7nSQUR3i7p9x5mQ3EF5cTkAEXD_Mn6zS8h11fZ0Gi5uaqsKxu_g0OM5Y4XeUjPz4MMj4EkKXNYzCSVU-xQPBZjLNf5X5cBKEbDKruG9Gi7FTIv-Uv-mroIKweqcJfhxP4F-WnEFLPhLNsm1FnoTq350nTa2lSQJQvcBfhUU-2zN0DAPVHBGuwdvOyNG4a5gRbwQrU1vg0e7OVgQI_tR3Hh9mQbLaSjN4-n3iZTO6LtyBpAACMOTIfxw2rrk"
 ---
 
 <div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">

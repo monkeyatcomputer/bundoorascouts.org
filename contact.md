@@ -3,7 +3,7 @@ layout: page
 title: "Contact Us"
 badge: "Get in touch"
 description: "Whether you want to enrol your child, volunteer as a leader, or just find out more — we'd love to hear from you."
-hero_image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHXw1B00pi49bVZwX7lXst0lCd2K-uNjRBm0zG9OB4eW6ypPZTEmBEUNepc1BX9MWkGRfNc26GcyB6l8huVLHjbnMmBdISKy2cXpGNS2NKvGYBPdxdrDUCdnMzkLQunzqFhW74TTn1MmbnDnPGauxRpYDf9ea3PJ5Wlq4D0UTm4dh3O1tHsEEdqFmC0yNlusFRmjUKXebC3-Ca7AnHeQIxtAnaqb9x3N3orChQ7AL1d4_COzGidNaedweMwSvZN2xr7m0BQEcYCM4"
+image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHXw1B00pi49bVZwX7lXst0lCd2K-uNjRBm0zG9OB4eW6ypPZTEmBEUNepc1BX9MWkGRfNc26GcyB6l8huVLHjbnMmBdISKy2cXpGNS2NKvGYBPdxdrDUCdnMzkLQunzqFhW74TTn1MmbnDnPGauxRpYDf9ea3PJ5Wlq4D0UTm4dh3O1tHsEEdqFmC0yNlusFRmjUKXebC3-Ca7AnHeQIxtAnaqb9x3N3orChQ7AL1d4_COzGidNaedweMwSvZN2xr7m0BQEcYCM4"
 ---
 
 <div class="max-w-[1440px] mx-auto">

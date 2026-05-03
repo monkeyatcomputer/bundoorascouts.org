@@ -1,0 +1,58 @@
+<!-- Sponsor Card Include -->
+<!-- Usage: include sponsor-card.html sponsor=sponsor -->
+{% assign s = include.sponsor %}
+
+<article class="bg-white rounded-2xl p-8 flex flex-col h-full transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_60px_-20px_rgba(16,14,76,0.1)] border border-outline-variant/10 relative group overflow-hidden">
+  <!-- Subtle background glow on hover -->
+  <div class="absolute -right-10 -top-10 w-32 h-32 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-colors duration-500"></div>
+  
+  <div class="relative z-10 flex flex-col h-full">
+    <!-- Logo Container -->
+    <div class="h-40 mb-8 bg-surface-container-lowest rounded-2xl flex items-center justify-center p-8 shadow-inner border border-outline-variant/5 overflow-hidden group-hover:border-secondary/20 transition-colors">
+      {% if s.logo %}
+        <img src="/assets/images/sponsors/{{ s.logo }}" 
+             alt="{{ s.name }}" 
+             class="max-h-full max-w-full object-contain transition-all duration-700 transform group-hover:scale-105">
+      {% else %}
+        <div class="flex flex-col items-center gap-2 opacity-20 group-hover:opacity-40 transition-opacity">
+          <span class="material-symbols-outlined text-6xl">handshake</span>
+          <span class="text-primary font-black text-xl select-none tracking-tighter">{{ s.name }}</span>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Content -->
+    <div class="flex-grow">
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <h3 class="font-headline text-2xl font-black text-primary tracking-tighter leading-none group-hover:text-secondary transition-colors">
+          {{ s.name }}
+        </h3>
+        {% if s.url %}
+          <a href="{{ s.url }}" target="_blank" rel="noopener" 
+             class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm shrink-0"
+             title="Visit Website">
+            <span class="material-symbols-outlined text-lg">open_in_new</span>
+          </a>
+        {% endif %}
+      </div>
+      
+      {% if s.description and s.description != "" %}
+        <p class="font-body text-on-surface-variant leading-relaxed text-sm mb-6 font-medium">
+          {{ s.description }}
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- Special Thanks Note -->
+    {% if s.notes and s.notes != "" %}
+      <div class="mt-auto pt-6 border-t border-outline-variant/10">
+        <div class="flex gap-3">
+          <span class="material-symbols-outlined text-secondary text-sm filled shrink-0 mt-0.5">favorite</span>
+          <p class="text-primary/70 text-xs leading-relaxed italic font-semibold">
+            {{ s.notes }}
+          </p>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</article>
