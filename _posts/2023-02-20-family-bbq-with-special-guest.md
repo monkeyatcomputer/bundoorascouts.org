@@ -10,10 +10,6 @@ categories:
 tags:
     - BBQ
     - Special Guests
-custom_css:
-    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
-custom_js:
-    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
 ---
 
 Bundoora Scouts had an exciting and memorable event today, as we held a BBQ with some special guests. Among those in attendance was our local [Victorian State Government](https://www.vic.gov.au/) [Member for Bundoora](https://new.parliament.vic.gov.au/members/colin-brooks/), the [Honourable Colin Brooks](https://www.colinbrooks.com.au/).

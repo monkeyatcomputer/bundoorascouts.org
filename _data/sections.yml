@@ -84,9 +84,9 @@
   tagline: Service, adventure, fellowship.
   active: true
   sectionid: 3360101C1
-  logo-light: /assets/images/logo-rover-light.svg
-  logo-dark: /assets/images/logo-rover-dark.svg
-  logo-crop: /assets/images/logo-rover-crop.svg
+  logo-light: /assets/images/logo-handfield-rovers.png
+  logo-dark: /assets/images/logo-handfield-rovers.png
+  logo-crop: /assets/images/logo-handfield-rovers.png
 
 - name: Adult Volunteers
   shortname: Leaders

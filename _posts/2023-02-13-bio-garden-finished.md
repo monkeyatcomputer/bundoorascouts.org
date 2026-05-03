@@ -12,10 +12,6 @@ tags:
     - Bio Garden
     - Community
     - Environment
-custom_css:
-    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
-custom_js:
-    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
 ---
 
 The COVID-19 pandemic has disrupted the world in more ways than one. From social distancing to lockdowns, the virus  impacted every aspect of our lives, including projects like the Bundoora Scouts bio garden. However, despite the setbacks caused by the pandemic, our bio garden has finally been completed! This is a great achievement, not just for the Bundoora Cub Scouts but also for the community at large.

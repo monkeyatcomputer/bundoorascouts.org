@@ -9,10 +9,6 @@ categories:
 tags:
     - BBQ
     - Presentation
-custom_css:
-    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
-custom_js:
-    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
 ---
 
 Last Friday saw the Group's wrap up for the year with a wonderful family BBQ. Two Cub Scouts were awarded their Grey Wolf Award and the Group presented it's honour board to commemorate this special occasion. The Group was also presented with it's First Aid Kit from the Freemasons, with both the Worshipful Master and Brother Peter Trenery in attendance. The Group made some very important thankyou's to several in our community who have done some fantastic work on behalf of our Scout Group.

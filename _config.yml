@@ -68,9 +68,7 @@ autopages:
 # Collections
 collections:
   people:
-    output: true
-  awards:
-    output: true
+    output: false
 
 # Exclude from build
 exclude:

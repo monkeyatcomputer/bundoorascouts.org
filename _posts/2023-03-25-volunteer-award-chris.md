@@ -10,10 +10,6 @@ categories:
 tags:
     - Award
     - Volunteer
-custom_css:
-    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
-custom_js:
-    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
 ---
 
 ### CONGRATULATIONS TO: Chris

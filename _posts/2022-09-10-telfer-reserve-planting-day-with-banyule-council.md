@@ -11,10 +11,6 @@ tags:
     - Environment
     - Plants
     - Banyule Council
-custom_css:
-    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css"
-custom_js:
-    - "//cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"
 ---
 
 Bundoora Scouts and [Banyule Council](https://www.banyule.vic.gov.au/) recently joined forces for a planting day at [NJ Telfer Reserve](https://www.google.com/maps/place/N+J+Telfer+Reserve,+Bundoora+VIC+3083/), a local park and natural area. The event was an opportunity for members of the community to come together and contribute to the preservation and beautification of the park.
