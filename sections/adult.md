@@ -1,6 +1,7 @@
 ---
 layout: section
 title: "Adult Volunteers & Leaders"
+permalink: /sections/adult
 redirect_from: [/sections/adult-volunteers/]
 description: "Scouting isn't just for kids. Join our team of dedicated volunteers and make a real difference in your community while gaining new skills."
 tagline: "Lead the Adventure."

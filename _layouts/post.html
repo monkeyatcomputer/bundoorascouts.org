@@ -23,7 +23,7 @@ layout: default
           class="inline-flex items-center space-x-2 bg-secondary text-on-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
           <span class="w-2 h-2 rounded-full bg-tertiary"></span>
           {% if page.categories %}
-          <a href="/the-campfire/section/{{ page.categories | first | slugify }}/"
+          <a href="/the-campfire/section/{{ page.categories | first | slugify }}"
             class="hover:text-tertiary transition-colors">{{ page.categories | first }}</a>
           {% else %}
           <span>The Campfire</span>
@@ -31,7 +31,16 @@ layout: default
         </div>
 
         <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-8 leading-tight tracking-tight">
-          {{ page.title }}
+          {% assign title_words = page.title | split: " " %}
+          {% for word in title_words %}
+          {% if forloop.last %}
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">{{
+            word
+            }}</span>
+          {% else %}
+          {{ word }}
+          {% endif %}
+          {% endfor %}
         </h1>
 
         <div class="flex flex-wrap items-center gap-6 text-primary-fixed-dim">
@@ -60,7 +69,7 @@ layout: default
   </header>
 
   <!-- Centered Single Column Content -->
-  <div class="max-w-[800px] mx-auto px-6 py-20">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 py-20">
     <article class="prose prose-lg max-w-none text-on-surface leading-relaxed font-body
                     prose-headings:font-headline prose-headings:text-primary prose-headings:tracking-tight prose-headings:font-black
                     prose-p:text-on-surface prose-p:leading-relaxed
@@ -80,7 +89,7 @@ layout: default
       {% if page.tags %}
       <div class="pt-8 flex flex-wrap gap-3 items-center border-t border-outline-variant mt-16">
         {% for tag in page.tags %}
-        <a href="/the-campfire/tag/{{ tag | slugify }}/"
+        <a href="/the-campfire/tag/{{ tag | slugify }}"
           class="px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold hover:bg-secondary hover:text-on-primary transition-all">
           {{ tag }}
         </a>

@@ -17,7 +17,7 @@
     {% if p.categories.size > 0 %}
     <div class="absolute top-4 left-4 flex flex-wrap gap-2">
       {% for category in p.categories %}
-      <a href="/the-campfire/section/{{ category | slugify }}/" class="px-3 py-1 bg-secondary/90 backdrop-blur-md text-white text-[10px] font-black uppercase tracking-tighter rounded-full shadow-sm hover:bg-primary transition-colors">
+      <a href="/the-campfire/section/{{ category | slugify }}" class="px-3 py-1 bg-secondary/90 backdrop-blur-md text-white text-[10px] font-black uppercase tracking-tighter rounded-full shadow-sm hover:bg-primary transition-colors">
         {{ category }}
       </a>
       {% endfor %}

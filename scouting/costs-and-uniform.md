@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Costs & Uniform"
+permalink: /scouting/costs-and-uniform
 badge: "Getting Started"
 description: "Practical information about the Scout uniform, where to buy it, and the costs associated with joining Bundoora Scout Group."
 ---
@@ -28,9 +29,10 @@ Plus, there’ll be a Group cost which is calculated and managed by Bundoora Sco
 ### Activity Costs
 There is also the cost of activities such as camps. These are kept as low as possible because we usually use our own campsites and Leaders are unpaid volunteers. Major events like Cuboree and Jamboree cost more, but Bundoora Scouts works together to lower the individual cost through fundraising.
 
+
+### Financial Support
+
 > [!IMPORTANT]
-> **Financial Support**
->
 > Financial issues should not be a barrier to any child being a Scout. If you have any concerns, please speak with our Group Leader to discuss payment options.
 
 > [!NOTE]

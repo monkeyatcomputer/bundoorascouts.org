@@ -1,10 +1,12 @@
-<!-- Testimonial Grid Include -->
-<!-- Usage: include testimonial-grid.html testimonials=page.testimonials colour=page.colour -->
 {% assign testimonials = include.testimonials %}
 {% assign accent = include.colour | default: "#3f5e94" %}
 
 {% if testimonials %}
-<section class="py-20 bg-surface">
+<section class="py-10 bg-surface not-prose">
+  <!-- Testimonial Grid Include -->
+
+  <!-- Usage: include testimonial-grid.html testimonials=page.testimonials colour=page.colour -->
+
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
     <div class="text-center mb-16">
       <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight">What Our Families Say</h2>

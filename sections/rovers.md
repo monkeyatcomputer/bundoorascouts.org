@@ -1,6 +1,7 @@
 ---
 layout: section
 title: "Handfield Rover Unit"
+permalink: /sections/rovers
 description: "Service, adventure, and fellowship. Rovers are self-governing young adults (18-25) who create their own adventures and give back to the community."
 tagline: "Service, adventure, fellowship."
 age_range: "18–25"

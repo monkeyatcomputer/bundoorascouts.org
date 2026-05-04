@@ -1,15 +1,16 @@
 ---
 layout: page
 title: "About Scouting"
+permalink: /scouting
 redirect_from: [/about-scouting/new-program, /about-scouting/parent-caregiver-information/]
 badge: "Global Movement"
 description: "Discover the worldwide Scouting movement and how Bundoora Scouts partners with families to build resilience and leadership in young people."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
+<div class="max-w-4xl mx-auto px-6 py-4 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
 
 <!-- Welcome from Group Leader -->
-<div class="not-prose bg-surface-container-low border border-outline-variant/30 rounded-2xl p-8 mb-16 shadow-sm">
+<div class="not-prose bg-surface-container-low border border-outline-variant/30 rounded-2xl p-8 mb-8 shadow-sm">
   <div class="flex flex-col md:flex-row gap-8 items-center">
     <div class="w-32 h-32 rounded-xl overflow-hidden shadow-md shrink-0">
       <img src="/assets/images/people/bruce.jpg" alt="Bruce - Group Leader" class="w-full h-full object-cover" onerror="this.src='/assets/images/people/nophoto.jpg'">
@@ -33,32 +34,32 @@ description: "Discover the worldwide Scouting movement and how Bundoora Scouts p
 
 Welcome to the world's largest youth movement. Use the links below to learn more about how Scouting works and what to expect as a member of Bundoora Scouts.
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose my-12">
-  <a href="/scouting/what-is-scouting/" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose my-6">
+  <a href="/scouting/what-is-scouting" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
     <h3 class="text-xl font-bold text-primary group-hover:text-primary-container transition-colors">What is Scouting?</h3>
     <p class="text-on-surface-variant text-sm mt-2">The Scout Method, our foundations, and the Promise & Law.</p>
   </a>
-  <a href="/scouting/benefits-and-impact/" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
+  <a href="/scouting/benefits-and-impact" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
     <h3 class="text-xl font-bold text-primary group-hover:text-primary-container transition-colors">Benefits & Impact</h3>
     <p class="text-on-surface-variant text-sm mt-2">Why Scouting works: resilience, mental health, and leadership.</p>
   </a>
-  <a href="/scouting/the-program/" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
+  <a href="/scouting/the-program" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
     <h3 class="text-xl font-bold text-primary group-hover:text-primary-container transition-colors">The Program</h3>
     <p class="text-on-surface-variant text-sm mt-2">One Journey, One Program: How youth progress and achieve.</p>
   </a>
-  <a href="/scouting/costs-and-uniform/" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
+  <a href="/scouting/costs-and-uniform" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
     <h3 class="text-xl font-bold text-primary group-hover:text-primary-container transition-colors">Costs & Uniform</h3>
     <p class="text-on-surface-variant text-sm mt-2">Practical info on uniforms, fees, and activity costs.</p>
   </a>
-  <a href="/scouting/child-safety/" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
+  <a href="/scouting/child-safety" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
     <h3 class="text-xl font-bold text-primary group-hover:text-primary-container transition-colors">Child Safety</h3>
     <p class="text-on-surface-variant text-sm mt-2">Our zero-tolerance approach and how we keep youth safe.</p>
   </a>
-  <a href="/scouting/working-together/" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
+  <a href="/scouting/working-together" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
     <h3 class="text-xl font-bold text-primary group-hover:text-primary-container transition-colors">Working Together</h3>
     <p class="text-on-surface-variant text-sm mt-2">Code of conduct, communication, and parent involvement.</p>
   </a>
-  <a href="/scouting/glossary/" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group md:col-span-2">
+  <a href="/scouting/glossary" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group md:col-span-2">
     <h3 class="text-xl font-bold text-primary group-hover:text-primary-container transition-colors">Scout Talk (Glossary)</h3>
     <p class="text-on-surface-variant text-sm mt-2">Common terms and lingo explained.</p>
   </a>

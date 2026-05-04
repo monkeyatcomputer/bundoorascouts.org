@@ -112,19 +112,19 @@ file.extname == '.jpeg' or file.extname == '.JPEG' or file.extname == '.webp' or
 
 {% assign gallery_id = gallery_folder | slugify | default: "default-gallery" %}
 {% if gallery_images.size > 0 %}
-<section class="my-16" id="{{ gallery_id }}">
+<section class="my-8" id="{{ gallery_id }}">
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     {% for image in gallery_images %}
-    <div class="aspect-square overflow-hidden rounded-xl cursor-zoom-in group relative" data-gsap="reveal" data-delay="{{ forloop.index0 | modulo: 4 | times: 0.1 }}">
-      <a href="javascript:void(0)" 
-         class="gallery-thumb-link block w-full h-full" 
-         data-src="{{ image.path }}"
-         onclick="openLightbox('{{ image.path }}', '{{ gallery_id }}')">
-        <img src="{{ image.path }}" 
-             alt="Gallery image" 
-             class="gallery-thumb w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-             loading="lazy">
-      </a>
+    <div class="group relative" data-gsap="reveal" data-delay="{{ forloop.index0 | modulo: 4 | times: 0.1 }}">
+      <div class="aspect-square overflow-hidden rounded-2xl cursor-zoom-in isolate transform-gpu">
+        <a href="javascript:void(0)"
+          class="gallery-thumb-link block w-full h-full transition-transform duration-500 group-hover:scale-110"
+          data-src="{{ image.path }}" onclick="openLightbox('{{ image.path }}', '{{ gallery_id }}')">
+          <div class="w-full h-full bg-cover bg-center" style="background-image: url('{{ image.path }}');" role="img"
+            aria-label="Gallery image">
+          </div>
+        </a>
+      </div>
     </div>
     {% endfor %}
   </div>
@@ -149,16 +149,20 @@ file.extname == '.jpeg' or file.extname == '.JPEG' or file.extname == '.webp' or
     onclick="navigateLightbox(1, event)">
     <span class="material-symbols-outlined text-4xl">chevron_right</span>
   </button>
-  <img id="lightbox-img" src="" alt="Lightbox image"
-    class="max-w-full max-h-full rounded-lg shadow-2xl object-contain select-none pointer-events-none">
+  <div class="relative w-full h-full flex items-center justify-center pointer-events-none">
+    <img id="lightbox-img" src="" alt="Lightbox image"
+      class="max-w-full max-h-[85vh] md:max-h-[90vh] rounded-2xl shadow-2xl object-contain select-none pointer-events-auto transition-transform duration-300">
+  </div>
 </div>
 {% assign site.data.lightbox_rendered = true %}
 {% endunless %}
 {% else %}
-<div class="my-12 p-8 bg-surface-container-low rounded-2xl border border-dashed border-outline-variant text-center">
+<div class="my-8 p-6 bg-surface-container-low rounded-2xl border border-dashed border-outline-variant text-center">
   <span class="material-symbols-outlined text-4xl text-outline-variant mb-3">image_not_supported</span>
   <p class="text-on-surface-variant font-bold">No images found in {{ gallery_folder }}</p>
-  <p class="text-xs text-on-surface-variant/60 mt-1">Make sure the path is correct and images are present in the
-    repository.</p>
+  <div class="mt-4 pt-4 border-t border-outline-variant/30 not-prose">
+    <p class="text-xs text-on-surface-variant/60">Make sure the path is correct and images are present in the
+      repository.</p>
+  </div>
 </div>
 {% endif %}

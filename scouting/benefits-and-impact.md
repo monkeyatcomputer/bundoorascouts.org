@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Benefits & Impact"
+permalink: /scouting/benefits-and-impact
 badge: "Why Scouting?"
 description: "Discover the lifelong advantages of Scouting, from building resilience and leadership to improving mental health and academic outcomes."
 ---

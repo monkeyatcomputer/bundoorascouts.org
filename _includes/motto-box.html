@@ -1,0 +1,25 @@
+{% assign accent = include.colour | default: "#100e4c" %}
+{% assign motto = include.motto | default: "Be Prepared" %}
+
+<div
+  class="relative overflow-hidden bg-white p-8 md:p-10 rounded-2xl shadow-ambient border border-outline-variant/30 flex flex-col sm:flex-row items-center gap-8 group hover:shadow-ambient-lg transition-all duration-500"
+  data-gsap="reveal">
+  <!-- Decorative Background Glow -->
+  <div
+    class="absolute -right-16 -top-16 w-64 h-64 rounded-full blur-[80px] opacity-10 transition-opacity duration-700 group-hover:opacity-20"
+    style="background-color: {{ accent }};"></div>
+
+  <div
+    class="relative z-10 w-20 h-20 rounded-2xl flex items-center justify-center shrink-0 shadow-lg transition-all duration-500 group-hover:rotate-6 group-hover:scale-110"
+    style="background: linear-gradient(135deg, {{ accent }}, {{ accent }}dd);">
+    <span class="material-symbols-outlined text-4xl text-white filled">star</span>
+  </div>
+
+  <div class="relative z-10 text-center sm:text-left">
+    <h4 class="font-black uppercase tracking-[0.3em] mb-3 opacity-80" style="color: {{ accent }};">Section
+      Motto</h4>
+    <p class="text-2xl font-black text-primary leading-none tracking-tighter font-headline">
+      {{ motto }}
+    </p>
+  </div>
+</div>

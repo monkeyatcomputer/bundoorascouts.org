@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Child Safety"
+permalink: /scouting/child-safety
 badge: "Zero Tolerance"
 description: "Our commitment to ensuring Scouting is a safe place for young people through strict protocols, training, and a zero-tolerance approach to abuse."
 ---
@@ -33,9 +34,9 @@ The following are examples of unacceptable behaviour by Adults in Scouting:
 *   Distributing inappropriate materials or engaging in non-age-appropriate discussions.
 *   Encouraging or being under the influence of alcohol or illicit substances.
 
+### How to Report
+
 > [!IMPORTANT]
-> **How to report**
->
 > Anyone can report any incident of unacceptable behaviour to our Child Safety Team immediately.
 >
 > Phone: **1800 870 772**  

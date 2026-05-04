@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Meet the Sponsors"
+permalink: /about/our-sponsors
 badge: "Our Partners"
 description: "Bundoora Scouts thrives thanks to the generous support of our local community partners and businesses. Their contributions help us provide life-changing adventures and essential skills to youth in our area."
 ---

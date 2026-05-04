@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Terms and Conditions"
+permalink: /terms
 description: "Legal terms and conditions for using the Bundoora Scout Group website."
 ---
 

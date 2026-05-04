@@ -24,7 +24,7 @@ layout: default
       </span>
       <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-6 leading-tight tracking-tight">
         Gather 'Round the <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary-container">Campfire</span>
+          class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">Campfire</span>
       </h1>
       <p class="text-xl text-primary-fixed-dim leading-relaxed mb-10 font-body">
         {% if page.autopage %}
@@ -36,12 +36,12 @@ layout: default
       </p>
 
       <div class="flex flex-wrap gap-3">
-        <a href="/the-campfire/"
-          class="px-4 py-2 rounded-full {% if page.url == '/the-campfire/' %}bg-secondary text-on-primary{% else %}bg-surface-container-highest/20 backdrop-blur-sm text-on-primary border border-white/10{% endif %} text-sm font-bold uppercase tracking-widest hover:bg-secondary hover:text-on-primary transition-all">All
+        <a href="/the-campfire"
+          class="px-4 py-2 rounded-full {% if page.url == '/the-campfire' %}bg-secondary text-on-primary{% else %}bg-surface-container-highest/20 backdrop-blur-sm text-on-primary border border-white/10{% endif %} text-sm font-bold uppercase tracking-widest hover:bg-secondary hover:text-on-primary transition-all">All
           Stories</a>
         {% assign categories = site.posts | map: 'categories' | flatten | uniq %}
         {% for category in categories %}
-        <a href="/the-campfire/section/{{ category | slugify }}/"
+        <a href="/the-campfire/section/{{ category | slugify }}"
           class="px-4 py-2 rounded-full bg-surface-container-highest/20 backdrop-blur-sm text-on-primary text-sm font-bold uppercase tracking-widest border border-white/10 hover:bg-secondary transition-colors">
           {{ category }}
         </a>

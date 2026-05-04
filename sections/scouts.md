@@ -1,6 +1,7 @@
 ---
 layout: section
 title: "Scouts"
+permalink: /sections/scouts
 description: "Taking charge of their own adventures, developing leadership skills, and tackling bigger challenges. For 11 to 15 year olds, Scouting is a constant round of adventure and discovery."
 tagline: "Take charge of your own journey."
 age_range: "11–15"

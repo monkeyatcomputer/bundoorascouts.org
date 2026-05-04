@@ -19,7 +19,7 @@ image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHXw1B00pi49bVZwX7lX
         The Modern Trailfinder
       </span>
       <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-6 leading-tight tracking-tight">
-        Adventure Awaits in Bundoora.
+        Adventure Awaits in <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">Bundoora.</span>
       </h1>
       <p class="text-xl text-primary-fixed-dim mb-10 leading-relaxed font-body">
         Empowering youth through outdoor education, leadership, and community. Join the journey from Joeys to Rovers.
@@ -28,7 +28,7 @@ image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHXw1B00pi49bVZwX7lX
         <a href="#scouting-sections" class="bg-secondary text-on-primary px-8 py-4 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-lg">
           Find Your Section
         </a>
-        <a href="/about/" class="bg-surface-container-highest/20 backdrop-blur-sm text-on-primary px-8 py-4 rounded-lg font-medium border border-outline-variant/30 hover:bg-surface-container-highest/30 transition-all duration-300">
+        <a href="/about" class="bg-surface-container-highest/20 backdrop-blur-sm text-on-primary px-8 py-4 rounded-lg font-medium border border-outline-variant/30 hover:bg-surface-container-highest/30 transition-all duration-300">
           Learn More
         </a>
       </div>
@@ -37,14 +37,17 @@ image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHXw1B00pi49bVZwX7lX
 </section>
 
 <!-- Sections Bento Grid -->
-<section id="scouting-sections" class="max-w-[1440px] mx-auto px-6 md:px-12 mt-24 mb-24">
-  <div class="flex items-center justify-between mb-16">
+<section id="scouting-sections" class="max-w-[1440px] mx-auto px-6 md:px-12 mt-12 mb-12">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
     <div>
-      <h2 class="text-3xl md:text-5xl font-black text-primary tracking-tighter">Our <br/><span class="text-secondary">Sections.</span></h2>
-      <p class="text-on-surface-variant mt-2 text-lg">A progressive journey of discovery.</p>
+      <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter leading-[0.85]">
+        Our <br/>
+        <span class="text-secondary">Sections.</span>
+      </h2>
+      <p class="text-on-surface-variant mt-4 text-lg md:text-xl">A progressive journey of discovery.</p>
     </div>
-    <a href="/sections/" class="bg-white text-primary px-6 py-3 rounded-lg font-bold shadow-sm hover:scale-105 transition-transform flex items-center gap-2">
-      View All Sections<span class="material-symbols-outlined">arrow_forward</span>
+    <a href="/sections" class="flex-shrink-0 bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-sm hover:scale-105 transition-transform flex items-center justify-center gap-2 border border-outline-variant/10">
+      View All Sections <span class="material-symbols-outlined">arrow_forward</span>
     </a>
   </div>
   
@@ -68,11 +71,14 @@ image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHXw1B00pi49bVZwX7lX
 </section>
 
 <!-- Latest from The Campfire -->
-<section class="bg-surface-container-low rounded-[3xl] py-24 px-6 md:px-12 mx-4 lg:mx-8 mb-24">
+<section class="bg-surface-container-low rounded-[3xl] py-12 px-6 md:px-12 mx-4 lg:mx-8 mb-12">
   <div class="max-w-[1440px] mx-auto">
-    <div class="flex items-center justify-between mb-16">
-      <h2 class="text-3xl md:text-5xl font-black text-primary tracking-tighter">Latest from <br/><span class="text-on-tertiary-container">The Campfire.</span></h2>
-      <a href="/the-campfire/" class="bg-white text-primary px-6 py-3 rounded-lg font-bold shadow-sm hover:scale-105 transition-transform flex items-center gap-2">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-16">
+      <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter leading-[0.85]">
+        Latest from <br/>
+        <span class="text-on-tertiary-container">The Campfire.</span>
+      </h2>
+      <a href="/the-campfire" class="flex-shrink-0 bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-sm hover:scale-105 transition-transform flex items-center justify-center gap-2 border border-outline-variant/10">
         Read All Stories <span class="material-symbols-outlined">arrow_forward</span>
       </a>
     </div>

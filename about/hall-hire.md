@@ -1,54 +1,125 @@
 ---
 layout: page
 title: "Hall Hire"
-redirect_from: [/about-us/hall-hire/]
-description: "The Bundoora Scout Hall is a fantastic community space suitable for meetings, workshops, birthday parties, and small events. Available for hire when not in use by our Scout group."
+permalink: /about/hall-hire
+redirect_from: [/about-us/hall-hire]
+description: "The Bundoora Scout Hall is a welcoming, versatile venue in N.J. Telfer Reserve, ideal for community groups, classes, meetings, and private functions."
 ---
 
-<div class="max-w-[1440px] mx-auto">
+Located within **N.J. Telfer Reserve**, Bundoora Scout Hall offers a welcoming, versatile venue ideal for community groups, classes, meetings, and private functions. 
 
-  <!-- Features -->
-  <section class="max-w-[1440px] mx-auto px-6 md:px-12 mb-20">
-    <h2 class="font-headline text-3xl font-bold text-primary mb-10 text-center">What's Available</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+Conveniently located just a short walk from the Route 86 tram or route 566/902 bus, the hall is also close to Bundoora Park Farm, Mt Cooper Lookout, and the Gresswell Forest Wildlife Reserve, making it an excellent choice for both local and visiting groups.
 
-      <div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.04)]">
-        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-secondary">chair</span>
-        </div>
-        <h3 class="font-headline font-bold text-xl text-primary mb-3">Main Hall</h3>
-        <p class="text-on-surface-variant text-sm leading-relaxed">Spacious main meeting room suitable for up to 60 guests. Tables and chairs provided.</p>
+The hall is available for casual one‑off bookings or longer‑term regular hire, and is well suited to activities such as dance and fitness classes, martial arts, training sessions, workshops, meetings, and similar group uses.
+
+<section class="py-12 not-prose" data-gsap="reveal">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Main Hall -->
+    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-ambient-md border border-outline-variant/30">
+      <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
+        <span class="material-symbols-outlined text-secondary">straighten</span>
       </div>
-
-      <div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.04)]">
-        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-secondary">kitchen</span>
-        </div>
-        <h3 class="font-headline font-bold text-xl text-primary mb-3">Kitchen Access</h3>
-        <p class="text-on-surface-variant text-sm leading-relaxed">Full kitchen with urn, refrigerator, and basic cooking facilities included with hall hire.</p>
-      </div>
-
-      <div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.04)]">
-        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-secondary">local_parking</span>
-        </div>
-        <h3 class="font-headline font-bold text-xl text-primary mb-3">Parking & Outdoor Area</h3>
-        <p class="text-on-surface-variant text-sm leading-relaxed">Off-street parking and access to the outdoor area, suitable for games and activities.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Enquire -->
-  <section class="max-w-[1440px] mx-auto px-6 md:px-12">
-    <div class="bg-primary-container rounded-3xl p-8 md:p-12 text-white text-center">
-      <h2 class="font-headline text-2xl md:text-3xl font-bold mb-4">Interested in hiring our hall?</h2>
-      <p class="text-white/80 mb-8 max-w-lg mx-auto">
-        Send us a message and we'll get back to you with availability and pricing details.
+      <h3 class="text-lg font-bold text-primary mt-0 mb-2">Spacious Hall</h3>
+      <p class="text-base text-on-surface-variant leading-relaxed">
+        Approximately 240m² (13m x 18.5m) with 4m high ceilings, perfect for movement-based activities.
       </p>
-      <a href="/contact/"
-         class="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-headline font-bold hover:scale-[1.02] transition-transform shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
-        Contact Us <span class="material-symbols-outlined">arrow_forward</span>
-      </a>
     </div>
-  </section>
-</div>
+
+    <!-- Kitchen -->
+    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-ambient-md border border-outline-variant/30">
+      <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
+        <span class="material-symbols-outlined text-secondary">countertops</span>
+      </div>
+      <h3 class="text-lg font-bold text-primary mt-0 mb-2">Full Kitchen</h3>
+      <p class="text-base text-on-surface-variant leading-relaxed">
+        Equipped with two ovens, dishwasher, microwave, fridge/freezer, and electric urn.
+      </p>
+    </div>
+
+    <!-- Capacity -->
+    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-ambient-md border border-outline-variant/30">
+      <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
+        <span class="material-symbols-outlined text-secondary">groups</span>
+      </div>
+      <h3 class="text-lg font-bold text-primary mt-0 mb-2">Capacity</h3>
+      <p class="text-base text-on-surface-variant leading-relaxed">
+        Comfortably seats 100 people or accommodates up to 200 standing. Trestle tables and chairs included.
+      </p>
+    </div>
+
+    <!-- Amenities -->
+    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-ambient-md border border-outline-variant/30">
+      <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
+        <span class="material-symbols-outlined text-secondary">ac_unit</span>
+      </div>
+      <h3 class="text-lg font-bold text-primary mt-0 mb-2">Modern Comfort</h3>
+      <p class="text-base text-on-surface-variant leading-relaxed">
+        Reverse-cycle air conditioning, unisex and ambulant toilets, and off-street parking for 32 vehicles.
+      </p>
+    </div>
+  </div>
+</section>
+
+## Availability
+
+Hall hire is available when the venue is not in use by the Bundoora Scout Group, Handfield Rover Unit, or existing long‑term hires. Typical availability includes:
+
+- **Weekdays** during standard business hours
+- **Weekends** (various times)
+- **School Holidays** (extended availability)
+
+## Conditions of Hire
+
+> [!IMPORTANT]
+> **Prohibited Events:** The hall may not be used for 18th or 21st birthday celebrations, schoolies events, commercial or retail activities, publicly advertised partisan political events, gambling, or any activity involving the consumption of alcohol.
+
+> [!NOTE]
+> **Youth Birthdays:** Birthday parties for older children or teenagers are only permitted where the young person is a current member of Scouts Victoria. Such functions must be supervised by responsible adults at all times.
+
+> [!TIP]
+> **Scouting Compliance:** The proposed use must not interfere with Scouting activities and must comply with Scouts Victoria policies and Banyule Council lease conditions.
+
+[Read the full Terms and Conditions (PDF)](/uploads/hall-hire/Scouts%20Victoria%20SpacetoCo%20Hall%20Hire%20Terms%20and%20Conditions%202025.pdf){: .text-secondary .font-bold .underline}
+
+## Gallery
+
+{% include image-gallery.html folder="/uploads/hall-hire" %}
+
+<section class="mt-24 mb-20 text-center not-prose" data-gsap="reveal">
+  <div class="bg-gradient-to-br from-primary via-primary-container to-primary rounded-[3rem] p-10 md:p-20 text-white shadow-ambient-lg overflow-hidden relative">
+    <!-- Enhanced Decorative elements -->
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-secondary/30 rounded-full blur-[100px] animate-pulse"></div>
+    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-tertiary/20 rounded-full blur-[100px]"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-5 mix-blend-overlay"></div>
+
+    <div class="relative z-10">
+      <h2 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mt-0 mb-4 leading-tight tracking-tight">
+        Ready to <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">Book?</span>
+      </h2>
+      <p class="text-xl text-primary-fixed-dim mb-12 max-w-2xl mx-auto leading-relaxed">
+        We've partnered with SpacetoCo to make booking effortless. Check real-time availability and secure your date instantly.
+      </p>
+      
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+        <a href="https://www.spacetoco.com/space/bundoora-scout-hall" 
+           target="_blank"
+           class="group inline-flex items-center gap-3 bg-white text-primary px-10 py-5 rounded-2xl font-black text-lg hover:scale-[1.05] active:scale-[0.98] transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_60px_rgba(255,255,255,0.1)]">
+          <span class="material-symbols-outlined filled text-secondary group-hover:rotate-12 transition-transform">event_available</span>
+          Book via SpacetoCo
+        </a>
+        
+        <a href="/contact" 
+           class="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white px-10 py-5 rounded-2xl font-bold text-lg backdrop-blur-xl transition-all border border-white/20 hover:border-white/40 shadow-xl">
+          Enquire for Long-term Hire
+        </a>
+      </div>
+      
+      <p class="mt-10 text-white/40 text-sm font-medium tracking-widest uppercase">
+        Casual hire &bull; Regular Bookings &bull; Community Events
+      </p>
+    </div>
+  </div>
+</section>
+
+
+

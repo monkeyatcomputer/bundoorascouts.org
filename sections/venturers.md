@@ -1,6 +1,7 @@
 ---
 layout: section
 title: "Venturer Scouts"
+permalink: /sections/venturers
 redirect_from: [/sections/venturer-scouts/]
 description: "Self-directed program focused on personal growth, major expeditions, and vocational skills. For 15 to 18 year olds, the only limits are the ones they set themselves."
 tagline: "Lead your own adventure."

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Working Together"
+permalink: /scouting/working-together
 badge: "Community"
 description: "Scouting is a partnership between families and leaders. Learn about our code of conduct, communication, and how we work as a team."
 ---

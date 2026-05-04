@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "About Us"
+permalink: /about
 badge: "Meet the Group"
 description: "Bundoora Scouts has been empowering young people in Melbourne's north since the 1960s. Learn about our history, our leaders, and what makes us tick."
 ---
@@ -28,8 +29,8 @@ All our leaders are Working with Children Check verified, first-aid trained, and
 
 ## Our Hall
 
-We meet regularly at our hall in Bundoora. The hall is also available for hire – [see our Hall Hire page](/hall-hire/) for details.
+We meet regularly at our hall in Bundoora. The hall is also available for hire – [see our Hall Hire page](/hall-hire) for details.
 
 ## Join Us
 
-Whether you're a young person looking to join, or an adult interested in volunteering as a leader, we'd love to hear from you. [Get in touch](/contact/).
+Whether you're a young person looking to join, or an adult interested in volunteering as a leader, we'd love to hear from you. [Get in touch](/contact).

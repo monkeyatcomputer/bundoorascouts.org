@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Our Leaders
+permalink: /about/our-leaders
 description: Meet the dedicated volunteer team behind Bundoora Scouts. Highly trained and passionate about empowering the next generation of trailfinders.
 ---
 
@@ -22,7 +23,7 @@ description: Meet the dedicated volunteer team behind Bundoora Scouts. Highly tr
         {% assign title_words = page.title | split: " " %}
         {% for word in title_words %}
           {% if forloop.last %}
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary-container">{{ word }}</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">{{ word }}</span>
           {% else %}
             {{ word }} 
           {% endif %}

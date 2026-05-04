@@ -15,7 +15,7 @@ onboarding_url: "https://extranet.scoutsvictoria.com.au/scoutonline/public/onboa
 theme: null
 
 #Outputting
-permalink: pretty
+permalink: /:path
 markdown: kramdown
 highlighter: rouge
 timezone: "Australia/Melbourne"
@@ -41,11 +41,19 @@ pagination:
   enabled: true
   per_page: 4
   offset: 0
-  permalink: '/page/:num/'
+  permalink: '/page/:num'
   title: ':title Page :num'
   limit: 100
   sort_field: 'date'
   sort_reverse: true
+
+kramdown:
+  hard_wrap: false
+  input: GFM
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+sass:
+  style: compressed
 
 # AutoPages
 autopages:
@@ -69,6 +77,12 @@ autopages:
 collections:
   people:
     output: false
+
+# Feed
+feed:
+  disable_in_development: true
+  excerpt_only: true
+  tags: true
 
 # Exclude from build
 exclude:

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Scout Talk (Glossary)"
+permalink: /scouting/glossary
 badge: "Lingo"
 description: "A handy guide to the common terms, sections, and roles you'll encounter in the Scouting movement."
 ---

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "The Program"
+permalink: /scouting/the-program
 badge: "One Journey"
 description: "Explore the 'One Journey, One Program' framework that delivers life skills, leadership, and adventure across all sections of Scouting."
 ---

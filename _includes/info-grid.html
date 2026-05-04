@@ -1,8 +1,9 @@
-<!-- Info Grid Include (Fees, Uniform, Link Badge) -->
-<!-- Usage: include info-grid.html colour=page.colour -->
 {% assign accent = include.colour | default: "#3f5e94" %}
 
-<section class="py-20 bg-surface">
+<section class="py-10 bg-surface not-prose">
+  <!-- Info Grid Include (Fees, Uniform, Link Badge) -->
+  <!-- Usage: include info-grid.html colour=page.colour -->
+
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Fees -->
@@ -12,7 +13,7 @@
         </div>
         <h4 class="text-xl font-bold text-primary mb-4">Fees</h4>
         <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Detailed information regarding fees is provided on our main information page.</p>
-        <a href="/about/parent-information/" class="text-xs font-black uppercase tracking-widest text-secondary flex items-center gap-2 hover:gap-3 transition-all" style="color: {{ accent }};">
+        <a href="/scouting/costs-and-uniform" class="text-xs font-black uppercase tracking-widest text-secondary flex items-center gap-2 hover:gap-3 transition-all" style="color: {{ accent }};">
           View Fee Structure <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
       </div>
@@ -24,7 +25,7 @@
         </div>
         <h4 class="text-xl font-bold text-primary mb-4">Uniform</h4>
         <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Full uniform is required for all meetings, including section shirt and group scarf.</p>
-        <a href="/about/parent-information/#uniform" class="text-xs font-black uppercase tracking-widest text-secondary flex items-center gap-2 hover:gap-3 transition-all" style="color: {{ accent }};">
+        <a href="/scouting/costs-and-uniform#uniform" class="text-xs font-black uppercase tracking-widest text-secondary flex items-center gap-2 hover:gap-3 transition-all" style="color: {{ accent }};">
           Badge Placement <span class="material-symbols-outlined text-sm">open_in_new</span>
         </a>
       </div>

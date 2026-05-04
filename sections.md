@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Our Sections – Bundoora Scouts"
+permalink: /sections
 description: "Explore all five Bundoora Scouts youth sections – from Joey Scouts (ages 5–8) all the way through to Rovers (18–26). Find the right section for your child."
 image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAnIAnfVpIno6p_Yg629u1Z_G_O98U6-6S0v1Y_8Z2x_O6X87MsenFKDnKcJNQsnxr3Fp-2t3fQx85Uk__-0ZgqRKDbJzbj_N6mXwzZWor57nvhPMWz4D_ixdGtv-cT13sqUREL2R_DlRUaUAuUMTr1ytn5BcSWGHsO3Ls-ImTy-RbeQKDapsajiWMerbozm1cvvEGOtLPlkFpKbYz2h_nlN7pgT3raDPzBNOyJQddTWZbI47Tx681w-5bn3lB2A"
 ---
@@ -20,7 +21,7 @@ image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAnIAnfVpIno6p_Yg629u
         Our Sections
       </span>
       <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-6 leading-tight tracking-tight">
-        A Journey of <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary-container">Discovery.</span>
+        A Journey of <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">Discovery.</span>
       </h1>
       <p class="text-xl text-primary-fixed-dim leading-relaxed font-body">
         Scouting is a progressive journey of discovery. Every section builds on the last, developing skills, confidence, and lifelong friendships in a safe and supportive environment.

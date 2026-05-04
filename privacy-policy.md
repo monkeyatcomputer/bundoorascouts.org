@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Privacy Policy"
+permalink: /privacy-policy
 description: "How Bundoora Scout Group collects, uses, and protects your personal information."
 ---
 

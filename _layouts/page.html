@@ -28,7 +28,7 @@ layout: default
         {% assign title_words = page.title | split: " " %}
         {% for word in title_words %}
         {% if forloop.last %}
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary-container">{{ word
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">{{ word
           }}</span>
         {% else %}
         {{ word }}
@@ -45,8 +45,13 @@ layout: default
 </section>
 
 <!-- Page Content -->
-<div class="max-w-7xl mx-auto px-6 md:px-12 py-20">
-  <div class="prose prose-lg max-w-none text-on-surface leading-relaxed">
+<div class="max-w-7xl mx-auto px-6 md:px-12 pt-12 pb-20">
+  <div class="prose prose-lg max-w-none text-on-surface leading-relaxed font-body
+                    prose-headings:font-headline prose-headings:text-primary prose-headings:tracking-tight prose-headings:font-black
+                    prose-p:text-on-surface prose-p:leading-relaxed
+                    prose-a:text-secondary prose-a:font-bold prose-a:no-underline hover:prose-a:text-primary prose-a:transition-colors
+                    prose-blockquote:border-l-4 prose-blockquote:border-on-tertiary-container prose-blockquote:bg-surface-container-low prose-blockquote:rounded-r-xl prose-blockquote:py-4 prose-blockquote:px-8 prose-blockquote:italic prose-blockquote:text-primary
+                    prose-img:rounded-xl prose-img:shadow-2xl">
     {{ content }}
   </div>
 </div>

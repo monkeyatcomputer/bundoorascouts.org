@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "What is Scouting?"
+permalink: /scouting/what-is-scouting
 badge: "Our Foundations"
 description: "Learn about the Scout Method, our values, and the Promise and Law that underpin everything we do in the global Scouting movement."
 ---

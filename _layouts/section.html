@@ -21,7 +21,7 @@ layout: default
     <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
   </div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 pb-24 md:pt-48 md:pb-32">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 pb-20 md:pt-48 md:pb-24">
     <div class="max-w-2xl">
       {% if section.logo-dark %}
       <div class="mb-8">
@@ -72,8 +72,15 @@ layout: default
   </div>
 </section>
 
-<div id="explore">
-  {{ content }}
+<div id="explore" class="max-w-7xl mx-auto px-6 md:px-12 pt-12 pb-20">
+  <div class="prose prose-lg max-w-none text-on-surface leading-relaxed font-body
+                    prose-headings:font-headline prose-headings:text-primary prose-headings:tracking-tight prose-headings:font-black
+                    prose-p:text-on-surface prose-p:leading-relaxed
+                    prose-a:text-secondary prose-a:font-bold prose-a:no-underline hover:prose-a:text-primary prose-a:transition-colors
+                    prose-blockquote:border-l-4 prose-blockquote:border-on-tertiary-container prose-blockquote:bg-surface-container-low prose-blockquote:rounded-r-xl prose-blockquote:py-4 prose-blockquote:px-8 prose-blockquote:italic prose-blockquote:text-primary
+                    prose-img:rounded-xl prose-img:shadow-2xl">
+    {{ content }}
+  </div>
 </div>
 
-{% include scouting-journey.html %}
+{% include scouting-journey.html %}
