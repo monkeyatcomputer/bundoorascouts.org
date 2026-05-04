@@ -5,8 +5,6 @@ permalink: /terms
 description: "Legal terms and conditions for using the Bundoora Scout Group website."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
-
 ## General
 
 This website (“Website”) is operated by Bundoora Scout Group on behalf of The Scout Association of Australia Victorian Branch ABN 39 662 387 026 (“Scouts Victoria”). 
@@ -64,5 +62,3 @@ Financial Facilities may be provided or facilitated by third parties. Bundoora S
 ## Governing Law and Jurisdiction
 
 The Terms and Conditions are governed by the laws of Victoria, Australia, even if you are not located or resident in Victoria. You submit to the non-exclusive jurisdiction of courts in Victoria and waive any right to claim that those courts are an inconvenient forum.
-
-</div>

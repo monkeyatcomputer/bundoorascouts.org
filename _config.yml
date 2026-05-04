@@ -15,7 +15,7 @@ onboarding_url: "https://extranet.scoutsvictoria.com.au/scoutonline/public/onboa
 theme: null
 
 #Outputting
-permalink: /:path
+permalink: /:title
 markdown: kramdown
 highlighter: rouge
 timezone: "Australia/Melbourne"
@@ -96,7 +96,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .jekyll-cache/
+  - README.md
   - artifacts/
+  - package-lock.json
+  - package.json
+  - node_modules/
 
 # Build settings
 defaults:

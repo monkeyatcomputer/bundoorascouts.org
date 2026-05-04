@@ -5,8 +5,6 @@ permalink: /privacy-policy
 description: "How Bundoora Scout Group collects, uses, and protects your personal information."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
-
 ## Overview
 
 Bundoora Scout Group is committed to protecting and maintaining the privacy, accuracy, and security of all personal information. This policy provides a framework for the management of personal information provided to, or collected by, Bundoora Scout Group on behalf of The Scout Association of Australia, Victorian Branch (‘Scouts Victoria’). 
@@ -79,5 +77,3 @@ Scouts Victoria
 Email: [privacy.officer@scoutsvictoria.com.au](mailto:privacy.officer@scoutsvictoria.com.au)
 
 If you are unsatisfied with the resolution, you may escalate your complaint to the Office of the Australian Information Commissioner (OAIC) at [www.oaic.gov.au](https://www.oaic.gov.au).
-
-</div>
