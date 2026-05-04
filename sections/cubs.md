@@ -15,7 +15,7 @@ award:
   name: "Grey Wolf Award"
   description: "The pinnacle of achievement in the Cub Scout Section. To earn the Grey Wolf Award a Cub Scout must hold a Gold Boomerang badge, participate in outdoor activities, attend Pack Councils, and complete multiple achievement badges."
 features:
-  - icon: tent
+  - icon: camping
     title: "Outdoor Adventures"
     description: "Going on Outings and Nature Trails, Orienteering, and Camping."
   - icon: sports_esports

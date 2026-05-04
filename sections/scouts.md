@@ -14,7 +14,7 @@ award:
   name: "Australian Scout Medallion"
   description: "The highest award in the Scout Section. To earn it, a Scout must participate in a Leadership Course, demonstrate an active leadership role, and achieve the Adventurer Cord."
 features:
-  - icon: kayak
+  - icon: kayaking
     title: "Adventurous Activities"
     description: "Abseiling, flying, hiking, camping, canoeing, and fishing."
   - icon: psychology
