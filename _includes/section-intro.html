@@ -1,0 +1,59 @@
+{% assign s = site.data.sections | where: "slug", include.section_slug | first %}
+<section class="py-20 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div class="prose prose-lg max-w-none text-on-surface leading-relaxed">
+        <h2 class="text-4xl font-black text-primary tracking-tight mb-8">{{ include.title }}</h2>
+        {% for paragraph in include.paragraphs %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+      <div class="relative">
+        {% assign gallery_images = site.data.gallery[include.section_slug] %}
+        {% if gallery_images %}
+          <div class="columns-2 gap-4 pb-12">
+            {% for item in gallery_images %}
+              <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden shadow-ambient-md group hover:shadow-ambient-lg transition-all duration-300 transform-gpu opacity-0 intro-gallery-item">
+                <img src="{{ item.image | relative_url }}" 
+                     alt="{{ item.alt }}" 
+                     loading="lazy"
+                     class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"/>
+              </div>
+            {% endfor %}
+          </div>
+          <script>
+            // Refresh ScrollTrigger when images load to prevent layout glitches
+            document.querySelectorAll('.columns-2 img').forEach(img => {
+              if (img.complete) {
+                if (window.ScrollTrigger) ScrollTrigger.refresh();
+              } else {
+                img.addEventListener('load', () => {
+                  if (window.ScrollTrigger) ScrollTrigger.refresh();
+                });
+              }
+            });
+
+            // Batch reveal for intro gallery
+            gsap.to('.intro-gallery-item', {
+              scrollTrigger: {
+                trigger: '.columns-2',
+                start: 'top 85%',
+                once: true
+              },
+              opacity: 1,
+              y: 0,
+              stagger: 0.1,
+              duration: 0.8,
+              ease: 'power2.out',
+              clearProps: 'y'
+            });
+          </script>
+        {% else %}
+          <div class="aspect-square rounded-3xl overflow-hidden shadow-ambient-lg {{ include.rotation | default: 'rotate-2' }} group hover:rotate-0 transition-transform duration-500">
+            <img src="{{ s.logo-light | relative_url }}" class="w-full h-full object-contain p-12 bg-surface-container-low" alt="{{ s.name }} Logo"/>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

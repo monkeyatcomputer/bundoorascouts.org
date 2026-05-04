@@ -1,0 +1,58 @@
+joeys:
+  - image: /uploads/sections/joeys/joeys-1.jpg
+    alt: Joey Scouts exploring nature together
+  - image: /uploads/sections/joeys/joeys-2.jpg
+    alt: Joey Scouts participating in group activities
+  - image: /uploads/sections/joeys/joeys-3.jpg
+    alt: Joey Scouts learning through fun and games
+  - image: /uploads/sections/joeys/joeys-4.jpg
+    alt: Joey Scouts developing teamwork skills
+
+cubs:
+  - image: /uploads/sections/cubs/cubs-1.jpg
+    alt: Cub Scouts tackling outdoor challenges
+  - image: /uploads/sections/cubs/cubs-2.jpg
+    alt: Cub Scouts building practical skills
+  - image: /uploads/sections/cubs/cubs-3.jpg
+    alt: Cub Scouts enjoying a group camping trip
+  - image: /uploads/sections/cubs/cubs-4.jpg
+    alt: Cub Scouts exploring the local environment
+
+scouts:
+  - image: /uploads/sections/scouts/scouts-1.jpg
+    alt: Scouts working on pioneering projects
+  - image: /uploads/sections/scouts/scouts-2.jpg
+    alt: Scouts navigating outdoor adventures
+  - image: /uploads/sections/scouts/scouts-3.jpg
+    alt: Scouts developing leadership on camp
+  - image: /uploads/sections/scouts/scouts-4.jpg
+    alt: Scouts collaborating on a team challenge
+
+venturers:
+  - image: /uploads/2025-08-16-uluru-adventure-2026/hike-uluru.jpg
+    alt: Venturers hiking at Uluru
+  - image: /uploads/2025-08-16-uluru-adventure-2026/camel-ride.jpg
+    alt: Venturers on camel ride
+  - image: /uploads/2025-08-16-uluru-adventure-2026/abandoned-jail.jpg
+    alt: Exploring historical sites
+  - image: /uploads/2025-08-16-uluru-adventure-2026/salt-lake.jpg
+    alt: Venturers at the salt lake
+
+rovers:
+  - image: /uploads/sections/rovers/rovers-1.jpg
+    alt: Rovers enjoying social and service events
+  - image: /uploads/sections/rovers/rovers-2.jpg
+    alt: Rovers on a regional adventure trip
+  - image: /uploads/sections/rovers/rovers-3.jpg
+    alt: Rovers contributing to community service
+  - image: /uploads/sections/rovers/rovers-4.jpg
+    alt: Rovers developing advanced life skills
+adult:
+  - image: /uploads/sections/adult/adult-1.jpg
+    alt: Adult volunteers in a training workshop
+  - image: /uploads/sections/adult/adult-2.jpg
+    alt: Adult leaders meeting
+  - image: /uploads/sections/adult/adult-3.jpg
+    alt: Adult volunteers supporting youth development
+  - image: /uploads/sections/adult/adult-4.jpg
+    alt: Adult volunteers involved in community projects

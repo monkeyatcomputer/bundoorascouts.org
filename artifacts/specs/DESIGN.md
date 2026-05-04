@@ -2,7 +2,7 @@
 
 ## 1. Overview & Creative North Star
 ### Creative North Star: "The Modern Trailfinder"
-This design system moves away from the rigid, boxy layouts of traditional community websites. Instead, it adopts an editorial, high-end aesthetic that mirrors the adventurous and structured nature of Scouting. We treat the digital canvas as a landscape—using **intentional asymmetry**, **tonal depth**, and **overlapping elements** to guide the user’s eye.
+This design system moves away from the rigid, boxy layouts of traditional community websites. Instead, it adopts an editorial, high-end aesthetic that mirrors the adventurous and structured nature of Scouting. We treat the digital canvas as a landscape–using **intentional asymmetry**, **tonal depth**, and **overlapping elements** to guide the user’s eye.
 
 The experience should feel premium yet approachable, replacing "standard" UI patterns with a signature visual language that emphasizes youth education through sophisticated, breathing layouts and authoritative typography.
 

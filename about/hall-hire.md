@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Hall Hire"
+redirect_from: [/about-us/hall-hire/]
 description: "The Bundoora Scout Hall is a fantastic community space suitable for meetings, workshops, birthday parties, and small events. Available for hire when not in use by our Scout group."
 ---
 

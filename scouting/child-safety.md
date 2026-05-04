@@ -33,13 +33,16 @@ The following are examples of unacceptable behaviour by Adults in Scouting:
 *   Distributing inappropriate materials or engaging in non-age-appropriate discussions.
 *   Encouraging or being under the influence of alcohol or illicit substances.
 
-<div class="bg-primary text-white p-6 rounded-xl not-prose my-8">
-  <h3 class="text-xl font-bold mb-4">How to report</h3>
-  <p>Anyone can report any incident of unacceptable behaviour to our Child Safety Team immediately:</p>
-  <p class="text-2xl font-black mb-2">1800 870 772</p>
-  <p class="text-sm">24 hours a day, 7 days a week</p>
-  <p class="mt-4">Email: <strong>childsafe@scoutsvictoria.com.au</strong></p>
-</div>
+> [!IMPORTANT]
+> **How to report**
+>
+> Anyone can report any incident of unacceptable behaviour to our Child Safety Team immediately.
+>
+> Phone: **1800 870 772**  
+> Email: **childsafe@scoutsvictoria.com.au**
+
+> [!NOTE]
+> The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
 {% include scouting-page-nav.html %}
 

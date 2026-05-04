@@ -22,6 +22,9 @@ description: "A handy guide to the common terms, sections, and roles you'll enco
 *   **Jamboree**: A massive gathering of Scouts (usually 11-15 year olds) from all over the country or world.
 *   **Cuboree**: A state-wide camp specifically for Cub Scouts.
 
+> [!NOTE]
+> The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
+
 {% include scouting-page-nav.html %}
 
 </div>

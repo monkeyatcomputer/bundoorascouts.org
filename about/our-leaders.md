@@ -34,7 +34,8 @@ description: Meet the dedicated volunteer team behind Bundoora Scouts. Highly tr
       
       <div class="flex gap-4 items-center">
         <div class="flex -space-x-4">
-          {% assign stack_leaders = site.people | limit: 3 %}
+          {% assign youth_leaders = site.people | where_exp: "person", "person.section != 'adult'" %}
+          {% assign stack_leaders = youth_leaders | limit: 3 %}
           {% for leader in stack_leaders %}
           <div class="w-12 h-12 rounded-full border-4 border-primary bg-surface-container-highest overflow-hidden shadow-lg">
             <img src="/assets/images/people/{{ leader.title | downcase }}.jpg" alt="{{ leader.title }}" class="w-full h-full object-cover" onerror="this.src='/assets/images/people/nophoto.jpg'">
@@ -42,7 +43,7 @@ description: Meet the dedicated volunteer team behind Bundoora Scouts. Highly tr
           {% endfor %}
         </div>
         <div class="text-sm font-bold text-on-primary-container bg-primary-container/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-sm">
-          {{ site.people.size }} Active Leaders
+          {{ youth_leaders.size }} Active Leaders
         </div>
       </div>
     </div>

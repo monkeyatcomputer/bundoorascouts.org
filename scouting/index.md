@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "About Scouting"
+redirect_from: [/about-scouting/new-program, /about-scouting/parent-caregiver-information/]
 badge: "Global Movement"
 description: "Discover the worldwide Scouting movement and how Bundoora Scouts partners with families to build resilience and leadership in young people."
 ---
@@ -23,7 +24,7 @@ description: "Discover the worldwide Scouting movement and how Bundoora Scouts p
           In Bundoora, we are proud to be part of this worldwide movement, run by local families who help make Scouting the best possible experience for our children. We wish your family lots of fun, friendship, adventure, and safe times ahead."
         </p>
       </div>
-      <p class="font-bold text-primary">— Bruce, Group Leader</p>
+      <p class="font-bold text-primary">– Bruce, Group Leader</p>
     </div>
   </div>
 </div>
@@ -62,6 +63,9 @@ Welcome to the world's largest youth movement. Use the links below to learn more
     <p class="text-on-surface-variant text-sm mt-2">Common terms and lingo explained.</p>
   </a>
 </div>
+
+> [!NOTE]
+> The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
 > In the spirit of reconciliation Bundoora Scout Group acknowledges the Traditional Custodians of country throughout our state and their connections to land, sea and community. We pay our respect to their Elders past and present and extend that respect to all Aboriginal and Torres Strait Islander peoples in our community.
 

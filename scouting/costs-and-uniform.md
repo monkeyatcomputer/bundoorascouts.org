@@ -28,7 +28,13 @@ Plus, there’ll be a Group cost which is calculated and managed by Bundoora Sco
 ### Activity Costs
 There is also the cost of activities such as camps. These are kept as low as possible because we usually use our own campsites and Leaders are unpaid volunteers. Major events like Cuboree and Jamboree cost more, but Bundoora Scouts works together to lower the individual cost through fundraising.
 
-**Financial issues should not be a barrier to any child being a Scout.** If you have any concerns, please speak with our Group Leader to discuss payment options.
+> [!IMPORTANT]
+> **Financial Support**
+>
+> Financial issues should not be a barrier to any child being a Scout. If you have any concerns, please speak with our Group Leader to discuss payment options.
+
+> [!NOTE]
+> The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
 {% include scouting-page-nav.html %}
 

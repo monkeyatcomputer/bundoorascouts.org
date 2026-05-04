@@ -1,0 +1,23 @@
+<!-- Meet the Leaders Include -->
+<!-- Usage: include leader-grid.html section_slug=page.section_slug colour=page.colour -->
+{% assign leader_slug = include.section_slug %}
+{% assign section_people = site.people | where: "section", leader_slug %}
+{% assign accent = include.colour | default: "#3f5e94" %}
+
+{% if section_people.size > 0 %}
+<section class="py-20 bg-surface">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+    <div class="mb-12 border-l-4 pl-6" style="border-color: {{ accent }};">
+      <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight">Meet the Leaders</h2>
+      <p class="text-on-surface-variant text-lg mt-2">The dedicated volunteers guiding our {{ page.title }}.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {% for person in section_people %}
+      <div data-gsap="reveal" data-delay="{{ forloop.index | times: 0.1 }}">
+        {% include leader-card.html person=person colour=accent %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

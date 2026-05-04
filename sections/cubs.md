@@ -1,30 +1,60 @@
 ---
 layout: section
 title: "Cub Scouts"
-description: "Learning practical skills, working in small teams called Sixes, and exploring the great outdoors. Cubs build independence and teamwork in every meeting."
+redirect_from: [/sections/cub-scouts/]
+description: "The Cub Scout program is specifically designed to meet the developmental needs of 8 to 11 year olds, focusing on independence, teamwork, and exploration."
 tagline: "Learn new skills. Explore the outdoors. Work together."
 age_range: "8–11"
 colour: "#E9C46A"
 colour_dark: "#FFCD00"
 icon: forest
 section_slug: cubs
+motto: "Do Your Best"
+award:
+  title: "Award Scheme"
+  name: "Grey Wolf Award"
+  description: "The pinnacle of achievement in the Cub Scout Section. To earn the Grey Wolf Award a Cub Scout must hold a Gold Boomerang badge, participate in outdoor activities, attend Pack Councils, and complete multiple achievement badges."
 features:
   - icon: tent
-    title: Camping & Outdoors
-    description: Regular day camps and overnight adventures introduce Cubs to bushcraft, fire safety, and the wonders of sleeping under the stars.
-  - icon: group_work
-    title: Sixes & Teamwork
-    description: Working in small groups (Sixes) teaches Cubs how to collaborate, lead, and support each other toward a common goal.
+    title: "Outdoor Adventures"
+    description: "Going on Outings and Nature Trails, Orienteering, and Camping."
+  - icon: sports_esports
+    title: "Team Games"
+    description: "Organising and playing team games with your Six."
   - icon: build
-    title: Practical Skills
-    description: First aid, cooking, knot-tying, and navigation — Cubs leave every year with a toolkit of life skills they'll use forever.
-  - icon: emoji_events
-    title: Badge Program
-    description: A structured and fun badge system covering sports, creativity, community service, and outdoor adventure.
-  - icon: map
-    title: Hiking & Navigation
-    description: Day hikes and orienteering challenges that build fitness, map-reading skills, and a love of the Australian bush.
-  - icon: volunteer_activism
-    title: Community Service
-    description: Regular community projects teach Cubs that Scouting is about giving back as much as it is about having fun.
+    title: "Practical Skills"
+    description: "Learn practical skills like knots, construction, and first aid."
+  - icon: airplanemode_active
+    title: "Water & Air Activities"
+    description: "Participating in Air Activities, Water Activities and Water Safety."
+intro:
+  title: "Positive Development through Adventure"
+  paragraphs:
+    - "The Cub Scout program provides opportunities for young people to develop and grow as individuals and as members of a team. Activities are planned to cover a broad range of interests and topics to trigger their imagination and curiosity."
+    - "As a member of a 'Six' you and your Pack will work together to explore the world. Your Cub Scout Leader will help you along the way and encourage you to participate in Scouting activities. You'll learn life-long skills, earn badges, make friends and have fun!"
+  rotation: "rotate-2"
+testimonials:
+  - quote: "Cub Scouts has been a fantastic experience for my son. He has learned so much and made great friends."
+    source: "A Cub Scout Parent"
 ---
+
+{% include feature-grid.html features=page.features colour=page.colour %}
+
+{% include section-intro.html 
+   section_slug=page.section_slug 
+   title=page.intro.title 
+   paragraphs=page.intro.paragraphs 
+   rotation=page.intro.rotation %}
+
+{% include promise-law.html 
+   colour=page.colour 
+   motto=page.motto 
+   award_title=page.award.title 
+   award_name=page.award.name 
+   award_description=page.award.description %}
+
+{% include testimonial-grid.html testimonials=page.testimonials colour=page.colour %}
+
+{% include info-grid.html colour=page.colour %}
+
+{% include leader-grid.html section_slug=page.section_slug colour=page.colour %}

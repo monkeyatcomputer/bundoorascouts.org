@@ -4,103 +4,109 @@
   role="navigation" aria-label="Main navigation">
 
   <div id="nav-inner"
-    class="flex items-center justify-between px-6 md:px-12 py-6 max-w-[1440px] mx-auto font-headline tracking-tight font-semibold text-sm">
+    class="flex items-center justify-between px-6 md:px-12 py-6 max-w-[1440px] mx-auto font-headline tracking-tight font-semibold text-base">
 
     <!-- Brand Logo (Left) -->
     <div class="flex-1 flex justify-start items-center">
       <a href="/" class="relative z-[60] group">
         <div id="logo-container"
-          class="absolute -top-4 left-0 w-20 h-20 md:w-32 md:h-32 bg-white rounded-full shadow-ambient-lg flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300">
+          class="absolute -top-6 left-0 w-28 h-28 md:w-32 md:h-32 bg-white rounded-full shadow-ambient-lg flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300">
           <img src="/assets/images/logo.png" alt="Bundoora Scouts" class="w-full h-auto transition-all duration-500"
             id="nav-logo" />
         </div>
         <!-- Placeholder to maintain width in the flex layout -->
-        <div class="w-20 md:w-32 h-8"></div>
+        <div class="w-28 md:w-32 h-8"></div>
       </a>
     </div>
 
     <!-- Links (Center) -->
-    <div class="hidden md:flex flex-1 justify-center items-center gap-8">
+    <div class="hidden md:flex flex-[2_2_0%] justify-center items-center gap-6 whitespace-nowrap">
       <div class="relative group h-full flex items-center">
-        <button class="flex items-center gap-1 py-4 {% if page.url contains '/sections/' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
+        <button
+          class="flex items-center gap-1 py-4 whitespace-nowrap {% if page.url contains '/sections/' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
           Sections
           <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
         </button>
-        <div class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[100]">
-          <a href="/sections/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/sections/' %}text-primary bg-surface-container-low{% endif %} border-b border-outline-variant/10 mb-1">
+        <div
+          class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[100]">
+          <a href="/sections/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/sections/' %}text-primary bg-surface-container-low{% endif %} border-b border-outline-variant/10 mb-1">
             Overview
           </a>
           {% assign nav_sections = site.data.sections | where: "active", true %}
           {% for s in nav_sections %}
-          <a href="/sections/{{ s.slug }}/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url contains s.slug %}text-primary bg-surface-container-low{% endif %} flex items-center justify-between group/item">
+          <a href="/sections/{{ s.slug }}/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url contains s.slug %}text-primary bg-surface-container-low{% endif %} flex items-center justify-between group/item">
             <span>{{ s.name }}</span>
-            <span class="text-[10px] opacity-0 group-hover/item:opacity-40 transition-opacity">{{ s.age_range }}</span>
+            <span class="text-xs opacity-0 group-hover/item:opacity-40 transition-opacity">{{ s.age_range }}</span>
           </a>
           {% endfor %}
         </div>
       </div>
       <a href="/the-campfire/"
-        class="{% if page.url contains '/the-campfire/' %}text-primary border-b-2 border-on-tertiary-container pb-1{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
+        class="whitespace-nowrap {% if page.url contains '/the-campfire/' %}text-primary border-b-2 border-on-tertiary-container pb-1{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
         The Campfire
       </a>
       <div class="relative group h-full flex items-center">
-        <button class="flex items-center gap-1 py-4 {% if page.url contains '/scouting' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
+        <button
+          class="flex items-center gap-1 py-4 whitespace-nowrap {% if page.url contains '/scouting' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
           About Scouting
           <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
         </button>
-        <div class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[100]">
-          <a href="/scouting/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/' %}text-primary bg-surface-container-low{% endif %} border-b border-outline-variant/10 mb-1">
+        <div
+          class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[100]">
+          <a href="/scouting/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/' %}text-primary bg-surface-container-low{% endif %} border-b border-outline-variant/10 mb-1">
             Overview
           </a>
-          <a href="/scouting/what-is-scouting/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/what-is-scouting/' %}text-primary bg-surface-container-low{% endif %}">
+          <a href="/scouting/what-is-scouting/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/what-is-scouting/' %}text-primary bg-surface-container-low{% endif %}">
             What is Scouting?
           </a>
-          <a href="/scouting/benefits-and-impact/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/benefits-and-impact/' %}text-primary bg-surface-container-low{% endif %}">
+          <a href="/scouting/benefits-and-impact/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/benefits-and-impact/' %}text-primary bg-surface-container-low{% endif %}">
             Benefits & Impact
           </a>
-          <a href="/scouting/the-program/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/the-program/' %}text-primary bg-surface-container-low{% endif %}">
+          <a href="/scouting/the-program/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/the-program/' %}text-primary bg-surface-container-low{% endif %}">
             The Program
           </a>
-          <a href="/scouting/costs-and-uniform/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/costs-and-uniform/' %}text-primary bg-surface-container-low{% endif %}">
+          <a href="/scouting/costs-and-uniform/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/costs-and-uniform/' %}text-primary bg-surface-container-low{% endif %}">
             Costs & Uniform
           </a>
-          <a href="/scouting/child-safety/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/child-safety/' %}text-primary bg-surface-container-low{% endif %}">
+          <a href="/scouting/child-safety/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/child-safety/' %}text-primary bg-surface-container-low{% endif %}">
             Child Safety
           </a>
-          <a href="/scouting/working-together/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/working-together/' %}text-primary bg-surface-container-low{% endif %}">
+          <a href="/scouting/working-together/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/working-together/' %}text-primary bg-surface-container-low{% endif %}">
             Working Together
           </a>
-          <a href="/scouting/glossary/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/glossary/' %}text-primary bg-surface-container-low{% endif %}">
+          <a href="/scouting/glossary/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting/glossary/' %}text-primary bg-surface-container-low{% endif %}">
             Scout Talk (Glossary)
           </a>
         </div>
       </div>
       <div class="relative group h-full flex items-center">
-        <button class="flex items-center gap-1 py-4 {% if page.url contains '/about' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
+        <button
+          class="flex items-center gap-1 py-4 whitespace-nowrap {% if page.url contains '/about' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
           About Us
           <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
         </button>
-        <div class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[100]">
-          <a href="/about/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/about/' %}text-primary bg-surface-container-low{% endif %} border-b border-outline-variant/10 mb-1">
+        <div
+          class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[100]">
+          <a href="/about/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/about/' %}text-primary bg-surface-container-low{% endif %} border-b border-outline-variant/10 mb-1">
             Overview
           </a>
-          <a href="/about/our-leaders/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/about/our-leaders/' %}text-primary bg-surface-container-low{% endif %}">
+          <a href="/about/our-leaders/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/about/our-leaders/' %}text-primary bg-surface-container-low{% endif %}">
             Our Leaders
           </a>
-          <a href="/about/our-sponsors/" 
-             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/about/our-sponsors/' %}text-primary bg-surface-container-low{% endif %}">
+          <a href="/about/our-sponsors/"
+            class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/about/our-sponsors/' %}text-primary bg-surface-container-low{% endif %}">
             Our Sponsors
           </a>
         </div>
@@ -110,9 +116,9 @@
     <!-- Actions (Right) -->
     <div class="flex-1 flex justify-end items-center gap-3">
       <!-- Contact Icon Button -->
-      <a href="/contact/" 
-         class="hidden sm:flex w-10 h-10 items-center justify-center rounded-lg border border-outline-variant/30 text-primary hover:bg-surface-container-low hover:border-primary/30 transition-all"
-         title="Contact Us">
+      <a href="/contact/"
+        class="hidden sm:flex w-10 h-10 items-center justify-center rounded-lg border border-outline-variant/30 text-primary hover:bg-surface-container-low hover:border-primary/30 transition-all"
+        title="Contact Us">
         <span class="material-symbols-outlined">mail</span>
       </a>
 
@@ -149,78 +155,113 @@
       </button>
     </div>
     <!-- Links -->
-    <nav class="flex-grow px-6 py-8 flex flex-col gap-2">
-      <a href="/sections/"
-        class="px-4 py-3 rounded-lg font-bold {% if page.url == '/sections/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">Sections</a>
-      
-      {% assign nav_sections = site.data.sections | where: "active", true %}
-      {% for s in nav_sections %}
-      <a href="/sections/{{ s.slug }}/"
-        class="px-8 py-2 rounded-lg text-sm font-medium {% if page.url contains s.slug %}text-primary{% else %}text-on-surface-variant hover:bg-surface-container{% endif %} flex items-center justify-between">
-        {{ s.name }}
-        <span class="text-[10px] opacity-40">{{ s.age_range }}</span>
-      </a>
-      {% endfor %}
+    <nav class="flex-grow overflow-y-auto px-4 py-6 flex flex-col gap-2">
+      <!-- Sections Accordion -->
+      <details class="group/menu">
+        <summary
+          class="flex items-center justify-between px-4 py-3 rounded-xl font-bold text-on-surface hover:bg-surface-container transition-colors list-none cursor-pointer">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">category</span>
+            <span>Sections</span>
+          </div>
+          <span
+            class="material-symbols-outlined text-sm transition-transform group-open/menu:rotate-180">expand_more</span>
+        </summary>
+        <div class="flex flex-col gap-1 mt-1 ml-4 pl-4 border-l-2 border-outline-variant/30">
+          <a href="/sections/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/sections/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            Overview
+          </a>
+          {% assign nav_sections = site.data.sections | where: "active", true %}
+          {% for s in nav_sections %}
+          <a href="/sections/{{ s.slug }}/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url contains s.slug %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %} flex items-center justify-between">
+            <span>{{ s.name }}</span>
+            <span class="text-[10px] opacity-40 uppercase tracking-tighter">{{ s.age_range }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </details>
+
       <a href="/the-campfire/"
-        class="px-4 py-3 rounded-lg font-bold {% if page.url contains '/the-campfire/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">The
-        Campfire</a>
-      <div class="px-4 py-2 mt-4 font-black text-primary uppercase text-[10px] tracking-widest opacity-50">About Scouting</div>
-      <a href="/scouting/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/scouting/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">info</span>
-        Overview
+        class="flex items-center gap-3 px-4 py-3 rounded-xl font-bold {% if page.url contains '/the-campfire/' %}bg-primary/10 text-primary{% else %}text-on-surface hover:bg-surface-container{% endif %}">
+        <span class="material-symbols-outlined">local_fire_department</span>
+        The Campfire
       </a>
-      <a href="/scouting/what-is-scouting/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/scouting/what-is-scouting/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">explore</span>
-        What is Scouting?
-      </a>
-      <a href="/scouting/benefits-and-impact/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/scouting/benefits-and-impact/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">trending_up</span>
-        Benefits & Impact
-      </a>
-      <a href="/scouting/the-program/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/scouting/the-program/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">assignment</span>
-        The Program
-      </a>
-      <a href="/scouting/costs-and-uniform/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/scouting/costs-and-uniform/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">payments</span>
-        Costs & Uniform
-      </a>
-      <a href="/scouting/child-safety/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/scouting/child-safety/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">security</span>
-        Child Safety
-      </a>
-      <a href="/scouting/working-together/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/scouting/working-together/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">groups</span>
-        Working Together
-      </a>
-      <a href="/scouting/glossary/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/scouting/glossary/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">menu_book</span>
-        Glossary
-      </a>
-      <div class="px-4 py-2 mt-4 font-black text-primary uppercase text-[10px] tracking-widest opacity-50">About Us</div>
-      <a href="/about/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/about/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">groups</span>
-        The Group
-      </a>
-      <a href="/about/our-leaders/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/about/our-leaders/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">volunteer_activism</span>
-        Our Leaders
-      </a>
-      <a href="/about/our-sponsors/"
-        class="px-4 py-3 rounded-lg font-bold flex items-center gap-3 {% if page.url == '/about/our-sponsors/' %}bg-primary-container text-white{% else %}text-on-surface hover:bg-surface-container{% endif %}">
-        <span class="material-symbols-outlined text-sm">handshake</span>
-        Our Sponsors
-      </a>
+
+      <!-- About Scouting Accordion -->
+      <details class="group/menu" {% if page.url contains '/scouting/' %}open{% endif %}>
+        <summary
+          class="flex items-center justify-between px-4 py-3 rounded-xl font-bold text-on-surface hover:bg-surface-container transition-colors list-none cursor-pointer">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">explore</span>
+            <span>About Scouting</span>
+          </div>
+          <span
+            class="material-symbols-outlined text-sm transition-transform group-open/menu:rotate-180">expand_more</span>
+        </summary>
+        <div class="flex flex-col gap-1 mt-1 ml-4 pl-4 border-l-2 border-outline-variant/30">
+          <a href="/scouting/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/scouting/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            Overview
+          </a>
+          <a href="/scouting/what-is-scouting/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/scouting/what-is-scouting/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            What is Scouting?
+          </a>
+          <a href="/scouting/benefits-and-impact/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/scouting/benefits-and-impact/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            Benefits & Impact
+          </a>
+          <a href="/scouting/the-program/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/scouting/the-program/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            The Program
+          </a>
+          <a href="/scouting/costs-and-uniform/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/scouting/costs-and-uniform/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            Costs & Uniform
+          </a>
+          <a href="/scouting/child-safety/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/scouting/child-safety/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            Child Safety
+          </a>
+          <a href="/scouting/working-together/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/scouting/working-together/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            Working Together
+          </a>
+          <a href="/scouting/glossary/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/scouting/glossary/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            Scout Talk (Glossary)
+          </a>
+        </div>
+      </details>
+
+      <!-- About Us Accordion -->
+      <details class="group/menu" {% if page.url contains '/about/' %}open{% endif %}>
+        <summary
+          class="flex items-center justify-between px-4 py-3 rounded-xl font-bold text-on-surface hover:bg-surface-container transition-colors list-none cursor-pointer">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">groups</span>
+            <span>About Us</span>
+          </div>
+          <span
+            class="material-symbols-outlined text-sm transition-transform group-open/menu:rotate-180">expand_more</span>
+        </summary>
+        <div class="flex flex-col gap-1 mt-1 ml-4 pl-4 border-l-2 border-outline-variant/30">
+          <a href="/about/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/about/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            The Group
+          </a>
+          <a href="/about/our-leaders/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/about/our-leaders/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            Our Leaders
+          </a>
+          <a href="/about/our-sponsors/"
+            class="px-4 py-2.5 rounded-lg text-sm font-medium {% if page.url == '/about/our-sponsors/' %}text-primary bg-primary/5{% else %}text-on-surface-variant hover:bg-surface-container-low{% endif %}">
+            Our Sponsors
+          </a>
+        </div>
+      </details>
     </nav>
     <!-- CTA -->
     <div class="px-6 pb-8">
@@ -265,9 +306,9 @@
       }, 0);
 
       navTl.to(logoContainer, {
-        top: '0px',
-        width: isMobile ? '64px' : '80px',
-        height: isMobile ? '64px' : '80px',
+        top: '-0.75rem',
+        width: isMobile ? '84px' : '80px',
+        height: isMobile ? '84px' : '80px',
         padding: '0.25rem',
         boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
         duration: 1,
@@ -285,5 +326,36 @@
     if (toggle) toggle.addEventListener('click', open);
     if (close) close.addEventListener('click', shut);
     if (backdrop) backdrop.addEventListener('click', shut);
+
+    // Accordion Animation (GSAP)
+    if (typeof gsap !== 'undefined') {
+      document.querySelectorAll('details.group\\/menu').forEach(details => {
+        const summary = details.querySelector('summary');
+        const content = details.querySelector(':scope > div');
+
+        summary.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isOpen = details.hasAttribute('open');
+
+          if (isOpen) {
+            // Closing
+            gsap.to(content, {
+              height: 0,
+              opacity: 0,
+              duration: 0.2,
+              ease: "power2.in",
+              onComplete: () => details.removeAttribute('open')
+            });
+          } else {
+            // Opening
+            details.setAttribute('open', '');
+            gsap.fromTo(content,
+              { height: 0, opacity: 0 },
+              { height: "auto", opacity: 1, duration: 0.3, ease: "power2.out" }
+            );
+          }
+        });
+      });
+    }
   });
 </script>

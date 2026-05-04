@@ -15,20 +15,20 @@ From the earliest campfires in the 1960s to today's multi-day expeditions and co
 
 We believe that Scouting is one of the most powerful youth development programs in the world. Our program is:
 
-- **Youth-led** — Young people plan and run their own activities
-- **Inclusive** — Open to all backgrounds, abilities, and interests
-- **Outdoors-focused** — The bush is our classroom
-- **Community-driven** — We give back as much as we take in
+- **Youth-led** – Young people plan and run their own activities
+- **Inclusive** – Open to all backgrounds, abilities, and interests
+- **Outdoors-focused** – The bush is our classroom
+- **Community-driven** – We give back as much as we take in
 
 ## Our Leaders
 
-Bundoora Scouts is powered entirely by dedicated volunteers — parents, young adults, and community members who give their time to create extraordinary experiences for youth.
+Bundoora Scouts is powered entirely by dedicated volunteers – parents, young adults, and community members who give their time to create extraordinary experiences for youth.
 
 All our leaders are Working with Children Check verified, first-aid trained, and receive ongoing Scouts Victoria training.
 
 ## Our Hall
 
-We meet regularly at our hall in Bundoora. The hall is also available for hire — [see our Hall Hire page](/hall-hire/) for details.
+We meet regularly at our hall in Bundoora. The hall is also available for hire – [see our Hall Hire page](/hall-hire/) for details.
 
 ## Join Us
 

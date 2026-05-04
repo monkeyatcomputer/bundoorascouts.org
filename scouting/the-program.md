@@ -29,6 +29,9 @@ Allows Scouts to set their own goals in areas they are passionate about, such as
 ### Peak Awards
 Each Section has a Peak Award (like the Grey Wolf Award for Cubs or the Australian Scout Award for Scouts) that represents the pinnacle of their achievement in that Section.
 
+> [!NOTE]
+> The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
+
 {% include scouting-page-nav.html %}
 
 </div>

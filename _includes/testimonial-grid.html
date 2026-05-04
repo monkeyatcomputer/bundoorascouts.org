@@ -1,0 +1,39 @@
+<!-- Testimonial Grid Include -->
+<!-- Usage: include testimonial-grid.html testimonials=page.testimonials colour=page.colour -->
+{% assign testimonials = include.testimonials %}
+{% assign accent = include.colour | default: "#3f5e94" %}
+
+{% if testimonials %}
+<section class="py-20 bg-surface">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-16">
+      <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight">What Our Families Say</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {% for t in testimonials %}
+      <div class="bg-surface-container-low p-10 rounded-3xl relative overflow-hidden group">
+        <!-- Quote Icon -->
+        <span
+          class="material-symbols-outlined text-6xl absolute -top-2 -left-2 opacity-5 text-primary rotate-12">format_quote</span>
+
+        <div class="relative z-10">
+          <p class="text-xl text-on-surface leading-relaxed italic mb-8 font-medium">
+            "{{ t.quote }}"
+          </p>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-full flex items-center justify-center bg-white/50 border border-outline-variant/20">
+              <span class="material-symbols-outlined text-primary" style="color: {{ accent }};">person</span>
+            </div>
+            <div>
+              <p class="font-bold text-primary">{{ t.source }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

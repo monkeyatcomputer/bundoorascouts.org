@@ -60,6 +60,9 @@ The first point of contact is the Leader of your child’s Section. Meeting nigh
 
 If you still need information, the next contact is the **Bundoora Group Leader**. If that doesn’t work out, you can contact the State Office on **8543 9800** to be put in touch with your **District Commissioner**.
 
+> [!NOTE]
+> The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
+
 {% include scouting-page-nav.html %}
 
 </div>

@@ -13,7 +13,7 @@ Scouting is a non-formal type of education. Young people learn new skills and re
 
 ## The Scout Method
 
-Scouting isn't just camping — it's a holistic development framework built around eight key elements:
+Scouting isn't just camping – it's a holistic development framework built around eight key elements:
 
 *   **Learning by Doing**: Young people learn best through practical experiences, not theory.
 *   **Patrol System**: Leadership and social skills are developed through teamwork and a sense of belonging in small groups.
@@ -45,6 +45,9 @@ Members choose which version they wish to make:
 *   **Be Respectful**: Be friendly and considerate; Care for others and the environment
 *   **Do What is Right**: Be trustworthy, honest, and fair; Use resources wisely
 *   **Believe in Myself**: Learn from my experiences; Face challenges with courage
+
+> [!NOTE]
+> The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
 {% include scouting-page-nav.html %}
 

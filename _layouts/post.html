@@ -10,8 +10,8 @@ layout: default
       <img src="{{ page.image }}" alt="{{ page.title }}"
         class="w-full h-full object-cover opacity-60 mix-blend-multiply" />
       {% else %}
-      <div class="w-full h-full bg-primary flex items-center justify-center">
-        <span class="material-symbols-outlined text-[12rem] text-white/10 filled">local_fire_department</span>
+      <div class="w-full h-full"
+        style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }}); opacity: 0.8;">
       </div>
       {% endif %}
       <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>

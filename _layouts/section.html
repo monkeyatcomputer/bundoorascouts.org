@@ -63,7 +63,7 @@ layout: default
           style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }});">
           Join {{ page.title }} <span class="material-symbols-outlined">arrow_forward</span>
         </a>
-        <a href="#what-to-expect"
+        <a href="#explore"
           class="bg-surface-container-highest/20 backdrop-blur-sm text-on-primary px-8 py-4 rounded-lg font-medium border border-outline-variant/30 hover:bg-surface-container-highest/30 transition-all duration-300">
           Learn More
         </a>
@@ -72,60 +72,8 @@ layout: default
   </div>
 </section>
 
-<!-- What to Expect -->
-<section id="what-to-expect" class="py-20 bg-surface-container-low mx-4 lg:mx-8 rounded-xl mt-8">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-    <div class="text-center mb-16">
-      <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight">What to Expect</h2>
-      <p class="text-on-surface-variant text-lg mt-3">Activities and experiences designed for ages {{ page.age_range }}.
-      </p>
-    </div>
+<div id="explore">
+  {{ content }}
+</div>
 
-    {% if page.features %}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {% for feature in page.features %}
-      <div
-        class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
-        <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-6"
-          style="background-color: {{ page.colour | default: '#3f5e94' }}20;">
-          <span class="material-symbols-outlined filled text-2xl"
-            style="color: {{ page.colour | default: '#3f5e94' }};">{{ feature.icon }}</span>
-        </div>
-        <h3 class="font-headline font-bold text-xl text-primary mb-3">{{ feature.title }}</h3>
-        <p class="text-on-surface-variant leading-[1.6] text-sm">{{ feature.description }}</p>
-      </div>
-      {% endfor %}
-    </div>
-    {% endif %}
-
-    <!-- Page content (from markdown body) -->
-    {% if content and content != "" %}
-    <div class="mt-16 prose prose-lg max-w-none text-on-surface leading-relaxed">
-      {{ content }}
-    </div>
-    {% endif %}
-  </div>
-</section>
-
-<!-- Meet the Leaders -->
-{% assign leader_slug = page.leader_slug | default: page.section_slug %}
-{% assign section_people = site.people | where: "section", leader_slug %}
-{% if section_people.size > 0 %}
-<section class="py-20 bg-surface">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-    <div class="mb-12 border-l-4 pl-6" style="border-color: {{ page.colour | default: '#3f5e94' }};">
-      <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight">Meet the Leaders</h2>
-      <p class="text-on-surface-variant text-lg mt-2">The dedicated volunteers guiding our {{ page.title }}.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {% for person in section_people %}
-      <div data-gsap="reveal" data-delay="{{ forloop.index | times: 0.1 }}">
-        {% include leader-card.html person=person colour=page.colour %}
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-{% include scouting-journey.html %}
+{% include scouting-journey.html %}

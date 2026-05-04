@@ -39,6 +39,9 @@ Through the Scouts Australia Resilience Survey, we found that Scouts have overal
 *   **11.6% more** report a healthy body than non-Scouts.
 *   **13% healthier** mental state.
 
+> [!NOTE]
+> The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
+
 {% include scouting-page-nav.html %}
 
 </div>

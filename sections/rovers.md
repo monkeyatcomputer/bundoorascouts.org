@@ -1,30 +1,60 @@
 ---
 layout: section
 title: "Handfield Rover Unit"
-description: "Service, adventure, and fellowship. Handfield Rovers give back to the community while pursuing their own goals and maintaining the spirit of Scouting."
-tagline: "Service, adventure, and fellowship."
-age_range: "18–26"
+description: "Service, adventure, and fellowship. Rovers are self-governing young adults (18-25) who create their own adventures and give back to the community."
+tagline: "Service, adventure, fellowship."
+age_range: "18–25"
 colour: "#DC291E"
 colour_dark: "#DC291E"
 icon: directions_bike
 section_slug: rovers
+motto: "Service"
+redirect_from: [/sections/rover-scouts/]
+award:
+  title: "Award Scheme"
+  name: "Baden-Powell Scout Award"
+  description: "The highest award available to members of the Rover Section, recognized worldwide. Rovers can also earn the St George Award and the World Scout Award."
 features:
-  - icon: volunteer_activism
-    title: Community Service
-    description: Rovers are the backbone of Scouting's service tradition — running events, maintaining venues, and giving back.
-  - icon: directions_bike
-    title: Adventure Projects
-    description: Cycling tours, climbing expeditions, ocean sailing, and more — Rovers write their own adventure stories.
-  - icon: groups
-    title: Fellowship & Crew
-    description: A close-knit Crew of like-minded young adults who support each other in work, travel, and life.
-  - icon: construction
-    title: Hallkeeping & Support
-    description: Rovers support the wider Scout group through maintenance, leader support, and running events.
-  - icon: language
-    title: International Moot
-    description: Connect with Rovers from around the world at international events and develop a global network.
-  - icon: workspace_premium
-    title: Baden-Powell Award
-    description: The highest honour a Rover can achieve, recognising outstanding service and personal development.
+  - icon: directions_car
+    title: "Motorsports"
+    description: "Get down and dirty with Victoria’s Rovers for motorsports at Mudbash."
+  - icon: celebration
+    title: "Social Events"
+    description: "Costumed chaos reigns at the annual Rover Ball and Surfmoot camp at Anglesea."
+  - icon: hiking
+    title: "Outdoor Adventures"
+    description: "The Armstrong 500 hiking competition and our very own Rover Bogong Ski Chalet."
+  - icon: public
+    title: "National Events"
+    description: "Converge with Rovers from all over Australia for the tri-annual National Moot."
+intro:
+  title: "Beyond the Horizon"
+  paragraphs:
+    - "\"Rovers do stuff\" is a popular sentiment because we do in fact do lots of stuff! As Rovers, we create our own adventure from start to finish, building skills widely recognised outside of Scouting."
+    - "Handfield Rover Unit is hosted at the Bundoora Scout Hall Rover Den and welcomes all young adults from 18 to 25 years. You don’t need any prior Scouting experience – just a 'give it a go' attitude!"
+  rotation: "rotate-2"
+testimonials:
+  - quote: "Rovers is a great way to meet new people and have amazing experiences."
+    source: "A Rover"
 ---
+
+{% include feature-grid.html features=page.features colour=page.colour %}
+
+{% include section-intro.html 
+   section_slug=page.section_slug 
+   title=page.intro.title 
+   paragraphs=page.intro.paragraphs 
+   rotation=page.intro.rotation %}
+
+{% include promise-law.html 
+   colour=page.colour 
+   motto=page.motto 
+   award_title=page.award.title 
+   award_name=page.award.name 
+   award_description=page.award.description %}
+
+{% include testimonial-grid.html testimonials=page.testimonials colour=page.colour %}
+
+{% include info-grid.html colour=page.colour %}
+
+{% include leader-grid.html section_slug=page.section_slug colour=page.colour %}

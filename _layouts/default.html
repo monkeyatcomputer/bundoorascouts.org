@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% if page.title %}{{ page.title }} — Bundoora Scouts{% else %}Bundoora Scouts — The Modern Trailfinder{% endif
+  <title>{% if page.title %}{{ page.title }} – Bundoora Scouts{% else %}Bundoora Scouts – The Modern Trailfinder{% endif
     %}</title>
   <meta name="description"
     content="{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 }}" />
@@ -144,6 +144,78 @@
     .material-symbols-outlined.filled {
       font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
+
+    /* Markdown Alerts (GitHub Style) */
+    .markdown-alert {
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border-left: 0.3rem solid #d0d7de;
+      border-radius: 0.75rem;
+      background: #f8fafc;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    
+    .markdown-alert .markdown-alert-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 800;
+      font-family: 'Nunito Sans', sans-serif;
+      margin-top: 0 !important;
+      margin-bottom: 0.75rem !important;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.875rem;
+    }
+
+    .markdown-alert .markdown-alert-title .material-symbols-outlined {
+      font-size: 1.25rem;
+    }
+
+    .markdown-alert p {
+      margin-bottom: 0;
+      color: #474650;
+      line-height: 1.6;
+    }
+    .markdown-alert p:first-child {
+      margin-top: 0 !important;
+    }
+
+    .markdown-alert-note { border-left-color: #0ea5e9; background: #f0f9ff; }
+    .markdown-alert-note .markdown-alert-title { color: #0284c7; }
+
+    .markdown-alert-tip { border-left-color: #10b981; background: #ecfdf5; }
+    .markdown-alert-tip .markdown-alert-title { color: #059669; }
+
+    .markdown-alert-important { 
+      border-left: none; 
+      background: #100e4c !important; 
+      color: white !important;
+      box-shadow: 0 10px 30px rgba(16, 14, 76, 0.2);
+    }
+    .markdown-alert-important .markdown-alert-title { color: white !important; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem; }
+    .markdown-alert-important p { color: rgba(255,255,255,0.9) !important; }
+    .markdown-alert-important strong { color: white !important; }
+    .markdown-alert-important a { color: #abc7ff !important; text-decoration: underline; }
+
+    .markdown-alert-warning { border-left-color: #f59e0b; background: #fffbeb; }
+    .markdown-alert-warning .markdown-alert-title { color: #d97706; }
+
+    .markdown-alert-caution { border-left-color: #ef4444; background: #fef2f2; }
+    .markdown-alert-caution .markdown-alert-title { color: #dc2626; }
+
+    /* Prose Overrides for Alerts */
+    .prose blockquote.markdown-alert {
+      font-style: normal;
+      quotes: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: none;
+    }
+    .prose blockquote.markdown-alert p::before,
+    .prose blockquote.markdown-alert p::after {
+      content: none !important;
+    }
   </style>
 
   {% seo %}
@@ -179,6 +251,37 @@
           ease: "power3.out",
           delay: el.dataset.delay || 0
         });
+      });
+
+      // Markdown Alert Transformation
+      const alertConfigs = {
+        'NOTE': { class: 'note', icon: 'info' },
+        'TIP': { class: 'tip', icon: 'lightbulb' },
+        'IMPORTANT': { class: 'important', icon: 'priority_high' },
+        'WARNING': { class: 'warning', icon: 'warning' },
+        'CAUTION': { class: 'caution', icon: 'dangerous' }
+      };
+
+      document.querySelectorAll('blockquote').forEach(bq => {
+        const firstP = bq.querySelector('p:first-child');
+        if (!firstP) return;
+
+        const match = firstP.innerHTML.match(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/);
+        if (match) {
+          const type = match[1];
+          const config = alertConfigs[type];
+          
+          bq.classList.add('markdown-alert', `markdown-alert-${config.class}`);
+          
+          if (type !== 'IMPORTANT') {
+            const header = document.createElement('p');
+            header.classList.add('markdown-alert-title');
+            header.innerHTML = `<span class="material-symbols-outlined">${config.icon}</span>${type}`;
+            bq.insertBefore(header, firstP);
+          }
+          
+          firstP.innerHTML = firstP.innerHTML.replace(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*/, '');
+        }
       });
     });
   </script>

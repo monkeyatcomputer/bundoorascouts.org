@@ -1,4 +1,4 @@
-# AGENTS.md — Bundoora Scouts Website Redesign
+# AGENTS.md – Bundoora Scouts Website Redesign
 
 This file provides instructions for AI coding agents working on the **Bundoora Scouts website redesign** (`bundoorascouts.org`). Read this file in full before making any changes.
 
@@ -8,7 +8,7 @@ This file provides instructions for AI coding agents working on the **Bundoora S
 
 This is a refreshed redesign of the [Bundoora Scouts](https://bundoorascouts.org) website. The site is built with **Jekyll** (static site generator) and is intended to be deployed via GitHub Pages or a compatible static hosting service.
 
-The design is driven by mockups created in **Google Stitch** (see the `samples/` folder). Always refer to these Stitch exports — both `screen.png` (visual reference) and `code.html` (design token and layout reference) — before implementing or modifying any page.
+The design is driven by mockups created in **Google Stitch** (see the `samples/` folder). Always refer to these Stitch exports – both `screen.png` (visual reference) and `code.html` (design token and layout reference) – before implementing or modifying any page.
 
 ---
 
@@ -19,7 +19,7 @@ The design is driven by mockups created in **Google Stitch** (see the `samples/`
 | Generator       | [Jekyll](https://jekyllrb.com/) `~> 4.4.1`             |
 | Theme           | Custom (no `minima`; bespoke layouts and includes)      |
 | CSS Framework   | [Tailwind CSS v3](https://tailwindcss.com/) via CDN     |
-| Fonts           | Google Fonts — **Nunito Sans** (headings + body)        |
+| Fonts           | Google Fonts – **Nunito Sans** (headings + body)        |
 | Icons           | [Material Symbols Outlined](https://fonts.google.com/icons) via Google Fonts CDN |
 | Markdown        | Kramdown (Jekyll default)                               |
 | Plugins         | `jekyll-paginate-v2`, `jekyll-sitemap`, `jekyll-feed`, `jekyll-seo-tag`, `jekyll-redirect-from`, `jekyll-include-cache` |
@@ -72,10 +72,10 @@ All design tokens are derived from `samples/home_page_revised/`. This version re
 
 | Token                      | Value       | Usage                                 |
 |----------------------------|-------------|---------------------------------------|
-| `primary`                  | `#100e4c`   | Main brand navy — headings, buttons   |
-| `primary-container`        | `#262661`   | Darker navy — footer, hero text       |
-| `secondary`                | `#3f5e94`   | Blue — links, accents, nav active     |
-| `secondary-container`      | `#a3c1fe`   | Light blue — selection highlight      |
+| `primary`                  | `#100e4c`   | Main brand navy – headings, buttons   |
+| `primary-container`        | `#262661`   | Darker navy – footer, hero text       |
+| `secondary`                | `#3f5e94`   | Blue – links, accents, nav active     |
+| `secondary-container`      | `#a3c1fe`   | Light blue – selection highlight      |
 | `surface`                  | `#faf9f9`   | Page background                       |
 | `surface-container-low`    | `#f5f3f3`   | Card backgrounds                      |
 | `surface-container`        | `#efeded`   | Slightly darker card surfaces         |
@@ -84,12 +84,12 @@ All design tokens are derived from `samples/home_page_revised/`. This version re
 | `on-surface`               | `#1b1c1c`   | Body text                             |
 | `on-surface-variant`       | `#474650`   | Secondary/muted text                  |
 | `outline-variant`          | `#c8c5d1`   | Borders, dividers                     |
-| `on-tertiary-container`    | `#31a59e`   | Teal accent — blog tags, badges       |
+| `on-tertiary-container`    | `#31a59e`   | Teal accent – blog tags, badges       |
 
 ### Typography
 
-- **Headline font:** `Nunito Sans` — weights 500, 600, 700, 800; used for `h1`–`h6`, nav items, buttons, labels
-- **Body font:** `Nunito Sans` — optical size 6–12, weights 400, 600; used for body text, descriptions
+- **Headline font:** `Nunito Sans` – weights 500, 600, 700, 800; used for `h1`–`h6`, nav items, buttons, labels
+- **Body font:** `Nunito Sans` – optical size 6–12, weights 400, 600; used for body text, descriptions
 - Apply via Tailwind font families: `font-headline`, `font-body`, `font-label`
 
 ### Border Radius (Revised)
