@@ -16,7 +16,7 @@
 - name: Joey Scouts
   shortname: Joeys
   slug: joeys
-  url: /sections/joeys/
+  url: /sections/joeys
   age_range: "5 to 8"
   time: "Thursday – 6.00pm to 7.00pm"
   colour: "#F4A261"
@@ -36,7 +36,7 @@
 - name: Cub Scouts
   shortname: Cubs
   slug: cubs
-  url: /sections/cubs/
+  url: /sections/cubs
   age_range: "8 to 11"
   time: "Monday – 7.00pm to 8.30pm"
   colour: "#E9C46A"
@@ -56,7 +56,7 @@
 - name: Scouts
   shortname: Scouts
   slug: scouts
-  url: /sections/scouts/
+  url: /sections/scouts
   age_range: "11 to 15"
   time: "Wednesday – 7.00pm to 9.00pm"
   colour: "#2A9D8F"
@@ -76,7 +76,7 @@
 - name: Venturer Scouts
   shortname: Venturers
   slug: venturers
-  url: /sections/venturers/
+  url: /sections/venturers
   age_range: "15 to 18"
   time: null
   colour: "#A6264C"
@@ -96,7 +96,7 @@
 - name: Handfield Rover Unit
   shortname: Handfield Rovers
   slug: rovers
-  url: /sections/rovers/
+  url: /sections/rovers
   age_range: "18 to 26"
   time: "Thursday – 7.30pm to 9.30pm"
   colour: "#DC291E"
@@ -116,7 +116,7 @@
 - name: Adult Volunteers
   shortname: Adults
   slug: adult
-  url: /sections/adult/
+  url: /sections/adult
   age_range: "18+"
   time: "Flexible - Enquire for details"
   colour: "#3f5e94"
