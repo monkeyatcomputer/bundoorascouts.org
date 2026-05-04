@@ -85,113 +85,12 @@ layout: default
 
       {{ content }}
 
-      <!-- Tags Section -->
-      {% if page.tags %}
-      <div class="pt-8 flex flex-wrap gap-3 items-center border-t border-outline-variant mt-16">
-        {% for tag in page.tags %}
-        <a href="/the-campfire/tag/{{ tag | slugify }}"
-          class="px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold hover:bg-secondary hover:text-on-primary transition-all">
-          {{ tag }}
-        </a>
-        {% endfor %}
-      </div>
-      {% endif %}
+      {% include post-tags.html %}
     </article>
 
-    <!-- Horizontal Share Bar -->
-    <div class="mt-16 py-8 border-y border-outline-variant w-full">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
-        <div>
-          <h4 class="text-xl font-bold text-primary mb-1">Spread the word</h4>
-          <p class="text-on-surface-variant text-sm">Enjoyed this story? Share it with your troop.</p>
-        </div>
+    {% include share-bar.html %}
 
-        <div class="flex flex-wrap items-center gap-3">
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | url_encode }}{{ page.url | url_encode }}"
-            target="_blank" rel="noopener"
-            class="flex items-center gap-2 px-4 py-2.5 bg-[#1877F2] text-white rounded-xl font-bold text-xs hover:opacity-90 transition-all shadow-sm">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-            </svg>
-            <span>Facebook</span>
-          </a>
-
-          <!-- X (Twitter) -->
-          <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url | url_encode }}{{ page.url | url_encode }}"
-            target="_blank" rel="noopener"
-            class="flex items-center gap-2 px-4 py-2.5 bg-black text-white rounded-xl font-bold text-xs hover:opacity-90 transition-all shadow-sm">
-            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-            </svg>
-            <span>Post to X</span>
-          </a>
-
-          <!-- Email -->
-          <a href="mailto:?subject={{ page.title | url_encode }}&body=Check out this story from Bundoora Scouts: {{ site.url }}{{ page.url }}"
-            class="flex items-center gap-2 px-4 py-2.5 bg-secondary text-white rounded-xl font-bold text-xs hover:opacity-90 transition-all shadow-sm">
-            <span class="material-symbols-outlined text-sm">mail</span>
-            <span>Email</span>
-          </a>
-
-          <!-- Copy Link -->
-          <button id="copy-link-btn" data-url="{{ site.url }}{{ page.url }}"
-            class="flex items-center gap-2 px-4 py-2.5 bg-white text-primary border border-outline-variant rounded-xl font-bold text-xs hover:border-primary transition-all shadow-sm">
-            <span class="material-symbols-outlined text-sm">link</span>
-            <span id="copy-btn-text">Copy Link</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <script>
-      // Copy to Clipboard
-      document.getElementById('copy-link-btn')?.addEventListener('click', function () {
-        const url = this.getAttribute('data-url');
-        const text = document.getElementById('copy-btn-text');
-
-        navigator.clipboard.writeText(url).then(() => {
-          const originalText = text.innerText;
-          text.innerText = 'Copied!';
-          setTimeout(() => { text.innerText = originalText; }, 2000);
-        });
-      });
-    </script>
-    <!-- Post Navigation -->
-    <nav class="my-16 flex flex-col sm:flex-row gap-6 border-t border-b border-outline-variant/10 py-12">
-      <div class="flex-1">
-        {% if page.previous %}
-        <a href="{{ page.previous.url }}"
-          class="group flex flex-col gap-3 p-6 bg-surface-container-low rounded-2xl hover:bg-secondary-container transition-all shadow-sm">
-          <span class="flex items-center gap-2 text-xs font-black text-secondary uppercase tracking-tighter">
-            <span class="material-symbols-outlined text-sm">arrow_back</span>
-            Previous Adventure
-          </span>
-          <span
-            class="text-xl font-bold text-primary leading-tight group-hover:text-primary transition-colors line-clamp-2">
-            {{ page.previous.title }}
-          </span>
-        </a>
-        {% endif %}
-      </div>
-
-      <div class="flex-1 text-right">
-        {% if page.next %}
-        <a href="{{ page.next.url }}"
-          class="group flex flex-col gap-3 p-6 bg-surface-container-low rounded-2xl hover:bg-secondary-container transition-all shadow-sm items-end">
-          <span class="flex items-center gap-2 text-xs font-black text-secondary uppercase tracking-tighter">
-            Next Adventure
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
-          </span>
-          <span
-            class="text-xl font-bold text-primary leading-tight group-hover:text-primary transition-colors line-clamp-2">
-            {{ page.next.title }}
-          </span>
-        </a>
-        {% endif %}
-      </div>
-    </nav>
+    {% include post-nav.html %}
   </div>
 </main>
 

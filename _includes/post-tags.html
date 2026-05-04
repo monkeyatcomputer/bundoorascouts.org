@@ -1,0 +1,10 @@
+{% if page.tags %}
+<div class="pt-8 flex flex-wrap gap-3 items-center border-t border-outline-variant mt-16">
+  {% for tag in page.tags %}
+  <a href="/the-campfire/tag/{{ tag | slugify }}"
+    class="px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold hover:bg-secondary hover:text-on-primary transition-all">
+    {{ tag }}
+  </a>
+  {% endfor %}
+</div>
+{% endif %}

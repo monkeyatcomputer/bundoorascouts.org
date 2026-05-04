@@ -239,39 +239,10 @@ layout: default
     {% include trip-contact.html %}
     {% endif %}
 
-    <!-- Post Navigation -->
-    <nav class="mt-32 flex flex-col sm:flex-row gap-6 border-t border-outline-variant/10 pt-12">
-      <div class="flex-1">
-        {% if page.previous %}
-        <a href="{{ page.previous.url }}"
-          class="group flex flex-col gap-3 p-6 bg-surface-container-low rounded-2xl hover:bg-secondary-container transition-all shadow-sm">
-          <span class="flex items-center gap-2 text-xs font-black text-secondary uppercase tracking-tighter">
-            <span class="material-symbols-outlined text-sm">arrow_back</span>
-            Previous Post
-          </span>
-          <span
-            class="text-xl font-bold text-primary leading-tight group-hover:text-primary transition-colors line-clamp-2">
-            {{ page.previous.title }}
-          </span>
-        </a>
-        {% endif %}
-      </div>
+    {% include post-tags.html %}
 
-      <div class="flex-1 text-right">
-        {% if page.next %}
-        <a href="{{ page.next.url }}"
-          class="group flex flex-col gap-3 p-6 bg-surface-container-low rounded-2xl hover:bg-secondary-container transition-all shadow-sm items-end">
-          <span class="flex items-center gap-2 text-xs font-black text-secondary uppercase tracking-tighter">
-            Next Post
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
-          </span>
-          <span
-            class="text-xl font-bold text-primary leading-tight group-hover:text-primary transition-colors line-clamp-2">
-            {{ page.next.title }}
-          </span>
-        </a>
-        {% endif %}
-      </div>
-    </nav>
+    {% include share-bar.html %}
+
+    {% include post-nav.html %}
   </div>
 </main>
