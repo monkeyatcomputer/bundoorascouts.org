@@ -6,8 +6,6 @@ badge: "Getting Started"
 description: "Practical information about the Scout uniform, where to buy it, and the costs associated with joining Bundoora Scout Group."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
-
 ## The Scout Uniform
 
 The basic uniform is a shirt and scarf (which is usually held together by a woggle). The shirt is available from [The Scout Shop](https://scoutshop.com.au) for approximately $37 to $52.
@@ -39,5 +37,3 @@ There is also the cost of activities such as camps. These are kept as low as pos
 > The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
 {% include scouting-page-nav.html %}
-
-</div>

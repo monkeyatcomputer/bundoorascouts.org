@@ -6,8 +6,6 @@ badge: "Zero Tolerance"
 description: "Our commitment to ensuring Scouting is a safe place for young people through strict protocols, training, and a zero-tolerance approach to abuse."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
-
 ## Our Commitment to Child Safety
 
 Scouts Victoria is a Child Safe organisation. We take a zero-tolerance approach to any form of abuse or neglect. We dedicate ourselves to ensuring Scouting is a safe place for young people.
@@ -46,5 +44,3 @@ The following are examples of unacceptable behaviour by Adults in Scouting:
 > The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
 {% include scouting-page-nav.html %}
-
-</div>

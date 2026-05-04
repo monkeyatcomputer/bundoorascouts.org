@@ -7,8 +7,6 @@ badge: "Global Movement"
 description: "Discover the worldwide Scouting movement and how Bundoora Scouts partners with families to build resilience and leadership in young people."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-4 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
-
 <!-- Welcome from Group Leader -->
 <div class="not-prose bg-surface-container-low border border-outline-variant/30 rounded-2xl p-8 mb-8 shadow-sm">
   <div class="flex flex-col md:flex-row gap-8 items-center">
@@ -71,5 +69,3 @@ Welcome to the world's largest youth movement. Use the links below to learn more
 > In the spirit of reconciliation Bundoora Scout Group acknowledges the Traditional Custodians of country throughout our state and their connections to land, sea and community. We pay our respect to their Elders past and present and extend that respect to all Aboriginal and Torres Strait Islander peoples in our community.
 
 {% include scouting-page-nav.html %}
-
-</div>

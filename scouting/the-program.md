@@ -6,8 +6,6 @@ badge: "One Journey"
 description: "Explore the 'One Journey, One Program' framework that delivers life skills, leadership, and adventure across all sections of Scouting."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
-
 ## One Journey, One Program
 
 Every Scout has the opportunity to achieve with our program. Our framework **One Journey, One Program**, features a continuous and progressive series of personal achievements.
@@ -34,5 +32,3 @@ Each Section has a Peak Award (like the Grey Wolf Award for Cubs or the Australi
 > The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
 {% include scouting-page-nav.html %}
-
-</div>

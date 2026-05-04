@@ -6,8 +6,6 @@ badge: "Our Foundations"
 description: "Learn about the Scout Method, our values, and the Promise and Law that underpin everything we do in the global Scouting movement."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
-
 ## A Global Movement
 
 Scouting is a non-formal type of education. Young people learn new skills and responsible independence through the **Scout Method**. Although our programs are continually updated to remain contemporary, the Scout Method has stood the test of time.
@@ -51,5 +49,3 @@ Members choose which version they wish to make:
 > The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
 {% include scouting-page-nav.html %}
-
-</div>

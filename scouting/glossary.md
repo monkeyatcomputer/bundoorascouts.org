@@ -6,8 +6,6 @@ badge: "Lingo"
 description: "A handy guide to the common terms, sections, and roles you'll encounter in the Scouting movement."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
-
 ## Common Scouting Terms
 
 *   **Joey Scouts (5-8)**: Meet weekly as a Unit; attend Kangaree. Peak award: Joey Scout Challenge Award.
@@ -27,5 +25,3 @@ description: "A handy guide to the common terms, sections, and roles you'll enco
 > The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
 {% include scouting-page-nav.html %}
-
-</div>

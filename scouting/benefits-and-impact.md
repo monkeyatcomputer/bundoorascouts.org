@@ -6,8 +6,6 @@ badge: "Why Scouting?"
 description: "Discover the lifelong advantages of Scouting, from building resilience and leadership to improving mental health and academic outcomes."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
-
 ## The benefits of Scouting
 
 There are many lifelong advantages that young people get from their years enjoying Scouting with friends and family. Here are some of the opportunities your child will get:
@@ -44,5 +42,3 @@ Through the Scouts Australia Resilience Survey, we found that Scouts have overal
 > The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
 {% include scouting-page-nav.html %}
-
-</div>

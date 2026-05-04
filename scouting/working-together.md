@@ -6,7 +6,6 @@ badge: "Community"
 description: "Scouting is a partnership between families and leaders. Learn about our code of conduct, communication, and how we work as a team."
 ---
 
-<div class="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate prose-headings:text-primary" markdown="1">
 
 ## We’re Playing on the Same Team
 
@@ -66,4 +65,3 @@ If you still need information, the next contact is the **Bundoora Group Leader**
 
 {% include scouting-page-nav.html %}
 
-</div>
