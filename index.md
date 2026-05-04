@@ -93,3 +93,49 @@ image: "/uploads/hero/aerial.jpg"
   </div>
 </section>
 
+<!-- Hall Hire CTA Section -->
+<section class="max-w-[1440px] mx-auto px-4 lg:px-8 mb-12" data-gsap="reveal">
+  <div class="relative bg-surface-container-high rounded-[3rem] overflow-hidden shadow-ambient-lg border border-outline-variant/20">
+    <div class="absolute inset-0 z-0">
+      <img src="/uploads/hall-hire/Main Hall 2.jpg" alt="Bundoora Scout Hall Interior" class="w-full h-full object-cover opacity-20 mix-blend-overlay">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/5"></div>
+    </div>
+    
+    <div class="relative z-10 flex flex-col md:flex-row items-center">
+      <div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24">
+        <span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary/10 text-secondary text-sm font-bold tracking-widest uppercase border border-secondary/20">
+          Venue Hire
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter leading-[0.9] mb-8">
+          A Space for the <br/>
+          <span class="text-secondary">Community.</span>
+        </h2>
+        <p class="text-xl text-on-surface-variant leading-relaxed mb-12 max-w-lg">
+          Our affordable, versatile hall in N.J. Telfer Reserve is the perfect venue for your next class, meeting, or event.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/about/hall-hire" class="bg-primary text-on-primary px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-xl">
+            Learn More
+          </a>
+          <a href="https://www.spacetoco.com/space/bundoora-scout-hall" target="_blank" class="bg-white/50 backdrop-blur-md text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/80 transition-all border border-primary/10 flex items-center gap-3">
+            <span class="material-symbols-outlined">event_available</span>
+            Book Now
+          </a>
+        </div>
+      </div>
+      
+      <div class="w-full md:w-1/2 p-8 md:pr-16 lg:pr-24 hidden md:block">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <img src="/uploads/hall-hire/Main Hall 1.jpg" alt="Hall interior" class="rounded-3xl shadow-lg w-full aspect-square object-cover transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+            <img src="/uploads/hall-hire/Kitchen 1.jpg" alt="Kitchen" class="rounded-3xl shadow-lg w-full aspect-video object-cover transform rotate-3 hover:rotate-0 transition-transform duration-500">
+          </div>
+          <div class="space-y-4 pt-12">
+            <img src="/uploads/hall-hire/Parking.jpg" alt="Parking" class="rounded-3xl shadow-lg w-full aspect-video object-cover transform rotate-2 hover:rotate-0 transition-transform duration-500">
+            <img src="/uploads/hall-hire/Bio Garden.jpg" alt="Garden" class="rounded-3xl shadow-lg w-full aspect-square object-cover transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

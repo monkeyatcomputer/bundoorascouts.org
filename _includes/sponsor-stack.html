@@ -1,0 +1,13 @@
+<div class="flex gap-4 items-center not-prose">
+  <div class="flex -space-x-4">
+    {% assign sponsors = site.data.sponsors %}
+    {% assign stack_sponsors = sponsors | where_exp: "item", "item.logo != nil and item.logo != ''" | limit: 4 %}
+    {% for sponsor in stack_sponsors %}
+    <div
+      class="w-12 h-12 rounded-full border-4 {% if include.border %}{{ include.border }}{% else %}border-primary{% endif %} bg-white overflow-hidden shadow-lg transition-transform hover:scale-110 hover:z-10 flex items-center justify-center p-1">
+      <img src="{{ '/assets/images/sponsors/' | append: sponsor.logo | relative_url }}" alt="{{ sponsor.name }}"
+        class="max-w-full max-h-full object-contain">
+    </div>
+    {% endfor %}
+  </div>
+</div>

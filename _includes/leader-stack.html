@@ -11,7 +11,14 @@
     </div>
     {% endfor %}
   </div>
+  {% if include.url %}
+  <a href="{{ include.url | relative_url }}"
+    class="text-sm font-bold {% if include.text %}{{ include.text }}{% else %}text-on-primary-container{% endif %} {% if include.bg %}{{ include.bg }}{% else %}bg-primary-container/40{% endif %} backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-sm hover:scale-105 transition-transform active:scale-95">
+    {{ youth_leaders.size }} Active Leaders
+  </a>
+  {% else %}
   <div class="text-sm font-bold {% if include.text %}{{ include.text }}{% else %}text-on-primary-container{% endif %} {% if include.bg %}{{ include.bg }}{% else %}bg-primary-container/40{% endif %} backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-sm">
     {{ youth_leaders.size }} Active Leaders
   </div>
+  {% endif %}
 </div>

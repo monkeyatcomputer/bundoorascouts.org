@@ -1,0 +1,34 @@
+<div class="flex gap-4 items-center not-prose">
+  <div class="flex -space-x-4">
+    {% if include.images %}
+      {% assign stack_images = include.images | split: "," %}
+    {% else %}
+      {% assign folder_path = include.folder %}
+      {% assign gallery_files = site.static_files | where_exp: "file", "file.path contains folder_path" | where_exp:
+      "file", "file.extname == '.jpg' or file.extname == '.JPG' or file.extname == '.png' or file.extname == '.PNG' or
+      file.extname == '.jpeg' or file.extname == '.JPEG' or file.extname == '.webp' or file.extname == '.WEBP'" %}
+      {% assign stack_limit = include.limit | default: 4 %}
+      {% assign stack_images = gallery_files | map: "path" | limit: stack_limit %}
+    {% endif %}
+
+    {% for image_path in stack_images %}
+    <div
+      class="w-12 h-12 rounded-full border-4 {% if include.border %}{{ include.border }}{% else %}border-primary{% endif %} bg-surface-container-highest overflow-hidden shadow-lg transition-transform hover:scale-110 hover:z-10">
+      <img src="{{ image_path | strip | relative_url }}" alt="Venue Photo" class="w-full h-full object-cover">
+    </div>
+    {% endfor %}
+  </div>
+  {% if include.label %}
+    {% if include.url %}
+    <a href="{{ include.url | relative_url }}"
+      class="text-sm font-bold {% if include.text %}{{ include.text }}{% else %}text-on-primary-container{% endif %} {% if include.bg %}{{ include.bg }}{% else %}bg-primary-container/40{% endif %} backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-sm hover:scale-105 transition-transform active:scale-95">
+      {{ include.label }}
+    </a>
+    {% else %}
+    <div
+      class="text-sm font-bold {% if include.text %}{{ include.text }}{% else %}text-on-primary-container{% endif %} {% if include.bg %}{{ include.bg }}{% else %}bg-primary-container/40{% endif %} backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-sm">
+      {{ include.label }}
+    </div>
+    {% endif %}
+  {% endif %}
+</div>

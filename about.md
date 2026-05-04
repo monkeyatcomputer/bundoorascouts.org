@@ -28,6 +28,7 @@ Bundoora Scouts is powered entirely by dedicated volunteers – parents, young a
 All our leaders are Working with Children Check verified, first-aid trained, and receive ongoing Scouts Victoria training.
 
 {% include leader-stack.html 
+    url="/about/our-leaders"
     border="border-primary" 
     bg="bg-secondary-container/20" 
     text="text-primary" 
@@ -42,7 +43,43 @@ All our leaders are Working with Children Check verified, first-aid trained, and
 
 ## Our Hall
 
-We meet regularly at our hall in Bundoora. The hall is also available for hire – [see our Hall Hire page](/about/hall-hire) for details.
+We meet regularly at our hall in Bundoora. The hall is also available for hire to community groups and for private functions.
+
+{% include pill-row.html items="groups:200 Capacity | countertops:Full Kitchen | ac_unit:Air Conditioned" %}
+
+{% include image-stack.html 
+    images="/uploads/hall-hire/Main Hall 1.jpg,/uploads/hall-hire/Kitchen 1.jpg,/uploads/hall-hire/Darwin Campfire Circle.jpg,/uploads/hall-hire/Parking.jpg"
+    url="/about/hall-hire"
+    label="View Venue Photos"
+    border="border-primary" 
+    bg="bg-primary-container/20" 
+    text="text-primary" 
+%}
+
+<div class="mt-6">
+  <a href="/about/hall-hire" class="inline-flex items-center gap-2 text-secondary font-bold hover:text-primary transition-all group">
+    <span>View hall availability & hire rates</span>
+    <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+  </a>
+</div>
+
+## Our Sponsors
+
+We are incredibly grateful to the local businesses and organisations that support Bundoora Scouts. Their generosity helps us provide high-quality equipment and experiences for our youth members.
+
+{% include sponsor-stack.html 
+    url="/about/our-sponsors"
+    border="border-secondary" 
+    bg="bg-secondary-container/20" 
+    text="text-secondary" 
+%}
+
+<div class="mt-6">
+  <a href="/about/our-sponsors" class="inline-flex items-center gap-2 text-secondary font-bold hover:text-primary transition-all group">
+    <span>See all our sponsors</span>
+    <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+  </a>
+</div>
 
 ## Join Us
 
