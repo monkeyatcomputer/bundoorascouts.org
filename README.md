@@ -56,4 +56,4 @@ Notice a bug or want to suggest an improvement? Don't be a *lost scout*!
 
 *“The most worth-while thing is to try to put happiness into the lives of others.”* — Lord Baden-Powell
 
-**Made with ❤️ and plenty of coffee by Bundoora Scout Group.**
+**Made with ❤️, a little help from a 🤖, and a lot of coffee by the Bundoora Scout Group, and published to the web via GitHub Pages.**
