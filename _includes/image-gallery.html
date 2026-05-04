@@ -117,11 +117,10 @@ file.extname == '.jpeg' or file.extname == '.JPEG' or file.extname == '.webp' or
     {% for image in gallery_images %}
     <div class="group relative" data-gsap="reveal" data-delay="{{ forloop.index0 | modulo: 4 | times: 0.1 }}">
       <div class="aspect-square overflow-hidden rounded-2xl cursor-zoom-in isolate transform-gpu">
-        <a href="javascript:void(0)"
-          class="gallery-thumb-link block w-full h-full transition-transform duration-500 group-hover:scale-110"
+        <a href="javascript:void(0)" class="gallery-thumb-link block w-full h-full"
           data-src="{{ image.path }}" onclick="openLightbox('{{ image.path }}', '{{ gallery_id }}')">
-          <div class="w-full h-full bg-cover bg-center" style="background-image: url('{{ image.path }}');" role="img"
-            aria-label="Gallery image">
+          <div class="w-full h-full bg-cover bg-center transition-all duration-500 ease-in-out group-hover:scale-110"
+            style="background-image: url('{{ image.path }}');" role="img" aria-label="Gallery image">
           </div>
         </a>
       </div>
