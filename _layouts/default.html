@@ -9,6 +9,17 @@
   <meta name="description"
     content="{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 }}" />
 
+  <!-- Favicons and App Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+  <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#3f5e94">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="msapplication-TileColor" content="#100e4c">
+  <meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
   <!-- Open Graph -->
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Bundoora Scouts{% endif %}" />
   <meta property="og:description"
