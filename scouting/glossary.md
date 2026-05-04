@@ -20,6 +20,10 @@ description: "A handy guide to the common terms, sections, and roles you'll enco
 *   **Woggle**: The ring that holds the Scout scarf together.
 *   **Jamboree**: A massive gathering of Scouts (usually 11-15 year olds) from all over the country or world.
 *   **Cuboree**: A state-wide camp specifically for Cub Scouts.
+*   **Kangaree**: A state-wide camp specifically for Joey Scouts.
+*   **Venture**: A camp for Venturer Scouts.
+*   **Moot**: An international gathering of Rover Scouts.
+*   **JOTA/JOTI**: A camp for Scouts to communicate with other scouts around the world using amateur radio and the internet.
 
 > [!NOTE]
 > The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
