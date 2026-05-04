@@ -33,27 +33,17 @@ description: Meet the dedicated volunteer team behind Bundoora Scouts. Highly tr
         At Bundoora Scouts, our volunteer leaders are the heart of our community. Dedicated, passionate, and highly trained, they guide our youth members through life-changing experiences, fostering growth, resilience, and a love for the great outdoors.
       </p>
       
-      <div class="flex gap-4 items-center">
-        <div class="flex -space-x-4">
-          {% assign youth_leaders = site.people | where_exp: "person", "person.section != 'adult'" %}
-          {% assign stack_leaders = youth_leaders | limit: 3 %}
-          {% for leader in stack_leaders %}
-          <div class="w-12 h-12 rounded-full border-4 border-primary bg-surface-container-highest overflow-hidden shadow-lg">
-            <img src="/assets/images/people/{{ leader.title | downcase }}.jpg" alt="{{ leader.title }}" class="w-full h-full object-cover" onerror="this.src='/assets/images/people/nophoto.jpg'">
-          </div>
-          {% endfor %}
-        </div>
-        <div class="text-sm font-bold text-on-primary-container bg-primary-container/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-sm">
-          {{ youth_leaders.size }} Active Leaders
-        </div>
-      </div>
+      {% include leader-stack.html 
+          border="border-primary" 
+          bg="bg-white/10" 
+          text="text-on-primary" 
+      %}
     </div>
   </div>
 </header>
 
 
 <div class="max-w-7xl mx-auto px-6 md:px-12 space-y-32 pb-32">
-
   {% assign leader_sections = site.data.sections | where: "show_on_leaders", true %}
   
   {% for section in leader_sections %}
