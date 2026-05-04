@@ -27,6 +27,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
   - jekyll-include-cache
+  - jekyll-tailwind
 
 whitelist:
   - jekyll-paginate-v2
@@ -35,6 +36,7 @@ whitelist:
   - jekyll-seo-tag
   - jekyll-redirect-from
   - jekyll-include-cache
+  - jekyll-tailwind
 
 # Pagination
 pagination:
@@ -83,6 +85,11 @@ feed:
   disable_in_development: true
   excerpt_only: true
   tags: true
+
+# Tailwind CSS
+tailwind:
+  input: assets/css/app.css
+  minify: true
 
 # Exclude from build
 exclude:
