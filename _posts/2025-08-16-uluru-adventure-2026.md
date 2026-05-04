@@ -1,4 +1,5 @@
 ---
+layout: trip
 title: "Adventure Awaits at Uluru!"
 subtitle: "Join us for the ultimate outback adventure"
 description: "Join Bundoora Scouts for an unforgettable adventure to the heart of Australia, Uluru, in 2026."

@@ -29,7 +29,7 @@ All our leaders are Working with Children Check verified, first-aid trained, and
 
 ## Our Hall
 
-We meet regularly at our hall in Bundoora. The hall is also available for hire – [see our Hall Hire page](/hall-hire) for details.
+We meet regularly at our hall in Bundoora. The hall is also available for hire – [see our Hall Hire page](/about/hall-hire) for details.
 
 ## Join Us
 
