@@ -107,6 +107,12 @@
     --tw-prose-pre-bg: var(--color-on-surface);
     --tw-prose-th-borders: var(--color-outline-variant);
     --tw-prose-td-borders: var(--color-outline-variant);
+    --tw-prose-bullets: var(--color-primary);
+    --tw-prose-counters: var(--color-primary);
+  }
+
+  .prose p, .prose li {
+    color: var(--color-on-surface);
   }
 
   .prose p { margin-top: 0.75em; margin-bottom: 0.75em; }
