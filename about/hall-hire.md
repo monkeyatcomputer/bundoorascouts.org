@@ -3,6 +3,7 @@ layout: page
 title: "Hall Hire"
 permalink: /about/hall-hire
 redirect_from: [/about-us/hall-hire, /hall-hire/]
+badge: "Venue Hire"
 description: "The Bundoora Scout Hall is a welcoming, versatile venue in N.J. Telfer Reserve, ideal for community groups, classes, meetings, and private functions."
 ---
 
