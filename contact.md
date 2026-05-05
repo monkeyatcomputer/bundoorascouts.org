@@ -59,8 +59,12 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
         </div>
         
         <!-- reCAPTCHA -->
-        <div class="g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}" data-action="contact_form" data-size="invisible"></div>
         <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+        <script>
+          function onSubmit(token) {
+            document.getElementById('contact-form').submit();
+          }
+        </script>
 
         <script>
           document.addEventListener('DOMContentLoaded', () => {
@@ -87,9 +91,10 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
         </script>
 
         <button type="submit" id="contact-submit"
-                class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-lg font-headline font-bold text-base hover:scale-[1.02] transition-transform shadow-[0_10px_30px_rgba(16,14,76,0.2)]">
+                class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-lg font-headline font-bold text-base hover:scale-[1.02] transition-transform shadow-[0_10px_30px_rgba(16,14,76,0.2)] g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}" data-callback="onSubmit" data-action="site_contact">
           Send Message <span class="material-symbols-outlined">send</span>
         </button>
+
         <div class="text-xs text-on-surface-variant opacity-50">
           This site is protected by reCAPTCHA and the Google
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and
