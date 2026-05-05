@@ -1,5 +1,5 @@
 {% assign current_url = page.url %}
-{% assign scouting_slugs = "index,what-is-scouting,benefits-and-impact,the-program,costs-and-uniform,child-safety,working-together,glossary" | split: "," %}
+{% assign scouting_slugs = "index,what-is-scouting,benefits-and-impact,the-program,costs-and-uniform,child-safety,working-together,badge-placement,glossary" | split: "," %}
 
 {% assign current_page_name = current_url | split: "/" | last %}
 {% if current_page_name == "scouting" or current_page_name == "" %}{% assign current_page_name = "index" %}{% endif %}

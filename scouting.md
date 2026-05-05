@@ -57,6 +57,10 @@ Welcome to the world's largest youth movement. Use the links below to learn more
     <h3 class="text-xl font-bold text-primary group-hover:text-primary-container transition-colors">Working Together</h3>
     <p class="text-on-surface-variant text-sm mt-2">Code of conduct, communication, and parent involvement.</p>
   </a>
+  <a href="/scouting/badge-placement" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group">
+    <h3 class="text-xl font-bold text-primary group-hover:text-primary-container transition-colors">Badge Placement</h3>
+    <p class="text-on-surface-variant text-sm mt-2">A guide to sewing badges on the uniform sleeves and front.</p>
+  </a>
   <a href="/scouting/glossary" class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:shadow-md transition-shadow group md:col-span-2">
     <h3 class="text-xl font-bold text-primary group-hover:text-primary-container transition-colors">Scout Talk (Glossary)</h3>
     <p class="text-on-surface-variant text-sm mt-2">Common terms and lingo explained.</p>
