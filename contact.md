@@ -26,7 +26,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
           </div>
           <div class="flex flex-col gap-2">
             <label for="contact-email" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Email Address <span class="text-error">*</span></label>
-            <input id="contact-email" name="email" type="email" required
+            <input id="contact-email" name="_replyto" type="email" required
                    placeholder="jane@example.com"
                    class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all"/>
           </div>
