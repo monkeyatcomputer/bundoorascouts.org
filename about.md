@@ -48,7 +48,7 @@ We meet regularly at our hall in Bundoora. The hall is also available for hire t
 {% include pill-row.html items="groups:200 Capacity | countertops:Full Kitchen | ac_unit:Air Conditioned" %}
 
 {% include image-stack.html 
-    images="/uploads/hall-hire/Main Hall 1.jpg,/uploads/hall-hire/Kitchen 1.jpg,/uploads/hall-hire/Darwin Campfire Circle.jpg,/uploads/hall-hire/Parking.jpg"
+    images="/uploads/hall-hire/Main-Hall-1.jpg,/uploads/hall-hire/Kitchen-1.jpg,/uploads/hall-hire/Darwin-Campfire-Circle.jpg,/uploads/hall-hire/Parking.jpg"
     url="/about/hall-hire"
     label="View Venue Photos"
     border="border-primary" 
