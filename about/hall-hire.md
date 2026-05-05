@@ -13,48 +13,57 @@ Conveniently located just a short walk from the Route 86 tram or route 566/902 b
 
 The hall is available for casual one‑off bookings or longer‑term regular hire, and is well suited to activities such as dance and fitness classes, martial arts, training sessions, workshops, meetings, and similar group uses.
 
+<!-- Hall Features Cards -->
 <section class="py-12 not-prose" data-gsap="reveal">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
     <!-- Main Hall -->
-    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-ambient-md border border-outline-variant/30">
-      <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-        <span class="material-symbols-outlined text-secondary">straighten</span>
+    <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform durationW-300">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
+          <span class="material-symbols-outlined filled text-2xl text-secondary">straighten</span>
+        </div>
+        <h3 class="font-headline font-bold text-xl text-primary">Spacious Hall</h3>
       </div>
-      <h3 class="text-lg font-bold text-primary mt-0 mb-2">Spacious Hall</h3>
-      <p class="text-base text-on-surface-variant leading-relaxed">
+      <p class="text-on-surface-variant leading-[1.6]">
         Approximately 240m² (13m x 18.5m) with 4m high ceilings, perfect for movement-based activities.
       </p>
     </div>
 
     <!-- Kitchen -->
-    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-ambient-md border border-outline-variant/30">
-      <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-        <span class="material-symbols-outlined text-secondary">countertops</span>
+    <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
+          <span class="material-symbols-outlined filled text-2xl text-secondary">countertops</span>
+        </div>
+        <h3 class="font-headline font-bold text-xl text-primary">Full Kitchen</h3>
       </div>
-      <h3 class="text-lg font-bold text-primary mt-0 mb-2">Full Kitchen</h3>
-      <p class="text-base text-on-surface-variant leading-relaxed">
+      <p class="text-on-surface-variant leading-[1.6]">
         Equipped with two ovens, dishwasher, microwave, fridge/freezer, and electric urn.
       </p>
     </div>
 
     <!-- Capacity -->
-    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-ambient-md border border-outline-variant/30">
-      <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-        <span class="material-symbols-outlined text-secondary">groups</span>
+    <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
+          <span class="material-symbols-outlined filled text-2xl text-secondary">groups</span>
+        </div>
+        <h3 class="font-headline font-bold text-xl text-primary">Capacity</h3>
       </div>
-      <h3 class="text-lg font-bold text-primary mt-0 mb-2">Capacity</h3>
-      <p class="text-base text-on-surface-variant leading-relaxed">
+      <p class="text-on-surface-variant leading-[1.6]">
         Comfortably seats 100 people or accommodates up to 200 standing. Trestle tables and chairs included.
       </p>
     </div>
 
     <!-- Amenities -->
-    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-ambient-md border border-outline-variant/30">
-      <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-        <span class="material-symbols-outlined text-secondary">ac_unit</span>
+    <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
+          <span class="material-symbols-outlined filled text-2xl text-secondary">ac_unit</span>
+        </div>
+        <h3 class="font-headline font-bold text-xl text-primary">Modern Comfort</h3>
       </div>
-      <h3 class="text-lg font-bold text-primary mt-0 mb-2">Modern Comfort</h3>
-      <p class="text-base text-on-surface-variant leading-relaxed">
+      <p class="text-on-surface-variant leading-[1.6]">
         Reverse-cycle air conditioning, unisex and ambulant toilets, and off-street parking for 32 vehicles.
       </p>
     </div>
