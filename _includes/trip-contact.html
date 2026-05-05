@@ -3,59 +3,71 @@
     <div class="text-center mb-10">
       <h3 class="font-headline text-3xl font-bold text-primary mb-4">
         {% if page.trip_full_banner %}
-          Join the Waiting List
+        Join the Waiting List
         {% else %}
-          Interested in this Adventure?
+        Interested in this Adventure?
         {% endif %}
       </h3>
       <p class="text-on-surface-variant text-lg">
         {% if page.trip_full_banner %}
-          To be added to the cancellation list for this trip, simply fill in your details below and we will get in touch if a spot becomes available.
+        To be added to the cancellation list for this trip, simply fill in your details below and we will get in touch
+        if a spot becomes available.
         {% else %}
-          For more information about our trip, simply fill in your details below and we will get in touch soon.
+        For more information about our trip, simply fill in your details below and we will get in touch soon.
         {% endif %}
       </p>
     </div>
 
     <form id="trip-contact-form" class="flex flex-col gap-6" action="{{ site.formspree_action }}" method="POST">
       <input type="hidden" name="_subject" value="New inquiry for: {{ page.title }}">
-      
+
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div class="flex flex-col gap-2 sm:col-span-2">
-          <label for="contact-name" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Your Name <span class="text-error">*</span></label>
-          <input id="contact-name" name="name" type="text" required
-                 placeholder="Jane Smith"
-                 class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all"/>
+          <label for="contact-name"
+            class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Your Name <span
+              class="text-error">*</span></label>
+          <input id="contact-name" name="name" type="text" required placeholder="Jane Smith"
+            class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all" />
         </div>
         <div class="flex flex-col gap-2">
-          <label for="contact-email" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Email Address <span class="text-error">*</span></label>
-          <input id="contact-email" name="email" type="email" required
-                 placeholder="jane@example.com"
-                 class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all"/>
+          <label for="contact-email"
+            class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Email Address
+            <span class="text-error">*</span></label>
+          <input id="contact-email" name="email" type="email" required placeholder="jane@example.com"
+            class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all" />
         </div>
         <div class="flex flex-col gap-2">
-          <label for="contact-phone" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Phone Number</label>
-          <input id="contact-phone" name="phone" type="tel"
-                 placeholder="0412 345 678"
-                 class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all"/>
+          <label for="contact-phone"
+            class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Phone
+            Number</label>
+          <input id="contact-phone" name="phone" type="tel" placeholder="0412 345 678"
+            class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all" />
         </div>
       </div>
 
       <div class="flex flex-col gap-2">
-        <label for="contact-comments" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Message <span class="text-error">*</span></label>
+        <label for="contact-comments"
+          class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Message <span
+            class="text-error">*</span></label>
         <textarea id="contact-comments" name="comments" rows="4" required
-                  placeholder="Tell us about your interest in this trip..."
-                  class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all resize-none"></textarea>
+          placeholder="Tell us about your interest in this trip..."
+          class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all resize-none"></textarea>
       </div>
-      
+
       <!-- reCAPTCHA -->
-      <div class="g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}"></div>
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <div class="g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}" data-action="contact_form"
+        data-size="invisible"></div>
+      <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 
       <button type="submit" id="contact-submit"
-              class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-lg font-headline font-bold text-base hover:scale-[1.02] transition-transform shadow-[0_10px_30px_rgba(16,14,76,0.2)]">
+        class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-lg font-headline font-bold text-base hover:scale-[1.02] transition-transform shadow-[0_10px_30px_rgba(16,14,76,0.2)]">
         Send Inquiry <span class="material-symbols-outlined">send</span>
       </button>
+      <div class="text-xs text-on-surface-variant opacity-50">
+        This site is protected by reCAPTCHA and the Google
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and
+        <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.
+      </div>
     </form>
   </div>
 </div>
