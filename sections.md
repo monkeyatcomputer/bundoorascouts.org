@@ -6,7 +6,7 @@ description: "Explore all five Bundoora Scouts youth sections – from Joey Scou
 ---
 
 <!-- Hero Section -->
-<section class="relative w-full min-h-[500px] flex items-center bg-primary-container overflow-hidden mb-12 shadow-ambient-lg">
+<section class="relative w-full min-h-[400px] lg:min-h-[500px] flex items-center bg-primary-container overflow-hidden mb-12 shadow-ambient-lg">
   <div class="absolute inset-0 z-0">
     <img src="{{ page.image }}" 
          alt="Scouting discovery background" 
@@ -14,7 +14,7 @@ description: "Explore all five Bundoora Scouts youth sections – from Joey Scou
     <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>
   </div>
   
-  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 pb-20 md:pt-48 md:pb-24">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-40 pb-20 lg:pt-48 lg:pb-24">
     <div class="max-w-3xl">
       <span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary text-on-primary text-sm font-bold tracking-widest uppercase shadow-sm">
         Our Sections

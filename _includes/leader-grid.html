@@ -3,11 +3,11 @@
 {% assign accent = include.colour | default: "#3f5e94" %}
 
 {% if section_people.size > 0 %}
-<section class="py-10 bg-surface not-prose">
+<section class="py-4 bg-surface not-prose">
   <!-- Meet the Leaders Include -->
   <!-- Usage: include leader-grid.html section_slug=page.section_slug colour=page.colour -->
 
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
     <div class="mb-12 border-l-4 pl-6" style="border-color: {{ accent }};">
       <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight">Meet the Leaders</h2>
       <p class="text-on-surface-variant text-lg mt-2">The dedicated volunteers guiding our {{ page.title }}.</p>

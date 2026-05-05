@@ -2,19 +2,19 @@
 {% assign accent = include.colour | default: "#3f5e94" %}
 
 {% if testimonials %}
-<section class="py-10 bg-surface not-prose">
+<section class="py-4 bg-surface not-prose">
   <!-- Testimonial Grid Include -->
 
   <!-- Usage: include testimonial-grid.html testimonials=page.testimonials colour=page.colour -->
 
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-12">
     <div class="text-center mb-16">
       <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight">What Our Families Say</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {% for t in testimonials %}
-      <div class="bg-surface-container-low p-10 rounded-3xl relative overflow-hidden group">
+      <div class="bg-surface-container-low p-6 sm:p-10 rounded-3xl relative overflow-hidden group">
         <!-- Quote Icon -->
         <span
           class="material-symbols-outlined text-6xl absolute -top-2 -left-2 opacity-5 text-primary rotate-12">format_quote</span>

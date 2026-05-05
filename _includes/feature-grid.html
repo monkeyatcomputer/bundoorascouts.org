@@ -2,11 +2,11 @@
 {% assign title = include.title | default: "What to Expect" %}
 {% assign accent = include.colour | default: "#3f5e94" %}
 
-<section class="py-10 bg-surface-container-low mx-4 lg:mx-8 rounded-xl mt-4 not-prose">
+<section class="py-4 bg-surface-container-low mx-2 sm:mx-4 lg:mx-8 rounded-xl mt-4 not-prose">
   <!-- Feature Grid Include -->
   <!-- Usage: include feature-grid.html features=page.features title="What to Expect" colour=page.colour -->
 
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-12">
     <div class="text-center mb-16">
       <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight">{{ title }}</h2>
       {% if include.description %}
@@ -18,7 +18,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {% for feature in features %}
       <div
-        class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
+        class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-6"
           style="background-color: {{ accent }}20;">
           <span class="material-symbols-outlined filled text-2xl" style="color: {{ accent }};">{{ feature.icon }}</span>

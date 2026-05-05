@@ -1,13 +1,13 @@
 {% assign accent = include.colour | default: "#3f5e94" %}
 
-<section class="py-10 bg-surface not-prose">
+<section class="py-4 bg-surface not-prose">
   <!-- Info Grid Include (Fees, Uniform, Link Badge) -->
   <!-- Usage: include info-grid.html colour=page.colour -->
 
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       <!-- Fees -->
-      <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-ambient-md group hover:translate-y-[-4px] transition-all duration-300">
+      <div class="bg-surface-container-lowest p-5 sm:p-6 lg:p-8 rounded-2xl shadow-ambient-md group hover:translate-y-[-4px] transition-all duration-300">
         <div class="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
           <span class="material-symbols-outlined text-primary" style="color: {{ accent }};">payments</span>
         </div>
@@ -19,7 +19,7 @@
       </div>
 
       <!-- Uniform -->
-      <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-ambient-md group hover:translate-y-[-4px] transition-all duration-300">
+      <div class="bg-surface-container-lowest p-5 sm:p-6 lg:p-8 rounded-2xl shadow-ambient-md group hover:translate-y-[-4px] transition-all duration-300">
         <div class="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
           <span class="material-symbols-outlined text-primary" style="color: {{ accent }};">apparel</span>
         </div>
@@ -31,7 +31,7 @@
       </div>
 
       <!-- Link Badge -->
-      <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-ambient-md group hover:translate-y-[-4px] transition-all duration-300">
+      <div class="bg-surface-container-lowest p-5 sm:p-6 lg:p-8 rounded-2xl shadow-ambient-md group hover:translate-y-[-4px] transition-all duration-300">
         <div class="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
           <span class="material-symbols-outlined text-primary" style="color: {{ accent }};">shortcut</span>
         </div>

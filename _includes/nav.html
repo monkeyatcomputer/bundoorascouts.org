@@ -4,23 +4,23 @@
   role="navigation" aria-label="Main navigation">
 
   <div id="nav-inner"
-    class="flex items-center justify-between px-6 md:px-12 py-6 max-w-[1440px] mx-auto font-headline tracking-tight font-semibold text-base">
+    class="flex items-center justify-between px-4 lg:px-12 py-6 max-w-[1440px] mx-auto font-headline tracking-tight font-semibold text-base">
 
     <!-- Brand Logo (Left) -->
     <div class="flex-1 flex justify-start items-center">
       <a href="/" class="relative z-[60] group">
         <div id="logo-container"
-          class="absolute -top-6 left-0 w-28 h-28 md:w-32 md:h-32 bg-white rounded-full shadow-ambient-lg flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300">
+          class="absolute -top-6 left-0 w-28 h-28 lg:w-32 lg:h-32 bg-white rounded-full shadow-ambient-lg flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300">
           <img src="/assets/images/logo.png" alt="Bundoora Scouts" class="w-full h-auto transition-all duration-500"
             id="nav-logo" />
         </div>
         <!-- Placeholder to maintain width in the flex layout -->
-        <div class="w-28 md:w-32 h-8"></div>
+        <div class="w-28 lg:w-32 h-8"></div>
       </a>
     </div>
 
     <!-- Links (Center) -->
-    <div class="hidden md:flex flex-[2_2_0%] justify-center items-center gap-6 whitespace-nowrap">
+    <div class="hidden lg:flex flex-[2_2_0%] justify-center items-center gap-6 whitespace-nowrap">
       <div class="relative group h-full flex items-center">
         <button
           class="flex items-center gap-1 py-4 whitespace-nowrap {% if page.url contains '/sections' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
@@ -130,7 +130,7 @@
         <span class="material-symbols-outlined">mail</span>
       </a>
 
-      <div class="hidden md:block">
+      <div class="hidden lg:block">
         <a href="/contact"
           class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-bold hover:scale-[1.02] transition-transform shadow-ambient-md whitespace-nowrap">
           Join the Adventure
@@ -138,7 +138,7 @@
       </div>
 
       <!-- Mobile Hamburger -->
-      <div class="md:hidden">
+      <div class="lg:hidden">
         <button id="mobile-menu-toggle" class="text-on-surface-variant hover:text-primary p-2">
           <span class="material-symbols-outlined">menu</span>
         </button>
@@ -149,7 +149,7 @@
 </nav>
 
 <!-- Mobile slide-in drawer -->
-<div id="mobile-menu-drawer" class="hidden fixed inset-0 z-[60] md:hidden" role="dialog" aria-modal="true"
+<div id="mobile-menu-drawer" class="hidden fixed inset-0 z-[60] lg:hidden" role="dialog" aria-modal="true"
   aria-label="Mobile navigation">
   <!-- Backdrop -->
   <div id="mobile-menu-backdrop" class="absolute inset-0 bg-primary/40 backdrop-blur-sm"></div>
@@ -302,7 +302,7 @@
     if (typeof gsap !== 'undefined') {
       const navInner = document.getElementById('nav-inner');
       const logoContainer = document.getElementById('logo-container');
-      const isMobile = window.innerWidth < 768;
+      const isMobile = window.innerWidth < 1024;
 
       // Create a unified timeline for the scroll effect
       const navTl = gsap.timeline({

@@ -13,7 +13,7 @@ image: "/uploads/hero/aerial.jpg"
          class="w-full h-full object-cover opacity-80 mix-blend-multiply"/>
     <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
   </div>
-  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 pb-24 md:pt-48 md:pb-32">
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-40 pb-24 lg:pt-48 lg:pb-32">
     <div class="max-w-2xl">
       <span class="inline-block px-4 py-1 mb-6 rounded-full bg-tertiary text-on-tertiary text-sm font-bold tracking-widest uppercase">
         The Modern Trailfinder
@@ -37,7 +37,7 @@ image: "/uploads/hero/aerial.jpg"
 </section>
 
 <!-- Sections Bento Grid -->
-<section id="scouting-sections" class="max-w-[1440px] mx-auto px-6 md:px-12 mt-12 mb-12">
+<section id="scouting-sections" class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 mt-6 mb-6">
   <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
     <div>
       <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter leading-[0.85]">
@@ -71,7 +71,7 @@ image: "/uploads/hero/aerial.jpg"
 </section>
 
 <!-- Latest from The Campfire -->
-<section class="bg-surface-container-low rounded-[3xl] py-12 px-6 md:px-12 mx-4 lg:mx-8 mb-12">
+<section class="bg-surface-container-low rounded-[3xl] py-4 px-4 md:px-12 mx-2 sm:mx-4 lg:mx-8 mb-6">
   <div class="max-w-[1440px] mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-16">
       <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter leading-[0.85]">
@@ -102,7 +102,7 @@ image: "/uploads/hero/aerial.jpg"
     </div>
     
     <div class="relative z-10 flex flex-col md:flex-row items-center">
-      <div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24">
+      <div class="w-full md:w-1/2 p-6 sm:p-8 md:p-16 lg:p-24">
         <span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary/10 text-secondary text-sm font-bold tracking-widest uppercase border border-secondary/20">
           Venue Hire
         </span>
