@@ -43,10 +43,12 @@
           {% endfor %}
         </div>
       </div>
-      <a href="/the-campfire"
-        class="whitespace-nowrap {% if page.url contains '/the-campfire' %}text-primary border-b-2 border-on-tertiary-container pb-1{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
-        The Campfire
-      </a>
+      <div class="h-full flex items-center">
+        <a href="/the-campfire"
+          class="flex items-center py-4 whitespace-nowrap {% if page.url contains '/the-campfire' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
+          The Campfire
+        </a>
+      </div>
       <div class="relative group nav-dropdown-group h-full flex items-center">
         <button
           class="flex items-center gap-1 py-4 whitespace-nowrap {% if page.url contains '/scouting' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
