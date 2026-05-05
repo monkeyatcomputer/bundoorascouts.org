@@ -59,8 +59,8 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
         </div>
         
         <!-- reCAPTCHA -->
-        <div class="g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}"></div>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <div class="g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}" data-action="contact_form"></div>
+        <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 
         <script>
           document.addEventListener('DOMContentLoaded', () => {
