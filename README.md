@@ -40,8 +40,8 @@ This repo is organized to keep things as neat as a well-tied bowline:
 ## Scout's Honor (Legal)
 
 We take digital safety as seriously as we take child safety.
-*   **[Privacy Policy](/privacy-policy)**: Based on the Scouts Victoria 2020 framework.
-*   **[Terms and Conditions](/terms)**: Ensuring everyone follows the law of the trail.
+*   **[Privacy Policy](/privacy-policy.md)**: Based on the Scouts Victoria 2020 framework.
+*   **[Terms and Conditions](/terms.md)**: Ensuring everyone follows the law of the trail.
 
 ## Helping Hand (Contributing)
 
