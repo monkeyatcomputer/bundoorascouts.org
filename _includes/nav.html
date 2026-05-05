@@ -21,14 +21,14 @@
 
     <!-- Links (Center) -->
     <div class="hidden lg:flex flex-[2_2_0%] justify-center items-center gap-6 whitespace-nowrap">
-      <div class="relative group h-full flex items-center">
+      <div class="relative group nav-dropdown-group h-full flex items-center">
         <button
           class="flex items-center gap-1 py-4 whitespace-nowrap {% if page.url contains '/sections' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
           Sections
-          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180 group-[.is-open]:rotate-180">expand_more</span>
         </button>
         <div
-          class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[100]">
+          class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-[.is-open]:opacity-100 group-[.is-open]:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-[.is-open]:translate-y-0 z-[100]">
           <a href="/sections"
             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/sections' %}text-primary bg-surface-container-low{% endif %} border-b border-outline-variant/10 mb-1">
             Overview
@@ -47,14 +47,14 @@
         class="whitespace-nowrap {% if page.url contains '/the-campfire' %}text-primary border-b-2 border-on-tertiary-container pb-1{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
         The Campfire
       </a>
-      <div class="relative group h-full flex items-center">
+      <div class="relative group nav-dropdown-group h-full flex items-center">
         <button
           class="flex items-center gap-1 py-4 whitespace-nowrap {% if page.url contains '/scouting' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
           About Scouting
-          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180 group-[.is-open]:rotate-180">expand_more</span>
         </button>
         <div
-          class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[100]">
+          class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-[.is-open]:opacity-100 group-[.is-open]:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-[.is-open]:translate-y-0 z-[100]">
           <a href="/scouting"
             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/scouting' %}text-primary bg-surface-container-low{% endif %} border-b border-outline-variant/10 mb-1">
             Overview
@@ -93,14 +93,14 @@
           </a>
         </div>
       </div>
-      <div class="relative group h-full flex items-center">
+      <div class="relative group nav-dropdown-group h-full flex items-center">
         <button
           class="flex items-center gap-1 py-4 whitespace-nowrap {% if page.url contains '/about' %}text-primary border-b-2 border-on-tertiary-container{% else %}text-on-surface-variant hover:text-primary transition-colors{% endif %}">
           About Us
-          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180 group-[.is-open]:rotate-180">expand_more</span>
         </button>
         <div
-          class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[100]">
+          class="absolute top-[calc(100%-1rem)] left-0 w-64 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-outline-variant/30 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-[.is-open]:opacity-100 group-[.is-open]:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-[.is-open]:translate-y-0 z-[100]">
           <a href="/about"
             class="block px-4 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors {% if page.url == '/about' %}text-primary bg-surface-container-low{% endif %} border-b border-outline-variant/10 mb-1">
             Overview
@@ -383,5 +383,25 @@
         });
       });
     }
+
+    // Submenu Toggle for Touch/Click
+    const navDropdowns = document.querySelectorAll('.nav-dropdown-group');
+    navDropdowns.forEach(group => {
+      const button = group.querySelector('button');
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = group.classList.contains('is-open');
+        // Close others
+        navDropdowns.forEach(other => {
+          if (other !== group) other.classList.remove('is-open');
+        });
+        group.classList.toggle('is-open');
+      });
+    });
+
+    // Close dropdowns on click outside
+    document.addEventListener('click', () => {
+      navDropdowns.forEach(group => group.classList.remove('is-open'));
+    });
   });
 </script>
