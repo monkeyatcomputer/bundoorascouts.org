@@ -1,7 +1,7 @@
 - name: Group Leadership
   shortname: Group
   slug: group
-  time: nil
+  time: 
   colour: "#100e4c"
   icon: corporate_fare
   material_icon: corporate_fare
