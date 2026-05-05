@@ -70,6 +70,6 @@ Welcome to the world's largest youth movement. Use the links below to learn more
 > [!NOTE]
 > The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.
 
-> In the spirit of reconciliation Bundoora Scout Group acknowledges the Traditional Custodians of country throughout our state and their connections to land, sea and community. We pay our respect to their Elders past and present and extend that respect to all Aboriginal and Torres Strait Islander peoples in our community.
+> In the spirit of reconciliation, Bundoora Scout Group acknowledges the Wurundjeri Woi-wurrung people as the Traditional Custodians of the land on which we meet. We pay our respect to their Elders past and present and extend that respect to all Aboriginal and Torres Strait Islander peoples in our community.
 
 {% include scouting-page-nav.html %}
