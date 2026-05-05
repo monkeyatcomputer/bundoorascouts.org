@@ -17,15 +17,19 @@ The program aims to deliver a consistent developmental structure from Section to
 The Achievement Pathways consists of:
 
 ### Program Essentials
+
 Introduces a young person to Scouting and their new Section, ensuring they understand the basics and feel welcome.
 
 ### Outdoor Adventure Skills (OAS)
+
 A common set of skills across all Sections, including camping, bushwalking, bushcraft, and more specialized activities like alpine, cycling, and water activities.
 
 ### Special Interest Areas (SIA)
+
 Allows Scouts to set their own goals in areas they are passionate about, such as STEM, Arts, Environment, or Community.
 
 ### Peak Awards
+
 Each Section has a Peak Award (like the Grey Wolf Award for Cubs or the Australian Scout Award for Scouts) that represents the pinnacle of their achievement in that Section.
 
 > [!NOTE]

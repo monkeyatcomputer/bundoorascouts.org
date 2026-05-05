@@ -1,0 +1,43 @@
+<section class="py-12 bg-surface-container-lowest rounded-3xl my-12 shadow-ambient-lg overflow-hidden not-prose">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-black font-headline text-primary mb-4" data-gsap="reveal">The Scouting Effect</h2>
+      <div class="max-w-3xl mx-auto space-y-4" data-gsap="reveal" data-delay="0.2">
+        <p class="text-lg text-on-surface-variant leading-relaxed">
+          Scouts Australia partnered with <strong>Resilient Youth Australia</strong> to conduct the Scouts Australia Resilience Survey to investigate the impact of Scouting on the resilience of its youth members.
+        </p>
+        <p class="text-on-surface-variant/80 italic">
+          Through this survey, we have found that Scouts have an overall better life satisfaction than their peers, and the longer they stay in Scouts, the more resilient they are likely to become.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      {% for item in page.scouting_effect %}
+        {% assign delay = forloop.index0 | modulo: 5 | times: 0.1 %}
+        <div class="group relative bg-surface p-6 rounded-xl border border-outline-variant hover:border-primary/30 transition-[border-color,box-shadow,transform] duration-500 hover:shadow-ambient-md hover:-translate-y-1 flex flex-col items-center text-center h-full" 
+             data-gsap="reveal" data-delay="{{ delay }}">
+          
+          <div class="w-16 h-16 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+            <img src="/assets/images/{{ item.icon }}" alt="" class="max-w-full max-h-full object-contain grayscale-[0.5] group-hover:grayscale-0 transition-all duration-300">
+          </div>
+
+          <div class="text-2xl font-black text-primary mb-1 font-headline group-hover:text-secondary transition-colors duration-300">
+            {{ item.stat }}
+          </div>
+
+          <p class="text-on-surface-variant leading-snug text-sm font-medium">
+            {{ item.text }}
+          </p>
+
+          <!-- Subtle accent line -->
+          <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-secondary to-primary group-hover:w-1/2 transition-all duration-500 rounded-t-full"></div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="mt-12 text-center text-xs text-on-surface-variant opacity-50 italic" data-gsap="reveal" data-delay="0.5">
+      Data from the Scouts Australia Resilience Survey.
+    </div>
+  </div>
+</section>

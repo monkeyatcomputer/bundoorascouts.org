@@ -113,6 +113,9 @@
           firstP.innerHTML = firstP.innerHTML.replace(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*/, '');
         }
       });
+
+      // Refresh ScrollTrigger to catch any layout shifts from images
+      ScrollTrigger.refresh();
     });
   </script>
 </body>

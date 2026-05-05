@@ -4,6 +4,58 @@ title: "Benefits & Impact"
 permalink: /scouting/benefits-and-impact
 badge: "Why Scouting?"
 description: "Discover the lifelong advantages of Scouting, from building resilience and leadership to improving mental health and academic outcomes."
+scouting_effect:
+  - icon: "scouting/placeholder.png"
+    stat: "9.4%"
+    text: "more likely to hold more hope for a positive future"
+  - icon: "scouting/placeholder.png"
+    stat: "6.3%"
+    text: "more likely to forgive others who are mean to them"
+  - icon: "scouting/placeholder.png"
+    stat: "15.4%"
+    text: "more likely to feel they make a positive contribution to their community"
+  - icon: "scouting/placeholder.png"
+    stat: "6.8%"
+    text: "more likely to have adults who set good examples for them"
+  - icon: "scouting/placeholder.png"
+    stat: "5.2%"
+    text: "report to have an overall better life satisfaction than their peers"
+  - icon: "scouting/placeholder.png"
+    stat: "13%"
+    text: "more likely to trust others"
+  - icon: "scouting/placeholder.png"
+    stat: "5.6%"
+    text: "report to have better social skills than non-Scouts"
+  - icon: "scouting/placeholder.png"
+    stat: "8.1%"
+    text: "more likely to know they can solve a problem, rather than quit"
+  - icon: "scouting/placeholder.png"
+    stat: "6.2%"
+    text: "more likely to enjoy school"
+  - icon: "scouting/placeholder.png"
+    stat: "6.5%"
+    text: "more likely to feel they can talk about things that are upsetting them"
+  - icon: "scouting/placeholder.png"
+    stat: "8.1%"
+    text: "more likely to give time to help others"
+  - icon: "scouting/placeholder.png"
+    stat: "14.1%"
+    text: "more likely to read for fun"
+  - icon: "scouting/placeholder.png"
+    stat: "13%"
+    text: "report to have a healthier mental state than non-Scouts"
+  - icon: "scouting/placeholder.png"
+    stat: "12.1%"
+    text: "more likely to be selected to help with tasks at school"
+  - icon: "scouting/placeholder.png"
+    stat: "5.2%"
+    text: "more likely to get along with people who are different to them"
+  - icon: "scouting/placeholder.png"
+    stat: "11.6%"
+    text: "report they have a healthy body than non-Scouts"
+  - icon: "scouting/placeholder.png"
+    stat: "1.8%"
+    text: "more likely to feel good about themselves"
 ---
 
 ## The benefits of Scouting
@@ -26,17 +78,8 @@ Unlike school or sport, in Scouting every young person gets a chance at developi
 
 Scouting is linked with better school results, especially at upper secondary levels. Students do better when they do an extracurricular activity which is organised and structured, with regular programs, increasingly complex skill building, leadership by one or more competent adults, a social network, leadership opportunities, and age-appropriate goals and expectations.
 
-## The Scouting Effect
+{% include scouting-effect.html %}
 
-Through the Scouts Australia Resilience Survey, we found that Scouts have overall better life satisfaction and greater resilience than their peers:
-
-*   **9.4% more likely** to hold more hope for a positive future.
-*   **13% more likely** to trust others.
-*   **5.6% better** social skills.
-*   **15.4% more likely** to feel they make a positive contribution to their community.
-*   **5.2% better** overall life satisfaction.
-*   **11.6% more** report a healthy body than non-Scouts.
-*   **13% healthier** mental state.
 
 > [!NOTE]
 > The information and images on these pages are republished from Scouts Victoria’s [Parent and Caregiver Guide](http://www.scoutsvictoria.com.au/parent-guide) with permission.

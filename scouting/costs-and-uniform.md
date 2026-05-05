@@ -19,14 +19,16 @@ Bundoora Scouts may be able to help you with a secondhand uniform. The scarf is 
 The costs of Scouting varies between Groups and depends on the activities that you do.
 
 ### State Fees
+
 You’ll generally pay an annual State fee which covers insurance and goes towards Scouts Victoria running costs.
 
 ### Group Costs
+
 Plus, there’ll be a Group cost which is calculated and managed by Bundoora Scouts. Annual fees in Victoria range from $300 to $500+. This varies from Group to Group depending on local factors such as fundraising and hall maintenance.
 
 ### Activity Costs
-There is also the cost of activities such as camps. These are kept as low as possible because we usually use our own campsites and Leaders are unpaid volunteers. Major events like Cuboree and Jamboree cost more, but Bundoora Scouts works together to lower the individual cost through fundraising.
 
+There is also the cost of activities such as camps. These are kept as low as possible because we usually use our own campsites and Leaders are unpaid volunteers. Major events like Cuboree and Jamboree cost more, but Bundoora Scouts works together to lower the individual cost through fundraising.
 
 ### Financial Support
 
