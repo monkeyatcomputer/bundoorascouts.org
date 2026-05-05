@@ -1,0 +1,100 @@
+<section class="py-24 bg-surface-container-lowest overflow-hidden not-prose my-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 mb-16 text-center">
+    <h2 class="text-4xl md:text-6xl font-black font-headline text-primary mb-6" data-gsap="reveal">The Scouting Effect</h2>
+    <div class="max-w-3xl mx-auto space-y-4" data-gsap="reveal" data-delay="0.2">
+      <p class="text-xl text-on-surface-variant leading-relaxed font-medium">
+        Scouts Australia partnered with <strong class="text-primary">Resilient Youth Australia</strong> to investigate the impact of Scouting on the resilience of its youth members.
+      </p>
+      <p class="text-on-surface-variant/80 italic text-lg">
+        Scouts report higher life satisfaction and greater resilience than their peers.
+      </p>
+    </div>
+  </div>
+
+  <div class="scouting-ticker-container relative overflow-hidden py-8">
+    <div class="scouting-ticker-track flex gap-8 whitespace-nowrap px-4" id="scoutingTicker">
+      <!-- Loop through items twice for seamless scrolling -->
+      {% for i in (1..2) %}
+        {% for item in page.scouting_effect %}
+          <div class="scouting-ticker-item flex-shrink-0 flex flex-col items-center justify-center p-8 w-[320px] rounded-[2rem] bg-surface border border-outline-variant/30 shadow-ambient-sm hover:shadow-ambient-lg hover:border-primary/20 transition-all duration-500 hover:-translate-y-3 group cursor-pointer">
+            <div class="w-20 h-20 rounded-2xl bg-secondary-container/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-500 shadow-sm">
+              <span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary transition-colors duration-500" style="font-size: 40px;">
+                {{ item.icon }}
+              </span>
+            </div>
+            
+            <div class="text-5xl font-black text-primary font-headline mb-3 tracking-tighter group-hover:text-secondary transition-colors duration-500">
+              {{ item.stat }}
+            </div>
+            
+            <p class="text-on-surface-variant text-center whitespace-normal font-bold leading-tight px-4 text-balance">
+              {{ item.text }}
+            </p>
+
+            <!-- Subtle accent decorative element -->
+            <div class="mt-6 w-12 h-1 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full group-hover:w-24 group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-700"></div>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+    <!-- Gradient Edge Fades -->
+    <div class="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/80 to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-surface-container-lowest via-surface-container-lowest/80 to-transparent z-10 pointer-events-none"></div>
+  </div>
+
+  <div class="mt-12 text-center text-sm font-bold text-primary/40 tracking-widest uppercase flex items-center justify-center gap-4" data-gsap="reveal" data-delay="0.4">
+    <span class="h-px w-12 bg-primary/10"></span>
+    Resilience Survey Data
+    <span class="h-px w-12 bg-primary/10"></span>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const ticker = document.getElementById('scoutingTicker');
+      if (!ticker) return;
+
+      // Ensure GSAP is loaded
+      if (typeof gsap !== 'undefined') {
+        const items = ticker.querySelectorAll('.scouting-ticker-item');
+        const totalWidth = ticker.scrollWidth / 2;
+
+        // Set initial position
+        gsap.set(ticker, { x: 0 });
+
+        // Continuous scroll animation
+        const animation = gsap.to(ticker, {
+          x: -totalWidth,
+          duration: 60, // Slower for readability, adjust as needed
+          ease: "none",
+          repeat: -1,
+          overwrite: 'auto'
+        });
+
+        // Interactive states
+        ticker.addEventListener('mouseenter', () => {
+          gsap.to(animation, { timeScale: 0.2, duration: 1, ease: "power2.out" });
+        });
+
+        ticker.addEventListener('mouseleave', () => {
+          gsap.to(animation, { timeScale: 1, duration: 1, ease: "power2.inOut" });
+        });
+
+        // Touch/Drag support could be added here, but for "auto-scrolling carousel" 
+        // a ticker is usually the most "funky" and premium feeling.
+      }
+    });
+  </script>
+
+  <style>
+    .scouting-ticker-track {
+      will-change: transform;
+    }
+    
+    /* Smooth out font rendering during animation */
+    .scouting-ticker-item {
+      backface-visibility: hidden;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+  </style>
+</section>
