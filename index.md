@@ -97,7 +97,7 @@ image: "/uploads/hero/aerial.jpg"
 <section class="max-w-[1440px] mx-auto px-4 lg:px-8 mb-12" data-gsap="reveal">
   <div class="relative bg-surface-container-high rounded-[3rem] overflow-hidden shadow-ambient-lg border border-outline-variant/20">
     <div class="absolute inset-0 z-0">
-      <img src="/uploads/hall-hire/Main Hall 2.jpg" alt="Bundoora Scout Hall Interior" class="w-full h-full object-cover opacity-20 mix-blend-overlay">
+      <img src="/uploads/hall-hire/Main-Hall-2.jpg" alt="Bundoora Scout Hall Interior" class="w-full h-full object-cover opacity-20 mix-blend-overlay">
       <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/5"></div>
     </div>
     
@@ -127,12 +127,12 @@ image: "/uploads/hero/aerial.jpg"
       <div class="w-full md:w-1/2 p-8 md:pr-16 lg:pr-24 hidden md:block">
         <div class="grid grid-cols-2 gap-4">
           <div class="space-y-4">
-            <img src="/uploads/hall-hire/Main Hall 1.jpg" alt="Hall interior" class="rounded-3xl shadow-lg w-full aspect-square object-cover transform -rotate-2 hover:rotate-0 transition-transform duration-500">
-            <img src="/uploads/hall-hire/Kitchen 1.jpg" alt="Kitchen" class="rounded-3xl shadow-lg w-full aspect-video object-cover transform rotate-3 hover:rotate-0 transition-transform duration-500">
+            <img src="/uploads/hall-hire/Main-Hall-1.jpg" alt="Hall interior" class="rounded-3xl shadow-lg w-full aspect-square object-cover transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+            <img src="/uploads/hall-hire/Kitchen-1.jpg" alt="Kitchen" class="rounded-3xl shadow-lg w-full aspect-video object-cover transform rotate-3 hover:rotate-0 transition-transform duration-500">
           </div>
           <div class="space-y-4 pt-12">
             <img src="/uploads/hall-hire/Parking.jpg" alt="Parking" class="rounded-3xl shadow-lg w-full aspect-video object-cover transform rotate-2 hover:rotate-0 transition-transform duration-500">
-            <img src="/uploads/hall-hire/Bio Garden.jpg" alt="Garden" class="rounded-3xl shadow-lg w-full aspect-square object-cover transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+            <img src="/uploads/hall-hire/Bio-Garden.jpg" alt="Garden" class="rounded-3xl shadow-lg w-full aspect-square object-cover transform -rotate-3 hover:rotate-0 transition-transform duration-500">
           </div>
         </div>
       </div>
