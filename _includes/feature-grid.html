@@ -19,11 +19,13 @@
       {% for feature in features %}
       <div
         class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
-        <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-6"
-          style="background-color: {{ accent }}20;">
-          <span class="material-symbols-outlined filled text-2xl" style="color: {{ accent }};">{{ feature.icon }}</span>
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0"
+            style="background-color: {{ accent }}20;">
+            <span class="material-symbols-outlined filled text-2xl" style="color: {{ accent }};">{{ feature.icon }}</span>
+          </div>
+          <h3 class="font-headline font-bold text-xl text-primary">{{ feature.title }}</h3>
         </div>
-        <h3 class="font-headline font-bold text-xl text-primary mb-3">{{ feature.title }}</h3>
         <p class="text-on-surface-variant leading-[1.6]">{{ feature.description | default: feature.text }}</p>
       </div>
       {% endfor %}
