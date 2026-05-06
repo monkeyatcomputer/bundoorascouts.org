@@ -7,7 +7,7 @@ badge: "Get in touch"
 description: "Whether you want to enrol your child, volunteer as a leader, or just find out more – we'd love to hear from you."
 ---
 
-<div class="max-w-[1440px] mx-auto">
+<div class="max-w-[1440px] mx-auto not-prose">
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
@@ -51,6 +51,28 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
           </div>
         </div>
 
+        <div id="extranet-suggestion" class="hidden">
+          <div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/20">
+            <h4 class="font-headline font-bold text-primary text-lg mb-1">Ready to start the adventure?</h4>
+            <p class="text-on-surface-variant text-sm mb-4">If you're looking to join, you can register your interest directly on the Scouts Victoria extranet. You can still send us a message if you just have a question!</p>
+            <div id="extranet-buttons" class="flex flex-wrap gap-3">
+              {% for section in site.data.sections %}
+                {% if section.sectionid %}
+                  {% assign encoded_id = section.sectionid | url_encode %}
+                  {% assign join_url = site.onboarding_url | append: encoded_id %}
+                  <a href="{{ join_url }}"
+                    data-section-name="{{ section.name }}"
+                    target="_blank" rel="noopener"
+                    class="extranet-btn hidden text-white px-6 py-3 rounded-lg font-headline font-bold text-sm hover:scale-[1.02] transition-transform shadow-sm items-center justify-center gap-2"
+                    style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: section.colour | default: '#100e4c' }});">
+                    Join {{ section.name }} <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
         <div class="flex flex-col gap-2">
           <label for="contact-comments" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Message <span class="text-error">*</span></label>
           <textarea id="contact-comments" name="comments" rows="5" required
@@ -71,6 +93,44 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
             const form = document.getElementById('contact-form');
             const checkboxes = Array.from(form.querySelectorAll('input[name="help_with"]'));
             
+            const extranetSuggestion = document.getElementById('extranet-suggestion');
+            const extranetButtons = Array.from(document.querySelectorAll('.extranet-btn'));
+
+            const sectionMap = {
+              'Joey Scouts - 5 to 7 Years': 'Joey Scouts',
+              'Cub Scouts - 8 to 10 Years': 'Cub Scouts',
+              'Scouts - 11 to 14 Years': 'Scouts',
+              'Venturer Scouts - 15 to 17 Years': 'Venturer Scouts',
+              'Rovers - 18 to 25 Years': 'Handfield Rover Unit'
+            };
+
+            function updateExtranetVisibility() {
+              let showExtranet = false;
+              const selectedSections = [];
+
+              checkboxes.forEach(cb => {
+                if (cb.checked && sectionMap[cb.value]) {
+                  showExtranet = true;
+                  selectedSections.push(sectionMap[cb.value]);
+                }
+              });
+
+              if (showExtranet) {
+                extranetSuggestion.classList.remove('hidden');
+                extranetButtons.forEach(btn => {
+                  if (selectedSections.includes(btn.dataset.sectionName)) {
+                    btn.classList.remove('hidden');
+                    btn.classList.add('inline-flex');
+                  } else {
+                    btn.classList.add('hidden');
+                    btn.classList.remove('inline-flex');
+                  }
+                });
+              } else {
+                extranetSuggestion.classList.add('hidden');
+              }
+            }
+            
             form.addEventListener('submit', (e) => {
               const isChecked = checkboxes.some(cb => cb.checked);
               if (!isChecked) {
@@ -85,8 +145,12 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
             checkboxes.forEach(cb => {
               cb.addEventListener('change', () => {
                 checkboxes[0].setCustomValidity('');
+                updateExtranetVisibility();
               });
             });
+
+            // Initial check
+            updateExtranetVisibility();
           });
         </script>
 
