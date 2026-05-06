@@ -83,24 +83,6 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
         <!-- reCAPTCHA -->
         <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
         <script>
-          document.getElementById('contact-submit').addEventListener('click', function(event) {
-            var form = document.getElementById('contact-form');
-            var checkboxes = Array.from(form.querySelectorAll('input[name="help_with"]'));
-            var isChecked = checkboxes.some(cb => cb.checked);
-            
-            if (!isChecked) {
-              checkboxes[0].setCustomValidity('Please select at least one option.');
-            } else {
-              checkboxes[0].setCustomValidity('');
-            }
-
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopImmediatePropagation();
-              form.reportValidity();
-            }
-          }, true);
-
           function onSubmit(token) {
             document.getElementById('contact-form').submit();
           }
@@ -108,6 +90,23 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
           document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('contact-form');
             const checkboxes = Array.from(form.querySelectorAll('input[name="help_with"]'));
+            
+            document.getElementById('contact-submit').addEventListener('click', function(event) {
+              var isChecked = checkboxes.some(cb => cb.checked);
+              
+              if (!isChecked) {
+                checkboxes[0].setCustomValidity('Please select at least one option.');
+              } else {
+                checkboxes[0].setCustomValidity('');
+              }
+
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                form.reportValidity();
+              }
+            }, true);
+
             
             const extranetSuggestion = document.getElementById('extranet-suggestion');
             const extranetButtons = Array.from(document.querySelectorAll('.extranet-btn'));
