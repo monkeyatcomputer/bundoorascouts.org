@@ -1,0 +1,245 @@
+---
+layout: default
+---
+
+{% comment %}
+Serialize itinerary + gallery data for JavaScript consumption.
+Script type="application/json" is never executed by browsers — safe XSS boundary.
+{% endcomment %}
+<script id="expedition-data" type="application/json">
+  {
+    "itinerary": {{ page.itinerary | jsonify }},
+    "gallery":   {{ page.gallery   | jsonify }},
+    "test_date": {{ page.test_date | jsonify }},
+    "test_mode": {{ page.test_mode | default: false | jsonify }},
+    "precomputed_route": {{ site.data.expedition_route_uluru.days | jsonify | default: 'null' }}
+  }
+</script>
+
+<main>
+
+  {%- comment -%} ─── HERO ──────────────────────────────────────────────────── {%- endcomment -%}
+  <header
+    class="relative w-full min-h-[560px] flex items-end bg-primary-container overflow-hidden shadow-ambient-lg not-prose">
+
+    {%- comment %} Background image {%- endcomment %}
+    <div class="absolute inset-0 z-0">
+      {% if page.image %}
+      <img src="{{ page.image }}" alt="{{ page.title }}"
+        class="w-full h-full object-cover opacity-50 mix-blend-multiply" />
+      {% endif %}
+      <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-48 pb-20 md:pt-56 md:pb-28">
+      <div class="max-w-3xl">
+
+        {%- comment %} Badge {%- endcomment %}
+        <div
+          class="inline-flex items-center gap-2 bg-tertiary/80 backdrop-blur-sm text-on-tertiary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
+          <span class="material-symbols-outlined text-[14px]">explore</span>
+          <span>Expedition Tracker</span>
+        </div>
+
+        {%- comment %} Title {%- endcomment %}
+        <h1 id="expedition-hero-title"
+          class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-6 leading-tight tracking-tight">
+          {% assign title_words = page.title | split: " " %}
+          {% for word in title_words %}
+          {% if forloop.last %}
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">{{
+            word }}</span>
+          {% else %}
+          {{ word }}
+          {% endif %}
+          {% endfor %}
+        </h1>
+
+        {% if page.description %}
+        <p class="text-lg text-primary-fixed-dim/90 max-w-xl leading-relaxed mb-8">{{ page.description }}</p>
+        {% endif %}
+
+        {%- comment %} Trip meta {%- endcomment %}
+        <div class="flex flex-wrap items-center gap-6 text-primary-fixed-dim">
+          <div class="flex items-center gap-2 text-sm font-semibold">
+            <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+            <span>28 Jun – 11 Jul 2026</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm font-semibold">
+            <span class="material-symbols-outlined text-[18px]">directions_bus</span>
+            <span>3 Buses &amp; 3 Support 4WDs</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm font-semibold">
+            <span class="material-symbols-outlined text-[18px]">route</span>
+            <span>15 Days · ~5,000 km</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  {%- comment -%} ─── MAP ────────────────────────────────────────────────────── {%- endcomment -%}
+  <section class="py-2 bg-surface not-prose">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      {% include expedition-map.html %}
+    </div>
+  </section>
+
+  {%- comment -%} ─── TIMELINE ────────────────────────────────────────────────── {%- endcomment -%}
+  <section class="py-2 bg-surface-container-low overflow-hidden not-prose">
+    {% include expedition-timeline.html %}
+  </section>
+
+  {%- comment -%} ─── GALLERY ────────────────────────────────────────────────── {%- endcomment -%}
+  {% if page.gallery %}
+  <section class="py-2 bg-surface not-prose">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      {% include expedition-gallery.html %}
+    </div>
+  </section>
+  {% endif %}
+
+  {%- comment %} ─── Time Machine (Test Mode Only) ────────────────────────────────────── {% endcomment %}
+  {% if page.test_mode %}
+  <div id="time-machine"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000] bg-primary/95 backdrop-blur-xl text-white p-4 rounded-3xl shadow-2xl border border-white/10 min-w-[320px] flex flex-col gap-3 not-prose">
+    <div class="flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <button id="tm-play"
+          class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center hover:scale-105 transition-transform">
+          <span class="material-symbols-outlined" id="tm-play-icon">play_arrow</span>
+        </button>
+        <div>
+          <div class="text-[10px] font-black uppercase tracking-widest text-on-primary-container">Time Machine</div>
+          <div id="tm-display" class="text-sm font-black font-headline">Day 1 &bull; 08:00</div>
+        </div>
+      </div>
+      <button id="tm-reset"
+        class="text-[10px] font-bold uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity">Reset</button>
+    </div>
+    <input type="range" id="tm-slider" min="0" max="1000" value="0"
+      class="w-full accent-secondary h-1.5 rounded-full appearance-none bg-white/20">
+  </div>
+
+  <script>
+    (function () {
+      var raw = document.getElementById('expedition-data');
+      if (!raw) return;
+      var data = JSON.parse(raw.textContent);
+      var itinerary = data.itinerary || [];
+
+      // Time-zone safe parsing helper
+      function parseSafe(s) {
+        if (!s) return null;
+        var str = s.toString();
+        if (str.length === 10) str += 'T00:00:00';
+        return new Date(str);
+      }
+
+      var startTime = parseSafe(itinerary[0].date + 'T06:00:00').getTime();
+      var endTime = parseSafe(itinerary[itinerary.length - 1].date + 'T20:00:00').getTime();
+      var duration = endTime - startTime;
+
+      var currentTime = startTime;
+      if (data.test_date) {
+        var t = parseSafe(data.test_date);
+        if (t && !isNaN(t.getTime())) currentTime = t.getTime();
+      }
+
+      var isPlaying = false;
+      var timer = null;
+      var speed = 1000 * 60 * 60; // 1 hour per tick
+
+      var display = document.getElementById('tm-display');
+      var playBtn = document.getElementById('tm-play');
+      var icon = document.getElementById('tm-play-icon');
+      var slider = document.getElementById('tm-slider');
+      var reset = document.getElementById('tm-reset');
+
+      function update() {
+        var d = new Date(currentTime);
+        var dayNum = 1;
+        itinerary.forEach(function (day) {
+          if (new Date(day.date + 'T00:00:00').getTime() <= d.getTime()) dayNum = day.day;
+        });
+
+        display.textContent = 'Day ' + dayNum + ' • ' + d.toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit', hour12: false });
+        slider.value = ((currentTime - startTime) / duration) * 1000;
+
+        // Dispatch global event for includes to listen to (passing numeric timestamp)
+        window.dispatchEvent(new CustomEvent('expeditionTimeUpdate', { detail: { time: currentTime } }));
+      }
+
+      playBtn.addEventListener('click', function () {
+        isPlaying = !isPlaying;
+        icon.textContent = isPlaying ? 'pause' : 'play_arrow';
+        if (isPlaying) {
+          timer = setInterval(function () {
+            currentTime += speed;
+            if (currentTime > endTime) {
+              currentTime = startTime;
+              isPlaying = false;
+              clearInterval(timer);
+              icon.textContent = 'play_arrow';
+            }
+            update();
+          }, 500);
+        } else {
+          clearInterval(timer);
+        }
+      });
+
+      slider.addEventListener('input', function () {
+        currentTime = startTime + (parseFloat(slider.value) / 1000) * duration;
+        update();
+      });
+
+      reset.addEventListener('click', function () {
+        currentTime = startTime;
+        update();
+      });
+
+      update();
+    })();
+  </script>
+
+  <style>
+    #tm-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+    }
+  </style>
+  {% endif %}
+
+</main>
+
+<script>
+  (function () {
+    'use strict';
+
+    // ─── Hero title word-by-word GSAP reveal ───────────────────────────────────
+    window.addEventListener('load', function () {
+      if (typeof gsap === 'undefined') return;
+
+      // Split h1 words into spans for stagger animation
+      const titleEl = document.getElementById('expedition-hero-title');
+      if (titleEl) {
+        gsap.from(titleEl, {
+          y: 40, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.2
+        });
+      }
+
+      gsap.from('[data-gsap="reveal"]', {
+        y: 30, opacity: 0, duration: 1, ease: 'power3.out',
+        stagger: 0.15, delay: 0.3
+      });
+    });
+  }());
+</script>

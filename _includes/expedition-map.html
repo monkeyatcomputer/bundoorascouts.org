@@ -1,0 +1,342 @@
+{% comment %}
+  expedition-map.html
+  Renders a Leaflet.js map showing the expedition route.
+  - Markers at each unique overnight location, styled by status (complete/current/upcoming)
+  - Dashed teal polyline through all waypoints
+  - Status calculated from today's date vs each day's `date` field
+  - Progress + current location overlay cards
+{% endcomment %}
+
+{%- comment %} Leaflet assets — loaded once per page {%- endcomment %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<div>
+
+  {%- comment %} Section header {%- endcomment %}
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+    <div>
+      <div class="text-xs font-bold text-on-tertiary-container uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
+        <span class="material-symbols-outlined text-[14px]">route</span>
+        The Route
+      </div>
+      <h2 class="text-3xl md:text-4xl font-black text-primary tracking-tight font-headline">
+        Bundoora to <span class="text-on-tertiary-container">Uluru</span>
+      </h2>
+    </div>
+    <div class="text-right shrink-0">
+      <div class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-1">
+        <span id="map-status-label">Calculating&hellip;</span>
+      </div>
+      <div class="text-2xl font-black text-primary font-headline" id="map-day-label">&mdash;</div>
+    </div>
+  </div>
+
+  {%- comment %} Map + overlays {%- endcomment %}
+  <div class="relative rounded-3xl overflow-hidden shadow-2xl" style="height: 320px;">
+
+    <div id="expedition-map" class="w-full h-full z-0"></div>
+
+    {%- comment %} Top-right: Zoom controls {%- endcomment %}
+    <div class="absolute top-4 left-4 flex flex-col gap-2 z-[400]">
+      <button id="map-btn-focus" class="w-10 h-10 rounded-xl bg-white shadow-lg text-primary flex items-center justify-center hover:bg-[#008F88] hover:text-white transition-all duration-300" title="Focus Bus">
+        <span class="material-symbols-outlined">my_location</span>
+      </button>
+      <button id="map-btn-full" class="w-10 h-10 rounded-xl bg-white shadow-lg text-primary flex items-center justify-center hover:bg-[#008F88] hover:text-white transition-all duration-300" title="Show Full Route">
+        <span class="material-symbols-outlined">route</span>
+      </button>
+    </div>
+
+    {%- comment %} Bottom-left: progress card {%- endcomment %}
+    <div class="absolute bottom-4 left-4 bg-primary/90 backdrop-blur-md text-white p-4 rounded-2xl max-w-[220px] shadow-lg border border-white/10 z-[400] hidden sm:block">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-on-primary-container mb-1">Current Location</div>
+      <div class="text-base font-black leading-tight" id="map-current-location">&mdash;</div>
+      <div class="mt-3">
+        <div class="flex items-center justify-between text-[10px] font-bold mb-1.5">
+          <span>Journey Progress</span>
+          <span id="map-progress-pct">0%</span>
+        </div>
+        <div class="h-1.5 bg-white/20 rounded-full overflow-hidden">
+          <div class="h-full bg-[#008F88] rounded-full transition-all duration-1000 ease-out"
+            id="map-progress-bar" style="width: 0%"></div>
+        </div>
+      </div>
+    </div>
+
+    {%- comment %} Bottom-right: day card {%- endcomment %}
+    <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md text-primary p-4 rounded-2xl shadow-lg border-l-4 border-[#008F88] z-[400]">
+      <div class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tight mb-0.5">Expedition Day</div>
+      <div class="text-xl font-black text-primary font-headline" id="map-day-badge">Day &mdash;</div>
+      <div class="text-xs font-semibold opacity-70" id="map-day-date">&mdash;</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ─── Data ────────────────────────────────────────────────────────────────────
+  var raw = document.getElementById('expedition-data');
+  if (!raw) return;
+  var data, itinerary, testDate;
+  try {
+    data      = JSON.parse(raw.textContent);
+    itinerary = data.itinerary || [];
+    testDate  = data.test_date;
+  } catch (e) {
+    console.error('Failed to parse expedition-data:', e);
+    return;
+  }
+
+  // ─── State ───────────────────────────────────────────────────────────────────
+  var roadGeometry = null;
+  var currentDay = null;
+  var completedCount = 0;
+  var waypoints = [];
+  window.shouldAutoFocus = true;
+
+  // Process itinerary to find overnight waypoints (last event with lat/lng for each day)
+  itinerary.forEach(function (day) {
+    var coords = null;
+    if (day.events) {
+      for (var i = day.events.length - 1; i >= 0; i--) {
+        if (day.events[i].lat && day.events[i].lng) {
+          coords = { lat: day.events[i].lat, lng: day.events[i].lng };
+          break;
+        }
+      }
+    }
+    // Fallback or keep as null if no events have coords
+    day._targetLat = coords ? coords.lat : null;
+    day._targetLng = coords ? coords.lng : null;
+
+    if (coords) {
+      var last = waypoints[waypoints.length - 1];
+      if (!last || last.lat !== coords.lat || last.lng !== coords.lng) {
+        waypoints.push({ lat: coords.lat, lng: coords.lng, location: day.location, date: day.date, day: day.day });
+      }
+    }
+  });
+
+  // ─── Helpers ──────────────────────────────────────────────────────────────────
+  function parseSafe(s) {
+    if (!s) return new Date();
+    if (s instanceof Date) return s;
+    if (typeof s === 'number') return new Date(s);
+    var str = s.toString();
+    if (str.length === 10) str += 'T00:00:00';
+    return new Date(str);
+  }
+
+  function getStatus(dateStr) {
+    if (!dateStr) return 'upcoming';
+    var today = parseSafe(testDate);
+    if (isNaN(today.getTime())) today = new Date();
+    var todayDay = new Date(today.getTime()); todayDay.setHours(0, 0, 0, 0);
+    var target   = new Date(dateStr + 'T00:00:00'); target.setHours(0, 0, 0, 0);
+    if (isNaN(target.getTime())) return 'upcoming';
+    if (todayDay > target) return 'complete';
+    if (todayDay.getTime() === target.getTime()) return 'current';
+    return 'upcoming';
+  }
+
+  function setText(id, val) { var el = document.getElementById(id); if (el) el.textContent = val; }
+
+  // ─── Initialization ──────────────────────────────────────────────────────────
+  window.addEventListener('load', function () {
+    if (typeof L === 'undefined') return;
+
+    var map = L.map('expedition-map', { zoomControl: false, scrollWheelZoom: false });
+    window.expeditionMap = map;
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap &copy; CARTO',
+      subdomains: 'abcd',
+      maxZoom: 20
+    }).addTo(map);
+
+    L.control.zoom({ position: 'topright' }).addTo(map);
+
+    // Dotted breadcrumb trail for the last 3 days
+    var breadcrumbPath = L.polyline([], {
+      color: '#100e4c', weight: 2, dashArray: '2, 6', opacity: 0.4
+    }).addTo(map);
+
+    // Bold active path for the current day
+    var activePath = L.polyline([], {
+      color: '#008F88', weight: 4, dashArray: '8, 8', opacity: 0.9, lineCap: 'round'
+    }).addTo(map);
+
+    var roadData = null;
+    var busMarker = null;
+    var stopMarkers = [];
+
+    function initBusMarker() {
+      if (!currentDay) return null;
+      var dayKey = 'day_' + currentDay.day;
+      var dayRoute = (roadData && roadData[dayKey]) ? roadData[dayKey] : null;
+
+      var now = parseSafe(testDate);
+      var dayStart = new Date(now.getTime()); dayStart.setHours(6, 0, 0, 0);
+      var dayEnd   = new Date(now.getTime()); dayEnd.setHours(18, 0, 0, 0);
+
+      var pos = null;
+      var isSleeping = false;
+
+      if (now < dayStart) {
+        isSleeping = true;
+        // At night before departure: show at the START of the day's route
+        pos = (dayRoute && dayRoute.length > 0) ? dayRoute[0] : [currentDay._targetLat, currentDay._targetLng];
+      } else if (now > dayEnd) {
+        isSleeping = true;
+        // At night after arrival: show at the END of the day's route
+        pos = [currentDay._targetLat, currentDay._targetLng];
+      } else if (!dayRoute) {
+        isSleeping = true;
+        pos = [currentDay._targetLat, currentDay._targetLng];
+      } else {
+        var dayProgress = Math.max(0, Math.min(1, (now - dayStart) / (dayEnd - dayStart)));
+        var pointIdx = Math.floor(dayProgress * (dayRoute.length - 1));
+        pos = dayRoute[pointIdx];
+      }
+
+      var iconHtml = '<div style="background:' + (isSleeping ? '#474650' : '#100e4c') + ';color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);border:2px solid white;"><span class="material-symbols-outlined" style="font-size:20px;">' + (isSleeping ? 'bedtime' : 'directions_bus') + '</span></div>';
+      
+      var busIcon = L.divIcon({
+        className: '', iconSize: [32, 32], iconAnchor: [16, 16],
+        html: iconHtml
+      });
+
+      if (!busMarker) {
+        busMarker = L.marker(pos, { icon: busIcon, zIndexOffset: 1000 }).addTo(map);
+      } else {
+        busMarker.setLatLng(pos);
+        busMarker.setIcon(busIcon);
+      }
+
+      return pos;
+    }
+
+    function updateMapUI(newTestDate) {
+      if (newTestDate) testDate = newTestDate;
+      currentDay = null; completedCount = 0;
+      itinerary.forEach(function (day) {
+        var s = getStatus(day.date);
+        if (s === 'complete') completedCount++;
+        if (s === 'current' && !currentDay) currentDay = day;
+      });
+      if (!currentDay) currentDay = completedCount === itinerary.length ? itinerary[itinerary.length - 1] : itinerary[0];
+
+      var statusLabel = completedCount === 0 ? 'Before Departure' : (completedCount === itinerary.length ? 'Expedition Complete' : 'Underway');
+      setText('map-status-label', statusLabel);
+      setText('map-day-label', currentDay.title);
+      setText('map-current-location', currentDay.location);
+      setText('map-day-badge', 'Day ' + currentDay.day);
+      setText('map-day-date', new Date(currentDay.date + 'T00:00:00').toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' }));
+      
+      var progressPct = Math.round((completedCount / itinerary.length) * 100);
+      setText('map-progress-pct', progressPct + '%');
+      var bar = document.getElementById('map-progress-bar');
+      if (bar) bar.style.width = progressPct + '%';
+
+      if (roadData) {
+        // 1. Update Active Path (Current Day)
+        var dayKey = 'day_' + currentDay.day;
+        activePath.setLatLngs(roadData[dayKey] || []);
+
+        // 2. Update Breadcrumb Path (Last 3 Days)
+        var breadcrumbPoints = [];
+        for (var d = currentDay.day - 3; d < currentDay.day; d++) {
+          if (d >= 1) {
+            var k = 'day_' + d;
+            if (roadData[k]) {
+              breadcrumbPoints = breadcrumbPoints.concat(roadData[k]);
+            }
+          }
+        }
+        breadcrumbPath.setLatLngs(breadcrumbPoints);
+      }
+
+      // 3. Update stop markers styling
+      stopMarkers.forEach(function(m) {
+        var wp = m.wp;
+        var s = getStatus(wp.date);
+        var isCurrent  = (currentDay && wp.location === currentDay.location && s !== 'complete');
+        var isComplete = (s === 'complete');
+        
+        var markerHtml = isCurrent ? 
+          '<div style="width:28px;height:28px;border-radius:50%;background:#008F88;border:3px solid white;box-shadow:0 0 0 6px rgba(0,143,136,0.25);display:flex;align-items:center;justify-content:center;animation:expedition-pulse 2s infinite;"><div style="width:8px;height:8px;border-radius:50%;background:white;"></div></div>' :
+          '<div style="width:14px;height:14px;border-radius:50%;background:' + (isComplete ? '#100e4c' : 'white') + ';border:2px solid #100e4c;opacity:' + (isComplete ? '1' : '0.5') + ';"></div>';
+        
+        m.marker.setIcon(L.divIcon({ 
+          html: markerHtml, className: '', 
+          iconSize: isCurrent ? [28, 28] : [14, 14], 
+          iconAnchor: isCurrent ? [14, 14] : [7, 7] 
+        }));
+      });
+
+      var busPos = initBusMarker();
+      if (window.shouldAutoFocus) {
+        var targetPos = busPos || [currentDay._targetLat, currentDay._targetLng];
+        map.setView(targetPos, 8, { animate: true });
+      }
+    }
+
+    // ─── Button Events ────────────────────────────────────────────────────────
+    document.getElementById('map-btn-focus').addEventListener('click', function() {
+      window.shouldAutoFocus = true;
+      updateMapUI();
+    });
+
+    document.getElementById('map-btn-full').addEventListener('click', function() {
+      window.shouldAutoFocus = false;
+      var points = activePath.getLatLngs().concat(breadcrumbPath.getLatLngs());
+      if (points.length > 0) {
+        map.fitBounds(L.polyline(points).getBounds(), { padding: [48, 48] });
+      } else {
+        map.fitBounds(L.polyline(waypoints.map(w => [w.lat, w.lng])).getBounds(), { padding: [48, 48] });
+      }
+    });
+
+    map.on('dragstart', function() { window.shouldAutoFocus = false; });
+
+    // ─── Markers ──────────────────────────────────────────────────────────────
+    waypoints.forEach(function (wp) {
+      var m = L.marker([wp.lat, wp.lng], { 
+        icon: L.divIcon({ html: '', className: '' }) // Set by updateMapUI
+      }).addTo(map).bindPopup('<strong>' + wp.location + '</strong><br>Day ' + wp.day);
+      stopMarkers.push({ marker: m, wp: wp });
+    });
+
+    // ─── Initial Load ─────────────────────────────────────────────────────────
+    if (data.precomputed_route) {
+      roadData = data.precomputed_route;
+    }
+    updateMapUI();
+
+    window.addEventListener('expeditionTimeUpdate', function(e) {
+      updateMapUI(e.detail.time);
+    });
+  });
+})();
+</script>
+
+<style>
+  @keyframes expedition-pulse {
+    0%, 100% { box-shadow: 0 0 0 6px rgba(0,143,136,0.25), 0 4px 12px rgba(0,0,0,0.2); }
+    50%       { box-shadow: 0 0 0 12px rgba(0,143,136,0.1), 0 4px 12px rgba(0,0,0,0.2); }
+  }
+  .expedition-popup .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(16,14,76,0.12);
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 2px;
+  }
+  .expedition-popup .leaflet-popup-tip { background: white; }
+  #expedition-map { background: #f5f3f3; }
+  #expedition-map { background: #f5f3f3; }
+</style>
