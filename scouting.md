@@ -17,7 +17,7 @@ description: "Discover the worldwide Scouting movement and how Bundoora Scouts p
       <h2 class="text-2xl font-black text-primary">Message from our Group Leader</h2>
       <div class="text-on-surface-variant italic leading-relaxed">
         <p>
-          "Congratulations on joining Bundoora Scout Group! Your child is now part of a global organisation which today has more than 57 million members. 
+          "Congratulations on joining Bundoora Scout Group! Your child is now part of a global organisation which today has more than 57 million members. If you haven’t yet joined, that’s okay. We hope the information herein is helpful to you.
         </p>
         <p>
           In Bundoora, we are proud to be part of this worldwide movement, run by local families who help make Scouting the best possible experience for our children. We wish your family lots of fun, friendship, adventure, and safe times ahead."
