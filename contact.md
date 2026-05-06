@@ -99,9 +99,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
             const sectionMap = {
               'Joey Scouts - 5 to 7 Years': 'Joey Scouts',
               'Cub Scouts - 8 to 10 Years': 'Cub Scouts',
-              'Scouts - 11 to 14 Years': 'Scouts',
-              'Venturer Scouts - 15 to 17 Years': 'Venturer Scouts',
-              'Rovers - 18 to 25 Years': 'Handfield Rover Unit'
+              'Scouts - 11 to 14 Years': 'Scouts'
             };
 
             function updateExtranetVisibility() {
