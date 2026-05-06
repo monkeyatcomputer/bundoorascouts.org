@@ -242,7 +242,14 @@ Renders a Leaflet.js map showing the expedition route.
 
           if (activeDwell) {
             pos = [activeDwell.lat, activeDwell.lng];
-            iconName = (activeDwell.type.indexOf('lunch') !== -1 || activeDwell.type.indexOf('dinner') !== -1) ? 'restaurant' : 'hiking';
+            var type = activeDwell.type || '';
+            if (type === 'lunch' || type === 'dinner' || type === 'meal') {
+              iconName = 'restaurant';
+            } else if (type === 'camp' || type === 'arrive') {
+              iconName = 'camping';
+            } else {
+              iconName = 'hiking';
+            }
             isStationary = true;
           } else if (isNight) {
             iconName = 'bedtime';

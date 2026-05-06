@@ -10,9 +10,11 @@ const dataContent = fs.readFileSync(dataPath, 'utf8');
 function getSection(content, sectionName) {
     const lines = content.split('\n');
     let start = -1;
+    let sameLineContent = '';
     for (let i = 0; i < lines.length; i++) {
         if (lines[i].startsWith(sectionName + ':')) {
             start = i;
+            sameLineContent = lines[i].substring(sectionName.length + 1).trim();
             break;
         }
     }
@@ -20,12 +22,24 @@ function getSection(content, sectionName) {
 
     let end = lines.length;
     for (let i = start + 1; i < lines.length; i++) {
-        if (lines[i].match(/^[a-z_]+:/)) { // New section starts with a key at col 0
+        const line = lines[i];
+        // Stop at new section or comment at col 0
+        if (line.match(/^[a-z_]+:/) || line.startsWith('#')) {
             end = i;
             break;
         }
     }
-    return '\n' + lines.slice(start + 1, end).join('\n');
+    let sectionContent = lines.slice(start + 1, end).join('\n');
+    if (sameLineContent) {
+        // If content was on the same line (like "gallery: - image"), prepend it
+        // but normalize it to have proper indentation if it's a list item
+        if (sameLineContent.startsWith('-')) {
+            sectionContent = '  ' + sameLineContent + '\n' + sectionContent;
+        } else {
+            sectionContent = sameLineContent + '\n' + sectionContent;
+        }
+    }
+    return sectionContent.trimEnd();
 }
 
 const itineraryText = getSection(dataContent, 'itinerary');
@@ -186,7 +200,8 @@ async function run() {
 #     lat/lng: Coordinates for map waypoints
 #     bus:    Optional array [1, 2, 3] if specific to certain buses
 #     detail: Optional expanded description
-itinerary:${itineraryText}\n\n`;
+itinerary:
+${itineraryText}\n\n`;
 
     if (galleryText) {
         yamlStr += `# ─── GALLERY ──────────────────────────────────────────────────────────────────
@@ -195,7 +210,8 @@ itinerary:${itineraryText}\n\n`;
 #   alt:     Alt text for accessibility
 #   caption: Display caption
 #   span:    Layout size (normal | wide | large)
-gallery:${galleryText}\n\n`;
+gallery:
+${galleryText}\n\n`;
     }
     
     yamlStr += `# ─── PRECOMPUTED ROUTE ────────────────────────────────────────────────────────

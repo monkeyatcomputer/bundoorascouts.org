@@ -236,10 +236,13 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
         });
       }
 
-      gsap.from('[data-gsap="reveal"]', {
-        y: 30, opacity: 0, duration: 1, ease: 'power3.out',
-        stagger: 0.15, delay: 0.3
-      });
+      const revealEls = document.querySelectorAll('[data-gsap="reveal"]');
+      if (revealEls.length > 0) {
+        gsap.from(revealEls, {
+          y: 30, opacity: 0, duration: 1, ease: 'power3.out',
+          stagger: 0.15, delay: 0.3
+        });
+      }
     });
   }());
 </script>
