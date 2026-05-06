@@ -23,7 +23,7 @@ description: "Discover the worldwide Scouting movement and how Bundoora Scouts p
           In Bundoora, we are proud to be part of this worldwide movement, run by local families who help make Scouting the best possible experience for our children. We wish your family lots of fun, friendship, adventure, and safe times ahead."
         </p>
       </div>
-      <p class="font-bold text-primary">– Bruce, Group Leader</p>
+      <p class="font-bold text-primary">– Bruce "Shark", Group Leader</p>
     </div>
   </div>
 </div>
