@@ -2,25 +2,42 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-// 1. Read the markdown file
-const mdPath = path.join(__dirname, '..', 'trip', 'uluru-2026.md');
-const mdContent = fs.readFileSync(mdPath, 'utf8');
+// 1. Read the data file
+const dataPath = path.join(__dirname, '..', '_data', 'uluru-2026.yml');
+const dataContent = fs.readFileSync(dataPath, 'utf8');
 
-// Use a regex to extract the frontmatter (itinerary)
-const frontmatterMatch = mdContent.match(/^---\n([\s\S]*?)\n---/);
-if (!frontmatterMatch) {
-    console.error("Could not find frontmatter");
+// Robust section extraction
+function getSection(content, sectionName) {
+    const lines = content.split('\n');
+    let start = -1;
+    for (let i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith(sectionName + ':')) {
+            start = i;
+            break;
+        }
+    }
+    if (start === -1) return null;
+
+    let end = lines.length;
+    for (let i = start + 1; i < lines.length; i++) {
+        if (lines[i].match(/^[a-z_]+:/)) { // New section starts with a key at col 0
+            end = i;
+            break;
+        }
+    }
+    return '\n' + lines.slice(start + 1, end).join('\n');
+}
+
+const itineraryText = getSection(dataContent, 'itinerary');
+const galleryText = getSection(dataContent, 'gallery');
+
+if (!itineraryText) {
+    console.error("Could not find 'itinerary:' section in uluru-2026.yml");
     process.exit(1);
 }
 
-// Basic YAML parser for the itinerary part (avoiding external dependencies if possible, but let's try to be robust)
-// Since I can't easily install npm packages, I'll use a more manual approach or a simple regex-based one.
-// Actually, I'll just use the existing logic but improved.
-
-function fetchRoute(points) {
-    if (points.length < 2) return Promise.resolve(null);
-    const coords = points.map(p => `${p.lng},${p.lat}`).join(';');
-    const url = `https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`;
+function fetchLeg(p1, p2) {
+    const url = `https://router.project-osrm.org/route/v1/driving/${p1.lng},${p1.lat};${p2.lng},${p2.lat}?overview=full&geometries=geojson`;
     
     return new Promise((resolve) => {
         https.get(url, (res) => {
@@ -30,27 +47,33 @@ function fetchRoute(points) {
                 try {
                     const json = JSON.parse(data);
                     if (json.routes && json.routes[0]) {
-                        resolve(json.routes[0].geometry.coordinates.map(c => [c[1], c[0]]));
+                        const coords = json.routes[0].geometry.coordinates.map(c => [c[1], c[0]]);
+                        // Force exact start/end points to allow "off-road" legs to the precise waypoint
+                        if (coords.length > 0) {
+                            coords[0] = [p1.lat, p1.lng];
+                            coords[coords.length - 1] = [p2.lat, p2.lng];
+                        }
+                        resolve(coords);
                     } else {
-                        console.warn("  ! OSRM returned no route for these points.");
-                        resolve(null);
+                        console.warn(`  ! OSRM returned no route for ${p1.lat},${p1.lng} to ${p2.lat},${p2.lng}`);
+                        resolve([[p1.lat, p1.lng], [p2.lat, p2.lng]]); // Fallback to straight line
                     }
                 } catch (e) {
                     console.error("  ! JSON Parse error:", e.message);
-                    resolve(null);
+                    resolve([[p1.lat, p1.lng], [p2.lat, p2.lng]]);
                 }
             });
         }).on('error', (e) => {
             console.error("  ! Network error:", e.message);
-            resolve(null);
+            resolve([[p1.lat, p1.lng], [p2.lat, p2.lng]]);
         });
     });
 }
 
-// Helper to extract waypoints for a specific bus
 function getWaypointsForBus(dayBlock, busId, lastPos) {
     const waypoints = [lastPos];
-    const events = dayBlock.split('\n      -');
+    // Split by "- " that follows significant indentation
+    const events = dayBlock.split(/\n\s+-\s+/);
     
     events.forEach(event => {
         const busMatch = event.match(/bus:\s*\[([\d,\s]+)\]/);
@@ -77,13 +100,12 @@ function getWaypointsForBus(dayBlock, busId, lastPos) {
 }
 
 async function run() {
-    const itineraryMatch = mdContent.match(/itinerary:([\s\S]*?)gallery:/);
-    const itineraryText = itineraryMatch[1];
+    // Each day starts with "  - day:"
     const dayBlocks = itineraryText.split(/\n\s*-\s*day:/).slice(1);
     
-    console.log(`Processing ${dayBlocks.length} days for 3 buses...`);
+    console.log(`Processing ${dayBlocks.length} days for 3 buses from consolidated data...`);
 
-    const result = { days: {} };
+    const routeData = [];
     let lastPosBus = {
         1: { lat: -37.7046500, lng: 145.0631543 },
         2: { lat: -37.7046500, lng: 145.0631543 },
@@ -93,45 +115,115 @@ async function run() {
     for (let i = 0; i < dayBlocks.length; i++) {
         const block = dayBlocks[i];
         const dayNum = i + 1;
-        result.days[`day_${dayNum}`] = {};
+        const dayEntry = { day: dayNum, segments: [] };
 
+        // Group buses by their waypoint sequences
+        const wpGroups = {};
         for (let busId = 1; busId <= 3; busId++) {
-            const waypoints = getWaypointsForBus(block, busId, lastPosBus[busId]);
-            
-            if (waypoints.length > 1) {
-                console.log(`Day ${dayNum} Bus ${busId}: Fetching route (${waypoints.length} wps)...`);
-                const route = await fetchRoute(waypoints);
-                if (route) {
-                    // Increased frequency: Sample every 2nd point instead of every Nth, aiming for ~500 points per day
-                    const sampleRate = Math.max(1, Math.floor(route.length / 500));
-                    result.days[`day_${dayNum}`][`bus_${busId}`] = route.filter((_, idx) => idx % sampleRate === 0 || idx === route.length - 1);
-                    lastPosBus[busId] = waypoints[waypoints.length - 1];
-                } else {
-                    result.days[`day_${dayNum}`][`bus_${busId}`] = waypoints.map(p => [p.lat, p.lng]);
-                    lastPosBus[busId] = waypoints[waypoints.length - 1];
-                }
-            } else {
-                // Stationary day or same location
-                result.days[`day_${dayNum}`][`bus_${busId}`] = [[lastPosBus[busId].lat, lastPosBus[busId].lng]];
-            }
+            const wps = getWaypointsForBus(block, busId, lastPosBus[busId]);
+            const key = JSON.stringify(wps);
+            if (!wpGroups[key]) wpGroups[key] = { buses: [], waypoints: wps };
+            wpGroups[key].buses.push(busId);
         }
-    }
 
-    // Write to YAML
-    let yamlStr = 'days:\n';
-    for (const dayKey in result.days) {
-        yamlStr += `  ${dayKey}:\n`;
-        for (const busKey in result.days[dayKey]) {
-            yamlStr += `    ${busKey}:\n`;
-            result.days[dayKey][busKey].forEach(p => {
-                yamlStr += `      - [${p[0].toFixed(7)}, ${p[1].toFixed(7)}]\n`;
+        for (const key in wpGroups) {
+            const group = wpGroups[key];
+            const waypoints = group.waypoints;
+            const buses = group.buses;
+
+            let segmentPoints = [];
+            if (waypoints.length > 1) {
+                console.log(`Day ${dayNum} Bus ${buses.join('+')}: Fetching ${waypoints.length - 1} legs...`);
+                
+                for (let j = 0; j < waypoints.length - 1; j++) {
+                    const leg = await fetchLeg(waypoints[j], waypoints[j+1]);
+                    // Concatenate, avoiding duplicating the shared point
+                    if (segmentPoints.length > 0 && leg.length > 0) {
+                        segmentPoints = segmentPoints.concat(leg.slice(1));
+                    } else {
+                        segmentPoints = segmentPoints.concat(leg);
+                    }
+                }
+                
+                // Sample the final combined route, but PROTECT waypoints from being filtered out
+                const sampleRate = Math.max(1, Math.floor(segmentPoints.length / 500));
+                const protectedPoints = new Set(waypoints.map(p => `${p.lat.toFixed(7)},${p.lng.toFixed(7)}`));
+                
+                segmentPoints = segmentPoints.filter((p, idx) => {
+                    const isWaypoint = protectedPoints.has(`${p[0].toFixed(7)},${p[1].toFixed(7)}`);
+                    return isWaypoint || idx % sampleRate === 0 || idx === segmentPoints.length - 1;
+                });
+                
+            } else {
+                segmentPoints = [[waypoints[0].lat, waypoints[0].lng]];
+            }
+
+            // Update last positions for these buses
+            const finalPos = { lat: segmentPoints[segmentPoints.length-1][0], lng: segmentPoints[segmentPoints.length-1][1] };
+            buses.forEach(bid => lastPosBus[bid] = finalPos);
+
+            dayEntry.segments.push({
+                bus: buses.length === 3 ? null : buses,
+                points: segmentPoints
             });
         }
+        routeData.push(dayEntry);
     }
 
-    const outPath = path.join(__dirname, '..', '_data', 'expedition_route_uluru.yml');
-    fs.writeFileSync(outPath, yamlStr);
-    console.log(`\nSuccess! Saved segments to ${outPath}`);
+    // Write back to combined YAML with schema comments
+    let yamlStr = `# ─── ITINERARY ────────────────────────────────────────────────────────────────
+# One entry per calendar day.
+# - day:      Day number (1, 2, 3...)
+#   date:     ISO string (YYYY-MM-DD)
+#   title:    Display title for the day
+#   location: Overnight location name
+#   image:    Path to thumbnail image
+#   events:   List of activities/stops. Each event:
+#     time:   HH:MM (24h format)
+#     type:   depart | travel | activity | lunch | dinner | arrive | camp
+#     label:  Short display name
+#     dwell:  Optional decimal hours to stay at location (e.g. 0.5)
+#     lat/lng: Coordinates for map waypoints
+#     bus:    Optional array [1, 2, 3] if specific to certain buses
+#     detail: Optional expanded description
+itinerary:${itineraryText}\n\n`;
+
+    if (galleryText) {
+        yamlStr += `# ─── GALLERY ──────────────────────────────────────────────────────────────────
+# Images shown in the expedition media section.
+# - image:   Path to image file
+#   alt:     Alt text for accessibility
+#   caption: Display caption
+#   span:    Layout size (normal | wide | large)
+gallery:${galleryText}\n\n`;
+    }
+    
+    yamlStr += `# ─── PRECOMPUTED ROUTE ────────────────────────────────────────────────────────
+# Optimized map geometry generated by precompute_route.js.
+# - day:      Day number
+#   segments: List of route paths for this day.
+#     bus:    Optional array [1, 2, 3]. If null, applies to all buses.
+#     points: List of [lat, lng] coordinates sampled from OSRM.
+route:\n`;
+
+    routeData.forEach(day => {
+        yamlStr += `  - day: ${day.day}\n`;
+        yamlStr += `    segments:\n`;
+        day.segments.forEach(seg => {
+            if (seg.bus) {
+                yamlStr += `      - bus: [${seg.bus.join(', ')}]\n`;
+            } else {
+                yamlStr += `      - bus:\n`;
+            }
+            yamlStr += `        points:\n`;
+            seg.points.forEach(p => {
+                yamlStr += `          - [${p[0].toFixed(7)}, ${p[1].toFixed(7)}]\n`;
+            });
+        });
+    });
+
+    fs.writeFileSync(dataPath, yamlStr);
+    console.log(`\nSuccess! Re-synchronized ${dataPath}`);
 }
 
 run().catch(err => {

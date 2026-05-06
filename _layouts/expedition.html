@@ -8,11 +8,11 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
 {% endcomment %}
 <script id="expedition-data" type="application/json">
   {
-    "itinerary": {{ page.itinerary | jsonify }},
-    "gallery":   {{ page.gallery   | jsonify }},
+    "itinerary": {{ site.data[page.data_file].itinerary | default: page.itinerary | jsonify }},
+    "gallery":   {{ site.data[page.data_file].gallery   | default: page.gallery   | jsonify }},
     "test_date": {{ page.test_date | jsonify }},
     "test_mode": {{ page.test_mode | default: false | jsonify }},
-    "precomputed_route": {{ site.data.expedition_route_uluru.days | jsonify | default: 'null' }}
+    "precomputed_route": {{ site.data[page.data_file].route | jsonify | default: 'null' }}
   }
 </script>
 
