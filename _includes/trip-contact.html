@@ -1,5 +1,5 @@
 <div class="mt-20 p-8 md:p-12 bg-surface-container-low rounded-3xl border border-outline-variant/10 shadow-ambient-lg">
-  <div class="max-w-3xl mx-auto">
+  <div class="max-w-3xl mx-auto not-prose">
     <div class="text-center mb-10">
       <h3 class="font-headline text-3xl font-bold text-primary mb-4">
         {% if page.trip_full_banner %}
@@ -69,6 +69,15 @@
       <!-- reCAPTCHA -->
       <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
       <script>
+        document.getElementById('contact-submit').addEventListener('click', function(event) {
+          var form = document.getElementById('trip-contact-form');
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            form.reportValidity();
+          }
+        }, true);
+
         function onSubmit(token) {
           document.getElementById('trip-contact-form').submit();
         }

@@ -83,12 +83,28 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
         <!-- reCAPTCHA -->
         <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
         <script>
+          document.getElementById('contact-submit').addEventListener('click', function(event) {
+            var form = document.getElementById('contact-form');
+            var checkboxes = Array.from(form.querySelectorAll('input[name="help_with"]'));
+            var isChecked = checkboxes.some(cb => cb.checked);
+            
+            if (!isChecked) {
+              checkboxes[0].setCustomValidity('Please select at least one option.');
+            } else {
+              checkboxes[0].setCustomValidity('');
+            }
+
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopImmediatePropagation();
+              form.reportValidity();
+            }
+          }, true);
+
           function onSubmit(token) {
             document.getElementById('contact-form').submit();
           }
-        </script>
-
-        <script>
+          
           document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('contact-form');
             const checkboxes = Array.from(form.querySelectorAll('input[name="help_with"]'));
@@ -128,17 +144,6 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
                 extranetSuggestion.classList.add('hidden');
               }
             }
-            
-            form.addEventListener('submit', (e) => {
-              const isChecked = checkboxes.some(cb => cb.checked);
-              if (!isChecked) {
-                e.preventDefault();
-                checkboxes[0].setCustomValidity('Please select at least one option.');
-                checkboxes[0].reportValidity();
-              } else {
-                checkboxes[0].setCustomValidity('');
-              }
-            });
 
             checkboxes.forEach(cb => {
               cb.addEventListener('change', () => {
