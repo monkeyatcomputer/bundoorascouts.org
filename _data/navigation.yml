@@ -1,0 +1,49 @@
+- title: Sections
+  url: /sections
+  icon: category
+  dynamic_collection: sections
+  children:
+    - title: Overview
+      url: /sections
+
+- title: The Campfire
+  url: /the-campfire
+  icon: local_fire_department
+
+- title: About Scouting
+  url: /scouting
+  icon: explore
+  children:
+    - title: Overview
+      url: /scouting
+    - title: What is Scouting?
+      url: /scouting/what-is-scouting
+    - title: Benefits & Impact
+      url: /scouting/benefits-and-impact
+    - title: The Program
+      url: /scouting/the-program
+    - title: Costs & Uniform
+      url: /scouting/costs-and-uniform
+    - title: Child Safety
+      url: /scouting/child-safety
+    - title: Working Together
+      url: /scouting/working-together
+    - title: Badge Placement
+      url: /scouting/badge-placement
+    - title: Scout Talk (Glossary)
+      url: /scouting/glossary
+
+- title: About Us
+  url: /about
+  icon: groups
+  children:
+    - title: Overview
+      url: /about
+    - title: Our Leaders
+      url: /about/our-leaders
+    - title: Our Sponsors
+      url: /about/our-sponsors
+    - title: Hall Hire
+      url: /about/hall-hire
+    - title: Contact Us
+      url: /contact
