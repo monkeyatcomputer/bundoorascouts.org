@@ -8,11 +8,12 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
 {% endcomment %}
 <script id="expedition-data" type="application/json">
   {
-    "itinerary": {{ site.data[page.data_file].itinerary | default: page.itinerary | jsonify }},
-    "gallery":   {{ site.data[page.data_file].gallery   | default: page.gallery   | jsonify }},
+    "itinerary": {{ site.data[page.data_location][page.data_itinerary].itinerary | jsonify | default: 'null' }},
+    "gallery":   {{ site.data[page.data_location][page.data_gallery].gallery | jsonify | default: 'null' }},
+    "telemetry": {{ site.data[page.data_location][page.data_telemetry].telemetry | jsonify | default: 'null' }},
+    "route": {{ site.data[page.data_location][page.data_route].route | jsonify | default: 'null' }},
     "test_date": {{ page.test_date | jsonify }},
-    "test_mode": {{ page.test_mode | default: false | jsonify }},
-    "precomputed_route": {{ site.data[page.data_file].route | jsonify | default: 'null' }}
+    "test_mode": {{ page.test_mode | default: false | jsonify }}
   }
 </script>
 
@@ -93,7 +94,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
   </section>
 
   {%- comment -%} ─── GALLERY ────────────────────────────────────────────────── {%- endcomment -%}
-  {% assign gallery_items = site.data[page.data_file].gallery | default: page.gallery %}
+  {% assign gallery_items = site.data[page.data_location][page.data_gallery].gallery | default: page.gallery %}
   {% if gallery_items and gallery_items.size > 0 %}
   <section class="py-2 bg-surface not-prose">
     <div class="max-w-7xl mx-auto px-6 md:px-12">
@@ -105,7 +106,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
   {%- comment %} ─── Time Machine (Test Mode Only) ────────────────────────────────────── {% endcomment %}
   {% if page.test_mode %}
   <div id="time-machine"
-    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000] bg-primary/95 backdrop-blur-xl text-white p-4 rounded-3xl shadow-2xl border border-white/10 min-w-[320px] flex flex-col gap-3 not-prose">
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000] bg-primary/95 backdrop-blur-xl text-white p-4 rounded-3xl shadow-2xl border border-white/10 w-[90vw] max-w-[800px] flex flex-col gap-3 not-prose">
     <div class="flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <button id="tm-play"
@@ -133,25 +134,53 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
 
       // Time-zone safe parsing helper
       function parseSafe(s) {
-        if (!s) return null;
-        var str = s.toString();
-        if (str.length === 10) str += 'T00:00:00';
-        return new Date(str);
+        if (!s) return new Date();
+        if (s instanceof Date) return s;
+        if (typeof s === 'number') return new Date(s);
+        var str = s.toString().trim();
+        // Handle "YYYY-MM-DD"
+        if (str.length === 10) str += 'T00:00:00+10:00';
+        // Handle "YYYY-MM-DD HH:MM:SS" or "YYYY-MM-DDTHH:MM:SS"
+        else if (str.length === 19) {
+          str = str.replace(' ', 'T') + '+10:00';
+        }
+        var d = new Date(str);
+        // Fallback for Safari/older browsers if T and offset are tricky
+        if (isNaN(d.getTime())) {
+          d = new Date(str.replace('T', ' ').replace(/\+(\d2):(\d2)$/, ' GMT+$1$2'));
+        }
+        return isNaN(d.getTime()) ? new Date() : d;
       }
 
-      var startTime = parseSafe(itinerary[0].date + 'T06:00:00').getTime();
-      var endTime = parseSafe(itinerary[itinerary.length - 1].date + 'T20:00:00').getTime();
+      // Flatten events to find start/end and facilitate lookup
+      var allEvents = [];
+      itinerary.forEach(function(day) {
+        if (day.events) {
+          day.events.forEach(function(ev) {
+            var d = parseSafe(ev.date);
+            if (d) {
+              allEvents.push({ time: d.getTime(), day: day.day, tz: ev.date.match(/[+-]\d{2}:\d{2}$/)?.[0] || '+10:00' });
+            }
+          });
+        }
+      });
+
+      if (allEvents.length === 0) return;
+      allEvents.sort((a, b) => a.time - b.time);
+
+      var startTime = allEvents[0].time;
+      var endTime = allEvents[allEvents.length - 1].time;
       var duration = endTime - startTime;
 
       var currentTime = startTime;
       if (data.test_date) {
         var t = parseSafe(data.test_date);
-        if (t && !isNaN(t.getTime())) currentTime = t.getTime();
+        if (t) currentTime = t.getTime();
       }
 
       var isPlaying = false;
       var timer = null;
-      var speed = 1000 * 60 * 15; // 15 minutes per tick
+      var speed = 1000 * 60 * 30; // 30 minutes per tick
 
       var display = document.getElementById('tm-display');
       var playBtn = document.getElementById('tm-play');
@@ -161,20 +190,47 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
 
       function update() {
         var d = new Date(currentTime);
-        var dayNum = 0;
-        itinerary.forEach(function (day) {
-          if (new Date(day.date + 'T00:00:00').getTime() <= d.getTime()) dayNum = day.day;
-        });
-
-        display.textContent = 'Day ' + dayNum + ' • ' + d.toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit', hour12: false });
         
-        // Snap slider to 15 min increments
-        var total15m = duration / (1000 * 60 * 15);
-        var current15m = (currentTime - startTime) / (1000 * 60 * 15);
-        slider.max = Math.floor(total15m);
-        slider.value = Math.floor(current15m);
+        // Find current day and timezone
+        var currentDayInfo = allEvents[0];
+        for (var i = 0; i < allEvents.length; i++) {
+          if (allEvents[i].time <= currentTime) {
+            currentDayInfo = allEvents[i];
+          } else {
+            break;
+          }
+        }
+        
+        var dayNum = currentDayInfo.day;
+        var dayTz = currentDayInfo.tz;
 
-        // Dispatch global event for includes to listen to (passing numeric timestamp)
+        // Helper to format time with a specific offset
+        function formatOffsetTime(date, offsetStr) {
+          var offsetParts = offsetStr.match(/([\+\-])(\d{2}):(\d{2})/);
+          if (!offsetParts) return date.toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit', hour12: false });
+          
+          var sign = offsetParts[1] === '+' ? 1 : -1;
+          var hours = parseInt(offsetParts[2]);
+          var mins = parseInt(offsetParts[3]);
+          var offsetMs = sign * (hours * 3600000 + mins * 60000);
+          
+          // UTC time + offset
+          var localTime = date.getTime() + offsetMs;
+          var shifted = new Date(localTime);
+          
+          // Use getUTC* to avoid browser local timezone interference
+          return ('0' + shifted.getUTCHours()).slice(-2) + ':' + ('0' + shifted.getUTCMinutes()).slice(-2);
+        }
+
+        display.textContent = 'Day ' + dayNum + ' • ' + formatOffsetTime(d, dayTz);
+
+        // Update slider
+        if (duration > 0) {
+          var current30m = (currentTime - startTime) / (1000 * 60 * 30);
+          slider.max = Math.floor(duration / (1000 * 60 * 30));
+          slider.value = Math.floor(current30m);
+        }
+
         window.dispatchEvent(new CustomEvent('expeditionTimeUpdate', { detail: { time: currentTime } }));
       }
 
@@ -191,25 +247,31 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
               icon.textContent = 'play_arrow';
             }
             update();
-          }, 200); // Faster interval (5 ticks per sec) for 15m jumps
+          }, 400);
         } else {
           clearInterval(timer);
         }
       });
 
       slider.addEventListener('input', function () {
-        currentTime = startTime + (parseInt(slider.value) * (1000 * 60 * 15));
+        currentTime = startTime + (parseInt(slider.value) * (1000 * 60 * 30));
         update();
       });
 
       reset.addEventListener('click', function () {
-        currentTime = startTime;
+        if (data.test_date) {
+            var t = parseSafe(data.test_date);
+            if (t) currentTime = t.getTime();
+        } else {
+            currentTime = startTime;
+        }
         update();
       });
 
       update();
     })();
   </script>
+
 
   <style>
     #tm-slider::-webkit-slider-thumb {

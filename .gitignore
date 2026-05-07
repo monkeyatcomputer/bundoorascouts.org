@@ -4,6 +4,4 @@ _site
 .jekyll-metadata
 .vscode
 .cspell
-vendor/
-samples/
-branding-kit/
+scratch/

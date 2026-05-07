@@ -93,30 +93,39 @@
     if (!s) return new Date();
     if (s instanceof Date) return s;
     if (typeof s === 'number') return new Date(s);
-    var str = s.toString();
-    if (str.length === 10) str += 'T00:00:00';
-    return new Date(str);
-  }
-
-  function getStatus(dateStr) {
-    if (!dateStr) return 'upcoming';
-    var today = parseSafe(testDate);
-    if (isNaN(today.getTime())) today = new Date();
-
-    var todayDay = new Date(today.getTime()); todayDay.setHours(0, 0, 0, 0);
-    var target   = new Date(dateStr + 'T00:00:00'); target.setHours(0, 0, 0, 0);
-
-    if (isNaN(target.getTime())) return 'upcoming';
-    if (todayDay > target) return 'complete';
-    if (todayDay.getTime() === target.getTime()) return 'current';
-    return 'upcoming';
+    var str = s.toString().trim();
+    // Handle "YYYY-MM-DD"
+    if (str.length === 10) str += 'T00:00:00+10:00';
+    // Handle "YYYY-MM-DD HH:MM:SS" or "YYYY-MM-DDTHH:MM:SS"
+    else if (str.length === 19) {
+      str = str.replace(' ', 'T') + '+10:00';
+    }
+    var d = new Date(str);
+    // Fallback for Safari/older browsers if T and offset are tricky
+    if (isNaN(d.getTime())) {
+      d = new Date(str.replace('T', ' ').replace(/\+(\d2):(\d2)$/, ' GMT+$1$2'));
+    }
+    return isNaN(d.getTime()) ? new Date() : d;
   }
 
   // ─── Format date ─────────────────────────────────────────────────────────────
   function fmtDate(dateStr) {
-    return new Date(dateStr + 'T00:00:00').toLocaleDateString('en-AU', {
-      weekday: 'short', day: 'numeric', month: 'short'
-    });
+    var d = parseSafe(dateStr);
+    // Use the offset from the string to display the date in its own timezone
+    var offsetMatch = dateStr.match(/[+-]\d{2}:\d{2}$/);
+    var offsetStr = offsetMatch ? offsetMatch[0] : '+10:00';
+    
+    var offsetParts = offsetStr.match(/([\+\-])(\d{2}):(\d{2})/);
+    var sign = (offsetParts && offsetParts[1] === '-') ? -1 : 1;
+    var hours = offsetParts ? parseInt(offsetParts[2]) : 10;
+    var mins = offsetParts ? parseInt(offsetParts[3]) : 0;
+    var offsetMs = sign * (hours * 3600000 + mins * 60000);
+    
+    var shifted = new Date(d.getTime() + offsetMs);
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    
+    return days[shifted.getUTCDay()] + ' ' + shifted.getUTCDate() + ' ' + months[shifted.getUTCMonth()];
   }
 
   // ─── Build cards ─────────────────────────────────────────────────────────────
@@ -162,12 +171,26 @@
   function updateTimelineUI(newTestDate) {
     if (newTestDate) testDate = newTestDate;
     var now = parseSafe(testDate);
-    var currentTimeStr = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+    var nowTime = now.getTime();
+
+    // Determine active day index based on absolute time
+    var activeDayIdx = -1;
+    itinerary.forEach(function (day, idx) {
+      if (!day.events || day.events.length === 0) return;
+      var firstEvDate = parseSafe(day.events[0].date);
+      if (nowTime >= firstEvDate.getTime()) {
+        activeDayIdx = idx;
+      }
+    });
+
     var currentCard = null;
     var dayChanged = false;
 
     itinerary.forEach(function (day, idx) {
-      var status = getStatus(day.date);
+      var status = 'upcoming';
+      if (idx < activeDayIdx) status = 'complete';
+      else if (idx === activeDayIdx) status = 'current';
+
       var node = cardNodes[idx];
       if (!node) return;
 
@@ -203,21 +226,30 @@
       var statusChip = status === 'current' ? '<span class="ml-2 text-[9px] font-black bg-[#008F88]/10 text-[#008F88] px-2 py-0.5 rounded-full uppercase tracking-wider">Now</span>' : '';
       
       var eventsHtml = '';
+      var dayDate = '';
       if (day.events && day.events.length) {
+        dayDate = day.events[0].date;
         eventsHtml = '<ul class="space-y-2 mt-3 border-t border-outline-variant/10 pt-3">';
         day.events.forEach(function (ev, evIdx) {
+          var evTime = parseSafe(ev.date).getTime();
+          var nextEv = day.events[evIdx + 1];
+          var nextEvTime = nextEv ? parseSafe(nextEv.date).getTime() : Infinity;
+          
           var isEventCurrent = false;
           if (status === 'current') {
-            var nextEv = day.events[evIdx + 1];
-            if (currentTimeStr >= ev.time && (!nextEv || currentTimeStr < nextEv.time)) isEventCurrent = true;
+            if (nowTime >= evTime && nowTime < nextEvTime) isEventCurrent = true;
           }
+          
+          // Format time string from ISO
+          var timeStr = ev.date.substring(11, 16);
+          
           var currentStyles = isEventCurrent ? ' bg-[#008F88]/5 border-l-2 border-[#008F88] -ml-2 pl-2 py-1 rounded-r-lg font-bold' : '';
           eventsHtml += [
             '<li class="flex items-start gap-2 text-xs' + currentStyles + '">',
             '  <span class="material-symbols-outlined text-[14px] shrink-0 mt-0.5 ' + (isEventCurrent ? 'text-[#008F88]' : (ICON_COLOURS[ev.type] || 'text-on-surface-variant')) + '" style="font-variation-settings:\'FILL\' ' + (isEventCurrent ? 1 : 0) + '">',
             ICONS[ev.type] || 'circle',
             '  </span>',
-            '  <span><span class="font-bold text-on-surface-variant tabular-nums">' + ev.time + '</span><span class="ml-1.5 ' + (isEventCurrent ? 'text-primary' : 'text-on-surface') + '">' + ev.label + '</span></span>',
+            '  <span><span class="font-bold text-on-surface-variant tabular-nums">' + timeStr + '</span><span class="ml-1.5 ' + (isEventCurrent ? 'text-primary' : 'text-on-surface') + '">' + ev.label + '</span></span>',
             '</li>'
           ].join('');
         });
@@ -230,10 +262,11 @@
         '  <div class="flex items-center mb-1"><span class="text-[10px] font-black uppercase tracking-widest ' + badgeColour + '">Day ' + day.day + '</span>' + statusChip + '</div>',
         '  <div class="text-[10px] font-bold text-on-tertiary-container uppercase tracking-tight mb-1">' + day.location + '</div>',
         '  <h3 class="font-bold text-primary text-sm leading-snug mb-1 font-headline">' + day.title + '</h3>',
-        '  <div class="text-[10px] text-on-surface-variant font-semibold mb-2">' + fmtDate(day.date) + '</div>',
+        '  <div class="text-[10px] text-on-surface-variant font-semibold mb-2">' + fmtDate(dayDate) + '</div>',
         eventsHtml,
         '</div>'
       ].join('');
+
 
       // Store HTML to avoid unnecessary DOM updates
       if (node.lastHTML !== html) {

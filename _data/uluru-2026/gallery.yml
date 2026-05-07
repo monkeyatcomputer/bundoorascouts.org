@@ -1,0 +1,26 @@
+# ─── GALLERY ──────────────────────────────────────────────────────────────────
+gallery:
+- image: "/uploads/2025-08-16-uluru-adventure-2026/hike-uluru.jpg"
+  alt: Scouts hiking at Uluru
+  caption: Uluru Base Walk, Day 11
+  span: large
+- image: "/uploads/2025-08-16-uluru-adventure-2026/camel-ride.jpg"
+  alt: Venturers on camel ride at sunrise
+  caption: Sunrise Camel Ride
+  span: normal
+- image: "/uploads/2025-08-16-uluru-adventure-2026/hike-kings-canyon.jpg"
+  alt: Kings Canyon rim walk
+  caption: Kings Canyon, Day 10
+  span: normal
+- image: "/uploads/2025-08-16-uluru-adventure-2026/opal-mining.jpg"
+  alt: Opal mining in Coober Pedy
+  caption: Opal Mining, Day 5
+  span: wide
+- image: "/uploads/2025-08-16-uluru-adventure-2026/silver-mine.jpg"
+  alt: Underground silver mine tour
+  caption: Mine Tour, Broken Hill
+  span: normal
+- image: "/uploads/2025-08-16-uluru-adventure-2026/salt-lake.jpg"
+  alt: Venturers at the salt lake
+  caption: Salt Lake Stop
+  span: normal

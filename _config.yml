@@ -102,6 +102,7 @@ exclude:
   - package.json
   - node_modules/
   - scratch/
+  - scripts/
 
 # Build settings
 defaults:

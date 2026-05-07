@@ -7,7 +7,11 @@ image: /uploads/hero/uluru.jpg
 permalink: /trip/uluru-2026
 published: true
 sitemap: false
-test_date: "2026-06-27T08:00:00"
+test_date: "2026-06-27T12:00:00+10:00"
 test_mode: true
-data_file: uluru-2026
+data_location: uluru-2026
+data_itinerary: itinerary
+data_gallery: gallery
+data_route: route
+data_telemetry: telemetry
 ---

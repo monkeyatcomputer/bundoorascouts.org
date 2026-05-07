@@ -1,0 +1,467 @@
+# ─── ITINERARY ────────────────────────────────────────────────────────────────
+itinerary:
+- day: 0
+  title: Muster Day
+  location: Bundoora Scout Hall
+  image: "/uploads/2025-08-16-uluru-adventure-2026/bus.jpg"
+  events:
+    - date: '2026-06-27T17:00:00+10:00'
+      type: arrive
+      label: Muster at Bundoora Hall
+      loc: [ -37.70465, 145.0631543 ]
+      detail: All three buses and support vehicles assemble. Final packing and logistics briefing.
+    - date: '2026-06-27T18:30:00+10:00'
+      type: dinner
+      label: Group Dinner
+      dwell: 1.0
+      loc: [ -37.70465, 145.0631543 ]
+- day: 1
+  title: Bundoora to Broken Hill
+  location: Broken Hill
+  image: "/uploads/2025-08-16-uluru-adventure-2026/broken-hill.jpg"
+  events:
+    - date: '2026-06-28T06:00:00+10:00'
+      type: depart
+      label: Depart Bundoora Hall
+      loc: [ -37.70465, 145.0631543 ]
+    - date: '2026-06-28T09:30:00+10:00'
+      type: rest
+      label: Charlton Rest Stop
+      dwell: 0.25
+      loc: [ -36.27311, 143.35922 ]
+    - date: '2026-06-28T12:30:00+10:00'
+      type: lunch
+      label: Lunch Stop - Mildura
+      dwell: 0.5
+      loc: [ -34.18523, 142.16301 ]
+    - date: '2026-06-28T15:30:00+10:00'
+      type: travel
+      label: Wentworth Turnoff
+      loc: [ -34.10312, 141.91424 ]
+    - date: '2026-06-28T17:30:00+10:00'
+      type: arrive
+      label: Arrive Broken Hill
+      loc: [ -31.95681, 141.46502 ]
+    - date: '2026-06-28T18:30:00+10:00'
+      type: dinner
+      label: 'Dinner at Broken Hill'
+      dwell: 1.0
+- day: 2
+  title: Mine Tour & Living Desert
+  location: Broken Hill
+  image: "/uploads/2025-08-16-uluru-adventure-2026/silver-mine.jpg"
+  events:
+    - date: '2026-06-29T08:30:00+10:00'
+      type: depart
+      label: Depart Broken Hill
+      loc: [ -31.956795, 141.464975 ]
+    - date: '2026-06-29T09:00:00+10:00'
+      type: activity
+      label: Living Desert Sculptures
+      dwell: 2
+      loc: [ -31.89504, 141.43201 ]
+    - date: '2026-06-29T11:30:00+10:00'
+      type: activity
+      label: Underground Mine Tour
+      dwell: 2
+      loc: [ -31.956795, 141.464975 ]
+    - date: '2026-06-29T13:00:00+10:00'
+      type: lunch
+      label: 'Lunch in Town'
+      dwell: 0.5
+    - date: '2026-06-29T15:00:00+10:00'
+      type: activity
+      label: Royal Flying Doctor Service
+      dwell: 2
+      loc: [ -31.99602, 141.46803 ]
+    - date: '2026-06-29T17:30:00+10:00'
+      type: arrive
+      label: Return to Broken Hill
+      loc: [ -31.956795, 141.464975 ]
+    - date: '2026-06-29T18:30:00+10:00'
+      type: dinner
+      label: 'Dinner'
+      dwell: 1.0
+- day: 3
+  title: Broken Hill to Coober Pedy
+  location: Coober Pedy
+  image: "/uploads/2025-08-16-uluru-adventure-2026/coober-pedy.jpg"
+  events:
+    - date: '2026-06-30T06:00:00+10:00'
+      type: depart
+      label: Depart Broken Hill
+      loc: [ -31.956795, 141.464975 ]
+    - date: '2026-06-30T10:00:00+09:30'
+      type: rest
+      label: Peterborough
+      dwell: 0.25
+      loc: [ -32.97541, 138.84122 ]
+    - date: '2026-06-30T12:30:00+09:30'
+      type: lunch
+      label: Lunch - Port Augusta
+      dwell: 0.5
+      loc: [ -32.49301, 137.76602 ]
+    - date: '2026-06-30T15:30:00+09:30'
+      type: rest
+      label: Glendambo
+      dwell: 0.25
+      loc: [ -30.98801, 135.75701 ]
+    - date: '2026-06-30T18:30:00+09:30'
+      type: arrive
+      label: Arrive Coober Pedy
+      loc: [ -29.01402, 134.75303 ]
+    - date: '2026-06-30T19:30:00+09:30'
+      type: dinner
+      label: 'Underground Dinner'
+      dwell: 2.0
+- day: 4
+  title: Opal Mining & Breakaways
+  location: Coober Pedy
+  image: "/uploads/2025-08-16-uluru-adventure-2026/opal-mining.jpg"
+  events:
+    - date: '2026-07-01T08:30:00+09:30'
+      type: depart
+      label: Depart Coober Pedy
+      loc: [ -29.01402, 134.75303 ]
+    - date: '2026-07-01T09:00:00+09:30'
+      type: activity
+      label: Opal Mining Experience
+      dwell: 2.0
+      loc: [ -29.01402, 134.75303 ]
+    - date: '2026-07-01T12:30:00+09:30'
+      type: lunch
+      label: 'Lunch'
+      dwell: 0.5
+    - date: '2026-07-01T14:30:00+09:30'
+      type: activity
+      label: The Breakaways Lookout
+      dwell: 1.0
+      loc: [ -28.84701, 134.65402 ]
+    - date: '2026-07-01T17:30:00+09:30'
+      type: arrive
+      label: Return to Coober Pedy
+      loc: [ -29.01402, 134.75303 ]
+    - date: '2026-07-01T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      dwell: 1.0
+- day: 5
+  title: Coober Pedy to The Centre
+  location: Alice Springs / Curtin Springs
+  image: "/uploads/2025-08-16-uluru-adventure-2026/ghost-town.jpg"
+  events:
+    - date: '2026-07-02T06:00:00+09:30'
+      type: depart
+      label: Depart Coober Pedy
+      loc: [ -29.01402, 134.75303 ]
+    - date: '2026-07-02T09:30:00+09:30'
+      type: rest
+      label: Marla
+      dwell: 0.25
+      loc: [ -27.29741, 133.62122 ]
+    - date: '2026-07-02T12:30:00+09:30'
+      type: lunch
+      label: Lunch - Erldunda
+      dwell: 0.5
+      loc: [ -25.22301, 133.19502 ]
+    - date: '2026-07-02T15:30:00+09:30'
+      type: arrive
+      label: 'Bus 2 & 3: Arrive Curtin Springs'
+      loc: [ -25.311207, 131.760597 ]
+      bus: [2,3]
+    - date: '2026-07-02T17:30:00+09:30'
+      type: arrive
+      label: 'Bus 1: Arrive Alice Springs'
+      loc: [ -23.702787, 133.882834 ]
+      bus: [1]
+    - date: '2026-07-02T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      dwell: 1.0
+- day: 6
+  title: Ranges & Stations
+  location: Alice Springs / Curtin Springs
+  image: "/uploads/2025-08-16-uluru-adventure-2026/swim-waterhole.jpg"
+  events:
+    - date: '2026-07-03T09:00:00+09:30'
+      type: activity
+      label: 'Bus 1: West MacDonnell Ranges'
+      dwell: 2
+      loc: [ -23.67001, 133.27002 ]
+      bus: [1]
+    - date: '2026-07-03T09:00:00+09:30'
+      type: activity
+      label: 'Bus 2 & 3: Mount Conner Lookout'
+      dwell: 2
+      loc: [ -25.30001, 131.90002 ]
+      bus: [2,3]
+    - date: '2026-07-03T12:30:00+09:30'
+      type: lunch
+      label: 'Lunch'
+      dwell: 0.5
+    - date: '2026-07-03T14:00:00+09:30'
+      type: activity
+      label: 'Bus 1: Simpson''s Gap'
+      dwell: 2.0
+      loc: [ -23.67801, 133.72202 ]
+      bus: [1]
+    - date: '2026-07-03T14:00:00+09:30'
+      type: activity
+      label: 'Bus 2 & 3: Curtin Springs Station'
+      dwell: 2.0
+      loc: [ -25.311207, 131.760597 ]
+      bus: [2,3]
+    - date: '2026-07-03T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      dwell: 1.0
+- day: 7
+  title: Reunion at Curtin Springs
+  location: Curtin Springs
+  image: "/uploads/2025-08-16-uluru-adventure-2026/desert-camp.jpg"
+  events:
+    - date: '2026-07-04T08:00:00+09:30'
+      type: depart
+      label: 'Bus 1: Depart Alice Springs'
+      loc: [ -23.702787, 133.882834 ]
+      bus: [1]
+    - date: '2026-07-04T10:30:00+09:30'
+      type: rest
+      label: 'Bus 1: Erldunda'
+      dwell: 0.25
+      loc: [ -25.22301, 133.19502 ]
+      bus: [1]
+    - date: '2026-07-04T12:30:00+09:30'
+      type: arrive
+      label: Reunion at Curtin Springs
+      loc: [ -25.311207, 131.760597 ]
+    - date: '2026-07-04T14:00:00+09:30'
+      type: activity
+      label: Camp Prep & Skills
+      dwell: 2.5
+      loc: [ -25.311207, 131.760597 ]
+    - date: '2026-07-04T18:30:00+09:30'
+      type: dinner
+      label: 'Camp Oven Dinner'
+      dwell: 2.0
+- day: 8
+  title: The Heart of Australia
+  location: Uluru
+  image: "/uploads/2025-08-16-uluru-adventure-2026/sunset-uluru.jpg"
+  events:
+    - date: '2026-07-05T08:00:00+09:30'
+      type: depart
+      label: Depart Curtin Springs
+      loc: [ -25.311207, 131.760597 ]
+    - date: '2026-07-05T09:30:00+09:30'
+      type: arrive
+      label: Uluru Cultural Centre
+      dwell: 2.0
+      loc: [ -25.35001, 131.02002 ]
+    - date: '2026-07-05T12:30:00+09:30'
+      type: lunch
+      label: Lunch - Uluru Base
+      dwell: 0.5
+      loc: [ -25.34441, 131.03692 ]
+    - date: '2026-07-05T14:00:00+09:30'
+      type: activity
+      label: Uluru Base Walk
+      dwell: 3.0
+      loc: [ -25.34441, 131.03692 ]
+    - date: '2026-07-05T17:30:00+09:30'
+      type: activity
+      label: Sunset Viewing
+      dwell: 0.5
+      loc: [ -25.338333, 131.005833 ]
+    - date: '2026-07-05T19:00:00+09:30'
+      type: arrive
+      label: Yulara Resort
+      loc: [ -25.24221, 130.98322 ]
+    - date: '2026-07-05T19:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      dwell: 1.0
+- day: 9
+  title: Sunrise & Kata Tjuta
+  location: Uluru / Kata Tjuta
+  image: "/uploads/2025-08-16-uluru-adventure-2026/kata-tjuta.jpg"
+  events:
+    - date: '2026-07-06T05:30:00+09:30'
+      type: depart
+      label: Depart for Sunrise
+      loc: [ -25.24221, 130.98322 ]
+    - date: '2026-07-06T06:30:00+09:30'
+      type: activity
+      label: Sunrise at Uluru
+      dwell: 0.5
+      loc: [ -25.33833, 131.00583 ]
+    - date: '2026-07-06T10:00:00+09:30'
+      type: activity
+      label: Kata Tjuta - Valley of the Winds
+      dwell: 2.0
+      loc: [ -25.284729, 130.725911 ]
+    - date: '2026-07-06T12:30:00+09:30'
+      type: lunch
+      label: 'Lunch at Kata Tjuta'
+      dwell: 1.0
+    - date: '2026-07-06T17:30:00+09:30'
+      type: arrive
+      label: Return to Resort
+      loc: [ -25.24221, 130.98322 ]
+    - date: '2026-07-06T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      dwell: 1.0
+- day: 10
+  title: Uluru to Kings Canyon
+  location: Kings Canyon
+  image: "/uploads/2025-08-16-uluru-adventure-2026/kings-canyon.jpg"
+  events:
+    - date: '2026-07-07T08:00:00+09:30'
+      type: depart
+      label: Depart Uluru Resort
+      loc: [ -25.24221, 130.98322 ]
+    - date: '2026-07-07T10:30:00+09:30'
+      type: rest
+      label: Angas Downs
+      dwell: 0.25
+      loc: [ -25.02941, 132.26122 ]
+    - date: '2026-07-07T12:30:00+09:30'
+      type: lunch
+      label: Lunch - Kings Creek Station
+      dwell: 0.5
+      loc: [ -24.40201, 131.81502 ]
+    - date: '2026-07-07T14:30:00+09:30'
+      type: arrive
+      label: Arrive Kings Canyon Resort
+      loc: [ -24.255754, 131.57027 ]
+    - date: '2026-07-07T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      dwell: 1.0
+- day: 11
+  title: Kings Canyon Rim Walk
+  location: Kings Canyon
+  image: "/uploads/2025-08-16-uluru-adventure-2026/hike-kings-canyon.jpg"
+  events:
+    - date: '2026-07-08T08:30:00+09:30'
+      type: depart
+      label: Depart Resort
+      loc: [ -24.255754, 131.57027 ]
+    - date: '2026-07-08T09:00:00+09:30'
+      type: activity
+      label: Kings Canyon Rim Walk
+      dwell: 4.0
+      loc: [ -24.255754, 131.57027 ]
+    - date: '2026-07-08T13:30:00+09:30'
+      type: lunch
+      label: 'Lunch'
+      dwell: 1.0
+    - date: '2026-07-08T15:00:00+09:30'
+      type: activity
+      label: Garden of Eden
+      dwell: 2.0
+      loc: [ -24.255754, 131.57027 ]
+    - date: '2026-07-08T17:30:00+09:30'
+      type: arrive
+      label: Return to Resort
+      loc: [ -24.255754, 131.57027 ]
+    - date: '2026-07-08T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      dwell: 1.0
+- day: 12
+  title: The Long Drive South
+  location: Coober Pedy
+  image: "/uploads/2025-08-16-uluru-adventure-2026/long-road.jpg"
+  events:
+    - date: '2026-07-09T06:00:00+09:30'
+      type: depart
+      label: Depart Kings Canyon
+      loc: [ -24.255754, 131.57027 ]
+    - date: '2026-07-09T10:30:00+09:30'
+      type: rest
+      label: Erldunda
+      dwell: 0.25
+      loc: [ -25.22301, 133.19502 ]
+    - date: '2026-07-09T13:00:00+09:30'
+      type: lunch
+      label: Lunch - Marla
+      dwell: 0.5
+      loc: [ -27.29741, 133.62122 ]
+    - date: '2026-07-09T15:30:00+09:30'
+      type: rest
+      label: Cadney Park
+      dwell: 0.25
+      loc: [ -28.25401, 134.16802 ]
+    - date: '2026-07-09T18:00:00+09:30'
+      type: arrive
+      label: Arrive Coober Pedy
+      loc: [ -29.01402, 134.75303 ]
+    - date: '2026-07-09T19:00:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      dwell: 1.0
+- day: 13
+  title: Coober Pedy to Gawler
+  location: Gawler
+  image: "/uploads/2025-08-16-uluru-adventure-2026/salt-lake.jpg"
+  events:
+    - date: '2026-07-10T06:00:00+09:30'
+      type: depart
+      label: Depart Coober Pedy
+      loc: [ -29.01402, 134.75303 ]
+    - date: '2026-07-10T09:00:00+09:30'
+      type: rest
+      label: Glendambo
+      dwell: 0.25
+      loc: [ -30.98801, 135.75701 ]
+    - date: '2026-07-10T12:30:00+09:30'
+      type: lunch
+      label: Lunch - Port Augusta
+      dwell: 0.5
+      loc: [ -32.49301, 137.76602 ]
+    - date: '2026-07-10T15:00:00+09:30'
+      type: rest
+      label: Port Pirie
+      dwell: 0.25
+      loc: [ -33.18121, 138.01692 ]
+    - date: '2026-07-10T17:30:00+09:30'
+      type: arrive
+      label: Arrive Gawler
+      loc: [ -34.60301, 138.74902 ]
+    - date: '2026-07-10T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      dwell: 1.0
+- day: 14
+  title: Gawler to Home
+  location: Bundoora Scout Hall
+  image: "/uploads/2025-08-16-uluru-adventure-2026/bus.jpg"
+  events:
+    - date: '2026-07-11T05:30:00+09:30'
+      type: depart
+      label: Depart Gawler
+      loc: [ -34.60301, 138.74902 ]
+    - date: '2026-07-11T08:30:00+09:30'
+      type: rest
+      label: Bordertown
+      dwell: 0.25
+      loc: [ -36.31211, 140.76812 ]
+    - date: '2026-07-11T12:30:00+10:00'
+      type: lunch
+      label: Lunch - Horsham
+      dwell: 0.5
+      loc: [ -36.71351, 142.19982 ]
+    - date: '2026-07-11T15:30:00+10:00'
+      type: rest
+      label: Ballarat
+      dwell: 0.25
+      loc: [ -37.56221, 143.85032 ]
+    - date: '2026-07-11T18:00:00+10:00'
+      type: arrive
+      label: Arrive Home - Bundoora Scout Hall
+      loc: [ -37.70465, 145.0631543 ]
+    - date: '2026-07-11T19:00:00+10:00'
+      type: arrive
+      label: Expedition Complete
