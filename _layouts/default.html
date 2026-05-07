@@ -36,7 +36,7 @@
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400..900;1,6..12,400..900&display=swap"
     rel="stylesheet" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0&icon_names=ac_unit,airplanemode_active,apparel,arrow_back,arrow_forward,arrow_outward,assignment_turned_in,auto_awesome,bedtime,book,brush,build,calendar_month,calendar_today,camping,category,celebration,chat,check,check_circle,chevron_left,chevron_right,child_care,circle,close,coffee,corporate_fare,countertops,dangerous,dinner_dining,directions_bike,directions_bus,directions_car,directions_run,diversity_3,event_available,event_busy,expand_more,explore,favorite,fitness_center,forest,format_quote,forum,group,group_add,groups,handshake,hiking,home,image_not_supported,info,kayaking,landscape,lightbulb,link,local_fire_department,location_on,lunch_dining,mail,menu,menu_book,mood,my_location,open_in_new,pause,payments,person,photo_camera,play_arrow,priority_high,psychology,public,restaurant,route,schedule,school,self_improvement,send,sentiment_satisfied,share,shortcut,sports_esports,star,star_rate,straighten,sync,terrain,thumb_up,verified,verified_user,volunteer_activism,warning,workspace_premium&display=block"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0&icon_names=ac_unit,airplanemode_active,apparel,arrow_back,arrow_forward,arrow_outward,assignment_turned_in,auto_awesome,bedtime,book,brush,build,calendar_month,calendar_today,camping,category,celebration,chat,check,check_circle,chevron_left,chevron_right,child_care,circle,close,coffee,corporate_fare,countertops,dangerous,dinner_dining,directions_bike,directions_bus,directions_car,directions_run,diversity_3,event_available,event_busy,expand_more,explore,favorite,fitness_center,forest,format_quote,forum,group,group_add,groups,handshake,hiking,home,image_not_supported,info,kayaking,landscape,lightbulb,link,local_fire_department,location_on,lunch_dining,mail,menu,menu_book,mood,my_location,north_east,open_in_new,pause,payments,person,photo_camera,play_arrow,priority_high,psychology,public,restaurant,route,schedule,school,self_improvement,send,sentiment_satisfied,share,shortcut,sports_esports,star,star_rate,straighten,sync,terrain,thumb_up,verified,verified_user,volunteer_activism,warning,workspace_premium&display=block"
     rel="stylesheet" />
 
   <!-- GSAP for premium animations -->
@@ -60,6 +60,26 @@
   </main>
 
   {% include footer.html %}
+
+  {%- comment %} Global Trip Banner Logic {% endcomment -%}
+  {% unless page.url contains "/trip/uluru-2026" or page.layout == "trip" or page.layout == "expedition" %}
+    {% assign trip_banner_page = site.pages | where: "permalink", "/trip/uluru-2026" | first %}
+    {% if trip_banner_page %}
+      {% assign trip_banner_data = site.data[trip_banner_page.data_location][trip_banner_page.data_itinerary] %}
+      {% assign first_event_raw = trip_banner_data.itinerary.first.events.first.date %}
+      
+      {% assign start_ts = first_event_raw | date: "%s" | plus: 0 %}
+      {% assign now_ts = "now" | date: "%s" | plus: 0 %}
+      {% assign diff_seconds = start_ts | minus: now_ts %}
+      {% assign thirty_days = 30 | times: 86400 %}
+
+      {%- comment %} Show if within 30 days (diff < thirty_days) OR if already started (diff < 0) {% endcomment -%}
+      {% if diff_seconds < thirty_days %}
+        {% assign latest_campfire_post = site.posts.first %}
+        {% include trip-banner.html trip_url="/trip/uluru-2026" post=latest_campfire_post %}
+      {% endif %}
+    {% endif %}
+  {% endunless %}
 
   <script>
     window.addEventListener('load', () => {

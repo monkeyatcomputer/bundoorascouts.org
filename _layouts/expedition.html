@@ -154,9 +154,9 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
 
       // Flatten events to find start/end and facilitate lookup
       var allEvents = [];
-      itinerary.forEach(function(day) {
+      itinerary.forEach(function (day) {
         if (day.events) {
-          day.events.forEach(function(ev) {
+          day.events.forEach(function (ev) {
             var d = parseSafe(ev.date);
             if (d) {
               allEvents.push({ time: d.getTime(), day: day.day, tz: ev.date.match(/[+-]\d{2}:\d{2}$/)?.[0] || '+10:00' });
@@ -190,7 +190,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
 
       function update() {
         var d = new Date(currentTime);
-        
+
         // Find current day and timezone
         var currentDayInfo = allEvents[0];
         for (var i = 0; i < allEvents.length; i++) {
@@ -200,7 +200,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
             break;
           }
         }
-        
+
         var dayNum = currentDayInfo.day;
         var dayTz = currentDayInfo.tz;
 
@@ -208,16 +208,16 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
         function formatOffsetTime(date, offsetStr) {
           var offsetParts = offsetStr.match(/([\+\-])(\d{2}):(\d{2})/);
           if (!offsetParts) return date.toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit', hour12: false });
-          
+
           var sign = offsetParts[1] === '+' ? 1 : -1;
           var hours = parseInt(offsetParts[2]);
           var mins = parseInt(offsetParts[3]);
           var offsetMs = sign * (hours * 3600000 + mins * 60000);
-          
+
           // UTC time + offset
           var localTime = date.getTime() + offsetMs;
           var shifted = new Date(localTime);
-          
+
           // Use getUTC* to avoid browser local timezone interference
           return ('0' + shifted.getUTCHours()).slice(-2) + ':' + ('0' + shifted.getUTCMinutes()).slice(-2);
         }
@@ -260,10 +260,10 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
 
       reset.addEventListener('click', function () {
         if (data.test_date) {
-            var t = parseSafe(data.test_date);
-            if (t) currentTime = t.getTime();
+          var t = parseSafe(data.test_date);
+          if (t) currentTime = t.getTime();
         } else {
-            currentTime = startTime;
+          currentTime = startTime;
         }
         update();
       });
