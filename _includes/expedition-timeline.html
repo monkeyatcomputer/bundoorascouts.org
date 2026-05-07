@@ -235,31 +235,65 @@
         '</div>'
       ].join('');
 
+      // Store HTML to avoid unnecessary DOM updates
       if (node.lastHTML !== html) {
         node.card.innerHTML = html;
         node.lastHTML = html;
       }
-
-      // Proximity fade logic
-      if (lastDayIdx !== -1) {
-        var dist = Math.abs(idx - lastDayIdx);
-        var opacity = 1;
-        var scale = 1;
-        if (dist === 0) { opacity = 1; scale = 1; }
-        else if (dist === 1) { opacity = 0.4; scale = 0.95; }
-        else if (dist === 2) { opacity = 0.1; scale = 0.9; }
-        else { opacity = 0; scale = 0.85; }
-        
-        node.wrap.style.opacity = opacity;
-        node.wrap.style.transform = 'scale(' + scale + ')';
-        node.wrap.style.pointerEvents = opacity < 0.1 ? 'none' : 'auto';
-      }
     });
+
+    updateTimelineProximity();
 
     if (currentCard && (dayChanged || !window.hasScrolledTimeline)) {
       var offset = currentCard.offsetLeft - (strip.clientWidth / 2) + (currentCard.clientWidth / 2);
       strip.scrollTo({ left: offset, behavior: 'smooth' });
     }
+  }
+
+  // ─── Proximity & Fading ─────────────────────────────────────────────────────
+  function updateTimelineProximity() {
+    var focusIdx = lastDayIdx;
+
+    if (window.hasScrolledTimeline) {
+      // Find card closest to the visual center of the strip
+      var stripCenter = strip.scrollLeft + (strip.clientWidth / 2);
+      var minDelta = Infinity;
+      cardNodes.forEach(function (node, i) {
+        var cardCenter = node.wrap.offsetLeft + (node.wrap.clientWidth / 2);
+        var delta = Math.abs(stripCenter - cardCenter);
+        if (delta < minDelta) {
+          minDelta = delta;
+          focusIdx = i;
+        }
+      });
+    }
+
+    if (focusIdx === -1) return;
+
+    cardNodes.forEach(function (node, idx) {
+      var dist = Math.abs(idx - focusIdx);
+      var opacity = 1;
+      var scale = 1;
+
+      // Relaxed fading values: 1.0, 0.7, 0.4, 0.2
+      if (dist === 0) {
+        opacity = 1;
+        scale = 1;
+      } else if (dist === 1) {
+        opacity = 0.7;
+        scale = 0.98;
+      } else if (dist === 2) {
+        opacity = 0.4;
+        scale = 0.95;
+      } else {
+        opacity = 0.2;
+        scale = 0.92;
+      }
+
+      node.wrap.style.opacity = opacity;
+      node.wrap.style.transform = 'scale(' + scale + ')';
+      node.wrap.style.pointerEvents = 'auto'; // Always clickable
+    });
   }
 
   // Initial render
@@ -269,6 +303,11 @@
   window.hasScrolledTimeline = false;
   strip.addEventListener('mousedown', function() { window.hasScrolledTimeline = true; });
   strip.addEventListener('wheel', function() { window.hasScrolledTimeline = true; });
+  strip.addEventListener('scroll', function() {
+    if (window.hasScrolledTimeline) {
+      updateTimelineProximity();
+    }
+  });
 
   // Listen for Time Machine updates
   window.addEventListener('expeditionTimeUpdate', function(e) {
@@ -278,9 +317,11 @@
   // ─── Chevron navigation ───────────────────────────────────────────────────────
   var SCROLL_AMOUNT = 320;
   document.getElementById('timeline-prev').addEventListener('click', function () {
+    window.hasScrolledTimeline = true;
     strip.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
   });
   document.getElementById('timeline-next').addEventListener('click', function () {
+    window.hasScrolledTimeline = true;
     strip.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
   });
 

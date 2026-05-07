@@ -93,10 +93,11 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
   </section>
 
   {%- comment -%} ─── GALLERY ────────────────────────────────────────────────── {%- endcomment -%}
-  {% if page.gallery %}
+  {% assign gallery_items = site.data[page.data_file].gallery | default: page.gallery %}
+  {% if gallery_items and gallery_items.size > 0 %}
   <section class="py-2 bg-surface not-prose">
     <div class="max-w-7xl mx-auto px-6 md:px-12">
-      {% include expedition-gallery.html %}
+      {% include expedition-gallery.html gallery=gallery_items %}
     </div>
   </section>
   {% endif %}

@@ -404,7 +404,26 @@ Renders a Leaflet.js map showing the expedition route.
         setText('map-day-badge', 'Day ' + currentDay.day);
         setText('map-day-date', new Date(currentDay.date + 'T00:00:00').toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' }));
 
-        var progressPct = Math.round((completedCount / itinerary.length) * 100);
+        // ─── Progress Calculation ──────────────────────────────────────────
+        var now = parseSafe(testDate);
+        var hr = now.getHours() + (now.getMinutes() / 60);
+        var dayProgress = 0;
+        if (hr < 6) dayProgress = 0;
+        else if (hr >= 19) dayProgress = 1.0;
+        else if (hr >= 12 && hr < 13) dayProgress = 0.5;
+        else if (hr < 12) dayProgress = (hr - 6) / 6 * 0.5;
+        else dayProgress = 0.5 + ((hr - 13) / 6 * 0.5);
+
+        var totalProgress = 0;
+        if (completedCount === itinerary.length) {
+          totalProgress = 1.0;
+        } else {
+          var currentDayIdx = itinerary.indexOf(currentDay);
+          if (currentDayIdx === -1) currentDayIdx = 0;
+          totalProgress = (currentDayIdx + dayProgress) / itinerary.length;
+        }
+
+        var progressPct = Math.round(totalProgress * 100);
         setText('map-progress-pct', progressPct + '%');
         var bar = document.getElementById('map-progress-bar');
         if (bar) bar.style.width = progressPct + '%';
@@ -412,15 +431,8 @@ Renders a Leaflet.js map showing the expedition route.
         if (roadData) {
           var dayData = (roadData || []).find(function (d) { return d.day === currentDay.day; });
 
-          // Calculate progress for path reveal
-          var now = parseSafe(testDate);
-          var hr = now.getHours() + (now.getMinutes() / 60);
-          var pathProgress = 0;
-          if (hr < 6) pathProgress = 0;
-          else if (hr >= 19) pathProgress = 1.0;
-          else if (hr >= 12 && hr < 13) pathProgress = 0.5;
-          else if (hr < 12) pathProgress = (hr - 6) / 6 * 0.5;
-          else pathProgress = 0.5 + ((hr - 13) / 6 * 0.5);
+          // Use dayProgress for path reveal
+          var pathProgress = dayProgress;
 
           // Update active trail for each bus
           [1, 2, 3].forEach(function (busId) {
