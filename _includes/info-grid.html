@@ -54,8 +54,12 @@
           </div>
           <h4 class="text-xl font-bold text-primary">Transitioning</h4>
         </div>
+        {% if page.section_slug == "rovers" %}
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">After your 25th birthday, you'll receive an official "booting"! However, you're always welcome to stay with us as a Leader or adult volunteer.</p>
+        {% else %}
         <p class="text-on-surface-variant text-sm leading-relaxed mb-6">When it's time to move up, we have a structured
           "Link" process to the next age section.</p>
+        {% endif %}
         <div class="flex items-center gap-2 text-xs font-bold text-on-surface-variant opacity-60">
           <span class="material-symbols-outlined text-sm">info</span>
           Talk to your Section Leader.
