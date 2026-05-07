@@ -1,0 +1,30 @@
+quick_links:
+  - text: Home
+    url: /
+  - text: Our Sections
+    url: /sections
+  - text: The Campfire
+    url: /the-campfire
+  - text: About Bundoora Scouts
+    url: /about
+  - text: Hall Hire
+    url: /about/hall-hire
+  - text: Contact Us
+    url: /contact
+
+resources:
+  - text: Scouts Victoria
+    url: https://scoutsvictoria.com.au
+    new_window: true
+  - text: Scouts Australia
+    url: https://scouts.com.au
+    new_window: true
+  - text: Child Safety Policy
+    url: https://scoutsvictoria.com.au/join-the-adventure/child-safe-scouting/
+    new_window: true
+  - text: Scout Shop
+    url: https://scoutshop.com.au
+    new_window: true
+  - text: Bundoora Scouts on Facebook
+    url: https://facebook.com/BundooraScouts
+    new_window: true

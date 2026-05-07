@@ -92,12 +92,9 @@
       <div>
         <h4 class="text-lg font-bold mb-6 text-white border-b border-white/10 pb-2">Quick Links</h4>
         <ul class="space-y-4 text-white/70">
-          <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
-          <li><a href="/sections" class="hover:text-white transition-colors">Our Sections</a></li>
-          <li><a href="/the-campfire" class="hover:text-white transition-colors">The Campfire</a></li>
-          <li><a href="/about" class="hover:text-white transition-colors">About Bundoora Scouts</a></li>
-          <li><a href="/about/hall-hire" class="hover:text-white transition-colors">Hall Hire</a></li>
-          <li><a href="/contact" class="hover:text-white transition-colors">Contact Us</a></li>
+          {% for link in site.data.footer.quick_links %}
+          <li><a href="{{ link.url }}" class="hover:text-white transition-colors">{{ link.text }}</a></li>
+          {% endfor %}
         </ul>
       </div>
 
@@ -105,14 +102,10 @@
       <div>
         <h4 class="text-lg font-bold mb-6 text-white border-b border-white/10 pb-2">Resources</h4>
         <ul class="space-y-4 text-white/70">
-          <li><a href="https://scoutsvictoria.com.au" target="_blank" rel="noopener"
-              class="hover:text-white transition-colors">Scouts Victoria</a></li>
-          <li><a href="https://scouts.com.au" target="_blank" rel="noopener"
-              class="hover:text-white transition-colors">Scouts Australia</a></li>
-          <li><a href="https://scoutsvictoria.com.au/join-the-adventure/child-safe-scouting/"
-              class="hover:text-white transition-colors">Child Safety Policy</a></li>
-          <li><a href="https://scoutshop.com.au" target="_blank" rel="noopener"
-              class="hover:text-white transition-colors">Scout Shop</a></li>
+          {% for resource in site.data.footer.resources %}
+          <li><a href="{{ resource.url }}" class="hover:text-white transition-colors" {% if resource.new_window
+              %}target="_blank" rel="noopener" {% endif %}>{{ resource.text }}</a></li>
+          {% endfor %}
         </ul>
       </div>
 
