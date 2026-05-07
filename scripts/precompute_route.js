@@ -74,7 +74,7 @@ function getSection(content, sectionName) {
 }
 
 function fetchLeg(p1, p2) {
-    const url = `https://router.project-osrm.org/route/v1/driving/${p1.lng},${p1.lat};${p2.lng},${p2.lat}?overview=full&geometries=geojson`;
+    const url = `https://router.project-osrm.org/route/v1/driving/${p1.lng},${p1.lat};${p2.lng},${p2.lat}?overview=full&geometries=geojson&annotations=duration`;
     return new Promise((resolve) => {
         https.get(url, (res) => {
             let data = '';
@@ -83,21 +83,28 @@ function fetchLeg(p1, p2) {
                 try {
                     const json = JSON.parse(data);
                     if (json.routes && json.routes[0]) {
-                        const coords = json.routes[0].geometry.coordinates.map(c => [c[1], c[0]]);
+                        const route = json.routes[0];
+                        const coords = route.geometry.coordinates.map(c => [c[1], c[0]]);
+                        // Extract durations between coordinate pairs
+                        let durations = null;
+                        if (route.legs && route.legs[0] && route.legs[0].annotation && route.legs[0].annotation.duration) {
+                            durations = route.legs[0].annotation.duration;
+                        }
+
                         if (coords.length > 0) {
                             coords[0] = [p1.lat, p1.lng];
                             coords[coords.length - 1] = [p2.lat, p2.lng];
                         }
-                        resolve(coords);
+                        resolve({ points: coords, durations: durations });
                     } else {
-                        resolve([[p1.lat, p1.lng], [p2.lat, p2.lng]]);
+                        resolve({ points: [[p1.lat, p1.lng], [p2.lat, p2.lng]], durations: null });
                     }
                 } catch (e) {
-                    resolve([[p1.lat, p1.lng], [p2.lat, p2.lng]]);
+                    resolve({ points: [[p1.lat, p1.lng], [p2.lat, p2.lng]], durations: null });
                 }
             });
         }).on('error', (e) => {
-            resolve([[p1.lat, p1.lng], [p2.lat, p2.lng]]);
+            resolve({ points: [[p1.lat, p1.lng], [p2.lat, p2.lng]], durations: null });
         });
     });
 }
@@ -236,23 +243,19 @@ async function run() {
             const buses = group.buses;
 
             let segmentPoints = [];
+            let segmentDurations = [];
             if (waypoints.length > 1) {
                 console.log(`Day ${day.day} Bus ${buses.join('+')}: Fetching ${waypoints.length - 1} legs...`);
                 for (let j = 0; j < waypoints.length - 1; j++) {
                     const leg = await fetchLeg(waypoints[j], waypoints[j + 1]);
-                    if (segmentPoints.length > 0 && leg.length > 0) {
-                        segmentPoints = segmentPoints.concat(leg.slice(1));
+                    if (segmentPoints.length > 0 && leg.points.length > 0) {
+                        segmentPoints = segmentPoints.concat(leg.points.slice(1));
+                        if (leg.durations) segmentDurations = segmentDurations.concat(leg.durations);
                     } else {
-                        segmentPoints = segmentPoints.concat(leg);
+                        segmentPoints = segmentPoints.concat(leg.points);
+                        if (leg.durations) segmentDurations = segmentDurations.concat(leg.durations);
                     }
                 }
-
-                const sampleRate = Math.max(1, Math.floor(segmentPoints.length / 500));
-                const protectedPoints = new Set(waypoints.map(p => `${p.lat.toFixed(7)},${p.lng.toFixed(7)}`));
-                segmentPoints = segmentPoints.filter((p, idx) => {
-                    const isWaypoint = protectedPoints.has(`${p[0].toFixed(7)},${p[1].toFixed(7)}`);
-                    return isWaypoint || idx % sampleRate === 0 || idx === segmentPoints.length - 1;
-                });
             } else {
                 segmentPoints = [[waypoints[0].lat, waypoints[0].lng]];
             }
@@ -262,7 +265,9 @@ async function run() {
 
             dayEntry.segments.push({
                 bus: buses.length === 3 ? null : buses,
-                points: segmentPoints
+                points: segmentPoints,
+                durations: segmentDurations.length > 0 ? segmentDurations : null,
+                waypoints: waypoints // Keep for sampling later
             });
         }
         routeData.push(dayEntry);
@@ -278,14 +283,28 @@ async function run() {
 
         [1, 2, 3].forEach(busId => {
             let busPoints = [];
+            let busDurations = [];
             dayRoute.segments.forEach(seg => {
-                if (!seg.bus || seg.bus.includes(busId)) busPoints = busPoints.concat(seg.points);
+                if (!seg.bus || seg.bus.includes(busId)) {
+                    const startIdx = busPoints.length;
+                    if (startIdx > 0) {
+                        // Concatenate, skipping duplicate point
+                        busPoints = busPoints.concat(seg.points.slice(1));
+                    } else {
+                        busPoints = busPoints.concat(seg.points);
+                    }
+                    if (seg.durations) busDurations = busDurations.concat(seg.durations);
+                }
             });
             if (busPoints.length === 0) return;
 
-            const cumDist = [0];
+            // Compute cumulative time/distance for interpolation
+            // Use OSRM durations if available for the entire path, else fallback to distance
+            const hasDurations = busDurations.length === (busPoints.length - 1);
+            const cumMetrics = [0];
             for (let i = 1; i < busPoints.length; i++) {
-                cumDist.push(cumDist[cumDist.length - 1] + getDistance(busPoints[i - 1], busPoints[i]));
+                const step = hasDurations ? busDurations[i-1] : getDistance(busPoints[i - 1], busPoints[i]);
+                cumMetrics.push(cumMetrics[cumMetrics.length - 1] + step);
             }
 
             const anchors = [];
@@ -324,11 +343,11 @@ async function run() {
                 if (i < anchors.length - 1) {
                     const a2 = anchors[i + 1];
                     if (a2.time > dwellEnd && a2.idx > a1.idx) {
-                        const subDistTotal = cumDist[a2.idx] - cumDist[a1.idx];
+                        const subTotal = cumMetrics[a2.idx] - cumMetrics[a1.idx];
                         const travelDuration = a2.time.getTime() - dwellEnd.getTime();
                         for (let pIdx = a1.idx + 1; pIdx < a2.idx; pIdx++) {
-                            const pDist = cumDist[pIdx] - cumDist[a1.idx];
-                            const pTime = new Date(dwellEnd.getTime() + travelDuration * (pDist / subDistTotal));
+                            const pMetric = cumMetrics[pIdx] - cumMetrics[a1.idx];
+                            const pTime = new Date(dwellEnd.getTime() + travelDuration * (pMetric / subTotal));
                             pathWithTimes.push({ time: pTime, pos: busPoints[pIdx], type: 'travel', label: 'Moving', tz: a1.tz });
                         }
                     }
@@ -413,7 +432,19 @@ async function run() {
         routeYaml += `  - day: ${day.day}\n    segments:\n`;
         day.segments.forEach(seg => {
             routeYaml += `      - bus: [${(seg.bus || [1, 2, 3]).join(', ')}]\n`;
-            const flat = [].concat(...seg.points);
+            
+            // Apply sampling ONLY here for the YAML file size efficiency
+            let pointsToSave = seg.points;
+            if (pointsToSave.length > 500) {
+                const sampleRate = Math.max(1, Math.floor(pointsToSave.length / 500));
+                const protectedPoints = new Set((seg.waypoints || []).map(p => `${p.lat.toFixed(7)},${p.lng.toFixed(7)}`));
+                pointsToSave = pointsToSave.filter((p, idx) => {
+                    const isWaypoint = protectedPoints.has(`${p[0].toFixed(7)},${p[1].toFixed(7)}`);
+                    return isWaypoint || idx % sampleRate === 0 || idx === pointsToSave.length - 1;
+                });
+            }
+
+            const flat = [].concat(...pointsToSave);
             routeYaml += `        points: [${flat.map(n => n.toFixed(7)).join(', ')}]\n`;
         });
     });
