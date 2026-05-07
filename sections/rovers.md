@@ -10,7 +10,7 @@ colour_dark: "#DC291E"
 icon: directions_bike
 section_slug: rovers
 motto: "Service"
-redirect_from: [/sections/rover-scouts/]
+redirect_from: [/sections/rover-scouts]
 award:
   title: "Award Scheme"
   name: "Baden-Powell Scout Award"

@@ -2,7 +2,7 @@
 layout: section
 title: "Cub Scouts"
 permalink: /sections/cubs
-redirect_from: [/sections/cub-scouts/]
+redirect_from: [/sections/cub-scouts]
 description: "The Cub Scout program is specifically designed to meet the developmental needs of 8 to 11 year olds, focusing on independence, teamwork, and exploration."
 tagline: "Learn new skills. Explore the outdoors. Work together."
 age_range: "8–11"

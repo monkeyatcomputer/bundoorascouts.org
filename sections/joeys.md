@@ -2,7 +2,7 @@
 layout: section
 title: "Joey Scouts"
 permalink: /sections/joeys
-redirect_from: [/sections/joey-scouts/]
+redirect_from: [/sections/joey-scouts]
 description: "Discover the world of Scouting for our youngest members. Joey Scouts is about fun, friendship and learning about the world through adventurous activities."
 tagline: "Discover the world around you."
 age_range: "5–8"
