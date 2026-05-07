@@ -45,13 +45,14 @@ itinerary:
         lat: -37.7046500
         lng: 145.0631543
       - time: "09:30"
-        type: travel
+        type: rest
         label: "Charlton Rest Stop"
+        dwell: 0.25
         lat: -36.2731100
         lng: 143.3592200
       - time: "12:30"
         type: lunch
-        label: "Lunch Stop — Mildura"
+        label: "Lunch Stop - Mildura"
         dwell: 0.5
         lat: -34.1852300
         lng: 142.1630100
@@ -125,19 +126,21 @@ itinerary:
         lat: -31.9567950
         lng: 141.4649750
       - time: "10:00"
-        type: travel
+        type: rest
         label: "Peterborough"
+        dwell: 0.25
         lat: -32.9754100
         lng: 138.8412200
       - time: "12:30"
         type: lunch
-        label: "Lunch — Port Augusta"
+        label: "Lunch - Port Augusta"
         dwell: 0.5
         lat: -32.4930100
         lng: 137.7660200
       - time: "15:30"
-        type: travel
+        type: rest
         label: "Glendambo"
+        dwell: 0.25
         lat: -30.9880100
         lng: 135.7570100
       - time: "18:30"
@@ -199,13 +202,14 @@ itinerary:
         lat: -29.0140200
         lng: 134.7530300
       - time: "09:30"
-        type: travel
+        type: rest
         label: "Marla"
+        dwell: 0.25
         lat: -27.2974100
         lng: 133.6212200
       - time: "12:30"
         type: lunch
-        label: "Lunch — Erldunda"
+        label: "Lunch - Erldunda"
         dwell: 0.5
         lat: -25.2230100
         lng: 133.1950200
@@ -282,8 +286,9 @@ itinerary:
         lng: 133.8828340
         bus: [1]
       - time: "10:30"
-        type: travel
+        type: rest
         label: "Bus 1: Erldunda"
+        dwell: 0.25
         lat: -25.2230100
         lng: 133.1950200
         bus: [1]
@@ -322,7 +327,7 @@ itinerary:
         lng: 131.0200200
       - time: "12:30"
         type: lunch
-        label: "Lunch — Uluru Base"
+        label: "Lunch - Uluru Base"
         dwell: 0.5
         lat: -25.3444100
         lng: 131.0369200
@@ -367,7 +372,7 @@ itinerary:
         lng: 131.00583
       - time: "10:00"
         type: activity
-        label: "Kata Tjuta — Valley of the Winds"
+        label: "Kata Tjuta - Valley of the Winds"
         dwell: 2.0
         lat: -25.2847290
         lng: 130.7259110
@@ -397,13 +402,14 @@ itinerary:
         lat: -25.24221
         lng: 130.98322
       - time: "10:30"
-        type: travel
+        type: rest
         label: "Angas Downs"
+        dwell: 0.25
         lat: -25.02941
         lng: 132.26122
       - time: "12:30"
         type: lunch
-        label: "Lunch — Kings Creek Station"
+        label: "Lunch - Kings Creek Station"
         dwell: 0.5
         lat: -24.40201
         lng: 131.81502
@@ -466,19 +472,21 @@ itinerary:
         lat: -24.2557540
         lng: 131.5702700
       - time: "10:30"
-        type: travel
+        type: rest
         label: "Erldunda"
+        dwell: 0.25
         lat: -25.22301
         lng: 133.19502
       - time: "13:00"
         type: lunch
-        label: "Lunch — Marla"
+        label: "Lunch - Marla"
         dwell: 0.5
         lat: -27.29741
         lng: 133.62122
       - time: "15:30"
-        type: travel
+        type: rest
         label: "Cadney Park"
+        dwell: 0.25
         lat: -28.25401
         lng: 134.16802
       - time: "18:00"
@@ -503,19 +511,21 @@ itinerary:
         lat: -29.01402
         lng: 134.75303
       - time: "09:00"
-        type: travel
+        type: rest
         label: "Glendambo"
+        dwell: 0.25
         lat: -30.98801
         lng: 135.75701
       - time: "12:30"
         type: lunch
-        label: "Lunch — Port Augusta"
+        label: "Lunch - Port Augusta"
         dwell: 0.5
         lat: -32.49301
         lng: 137.76602
       - time: "15:00"
-        type: travel
+        type: rest
         label: "Port Pirie"
+        dwell: 0.25
         lat: -33.18121
         lng: 138.01692
       - time: "17:30"
@@ -540,24 +550,26 @@ itinerary:
         lat: -34.60301
         lng: 138.74902
       - time: "09:00"
-        type: travel
+        type: rest
         label: "Bordertown"
+        dwell: 0.25
         lat: -36.31211
         lng: 140.76812
       - time: "12:30"
         type: lunch
-        label: "Lunch — Horsham"
+        label: "Lunch - Horsham"
         dwell: 0.5
         lat: -36.71351
         lng: 142.19982
       - time: "15:30"
-        type: travel
+        type: rest
         label: "Ballarat"
+        dwell: 0.25
         lat: -37.56221
         lng: 143.85032
       - time: "18:00"
         type: arrive
-        label: "Arrive Home — Bundoora Scout Hall"
+        label: "Arrive Home - Bundoora Scout Hall"
         lat: -37.7046500
         lng: 145.0631543
       - time: "19:00"

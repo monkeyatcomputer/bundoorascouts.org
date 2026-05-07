@@ -119,7 +119,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
       <button id="tm-reset"
         class="text-[10px] font-bold uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity">Reset</button>
     </div>
-    <input type="range" id="tm-slider" min="0" max="1000" value="0"
+    <input type="range" id="tm-slider" min="0" max="1000" value="0" step="1"
       class="w-full accent-secondary h-1.5 rounded-full appearance-none bg-white/20">
   </div>
 
@@ -150,7 +150,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
 
       var isPlaying = false;
       var timer = null;
-      var speed = 1000 * 60 * 60; // 1 hour per tick
+      var speed = 1000 * 60 * 15; // 15 minutes per tick
 
       var display = document.getElementById('tm-display');
       var playBtn = document.getElementById('tm-play');
@@ -160,13 +160,18 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
 
       function update() {
         var d = new Date(currentTime);
-        var dayNum = 1;
+        var dayNum = 0;
         itinerary.forEach(function (day) {
           if (new Date(day.date + 'T00:00:00').getTime() <= d.getTime()) dayNum = day.day;
         });
 
         display.textContent = 'Day ' + dayNum + ' • ' + d.toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit', hour12: false });
-        slider.value = ((currentTime - startTime) / duration) * 1000;
+        
+        // Snap slider to 15 min increments
+        var total15m = duration / (1000 * 60 * 15);
+        var current15m = (currentTime - startTime) / (1000 * 60 * 15);
+        slider.max = Math.floor(total15m);
+        slider.value = Math.floor(current15m);
 
         // Dispatch global event for includes to listen to (passing numeric timestamp)
         window.dispatchEvent(new CustomEvent('expeditionTimeUpdate', { detail: { time: currentTime } }));
@@ -185,14 +190,14 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
               icon.textContent = 'play_arrow';
             }
             update();
-          }, 500);
+          }, 200); // Faster interval (5 ticks per sec) for 15m jumps
         } else {
           clearInterval(timer);
         }
       });
 
       slider.addEventListener('input', function () {
-        currentTime = startTime + (parseFloat(slider.value) / 1000) * duration;
+        currentTime = startTime + (parseInt(slider.value) * (1000 * 60 * 15));
         update();
       });
 
