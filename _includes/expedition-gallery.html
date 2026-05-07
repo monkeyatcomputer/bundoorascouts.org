@@ -106,7 +106,7 @@ GSAP stagger reveal on scroll.
 
     var overlay = document.getElementById('gallery-not-started');
     if (overlay) {
-      var earliest = window.earliestTelemetryTime;
+      var earliest = window.expeditionStartTime;
       if (!earliest && data && data.telemetry) {
         earliest = Infinity;
         data.telemetry.forEach(function(t) {
@@ -115,7 +115,8 @@ GSAP stagger reveal on scroll.
         });
       }
       
-      if (nowTime < earliest) {
+      var buffer = 1 * 60 * 60 * 1000; // 1 hour in ms
+      if (nowTime < (earliest - buffer)) {
         overlay.classList.remove('hidden');
         overlay.style.opacity = "1";
       } else {

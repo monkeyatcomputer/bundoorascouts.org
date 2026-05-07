@@ -45,8 +45,9 @@ Renders a Leaflet.js map showing the expedition route.
             <div class="w-16 h-16 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <span class="material-symbols-outlined text-3xl">schedule</span>
             </div>
-            <div class="text-xl font-black font-headline uppercase tracking-widest mb-1">Coming Soon</div>
-            <div class="text-sm opacity-80 leading-relaxed">The expedition hasn't started yet. Check back once the buses depart!</div>
+            <div class="text-[10px] font-black font-headline uppercase tracking-[0.2em] mb-1" id="map-not-started-title">Coming Soon</div>
+            <div class="text-3xl font-black font-headline mb-4 tabular-nums" id="map-countdown">--:--:--</div>
+            <div class="text-sm opacity-80 leading-relaxed" id="map-not-started-desc">The expedition hasn't started yet. Check back once the buses depart!</div>
         </div>
     </div>
 
@@ -218,6 +219,18 @@ Renders a Leaflet.js map showing the expedition route.
         }
       }
     });
+
+    // Calculate Expedition Start Time for countdown (First event of Day 0)
+    var expStart = Infinity;
+    itinerary.forEach(function (day) {
+      if (day.events && day.events.length > 0) {
+        day.events.forEach(function (ev) {
+          var t = parseSafe(ev.date).getTime();
+          if (t < expStart) expStart = t;
+        });
+      }
+    });
+    window.expeditionStartTime = expStart;
 
     // ─── Helpers ──────────────────────────────────────────────────────────────────
     function parseSafe(s) {
@@ -445,9 +458,36 @@ Renders a Leaflet.js map showing the expedition route.
         // Handle "Not Started" overlay
         var overlay = document.getElementById('map-not-started');
         if (overlay) {
-          if (now.getTime() < window.earliestTelemetryTime) {
+          var buffer = 1 * 60 * 60 * 1000; // 1 hour in ms
+          var isPreStart = now.getTime() < (window.expeditionStartTime - buffer);
+          
+          if (isPreStart) {
             overlay.classList.remove('hidden');
             overlay.style.opacity = "1";
+            
+            // Update Countdown
+            var diff = window.expeditionStartTime - now.getTime();
+            var cdEl = document.getElementById('map-countdown');
+            var titleEl = document.getElementById('map-not-started-title');
+            
+            if (diff > 0) {
+              var d = Math.floor(diff / (1000 * 60 * 60 * 24));
+              var h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+              var s = Math.floor((diff % (1000 * 60)) / 1000);
+              
+              var parts = [];
+              if (d > 0) parts.push(d + 'd');
+              parts.push(('0' + h).slice(-2) + 'h');
+              parts.push(('0' + m).slice(-2) + 'm');
+              parts.push(('0' + s).slice(-2) + 's');
+              
+              if (cdEl) cdEl.textContent = parts.join(' ');
+              if (titleEl) titleEl.textContent = 'Launching In';
+            } else {
+               if (cdEl) cdEl.textContent = 'Departing Now';
+               if (titleEl) titleEl.textContent = 'Get Ready';
+            }
           } else {
             overlay.style.opacity = "0";
             setTimeout(function() { if (overlay.style.opacity === "0") overlay.classList.add('hidden'); }, 500);
@@ -682,6 +722,16 @@ Renders a Leaflet.js map showing the expedition route.
       window.addEventListener('expeditionTimeUpdate', function (e) {
         updateMapUI(e.detail.time);
       });
+
+      // If not in test mode, update countdown every second
+      if (!data.test_mode) {
+        setInterval(function() {
+          var overlay = document.getElementById('map-not-started');
+          if (overlay && !overlay.classList.contains('hidden')) {
+            updateMapUI();
+          }
+        }, 1000);
+      }
     });
   })();
 </script>
