@@ -9,10 +9,23 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
 {% assign first_event_date = trip_data.itinerary.first.events.first.date %}
 {% assign last_event_date = trip_data.itinerary.last.events.last.date %}
 
-<div id="trip-banner"
+{% assign days_before = include.days_before | default: 30 %}
+{% assign days_after = include.days_after | default: 7 %}
+
+{% assign start_ts = first_event_date | date: "%s" | plus: 0 %}
+{% assign end_ts = last_event_date | date: "%s" | plus: 0 %}
+{% assign now_ts = "now" | date: "%s" | plus: 0 %}
+
+{% assign seconds_before = days_before | times: 86400 %}
+{% assign seconds_after = days_after | times: 86400 %}
+
+{% assign show_start = start_ts | minus: seconds_before %}
+{% assign show_end = end_ts | plus: seconds_after %}
+
+{% if now_ts >= show_start and now_ts <= show_end %} <div id="trip-banner"
   class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[94vw] max-w-7xl overflow-hidden group cursor-pointer transition-all duration-700 ease-out hover:shadow-2xl rounded-[2.5rem] hidden border border-white/10 shadow-ambient-lg backdrop-blur-xl opacity-0 translate-y-10"
   data-start="{{ first_event_date }}" data-end="{{ last_event_date }}" data-url="{{ trip_page.url }}"
-  data-title="{{ trip_page.title }}">
+  data-title="{{ trip_page.title }}" data-days-before="{{ days_before }}" data-days-after="{{ days_after }}">
 
   <!-- Background Layers -->
   <div id="trip-banner-bg" class="absolute inset-0 transition-colors duration-1000 bg-primary-container/90"></div>
@@ -83,85 +96,95 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
       </a>
     </div>
   </div>
-</div>
+  </div>
 
-<script>
-  (function () {
-    const banner = document.getElementById('trip-banner');
-    if (!banner) return;
+  <script>
+    (function () {
+      const banner = document.getElementById('trip-banner');
+      if (!banner) return;
 
-    const startStr = banner.dataset.start;
-    const endStr = banner.dataset.end;
-    const url = banner.dataset.url;
+      const startStr = banner.dataset.start;
+      const endStr = banner.dataset.end;
+      const url = banner.dataset.url;
 
-    const bg = document.getElementById('trip-banner-bg');
-    const iconBg = document.getElementById('trip-banner-icon-bg');
-    const icon = document.getElementById('trip-banner-icon');
-    const pulse = document.getElementById('trip-banner-pulse');
-    const statusText = document.getElementById('trip-banner-status');
-    const statusDot = document.getElementById('trip-banner-status-dot');
-    const content = document.getElementById('trip-banner-content');
-    const btnText = document.getElementById('trip-banner-btn-text');
-    const link = document.getElementById('trip-banner-link');
+      const bg = document.getElementById('trip-banner-bg');
+      const iconBg = document.getElementById('trip-banner-icon-bg');
+      const icon = document.getElementById('trip-banner-icon');
+      const pulse = document.getElementById('trip-banner-pulse');
+      const statusText = document.getElementById('trip-banner-status');
+      const statusDot = document.getElementById('trip-banner-status-dot');
+      const content = document.getElementById('trip-banner-content');
+      const btnText = document.getElementById('trip-banner-btn-text');
+      const link = document.getElementById('trip-banner-link');
 
-    function parseSafe(s) {
-      if (!s) return null;
-      const d = new Date(s);
-      return isNaN(d.getTime()) ? null : d;
-    }
-
-    const startTime = parseSafe(startStr)?.getTime();
-    const endTime = parseSafe(endStr)?.getTime();
-    const oneHour = 60 * 60 * 1000;
-
-    if (!startTime || !endTime) return;
-
-    banner.addEventListener('click', (e) => {
-      if (e.target.closest('a')) return;
-      link.click();
-    });
-
-    function update() {
-      // Use browser's current time
-      const now = new Date().getTime();
-
-      if (banner.classList.contains('hidden')) {
-        banner.classList.remove('hidden');
-        // Trigger entry animation
-        setTimeout(() => {
-          banner.classList.remove('opacity-0', 'translate-y-10');
-        }, 100);
+      function parseSafe(s) {
+        if (!s) return null;
+        const d = new Date(s);
+        return isNaN(d.getTime()) ? null : d;
       }
 
-      // State 3: After last event
-      if (now > endTime) {
-        bg.className = "absolute inset-0 transition-colors duration-1000 bg-slate-900/90";
-        statusText.textContent = 'Expedition Complete';
-        statusDot.className = "w-2 h-2 rounded-full bg-slate-400";
-        icon.textContent = 'auto_awesome';
-        pulse.classList.add('hidden');
+      const startTime = parseSafe(startStr)?.getTime();
+      const endTime = parseSafe(endStr)?.getTime();
+      const oneHour = 60 * 60 * 1000;
 
-        content.innerHTML = `
+      if (!startTime || !endTime) return;
+
+      banner.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        link.click();
+      });
+
+      function update() {
+        // Use browser's current time
+        const now = new Date().getTime();
+
+        const daysBefore = parseInt(banner.dataset.daysBefore || 30);
+        const daysAfter = parseInt(banner.dataset.daysAfter || 7);
+        const showStart = startTime - (daysBefore * 24 * 60 * 60 * 1000);
+        const showEnd = endTime + (daysAfter * 24 * 60 * 60 * 1000);
+
+        if (now < showStart || now > showEnd) {
+          banner.classList.add('hidden');
+          return;
+        }
+
+        if (banner.classList.contains('hidden')) {
+          banner.classList.remove('hidden');
+          // Trigger entry animation
+          setTimeout(() => {
+            banner.classList.remove('opacity-0', 'translate-y-10');
+          }, 100);
+        }
+
+        // State 3: After last event
+        if (now > endTime) {
+          bg.className = "absolute inset-0 transition-colors duration-1000 bg-slate-900/90";
+          statusText.textContent = 'Expedition Complete';
+          statusDot.className = "w-2 h-2 rounded-full bg-slate-400";
+          icon.textContent = 'auto_awesome';
+          pulse.classList.add('hidden');
+
+          content.innerHTML = `
             <div class="text-center px-4">
               <p class="text-white font-black text-xl mb-1">The adventure is done.</p>
               <p class="text-white/60 text-sm font-bold uppercase tracking-wider">Check out the full gallery</p>
             </div>
           `;
 
-        btnText.textContent = 'View Gallery';
-        link.href = url + '#gallery';
-        return;
-      }
+          btnText.textContent = 'View Gallery';
+          link.href = url + '#gallery';
+          return;
+        }
 
-      // State 2: 1 hour before first event until last event
-      if (now >= (startTime - oneHour)) {
-        bg.className = "absolute inset-0 transition-colors duration-1000 bg-gradient-to-r from-tertiary/90 to-tertiary-container/90";
-        statusText.textContent = 'Expedition Live';
-        statusDot.className = "w-2 h-2 rounded-full bg-error animate-pulse";
-        icon.textContent = 'sensors';
-        pulse.classList.remove('hidden');
+        // State 2: 1 hour before first event until last event
+        if (now >= (startTime - oneHour)) {
+          bg.className = "absolute inset-0 transition-colors duration-1000 bg-gradient-to-r from-tertiary/90 to-tertiary-container/90";
+          statusText.textContent = 'Expedition Live';
+          statusDot.className = "w-2 h-2 rounded-full bg-error animate-pulse";
+          icon.textContent = 'sensors';
+          pulse.classList.remove('hidden');
 
-        content.innerHTML = `
+          content.innerHTML = `
             <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-2xl border border-white/10">
               <div class="flex -space-x-2">
                 <div class="w-8 h-8 rounded-full border-2 border-tertiary bg-slate-200 overflow-hidden"><img src="/favicon.ico" class="w-full h-full object-cover opacity-50"/></div>
@@ -171,24 +194,24 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
             </div>
           `;
 
-        btnText.textContent = 'Track Now';
-        return;
-      }
+          btnText.textContent = 'Track Now';
+          return;
+        }
 
-      // State 1: Before trip (timer)
-      bg.className = "absolute inset-0 transition-colors duration-1000 bg-primary-container/90";
-      statusText.textContent = 'Preparing for Departure';
-      statusDot.className = "w-2 h-2 rounded-full bg-secondary animate-pulse";
-      icon.textContent = 'schedule';
-      pulse.classList.add('hidden');
+        // State 1: Before trip (timer)
+        bg.className = "absolute inset-0 transition-colors duration-1000 bg-primary-container/90";
+        statusText.textContent = 'Preparing for Departure';
+        statusDot.className = "w-2 h-2 rounded-full bg-secondary animate-pulse";
+        icon.textContent = 'schedule';
+        pulse.classList.add('hidden');
 
-      const diff = startTime - now;
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+        const diff = startTime - now;
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
 
-      content.innerHTML = `
+        content.innerHTML = `
           <div class="flex items-center justify-center divide-x divide-white/10">
             <div class="flex flex-col items-center px-2 md:px-4">
               <span class="text-3xl md:text-4xl font-black font-headline text-white tabular-nums tracking-tight">${days}</span>
@@ -209,12 +232,13 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
           </div>
         `;
 
-      btnText.textContent = 'View Trip';
+        btnText.textContent = 'View Trip';
 
-      setTimeout(update, 1000);
-    }
+        setTimeout(update, 1000);
+      }
 
-    update();
-  })();
-</script>
-{% endif %}
+      update();
+    })();
+  </script>
+  {% endif %}
+  {% endif %}

@@ -48,7 +48,8 @@
   <link href="/assets/css/app.css" rel="stylesheet">
 
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
   {% seo %}
 </head>
@@ -66,22 +67,8 @@
 
   {%- comment %} Global Trip Banner Logic {% endcomment -%}
   {% unless page.url contains "/trip/uluru-2026" or page.layout == "trip" or page.layout == "expedition" %}
-    {% assign trip_banner_page = site.pages | where: "permalink", "/trip/uluru-2026" | first %}
-    {% if trip_banner_page %}
-      {% assign trip_banner_data = site.data[trip_banner_page.data_location][trip_banner_page.data_itinerary] %}
-      {% assign first_event_raw = trip_banner_data.itinerary.first.events.first.date %}
-      
-      {% assign start_ts = first_event_raw | date: "%s" | plus: 0 %}
-      {% assign now_ts = "now" | date: "%s" | plus: 0 %}
-      {% assign diff_seconds = start_ts | minus: now_ts %}
-      {% assign thirty_days = 30 | times: 86400 %}
-
-      {%- comment %} Show if within 30 days (diff < thirty_days) OR if already started (diff < 0) {% endcomment -%}
-      {% if diff_seconds < thirty_days %}
-        {% assign latest_campfire_post = site.posts.first %}
-        {% include trip-banner.html trip_url="/trip/uluru-2026" post=latest_campfire_post %}
-      {% endif %}
-    {% endif %}
+  {% assign latest_campfire_post = site.posts.first %}
+  {% include trip-banner.html trip_url="/trip/uluru-2026" post=latest_campfire_post days_before=100 days_after=30 %}
   {% endunless %}
 
   <script>
@@ -143,7 +130,8 @@
   </script>
 
   <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </body>
 
 </html>
