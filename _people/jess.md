@@ -1,6 +1,6 @@
 ---
 title: Jess
-role: Adult Volunteer
+role: Adult Supporter
 alias: 
 section: adult
 ---
