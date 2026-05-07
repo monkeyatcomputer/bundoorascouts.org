@@ -11,6 +11,7 @@ categories:
     - Venturer Scouts
 tags:
     - Camp
+    - Uluru 2026
 redirect_from:
     - /the-campfire/uluru-adventure-2026
 trip_details:

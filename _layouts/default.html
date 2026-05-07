@@ -67,7 +67,7 @@
 
   {%- comment %} Global Trip Banner Logic {% endcomment -%}
   {% unless page.url contains "/trip/uluru-2026" or page.layout == "trip" or page.layout == "expedition" %}
-  {% assign latest_campfire_post = site.posts.first %}
+  {% assign latest_campfire_post = site.posts | where_exp: "post", "post.tags contains 'Uluru 2026'" | last %}
   {% include trip-banner.html trip_url="/trip/uluru-2026" post=latest_campfire_post days_before=100 days_after=30 %}
   {% endunless %}
 
