@@ -2,6 +2,7 @@
 layout: default
 title: Our Leaders
 permalink: /about/our-leaders
+redirect_from: [/about-us/our-leaders]
 description: Meet the dedicated volunteer team behind Bundoora Scouts. Highly trained and passionate about empowering the next generation of trailfinders.
 ---
 
