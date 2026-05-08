@@ -37,13 +37,13 @@
       Learn more
     </a>
 
-    {% if s.sectionid != blank %}
-      {% assign encoded_id = s.sectionid | url_encode %}
-      {% assign join_url = site.onboarding_url | append: encoded_id %}
-      {% assign join_text = 'Join Now' %}
+    {% if s.sectionid %}
+    {% assign encoded_id = s.sectionid | url_encode %}
+    {% assign join_url = site.onboarding_url | append: encoded_id %}
+    {% assign join_text = 'Join Now' %}
     {% else %}
-      {% assign join_url = '/contact/' %}
-      {% assign join_text = 'Enquire' %}
+    {% assign join_url = '/contact/' %}
+    {% assign join_text = 'Join Now' %}
     {% endif %}
 
     <a href="{{ join_url }}"
