@@ -12,6 +12,32 @@ tags:
     - Uluru 2026
     - Adventure
     - Expedition
+groups:
+  - name: "Bundoora Scouts"
+    image: "/assets/images/logo.png"
+    description: "Trip Organizers"
+  - name: "Heany Park Scouts"
+    image: "/uploads/2025-08-16-uluru-adventure-2026/heany-park.png"
+    description: "Trip Organizers"
+    url: "https://heanyparkscouts.com.au/"
+  - name: "Carlton Scouts"
+    image: "/assets/images/logo-sv-light.svg"
+    url: "https://www.carltonscoutgroup.com"
+  - name: "Eaglemont Scouts"
+    image: "/uploads/2025-08-16-uluru-adventure-2026/eaglemont.png"
+    url: "https://eaglemontscouts.org.au"
+  - name: "Gembrook Scouts"
+    image: "/assets/images/logo-sv-light.svg"
+    url: "https://scoutsvictoria.com.au/location/1ST-GEMBROOK"
+  - name: "Greenhills Scouts"
+    image: "/uploads/2025-08-16-uluru-adventure-2026/greenhills.png"
+    url: "https://1stgreenhills.org.au"
+  - name: "Grovedale Scouts"
+    image: "/assets/images/logo-sv-light.svg"
+    url: "https://scoutsvictoria.com.au/location/1st-grovedale/"
+  - name: "Watsonia Scouts"
+    image: "/uploads/2025-08-16-uluru-adventure-2026/watsonia.png"
+    url: "https://www.watsoniascoutcentre.org.au"
 ---
 
 It’s getting real… very real!
@@ -28,55 +54,29 @@ We've done the pre-camp shakedown, now there's only one thing left to do...
 
 ### A Journey Shared
 
-We’ve been incredibly fortunate to be planning this journey alongside our friends from **Heany Park Scouts**, whose collaboration and support have been invaluable every step of the way. 
+We’ve been incredibly fortunate to be planning this journey alongside our friends from **[Heany Park Scouts](https://heanyparkscouts.com.au/)**, whose collaboration and support have been invaluable every step of the way. 
 
 And we won’t be traveling alone! We’re thrilled that Scouts from across Victoria will be joining us on this truly epic adventure:
 
 <section class="my-12 py-12 bg-surface-container-lowest rounded-[3rem] border border-outline-variant/10 shadow-sm not-prose">
   <div class="flex flex-wrap justify-center gap-x-12 gap-y-10 px-6">
+    {% for group in page.groups %}
     <div class="flex flex-col items-center text-center max-w-[120px] group/item">
-      <div class="w-24 h-24 rounded-full bg-white shadow-ambient-md border border-outline-variant/10 flex items-center justify-center overflow-hidden mb-4 group-hover/item:scale-110 transition-transform duration-300">
-        <img src="/uploads/2025-08-16-uluru-adventure-2026/heany-park.png" alt="Heany Park Scouts" class="w-16 h-16 object-contain">
-      </div>
-      <h5 class="font-headline font-bold text-primary text-xs leading-tight">Heany Park Scouts</h5>
-      <p class="text-[10px] text-secondary font-black uppercase tracking-tighter mt-1">Partners</p>
+      {% if group.url %}
+      <a href="{{ group.url }}" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center">
+      {% endif %}
+        <div class="w-24 h-24 rounded-full bg-white shadow-ambient-md border border-outline-variant/10 flex items-center justify-center overflow-hidden mb-4 group-hover/item:scale-110 transition-transform duration-300">
+          <img src="{{ group.image }}" alt="{{ group.name }}" class="w-16 h-16 object-contain">
+        </div>
+        <h5 class="font-headline font-bold text-primary text-xs leading-tight">{{ group.name }}</h5>
+      {% if group.url %}
+      </a>
+      {% endif %}
+      {% if group.description %}
+      <p class="text-[10px] text-secondary font-black uppercase tracking-tighter mt-1">{{ group.description }}</p>
+      {% endif %}
     </div>
-    <div class="flex flex-col items-center text-center max-w-[120px] group/item">
-      <div class="w-24 h-24 rounded-full bg-white shadow-ambient-md border border-outline-variant/10 flex items-center justify-center overflow-hidden mb-4 group-hover/item:scale-110 transition-transform duration-300">
-        <img src="/uploads/2025-08-16-uluru-adventure-2026/carlton.png" alt="Carlton Scouts" class="w-16 h-16 object-contain">
-      </div>
-      <h5 class="font-headline font-bold text-primary text-xs leading-tight">Carlton Scouts</h5>
-    </div>
-    <div class="flex flex-col items-center text-center max-w-[120px] group/item">
-      <div class="w-24 h-24 rounded-full bg-white shadow-ambient-md border border-outline-variant/10 flex items-center justify-center overflow-hidden mb-4 group-hover/item:scale-110 transition-transform duration-300">
-        <img src="/uploads/2025-08-16-uluru-adventure-2026/eaglemont.png" alt="Eaglemont Scouts" class="w-16 h-16 object-contain">
-      </div>
-      <h5 class="font-headline font-bold text-primary text-xs leading-tight">Eaglemont Scouts</h5>
-    </div>
-    <div class="flex flex-col items-center text-center max-w-[120px] group/item">
-      <div class="w-24 h-24 rounded-full bg-white shadow-ambient-md border border-outline-variant/10 flex items-center justify-center overflow-hidden mb-4 group-hover/item:scale-110 transition-transform duration-300">
-        <img src="/uploads/2025-08-16-uluru-adventure-2026/gembrook.png" alt="Gembrook Scouts" class="w-16 h-16 object-contain">
-      </div>
-      <h5 class="font-headline font-bold text-primary text-xs leading-tight">Gembrook Scouts</h5>
-    </div>
-    <div class="flex flex-col items-center text-center max-w-[120px] group/item">
-      <div class="w-24 h-24 rounded-full bg-white shadow-ambient-md border border-outline-variant/10 flex items-center justify-center overflow-hidden mb-4 group-hover/item:scale-110 transition-transform duration-300">
-        <img src="/uploads/2025-08-16-uluru-adventure-2026/greenhills.png" alt="Greenhills Scouts" class="w-16 h-16 object-contain">
-      </div>
-      <h5 class="font-headline font-bold text-primary text-xs leading-tight">Greenhills Scouts</h5>
-    </div>
-    <div class="flex flex-col items-center text-center max-w-[120px] group/item">
-      <div class="w-24 h-24 rounded-full bg-white shadow-ambient-md border border-outline-variant/10 flex items-center justify-center overflow-hidden mb-4 group-hover/item:scale-110 transition-transform duration-300">
-        <img src="/uploads/2025-08-16-uluru-adventure-2026/grovedale.png" alt="Grovedale Scouts" class="w-16 h-16 object-contain">
-      </div>
-      <h5 class="font-headline font-bold text-primary text-xs leading-tight">Grovedale Scouts</h5>
-    </div>
-    <div class="flex flex-col items-center text-center max-w-[120px] group/item">
-      <div class="w-24 h-24 rounded-full bg-white shadow-ambient-md border border-outline-variant/10 flex items-center justify-center overflow-hidden mb-4 group-hover/item:scale-110 transition-transform duration-300">
-        <img src="/uploads/2025-08-16-uluru-adventure-2026/watsonia.png" alt="Watsonia Scouts" class="w-16 h-16 object-contain">
-      </div>
-      <h5 class="font-headline font-bold text-primary text-xs leading-tight">Watsonia Scouts</h5>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
