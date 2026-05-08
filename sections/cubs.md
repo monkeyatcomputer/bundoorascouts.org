@@ -10,7 +10,7 @@ colour: "#E9C46A"
 colour_dark: "#FFCD00"
 icon: forest
 section_slug: cubs
-motto: "Do Your Best"
+motto: "Create the Path"
 award:
   title: "Award Scheme"
   name: "Grey Wolf Award"

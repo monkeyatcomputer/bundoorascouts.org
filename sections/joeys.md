@@ -10,7 +10,7 @@ colour: "#F4A261"
 colour_dark: "#C16733"
 icon: child_care
 section_slug: joeys
-motto: "Help Other People (HOP)"
+motto: "Discover Adventure"
 award:
   title: "Participation & Awards"
   name: "Promise Challenge Badge"
