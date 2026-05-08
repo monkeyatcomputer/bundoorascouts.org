@@ -132,19 +132,19 @@ file.extname == '.jpeg' or file.extname == '.JPEG' or file.extname == '.webp' or
 <!-- Shared Lightbox Overlay (Only render once per page) -->
 {% unless site.data.lightbox_rendered %}
 <div id="gallery-lightbox"
-  class="fixed inset-0 z-[100] bg-primary/95 backdrop-blur-xl hidden flex items-center justify-center p-4 md:p-12"
+  class="fixed inset-0 z-[2000] bg-primary/95 backdrop-blur-xl hidden flex items-center justify-center p-4 md:p-12"
   onclick="closeLightbox()">
-  <button class="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[110]"
+  <button class="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[2010]"
     onclick="closeLightbox()">
     <span class="material-symbols-outlined text-4xl">close</span>
   </button>
   <button
-    class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/30 hover:text-white transition-all hover:scale-110 z-[110] bg-white/5 p-4 rounded-full backdrop-blur-md"
+    class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/30 hover:text-white transition-all hover:scale-110 z-[2010] bg-white/5 p-4 rounded-full backdrop-blur-md"
     onclick="navigateLightbox(-1, event)">
     <span class="material-symbols-outlined text-4xl">chevron_left</span>
   </button>
   <button
-    class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/30 hover:text-white transition-all hover:scale-110 z-[110] bg-white/5 p-4 rounded-full backdrop-blur-md"
+    class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/30 hover:text-white transition-all hover:scale-110 z-[2010] bg-white/5 p-4 rounded-full backdrop-blur-md"
     onclick="navigateLightbox(1, event)">
     <span class="material-symbols-outlined text-4xl">chevron_right</span>
   </button>
