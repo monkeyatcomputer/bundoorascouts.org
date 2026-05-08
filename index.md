@@ -51,28 +51,14 @@ image: "/uploads/hero/aerial.jpg"
     </a>
   </div>
   
-  <div class="max-w-7xl mx-auto">
-    {% assign active_sections = site.data.sections | where: "active", true %}
-    {% assign count = active_sections | size %}
-    
-    <div class="flex flex-wrap justify-center gap-8">
-      {% for s in active_sections %}
-        <div class="flex flex-col w-full 
-             {% if count == 1 %} max-w-2xl
-             {% elsif count == 2 or count == 4 %} md:w-[calc(50%-1rem)] lg:max-w-[500px]
-             {% else %} lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)]
-             {% endif %}"
-             data-gsap="reveal" data-delay="{{ forloop.index | times: 0.1 }}">
-          {% include section-card.html section=s %}
-        </div>
-      {% endfor %}
-    </div>
+  <div class="max-w-7xl mx-auto not-prose">
+    {% include section-grid.html %}
   </div>
 </section>
 
 <!-- Latest from The Campfire -->
-<section class="bg-surface-container-low rounded-[3xl] py-4 px-4 md:px-12 mx-2 sm:mx-4 lg:mx-8 mb-6">
-  <div class="max-w-[1440px] mx-auto">
+<section class="bg-surface-container-low rounded-[3xl] mx-2 sm:mx-4 lg:mx-8 mb-6">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 py-4">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-16">
       <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter leading-[0.85]">
         Latest from <br/>
@@ -94,7 +80,7 @@ image: "/uploads/hero/aerial.jpg"
 </section>
 
 <!-- Hall Hire CTA Section -->
-<section class="max-w-[1440px] mx-auto px-4 lg:px-8 mb-12" data-gsap="reveal">
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 mb-12" data-gsap="reveal">
   <div class="relative bg-surface-container-high rounded-[3rem] overflow-hidden shadow-ambient-lg border border-outline-variant/20">
     <div class="absolute inset-0 z-0">
       <img src="/uploads/hall-hire/Main-Hall-2.jpg" alt="Bundoora Scout Hall Interior" class="w-full h-full object-cover opacity-20 mix-blend-overlay">

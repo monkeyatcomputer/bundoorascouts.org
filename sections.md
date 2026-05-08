@@ -32,22 +32,8 @@ description: "Explore all five Bundoora Scouts youth sections – from Joey Scou
 <div class="pb-20">
 
   <!-- Smart Section Grid -->
-  <div class="max-w-7xl mx-auto px-6 md:px-12">
-    {% assign active_sections = site.data.sections | where: "active", true %}
-    {% assign count = active_sections | size %}
-    
-    <div class="flex flex-wrap justify-center gap-8">
-      {% for s in active_sections %}
-        <div data-gsap="reveal" data-delay="{{ forloop.index | times: 0.1 }}"
-             class="flex flex-col w-full 
-             {% if count == 1 %} max-w-2xl
-             {% elsif count == 2 or count == 4 %} md:w-[calc(50%-1rem)] lg:max-w-[500px]
-             {% else %} lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)]
-             {% endif %}">
-          {% include section-card.html section=s %}
-        </div>
-      {% endfor %}
-    </div>
+  <div class="max-w-7xl mx-auto px-6 md:px-12 not-prose">
+    {% include section-grid.html %}
   </div>
 
   {% include scouting-journey.html %}
