@@ -37,6 +37,8 @@ intro:
 testimonials:
   - quote: "My child loves Joey Scouts! It's a great way for them to learn and have fun."
     source: "A Joey Scout Parent"
+  - quote: "A great place for your child to have fun and adventures. My child is thriving at Bundoora scouts and learning life skills. I highly recommend scouts."
+    source: "Jyall, Joey Scout Leader"
 ---
 
 {% include feature-grid.html features=page.features colour=page.colour %}

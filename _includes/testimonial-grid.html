@@ -12,7 +12,16 @@
       <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight">What Our Families Say</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {% assign count = testimonials | size %}
+    {% if count == 1 %}
+      {% assign cols_class = 'grid-cols-1 max-w-4xl mx-auto' %}
+    {% elsif count == 2 %}
+      {% assign cols_class = 'grid-cols-1 md:grid-cols-2' %}
+    {% else %}
+      {% assign cols_class = 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' %}
+    {% endif %}
+    
+    <div class="grid {{ cols_class }} gap-8">
       {% for t in testimonials %}
       <div class="bg-surface-container-low p-6 sm:p-10 rounded-3xl relative overflow-hidden group">
         <!-- Quote Icon -->

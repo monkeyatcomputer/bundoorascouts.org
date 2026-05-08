@@ -15,7 +15,16 @@
     </div>
 
     {% if features %}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {% assign count = features | size %}
+    {% if count == 4 or count == 2 %}
+      {% assign cols_class = 'grid-cols-1 md:grid-cols-2 lg:grid-cols-2' %}
+    {% elsif count == 1 %}
+      {% assign cols_class = 'grid-cols-1 max-w-2xl mx-auto' %}
+    {% else %}
+      {% assign cols_class = 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' %}
+    {% endif %}
+    
+    <div class="grid {{ cols_class }} gap-8">
       {% for feature in features %}
       <div
         class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">

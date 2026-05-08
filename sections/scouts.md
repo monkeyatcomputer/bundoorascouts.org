@@ -36,6 +36,8 @@ intro:
 testimonials:
   - quote: "Scouts is the best part of my week – we get to try new things, go on adventures, and make heaps of friends. Every camp feels like a new story waiting to happen!"
     source: "A Scout"
+  - quote: "It is always good to see kids learning new skills"
+    source: "Peter, former Leader at Bundoora Scouts"
 ---
 
 {% include feature-grid.html features=page.features colour=page.colour %}
