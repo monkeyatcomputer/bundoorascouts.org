@@ -40,6 +40,11 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
     class="absolute -bottom-24 -left-24 w-64 h-64 bg-tertiary/20 rounded-full blur-[80px] group-hover:bg-tertiary/30 transition-colors">
   </div>
 
+  <!-- Close Button -->
+  <button id="trip-banner-close" class="absolute top-2 right-4 text-white/50 hover:text-white transition-colors z-20 flex items-center justify-center w-8 h-8 rounded-full bg-black/10 backdrop-blur-sm" aria-label="Close banner">
+    <span class="material-symbols-outlined text-lg">close</span>
+  </button>
+
   <div
     class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 py-3 lg:py-6 px-4 lg:px-12">
 
@@ -107,6 +112,18 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
     const startStr = banner.dataset.start;
     const endStr = banner.dataset.end;
     const url = banner.dataset.url;
+    const cookieName = 'dismiss_banner_' + url.replace(/\//g, '_');
+
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    if (getCookie(cookieName)) {
+      banner.classList.add('hidden');
+      return;
+    }
 
     const bg = document.getElementById('trip-banner-bg');
     const iconBg = document.getElementById('trip-banner-icon-bg');
@@ -131,9 +148,30 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
     if (!startTime || !endTime) return;
 
     banner.addEventListener('click', (e) => {
-      if (e.target.closest('a')) return;
+      if (e.target.closest('a') || e.target.closest('#trip-banner-close')) return;
       link.click();
     });
+
+    let dismissed = false; // Flag to stop updates
+
+    const closeBtn = document.getElementById('trip-banner-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        const date = new Date();
+        date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
+        const expires = `; expires=${date.toUTCString()}`;
+        document.cookie = `${cookieName}=true${expires}; path=/; SameSite=Strict`;
+        
+        dismissed = true; // Set flag
+        
+        banner.classList.add('opacity-0', 'translate-y-10');
+        setTimeout(() => {
+          banner.classList.add('hidden');
+        }, 700);
+      });
+    }
 
     let bannerShouldBeVisible = false;
     let scrollListenerAdded = false;
@@ -148,6 +186,10 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
     }
 
     function onScroll() {
+      if (dismissed) {
+        window.removeEventListener('scroll', onScroll);
+        return;
+      }
       if (window.scrollY > 50) {
         show();
         window.removeEventListener('scroll', onScroll);
@@ -155,7 +197,7 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
     }
 
     function attemptShow() {
-      if (!bannerShouldBeVisible) return;
+      if (dismissed || !bannerShouldBeVisible) return;
       
       const isSmall = window.matchMedia('(max-width: 1023px)').matches;
       if (isSmall) {
@@ -171,6 +213,8 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
     }
 
     function update() {
+      if (dismissed) return; // Stop loop if dismissed
+
       // Use browser's current time
       const now = new Date().getTime();
 
