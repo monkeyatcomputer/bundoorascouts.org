@@ -78,7 +78,7 @@
   slug: venturers
   url: /sections/venturers
   age_range: "15 to 18"
-  time: null
+  time: 
   colour: "#A6264C"
   colour_dark: "#A6264C"
   icon: hiking
@@ -86,9 +86,11 @@
   description: Self-directed program focused on personal growth, major expeditions, and vocational skills.
   tagline: Lead your own adventure.
   leader_tagline: Advisors for our 15 to 18 year old pioneers.
-  active: false
-  show_on_leaders: true
+  active: true
+  show_on_leaders: false
   sectionid: 3360101U1
+  cta_text: "Enquire"
+  cta_url: "/contact/"
   logo-light: /assets/images/logo-venturer-light.svg
   logo-dark: /assets/images/logo-venturer-dark.svg
   logo-crop: /assets/images/logo-venturer-crop.svg

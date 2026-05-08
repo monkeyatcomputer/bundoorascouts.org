@@ -10,6 +10,8 @@ colour: "#A6264C"
 colour_dark: "#A6264C"
 icon: hiking
 section_slug: venturers
+cta_text: "Enquire Now"
+cta_url: "/contact/"
 motto: "Be Prepared"
 award:
   title: "Award Scheme"
@@ -32,7 +34,8 @@ intro:
   title: "Look Wide, Reach High"
   paragraphs:
     - "Life as a Venturer Scout is about making your own challenges. Scaling a 30m rock-face or abseiling into caves may frighten most people, but Venturers face it head-on."
-    - "You’ll work in units with other Venturers and Adult Leaders who act as mentors. You’re given the freedom to choose your own activities, because we know that passion drives achievement."
+    - "We fully support the Venturer section and transition our older Scouts into it, but we \"home\" our Venturer Scouts at other nearby groups to ensure they have access to a full unit experience."
+    - "If you're interested in joining Venturers, please get in touch with us via our contact form and we'll help you find the right group!"
   rotation: "-rotate-1"
 testimonials:
   - quote: "Venturers is where things get real. We plan our own adventures, push our limits, and learn stuff that actually matters – all while having a laugh with mates who’ve got your back."

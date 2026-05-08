@@ -45,23 +45,34 @@ layout: default
       </p>
 
       <!-- Meeting Details -->
-      {% if section.sectionid %}
-      {% assign encoded_id = section.sectionid | url_encode %}
-      {% assign join_url = site.onboarding_url | append: encoded_id %}
+      {% if page.cta_url %}
+        {% assign join_url = page.cta_url %}
+      {% elsif section.sectionid %}
+        {% assign encoded_id = section.sectionid | url_encode %}
+        {% assign join_url = site.onboarding_url | append: encoded_id %}
       {% else %}
-      {% assign join_url = '/contact/' %}
+        {% assign join_url = '/contact/' %}
       {% endif %}
+
+      {% if page.cta_text %}
+        {% assign join_text = page.cta_text %}
+      {% else %}
+        {% assign join_text = 'Join ' | append: page.title %}
+      {% endif %}
+
+      {% if section.time %}
       <div
         class="flex items-center gap-3 text-on-primary/80 mb-10 bg-white/5 backdrop-blur-sm px-4 py-3 rounded-lg border border-white/10 self-start">
         <span class="material-symbols-outlined text-secondary">schedule</span>
         <span class="text-sm font-bold tracking-wide">{{ section.time }}</span>
       </div>
+      {% endif %}
 
       <div class="flex flex-wrap gap-4">
         <a href="{{ join_url }}"
           class="text-on-primary px-8 py-4 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2"
           style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }});">
-          Join {{ page.title }} <span class="material-symbols-outlined">arrow_forward</span>
+          {{ join_text }} <span class="material-symbols-outlined">arrow_forward</span>
         </a>
         <a href="#explore"
           class="bg-surface-container-highest/20 backdrop-blur-sm text-on-primary px-8 py-4 rounded-lg font-medium border border-outline-variant/30 hover:bg-surface-container-highest/30 transition-all duration-300">

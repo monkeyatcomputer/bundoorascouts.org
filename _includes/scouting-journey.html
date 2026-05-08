@@ -8,7 +8,7 @@
     </div>
 
     <div class="relative z-10 flex flex-col md:flex-row items-stretch gap-4 md:gap-0">
-      {% assign journey_sections = site.data.sections | where_exp: "item", "item.time" %}
+      {% assign journey_sections = site.data.sections | where_exp: "item", "item.active == true and item.slug != 'group'" %}
       {% for section in journey_sections %}
       <a href="{{ section.url | relative_url }}" class="flex-1 relative flex flex-col items-center text-center px-4 py-8 group transition-all duration-500 hover:bg-white/60 hover:shadow-ambient-lg rounded-3xl {% if page.url == section.url %}bg-white/20 shadow-inner{% endif %}">
         <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-ambient-md group-hover:scale-110 group-hover:shadow-ambient-lg transition-all duration-300 relative overflow-hidden"

@@ -37,16 +37,24 @@
       Learn more
     </a>
 
-    {% if s.sectionid %}
-    {% assign encoded_id = s.sectionid | url_encode %}
-    {% assign join_url = site.onboarding_url | append: encoded_id %}
+    {% if s.cta_url %}
+      {% assign join_url = s.cta_url %}
+    {% elsif s.sectionid %}
+      {% assign encoded_id = s.sectionid | url_encode %}
+      {% assign join_url = site.onboarding_url | append: encoded_id %}
     {% else %}
-    {% assign join_url = '/contact/' %}
+      {% assign join_url = '/contact/' %}
+    {% endif %}
+
+    {% if s.cta_text %}
+      {% assign join_text = s.cta_text %}
+    {% else %}
+      {% assign join_text = 'Join Now' %}
     {% endif %}
 
     <a href="{{ join_url }}"
       class="inline-block text-center px-5 py-2.5 rounded-lg bg-surface-container-highest text-primary font-bold font-headline text-xs uppercase tracking-wide hover:scale-[1.05] active:scale-95 transition-all shadow-sm">
-      Join Now
+      {{ join_text }}
     </a>
   </div>
 </div>
