@@ -1,7 +1,6 @@
 - name: Group Leadership
   shortname: Group
   slug: group
-  time: 
   colour: "#100e4c"
   icon: corporate_fare
   material_icon: corporate_fare
@@ -78,7 +77,7 @@
   slug: venturers
   url: /sections/venturers
   age_range: "15 to 18"
-  time: 
+  time: "Enquire for details"
   colour: "#A6264C"
   colour_dark: "#A6264C"
   icon: hiking
@@ -116,7 +115,7 @@
   slug: adult
   url: /sections/adult
   age_range: "18+"
-  time: "Flexible - Enquire for details"
+  time: "Enquire for details"
   colour: "#3f5e94"
   colour_dark: "#100e4c"
   icon: volunteer_activism
