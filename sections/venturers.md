@@ -10,7 +10,7 @@ colour: "#A6264C"
 colour_dark: "#A6264C"
 icon: hiking
 section_slug: venturers
-motto: "Be Prepared"
+motto: "Look Wide"
 award:
   title: "Award Scheme"
   name: "King's Scout Award"
