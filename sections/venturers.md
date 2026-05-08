@@ -10,8 +10,6 @@ colour: "#A6264C"
 colour_dark: "#A6264C"
 icon: hiking
 section_slug: venturers
-cta_text: "Enquire Now"
-cta_url: "/contact/"
 motto: "Be Prepared"
 award:
   title: "Award Scheme"

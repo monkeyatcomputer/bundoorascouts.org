@@ -88,9 +88,7 @@
   leader_tagline: Advisors for our 15 to 18 year old pioneers.
   active: true
   show_on_leaders: false
-  sectionid: 3360101U1
-  cta_text: "Enquire"
-  cta_url: "/contact/"
+  sectionid: 
   logo-light: /assets/images/logo-venturer-light.svg
   logo-dark: /assets/images/logo-venturer-dark.svg
   logo-crop: /assets/images/logo-venturer-crop.svg
