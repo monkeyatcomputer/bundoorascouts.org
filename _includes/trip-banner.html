@@ -40,10 +40,6 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
     class="absolute -bottom-24 -left-24 w-64 h-64 bg-tertiary/20 rounded-full blur-[80px] group-hover:bg-tertiary/30 transition-colors">
   </div>
 
-  <!-- Close Button -->
-  <button id="trip-banner-close" class="absolute top-4 right-4 lg:top-6 lg:right-8 text-white/50 hover:text-white transition-colors z-20 flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-black/10 backdrop-blur-sm" aria-label="Close banner">
-    <span class="material-symbols-outlined text-lg lg:text-xl">close</span>
-  </button>
 
   <div
     class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 py-3 lg:py-6 px-4 lg:px-12">
@@ -90,7 +86,7 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
     </div>
 
     <!-- Right: Action Button -->
-    <div class="w-full lg:w-auto flex justify-center">
+    <div class="w-full lg:w-auto flex justify-center items-center gap-2 lg:gap-4">
       <a id="trip-banner-link" href="{{ trip_page.url }}"
         class="group/btn relative overflow-hidden bg-white text-primary px-4 py-2 lg:px-8 lg:py-4 rounded-lg lg:rounded-2xl font-black text-sm lg:text-lg hover:scale-105 transition-all duration-300 shadow-xl flex items-center gap-2 lg:gap-3">
         <span class="relative z-10" id="trip-banner-btn-text">Track Trip</span>
@@ -100,6 +96,11 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
           class="absolute inset-0 bg-gradient-to-r from-secondary/10 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity">
         </div>
       </a>
+      
+      <!-- Close Button -->
+      <button id="trip-banner-close" class="text-white/50 hover:text-white transition-colors flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-black/10 backdrop-blur-sm flex-shrink-0" aria-label="Close banner">
+        <span class="material-symbols-outlined text-lg lg:text-xl">close</span>
+      </button>
     </div>
   </div>
 </div>
