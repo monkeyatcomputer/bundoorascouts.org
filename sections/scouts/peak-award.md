@@ -12,12 +12,12 @@ peak_award:
   subtitle: "The highest achievement in the Scout section."
   summary: "To earn the Australian Scout Award, a Scout must complete a series of challenges that demonstrate their dedication, leadership, and commitment to personal growth."
   requirements:
-    - "Complete Milestone 3."
-    - "Reach Stage 5 in all 3 core Outdoor Adventure Skills, with 10 progressions total."
-    - "Complete 6 Special Interest Area projects across at least 3 areas, 8 hours each."
-    - "Plan & lead an Adventurous Journey of at least 3 days and 2 nights."
-    - "Complete a Leadership Course (usually a weekend)."
-    - "Participate in a Personal Reflection."
+    - { text: "Complete Milestone 3.", url: "/sections/scouts/milestones" }
+    - { text: "Reach Stage 5 in all 3 core Outdoor Adventure Skills, with 10 progressions total.", url: "/sections/scouts/outdoor-skills" }
+    - { text: "Complete 6 Special Interest Area projects across at least 3 areas, 8 hours each.", url: "/sections/scouts/special-interests" }
+    - { text: "Plan & lead an Adventurous Journey of at least 3 days and 2 nights.", url: "/sections/scouts/adventurous-journey" }
+    - { text: "Complete a Leadership Course (usually a weekend).", url: "/sections/scouts/leadership-course" }
+    - { text: "Participate in a Personal Reflection.", url: "/sections/scouts/personal-reflection" }
 ---
 
 {% include achievement-pathway-peak.html %}

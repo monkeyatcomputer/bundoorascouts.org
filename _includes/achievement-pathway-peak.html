@@ -1,35 +1,64 @@
 {% assign section = site.data.sections | where: "slug", page.section_slug | first %}
+{% assign accent = section.colour | default: "#3f5e94" %}
 
-<div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12 flex flex-col gap-8">
-  <div class="flex flex-col md:flex-row items-center gap-6">
-    <div class="w-32 h-32 flex items-center justify-center flex-shrink-0">
-      <img src="{{ page.peak_award.image }}" alt="{{ page.peak_award.name }}" class="w-full h-full object-contain filter drop-shadow-lg" />
+<div
+  class="bg-gradient-to-br from-surface-container-low via-surface-container-low to-primary/5 p-8 md:p-12 rounded-2xl mb-12 flex flex-col gap-8 border border-primary/10 shadow-lg relative overflow-hidden">
+
+  <!-- Background Glow -->
+  <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full blur-3xl opacity-10"
+    style="background-color: {{ accent }};"></div>
+
+  <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+    <div
+      class="w-40 h-40 flex items-center justify-center flex-shrink-0 bg-surface-container-high rounded-full p-4 shadow-inner">
+      <img src="{{ page.peak_award.image }}" alt="{{ page.peak_award.name }}"
+        class="w-full h-full object-contain filter drop-shadow-2xl transition-transform hover:scale-105 duration-500" />
     </div>
-    <div>
-      <span class="text-xs text-secondary-dim font-bold uppercase tracking-wider">The Pinnacle</span>
-      <h2 class="font-display text-4xl font-black text-primary mt-1 mb-2">{{ page.peak_award.name }}</h2>
-      <p class="text-on-surface-variant text-lg">{{ page.peak_award.subtitle }}</p>
+    <div class="text-center md:text-left">
+      <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 bg-primary/10 text-primary rounded-full">The
+        Pinnacle</span>
+      <h2 class="font-display text-4xl lg:text-5xl font-black text-primary mt-3 mb-2 tracking-tight">{{
+        page.peak_award.name }}</h2>
+      <p class="text-on-surface-variant text-lg font-medium">{{ page.peak_award.subtitle }}</p>
     </div>
   </div>
 
-  <hr class="border-outline-variant" />
+  <hr class="border-outline-variant/50" />
 
-  <p class="text-on-surface-variant text-lg leading-relaxed">
-    {{ page.peak_award.summary }}
-  </p>
+  <div class="relative z-10">
+    <p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+      {{ page.peak_award.summary }}
+    </p>
 
-  <h3 class="font-headline text-2xl font-bold text-primary mt-4">Requirements</h3>
-  <ul class="list-disc list-inside text-on-surface-variant space-y-2">
-    {% for req in page.peak_award.requirements %}
-      <li>{{ req }}</li>
-    {% endfor %}
-  </ul>
+    <h3 class="font-headline text-2xl font-bold text-primary mb-6">The Requirements</h3>
 
-  <!-- Back to Overview -->
-  <div class="text-center mt-8">
-    <a href="/sections/{{ page.section_slug }}/achievement-pathway#peak-award" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
-      <span class="material-symbols-outlined text-sm">arrow_back</span>
-      <span>Back to {{ section.name }} Pathway</span>
-    </a>
+    <div class="grid grid-cols-1 gap-4">
+      {% for req in page.peak_award.requirements %}
+        {% if req.url != "" %}
+          <a href="{{ req.url }}" class="bg-surface-container-high p-4 rounded-xl border border-outline-variant/30 flex items-start gap-4 hover:border-primary/30 transition-colors group">
+        {% else %}
+          <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant/30 flex items-start gap-4">
+        {% endif %}
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-primary/5 group-hover:bg-primary/10 transition-colors">
+              <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">stars</span>
+            </div>
+            <p class="text-on-surface leading-relaxed text-sm pt-2 font-medium">{{ req.text }}</p>
+        {% if req.url != "" %}
+          </a>
+        {% else %}
+          </div>
+        {% endif %}
+      {% endfor %}
   </div>
+</div>
+
+<!-- Back to Overview -->
+<div class="text-center mt-8 relative z-10">
+  <a href="/sections/{{ page.section_slug }}/achievement-pathway#peak-award"
+    class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md"
+    style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
+    <span class="material-symbols-outlined text-sm">arrow_back</span>
+    <span>Back to {{ section.name }} Pathway</span>
+  </a>
+</div>
 </div>

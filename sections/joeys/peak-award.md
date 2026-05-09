@@ -12,11 +12,9 @@ peak_award:
   subtitle: "The highest achievement in the Joey Scout section."
   summary: "To earn the Joey Scout Challenge Award, a Joey Scout must complete a series of challenges that demonstrate their dedication, leadership, and commitment to personal growth."
   requirements:
-    - "Complete Milestone 3."
-    - "Reach Stage 1 in any 3 Outdoor Adventure Skills."
-    - "Complete 6 Special Interest Area projects."
-    - "Participate in a 3-hour journey."
-    - "Participate in a Personal Reflection."
+    - { text: "Complete Milestone 3.", url: "/sections/joeys/milestones" }
+    - { text: "Reach Stage 1 in any 3 Outdoor Adventure Skills.", url: "/sections/joeys/outdoor-skills" }
+    - { text: "Complete 6 Special Interest Area projects.", url: "/sections/joeys/special-interests" }
 ---
 
 {% include achievement-pathway-peak.html %}

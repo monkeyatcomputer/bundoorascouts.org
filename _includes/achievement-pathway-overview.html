@@ -90,7 +90,7 @@
         <div class="flex justify-center mt-8">
           <a href="/sections/{{ page.section_slug }}/milestones"
             class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
-            style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+            style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
             <span>View Milestones</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
         </div>
@@ -121,11 +121,13 @@
           {{ page.pathway.oas.summary | default: 'Master skills in Camping, Bushcraft, and Bushwalking. Progress through
           9 stages to build your expertise.' }}
         </p>
-        <a href="{{ page.pathway.oas.url }}"
-          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
-          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
-          <span>Explore Skills</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
+        <div class="flex justify-center mt-8">
+          <a href="{{ page.pathway.oas.url }}"
+            class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+            style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
+            <span>Explore Skills</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -153,11 +155,13 @@
           {{ page.pathway.sia.summary | default: 'Design and complete projects in 6 different areas of interest. Set
           your own goals and challenge yourself.' }}
         </p>
-        <a href="{{ page.pathway.sia.url }}"
-          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
-          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
-          <span>Discover Areas</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
+        <div class="flex justify-center mt-8">
+          <a href="{{ page.pathway.sia.url }}"
+            class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+            style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
+            <span>Discover Areas</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -190,11 +194,13 @@
           {{ page.pathway.adventurous_journey.summary | default: 'Plan and lead a journey to demonstrate your leadership
           and outdoor skills. This is a major test of your abilities.' }}
         </p>
-        <a href="{{ page.pathway.adventurous_journey.url }}"
-          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
-          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
-          <span>Plan Your Journey</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
+        <div class="flex justify-center mt-8">
+          <a href="{{ page.pathway.adventurous_journey.url }}"
+            class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+            style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
+            <span>Plan Your Journey</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </div>
     {% endif %}
@@ -224,11 +230,13 @@
           Complete a course to develop your leadership skills or personal growth. This is a key requirement for the Peak
           Award.
         </p>
-        <a href="/sections/{{ page.section_slug }}/leadership-course"
-          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
-          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
-          <span>Learn More</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
+        <div class="flex justify-center mt-8">
+          <a href="/sections/{{ page.section_slug }}/leadership-course"
+            class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+            style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
+            <span>Learn More</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </div>
     {% endif %}
@@ -262,11 +270,13 @@
           Reflect on your journey and growth with your peers before achieving the Peak Award. This is the final review
           of your achievements.
         </p>
-        <a href="{{ page.pathway.personal_reflection.url }}"
-          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
-          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
-          <span>Reflection Guide</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
+        <div class="flex justify-center mt-8">
+          <a href="{{ page.pathway.personal_reflection.url }}"
+            class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+            style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
+            <span>Reflection Guide</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </div>
     {% endif %}
@@ -308,11 +318,13 @@
           The highest award you can earn in the section. It requires dedication, leadership, and a commitment to
           personal growth.
         </p>
-        <a href="/sections/{{ page.section_slug }}/peak-award"
-          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
-          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
-          <span>Learn More</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
+        <div class="flex justify-center mt-8">
+          <a href="/sections/{{ page.section_slug }}/peak-award"
+            class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+            style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
+            <span>Learn More</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -365,34 +377,88 @@
     {% when 'joeys' %}
     {% assign next_slug = 'cubs' %}
     {% assign next_name = 'Cub Scouts' %}
-    {% assign next_logo = 'logo-cub-light.svg' %}
+    {% assign next_logo = 'logo-cub-crop.svg' %}
+    {% assign prev_slug = '' %}
     {% when 'cubs' %}
     {% assign next_slug = 'scouts' %}
     {% assign next_name = 'Scouts' %}
-    {% assign next_logo = 'logo-scout-light.svg' %}
+    {% assign next_logo = 'logo-scout-crop.svg' %}
+    {% assign prev_slug = 'joeys' %}
+    {% assign prev_name = 'Joey Scouts' %}
+    {% assign prev_logo = 'logo-joey-crop.svg' %}
     {% when 'scouts' %}
     {% assign next_slug = 'venturers' %}
     {% assign next_name = 'Venturer Scouts' %}
-    {% assign next_logo = 'logo-venturer-light.svg' %}
+    {% assign next_logo = 'logo-venturer-crop.svg' %}
+    {% assign prev_slug = 'cubs' %}
+    {% assign prev_name = 'Cub Scouts' %}
+    {% assign prev_logo = 'logo-cub-crop.svg' %}
     {% when 'venturers' %}
     {% assign next_slug = 'rovers' %}
     {% assign next_name = 'Rover Scouts' %}
-    {% assign next_logo = 'logo-rover-light.svg' %}
+    {% assign next_logo = 'logo-rover-crop.svg' %}
+    {% assign prev_slug = 'scouts' %}
+    {% assign prev_name = 'Scouts' %}
+    {% assign prev_logo = 'logo-scout-crop.svg' %}
+    {% when 'rovers' %}
+    {% assign next_slug = '' %}
+    {% assign prev_slug = 'venturers' %}
+    {% assign prev_name = 'Venturer Scouts' %}
+    {% assign prev_logo = 'logo-venturer-crop.svg' %}
     {% else %}
     {% assign next_slug = '' %}
+    {% assign prev_slug = '' %}
     {% endcase %}
 
-    {% if next_slug != '' %}
-    <!-- Pill 8: Next Section Link -->
-    <a href="/sections/{{ next_slug }}"
-      class="bg-primary hover:bg-primary-dim text-white text-xs font-bold px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-md gap-2 mt-8 transition-colors">
-      <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5">
-        <img src="/assets/images/{{ next_logo }}" alt="{{ next_name }}" class="w-full h-full object-contain" />
+    <div class="mt-8 w-full flex justify-center">
+      {% if prev_slug != '' and next_slug != '' %}
+      <!-- Split Pill for Both -->
+      <div
+        class="bg-primary text-white text-xs font-bold rounded-full flex items-center shadow-md overflow-hidden w-full max-w-xl">
+
+        <!-- Previous Section -->
+        <a href="/sections/{{ prev_slug }}/achievement-pathway"
+          class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 hover:bg-primary-dim transition-colors border-r border-white/20">
+          <span class="material-symbols-outlined text-xs">arrow_back</span>
+          <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5">
+            <img src="/assets/images/{{ prev_logo }}" alt="{{ prev_name }}" class="w-full h-full object-contain" />
+          </div>
+          <span>{{ prev_name }} Pathway</span>
+        </a>
+
+        <!-- Next Section -->
+        <a href="/sections/{{ next_slug }}/achievement-pathway"
+          class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 hover:bg-primary-dim transition-colors">
+          <span>{{ next_name }} Pathway</span>
+          <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5">
+            <img src="/assets/images/{{ next_logo }}" alt="{{ next_name }}" class="w-full h-full object-contain" />
+          </div>
+          <span class="material-symbols-outlined text-xs">arrow_forward</span>
+        </a>
+
       </div>
-      <span>Go to {{ next_name }}</span>
-      <span class="material-symbols-outlined text-xs">arrow_forward</span>
-    </a>
-    {% endif %}
+      {% elsif prev_slug != '' %}
+      <!-- Single Pill for Prev -->
+      <a href="/sections/{{ prev_slug }}/achievement-pathway"
+        class="bg-primary hover:bg-primary-dim text-white text-xs font-bold px-6 py-2.5 rounded-full flex items-center justify-center shadow-md gap-2 transition-colors">
+        <span class="material-symbols-outlined text-xs">arrow_back</span>
+        <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5">
+          <img src="/assets/images/{{ prev_logo }}" alt="{{ prev_name }}" class="w-full h-full object-contain" />
+        </div>
+        <span>{{ prev_name }} Pathway</span>
+      </a>
+      {% elsif next_slug != '' %}
+      <!-- Single Pill for Next -->
+      <a href="/sections/{{ next_slug }}/achievement-pathway"
+        class="bg-primary hover:bg-primary-dim text-white text-xs font-bold px-6 py-2.5 rounded-full flex items-center justify-center shadow-md gap-2 transition-colors">
+        <span>{{ next_name }} Pathway</span>
+        <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5">
+          <img src="/assets/images/{{ next_logo }}" alt="{{ next_name }}" class="w-full h-full object-contain" />
+        </div>
+        <span class="material-symbols-outlined text-xs">arrow_forward</span>
+      </a>
+      {% endif %}
+    </div>
 
   </div>
 </div>
