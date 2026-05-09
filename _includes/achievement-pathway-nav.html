@@ -1,0 +1,29 @@
+{% assign section = include.section %}
+
+<aside class="lg:col-span-3">
+  <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10 flex flex-col gap-6 sticky top-24">
+
+    
+    <!-- Navigation Links -->
+    <nav class="flex flex-col gap-2">
+      {% for item in site.data.achievement_pathway_nav %}
+        <!-- Skip items that don't apply to Joeys -->
+        {% if item.requires_aj and page.section_slug == 'joeys' %}{% continue %}{% endif %}
+        {% if item.requires_pr and page.section_slug == 'joeys' %}{% continue %}{% endif %}
+        {% if item.requires_lc and page.section_slug == 'joeys' %}{% continue %}{% endif %}
+        
+        {% assign is_active = false %}
+        {% if page.ap_page == item.ap_page %}
+          {% assign is_active = true %}
+        {% endif %}
+        
+        {% assign url = item.url | replace: ':section', page.section_slug %}
+        
+        <a href="{{ url }}" class="flex items-center gap-3 p-3 rounded-lg transition-all hover:translate-x-1 font-medium {% if is_active %}bg-secondary-container text-on-secondary-container{% else %}text-on-surface-variant hover:bg-surface-container-high{% endif %}">
+          <span class="material-symbols-outlined">{{ item.icon }}</span>
+          <span class="text-label-lg">{{ item.name }}</span>
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</aside>

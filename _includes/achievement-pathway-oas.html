@@ -1,0 +1,86 @@
+{% assign section = site.data.sections | where: "slug", page.section_slug | first %}
+{% assign accent = section.colour | default: "#3f5e94" %}
+
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12">
+  
+  <!-- Core Requirement Callout -->
+  <section class="mb-16">
+    <div class="relative overflow-hidden">
+      <div class="absolute -right-16 -top-16 opacity-5 pointer-events-none">
+        <span class="material-symbols-outlined" style="font-size: 240px; font-variation-settings: 'FILL' 1;">workspace_premium</span>
+      </div>
+      <div class="relative z-10 md:w-2/3">
+        <h2 class="font-display text-2xl md:text-3xl font-black text-primary mb-4 tracking-tight">
+          The Stage {{ page.oas.stage_requirement }} Core Requirement
+        </h2>
+        <p class="font-body text-on-surface-variant leading-relaxed text-lg mb-6">
+          To achieve your Peak Award, you are required to reach at least <strong>Stage {{ page.oas.stage_requirement }}</strong> in all three core Outdoor Adventure Skills: Bushcraft, Bushwalking, and Camping.
+        </p>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-8">
+          Beyond Stage {{ page.oas.stage_requirement }}, you will focus on specializing in areas of your choosing, eventually leading activities and mentoring younger Scouts in these disciplines.
+        </p>
+        <a href="{{ page.oas.sv_url }}" target="_blank" class="inline-block bg-surface-container-highest text-on-surface px-6 py-3 rounded-lg font-medium hover:bg-surface-dim transition-colors shadow-[0_2px_8px_rgba(38,38,97,0.04)]">
+          View Full Requirements on Scouts Victoria
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Grid -->
+  <section>
+    <div class="flex items-baseline justify-between mb-10">
+      <h2 class="font-headline text-3xl font-extrabold text-primary tracking-tight">The 9 Skill Areas</h2>
+      <span class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Stages 1-9</span>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Core Skills -->
+      {% for skill in page.oas.core_skills %}
+        {% assign icon = "explore" %}
+        {% if skill.name == "Bushwalking" %}{% assign icon = "hiking" %}
+        {% elsif skill.name == "Bushcraft" %}{% assign icon = "build" %}
+        {% elsif skill.name == "Camping" %}{% assign icon = "camping" %}
+        {% endif %}
+        
+        <div class="bg-surface-container-lowest p-6 rounded-xl border border-surface-container-highest/30 shadow-[0_8px_30px_rgba(38,38,97,0.03)] hover:-translate-y-1 transition-transform duration-300 group">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+            <span class="material-symbols-outlined text-primary text-2xl">{{ icon }}</span>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider mb-2 block" style="color: {{ accent }};">Core Skill</span>
+          <h3 class="font-headline text-xl font-bold text-on-surface mb-3">{{ skill.name }}</h3>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">{{ skill.description }}</p>
+        </div>
+      {% endfor %}
+      
+      <!-- Specialist Skills -->
+      {% for skill in page.oas.specialist_skills %}
+        {% assign icon = "explore" %}
+        {% if skill.name == "Paddling" %}{% assign icon = "kayaking" %}
+        {% elsif skill.name == "Vertical" %}{% assign icon = "landscape" %}
+        {% elsif skill.name == "Boating" %}{% assign icon = "kayaking" %}
+        {% elsif skill.name == "Cycling" %}{% assign icon = "directions_bike" %}
+        {% elsif skill.name == "Alpine" %}{% assign icon = "ac_unit" %}
+        {% elsif skill.name == "Snorkeling" %}{% assign icon = "explore" %}
+        {% endif %}
+        
+        <div class="bg-surface-container-low p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300 group">
+          <div class="w-12 h-12 bg-tertiary/10 rounded-lg flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-tertiary text-2xl">{{ icon }}</span>
+          </div>
+          <h3 class="font-headline text-xl font-bold text-on-surface mb-3">{{ skill.name }}</h3>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">{{ skill.description }}</p>
+        </div>
+      {% endfor %}
+      
+    </div>
+  </section>
+  
+  <!-- Back to Overview -->
+  <div class="mt-12 text-center">
+    <a href="/sections/{{ page.section_slug }}/achievement-pathway" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+      <span class="material-symbols-outlined text-sm">arrow_back</span>
+      <span>Back to {{ section.name }} Pathway</span>
+    </a>
+  </div>
+</div>

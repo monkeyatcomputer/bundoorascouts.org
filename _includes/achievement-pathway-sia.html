@@ -1,0 +1,125 @@
+{% assign section = site.data.sections | where: "slug", page.section_slug | first %}
+{% assign accent = section.colour | default: "#3f5e94" %}
+
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12 flex flex-col gap-16">
+  
+  <!-- Requirement Breakdown (Bento Grid) -->
+  <section>
+    <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+      <div class="flex-1">
+        <h2 class="font-display font-black text-3xl text-primary mb-2 tracking-tight">{{ section.name }} Requirements</h2>
+        <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+          Special Interest Areas encourage you to try new things and master skills you are passionate about. You set your own goals and design projects that interest you.
+        </p>
+      </div>
+      
+      <div class="bg-surface-container-low p-6 rounded-lg shadow-sm border border-outline-variant/10 md:w-1/3">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: {{ accent }}1a;">
+            <span class="material-symbols-outlined text-2xl" style="color: {{ accent }};">flag</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-primary">The Goal</h3>
+            <p class="text-sm text-on-surface-variant">Complete {{ page.sia.projects_required }} Projects</p>
+          </div>
+        </div>
+        
+        <ul class="space-y-3 font-body text-sm text-on-surface-variant">
+          <li class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+            <span>Across at least <strong>{{ page.sia.areas_required }} different areas</strong></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-secondary text-base">schedule</span>
+            <span>Minimum <strong>{{ page.sia.hours_per_project }} hours</strong> per project</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-secondary text-base">group</span>
+            <span>Plan, Do, Review process required</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 6 Areas -->
+  <section>
+    <h2 class="font-display font-black text-3xl text-primary mb-8 tracking-tight border-b border-surface-variant pb-4">The 6 Areas</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for area in page.sia.areas %}
+        {% assign border_color = "bg-secondary-container" %}
+        {% if forloop.index == 2 %}{% assign border_color = "bg-tertiary-container" %}
+        {% elsif forloop.index == 3 %}{% assign border_color = "bg-primary-container" %}
+        {% elsif forloop.index == 4 %}{% assign border_color = "bg-surface-tint" %}
+        {% elsif forloop.index == 5 %}{% assign border_color = "bg-secondary" %}
+        {% elsif forloop.index == 6 %}{% assign border_color = "bg-outline" %}
+        {% endif %}
+        
+        <div class="group relative bg-surface-container-lowest p-6 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_20px_40px_rgba(38,38,97,0.08)] hover:-translate-y-1 border border-outline-variant/10">
+          <div class="absolute top-0 left-0 w-1 h-full {{ border_color }}"></div>
+          <div class="mb-4">
+            <span class="material-symbols-outlined text-4xl text-primary">{{ area.icon }}</span>
+          </div>
+          <h3 class="font-headline font-bold text-xl text-primary mb-2">{{ area.name }}</h3>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+            {{ area.description }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Example Projects -->
+  <section class="bg-surface-container-low rounded-2xl p-8 lg:p-12">
+    <div class="flex flex-col lg:flex-row gap-12 items-center">
+      <div class="lg:w-1/2">
+        <h2 class="font-display font-black text-3xl text-primary mb-4 tracking-tight">{{ section.name }}-Level Inspiration</h2>
+        <p class="font-body text-on-surface-variant mb-6 leading-relaxed">
+          Need ideas? Here are examples of what a project might look like for this section.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">1</div>
+            <div>
+              <h4 class="font-bold text-primary">Organise a Pack Clean Up</h4>
+              <p class="text-sm text-on-surface-variant mt-1">Better World: Plan and lead a clean-up day at a local park or around your hall.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">2</div>
+            <div>
+              <h4 class="font-bold text-primary">Build a Bird Feeder</h4>
+              <p class="text-sm text-on-surface-variant mt-1">Environment: Design and build a bird feeder and observe the birds that visit.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">3</div>
+            <div>
+              <h4 class="font-bold text-primary">Learn a Magic Trick</h4>
+              <p class="text-sm text-on-surface-variant mt-1">Creative Flare: Learn a set of magic tricks and perform a show for your Pack.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="lg:w-1/2 relative">
+        <div class="aspect-square rounded-2xl overflow-hidden shadow-lg border-4 border-surface">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKkLTe9KYgU0JF_15FLKAkuV-808KpTD91lInt47uokk3u7dgA6yHDczrg9fbEelWAoXnnen-_1saqNKyeGsVHvAwoyeHzE7XiicEoUpi8cM2lAR8dUf976_H8z7d8w0TQwnXcuZMyJmWJnh4QEXHq4ULkJA01hK6GhE1z98ndqobCEfyaUIsJyaJNGKrfnygGQI0yEUCuSPlARPCy-n8TKErzY6e6Yx9PoUFdsEy1aajFaIj1WWHUBdExvIym6LeJ2RNTmeDMNn8" alt="Scout project inspiration" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -left-6 w-24 h-24 rounded-full blur-2xl z-[-1] opacity-20" style="background-color: {{ accent }};"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Overview -->
+  <div class="text-center">
+    <a href="/sections/{{ page.section_slug }}/achievement-pathway" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+      <span class="material-symbols-outlined text-sm">arrow_back</span>
+      <span>Back to {{ section.name }} Pathway</span>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+{% assign section = site.data.sections | where: "slug", page.section_slug | first %}
+{% assign accent = section.colour | default: "#3f5e94" %}
+
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12 space-y-16">
+  
+  <!-- Intro & The Review -->
+  <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+    <div class="md:col-span-7 space-y-6">
+      <h2 class="text-3xl font-display font-black text-primary tracking-tight">Looking Back to Move Forward</h2>
+      <p class="text-on-surface-variant leading-relaxed">
+        Personal Reflection is the capstone of the Achievement Pathway. It is not a test, but a structured opportunity to evaluate your personal growth across the entire program. You will review how the Scout Method has influenced your development and how you have embodied the Promise and Law in your everyday life.
+      </p>
+      <p class="text-on-surface-variant leading-relaxed">
+        This reflection isn't done in isolation. It involves a collaborative review process with your peers and your Section Leader, ensuring a holistic view of your journey.
+      </p>
+    </div>
+    
+    <div class="md:col-span-5 bg-surface-container-high p-6 rounded-xl relative">
+      <h3 class="text-xl font-headline font-bold text-primary mb-4">The Review Process</h3>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined mt-1" style="color: {{ accent }};">check_circle</span>
+          <span class="text-on-surface-variant text-sm">Self-evaluation of your journey against the Promise &amp; Law.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined mt-1" style="color: {{ accent }};">check_circle</span>
+          <span class="text-on-surface-variant text-sm">Peer review with members of your Unit Council.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined mt-1" style="color: {{ accent }};">check_circle</span>
+          <span class="text-on-surface-variant text-sm">Final discussion with your Section Leader.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Reflection Guide Bento Grid -->
+  <section>
+    <div class="mb-12">
+      <h2 class="text-3xl font-headline font-bold text-primary tracking-tight">Reflection Guide</h2>
+      <p class="text-on-surface-variant mt-2">Use these prompts to structure your thoughts before your review.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for area in page.reflection.focus_areas %}
+        {% assign icon = "lightbulb" %}
+        {% if forloop.index == 2 %}{% assign icon = "self_improvement" %}
+        {% elsif forloop.index == 3 %}{% assign icon = "handshake" %}
+        {% endif %}
+        
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-surface-variant/50 hover:-translate-y-1 transition-transform duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-secondary-container rounded-lg flex items-center justify-center text-on-secondary-container flex-shrink-0">
+              <span class="material-symbols-outlined">{{ icon }}</span>
+            </div>
+            <h4 class="font-bold text-primary">{{ area.title }}</h4>
+          </div>
+          <p class="text-sm text-on-surface-variant leading-relaxed">{{ area.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Back to Overview -->
+  <div class="text-center">
+    <a href="/sections/{{ page.section_slug }}/achievement-pathway" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+      <span class="material-symbols-outlined text-sm">arrow_back</span>
+      <span>Back to {{ section.name }} Pathway</span>
+    </a>
+  </div>
+</div>

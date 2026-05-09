@@ -1,0 +1,50 @@
+{% assign section = site.data.sections | where: "slug", page.section_slug | first %}
+
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12 flex flex-col gap-8">
+  <div class="max-w-3xl relative z-10">
+    <h2 class="font-display text-3xl font-black text-primary mb-4">Leadership Course</h2>
+    <p class="text-on-surface-variant mb-6 leading-relaxed">
+      {{ page.leadership_course.summary }}
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div class="bg-surface-container-high p-4 rounded-lg">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="material-symbols-outlined text-primary">schedule</span>
+          <p class="font-bold text-on-surface">Duration</p>
+        </div>
+        <p class="text-on-surface-variant text-sm">{{ page.leadership_course.duration }}</p>
+      </div>
+      
+      <div class="bg-surface-container-high p-4 rounded-lg">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="material-symbols-outlined text-primary">groups</span>
+          <p class="font-bold text-on-surface">Who is it for?</p>
+        </div>
+        <p class="text-on-surface-variant text-sm">{{ page.leadership_course.target_audience }}</p>
+      </div>
+    </div>
+
+    <h4 class="font-headline text-xl font-bold text-primary mb-2">What you'll learn</h4>
+    <ul class="list-disc list-inside text-on-surface-variant mb-6 space-y-2">
+      {% for outcome in page.leadership_course.learning_outcomes %}
+        <li>{{ outcome }}</li>
+      {% endfor %}
+    </ul>
+
+    <div class="bg-primary-container p-6 rounded-lg text-on-primary-container mb-6">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="material-symbols-outlined text-on-primary-container">info</span>
+        <p class="font-bold">How to register</p>
+      </div>
+      <p class="text-sm">{{ page.leadership_course.registration_info }}</p>
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="/sections/{{ page.section_slug }}/achievement-pathway" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+        <span class="material-symbols-outlined text-sm">arrow_back</span>
+        <span>Back to {{ section.name }} Pathway</span>
+      </a>
+    </div>
+  </div>
+</div>

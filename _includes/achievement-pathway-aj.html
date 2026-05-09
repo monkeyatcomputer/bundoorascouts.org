@@ -1,0 +1,60 @@
+{% assign section = site.data.sections | where: "slug", page.section_slug | first %}
+{% assign accent = section.colour | default: "#3f5e94" %}
+
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12 space-y-16">
+  
+  <!-- Requirements Bento Grid -->
+  <section>
+    <div class="mb-12 max-w-2xl">
+      <h2 class="text-3xl font-display font-black text-primary mb-4 tracking-tight">The Challenge Parameters</h2>
+      <p class="text-on-surface-variant text-lg leading-relaxed">
+        The {{ section.name }} Adventurous Journey is a test of your planning, leadership, and outdoor skills. It is an opportunity to explore new areas and challenge yourself.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {% for param in page.adventurous_journey.parameters %}
+        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center text-primary flex-shrink-0" style="background-color: {{ accent }}1a;">
+                <span class="material-symbols-outlined text-2xl" style="color: {{ accent }};">{{ param.icon }}</span>
+              </div>
+              <h3 class="text-xl font-bold text-primary">{{ param.title }}</h3>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed text-sm">{{ param.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Planning Guide Section -->
+  <section class="bg-surface-container-low rounded-3xl p-8 md:p-12 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 opacity-10" style="background-color: {{ accent }};"></div>
+    
+    <h2 class="text-3xl font-headline font-bold text-primary mb-12 relative z-10">Journey Planning Protocol</h2>
+    
+    <div class="space-y-8 relative z-10">
+      {% for step in page.adventurous_journey.planning_steps %}
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-full font-bold text-lg shadow-sm" style="color: {{ accent }};">
+            {{ step.number }}
+          </div>
+          <div class="bg-surface-container-lowest p-6 rounded-2xl flex-1 shadow-sm border border-outline-variant/10 border-l-4" style="border-left-color: {{ accent }};">
+            <h4 class="text-lg font-bold text-on-surface mb-2">{{ step.title }}</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">{{ step.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  
+  <!-- Back to Overview -->
+  <div class="text-center">
+    <a href="/sections/{{ page.section_slug }}/achievement-pathway" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+      <span class="material-symbols-outlined text-sm">arrow_back</span>
+      <span>Back to {{ section.name }} Pathway</span>
+    </a>
+  </div>
+</div>

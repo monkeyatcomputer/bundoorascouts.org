@@ -1,0 +1,42 @@
+- name: "Achievement Pathway"
+  url: "/sections/:section/achievement-pathway"
+  ap_page: "overview"
+  icon: "explore"
+
+- name: "Milestones"
+  url: "/sections/:section/milestones"
+  ap_page: "milestones"
+  icon: "flag"
+
+- name: "Outdoor Skills"
+  url: "/sections/:section/outdoor-skills"
+  ap_page: "outdoor-skills"
+  icon: "landscape"
+
+- name: "Special Interests"
+  url: "/sections/:section/special-interests"
+  ap_page: "special-interests"
+  icon: "star"
+
+- name: "Adventurous Journey"
+  url: "/sections/:section/adventurous-journey"
+  ap_page: "adventurous-journey"
+  icon: "map"
+  requires_aj: true
+
+- name: "Leadership Course"
+  url: "/sections/:section/leadership-course"
+  ap_page: "leadership-course"
+  icon: "groups"
+  requires_lc: true
+
+- name: "Personal Reflection"
+  url: "/sections/:section/personal-reflection"
+  ap_page: "personal-reflection"
+  icon: "self_improvement"
+  requires_pr: true
+
+- name: "Peak Award"
+  url: "/sections/:section/peak-award"
+  ap_page: "peak-award"
+  icon: "workspace_premium"
