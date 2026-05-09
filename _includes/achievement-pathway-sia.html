@@ -71,6 +71,7 @@
     </div>
   </section>
 
+  {% if section_sia.examples %}
   <!-- Example Projects -->
   <section class="bg-surface-container-low rounded-3xl p-8 md:p-12 relative overflow-hidden">
     <div class="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 opacity-10"
@@ -82,55 +83,22 @@
     </p>
 
     <div class="space-y-8 relative z-10">
-      <!-- Project 1 -->
-      <div class="flex flex-col md:flex-row gap-6 items-start">
-        <div
-          class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-full shadow-sm p-3 [&>svg]:w-full [&>svg]:h-full"
-          style="color: {{ accent }};">
-          {% include icons/sia-world.svg %}
+      {% for example in section_sia.examples %}
+      <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+        <div class="flex-shrink-0 w-16 h-auto [&>svg]:w-full [&>svg]:h-auto" style="color: {{ accent }};">
+          {% include icons/sia-{{ example.area }}.svg %}
         </div>
         <div
           class="bg-surface-container-lowest p-6 rounded-2xl flex-1 shadow-sm border border-outline-variant/10 border-l-4"
           style="border-left-color: {{ accent }};">
-          <h4 class="text-lg font-bold text-primary mb-2">Organise a Pack Clean Up</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed">Better World: Plan and lead a clean-up day at a
-            local park or around your hall.</p>
+          <h4 class="text-lg font-bold text-primary mb-2">{{ example.title }}</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">{{ example.description }}</p>
         </div>
       </div>
-
-      <!-- Project 2 -->
-      <div class="flex flex-col md:flex-row gap-6 items-start">
-        <div
-          class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-full shadow-sm p-3 [&>svg]:w-full [&>svg]:h-full"
-          style="color: {{ accent }};">
-          {% include icons/sia-environment.svg %}
-        </div>
-        <div
-          class="bg-surface-container-lowest p-6 rounded-2xl flex-1 shadow-sm border border-outline-variant/10 border-l-4"
-          style="border-left-color: {{ accent }};">
-          <h4 class="text-lg font-bold text-primary mb-2">Build a Bird Feeder</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed">Environment: Design and build a bird feeder and
-            observe the birds that visit.</p>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="flex flex-col md:flex-row gap-6 items-start">
-        <div
-          class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-full shadow-sm p-3 [&>svg]:w-full [&>svg]:h-full"
-          style="color: {{ accent }};">
-          {% include icons/sia-creative.svg %}
-        </div>
-        <div
-          class="bg-surface-container-lowest p-6 rounded-2xl flex-1 shadow-sm border border-outline-variant/10 border-l-4"
-          style="border-left-color: {{ accent }};">
-          <h4 class="text-lg font-bold text-primary mb-2">Learn a Magic Trick</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed">Creative Flare: Learn a set of magic tricks and
-            perform a show for your Pack.</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </section>
+  {% endif %}
 
   <!-- Back to Overview -->
   <div class="text-center">

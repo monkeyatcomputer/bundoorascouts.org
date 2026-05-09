@@ -16,27 +16,122 @@ joeys:
   areas_required: 2
   hours_per_project: 2
   sv_url: "https://scoutsvictoria.com.au/activities-events/special-interest-areas/"
+  examples:
+    - area: stem
+      title: "Straw Bridge"
+      description: "STEM & Innovation: Make a model bridge with straws and test its strength."
+    - area: environment
+      title: "Grow a Plant"
+      description: "Environment: Grow a plant from a seed and keep a diary of its growth."
+    - area: creative
+      title: "Puppet Show"
+      description: "Creative Flare: Make a puppet and put on a show for your Mob."
+    - area: growth
+      title: "Learn to Tie Laces"
+      description: "Growth & Development: Learn to tie your shoelaces or pack your own bag for camp."
+    - area: world
+      title: "Nursing Home Cards"
+      description: "Better World: Make a card for a local nursing home or a sick friend."
+    - area: sport
+      title: "Learn to Ride"
+      description: "Adventure & Sport: Learn to ride a bicycle or skip with a rope."
 
 cubs:
   projects_required: 6
   areas_required: 2
   hours_per_project: 4
   sv_url: "https://scoutsvictoria.com.au/activities-events/special-interest-areas/"
+  examples:
+    - area: stem
+      title: "Conduct an Experiment"
+      description: "STEM & Innovation: Conduct a science experiment and demonstrate it to your Pack."
+    - area: environment
+      title: "Build a Bird Feeder"
+      description: "Environment: Design and build a bird feeder and observe the birds that visit."
+    - area: creative
+      title: "Learn a Magic Trick"
+      description: "Creative Flare: Learn a set of magic tricks and perform a show for your Pack."
+    - area: growth
+      title: "Learn to Cook"
+      description: "Growth & Development: Learn to cook a 2-course meal for your family."
+    - area: world
+      title: "Organise a Pack Clean Up"
+      description: "Better World: Plan and lead a clean-up day at a local park or around your hall."
+    - area: sport
+      title: "Try a New Sport"
+      description: "Adventure & Sport: Try a new sport like archery or rock climbing and practice it for a term."
 
 scouts:
   projects_required: 6
   areas_required: 3
   hours_per_project: 8
   sv_url: "https://scoutsvictoria.com.au/activities-events/special-interest-areas/"
+  examples:
+    - area: stem
+      title: "Code a Game"
+      description: "STEM & Innovation: Learn to code a simple game or website."
+    - area: environment
+      title: "Reduce Hall Waste"
+      description: "Environment: Investigate and implement ways to reduce waste at your Scout hall."
+    - area: creative
+      title: "Create a Short Film"
+      description: "Creative Flare: Plan, shoot, and edit a short film about your Patrol."
+    - area: growth
+      title: "Camp Cooking"
+      description: "Growth & Development: Prepare and cook a meal for your Unit on a camp."
+    - area: world
+      title: "Organise a Unit Clean Up"
+      description: "Better World: Plan and lead a clean-up day at a local park or around your hall."
+    - area: sport
+      title: "Train for a Run"
+      description: "Adventure & Sport: Train for and complete a 5km run."
 
 venturers:
   projects_required: 6
   areas_required: 3
   hours_per_project: 12
   sv_url: "https://scoutsvictoria.com.au/activities-events/special-interest-areas/"
+  examples:
+    - area: stem
+      title: "Build a Robot"
+      description: "STEM & Innovation: Build and program a robot to complete a specific task."
+    - area: environment
+      title: "Tree Planting Day"
+      description: "Environment: Organize a tree planting day with a local environmental group."
+    - area: creative
+      title: "Original Music"
+      description: "Creative Flare: Write and perform an original piece of music or a short play."
+    - area: growth
+      title: "Get First Aid Certificate"
+      description: "Growth & Development: Gain a Senior First Aid certificate or learn to drive."
+    - area: world
+      title: "Volunteer Work"
+      description: "Better World: Volunteer regularly with a local charity or community organization."
+    - area: sport
+      title: "Lead a Hike"
+      description: "Adventure & Sport: Organize and lead a challenging hike or expedition for your Unit."
 
 rovers:
   projects_required: 6
   areas_required: 4
   hours_per_project: 18
   sv_url: "https://scoutsvictoria.com.au/activities-events/special-interest-areas/"
+  examples:
+    - area: stem
+      title: "Build Furniture"
+      description: "STEM & Innovation: Design and build a functional piece of furniture or equipment."
+    - area: environment
+      title: "Biodiversity Study"
+      description: "Environment: Conduct a detailed study on local biodiversity and present findings."
+    - area: creative
+      title: "Curate Exhibition"
+      description: "Creative Flare: Curate an art exhibition or publish a collection of stories/poems."
+    - area: growth
+      title: "Endurance Event"
+      description: "Growth & Development: Run a marathon or complete a multi-day endurance event."
+    - area: world
+      title: "Manage Fundraiser"
+      description: "Better World: Manage a large-scale community service project or fundraiser."
+    - area: sport
+      title: "Get Coaching Qualification"
+      description: "Adventure & Sport: Obtain a qualification as a sports coach or outdoor leader."

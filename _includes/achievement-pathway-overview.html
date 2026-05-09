@@ -129,8 +129,7 @@
 
         <!-- Badge Grid -->
         {% assign section_oas = site.data.oas[page.section_slug] %}
-        {% if section_oas %}
-        <div class="grid grid-cols-3 gap-4 mb-8 max-w-xl mx-auto">
+        <div class="grid grid-cols-3 gap-6 md:gap-12 mb-6 max-w-xl mx-auto">
           {% for skill in section_oas.core_skills %}
           {% assign filename = skill.name | downcase %}
           {% assign skill_stage = skill.stage | default: section_oas.stage_requirement %}
@@ -150,30 +149,6 @@
           </div>
           {% endfor %}
         </div>
-        {% else %}
-        <!-- Fallback to hardcoded grid if data not found -->
-        {% assign oas_colors = site.data.oas.stages %}
-        <div class="grid grid-cols-3 gap-4 mb-8 max-w-xl mx-auto">
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['8'] }};">{% include
-            icons/oas-camping.svg stage="8" %}</div>
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['5'] }};">{% include
-            icons/oas-bushcraft.svg stage="5" %}</div>
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['9'] }};">{% include
-            icons/oas-bushwalking.svg stage="9" %}</div>
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['6'] }};">{% include
-            icons/oas-alpine.svg stage="6" %}</div>
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['8'] }};">{% include
-            icons/oas-cycling.svg stage="8" %}</div>
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['4'] }};">{% include
-            icons/oas-vertical.svg stage="4" %}</div>
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['9'] }};">{% include
-            icons/oas-snorkeling.svg stage="9" %}</div>
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['6'] }};">{% include
-            icons/oas-paddling.svg stage="6" %}</div>
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['8'] }};">{% include
-            icons/oas-boating.svg stage="8" %}</div>
-        </div>
-        {% endif %}
 
         <div class="flex justify-center mt-8">
           <a href="{{ page.pathway.oas.url }}"
