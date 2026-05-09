@@ -6,7 +6,7 @@
     <p class="text-on-surface-variant mb-6 leading-relaxed">
       {{ page.leadership_course.summary }}
     </p>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
       <div class="bg-surface-container-high p-4 rounded-lg">
         <div class="flex items-center gap-3 mb-2">
@@ -15,7 +15,7 @@
         </div>
         <p class="text-on-surface-variant text-sm">{{ page.leadership_course.duration }}</p>
       </div>
-      
+
       <div class="bg-surface-container-high p-4 rounded-lg">
         <div class="flex items-center gap-3 mb-2">
           <span class="material-symbols-outlined text-primary">groups</span>
@@ -28,7 +28,7 @@
     <h4 class="font-headline text-xl font-bold text-primary mb-2">What you'll learn</h4>
     <ul class="list-disc list-inside text-on-surface-variant mb-6 space-y-2">
       {% for outcome in page.leadership_course.learning_outcomes %}
-        <li>{{ outcome }}</li>
+      <li>{{ outcome }}</li>
       {% endfor %}
     </ul>
 
@@ -41,7 +41,9 @@
     </div>
 
     <div class="text-center mt-8">
-      <a href="/sections/{{ page.section_slug }}/achievement-pathway#leadership-course" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+      <a href="/sections/{{ page.section_slug }}/achievement-pathway#leadership-course"
+        class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md"
+        style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
         <span class="material-symbols-outlined text-sm">arrow_back</span>
         <span>Back to {{ section.name }} Pathway</span>
       </a>
