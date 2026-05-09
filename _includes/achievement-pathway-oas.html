@@ -1,5 +1,7 @@
 {% assign section = site.data.sections | where: "slug", page.section_slug | first %}
 {% assign accent = section.colour | default: "#3f5e94" %}
+{% assign stage_str = page.oas.stage_requirement | append: "" %}
+{% assign stage_color = site.data.oas_stages[stage_str] | default: "#006649" %}
 
 <div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12">
   
@@ -37,15 +39,13 @@
       
       <!-- Core Skills -->
       {% for skill in page.oas.core_skills %}
-        {% assign icon = "explore" %}
-        {% if skill.name == "Bushwalking" %}{% assign icon = "hiking" %}
-        {% elsif skill.name == "Bushcraft" %}{% assign icon = "build" %}
-        {% elsif skill.name == "Camping" %}{% assign icon = "camping" %}
-        {% endif %}
-        
+        {% assign filename = skill.name | downcase %}
+        {% assign skill_stage = skill.stage | default: page.oas.stage_requirement %}
+        {% assign stage_str = skill_stage | append: "" %}
+        {% assign stage_color = site.data.oas_stages[stage_str] | default: "#006649" %}
         <div class="bg-surface-container-lowest p-6 rounded-xl border border-surface-container-highest/30 shadow-[0_8px_30px_rgba(38,38,97,0.03)] hover:-translate-y-1 transition-transform duration-300 group">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-            <span class="material-symbols-outlined text-primary text-2xl">{{ icon }}</span>
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
+            {% include icons/oas-{{ filename }}.svg stage=skill_stage %}
           </div>
           <span class="text-xs font-bold uppercase tracking-wider mb-2 block" style="color: {{ accent }};">Core Skill</span>
           <h3 class="font-headline text-xl font-bold text-on-surface mb-3">{{ skill.name }}</h3>
@@ -55,18 +55,13 @@
       
       <!-- Specialist Skills -->
       {% for skill in page.oas.specialist_skills %}
-        {% assign icon = "explore" %}
-        {% if skill.name == "Paddling" %}{% assign icon = "kayaking" %}
-        {% elsif skill.name == "Vertical" %}{% assign icon = "landscape" %}
-        {% elsif skill.name == "Boating" %}{% assign icon = "kayaking" %}
-        {% elsif skill.name == "Cycling" %}{% assign icon = "directions_bike" %}
-        {% elsif skill.name == "Alpine" %}{% assign icon = "ac_unit" %}
-        {% elsif skill.name == "Snorkeling" %}{% assign icon = "explore" %}
-        {% endif %}
-        
+        {% assign filename = skill.name | downcase %}
+        {% assign skill_stage = skill.stage | default: page.oas.stage_requirement %}
+        {% assign stage_str = skill_stage | append: "" %}
+        {% assign stage_color = site.data.oas_stages[stage_str] | default: "#006649" %}
         <div class="bg-surface-container-low p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300 group">
-          <div class="w-12 h-12 bg-tertiary/10 rounded-lg flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-tertiary text-2xl">{{ icon }}</span>
+          <div class="w-12 h-12 bg-tertiary/10 rounded-lg flex items-center justify-center mb-6 [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
+            {% include icons/oas-{{ filename }}.svg stage=skill_stage %}
           </div>
           <h3 class="font-headline text-xl font-bold text-on-surface mb-3">{{ skill.name }}</h3>
           <p class="font-body text-sm text-on-surface-variant leading-relaxed">{{ skill.description }}</p>
