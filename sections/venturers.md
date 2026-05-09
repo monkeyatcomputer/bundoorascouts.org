@@ -40,7 +40,7 @@ testimonials:
     source: "A Venturer Scout"
 badge_card:
   title: "The Achievement Pathway"
-  description: "Follow the path up the mountain! The Achievement Pathway is your personal progression through the program towards the Queen's Scout Award."
+  description: "Follow the path up the mountain! The Achievement Pathway is your personal progression through the program towards the King's Scout Award."
   url: "/sections/venturers/achievement-pathway"
   icon: "terrain"
   button_text: "Explore the Pathway"
