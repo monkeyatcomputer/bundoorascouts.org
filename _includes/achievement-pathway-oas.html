@@ -1,7 +1,8 @@
 {% assign section = site.data.sections | where: "slug", page.section_slug | first %}
 {% assign accent = section.colour | default: "#3f5e94" %}
-{% assign stage_str = page.oas.stage_requirement | append: "" %}
-{% assign stage_color = site.data.oas_stages[stage_str] | default: "#006649" %}
+{% assign section_oas = site.data.oas[page.section_slug] %}
+{% assign stage_str = section_oas.stage_requirement | append: "" %}
+{% assign stage_color = site.data.oas.stages[stage_str] | default: "#006649" %}
 
 <div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12">
   
@@ -13,15 +14,15 @@
       </div>
       <div class="relative z-10 md:w-2/3">
         <h2 class="font-display text-2xl md:text-3xl font-black text-primary mb-4 tracking-tight">
-          The Stage {{ page.oas.stage_requirement }} Core Requirement
+          The Stage {{ section_oas.stage_requirement }} Core Requirement
         </h2>
         <p class="font-body text-on-surface-variant leading-relaxed text-lg mb-6">
-          To achieve your Peak Award, you are required to reach at least <strong>Stage {{ page.oas.stage_requirement }}</strong> in all three core Outdoor Adventure Skills: Bushcraft, Bushwalking, and Camping.
+          To achieve your Peak Award, you are required to reach at least <strong>Stage {{ section_oas.stage_requirement }}</strong> in all three core Outdoor Adventure Skills: Bushcraft, Bushwalking, and Camping.
         </p>
         <p class="font-body text-on-surface-variant leading-relaxed mb-8">
-          Beyond Stage {{ page.oas.stage_requirement }}, you will focus on specializing in areas of your choosing, eventually leading activities and mentoring younger Scouts in these disciplines.
+          Beyond Stage {{ section_oas.stage_requirement }}, you will focus on specializing in areas of your choosing, eventually leading activities and mentoring younger Scouts in these disciplines.
         </p>
-        <a href="{{ page.oas.sv_url }}" target="_blank" class="inline-block bg-surface-container-highest text-on-surface px-6 py-3 rounded-lg font-medium hover:bg-surface-dim transition-colors shadow-[0_2px_8px_rgba(38,38,97,0.04)]">
+        <a href="{{ section_oas.sv_url }}" target="_blank" class="inline-block bg-surface-container-highest text-on-surface px-6 py-3 rounded-lg font-medium hover:bg-surface-dim transition-colors shadow-[0_2px_8px_rgba(38,38,97,0.04)]">
           View Full Requirements on Scouts Victoria
         </a>
       </div>
@@ -38,13 +39,13 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       
       <!-- Core Skills -->
-      {% for skill in page.oas.core_skills %}
+      {% for skill in section_oas.core_skills %}
         {% assign filename = skill.name | downcase %}
-        {% assign skill_stage = skill.stage | default: page.oas.stage_requirement %}
+        {% assign skill_stage = skill.stage | default: section_oas.stage_requirement %}
         {% assign stage_str = skill_stage | append: "" %}
-        {% assign stage_color = site.data.oas_stages[stage_str] | default: "#006649" %}
-        <div class="bg-surface-container-lowest p-6 rounded-xl border border-surface-container-highest/30 shadow-[0_8px_30px_rgba(38,38,97,0.03)] hover:-translate-y-1 transition-transform duration-300 group">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
+        {% assign stage_color = site.data.oas.stages[stage_str] | default: "#006649" %}
+        <div class="bg-surface-container-lowest p-6 rounded-xl border border-surface-container-highest/30 shadow-[0_4px_20px_rgba(38,38,97,0.05)] hover:shadow-[0_8px_30px_rgba(38,38,97,0.1)] transition-all duration-300 group text-center">
+          <div class="w-32 aspect-[3/2] mb-6 mx-auto transition-transform duration-300 group-hover:scale-110 filter drop-shadow-md [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
             {% include icons/oas-{{ filename }}.svg stage=skill_stage %}
           </div>
           <span class="text-xs font-bold uppercase tracking-wider mb-2 block" style="color: {{ accent }};">Core Skill</span>
@@ -54,13 +55,13 @@
       {% endfor %}
       
       <!-- Specialist Skills -->
-      {% for skill in page.oas.specialist_skills %}
+      {% for skill in section_oas.specialist_skills %}
         {% assign filename = skill.name | downcase %}
-        {% assign skill_stage = skill.stage | default: page.oas.stage_requirement %}
+        {% assign skill_stage = skill.stage | default: section_oas.stage_requirement %}
         {% assign stage_str = skill_stage | append: "" %}
-        {% assign stage_color = site.data.oas_stages[stage_str] | default: "#006649" %}
-        <div class="bg-surface-container-low p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300 group">
-          <div class="w-12 h-12 bg-tertiary/10 rounded-lg flex items-center justify-center mb-6 [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
+        {% assign stage_color = site.data.oas.stages[stage_str] | default: "#006649" %}
+        <div class="bg-surface-container-low p-6 rounded-xl hover:shadow-[0_8px_30px_rgba(38,38,97,0.1)] transition-all duration-300 group text-center">
+          <div class="w-32 aspect-[3/2] mb-6 mx-auto transition-transform duration-300 group-hover:scale-110 filter drop-shadow-md [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
             {% include icons/oas-{{ filename }}.svg stage=skill_stage %}
           </div>
           <h3 class="font-headline text-xl font-bold text-on-surface mb-3">{{ skill.name }}</h3>
