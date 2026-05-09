@@ -37,6 +37,12 @@ intro:
 testimonials:
   - quote: "Rovers is a great way to meet new people and have amazing experiences."
     source: "A Rover"
+badge_card:
+  title: "The Achievement Pathway"
+  description: "Follow the path up the mountain! The Achievement Pathway is your personal progression through the program towards the Baden-Powell Scout Award."
+  url: "/sections/rovers/achievement-pathway"
+  icon: "terrain"
+  button_text: "Explore the Pathway"
 ---
 
 {% include feature-grid.html features=page.features colour=page.colour %}
@@ -47,14 +53,14 @@ testimonials:
    paragraphs=page.intro.paragraphs 
    rotation=page.intro.rotation %}
 
+{% include badge-card.html %}
+
 {% include promise-law.html 
    colour=page.colour 
    motto=page.motto 
    award_title=page.award.title 
    award_name=page.award.name 
    award_description=page.award.description %}
-
-
 
 {% include testimonial-grid.html testimonials=page.testimonials colour=page.colour %}
 

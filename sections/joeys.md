@@ -39,6 +39,12 @@ testimonials:
     source: "A Joey Scout Parent"
   - quote: "A great place for your child to have fun and adventures. My child is thriving at Bundoora scouts and learning life skills. I highly recommend scouts."
     source: "Jyall, Joey Scout Leader"
+badge_card:
+  title: "The Achievement Pathway"
+  description: "Follow the path up the mountain! The Achievement Pathway is your personal progression through the program towards the Joey Scout Challenge Award."
+  url: "/sections/joeys/achievement-pathway"
+  icon: "terrain"
+  button_text: "Explore the Pathway"
 ---
 
 {% include feature-grid.html features=page.features colour=page.colour %}
@@ -48,6 +54,8 @@ testimonials:
    title=page.intro.title 
    paragraphs=page.intro.paragraphs 
    rotation=page.intro.rotation %}
+
+{% include badge-card.html %}
 
 {% include promise-law.html 
    colour=page.colour 

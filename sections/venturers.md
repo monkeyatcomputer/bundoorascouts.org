@@ -38,6 +38,12 @@ intro:
 testimonials:
   - quote: "Venturers is where things get real. We plan our own adventures, push our limits, and learn stuff that actually matters – all while having a laugh with mates who’ve got your back."
     source: "A Venturer Scout"
+badge_card:
+  title: "The Achievement Pathway"
+  description: "Follow the path up the mountain! The Achievement Pathway is your personal progression through the program towards the Queen's Scout Award."
+  url: "/sections/venturers/achievement-pathway"
+  icon: "terrain"
+  button_text: "Explore the Pathway"
 ---
 
 {% include feature-grid.html features=page.features colour=page.colour %}
@@ -48,14 +54,14 @@ testimonials:
    paragraphs=page.intro.paragraphs 
    rotation=page.intro.rotation %}
 
+{% include badge-card.html %}
+
 {% include promise-law.html 
    colour=page.colour 
    motto=page.motto 
    award_title=page.award.title 
    award_name=page.award.name 
    award_description=page.award.description %}
-
-
 
 {% include testimonial-grid.html testimonials=page.testimonials colour=page.colour %}
 

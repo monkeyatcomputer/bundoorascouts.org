@@ -1,0 +1,29 @@
+{% if page.badge_card %}
+<section class="py-4 bg-surface not-prose">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+    <div class="w-full bg-surface-container-low rounded-2xl shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+      
+      <!-- Background Images -->
+      <div class="absolute inset-0 z-0">
+        <!-- Sky / Gumtree (Lower z-index) -->
+        <div class="absolute inset-x-0 top-0 h-full bg-cover bg-top" style="background-image: url('/assets/images/gumtree-horiz-cropped-1.svg');"></div>
+        <!-- Mountains (Above gumtree) -->
+        <div class="absolute inset-x-0 top-5 h-full bg-cover bg-top" style="background-image: url('/assets/images/sections/mountain-horiz.svg');"></div>
+      </div>
+
+      <!-- Content Card (Framed to ensure contrast) -->
+      <div class="relative z-10 p-8 lg:p-10 bg-white/80 backdrop-blur-md rounded-xl text-center max-w-2xl mx-auto my-12 border border-outline-variant/10 shadow-sm">
+        <h3 class="font-display text-3xl font-black mb-2 text-primary">{{ page.badge_card.title }}</h3>
+        <p class="text-on-surface-variant text-lg mb-6 leading-relaxed">
+          {{ page.badge_card.description }}
+        </p>
+        <div class="flex justify-center">
+          <a href="{{ page.badge_card.url }}" class="text-white px-8 py-4 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2" style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }});">
+            <span>{{ page.badge_card.button_text | default: 'Learn More' }}</span> <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

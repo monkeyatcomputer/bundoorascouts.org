@@ -37,6 +37,12 @@ intro:
 testimonials:
   - quote: "Cub Scouts has been a fantastic experience for my son. He has learned so much and made great friends."
     source: "A Cub Scout Parent"
+badge_card:
+  title: "The Achievement Pathway"
+  description: "Follow the path up the mountain! The Achievement Pathway is your personal progression through the program towards the Grey Wolf Award."
+  url: "/sections/cubs/achievement-pathway"
+  icon: "terrain"
+  button_text: "Explore the Pathway"
 ---
 
 {% include feature-grid.html features=page.features colour=page.colour %}
@@ -47,14 +53,14 @@ testimonials:
    paragraphs=page.intro.paragraphs 
    rotation=page.intro.rotation %}
 
+{% include badge-card.html %}
+
 {% include promise-law.html 
    colour=page.colour 
    motto=page.motto 
    award_title=page.award.title 
    award_name=page.award.name 
    award_description=page.award.description %}
-
-
 
 {% include testimonial-grid.html testimonials=page.testimonials colour=page.colour %}
 
