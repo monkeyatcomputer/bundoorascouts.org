@@ -19,21 +19,19 @@ pathway:
     milestone_2: { label: "Assist", url: "https://scoutsvictoria.com.au/age-sections-adults/cub-scouts/cub-scout-program/program-essentials-milestones/" }
     milestone_3: { label: "Lead", url: "https://scoutsvictoria.com.au/age-sections-adults/cub-scouts/cub-scout-program/program-essentials-milestones/" }
   oas:
-    summary: "Complete Stage 3 in 3 Core OAS. 8 progressions total."
+    summary: "Outdoor Adventure Skills are the link between adventurous activities and the youth program. They enable youth members of all ages to access the basic skills for a range of activities, and progress through to high skill levels across nine broad activity areas."
     url: /sections/cubs/outdoor-skills
   sia:
-    summary: "Complete 6 activities across at least two areas, 4hrs each"
+    summary: "Special Interest Areas encourage Cub Scouts to try new things and pursue existing interests. Cub Scouts set their own goals in one of the six Special Interest Areas, enabling them to design a project that interests and challenges them personally."
     url: /sections/cubs/special-interests
   adventurous_journey:
-    enabled: true
-    summary: "Lead a 4hr journey"
+    summary: "The Adventurous Journey is a key part of your Milestone 3 and Peak Award in the Cubs section. It’s your chance to put your outdoor and leadership skills into action by planning and leading a real expedition - usually something like a bushwalk, paddle trip, or cycling journey over multiple days."
     url: /sections/cubs/adventurous-journey
   personal_reflection:
-    enabled: true
+    summary: "Reflect on your journey and growth with your peers before achieving the Peak Award. This is the final review of your achievements."
     url: /sections/cubs/personal-reflection
   leadership_course:
-    enabled: true
-    requirement: "Complete a Leadership Course (at least 1 day)"
+    summary: "Scouts Victoria offers comprehensive Personal Development Courses (PDCs) and leadership training designed to build confidence, resilience, and practical leadership skills."
     url: /sections/cubs/leadership-course
 ---
 

@@ -4,7 +4,7 @@ layout: default
 {% assign section = site.data.sections | where: "slug", page.section_slug | first %}
 <div class="achievement-pathway-shell">
   {% include achievement-pathway-hero.html section=section %}
-  <div class="ap-body max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 -mt-20 relative z-20 pb-20">
+  <div class="ap-body max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 mt-4 lg:-mt-20 relative z-auto lg:z-20 pb-20">
     {% include achievement-pathway-nav.html section=section %}
     <main class="lg:col-span-9">
       {{ content }}

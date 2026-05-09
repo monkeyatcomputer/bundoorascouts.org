@@ -1,18 +1,21 @@
 {% assign section = site.data.sections | where: "slug", page.section_slug | first %}
 {% assign accent = section.colour | default: "#3f5e94" %}
 
+{% assign section_sia = site.data.sia[page.section_slug] %}
+{% assign intro = site.data.sia.intro | default: page.intro %}
+
 <div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12 flex flex-col gap-16">
 
   <!-- Requirement Breakdown (Bento Grid) -->
   <section>
     <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
       <div class="flex-1">
-        <h2 class="font-display font-black text-3xl text-primary mb-2 tracking-tight">{{ section.name }} Requirements
-        </h2>
-        <p class="font-body text-lg text-on-surface-variant leading-relaxed">
-          Special Interest Areas encourage you to try new things and master skills you are passionate about. You set
-          your own goals and design projects that interest you.
+        <h2 class="font-display font-black text-3xl text-primary mb-2 tracking-tight">{{ intro.heading | default: 'Requirements' }}</h2>
+        {% for para in intro.paragraphs %}
+        <p class="font-body text-on-surface-variant leading-relaxed mb-4">
+          {{ para }}
         </p>
+        {% endfor %}
       </div>
 
       <div class="bg-surface-container-low p-6 rounded-lg shadow-sm border border-outline-variant/10 md:w-1/3">
@@ -23,18 +26,18 @@
           </div>
           <div>
             <h3 class="font-bold text-primary">The Goal</h3>
-            <p class="text-sm text-on-surface-variant">Complete {{ page.sia.projects_required }} Projects</p>
+            <p class="text-sm text-on-surface-variant">Complete {{ section_sia.projects_required }} Projects</p>
           </div>
         </div>
 
         <ul class="space-y-3 font-body text-sm text-on-surface-variant">
           <li class="flex items-start gap-2">
             <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
-            <span>Across at least <strong>{{ page.sia.areas_required }} different areas</strong></span>
+            <span>Across at least <strong>{{ section_sia.areas_required }} different areas</strong></span>
           </li>
           <li class="flex items-start gap-2">
             <span class="material-symbols-outlined text-secondary text-base">schedule</span>
-            <span>Minimum <strong>{{ page.sia.hours_per_project }} hours</strong> per project</span>
+            <span>Minimum <strong>{{ section_sia.hours_per_project }} hours</strong> per project</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="material-symbols-outlined text-secondary text-base">group</span>
@@ -51,7 +54,7 @@
       The 6 Areas</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {% for area in page.sia.areas %}
+      {% for area in site.data.sia.areas %}
       {% assign border_color = "bg-secondary-container" %}
       {% if forloop.index == 2 %}{% assign border_color = "bg-tertiary-container" %}
       {% elsif forloop.index == 3 %}{% assign border_color = "bg-primary-container" %}

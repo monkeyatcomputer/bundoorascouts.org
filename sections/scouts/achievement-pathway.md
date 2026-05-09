@@ -19,18 +19,19 @@ pathway:
     milestone_2: { label: "Assist", url: "https://scoutsvictoria.com.au/age-sections-adults/scouts/scout-program/" }
     milestone_3: { label: "Lead", url: "https://scoutsvictoria.com.au/age-sections-adults/scouts/scout-program/" }
   oas:
-    summary: "Complete Stage 5 in 3 Core OAS. 10 progressions total."
+    summary: "Outdoor Adventure Skills are the link between adventurous activities and the youth program. They enable youth members of all ages to access the basic skills for a range of activities, and progress through to high skill levels across nine broad activity areas."
     url: /sections/scouts/outdoor-skills
   sia:
-    summary: "Complete 6 projects across at least 3 areas, 8hrs each"
+    summary: "Special Interest Areas encourage Scouts to try new things and pursue existing interests. Scouts set their own goals in one of the six Special Interest Areas, enabling them to design a project that interests and challenges them personally."
     url: /sections/scouts/special-interests
   adventurous_journey:
-    summary: "Plan & lead 3-day, 2-night journey"
+    summary: "The Adventurous Journey is a key part of your Milestone 3 and Peak Award in the Scout section. It’s your chance to put your outdoor and leadership skills into action by planning and leading a real expedition - usually something like a bushwalk, paddle trip, or cycling journey over multiple days."
     url: /sections/scouts/adventurous-journey
   personal_reflection:
+    summary: "Reflect on your journey and growth with your peers before achieving the Peak Award. This is the final review of your achievements."
     url: /sections/scouts/personal-reflection
   leadership_course:
-    requirement: "Complete a Leadership Course (at least a weekend)"
+    summary: "Scouts Victoria offers comprehensive Personal Development Courses (PDCs) and leadership training designed to build confidence, resilience, and practical leadership skills."
     url: /sections/scouts/leadership-course
 ---
 

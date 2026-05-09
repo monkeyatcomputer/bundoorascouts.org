@@ -1,9 +1,45 @@
 {% assign section = include.section %}
+{% assign active_item = site.data.achievement_pathway_nav | where: "ap_page", page.ap_page | first %}
 
-<aside class="lg:col-span-3">
-  <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10 flex flex-col gap-6 sticky top-24">
+<!-- Mobile Drawer (Fixed at bottom) -->
+<div id="pathway-mobile-nav" class="lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[110] w-[calc(100%-2rem)] max-w-sm transition-all duration-500 transform opacity-0 translate-y-10 pointer-events-none">
+  <div class="bg-surface-container-low rounded-2xl border border-outline-variant/20 shadow-xl">
+    <details class="group">
+      <summary class="flex items-center justify-between py-2 px-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary">{{ active_item.icon | default: 'menu' }}</span>
+          <span class="font-bold text-primary">{{ active_item.name | default: 'Pathway Menu' }}</span>
+        </div>
+        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_less</span>
+      </summary>
+      
+      <nav class="flex flex-col gap-1 p-2 border-t border-outline-variant/10 max-h-[50vh] overflow-y-auto">
+        {% for item in site.data.achievement_pathway_nav %}
+          <!-- Skip items that don't apply to Joeys -->
+          {% if item.requires_aj and page.section_slug == 'joeys' %}{% continue %}{% endif %}
+          {% if item.requires_pr and page.section_slug == 'joeys' %}{% continue %}{% endif %}
+          {% if item.requires_lc and page.section_slug == 'joeys' %}{% continue %}{% endif %}
+          
+          {% assign is_active = false %}
+          {% if page.ap_page == item.ap_page %}
+            {% assign is_active = true %}
+          {% endif %}
+          
+          {% assign url = item.url | replace: ':section', page.section_slug %}
+          
+          <a href="{{ url }}" class="flex items-center gap-3 py-1.5 px-3 rounded-lg font-medium {% if is_active %}bg-secondary-container text-on-secondary-container{% else %}text-on-surface-variant hover:bg-surface-container-high{% endif %}">
+            <span class="material-symbols-outlined">{{ item.icon }}</span>
+            <span class="text-label-lg">{{ item.name }}</span>
+          </a>
+        {% endfor %}
+      </nav>
+    </details>
+  </div>
+</div>
 
-    
+<!-- Desktop Sidebar -->
+<aside class="hidden lg:block lg:col-span-3">
+  <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10 flex flex-col sticky top-24">
     <!-- Navigation Links -->
     <nav class="flex flex-col gap-2">
       {% for item in site.data.achievement_pathway_nav %}
@@ -27,3 +63,21 @@
     </nav>
   </div>
 </aside>
+
+<script>
+  (function() {
+    const nav = document.getElementById('pathway-mobile-nav');
+    if (!nav) return;
+
+    function handleScroll() {
+      if (window.scrollY > 200) {
+        nav.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+      } else {
+        nav.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  })();
+</script>

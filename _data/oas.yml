@@ -9,10 +9,17 @@ stages:
   "8": "#212d65"
   "9": "#04223f"
 
+intro:
+  heading: "About the Skills"
+  paragraphs:
+    - "The Outdoor Adventure Skills framework promotes exploration of, and progression through key outdoor pursuits. The Outdoor Adventure Skills reinforce what Scouting is well known for and compliments other personal progression opportunities provided by Scouting."
+    - "Scouts have the opportunity to continuously build on these skills throughout their Scouting journey, starting with the Core foundation skills all the way to the Specialist skills."
+
 joeys:
   stage_requirement: 1
   progressions_required: 3
-  sv_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/"
+  sv_oas_skills_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/"
+  sv_oas_overview_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/what-are-outdoor-adventure-skills/"
   core_skills:
     - { name: "Camping", stage: 1, description: "Campcraft, hygiene, cooking, and shelter management in remote environments." }
     - { name: "Bushcraft", stage: 1, description: "Pioneering, survival skills, fire lighting, and minimal impact practices." }
@@ -28,7 +35,8 @@ joeys:
 cubs:
   stage_requirement: 3
   progressions_required: 8
-  sv_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/"
+  sv_oas_skills_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/"
+  sv_oas_overview_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/what-are-outdoor-adventure-skills/"
   core_skills:
     - { name: "Camping", stage: 3, description: "Campcraft, hygiene, cooking, and shelter management in remote environments." }
     - { name: "Bushcraft", stage: 3, description: "Pioneering, survival skills, fire lighting, and minimal impact practices." }
@@ -44,7 +52,8 @@ cubs:
 scouts:
   stage_requirement: 5
   progressions_required: 10
-  sv_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/"
+  sv_oas_skills_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/"
+  sv_oas_overview_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/what-are-outdoor-adventure-skills/"
   core_skills:
     - { name: "Camping", stage: 5, description: "Campcraft, hygiene, cooking, and shelter management in remote environments." }
     - { name: "Bushcraft", stage: 5, description: "Pioneering, survival skills, fire lighting, and minimal impact practices." }
@@ -60,7 +69,8 @@ scouts:
 venturers:
   stage_requirement: 5
   progressions_required: 12
-  sv_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/"
+  sv_oas_skills_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/"
+  sv_oas_overview_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/what-are-outdoor-adventure-skills/"
   core_skills:
     - { name: "Camping", stage: 6, description: "Campcraft, hygiene, cooking, and shelter management in remote environments." }
     - { name: "Bushcraft", stage: 5, description: "Pioneering, survival skills, fire lighting, and minimal impact practices." }
@@ -76,7 +86,8 @@ venturers:
 rovers:
   stage_requirement: 5
   progressions_required: 14
-  sv_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/"
+  sv_oas_skills_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/"
+  sv_oas_overview_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/what-are-outdoor-adventure-skills/"
   core_skills:
     - { name: "Camping", stage: 8, description: "Campcraft, hygiene, cooking, and shelter management in remote environments." }
     - { name: "Bushcraft", stage: 5, description: "Pioneering, survival skills, fire lighting, and minimal impact practices." }

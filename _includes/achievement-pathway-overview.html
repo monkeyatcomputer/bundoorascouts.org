@@ -9,14 +9,19 @@
     <img src="/assets/images/sections/mountain-bg.svg" alt="" class="w-full h-full object-cover" />
   </div>
 
-  <!-- Vertical Connecting Line in the middle (Wavy & Dashed) -->
+  <!-- Vertical Connecting Line in the middle (Wavy & Dashed for Desktop) -->
   <svg class="absolute top-[200px] left-1/2 w-24 h-[calc(100%-200px)] -translate-x-1/2 z-0 hidden lg:block"
     viewBox="0 0 100 1000" preserveAspectRatio="none">
     <path d="M 50,0 Q 20,100 50,200 T 50,400 T 50,600 T 50,800 T 50,1000" fill="none"
       stroke="{{ accent | default: '#3f5e94' }}" stroke-width="6" stroke-dasharray="6, 6" />
   </svg>
 
-  <div class="flex flex-col items-center space-y-12 relative z-10">
+  <!-- Vertical Connecting Line in the middle (Straight & Dashed for Mobile) -->
+  <div class="absolute top-[200px] bottom-20 left-1/2 -translate-x-1/2 border-l-4 border-dashed lg:hidden"
+    style="border-color: {{ accent | default: '#3f5e94' }};">
+  </div>
+
+  <div class="flex flex-col items-center space-y-6 lg:space-y-12 relative z-10">
 
     <!-- Header Card: The Pathway to the Peak -->
     <div
@@ -38,7 +43,7 @@
 
     <!-- Pill 1: Foundation -->
     <div
-      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
       Foundation
     </div>
 
@@ -49,7 +54,7 @@
       <div class="relative z-10">
         <h2 class="font-display text-3xl font-black text-primary mt-1 mb-8 tracking-tight">Milestones</h2>
 
-        <div class="flex flex-col md:flex-row items-start justify-evenly gap-6 relative min-h-[150px]">
+        <div class="flex flex-col md:flex-row items-center md:items-start justify-evenly gap-6 relative min-h-[150px]">
           <!-- Milestone 1 -->
           <div class="relative z-10 flex flex-col items-center gap-4 px-4">
             <div class="w-34 h-34 flex items-center justify-center">
@@ -99,7 +104,7 @@
 
     <!-- Pill 2: Core Skills -->
     <div
-      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
       Core Skills
     </div>
 
@@ -118,46 +123,56 @@
       <div class="max-w-3xl relative z-10">
         <h3 class="font-headline text-2xl font-black text-primary mt-1 mb-4">Outdoor Adventure Skills</h3>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          {{ page.pathway.oas.summary | default: 'Master skills in Camping, Bushcraft, and Bushwalking. Progress through 9 stages to build your expertise.' }}
+          {{ page.pathway.oas.summary | default: 'Master skills in Camping, Bushcraft, and Bushwalking. Progress through
+          9 stages to build your expertise.' }}
         </p>
-        
+
         <!-- Badge Grid -->
         {% assign section_oas = site.data.oas[page.section_slug] %}
         {% if section_oas %}
-          <div class="grid grid-cols-3 gap-8 mb-8 max-w-lg mx-auto">
-            {% for skill in section_oas.core_skills %}
-              {% assign filename = skill.name | downcase %}
-              {% assign skill_stage = skill.stage | default: section_oas.stage_requirement %}
-              {% assign stage_str = skill_stage | append: "" %}
-              {% assign stage_color = site.data.oas.stages[stage_str] | default: "#006649" %}
-              <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
-                {% include icons/oas-{{ filename }}.svg stage=skill_stage %}
-              </div>
-            {% endfor %}
-            {% for skill in section_oas.specialist_skills %}
-              {% assign filename = skill.name | downcase %}
-              {% assign skill_stage = skill.stage | default: section_oas.stage_requirement %}
-              {% assign stage_str = skill_stage | append: "" %}
-              {% assign stage_color = site.data.oas.stages[stage_str] | default: "#006649" %}
-              <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
-                {% include icons/oas-{{ filename }}.svg stage=skill_stage %}
-              </div>
-            {% endfor %}
+        <div class="grid grid-cols-3 gap-4 mb-8 max-w-xl mx-auto">
+          {% for skill in section_oas.core_skills %}
+          {% assign filename = skill.name | downcase %}
+          {% assign skill_stage = skill.stage | default: section_oas.stage_requirement %}
+          {% assign stage_str = skill_stage | append: "" %}
+          {% assign stage_color = site.data.oas.stages[stage_str] | default: "#006649" %}
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
+            {% include icons/oas-{{ filename }}.svg stage=skill_stage %}
           </div>
+          {% endfor %}
+          {% for skill in section_oas.specialist_skills %}
+          {% assign filename = skill.name | downcase %}
+          {% assign skill_stage = skill.stage | default: section_oas.stage_requirement %}
+          {% assign stage_str = skill_stage | append: "" %}
+          {% assign stage_color = site.data.oas.stages[stage_str] | default: "#006649" %}
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
+            {% include icons/oas-{{ filename }}.svg stage=skill_stage %}
+          </div>
+          {% endfor %}
+        </div>
         {% else %}
-          <!-- Fallback to hardcoded grid if data not found -->
-          {% assign oas_colors = site.data.oas.stages %}
-          <div class="grid grid-cols-3 gap-8 mb-8 max-w-lg mx-auto">
-            <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['8'] }};">{% include icons/oas-camping.svg stage="8" %}</div>
-            <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['5'] }};">{% include icons/oas-bushcraft.svg stage="5" %}</div>
-            <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['9'] }};">{% include icons/oas-bushwalking.svg stage="9" %}</div>
-            <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['6'] }};">{% include icons/oas-alpine.svg stage="6" %}</div>
-            <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['8'] }};">{% include icons/oas-cycling.svg stage="8" %}</div>
-            <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['4'] }};">{% include icons/oas-vertical.svg stage="4" %}</div>
-            <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['9'] }};">{% include icons/oas-snorkeling.svg stage="9" %}</div>
-            <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['6'] }};">{% include icons/oas-paddling.svg stage="6" %}</div>
-            <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['8'] }};">{% include icons/oas-boating.svg stage="8" %}</div>
-          </div>
+        <!-- Fallback to hardcoded grid if data not found -->
+        {% assign oas_colors = site.data.oas.stages %}
+        <div class="grid grid-cols-3 gap-4 mb-8 max-w-xl mx-auto">
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['8'] }};">{% include
+            icons/oas-camping.svg stage="8" %}</div>
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['5'] }};">{% include
+            icons/oas-bushcraft.svg stage="5" %}</div>
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['9'] }};">{% include
+            icons/oas-bushwalking.svg stage="9" %}</div>
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['6'] }};">{% include
+            icons/oas-alpine.svg stage="6" %}</div>
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['8'] }};">{% include
+            icons/oas-cycling.svg stage="8" %}</div>
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['4'] }};">{% include
+            icons/oas-vertical.svg stage="4" %}</div>
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['9'] }};">{% include
+            icons/oas-snorkeling.svg stage="9" %}</div>
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['6'] }};">{% include
+            icons/oas-paddling.svg stage="6" %}</div>
+          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ oas_colors['8'] }};">{% include
+            icons/oas-boating.svg stage="8" %}</div>
+        </div>
         {% endif %}
 
         <div class="flex justify-center mt-8">
@@ -172,7 +187,7 @@
 
     <!-- Pill 3: Personal Passion -->
     <div
-      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
       Personal Passion
     </div>
 
@@ -191,9 +206,16 @@
       <div class="max-w-3xl relative z-10">
         <h3 class="font-headline text-2xl font-black text-primary mt-1 mb-4">Special Interest Areas</h3>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          {{ page.pathway.sia.summary | default: 'Design and complete projects in 6 different areas of interest. Set
-          your own goals and challenge yourself.' }}
+
+          {{ page.pathway.sia.summary}}
         </p>
+
+        <div class="flex justify-center mb-8" id="sia-logo-container">
+          <div class="w-48 h-auto [&>svg]:w-full [&>svg]:h-auto" style="color: {{ accent }};">
+            {% include icons/sia-all.svg %}
+          </div>
+        </div>
+
         <div class="flex justify-center mt-8">
           <a href="{{ page.pathway.sia.url }}"
             class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
@@ -207,7 +229,7 @@
     {% if page.pathway.adventurous_journey %}
     <!-- Pill 4: The Challenge -->
     <div
-      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
       The Challenge
     </div>
 
@@ -230,8 +252,7 @@
           </div>
         </div>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          {{ page.pathway.adventurous_journey.summary | default: 'Plan and lead a journey to demonstrate your leadership
-          and outdoor skills. This is a major test of your abilities.' }}
+          {{ page.pathway.adventurous_journey.summary }}
         </p>
         <div class="flex justify-center mt-8">
           <a href="{{ page.pathway.adventurous_journey.url }}"
@@ -247,7 +268,7 @@
     {% if page.pathway.leadership_course %}
     <!-- Pill 5: Skill Up -->
     <div
-      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
       Skill Up
     </div>
 
@@ -266,8 +287,7 @@
       <div class="max-w-3xl relative z-10">
         <h3 class="font-headline text-2xl font-black text-primary mt-1 mb-4">Leadership or Personal Development</h3>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          Complete a course to develop your leadership skills or personal growth. This is a key requirement for the Peak
-          Award.
+          {{ page.pathway.leadership_course.summary }}
         </p>
         <div class="flex justify-center mt-8">
           <a href="/sections/{{ page.section_slug }}/leadership-course"
@@ -283,7 +303,7 @@
     {% if page.pathway.personal_reflection %}
     <!-- Pill 6: Review -->
     <div
-      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
       Review
     </div>
 
@@ -306,8 +326,7 @@
           </div>
         </div>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          Reflect on your journey and growth with your peers before achieving the Peak Award. This is the final review
-          of your achievements.
+          {{ page.pathway.personal_reflection.summary }}
         </p>
         <div class="flex justify-center mt-8">
           <a href="{{ page.pathway.personal_reflection.url }}"
@@ -322,7 +341,7 @@
 
     <!-- Pill 7: The Pinnacle -->
     <div
-      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
       The Pinnacle
     </div>
 
@@ -370,7 +389,7 @@
     {% if page.section_slug == 'rovers' %}
     <!-- Pill 8: Next Steps -->
     <div
-      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
       Next Steps
     </div>
 
@@ -459,7 +478,7 @@
         <a href="/sections/{{ prev_slug }}/achievement-pathway"
           class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 hover:bg-primary-dim transition-colors border-r border-white/20">
           <span class="material-symbols-outlined text-xs">arrow_back</span>
-          <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5">
+          <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5 flex-shrink-0">
             <img src="/assets/images/{{ prev_logo }}" alt="{{ prev_name }}" class="w-full h-full object-contain" />
           </div>
           <span>{{ prev_name }} Pathway</span>
@@ -469,7 +488,7 @@
         <a href="/sections/{{ next_slug }}/achievement-pathway"
           class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 hover:bg-primary-dim transition-colors">
           <span>{{ next_name }} Pathway</span>
-          <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5">
+          <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5 flex-shrink-0">
             <img src="/assets/images/{{ next_logo }}" alt="{{ next_name }}" class="w-full h-full object-contain" />
           </div>
           <span class="material-symbols-outlined text-xs">arrow_forward</span>
@@ -481,7 +500,7 @@
       <a href="/sections/{{ prev_slug }}/achievement-pathway"
         class="bg-primary hover:bg-primary-dim text-white text-xs font-bold px-6 py-2.5 rounded-full flex items-center justify-center shadow-md gap-2 transition-colors">
         <span class="material-symbols-outlined text-xs">arrow_back</span>
-        <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5">
+        <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5 flex-shrink-0">
           <img src="/assets/images/{{ prev_logo }}" alt="{{ prev_name }}" class="w-full h-full object-contain" />
         </div>
         <span>{{ prev_name }} Pathway</span>
@@ -491,7 +510,7 @@
       <a href="/sections/{{ next_slug }}/achievement-pathway"
         class="bg-primary hover:bg-primary-dim text-white text-xs font-bold px-6 py-2.5 rounded-full flex items-center justify-center shadow-md gap-2 transition-colors">
         <span>{{ next_name }} Pathway</span>
-        <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5">
+        <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5 flex-shrink-0">
           <img src="/assets/images/{{ next_logo }}" alt="{{ next_name }}" class="w-full h-full object-contain" />
         </div>
         <span class="material-symbols-outlined text-xs">arrow_forward</span>
