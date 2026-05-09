@@ -10,7 +10,8 @@
   <section>
     <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
       <div class="flex-1">
-        <h2 class="font-display font-black text-3xl text-primary mb-2 tracking-tight">{{ intro.heading | default: 'Requirements' }}</h2>
+        <h2 class="font-display font-black text-3xl text-primary mb-2 tracking-tight">{{ intro.heading | default:
+          'Requirements' }}</h2>
         {% for para in intro.paragraphs %}
         <p class="font-body text-on-surface-variant leading-relaxed mb-4">
           {{ para }}
@@ -51,23 +52,15 @@
   <!-- The 6 Areas -->
   <section>
     <h2 class="font-display font-black text-3xl text-primary mb-8 tracking-tight border-b border-surface-variant pb-4">
-      The 6 Areas</h2>
+      The Six Areas</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for area in site.data.sia.areas %}
-      {% assign border_color = "bg-secondary-container" %}
-      {% if forloop.index == 2 %}{% assign border_color = "bg-tertiary-container" %}
-      {% elsif forloop.index == 3 %}{% assign border_color = "bg-primary-container" %}
-      {% elsif forloop.index == 4 %}{% assign border_color = "bg-surface-tint" %}
-      {% elsif forloop.index == 5 %}{% assign border_color = "bg-secondary" %}
-      {% elsif forloop.index == 6 %}{% assign border_color = "bg-outline" %}
-      {% endif %}
-
       <div
         class="group relative bg-surface-container-lowest p-6 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_20px_40px_rgba(38,38,97,0.08)] hover:-translate-y-1 border border-outline-variant/10">
-        <div class="absolute top-0 left-0 w-1 h-full {{ border_color }}"></div>
-        <div class="mb-4">
-          <span class="material-symbols-outlined text-4xl text-primary">{{ area.icon }}</span>
+        <div class="absolute top-0 left-0 w-1 h-full" style="background-color: {{ accent }};"></div>
+        <div class="mb-4 w-20 h-auto [&>svg]:w-full [&>svg]:h-auto" style="color: {{ accent }};">
+          {% include icons/sia-{{ area.slug }}.svg %}
         </div>
         <h3 class="font-headline font-bold text-xl text-primary mb-2">{{ area.name }}</h3>
         <p class="font-body text-sm text-on-surface-variant leading-relaxed">
@@ -92,9 +85,9 @@
       <!-- Project 1 -->
       <div class="flex flex-col md:flex-row gap-6 items-start">
         <div
-          class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-full font-bold text-lg shadow-sm"
+          class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-full shadow-sm p-3 [&>svg]:w-full [&>svg]:h-full"
           style="color: {{ accent }};">
-          <span class="material-symbols-outlined">public</span>
+          {% include icons/sia-world.svg %}
         </div>
         <div
           class="bg-surface-container-lowest p-6 rounded-2xl flex-1 shadow-sm border border-outline-variant/10 border-l-4"
@@ -108,9 +101,9 @@
       <!-- Project 2 -->
       <div class="flex flex-col md:flex-row gap-6 items-start">
         <div
-          class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-full font-bold text-lg shadow-sm"
+          class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-full shadow-sm p-3 [&>svg]:w-full [&>svg]:h-full"
           style="color: {{ accent }};">
-          <span class="material-symbols-outlined">forest</span>
+          {% include icons/sia-environment.svg %}
         </div>
         <div
           class="bg-surface-container-lowest p-6 rounded-2xl flex-1 shadow-sm border border-outline-variant/10 border-l-4"
@@ -124,9 +117,9 @@
       <!-- Project 3 -->
       <div class="flex flex-col md:flex-row gap-6 items-start">
         <div
-          class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-full font-bold text-lg shadow-sm"
+          class="flex-shrink-0 w-12 h-12 bg-surface flex items-center justify-center rounded-full shadow-sm p-3 [&>svg]:w-full [&>svg]:h-full"
           style="color: {{ accent }};">
-          <span class="material-symbols-outlined">brush</span>
+          {% include icons/sia-creative.svg %}
         </div>
         <div
           class="bg-surface-container-lowest p-6 rounded-2xl flex-1 shadow-sm border border-outline-variant/10 border-l-4"
