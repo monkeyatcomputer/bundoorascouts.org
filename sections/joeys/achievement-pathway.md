@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Achievement Pathway"
 permalink: /sections/joeys/achievement-pathway
-description: "Follow the path up the mountain — the Achievement Pathway is your personal progression through the Joey Scout program."
+description: "Follow the path up the mountain – the Achievement Pathway is your personal progression through the Joey Scout program."
 section_slug: joeys
 age_range: "5–8"
 tagline: "Your journey begins here."

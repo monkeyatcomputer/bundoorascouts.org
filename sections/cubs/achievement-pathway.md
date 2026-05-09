@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Achievement Pathway"
 permalink: /sections/cubs/achievement-pathway
-description: "Follow the path up the mountain — the Achievement Pathway is your personal progression through the Cub Scout program."
+description: "Follow the path up the mountain – the Achievement Pathway is your personal progression through the Cub Scout program."
 section_slug: cubs
 age_range: "8–11"
 tagline: "Your journey up the mountain."

@@ -10,8 +10,8 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
     {% for item in page.milestones.items %}
       <div class="bg-surface-container-high p-6 rounded-xl text-center flex flex-col items-center">
-        <div class="w-20 h-20 mb-4 bg-surface-container-low rounded-full flex items-center justify-center shadow-sm overflow-hidden">
-          <img src="{{ item.image }}" alt="{{ item.name }}" class="w-full h-full object-contain" />
+        <div class="w-34 h-34 mb-4 flex items-center justify-center">
+          <img src="{{ item.image }}" alt="{{ item.name }}" class="w-full h-full object-contain drop-shadow-sm" />
         </div>
         <h3 class="font-headline text-xl font-bold mb-2">{{ item.name }}</h3>
         <p class="text-sm text-on-surface-variant">Focuses on <b>{{ item.focus }}</b>. {{ item.description }}</p>
@@ -22,7 +22,7 @@
 
 <!-- Back to Overview -->
 <div class="text-center mt-8">
-  <a href="/sections/{{ page.section_slug }}/achievement-pathway" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+  <a href="/sections/{{ page.section_slug }}/achievement-pathway#milestones" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
     <span class="material-symbols-outlined text-sm">arrow_back</span>
     <span>Back to {{ section.name }} Pathway</span>
   </a>

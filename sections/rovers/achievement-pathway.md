@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Achievement Pathway"
 permalink: /sections/rovers/achievement-pathway
-description: "Follow the path up the mountain — the Achievement Pathway is your personal progression through the Rover program."
+description: "Follow the path up the mountain – the Achievement Pathway is your personal progression through the Rover program."
 section_slug: rovers
 age_range: "18–25"
 tagline: "Service, adventure, fellowship."

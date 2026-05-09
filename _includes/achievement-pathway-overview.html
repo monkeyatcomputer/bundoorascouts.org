@@ -3,80 +3,82 @@
 
 <!-- Vertical Journey Timeline (Centered) -->
 <div class="relative p-8 rounded-2xl overflow-hidden">
-  
+
   <!-- Viewport Background -->
   <div class="absolute inset-0 z-0 pointer-events-none">
     <img src="/assets/images/sections/mountain-bg.svg" alt="" class="w-full h-full object-cover" />
   </div>
 
   <!-- Vertical Connecting Line in the middle (Wavy & Dashed) -->
-  <svg class="absolute top-[200px] left-1/2 w-24 h-[calc(100%-200px)] -translate-x-1/2 z-0 hidden lg:block" viewBox="0 0 100 1000" preserveAspectRatio="none">
-    <path d="M 50,0 Q 20,100 50,200 T 50,400 T 50,600 T 50,800 T 50,1000" fill="none" stroke="{{ accent | default: '#3f5e94' }}" stroke-width="6" stroke-dasharray="6, 6" />
+  <svg class="absolute top-[200px] left-1/2 w-24 h-[calc(100%-200px)] -translate-x-1/2 z-0 hidden lg:block"
+    viewBox="0 0 100 1000" preserveAspectRatio="none">
+    <path d="M 50,0 Q 20,100 50,200 T 50,400 T 50,600 T 50,800 T 50,1000" fill="none"
+      stroke="{{ accent | default: '#3f5e94' }}" stroke-width="6" stroke-dasharray="6, 6" />
   </svg>
 
   <div class="flex flex-col items-center space-y-12 relative z-10">
-    
+
     <!-- Header Card: The Pathway to the Peak -->
-    <div class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow text-center group">
-      <div class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center" style="color: {{ accent }};">
+    <div
+      class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow text-center group">
+      <div
+        class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center"
+        style="color: {{ accent }};">
         <span class="material-symbols-outlined" style="font-size: 14rem;">terrain</span>
       </div>
       <div class="relative z-10">
-        <h1 class="font-display text-4xl lg:text-5xl font-black text-primary mb-4 tracking-tight">The Pathway to the Peak</h1>
+        <h1 class="font-display text-4xl lg:text-5xl font-black text-primary mb-4 tracking-tight">The Pathway to the
+          Peak</h1>
         <p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl mx-auto">
-          Map your own adventure. Track your progress, set your own goals, and challenge yourself as you climb towards the peak award.
+          Map your own adventure. Track your progress, set your own goals, and challenge yourself as you climb towards
+          the peak award.
         </p>
       </div>
     </div>
 
     <!-- Pill 1: Foundation -->
-    <div class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+    <div
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
       Foundation
     </div>
 
     <!-- Station 1: Milestones (Foundation) -->
-    <div class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      
+    <div id="milestones"
+      class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+
       <div class="relative z-10">
         <h2 class="font-display text-3xl font-black text-primary mt-1 mb-8 tracking-tight">Milestones</h2>
-        
-        <div class="flex flex-col md:flex-row items-start justify-between gap-6 relative min-h-[150px]">
+
+        <div class="flex flex-col md:flex-row items-start justify-evenly gap-6 relative min-h-[150px]">
           <!-- Milestone 1 -->
           <div class="relative z-10 flex flex-col items-center gap-4 px-4">
-            <div class="w-20 h-20 rounded-full bg-surface-container-high text-outline flex items-center justify-center shadow-sm border-4 border-surface-container-low overflow-hidden">
-              {% if page.section_slug == 'cubs' %}
-                <img src="/assets/images/sections/milestone-1-cubs.svg" alt="Milestone 1" class="w-full h-full object-contain" />
-              {% else %}
-                <span class="font-bold text-xl">1</span>
-              {% endif %}
+            <div class="w-34 h-34 flex items-center justify-center">
+              <img src="/assets/images/sections/milestone-1-{{ page.section_slug }}.svg" alt="Milestone 1"
+                class="w-full h-full object-contain drop-shadow-sm" />
             </div>
             <div class="text-center bg-surface-container-low px-3 py-1.5 rounded-lg shadow-sm">
-              <p class="font-bold text-on-surface">{{ page.pathway.milestones.milestone_1.label | default: 'Participate' }}</p>
+              <p class="font-bold text-on-surface">{{ page.pathway.milestones.milestone_1.label | default: 'Participate'
+                }}</p>
             </div>
           </div>
-          
+
           <!-- Milestone 2 -->
           <div class="relative z-10 flex flex-col items-center gap-4 px-4">
-            <div class="w-20 h-20 rounded-full bg-surface-container-high text-outline flex items-center justify-center shadow-sm border-4 border-surface-container-low overflow-hidden">
-              {% if page.section_slug == 'cubs' %}
-                <img src="/assets/images/sections/milestone-2-cubs.svg" alt="Milestone 2" class="w-full h-full object-contain" />
-              {% else %}
-                <span class="font-bold text-xl">2</span>
-              {% endif %}
+            <div class="w-34 h-34 flex items-center justify-center">
+              <img src="/assets/images/sections/milestone-2-{{ page.section_slug }}.svg" alt="Milestone 2"
+                class="w-full h-full object-contain drop-shadow-sm" />
             </div>
             <div class="text-center bg-surface-container-low px-3 py-1.5 rounded-lg shadow-sm">
-              <p class="font-bold text-on-surface">{{ page.pathway.milestones.milestone_2.label | default: 'Assist' }}</p>
+              <p class="font-bold text-on-surface">{{ page.pathway.milestones.milestone_2.label | default: 'Assist' }}
+              </p>
             </div>
           </div>
-          
+
           <!-- Milestone 3 -->
           <div class="relative z-10 flex flex-col items-center gap-4 px-4">
-            <div class="w-20 h-20 rounded-full bg-surface-container-high text-outline flex items-center justify-center shadow-sm border-4 border-surface-container-low overflow-hidden">
-              {% if page.section_slug == 'cubs' %}
-                <img src="/assets/images/sections/milestone-3-cubs.svg" alt="Milestone 3" class="w-full h-full object-contain" />
-              {% else %}
-                <span class="font-bold text-xl">3</span>
-              {% endif %}
+            <div class="w-34 h-34 flex items-center justify-center">
+              <img src="/assets/images/sections/milestone-3-{{ page.section_slug }}.svg" alt="Milestone 3"
+                class="w-full h-full object-contain drop-shadow-sm" />
             </div>
             <div class="text-center bg-surface-container-low px-3 py-1.5 rounded-lg shadow-sm">
               <p class="font-bold text-on-surface">{{ page.pathway.milestones.milestone_3.label | default: 'Lead' }}</p>
@@ -86,7 +88,9 @@
 
         <!-- Button: View Milestones -->
         <div class="flex justify-center mt-8">
-          <a href="/sections/{{ page.section_slug }}/milestones" class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+          <a href="/sections/{{ page.section_slug }}/milestones"
+            class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+            style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
             <span>View Milestones</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
         </div>
@@ -94,48 +98,64 @@
     </div>
 
     <!-- Pill 2: Core Skills -->
-    <div class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+    <div
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
       Core Skills
     </div>
 
     <!-- Station 2: Outdoor Adventure Skills -->
-    <div class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group" onclick="window.location.href='{{ page.pathway.oas.url }}'">
-      
+    <div id="oas"
+      class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+      onclick="window.location.href='{{ page.pathway.oas.url }}'">
+
       <!-- Background Icon -->
-      <div class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center" style="color: {{ accent }};">
+      <div
+        class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center"
+        style="color: {{ accent }};">
         <span class="material-symbols-outlined" style="font-size: 14rem;">camping</span>
       </div>
 
       <div class="max-w-3xl relative z-10">
         <h3 class="font-headline text-2xl font-black text-primary mt-1 mb-4">Outdoor Adventure Skills</h3>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          {{ page.pathway.oas.summary | default: 'Master skills in Camping, Bushcraft, and Bushwalking. Progress through 9 stages to build your expertise.' }}
+          {{ page.pathway.oas.summary | default: 'Master skills in Camping, Bushcraft, and Bushwalking. Progress through
+          9 stages to build your expertise.' }}
         </p>
-        <a href="{{ page.pathway.oas.url }}" class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+        <a href="{{ page.pathway.oas.url }}"
+          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
           <span>Explore Skills</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
       </div>
     </div>
 
     <!-- Pill 3: Personal Passion -->
-    <div class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+    <div
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
       Personal Passion
     </div>
 
     <!-- Station 3: Special Interest Areas -->
-    <div class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group" onclick="window.location.href='{{ page.pathway.sia.url }}'">
-      
+    <div id="sia"
+      class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+      onclick="window.location.href='{{ page.pathway.sia.url }}'">
+
       <!-- Background Icon -->
-      <div class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center" style="color: {{ accent }};">
+      <div
+        class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center"
+        style="color: {{ accent }};">
         <span class="material-symbols-outlined" style="font-size: 14rem;">star</span>
       </div>
 
       <div class="max-w-3xl relative z-10">
         <h3 class="font-headline text-2xl font-black text-primary mt-1 mb-4">Special Interest Areas</h3>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          {{ page.pathway.sia.summary | default: 'Design and complete projects in 6 different areas of interest. Set your own goals and challenge yourself.' }}
+          {{ page.pathway.sia.summary | default: 'Design and complete projects in 6 different areas of interest. Set
+          your own goals and challenge yourself.' }}
         </p>
-        <a href="{{ page.pathway.sia.url }}" class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+        <a href="{{ page.pathway.sia.url }}"
+          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
           <span>Discover Areas</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
       </div>
@@ -143,15 +163,20 @@
 
     {% if page.pathway.adventurous_journey %}
     <!-- Pill 4: The Challenge -->
-    <div class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+    <div
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
       The Challenge
     </div>
 
     <!-- Station 4: Adventurous Journey -->
-    <div class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group" onclick="window.location.href='{{ page.pathway.adventurous_journey.url }}'">
-      
+    <div id="adventurous-journey"
+      class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+      onclick="window.location.href='{{ page.pathway.adventurous_journey.url }}'">
+
       <!-- Background Icon -->
-      <div class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center" style="color: {{ accent }};">
+      <div
+        class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center"
+        style="color: {{ accent }};">
         <span class="material-symbols-outlined" style="font-size: 14rem;">explore</span>
       </div>
 
@@ -162,9 +187,12 @@
           </div>
         </div>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          {{ page.pathway.adventurous_journey.summary | default: 'Plan and lead a journey to demonstrate your leadership and outdoor skills. This is a major test of your abilities.' }}
+          {{ page.pathway.adventurous_journey.summary | default: 'Plan and lead a journey to demonstrate your leadership
+          and outdoor skills. This is a major test of your abilities.' }}
         </p>
-        <a href="{{ page.pathway.adventurous_journey.url }}" class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+        <a href="{{ page.pathway.adventurous_journey.url }}"
+          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
           <span>Plan Your Journey</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
       </div>
@@ -173,24 +201,32 @@
 
     {% if page.pathway.leadership_course %}
     <!-- Pill 5: Skill Up -->
-    <div class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+    <div
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
       Skill Up
     </div>
 
     <!-- Station 5: Leadership or Personal Development -->
-    <div class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group" onclick="window.location.href='/sections/{{ page.section_slug }}/leadership-course'">
-      
+    <div id="leadership-course"
+      class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+      onclick="window.location.href='/sections/{{ page.section_slug }}/leadership-course'">
+
       <!-- Background Icon -->
-      <div class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center" style="color: {{ accent }};">
+      <div
+        class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center"
+        style="color: {{ accent }};">
         <span class="material-symbols-outlined" style="font-size: 14rem;">groups</span>
       </div>
 
       <div class="max-w-3xl relative z-10">
         <h3 class="font-headline text-2xl font-black text-primary mt-1 mb-4">Leadership or Personal Development</h3>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          Complete a course to develop your leadership skills or personal growth. This is a key requirement for the Peak Award.
+          Complete a course to develop your leadership skills or personal growth. This is a key requirement for the Peak
+          Award.
         </p>
-        <a href="/sections/{{ page.section_slug }}/leadership-course" class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+        <a href="/sections/{{ page.section_slug }}/leadership-course"
+          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
           <span>Learn More</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
       </div>
@@ -199,15 +235,20 @@
 
     {% if page.pathway.personal_reflection %}
     <!-- Pill 6: Review -->
-    <div class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+    <div
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
       Review
     </div>
 
     <!-- Station 6: Personal Reflection -->
-    <div class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group" onclick="window.location.href='{{ page.pathway.personal_reflection.url }}'">
-      
+    <div id="personal-reflection"
+      class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+      onclick="window.location.href='{{ page.pathway.personal_reflection.url }}'">
+
       <!-- Background Icon -->
-      <div class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center" style="color: {{ accent }};">
+      <div
+        class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center"
+        style="color: {{ accent }};">
         <span class="material-symbols-outlined" style="font-size: 14rem;">self_improvement</span>
       </div>
 
@@ -218,9 +259,12 @@
           </div>
         </div>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          Reflect on your journey and growth with your peers before achieving the Peak Award. This is the final review of your achievements.
+          Reflect on your journey and growth with your peers before achieving the Peak Award. This is the final review
+          of your achievements.
         </p>
-        <a href="{{ page.pathway.personal_reflection.url }}" class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+        <a href="{{ page.pathway.personal_reflection.url }}"
+          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
           <span>Reflection Guide</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
       </div>
@@ -228,34 +272,45 @@
     {% endif %}
 
     <!-- Pill 7: The Pinnacle -->
-    <div class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+    <div
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
       The Pinnacle
     </div>
 
     <!-- Station 7: Peak Award -->
-    <div class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group" onclick="window.location.href='/sections/{{ page.section_slug }}/peak-award'">
-      
+    <div id="peak-award"
+      class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+      onclick="window.location.href='/sections/{{ page.section_slug }}/peak-award'">
+
       <!-- Background Icon -->
-      <div class="absolute -right-8 -top-8 w-48 h-48 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center">
+      <div
+        class="absolute -right-8 -top-8 w-48 h-48 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center">
         {% if page.pathway.peak_award.image %}
-          <img src="{{ page.pathway.peak_award.image }}" alt="{{ page.pathway.peak_award.name }}" class="w-full h-full object-contain" />
+        <img src="{{ page.pathway.peak_award.image }}" alt="{{ page.pathway.peak_award.name }}"
+          class="w-full h-full object-contain" />
         {% elsif page.section_slug == 'cubs' or page.section_slug == 'joeys' or page.section_slug == 'scouts' %}
-          <img src="/assets/images/sections/peak-award-{{ page.section_slug }}.svg" alt="{{ page.pathway.peak_award.name }}" class="w-full h-full object-contain" />
+        <img src="/assets/images/sections/peak-award-{{ page.section_slug }}.svg"
+          alt="{{ page.pathway.peak_award.name }}" class="w-full h-full object-contain" />
         {% else %}
-          <span class="material-symbols-outlined" style="font-size: 12rem; font-variation-settings: 'FILL' 1; color: {{ accent }};">workspace_premium</span>
+        <span class="material-symbols-outlined"
+          style="font-size: 12rem; font-variation-settings: 'FILL' 1; color: {{ accent }};">workspace_premium</span>
         {% endif %}
       </div>
 
       <div class="max-w-3xl relative z-10">
         <div class="flex justify-between items-start mb-4">
           <div>
-            <h3 class="font-headline text-2xl font-black text-primary mt-1">{{ page.pathway.peak_award.name | default: 'Peak Award' }}</h3>
+            <h3 class="font-headline text-2xl font-black text-primary mt-1">{{ page.pathway.peak_award.name | default:
+              'Peak Award' }}</h3>
           </div>
         </div>
         <p class="text-on-surface-variant mb-6 leading-relaxed">
-          The highest award you can earn in the section. It requires dedication, leadership, and a commitment to personal growth.
+          The highest award you can earn in the section. It requires dedication, leadership, and a commitment to
+          personal growth.
         </p>
-        <a href="/sections/{{ page.section_slug }}/peak-award" class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2" style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
+        <a href="/sections/{{ page.section_slug }}/peak-award"
+          class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
           <span>Learn More</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
       </div>
@@ -263,36 +318,43 @@
 
     {% if page.section_slug == 'rovers' %}
     <!-- Pill 8: Next Steps -->
-    <div class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
+    <div
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 hidden lg:flex items-center justify-center shadow-sm">
       Next Steps
     </div>
 
     <!-- Station 8: Beyond the Peak (Rovers Only) -->
-    <div class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
-      <div class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center" style="color: {{ accent }};">
+    <div
+      class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+      <div
+        class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center"
+        style="color: {{ accent }};">
         <span class="material-symbols-outlined" style="font-size: 14rem;">hiking</span>
       </div>
       <div class="max-w-3xl relative z-10">
         <h2 class="font-display text-3xl font-black text-primary mt-1 mb-2">Beyond the Peak: Adult Leadership</h2>
         <p class="text-on-surface-variant text-lg leading-relaxed mb-6">
-          As your time in Rovers comes to an end, the adventure doesn't stop. Many Rovers choose to continue their journey by becoming Adult Leaders.
+          As your time in Rovers comes to an end, the adventure doesn't stop. Many Rovers choose to continue their
+          journey by becoming Adult Leaders.
         </p>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
           <div class="bg-surface-container-high p-6 rounded-xl">
             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
               <span class="material-symbols-outlined text-primary">groups</span>
             </div>
             <h3 class="font-headline text-xl font-bold mb-2">Become a Leader</h3>
-            <p class="text-sm text-on-surface-variant">Share your experience and guide the next generation of Scouts. You can work with Joeys, Cubs, Scouts, or Venturers.</p>
+            <p class="text-sm text-on-surface-variant">Share your experience and guide the next generation of Scouts.
+              You can work with Joeys, Cubs, Scouts, or Venturers.</p>
           </div>
-          
+
           <div class="bg-surface-container-high p-6 rounded-xl">
             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
               <span class="material-symbols-outlined text-primary">workspace_premium</span>
             </div>
             <h3 class="font-headline text-xl font-bold mb-2">The Wood Badge</h3>
-            <p class="text-sm text-on-surface-variant">The Wood Badge is the internationally recognized mark of a trained Scout Leader, focusing on advanced leadership and program delivery.</p>
+            <p class="text-sm text-on-surface-variant">The Wood Badge is the internationally recognized mark of a
+              trained Scout Leader, focusing on advanced leadership and program delivery.</p>
           </div>
         </div>
       </div>
@@ -300,29 +362,30 @@
     {% endif %}
 
     {% case page.section_slug %}
-      {% when 'joeys' %}
-        {% assign next_slug = 'cubs' %}
-        {% assign next_name = 'Cub Scouts' %}
-        {% assign next_logo = 'logo-cub-light.svg' %}
-      {% when 'cubs' %}
-        {% assign next_slug = 'scouts' %}
-        {% assign next_name = 'Scouts' %}
-        {% assign next_logo = 'logo-scout-light.svg' %}
-      {% when 'scouts' %}
-        {% assign next_slug = 'venturers' %}
-        {% assign next_name = 'Venturer Scouts' %}
-        {% assign next_logo = 'logo-venturer-light.svg' %}
-      {% when 'venturers' %}
-        {% assign next_slug = 'rovers' %}
-        {% assign next_name = 'Rover Scouts' %}
-        {% assign next_logo = 'logo-rover-light.svg' %}
-      {% else %}
-        {% assign next_slug = '' %}
+    {% when 'joeys' %}
+    {% assign next_slug = 'cubs' %}
+    {% assign next_name = 'Cub Scouts' %}
+    {% assign next_logo = 'logo-cub-light.svg' %}
+    {% when 'cubs' %}
+    {% assign next_slug = 'scouts' %}
+    {% assign next_name = 'Scouts' %}
+    {% assign next_logo = 'logo-scout-light.svg' %}
+    {% when 'scouts' %}
+    {% assign next_slug = 'venturers' %}
+    {% assign next_name = 'Venturer Scouts' %}
+    {% assign next_logo = 'logo-venturer-light.svg' %}
+    {% when 'venturers' %}
+    {% assign next_slug = 'rovers' %}
+    {% assign next_name = 'Rover Scouts' %}
+    {% assign next_logo = 'logo-rover-light.svg' %}
+    {% else %}
+    {% assign next_slug = '' %}
     {% endcase %}
 
     {% if next_slug != '' %}
     <!-- Pill 8: Next Section Link -->
-    <a href="/sections/{{ next_slug }}" class="bg-primary hover:bg-primary-dim text-white text-xs font-bold px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-md gap-2 mt-8 transition-colors">
+    <a href="/sections/{{ next_slug }}"
+      class="bg-primary hover:bg-primary-dim text-white text-xs font-bold px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-md gap-2 mt-8 transition-colors">
       <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5">
         <img src="/assets/images/{{ next_logo }}" alt="{{ next_name }}" class="w-full h-full object-contain" />
       </div>

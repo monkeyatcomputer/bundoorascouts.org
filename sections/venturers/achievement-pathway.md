@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Achievement Pathway"
 permalink: /sections/venturers/achievement-pathway
-description: "Follow the path up the mountain — the Achievement Pathway is your personal progression through the Venturer Scout program."
+description: "Follow the path up the mountain – the Achievement Pathway is your personal progression through the Venturer Scout program."
 section_slug: venturers
 age_range: "15–18"
 tagline: "Look wide, reach high."
