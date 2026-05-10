@@ -78,6 +78,10 @@ autopages:
 collections:
   people:
     output: false
+  trips:
+    output: true
+    sort_field: date
+    sort_reverse: true
 
 # Feed
 feed:

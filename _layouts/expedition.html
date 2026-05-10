@@ -66,7 +66,8 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
         <div class="flex flex-wrap items-center gap-6 text-primary-fixed-dim">
           <div class="flex items-center gap-2 text-sm font-semibold">
             <span class="material-symbols-outlined text-[18px]">calendar_today</span>
-            <span>{{ page.trip_dates | default: '28 Jun – 11 Jul 2026' }}</span>
+            <span>{% if page.start_date %}{{ page.start_date | date: "%d %b" }} – {{ page.end_date | date: "%d %b %Y"
+              }}{% else %}{{ page.trip_dates }}{% endif %}</span>
           </div>
           <div class="flex items-center gap-2 text-sm font-semibold">
             <span class="material-symbols-outlined text-[18px]">directions_bus</span>
