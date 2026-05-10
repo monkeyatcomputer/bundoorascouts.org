@@ -4,7 +4,8 @@ const path = require('path');
 
 // ─── CONFIGURATION ──────────────────────────────────────────────────────────
 
-const DATA_DIR = path.join(__dirname, '..', '_data/uluru-2026');
+const tripDir = process.argv[2] || 'uluru-2026';
+const DATA_DIR = path.join(__dirname, '..', '_data', tripDir);
 const ITINERARY_PATH = path.join(DATA_DIR, 'itinerary.yml');
 const ROUTE_PATH = path.join(DATA_DIR, 'route.yml');
 const TELEMETRY_PATH = path.join(DATA_DIR, 'telemetry.yml');
@@ -131,10 +132,10 @@ function parseItinerary(text) {
             const dwellMatch = eb.match(/dwell:\s*([\d.]+)/);
             const locMatch = eb.match(/loc:\s*\[\s*(-?\d+\.\d+),\s*(-?\d+\.\d+)\s*\]/);
 
-            let buses = null;
-            const busMatch = eb.match(/bus:\s*\[([\d,\s]+)\]/);
-            if (busMatch) {
-                buses = busMatch[1].split(',').map(b => parseInt(b.trim()));
+            let groups = null;
+            const groupMatch = eb.match(/group:\s*\[([^\]]+)\]/) || eb.match(/bus:\s*\[([^\]]+)\]/); // Support both during migration
+            if (groupMatch) {
+                groups = groupMatch[1].split(',').map(b => b.trim().replace(/^'|'$/g, ''));
             }
 
             if (dateMatch || timeMatch) {
@@ -146,10 +147,10 @@ function parseItinerary(text) {
                     dateStr: dateStr,
                     type: typeMatch ? typeMatch[1] : '',
                     label: labelMatch ? labelMatch[1].trim().replace(/^'|'$/g, '') : '',
-                    dwell: dwellMatch ? parseFloat(dwellMatch[1]) : 0,
+                    dwell: dwellMatch ? parseFloat(dwellMatch[1]) : (['depart', 'arrive'].includes(typeMatch ? typeMatch[1] : '') ? 0 : 1.0),
                     lat: locMatch ? parseFloat(locMatch[1]) : null,
                     lng: locMatch ? parseFloat(locMatch[2]) : null,
-                    bus: buses,
+                    group: groups,
                     tz: tz
                 };
                 
@@ -166,10 +167,29 @@ function parseItinerary(text) {
     return days;
 }
 
+function getAllGroups(days) {
+    const groups = new Set();
+    days.forEach(day => {
+        day.events.forEach(ev => {
+            if (ev.group) {
+                ev.group.forEach(g => groups.add(g));
+            }
+        });
+    });
+    if (groups.size === 0) {
+        return ['1', '2', '3']; // Default fallback
+    }
+    return Array.from(groups);
+}
+
 // ─── MAIN EXECUTION ──────────────────────────────────────────────────────────
 
 async function run() {
     console.log(`Reading itinerary from ${ITINERARY_PATH}...`);
+    if (!fs.existsSync(ITINERARY_PATH)) {
+        console.error(`File not found: ${ITINERARY_PATH}`);
+        process.exit(1);
+    }
     const itineraryContent = fs.readFileSync(ITINERARY_PATH, 'utf8');
     const itineraryText = getSection(itineraryContent, 'itinerary');
 
@@ -179,17 +199,33 @@ async function run() {
     }
 
     const days = parseItinerary(itineraryText);
+    const allGroups = getAllGroups(days);
+    console.log(`Identified groups: ${allGroups.join(', ')}`);
     
     // Fill in missing locations from previous events
     days.forEach(day => {
-        let lastLat = null, lastLng = null;
+        let lastLocGroup = {}; // Track {lat, lng} per group
         day.events.forEach(ev => {
+            const groups = ev.group || allGroups;
             if (ev.lat !== null && ev.lng !== null) {
-                lastLat = ev.lat;
-                lastLng = ev.lng;
-            } else if (lastLat !== null && lastLng !== null) {
-                ev.lat = lastLat;
-                ev.lng = lastLng;
+                groups.forEach(g => {
+                    lastLocGroup[g] = { lat: ev.lat, lng: ev.lng };
+                });
+            } else {
+                let inheritedLoc = null;
+                for (const g of groups) {
+                    if (lastLocGroup[g]) {
+                        inheritedLoc = lastLocGroup[g];
+                        break;
+                    }
+                }
+                if (inheritedLoc) {
+                    ev.lat = inheritedLoc.lat;
+                    ev.lng = inheritedLoc.lng;
+                    groups.forEach(g => {
+                        lastLocGroup[g] = inheritedLoc;
+                    });
+                }
             }
         });
     });
@@ -216,16 +252,17 @@ async function run() {
 
     // 1. ROUTE COMPUTATION
     const routeData = [];
-    let lastPosBus = { 1: startPos, 2: startPos, 3: startPos };
+    let lastPosGroup = {};
+    allGroups.forEach(g => lastPosGroup[g] = startPos);
 
     for (const day of days) {
         const dayEntry = { day: day.day, segments: [] };
         const wpGroups = {};
 
-        for (let busId = 1; busId <= 3; busId++) {
-            const waypoints = [lastPosBus[busId]];
+        for (const groupId of allGroups) {
+            const waypoints = [lastPosGroup[groupId]];
             day.events.forEach(e => {
-                if (e.lat !== null && e.lng !== null && (!e.bus || e.bus.includes(busId))) {
+                if (e.lat !== null && e.lng !== null && (!e.group || e.group.includes(groupId))) {
                     const last = waypoints[waypoints.length - 1];
                     if (last.lat !== e.lat || last.lng !== e.lng) {
                         waypoints.push({ lat: e.lat, lng: e.lng });
@@ -233,19 +270,19 @@ async function run() {
                 }
             });
             const key = JSON.stringify(waypoints);
-            if (!wpGroups[key]) wpGroups[key] = { buses: [], waypoints };
-            wpGroups[key].buses.push(busId);
+            if (!wpGroups[key]) wpGroups[key] = { groups: [], waypoints };
+            wpGroups[key].groups.push(groupId);
         }
 
         for (const key in wpGroups) {
             const group = wpGroups[key];
             const waypoints = group.waypoints;
-            const buses = group.buses;
+            const groups = group.groups;
 
             let segmentPoints = [];
             let segmentDurations = [];
             if (waypoints.length > 1) {
-                console.log(`Day ${day.day} Bus ${buses.join('+')}: Fetching ${waypoints.length - 1} legs...`);
+                console.log(`Day ${day.day} Group ${groups.join('+')}: Fetching ${waypoints.length - 1} legs...`);
                 for (let j = 0; j < waypoints.length - 1; j++) {
                     const leg = await fetchLeg(waypoints[j], waypoints[j + 1]);
                     if (segmentPoints.length > 0 && leg.points.length > 0) {
@@ -261,10 +298,10 @@ async function run() {
             }
 
             const finalPos = { lat: segmentPoints[segmentPoints.length - 1][0], lng: segmentPoints[segmentPoints.length - 1][1] };
-            buses.forEach(bid => lastPosBus[bid] = finalPos);
+            groups.forEach(gid => lastPosGroup[gid] = finalPos);
 
             dayEntry.segments.push({
-                bus: buses.length === 3 ? null : buses,
+                group: groups.length === allGroups.length ? null : groups,
                 points: segmentPoints,
                 durations: segmentDurations.length > 0 ? segmentDurations : null,
                 waypoints: waypoints // Keep for sampling later
@@ -275,35 +312,34 @@ async function run() {
 
     // 2. TELEMETRY COMPUTATION
     console.log("Computing telemetry paths...");
-    const busPaths = {};
+    const groupPaths = {};
     days.forEach(day => {
         const dayRoute = routeData.find(r => r.day === day.day);
         if (!dayRoute) return;
-        busPaths[day.day] = {};
+        groupPaths[day.day] = {};
 
-        [1, 2, 3].forEach(busId => {
-            let busPoints = [];
-            let busDurations = [];
+        allGroups.forEach(groupId => {
+            let groupPoints = [];
+            let groupDurations = [];
             dayRoute.segments.forEach(seg => {
-                if (!seg.bus || seg.bus.includes(busId)) {
-                    const startIdx = busPoints.length;
+                if (!seg.group || seg.group.includes(groupId)) {
+                    const startIdx = groupPoints.length;
                     if (startIdx > 0) {
                         // Concatenate, skipping duplicate point
-                        busPoints = busPoints.concat(seg.points.slice(1));
+                        groupPoints = groupPoints.concat(seg.points.slice(1));
                     } else {
-                        busPoints = busPoints.concat(seg.points);
+                        groupPoints = groupPoints.concat(seg.points);
                     }
-                    if (seg.durations) busDurations = busDurations.concat(seg.durations);
+                    if (seg.durations) groupDurations = groupDurations.concat(seg.durations);
                 }
             });
-            if (busPoints.length === 0) return;
+            if (groupPoints.length === 0) return;
 
             // Compute cumulative time/distance for interpolation
-            // Use OSRM durations if available for the entire path, else fallback to distance
-            const hasDurations = busDurations.length === (busPoints.length - 1);
+            const hasDurations = groupDurations.length === (groupPoints.length - 1);
             const cumMetrics = [0];
-            for (let i = 1; i < busPoints.length; i++) {
-                const step = hasDurations ? busDurations[i-1] : getDistance(busPoints[i - 1], busPoints[i]);
+            for (let i = 1; i < groupPoints.length; i++) {
+                const step = hasDurations ? groupDurations[i-1] : getDistance(groupPoints[i - 1], groupPoints[i]);
                 cumMetrics.push(cumMetrics[cumMetrics.length - 1] + step);
             }
 
@@ -312,8 +348,8 @@ async function run() {
             let currentSearchIdx = 0;
             day.events.forEach(e => {
                 const currentLoc = (e.lat !== null && e.lng !== null) ? { lat: e.lat, lng: e.lng } : lastKnownLoc;
-                if (currentLoc && (!e.bus || e.bus.includes(busId))) {
-                    const idx = findClosestIndex(busPoints, currentLoc.lat, currentLoc.lng, currentSearchIdx);
+                if (currentLoc && (!e.group || e.group.includes(groupId))) {
+                    const idx = findClosestIndex(groupPoints, currentLoc.lat, currentLoc.lng, currentSearchIdx);
                     const time = new Date(e.dateStr);
                     anchors.push({ time, idx, type: e.type, label: e.label, dwell: e.dwell, tz: e.tz });
                     lastKnownLoc = currentLoc;
@@ -324,17 +360,16 @@ async function run() {
             anchors.sort((a, b) => a.time - b.time);
 
             const pathWithTimes = [];
-            const dayTz = anchors[0].tz;
 
             for (let i = 0; i < anchors.length; i++) {
                 const a1 = anchors[i];
                 const dwellEnd = new Date(a1.time.getTime() + a1.dwell * 3600000);
-                pathWithTimes.push({ time: a1.time, pos: busPoints[a1.idx], type: a1.type, label: a1.label, tz: a1.tz });
+                pathWithTimes.push({ time: a1.time, pos: groupPoints[a1.idx], type: a1.type, label: a1.label, tz: a1.tz });
                 if (a1.dwell > 0) {
                     const isLast = (i === anchors.length - 1);
                     pathWithTimes.push({ 
                         time: dwellEnd, 
-                        pos: busPoints[a1.idx], 
+                        pos: groupPoints[a1.idx], 
                         type: isLast ? 'stationary' : a1.type, 
                         label: isLast ? 'Overnight' : a1.label, 
                         tz: a1.tz 
@@ -348,19 +383,20 @@ async function run() {
                         for (let pIdx = a1.idx + 1; pIdx < a2.idx; pIdx++) {
                             const pMetric = cumMetrics[pIdx] - cumMetrics[a1.idx];
                             const pTime = new Date(dwellEnd.getTime() + travelDuration * (pMetric / subTotal));
-                            pathWithTimes.push({ time: pTime, pos: busPoints[pIdx], type: 'travel', label: 'Moving', tz: a1.tz });
+                            pathWithTimes.push({ time: pTime, pos: groupPoints[pIdx], type: 'travel', label: 'Moving', tz: a1.tz });
                         }
                     }
                 }
             }
 
-            busPaths[day.day][busId] = pathWithTimes;
+            groupPaths[day.day][groupId] = pathWithTimes;
         });
     });
 
     console.log("Sampling telemetry ticks...");
     const telemetryGrouped = [];
-    const lastBusStates = { 1: null, 2: null, 3: null };
+    const lastGroupStates = {};
+    allGroups.forEach(g => lastGroupStates[g] = null);
 
     days.forEach(day => {
         const dayTz = day.tz;
@@ -369,8 +405,8 @@ async function run() {
 
         while (currentTick <= endTick) {
             const tickStates = {};
-            [1, 2, 3].forEach(bid => {
-                const path = busPaths[day.day] ? busPaths[day.day][bid] : null;
+            allGroups.forEach(gid => {
+                const path = groupPaths[day.day] ? groupPaths[day.day][gid] : null;
                 if (!path) return;
                 const p1 = [...path].reverse().find(p => p.time <= currentTick);
                 const p2 = path.find(p => p.time > currentTick);
@@ -378,52 +414,50 @@ async function run() {
                     const ratio = (currentTick - p1.time) / (p2.time - p1.time);
                     const lat = Number((p1.pos[0] + (p2.pos[0] - p1.pos[0]) * ratio).toFixed(6));
                     const lng = Number((p1.pos[1] + (p2.pos[1] - p1.pos[1]) * ratio).toFixed(6));
-                    tickStates[bid] = { lat, lng, type: p1.type, label: p1.label, tz: p1.tz };
+                    tickStates[gid] = { lat, lng, type: p1.type, label: p1.label, tz: p1.tz };
                 } else if (p1) {
-                    tickStates[bid] = { lat: Number(p1.pos[0].toFixed(6)), lng: Number(p1.pos[1].toFixed(6)), type: p1.type, label: p1.label, tz: p1.tz };
+                    tickStates[gid] = { lat: Number(p1.pos[0].toFixed(6)), lng: Number(p1.pos[1].toFixed(6)), type: p1.type, label: p1.label, tz: p1.tz };
                 }
             });
 
             const groups = {};
-            Object.entries(tickStates).forEach(([bid, state]) => {
+            Object.entries(tickStates).forEach(([gid, state]) => {
                 const key = `${state.lat},${state.lng},${state.type},${state.label}`;
-                if (!groups[key]) groups[key] = { state, buses: [] };
-                groups[key].buses.push(parseInt(bid));
+                if (!groups[key]) groups[key] = { state, gids: [] };
+                groups[key].gids.push(gid);
             });
 
             Object.values(groups).forEach(group => {
-                const { state, buses } = group;
-                const latChg = buses.some(bid => !lastBusStates[bid] || lastBusStates[bid].lat !== state.lat);
-                const lngChg = buses.some(bid => !lastBusStates[bid] || lastBusStates[bid].lng !== state.lng);
-                const typeChg = buses.some(bid => !lastBusStates[bid] || lastBusStates[bid].type !== state.type);
-                const labelChg = buses.some(bid => !lastBusStates[bid] || lastBusStates[bid].label !== state.label);
+                const { state, gids } = group;
+                const latChg = gids.some(gid => !lastGroupStates[gid] || lastGroupStates[gid].lat !== state.lat);
+                const lngChg = gids.some(gid => !lastGroupStates[gid] || lastGroupStates[gid].lng !== state.lng);
+                const typeChg = gids.some(gid => !lastGroupStates[gid] || lastGroupStates[gid].type !== state.type);
+                const labelChg = gids.some(gid => !lastGroupStates[gid] || lastGroupStates[gid].label !== state.label);
 
                 if (latChg || lngChg || typeChg || labelChg) {
-                    // Create local ISO string using the state's timezone
                     const tOffset = state.tz;
-                    // Properly format local time string with offset
                     const offsetParts = tOffset.match(/([\+\-])(\d{2}):(\d{2})/);
                     const sign = offsetParts[1] === '+' ? 1 : -1;
                     const offMs = sign * (parseInt(offsetParts[2]) * 3600000 + parseInt(offsetParts[3]) * 60000);
                     const localTick = new Date(currentTick.getTime() + offMs);
                     const tIso = localTick.toISOString().split('.')[0] + tOffset;
                     
+                    const outputGroups = gids.length === allGroups.length ? [] : gids.map(id => isNaN(parseInt(id)) ? id : parseInt(id));
                     telemetryGrouped.push([
                         day.day,
                         tIso,
-                        buses,
+                        outputGroups,
                         latChg ? state.lat : null,
                         lngChg ? state.lng : null,
                         typeChg ? state.type : null,
                         labelChg ? state.label : null
                     ]);
-                    buses.forEach(bid => lastBusStates[bid] = state);
+                    gids.forEach(gid => lastGroupStates[gid] = state);
                 }
             });
             currentTick = new Date(currentTick.getTime() + TICK_MINUTES * 60000);
         }
     });
-
 
     // 3. YAML GENERATION (Separate files)
     console.log(`Writing route data to ${ROUTE_PATH}...`);
@@ -431,9 +465,9 @@ async function run() {
     routeData.forEach(day => {
         routeYaml += `  - day: ${day.day}\n    segments:\n`;
         day.segments.forEach(seg => {
-            routeYaml += `      - bus: [${(seg.bus || [1, 2, 3]).join(', ')}]\n`;
+            const segGroups = seg.group || [];
+            routeYaml += `      - group: [${segGroups.map(g => isNaN(parseInt(g)) ? `'${g}'` : g).join(', ')}]\n`;
             
-            // Apply sampling ONLY here for the YAML file size efficiency
             let pointsToSave = seg.points;
             if (pointsToSave.length > 500) {
                 const sampleRate = Math.max(1, Math.floor(pointsToSave.length / 500));

@@ -19,7 +19,11 @@ Renders a Leaflet.js map showing the expedition route.
         The Route
       </div>
       <h2 class="text-3xl md:text-4xl font-black text-primary tracking-tight font-headline">
+        {% if page.map_heading %}
+        {{ page.map_heading }}
+        {% else %}
         Bundoora to <span class="text-on-tertiary-container">Uluru</span>
+        {% endif %}
       </h2>
     </div>
     <div class="text-right shrink-0">
@@ -36,22 +40,26 @@ Renders a Leaflet.js map showing the expedition route.
     <div id="expedition-map" class="w-full h-full z-0"></div>
 
     <!-- Not Started Overlay -->
-    <div id="map-not-started" class="absolute inset-0 z-[500] bg-black/40 backdrop-blur-sm flex items-center justify-center text-white transition-opacity duration-500 hidden">
-        <div class="text-center p-8 bg-primary/90 rounded-[2.5rem] border border-white/20 shadow-2xl max-w-xs mx-4">
-            <div class="w-16 h-16 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <span class="material-symbols-outlined text-3xl">schedule</span>
-            </div>
-            <div class="text-[10px] font-black font-headline uppercase tracking-[0.2em] mb-1" id="map-not-started-title">Coming Soon</div>
-            <div id="map-countdown" class="mb-4"></div>
-            <div class="text-sm opacity-80 leading-relaxed" id="map-not-started-desc">The expedition hasn't started yet. Check back once the buses depart!</div>
+    <div id="map-not-started"
+      class="absolute inset-0 z-[500] bg-black/40 backdrop-blur-sm flex items-center justify-center text-white transition-opacity duration-500 hidden">
+      <div class="text-center p-8 bg-primary/90 rounded-[2.5rem] border border-white/20 shadow-2xl max-w-xs mx-4">
+        <div
+          class="w-16 h-16 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+          <span class="material-symbols-outlined text-3xl">schedule</span>
         </div>
+        <div class="text-[10px] font-black font-headline uppercase tracking-[0.2em] mb-1" id="map-not-started-title">
+          Coming Soon</div>
+        <div id="map-countdown" class="mb-4"></div>
+        <div class="text-sm opacity-80 leading-relaxed" id="map-not-started-desc">The expedition hasn't started yet.
+          Check back once the groups depart!</div>
+      </div>
     </div>
 
     {%- comment %} Top-right: Zoom controls {%- endcomment %}
     <div class="absolute top-4 left-4 flex flex-col gap-2 z-[400]">
       <button id="map-btn-focus"
         class="w-10 h-10 rounded-xl bg-white shadow-lg text-primary flex items-center justify-center hover:bg-[#008F88] hover:text-white transition-all duration-300"
-        title="Focus Bus">
+        title="Focus Group">
         <span class="material-symbols-outlined">my_location</span>
       </button>
       <button id="map-btn-full"
@@ -62,13 +70,14 @@ Renders a Leaflet.js map showing the expedition route.
     </div>
 
     {%- comment %} Bottom-left: progress card {%- endcomment %}
-    <div
+    <div id="map-status-card"
       class="absolute bottom-4 left-4 bg-primary/90 backdrop-blur-md text-white p-4 rounded-2xl min-w-[200px] max-w-[280px] shadow-lg border border-white/10 z-[400] hidden sm:block">
-      <div class="text-[10px] font-bold uppercase tracking-widest text-on-primary-container mb-2">Current Status</div>
+      <div id="map-current-status-title"
+        class="text-[10px] font-bold uppercase tracking-widest text-on-primary-container mb-2">Current Status</div>
       <div id="map-current-location" class="space-y-2">
-         <div class="text-sm font-bold opacity-80 italic">Locating buses...</div>
+        <div class="text-sm font-bold opacity-80 italic">Locating groups...</div>
       </div>
-      <div class="mt-3">
+      <div id="map-progress-container" class="mt-3">
         <div class="flex items-center justify-between text-[10px] font-bold mb-1.5">
           <span>Journey Progress</span>
           <span id="map-progress-pct">0%</span>
@@ -84,7 +93,7 @@ Renders a Leaflet.js map showing the expedition route.
     </div>
 
     {%- comment %} Bottom-right: day card {%- endcomment %}
-    <div
+    <div id="map-day-card"
       class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md text-primary p-4 rounded-2xl shadow-lg border-l-4 border-[#008F88] z-[400]">
       <div class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tight mb-0.5">Expedition Day</div>
       <div class="text-xl font-black text-primary font-headline" id="map-day-badge">Day &mdash;</div>
@@ -104,7 +113,8 @@ Renders a Leaflet.js map showing the expedition route.
     var data = {};
     var itinerary = [];
     var testDate = null;
-    
+    var groupsArray = ['1', '2', '3']; // Default
+
     try {
       var parsed = JSON.parse(raw.textContent);
       if (parsed && typeof parsed === 'object') {
@@ -114,47 +124,63 @@ Renders a Leaflet.js map showing the expedition route.
 
         // Determine earliest telemetry time
         var earliestTime = Infinity;
-        (data.telemetry || []).forEach(function(t) {
+        (data.telemetry || []).forEach(function (t) {
           var tTime = parseSafe(t.time || t[1]).getTime();
           if (tTime < earliestTime) earliestTime = tTime;
         });
         window.earliestTelemetryTime = earliestTime;
+
+        // Extract unique groups from telemetry
+        var allGroupIds = new Set();
+        if (data.telemetry && Array.isArray(data.telemetry)) {
+          data.telemetry.forEach(function (row) {
+            if (!Array.isArray(row) || row.length < 3) return;
+            var groups = row[2];
+            if (Array.isArray(groups)) {
+              groups.forEach(function (id) { allGroupIds.add(id.toString()); });
+            }
+          });
+        }
+        if (allGroupIds.size > 0) {
+          groupsArray = Array.from(allGroupIds);
+        }
       }
 
       // ─── Pre-process Telemetry (Grouped Array Reconstruction) ───
-      var busLast = {
-        1: { lat: null, lng: null, type: null, label: null },
-        2: { lat: null, lng: null, type: null, label: null },
-        3: { lat: null, lng: null, type: null, label: null }
-      };
+      var groupLast = {};
+      groupsArray.forEach(function (id) {
+        groupLast[id] = { lat: null, lng: null, type: null, label: null };
+      });
 
       var fullTelemetry = [];
       if (data.telemetry && Array.isArray(data.telemetry)) {
         data.telemetry.forEach(function (row) {
           if (!Array.isArray(row) || row.length < 3) return;
-          // row format: [day, time, [buses], lat, lng, type, label]
+          // row format: [day, time, [groups], lat, lng, type, label]
           var time = row[1];
-          var buses = row[2];
-          if (!Array.isArray(buses)) return;
+          var groups = row[2];
+          if (!Array.isArray(groups)) return;
           var lat = row[3];
           var lng = row[4];
           var type = row[5];
           var label = row[6];
 
-          buses.forEach(function (busId) {
-            if (!busLast[busId]) return; // Skip invalid bus IDs
-            if (lat !== null && lat !== undefined) busLast[busId].lat = lat;
-            if (lng !== null && lng !== undefined) busLast[busId].lng = lng;
-            if (type !== null && type !== undefined) busLast[busId].type = type;
-            if (label !== null && label !== undefined) busLast[busId].label = label;
+          var targetGroups = groups.length === 0 ? groupsArray : groups;
+          targetGroups.forEach(function (groupId) {
+            groupId = groupId.toString();
+            if (!groupLast[groupId]) return; // Skip invalid group IDs
+            if (lat !== null && lat !== undefined) groupLast[groupId].lat = lat;
+            if (lng !== null && lng !== undefined) groupLast[groupId].lng = lng;
+            if (type !== null && type !== undefined) groupLast[groupId].type = type;
+            if (label !== null && label !== undefined) groupLast[groupId].label = label;
 
             fullTelemetry.push({
               time: time,
-              lat: busLast[busId].lat,
-              lng: busLast[busId].lng,
-              type: busLast[busId].type,
-              label: busLast[busId].label,
-              bus: busId
+              lat: groupLast[groupId].lat,
+              lng: groupLast[groupId].lng,
+              type: groupLast[groupId].type,
+              label: groupLast[groupId].label,
+              group: groupId
             });
           });
         });
@@ -170,7 +196,7 @@ Renders a Leaflet.js map showing the expedition route.
               var flat = seg.points;
               var pairs = [];
               for (var i = 0; i < flat.length; i += 2) {
-                if (flat[i] !== undefined && flat[i+1] !== undefined) {
+                if (flat[i] !== undefined && flat[i + 1] !== undefined) {
                   pairs.push([flat[i], flat[i + 1]]);
                 }
               }
@@ -181,7 +207,6 @@ Renders a Leaflet.js map showing the expedition route.
       }
     } catch (e) {
       console.error('Failed to parse or pre-process expedition-data:', e);
-      // Don't return here - try to initialize the map anyway if possible
     }
 
     // ─── State ───────────────────────────────────────────────────────────────────
@@ -204,7 +229,7 @@ Renders a Leaflet.js map showing the expedition route.
           }
         }
       }
-      
+
       day._targetLat = coords ? coords.lat : null;
       day._targetLng = coords ? coords.lng : null;
 
@@ -234,14 +259,11 @@ Renders a Leaflet.js map showing the expedition route.
       if (s instanceof Date) return s;
       if (typeof s === 'number') return new Date(s);
       var str = s.toString().trim();
-      // Handle "YYYY-MM-DD"
       if (str.length === 10) str += 'T00:00:00+10:00';
-      // Handle "YYYY-MM-DD HH:MM:SS" or "YYYY-MM-DDTHH:MM:SS"
       else if (str.length === 19) {
         str = str.replace(' ', 'T') + '+10:00';
       }
       var d = new Date(str);
-      // Fallback for Safari/older browsers if T and offset are tricky
       if (isNaN(d.getTime())) {
         d = new Date(str.replace('T', ' ').replace(/\+(\d2):(\d2)$/, ' GMT+$1$2'));
       }
@@ -265,19 +287,21 @@ Renders a Leaflet.js map showing the expedition route.
 
       L.control.zoom({ position: 'topright' }).addTo(map);
 
-      // Dotted breadcrumb trails for the last 3 days (one per bus to prevent jumps)
-      var breadcrumbPaths = {
-        1: L.polyline([], { color: '#100e4c', weight: 2, dashArray: '2, 6', opacity: 0.3 }).addTo(map),
-        2: L.polyline([], { color: '#100e4c', weight: 2, dashArray: '2, 6', opacity: 0.3 }).addTo(map),
-        3: L.polyline([], { color: '#100e4c', weight: 2, dashArray: '2, 6', opacity: 0.3 }).addTo(map)
-      };
+      // Dotted breadcrumb trails (one per group to prevent jumps)
+      var breadcrumbPaths = {};
+      // Bold active paths for the current day (one per group to handle splits)
+      var activePaths = {};
+      // Track maximum index reached on the route for breadcrumbs
+      var maxBreadcrumbIdx = {};
+      var lastProcessedDay = null;
 
-      // Bold active paths for the current day (one per bus to handle splits)
-      var activePaths = {
-        1: L.polyline([], { color: '#008F88', weight: 4, dashArray: '8, 8', opacity: 0.8, lineCap: 'round' }).addTo(map),
-        2: L.polyline([], { color: '#008F88', weight: 4, dashArray: '8, 8', opacity: 0.8, lineCap: 'round' }).addTo(map),
-        3: L.polyline([], { color: '#008F88', weight: 4, dashArray: '8, 8', opacity: 0.8, lineCap: 'round' }).addTo(map)
-      };
+      groupsArray.forEach(function (gid) {
+        // Add active paths (route) first so they are in the background
+        activePaths[gid] = L.polyline([], { color: '#888888', weight: 2, dashArray: '8, 8', opacity: 0.3, lineCap: 'round' }).addTo(map);
+        // Add breadcrumbs second so they draw on top, styled as dots
+        breadcrumbPaths[gid] = L.polyline([], { color: '#008F88', weight: 6, dashArray: '1, 15', opacity: 0.8, lineCap: 'round' }).addTo(map);
+        maxBreadcrumbIdx[gid] = 0;
+      });
 
       var roadData = null;
       var activeMarkers = [];
@@ -289,6 +313,7 @@ Renders a Leaflet.js map showing the expedition route.
           depart: 'directions_bus',
           travel: 'directions_bus',
           activity: 'hiking',
+          breakfast: 'restaurant',
           lunch: 'restaurant',
           dinner: 'restaurant',
           arrive: 'location_on',
@@ -299,45 +324,53 @@ Renders a Leaflet.js map showing the expedition route.
         return icons[type] || 'directions_bus';
       }
 
-      function initBusMarkers() {
+      function initGroupMarkers() {
         if (!currentDay) return;
         var now = parseSafe(testDate);
-        var busStates = [];
+        var groupStates = [];
 
-        [1, 2, 3].forEach(function (busId) {
-          var busTelemetry = (data.telemetry || []).filter(function (t) {
-            var buses = t.bus || t[2];
-            return buses && (buses === busId || (buses.indexOf && buses.indexOf(busId) !== -1));
+        groupsArray.forEach(function (groupId) {
+          var groupTelemetry = (data.telemetry || []).filter(function (t) {
+            return t.group === groupId;
           });
-          
+
           var type = null, label = null, lat = null, lng = null;
 
-          for (var i = busTelemetry.length - 1; i >= 0; i--) {
-            var t = busTelemetry[i];
-            var tTime = parseSafe(t.time || t[1]).getTime();
+          for (var i = groupTelemetry.length - 1; i >= 0; i--) {
+            var t = groupTelemetry[i];
+            var tTime = parseSafe(t.time).getTime();
             if (tTime <= now.getTime()) {
-              var tLat = (t.lat !== undefined) ? t.lat : t[3];
-              var tLng = (t.lng !== undefined) ? t.lng : t[4];
-              var tType = (t.type !== undefined) ? t.type : t[5];
-              var tLabel = (t.label !== undefined) ? t.label : t[6];
+              if (lat === null && t.lat !== null && t.lat !== undefined) lat = t.lat;
+              if (lng === null && t.lng !== null && t.lng !== undefined) lng = t.lng;
+              if (type === null && t.type !== null && t.type !== undefined) type = t.type;
+              if (label === null && t.label !== null && t.label !== undefined) label = t.label;
 
-              if (lat === null && tLat !== null && tLat !== undefined) lat = tLat;
-              if (lng === null && tLng !== null && tLng !== undefined) lng = tLng;
-              if (type === null && tType !== null && tType !== undefined) type = tType;
-              if (label === null && tLabel !== null && tLabel !== undefined) label = tLabel;
-              
               if (lat !== null && lng !== null && type !== null && label !== null) break;
             }
           }
 
           if (lat !== null && lng !== null) {
-            var busColor = busId === 1 ? '#100e4c' : (busId === 2 ? '#008F88' : '#D95D26');
-            
-            busStates.push({
-              id: busId,
+            // Assign a color based on the group ID
+            var groupColor = '#008F88'; // Default
+            if (groupId === '1') groupColor = '#100e4c';
+            else if (groupId === '2') groupColor = '#008F88';
+            else if (groupId === '3') groupColor = '#D95D26';
+            else {
+              // Hash function for strings (like "Lavender")
+              var colors = ['#E65C00', '#F5A623', '#7ED321', '#4A90E2', '#9013FE'];
+              var hash = 0;
+              var str = groupId.toString();
+              for (var j = 0; j < str.length; j++) {
+                hash = str.charCodeAt(j) + ((hash << 5) - hash);
+              }
+              groupColor = colors[Math.abs(hash) % colors.length];
+            }
+
+            groupStates.push({
+              id: groupId,
               pos: [lat, lng],
               icon: getIconForType(type),
-              color: busColor,
+              color: groupColor,
               isNight: (type === 'stationary'),
               label: label,
               type: type
@@ -351,7 +384,7 @@ Renders a Leaflet.js map showing the expedition route.
 
         // Group by position
         var groups = {};
-        busStates.forEach(function (s) {
+        groupStates.forEach(function (s) {
           var key = s.pos[0].toFixed(5) + ',' + s.pos[1].toFixed(5);
           if (!groups[key]) groups[key] = [];
           groups[key].push(s);
@@ -364,12 +397,13 @@ Renders a Leaflet.js map showing the expedition route.
           var s = members[0];
           var isStacked = members.length > 1;
 
-          if (s.id === 1 || !focusPos) focusPos = s.pos;
+          if (s.id === '1' || !focusPos) focusPos = s.pos;
 
           var color = isStacked ? '#100e4c' : s.color;
           if (s.isNight) color = '#474650';
 
-          var badgeHtml = isStacked ? '' : '<div style="position:absolute;bottom:-10px;background:white;color:' + color + ';font-size:10px;font-weight:900;padding:0 4px;border-radius:4px;border:1px solid ' + color + '">' + s.id + '</div>';
+          var isAllGroups = members.length === groupsArray.length;
+          var badgeHtml = isAllGroups ? '' : '<div style="position:absolute;top:100%;margin-top:-4px;left:50%;transform:translateX(-50%);background:white;color:' + color + ';font-size:10px;font-weight:900;padding:2px 4px;border-radius:4px;border:1px solid ' + color + ';white-space:nowrap;text-align:center;">' + (isStacked ? members.map(function (m) { return m.id; }).join('<br>') : s.id) + '</div>';
 
           var iconHtml = '<div style="background:' + color + ';color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);border:2px solid white;"><span class="material-symbols-outlined" style="font-size:20px;">' + s.icon + '</span>' + badgeHtml + '</div>';
 
@@ -378,29 +412,29 @@ Renders a Leaflet.js map showing the expedition route.
             zIndexOffset: 1000
           }).addTo(map);
 
-          var labelText = isStacked ? 'Buses ' + members.map(function(m) { return m.id; }).join(' & ') : 'Bus ' + s.id;
+          var labelText = isStacked ? 'Groups ' + members.map(function (m) { return m.id; }).join(' & ') : 'Group ' + s.id;
           if (s.label) labelText += '<br><small>' + s.label + '</small>';
-          
+
           marker.bindPopup('<strong>' + labelText + '</strong>');
           activeMarkers.push(marker);
         });
 
         var uniquePositions = Object.keys(groups).map(function (k) { return groups[k][0].pos; });
-        
-        // Capture latest telemetry for each bus to use in path reveal
-        var busLatestData = {};
-        busStates.forEach(function(s) {
-          busLatestData[s.id] = { lat: s.pos[0], lng: s.pos[1] };
+
+        // Capture latest telemetry for each group to use in path reveal
+        var groupLatestData = {};
+        groupStates.forEach(function (s) {
+          groupLatestData[s.id] = { lat: s.pos[0], lng: s.pos[1] };
         });
 
-        return { groups: groups, uniquePositions: uniquePositions, busLatestData: busLatestData };
+        return { groups: groups, uniquePositions: uniquePositions, groupLatestData: groupLatestData };
       }
 
-      function updateMapUI(newTestDate) {
+      function updateMapUI(newTestDate, animate) {
         if (newTestDate) testDate = newTestDate;
         var now = parseSafe(testDate);
         var nowTime = now.getTime();
-        
+
         // Determine active day index based on absolute time
         var activeDayIdx = -1;
         itinerary.forEach(function (day, idx) {
@@ -412,9 +446,117 @@ Renders a Leaflet.js map showing the expedition route.
         });
 
         currentDay = activeDayIdx === -1 ? itinerary[0] : itinerary[activeDayIdx];
+
+        // Update breadcrumbs from telemetry following the route
+        if (data.telemetry && Array.isArray(data.telemetry) && data.route) {
+          groupsArray.forEach(function (groupId) {
+            var breadcrumbs = [];
+            var gStr = groupId.toString();
+
+            // Find latest telemetry for this group up to now
+            var latestTelemetry = null;
+            data.telemetry.forEach(function (t) {
+              var tGroup = t.group || 'Default';
+              var isMatch = false;
+              if (Array.isArray(t.group)) {
+                isMatch = t.group.map(String).indexOf(gStr) !== -1;
+              } else {
+                isMatch = tGroup.toString() === gStr;
+              }
+
+              if (isMatch) {
+                var tTime = parseSafe(t.time).getTime();
+                if ((data.data_mode === 'full' || tTime <= nowTime) && t.lat !== null && t.lng !== null) {
+                  latestTelemetry = [t.lat, t.lng];
+                }
+              }
+            });
+
+            // If we have no telemetry yet, nothing to show
+            if (!latestTelemetry) {
+              if (breadcrumbPaths[groupId]) breadcrumbPaths[groupId].setLatLngs([]);
+              return;
+            }
+
+            var allRoutePairs = [];
+
+            if (data.data_mode === 'full') {
+              data.route.forEach(function (rd) {
+                if (rd.segments) {
+                  rd.segments.forEach(function (seg) {
+                    var targetGroups = (seg.group && seg.group.length > 0) ? seg.group.map(String) : groupsArray.map(String);
+                    if (targetGroups.indexOf(gStr) !== -1) {
+                      allRoutePairs = allRoutePairs.concat(seg.points || []);
+                    }
+                  });
+                }
+              });
+            } else {
+              var dayNum = currentDay ? currentDay.day : 0;
+
+              if (dayNum !== lastProcessedDay) {
+                groupsArray.forEach(function (gid) {
+                  maxBreadcrumbIdx[gid] = 0;
+                });
+                lastProcessedDay = dayNum;
+              }
+
+              var rd = data.route.find(function (r) { return r.day === dayNum; });
+              if (rd && rd.segments) {
+                rd.segments.forEach(function (seg) {
+                  var targetGroups = (seg.group && seg.group.length > 0) ? seg.group.map(String) : groupsArray.map(String);
+                  if (targetGroups.indexOf(gStr) !== -1) {
+                    var pts = seg.points || [];
+                    allRoutePairs = allRoutePairs.concat(pts);
+                  }
+                });
+              }
+            }
+
+            // Find the closest point in allRoutePairs to latestTelemetry
+            if (allRoutePairs.length > 0) {
+              var closestIdx = 0;
+              var minDist = Infinity;
+              for (var i = 0; i < allRoutePairs.length; i++) {
+                var p = allRoutePairs[i];
+                var dy = p[0] - latestTelemetry[0];
+                var dx = p[1] - latestTelemetry[1];
+                var dist = dx * dx + dy * dy;
+                if (dist < minDist) {
+                  minDist = dist;
+                  closestIdx = i;
+                }
+              }
+
+              if (closestIdx > maxBreadcrumbIdx[groupId]) {
+                maxBreadcrumbIdx[groupId] = closestIdx;
+              }
+              // Breadcrumbs is the route up to the MAXIMUM closest point reached
+              breadcrumbs = allRoutePairs.slice(0, maxBreadcrumbIdx[groupId] + 1);
+            }
+
+            // Filter out any invalid points just in case
+            breadcrumbs = breadcrumbs.filter(function (p) {
+              return p && p[0] !== undefined && p[1] !== undefined && !isNaN(p[0]) && !isNaN(p[1]);
+            });
+
+            // Add current telemetry point at the end to connect to the bus,
+            // but ONLY if we are NOT backtracking (otherwise it draws a straight line back!)
+            if (breadcrumbs.length > 0 && closestIdx >= maxBreadcrumbIdx[groupId]) {
+              breadcrumbs.push(latestTelemetry);
+            }
+
+            if (breadcrumbPaths[groupId]) {
+              breadcrumbPaths[groupId].setLatLngs(breadcrumbs);
+            }
+          });
+        }
         completedCount = Math.max(0, activeDayIdx);
 
+        var isFullMode = data.data_mode === 'full';
+
         var statusLabel = activeDayIdx === -1 ? 'Before Departure' : (activeDayIdx === itinerary.length - 1 ? 'Expedition Complete' : 'Underway');
+        if (isFullMode) statusLabel = 'Expedition Complete';
 
         function getDistance(lat1, lon1, lat2, lon2) {
           var R = 6371; // km
@@ -449,29 +591,29 @@ Renders a Leaflet.js map showing the expedition route.
           return closestName;
         }
 
-        var busState = initBusMarkers();
-        
+        var groupState = initGroupMarkers();
+
         // Handle "Not Started" overlay
         var overlay = document.getElementById('map-not-started');
         if (overlay) {
           var buffer = 1 * 60 * 60 * 1000; // 1 hour in ms
           var isPreStart = now.getTime() < (window.expeditionStartTime - buffer);
-          
-          if (isPreStart) {
+
+          if (isPreStart && !data.test_mode) {
             overlay.classList.remove('hidden');
             overlay.style.opacity = "1";
-            
+
             // Update Countdown
             var diff = window.expeditionStartTime - now.getTime();
             var cdEl = document.getElementById('map-countdown');
             var titleEl = document.getElementById('map-not-started-title');
-            
+
             if (diff > 0) {
               var d = Math.floor(diff / (1000 * 60 * 60 * 24));
               var h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
               var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
               var s = Math.floor((diff % (1000 * 60)) / 1000);
-              
+
               if (cdEl) {
                 cdEl.innerHTML = `
                   <div class="flex items-center justify-center divide-x divide-white/10">
@@ -496,43 +638,58 @@ Renders a Leaflet.js map showing the expedition route.
               }
               if (titleEl) titleEl.textContent = 'Launching In';
             } else {
-               if (cdEl) cdEl.innerHTML = `<div class="text-2xl font-black font-headline text-white">Departing Now</div>`;
-               if (titleEl) titleEl.textContent = 'Get Ready';
+              if (cdEl) cdEl.innerHTML = `<div class="text-2xl font-black font-headline text-white">Departing Now</div>`;
+              if (titleEl) titleEl.textContent = 'Get Ready';
             }
           } else {
             overlay.style.opacity = "0";
-            setTimeout(function() { if (overlay.style.opacity === "0") overlay.classList.add('hidden'); }, 500);
+            setTimeout(function () { if (overlay.style.opacity === "0") overlay.classList.add('hidden'); }, 500);
           }
         }
-        var busPositions = busState.uniquePositions;
-        var busGroups = busState.groups;
-        var busLatestData = busState.busLatestData; // New: capture latest telemetry per bus
-        
+        var groupPositions = groupState.uniquePositions;
+        var groupGroups = groupState.groups;
+        var groupLatestData = groupState.groupLatestData;
+
         var locationHtml = '';
-        var groupKeys = Object.keys(busGroups);
-        
+        var groupKeys = Object.keys(groupGroups);
+
         if (groupKeys.length === 1) {
-           // All buses in one place
-           var members = busGroups[groupKeys[0]];
-           var place = getClosestPlaceName(members[0].pos, members[0].label);
-           locationHtml = '<div class="text-base font-black leading-tight">' + place + '</div>';
+          var members = groupGroups[groupKeys[0]];
+          var place = getClosestPlaceName(members[0].pos, members[0].label);
+          locationHtml = '<div class="text-base font-black leading-tight">' + place + '</div>';
         } else {
-           // Buses split up
-           groupKeys.forEach(function(key) {
-             var members = busGroups[key];
-             var place = getClosestPlaceName(members[0].pos, members[0].label);
-             var busLabel = 'Bus ' + members.map(function(m) { return m.id; }).join('+');
-             locationHtml += '<div class="flex flex-col mb-1 last:mb-0"><div class="text-[10px] font-bold opacity-60 uppercase">' + busLabel + '</div><div class="text-sm font-black leading-tight">' + place + '</div></div>';
-           });
+          groupKeys.forEach(function (key) {
+            var members = groupGroups[key];
+            var place = getClosestPlaceName(members[0].pos, members[0].label);
+            var groupLabel = 'Group ' + members.map(function (m) { return m.id; }).join('+');
+            locationHtml += '<div class="flex flex-col mb-1 last:mb-0"><div class="text-[10px] font-bold opacity-60 uppercase">' + groupLabel + '</div><div class="text-sm font-black leading-tight">' + place + '</div></div>';
+          });
         }
-        
+
         var locContainer = document.getElementById('map-current-location');
         if (locContainer) locContainer.innerHTML = locationHtml;
 
         setText('map-status-label', statusLabel);
         setText('map-day-label', currentDay.title);
         setText('map-day-badge', 'Day ' + currentDay.day);
-        
+
+        if (data.data_mode === 'full') {
+          var dayCard = document.getElementById('map-day-card');
+          if (dayCard) dayCard.classList.add('hidden');
+
+          var statusCard = document.getElementById('map-status-card');
+          if (statusCard) statusCard.classList.add('hidden');
+
+          var statusTitle = document.getElementById('map-current-status-title');
+          if (statusTitle) statusTitle.textContent = 'planning the next adventure';
+
+          var locContainer = document.getElementById('map-current-location');
+          if (locContainer) locContainer.classList.add('hidden');
+
+          var progContainer = document.getElementById('map-progress-container');
+          if (progContainer) progContainer.classList.add('hidden');
+        }
+
         function formatOffsetTimeDisplay(date, offsetStr) {
           var offsetParts = (offsetStr || '+10:00').match(/([\+\-])(\d{2}):(\d{2})/);
           var sign = (offsetParts && offsetParts[1] === '-') ? -1 : 1;
@@ -540,15 +697,15 @@ Renders a Leaflet.js map showing the expedition route.
           var mins = offsetParts ? parseInt(offsetParts[3]) : 0;
           var offsetMs = sign * (hours * 3600000 + mins * 60000);
           var shifted = new Date(date.getTime() + offsetMs);
-          
+
           var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
           var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-          
+
           var dName = days[shifted.getUTCDay()];
           var dNum = shifted.getUTCDate();
           var mName = months[shifted.getUTCMonth()];
           var year = shifted.getUTCFullYear();
-          
+
           return dName + ' ' + dNum + ' ' + mName + ' ' + year;
         }
 
@@ -563,10 +720,10 @@ Renders a Leaflet.js map showing the expedition route.
 
         var firstEventDate = parseSafe(firstDay.events[0].date).getTime();
         var lastEventDate = parseSafe(lastDay.events[lastDay.events.length - 1].date).getTime();
-        
+
         var globalStartTime = firstEventDate;
         var globalEndTime = lastEventDate;
-        
+
         var totalProgress = 0;
         if (nowTime <= globalStartTime) {
           totalProgress = 0;
@@ -581,58 +738,12 @@ Renders a Leaflet.js map showing the expedition route.
         var bar = document.getElementById('map-progress-bar');
         if (bar) bar.style.width = progressPct + '%';
 
-        if (roadData) {
-          var dayData = (roadData || []).find(function (d) { return d.day === currentDay.day; });
 
-          // Update active trail for each bus based on telemetry position
-          [1, 2, 3].forEach(function (busId) {
-            var busRoute = null;
-            if (dayData && dayData.segments) {
-              var seg = dayData.segments.find(function (s) {
-                return !s.bus || s.bus.indexOf(busId) !== -1;
-              });
-              if (seg) busRoute = seg.points;
-            }
-            if (busRoute && busLatestData[busId]) {
-              // Find point in busRoute closest to latest telemetry
-              var latest = busLatestData[busId];
-              var closestIdx = 0;
-              var minD = Infinity;
-              for (var j = 0; j < busRoute.length; j++) {
-                var d = getDistance(latest.lat, latest.lng, busRoute[j][0], busRoute[j][1]);
-                if (d < minD) {
-                  minD = d;
-                  closestIdx = j;
-                }
-              }
-              activePaths[busId].setLatLngs(busRoute.slice(0, closestIdx + 1));
-            } else {
-              activePaths[busId].setLatLngs([]);
-            }
-          });
-
-          // Breadcrumbs for previous days (independent per bus)
-          [1, 2, 3].forEach(function (busId) {
-            var breadcrumbPoints = [];
-            for (var d = currentDay.day - 3; d < currentDay.day; d++) {
-              if (d >= 1) {
-                var dData = (roadData || []).find(function (rd) { return rd.day === d; });
-                if (dData && dData.segments) {
-                  var seg = dData.segments.find(function (s) {
-                    return !s.bus || s.bus.indexOf(busId) !== -1;
-                  });
-                  if (seg) breadcrumbPoints = breadcrumbPoints.concat(seg.points);
-                }
-              }
-            }
-            breadcrumbPaths[busId].setLatLngs(breadcrumbPoints);
-          });
-        }
 
         // Update stop markers
         stopMarkers.forEach(function (m) {
           var wp = m.wp;
-          var wpIdx = wp.day - 1; // day is 1-indexed in waypoints
+          var wpIdx = wp.day - 1;
           var isCurrent = (activeDayIdx !== -1 && wpIdx === activeDayIdx);
           var isComplete = (wpIdx < activeDayIdx);
 
@@ -649,31 +760,36 @@ Renders a Leaflet.js map showing the expedition route.
 
         // Update Activity Markers
         eventMarkers.forEach(function (m) {
-          // Only show activities for current or completed days
           if (m.dayIdx > activeDayIdx) {
             m.marker.remove();
           } else {
-            m.marker.addTo(map);
+            if (data.data_mode === 'full' && (m.ev.type === 'breakfast' || m.ev.type === 'lunch' || m.ev.type === 'dinner' || m.ev.type === 'restaurant')) {
+              m.marker.remove();
+            } else {
+              m.marker.addTo(map);
+            }
           }
         });
 
         if (window.shouldAutoFocus) {
-          if (busPositions && busPositions.length > 0) {
-            if (busPositions.length === 1) {
-              map.setView(busPositions[0], 11, { animate: true });
-            } else {
-              var bounds = L.latLngBounds(busPositions);
-              map.fitBounds(bounds, { padding: [50, 50], animate: true });
+          var useAnimation = animate !== undefined ? animate : true;
+          if (data.data_mode === 'full') {
+            var points = [];
+            waypoints.forEach(function (w) { points.push([w.lat, w.lng]); });
+            if (points.length > 0) {
+              map.fitBounds(L.polyline(points).getBounds(), { padding: [48, 48], animate: useAnimation });
+              window.shouldAutoFocus = false; // Only do it once!
             }
+          } else if (groupPositions && groupPositions.length > 0) {
+            var bounds = L.latLngBounds(groupPositions);
+            map.fitBounds(bounds, { padding: [50, 50], animate: useAnimation, maxZoom: 11 });
           } else {
-            // No telemetry available. Try to zoom to the current day's location from itinerary.
             var currentWP = (waypoints || []).find(function (w) { return w.day === currentDay.day; });
             if (currentWP) {
-              map.setView([currentWP.lat, currentWP.lng], 12, { animate: true });
+              map.setView([currentWP.lat, currentWP.lng], 12, { animate: useAnimation });
             } else if (waypoints && waypoints.length > 0) {
-              // Final fallback: show the whole route
               var allPoints = waypoints.map(function (w) { return [w.lat, w.lng]; });
-              map.fitBounds(L.latLngBounds(allPoints), { padding: [50, 50] });
+              map.fitBounds(L.latLngBounds(allPoints), { padding: [50, 50], animate: useAnimation });
             }
           }
         }
@@ -688,26 +804,43 @@ Renders a Leaflet.js map showing the expedition route.
       document.getElementById('map-btn-full').addEventListener('click', function () {
         window.shouldAutoFocus = false;
         var points = [];
-        [1, 2, 3].forEach(function (bid) {
-          points = points.concat(activePaths[bid].getLatLngs());
-          points = points.concat(breadcrumbPaths[bid].getLatLngs());
+        groupsArray.forEach(function (gid) {
+          points = points.concat(activePaths[gid].getLatLngs());
+          points = points.concat(breadcrumbPaths[gid].getLatLngs());
         });
         if (points.length > 0) {
           map.fitBounds(L.polyline(points).getBounds(), { padding: [48, 48] });
         } else {
-          map.fitBounds(L.polyline(waypoints.map(function(w) { return [w.lat, w.lng]; })).getBounds(), { padding: [48, 48] });
+          map.fitBounds(L.polyline(waypoints.map(function (w) { return [w.lat, w.lng]; })).getBounds(), { padding: [48, 48] });
         }
       });
 
       map.on('dragstart', function () { window.shouldAutoFocus = false; });
 
-      // ─── Static Markers (Overnight) ───────────────────────────────────────────
-      waypoints.forEach(function (wp) {
-        var m = L.marker([wp.lat, wp.lng], {
-          icon: L.divIcon({ html: '', className: '' })
-        }).addTo(map).bindPopup('<strong>' + wp.location + '</strong><br>Day ' + wp.day);
-        stopMarkers.push({ marker: m, wp: wp });
+      // ─── Activity & Camping Markers ───────────────────────────────────────────
+      itinerary.forEach(function (day, dayIdx) {
+        if (day.events) {
+          day.events.forEach(function (ev) {
+            if (ev.loc && ev.type !== 'depart') {
+              var isCamp = ev.type === 'arrive' || ev.type === 'camp';
+              var iconName = isCamp ? 'camping' : 'star';
+              var iconColor = isCamp ? '#100e4c' : '#008F88';
+              var iconHtml = '<div style="background:white;color:' + iconColor + ';width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.2);border:2px solid ' + iconColor + ';"><span class="material-symbols-outlined" style="font-size:16px;">' + iconName + '</span></div>';
+
+              var m = L.marker([ev.loc[0], ev.loc[1]], {
+                icon: L.divIcon({ html: iconHtml, className: '', iconSize: [24, 24], iconAnchor: [12, 12] })
+              }).bindPopup('<strong>' + ev.label + '</strong><br>' + (ev.detail || ''));
+
+              if (data.data_mode === 'full') {
+                m.addTo(map);
+              }
+
+              eventMarkers.push({ marker: m, dayIdx: dayIdx, ev: ev });
+            }
+          });
+        }
       });
+
 
       // ─── Activity Markers ─────────────────────────────────────────────────────
       itinerary.forEach(function (day, dayIdx) {
@@ -718,15 +851,37 @@ Renders a Leaflet.js map showing the expedition route.
               var m = L.marker([ev.loc[0], ev.loc[1]], {
                 icon: L.divIcon({ html: iconHtml, className: '', iconSize: [24, 24], iconAnchor: [12, 12] })
               }).bindPopup('<strong>' + ev.label + '</strong><br>' + (ev.detail || ''));
-              eventMarkers.push({ marker: m, dayIdx: dayIdx });
+
+              if (data.data_mode === 'full') {
+                m.addTo(map);
+              }
+
+              eventMarkers.push({ marker: m, dayIdx: dayIdx, ev: ev });
             }
           });
         }
       });
 
       // ─── Initial Load ─────────────────────────────────────────────────────────
-      if (data.route) {
+      if (data.route && data.data_mode === 'full') {
         roadData = data.route;
+
+        // Plot full route for the entire trip
+        var fullRoutePoints = [];
+        roadData.forEach(function (rd) {
+          if (rd.segments) {
+            rd.segments.forEach(function (seg) {
+              if (seg.points) {
+                fullRoutePoints = fullRoutePoints.concat(seg.points);
+              }
+            });
+          }
+        });
+
+        if (fullRoutePoints.length > 0) {
+          var fullPoly = L.polyline(fullRoutePoints, { color: '#100e4c', weight: 3, opacity: 0.7 }).addTo(map);
+          map.fitBounds(fullPoly.getBounds(), { padding: [48, 48] });
+        }
       }
       updateMapUI();
 
@@ -734,9 +889,57 @@ Renders a Leaflet.js map showing the expedition route.
         updateMapUI(e.detail.time);
       });
 
-      // If not in test mode, update countdown every second
+      window.addEventListener('expeditionDayViewed', function (e) {
+        var dayIdx = e.detail.dayIdx;
+
+        // Clear previous active paths
+        if (typeof activePaths !== 'undefined') {
+          Object.keys(activePaths).forEach(function (gid) {
+            activePaths[gid].setLatLngs([]);
+          });
+        }
+
+        // Find route for the viewed day
+        var currentDayObj = itinerary[dayIdx];
+        var dayNum = currentDayObj ? currentDayObj.day : dayIdx;
+
+        var routeDay = null;
+        if (data.route) {
+          routeDay = data.route.find(function (rd) { return rd.day === dayNum; });
+        }
+
+        if (routeDay && routeDay.segments) {
+          routeDay.segments.forEach(function (seg) {
+            var targetGroups = (seg.group && seg.group.length > 0) ? seg.group : groupsArray;
+            var points = seg.points;
+
+            targetGroups.forEach(function (gid) {
+              gid = gid.toString();
+              if (activePaths[gid]) {
+                var currentPoints = activePaths[gid].getLatLngs();
+                activePaths[gid].setLatLngs(currentPoints.concat(points));
+              }
+            });
+          });
+        }
+
+        eventMarkers.forEach(function (m) {
+          if (m.dayIdx === dayIdx) {
+            // Highlight!
+            var highlightedIconHtml = '<div style="background:#008F88;color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.3);border:2px solid white;animation:expedition-pulse 2s infinite;"><span class="material-symbols-outlined" style="font-size:20px;">star</span></div>';
+            m.marker.setIcon(L.divIcon({ html: highlightedIconHtml, className: '', iconSize: [32, 32], iconAnchor: [16, 16] }));
+            m.marker.setZIndexOffset(1000); // Bring to front!
+          } else {
+            // Revert to normal!
+            var normalIconHtml = '<div style="background:white;color:#008F88;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.2);border:2px solid #008F88;"><span class="material-symbols-outlined" style="font-size:16px;">star</span></div>';
+            m.marker.setIcon(L.divIcon({ html: normalIconHtml, className: '', iconSize: [24, 24], iconAnchor: [12, 12] }));
+            m.marker.setZIndexOffset(0);
+          }
+        });
+      });
+
       if (!data.test_mode) {
-        setInterval(function() {
+        setInterval(function () {
           var overlay = document.getElementById('map-not-started');
           if (overlay && !overlay.classList.contains('hidden')) {
             updateMapUI();
@@ -769,10 +972,6 @@ Renders a Leaflet.js map showing the expedition route.
 
   .expedition-popup .leaflet-popup-tip {
     background: white;
-  }
-
-  #expedition-map {
-    background: #f5f3f3;
   }
 
   #expedition-map {

@@ -1,0 +1,409 @@
+itinerary:
+- day: 0
+  title: Bus Pickup
+  location: Bundoora Scout Hall
+  image: "/uploads/trip/ki-2023/bus.jpg"
+  events:
+    - date: '2023-09-17T14:30:00+10:00'
+      type: arrive
+      label: Pick up Bus
+      loc: [ -37.70465, 145.0631543 ]
+- day: 1
+  title: Departure & Victor Harbour
+  location: Victor Harbour
+  image: "/uploads/trip/ki-2023/victor-harbor.jpg"
+  events:
+    - date: '2023-09-18T06:00:00+10:00'
+      type: arrive
+      label: Meet at hall
+      loc: [ -37.70465, 145.0631543 ]
+    - date: '2023-09-18T07:00:00+10:00'
+      type: depart
+      label: Departure
+      loc: [ -37.70465, 145.0631543 ]
+    - date: '2023-09-18T12:00:00+10:00'
+      type: lunch
+      label: Lunch
+      loc: [ -36.3118, 140.7702 ]
+    - date: '2023-09-18T17:00:00+09:30'
+      type: arrive
+      label: Arrive Victor Harbour
+      loc: [ -35.5511, 138.6222 ]
+    - date: '2023-09-18T18:30:00+09:30'
+      type: dinner
+      label: Dinner
+      dwell: 1.5
+- day: 2
+  title: Ferry to Kangaroo Island
+  location: KI West Camping ground
+  image: "/uploads/trip/ki-2023/ferry.JPG"
+  events:
+    - date: '2023-09-19T07:30:00+09:30'
+      type: breakfast
+      label: Breakfast
+    - date: '2023-09-19T08:30:00+09:30'
+      type: depart
+      label: Depart Victor Harbour
+    - date: '2023-09-19T12:00:00+09:30'
+      type: travel
+      label: Ferry to Island (Cape Jarvis)
+      loc: [ -35.6055, 138.1001 ]
+    - date: '2023-09-19T12:45:00+09:30'
+      type: arrive
+      label: Arrive Kangaroo Island (Penneshaw)
+      loc: [ -35.718, 137.940 ]
+    - date: '2023-09-19T13:00:00+09:30'
+      type: lunch
+      label: Lunch
+    - date: '2023-09-19T14:30:00+09:30'
+      type: arrive
+      label: Arrival at KI West Camping ground
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-19T18:30:00+09:30'
+      type: dinner
+      label: Dinner
+      dwell: 1.5
+- day: 3
+  title: Activities Day 1
+  location: KI West Camping ground
+  image: "/uploads/trip/ki-2023/quad-bike.jpg"
+  events:
+    - date: '2023-09-20T07:30:00+09:30'
+      type: breakfast
+      label: Breakfast
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-20T09:00:00+09:30'
+      type: activity
+      label: 'Quad Biking'
+      group: ['Lavender']
+      loc: [ -35.976389, 136.940000 ]
+      dwell: 1.5
+    - date: '2023-09-20T09:00:00+09:30'
+      type: activity
+      label: 'Kayaking'
+      group: ['Pink']
+      loc: [ -35.98398, 137.16808 ]
+      dwell: 1.5
+    - date: '2023-09-20T09:00:00+09:30'
+      type: activity
+      label: 'Vivonne Bay Hike'
+      group: ['Blue']
+      loc: [ -35.9814375, 137.1834375 ]
+      dwell: 1.5
+    - date: '2023-09-20T09:00:00+09:30'
+      type: activity
+      label: 'Rockpools'
+      group: ['Yellow']
+      loc: [ -35.9969393, 137.18892 ]
+      dwell: 1.5
+    - date: '2023-09-20T11:00:00+09:30'
+      type: activity
+      label: 'Hike'
+      group: ['Lavender']
+      loc: [ -35.9814375, 137.1834375 ]
+      dwell: 2.0
+    - date: '2023-09-20T11:00:00+09:30'
+      type: activity
+      label: 'Rockpools'
+      group: ['Pink']
+      loc: [ -35.9969393, 137.18892 ]
+      dwell: 2.0
+    - date: '2023-09-20T11:00:00+09:30'
+      type: activity
+      label: 'Quad Biking'
+      group: ['Blue']
+      loc: [ -35.976389, 136.940000 ]
+      dwell: 2.0
+    - date: '2023-09-20T11:00:00+09:30'
+      type: activity
+      label: 'Kayaking'
+      group: ['Yellow']
+      loc: [ -35.98398, 137.16808 ]
+      dwell: 2.0
+    - date: '2023-09-20T18:30:00+09:30'
+      type: dinner
+      label: Dinner
+      loc: [ -35.7752, 136.9438 ]
+      dwell: 1.5
+- day: 4
+  title: Activities Day 2
+  location: KI West Camping ground
+  image: "/uploads/trip/ki-2023/kayaks.jpg"
+  events:
+    - date: '2023-09-21T07:30:00+09:30'
+      type: breakfast
+      label: Breakfast
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-21T09:00:00+09:30'
+      type: activity
+      label: 'Rockpools'
+      group: ['Lavender']
+      loc: [ -35.9969393, 137.18892 ]
+      dwell: 1.5
+    - date: '2023-09-21T09:00:00+09:30'
+      type: activity
+      label: 'Quad Biking'
+      group: ['Pink']
+      loc: [ -35.976389, 136.940000 ]
+      dwell: 1.5
+    - date: '2023-09-21T09:00:00+09:30'
+      type: activity
+      label: 'Kayaking'
+      group: ['Blue']
+      loc: [ -35.98398, 137.16808 ]
+      dwell: 1.5
+    - date: '2023-09-21T09:00:00+09:30'
+      type: activity
+      label: 'Hike'
+      group: ['Yellow']
+      loc: [ -35.9814375, 137.1834375 ]
+      dwell: 1.5
+    - date: '2023-09-21T11:00:00+09:30'
+      type: activity
+      label: 'Kayaking'
+      group: ['Lavender']
+      loc: [ -35.98398, 137.16808 ]
+      dwell: 2.0
+    - date: '2023-09-21T11:00:00+09:30'
+      type: activity
+      label: 'Hike'
+      group: ['Pink']
+      loc: [ -35.9814375, 137.1834375 ]
+      dwell: 2.0
+    - date: '2023-09-21T11:00:00+09:30'
+      type: activity
+      label: 'Rockpools'
+      group: ['Blue']
+      loc: [ -35.9969393, 137.18892 ]
+      dwell: 2.0
+    - date: '2023-09-21T11:00:00+09:30'
+      type: activity
+      label: 'Quad Biking'
+      group: ['Yellow']
+      loc: [ -35.976389, 136.940000 ]
+      dwell: 2.0
+    - date: '2023-09-21T18:30:00+09:30'
+      type: dinner
+      label: Dinner
+      loc: [ -35.7752, 136.9438 ]
+      dwell: 1.5
+- day: 5
+  title: Sealions & Apiary
+  location: KI West Camping ground
+  image: "/uploads/trip/ki-2023/sea-lions.jpg"
+  events:
+    - date: '2023-09-22T08:00:00+09:30'
+      type: breakfast
+      label: Breakfast
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-22T10:45:00+09:30'
+      type: activity
+      label: Sealions Tour
+      loc: [ -35.9986, 137.3625 ]
+      dwell: 1.5
+    - date: '2023-09-22T13:00:00+09:30'
+      type: lunch
+      label: Lunch
+    - date: '2023-09-22T15:00:00+09:30'
+      type: activity
+      label: Apiary Tour
+      group: ['Blue', 'Yellow']
+      loc: [ -35.6530625, 137.634125 ]
+      dwell: 2.0
+    - date: '2023-09-22T15:00:00+09:30'
+      type: activity
+      label: Beach
+      group: ['Lavender', 'Pink']
+      loc: [ -35.624013, 137.206291 ]
+      dwell: 2.0
+    - date: '2023-09-22T18:30:00+09:30'
+      type: dinner
+      label: Dinner
+      loc: [ -35.7752, 136.9438 ]
+      dwell: 1.5
+- day: 6
+  title: Free Time & Dune Buggy
+  location: KI West Camping ground
+  image: "/uploads/trip/ki-2023/dune-buggy.jpg"
+  events:
+    - date: '2023-09-23T08:00:00+09:30'
+      type: breakfast
+      label: Breakfast
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-23T12:00:00+09:30'
+      type: lunch
+      label: Lunch
+    - date: '2023-09-23T13:00:00+09:30'
+      type: activity
+      label: 'Dune Buggy'
+      group: ['Lavender', 'Pink']
+      loc: [ -35.9429375, 137.2426875 ]
+    - date: '2023-09-23T14:00:00+09:30'
+      type: activity
+      label: 'Dune Buggy'
+      group: ['Blue', 'Yellow']
+      loc: [ -35.9429375, 137.2426875 ]
+    - date: '2023-09-23T18:30:00+09:30'
+      type: dinner
+      label: Dinner
+      loc: [ -35.7752, 136.9438 ]
+      dwell: 1.5
+- day: 7
+  title: Raptor Domain
+  location: KI West Camping ground
+  image: "/uploads/trip/ki-2023/raptor-domain.jpg"
+  events:
+    - date: '2023-09-24T08:00:00+09:30'
+      type: breakfast
+      label: Breakfast
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-24T09:00:00+09:30'
+      type: activity
+      label: Raptor Domain (All)
+      loc: [ -35.9205, 137.3036 ]
+      dwell: 2.0
+    - date: '2023-09-24T12:00:00+09:30'
+      type: lunch
+      label: Lunch
+    - date: '2023-09-24T15:00:00+09:30'
+      type: activity
+      label: Apiary Tour
+      group: ['Lavender', 'Pink']
+      loc: [ -35.6530625, 137.634125 ]
+      dwell: 2.0
+    - date: '2023-09-24T15:00:00+09:30'
+      type: activity
+      label: Beach
+      group: ['Blue', 'Yellow']
+      loc: [ -35.621292, 137.209478 ]
+      dwell: 2.0
+    - date: '2023-09-24T18:30:00+09:30'
+      type: dinner
+      label: Dinner
+      loc: [ -35.7752, 136.9438 ]
+      dwell: 1.5
+- day: 8
+  title: Dune Surfing
+  location: KI West Camping ground
+  image: "/uploads/trip/ki-2023/remarkable-rocks.jpg"
+  events:
+    - date: '2023-09-25T08:00:00+09:30'
+      type: breakfast
+      label: Breakfast
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-25T09:00:00+09:30'
+      type: activity
+      label: Dune Surfing Rotations
+      loc: [ -35.9926, 137.3308 ]
+      dwell: 3.0
+    - date: '2023-09-25T12:30:00+09:30'
+      type: lunch
+      label: Lunch
+    - date: '2023-09-25T13:30:00+09:30'
+      type: activity
+      label: Remarkable Rocks & Admiral's Arch
+      loc: [ -36.0480, 136.7572 ]
+      dwell: 3.0
+    - date: '2023-09-25T18:30:00+09:30'
+      type: dinner
+      label: Dinner
+      loc: [ -35.7752, 136.9438 ]
+      dwell: 1.5
+- day: 9
+  title: Wildlife Park
+  location: KI West Camping ground
+  image: "/uploads/trip/ki-2023/wildlife-park.jpg"
+  events:
+    - date: '2023-09-26T08:00:00+09:30'
+      type: breakfast
+      label: Breakfast
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-26T10:00:00+09:30'
+      type: activity
+      label: Wildlife Park
+      loc: [ -35.7725, 137.2858 ]
+      dwell: 3.0
+    - date: '2023-09-26T13:00:00+09:30'
+      type: lunch
+      label: Lunch
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-26T18:30:00+09:30'
+      type: dinner
+      label: Dinner
+      dwell: 1.5
+- day: 10
+  title: Ravine Hike
+  location: KI West Camping ground
+  image: "/uploads/trip/ki-2023/ravine-hike.jpg"
+  events:
+    - date: '2023-09-27T08:00:00+09:30'
+      type: breakfast
+      label: Breakfast
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-27T09:00:00+09:30'
+      type: activity
+      label: 'Ravine Hike'
+      group: ['Lavender', 'Pink']
+      loc: [ -35.7930, 136.5790 ]
+      dwell: 3.0
+    - date: '2023-09-27T09:00:00+09:30'
+      type: activity
+      label: 'Cape Borda'
+      group: ['Blue', 'Yellow']
+      loc: [ -35.7527, 136.5933 ]
+      dwell: 3.0
+    - date: '2023-09-27T13:00:00+09:30'
+      type: lunch
+      label: Lunch
+      loc: [ -35.7752, 136.9438 ]
+    - date: '2023-09-27T18:30:00+09:30'
+      type: dinner
+      label: Dinner
+      dwell: 1.5
+- day: 11
+  title: Return to Mainland
+  location: Mt Gambier
+  image: "/uploads/trip/ki-2023/blue-lake.jpg"
+  events:
+    - date: '2023-09-28T07:00:00+09:30'
+      type: depart
+      label: Pack up campsite
+      dwell: 1.5
+    - date: '2023-09-28T12:30:00+09:30'
+      type: lunch
+      label: Lunch
+      loc: [ -35.718, 137.940 ]
+    - date: '2023-09-28T13:30:00+09:30'
+      type: travel
+      label: Ferry From Island (Penneshaw)
+    - date: '2023-09-28T14:15:00+09:30'
+      type: arrive
+      label: Arrive Mainland (Cape Jervis)
+      loc: [ -35.6055, 138.1001 ]
+    - date: '2023-09-28T20:00:00+09:30'
+      type: arrive
+      label: Arrive Mt Gambier (Blue Lake)
+      loc: [ -37.8284, 140.7804 ]
+    - date: '2023-09-28T20:30:00+09:30'
+      type: dinner
+      label: Dinner
+      dwell: 1.5
+- day: 12
+  title: Return Home
+  location: Bundoora Scout Hall
+  image: "/uploads/trip/ki-2023/bus.jpg"
+  events:
+    - date: '2023-09-29T08:00:00+09:30'
+      type: breakfast
+      label: Breakfast
+    - date: '2023-09-29T09:00:00+09:30'
+      type: depart
+      label: Depart Mt Gambier
+    - date: '2023-09-29T12:30:00+09:30'
+      type: lunch
+      label: Lunch
+      loc: [ -38.340, 143.585 ]
+    - date: '2023-09-29T15:30:00+10:00'
+      type: arrive
+      label: Bus Return & Dismissal
+      loc: [ -37.70465, 145.0631543 ]

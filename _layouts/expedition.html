@@ -13,7 +13,8 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
     "telemetry": {{ site.data[page.data_location][page.data_telemetry].telemetry | jsonify | default: 'null' }},
     "route": {{ site.data[page.data_location][page.data_route].route | jsonify | default: 'null' }},
     "test_date": {{ page.test_date | jsonify }},
-    "test_mode": {{ page.test_mode | default: false | jsonify }}
+    "test_mode": {{ page.test_mode | default: false | jsonify }},
+    "data_mode": {{ page.data_mode | default: 'live' | jsonify }}
   }
 </script>
 
@@ -65,15 +66,15 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
         <div class="flex flex-wrap items-center gap-6 text-primary-fixed-dim">
           <div class="flex items-center gap-2 text-sm font-semibold">
             <span class="material-symbols-outlined text-[18px]">calendar_today</span>
-            <span>28 Jun – 11 Jul 2026</span>
+            <span>{{ page.trip_dates | default: '28 Jun – 11 Jul 2026' }}</span>
           </div>
           <div class="flex items-center gap-2 text-sm font-semibold">
             <span class="material-symbols-outlined text-[18px]">directions_bus</span>
-            <span>3 Buses &amp; 3 Support 4WDs</span>
+            <span>{{ page.trip_vehicles | default: '3 Buses &amp; 3 Support 4WDs' }}</span>
           </div>
           <div class="flex items-center gap-2 text-sm font-semibold">
             <span class="material-symbols-outlined text-[18px]">route</span>
-            <span>15 Days · ~5,000 km</span>
+            <span>{{ page.trip_stats | default: '15 Days · ~5,000 km' }}</span>
           </div>
         </div>
 
