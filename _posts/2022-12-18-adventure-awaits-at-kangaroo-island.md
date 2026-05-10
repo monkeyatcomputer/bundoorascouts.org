@@ -14,8 +14,8 @@ tags:
     - Kangaroo Island 2023
     - KI 2026
 trip_details:
-  dates: "18th September &mdash; 29th September 2023"
-  cost: "$TBC"
+  dates: "18th September &ndash; 29th September 2023"
+  cost: "$1800"
 itinerary:
   - image: "/uploads/trip/ki-2023/victor-harbor.jpg"
     title: "Victor Harbor"
