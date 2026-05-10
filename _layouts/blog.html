@@ -58,7 +58,7 @@ layout: default
     {{ content }}
 
     <!-- Post Grid -->
-    {% assign posts_to_show = posts | default: paginator.posts | default: site.posts %}
+    {% assign posts_to_show = paginator.posts | default: posts | default: site.posts %}
     {% if posts_to_show.size > 0 %}
 
     <!-- Featured Post -->
@@ -108,13 +108,15 @@ layout: default
                 class="hidden sm:flex w-10 h-10 rounded-full bg-primary/5 items-center justify-center border border-outline-variant/20">
                 <span class="material-symbols-outlined text-primary text-xl">person</span>
               </div>
-              <span class="text-[10px] sm:text-sm font-black text-primary uppercase tracking-tighter">{{ featured.author | first
+              <span class="text-[10px] sm:text-sm font-black text-primary uppercase tracking-tighter">{{ featured.author
+                | first
                 }}</span>
             </div>
 
             <a href="{{ featured.url }}"
               class="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-base font-black sm:font-bold text-secondary sm:text-white uppercase sm:normal-case tracking-tighter sm:tracking-normal bg-transparent sm:bg-primary px-0 sm:px-8 py-0 sm:py-3 rounded-none sm:rounded-xl hover:scale-105 transition-all sm:shadow-ambient-md">
-              Read <span class="hidden sm:inline">Full</span> Story <span class="material-symbols-outlined text-xs sm:text-base">arrow_forward</span>
+              Read <span class="hidden sm:inline">Full</span> Story <span
+                class="material-symbols-outlined text-xs sm:text-base">arrow_forward</span>
             </a>
           </div>
         </div>
@@ -125,9 +127,9 @@ layout: default
     <!-- Remaining Posts Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {% if paginator.page == 1 or paginator.page == nil %}
-        {% assign offset_val = 1 %}
+      {% assign offset_val = 1 %}
       {% else %}
-        {% assign offset_val = 0 %}
+      {% assign offset_val = 0 %}
       {% endif %}
       {% for post in posts_to_show offset:offset_val %}
       <div data-gsap="reveal" data-delay="{{ forloop.index0 | modulo: 3 | times: 0.1 }}">
