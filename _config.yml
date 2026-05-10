@@ -28,6 +28,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-include-cache
   - jekyll-tailwind
+  - jekyll-last-modified-at
 
 whitelist:
   - jekyll-paginate-v2
@@ -37,6 +38,7 @@ whitelist:
   - jekyll-redirect-from
   - jekyll-include-cache
   - jekyll-tailwind
+  - jekyll-last-modified-at
 
 # Pagination
 pagination:
