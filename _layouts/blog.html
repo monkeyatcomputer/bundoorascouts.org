@@ -62,6 +62,7 @@ layout: default
     {% if posts_to_show.size > 0 %}
 
     <!-- Featured Post -->
+    {% if paginator.page == 1 or paginator.page == nil %}
     {% assign featured = posts_to_show | first %}
     <div class="mb-16" data-gsap="reveal">
       <article
@@ -119,10 +120,16 @@ layout: default
         </div>
       </article>
     </div>
+    {% endif %}
 
     <!-- Remaining Posts Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {% for post in posts_to_show offset:1 %}
+      {% if paginator.page == 1 or paginator.page == nil %}
+        {% assign offset_val = 1 %}
+      {% else %}
+        {% assign offset_val = 0 %}
+      {% endif %}
+      {% for post in posts_to_show offset:offset_val %}
       <div data-gsap="reveal" data-delay="{{ forloop.index0 | modulo: 3 | times: 0.1 }}">
         {% include blog-card.html post=post %}
       </div>

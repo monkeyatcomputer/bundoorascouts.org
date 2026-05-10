@@ -43,9 +43,9 @@ whitelist:
 # Pagination
 pagination:
   enabled: true
-  per_page: 4
+  per_page: 7
   offset: 0
-  permalink: '/page/:num'
+  permalink: '/page/:num/'
   title: ':title Page :num'
   limit: 100
   sort_field: 'date'
@@ -55,9 +55,6 @@ kramdown:
   hard_wrap: false
   input: GFM
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-
-sass:
-  style: compressed
 
 # AutoPages
 autopages:

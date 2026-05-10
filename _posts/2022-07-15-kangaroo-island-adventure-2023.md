@@ -3,7 +3,7 @@ layout: trip
 title: "Kangaroo Island Adventure 2023!"
 subtitle: "Join us for an epic wildlife and adventure expedition"
 description: "Join Bundoora Scouts for an unforgettable adventure to Kangaroo Island in September 2023."
-image: /uploads/ki-2023/hero.png
+image: /uploads/trip/ki-2023/hero.png
 author:
     - Hamish
 categories:
