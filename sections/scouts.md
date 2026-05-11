@@ -12,8 +12,8 @@ section_slug: scouts
 motto: "Be Prepared"
 award:
   title: "Award Scheme"
-  name: "Australian Scout Medallion"
-  description: "The highest award in the Scout Section. To earn it, a Scout must participate in a Leadership Course, demonstrate an active leadership role, and achieve the Adventurer Cord."
+  name: "Australian Scout Award"
+  description: "The highest award in the Scout Section. To earn the Australian Scout Award, a Scout demonstrates leadership, completes a journey, and masters outdoor adventure skills."
 features:
   - icon: kayaking
     title: "Adventurous Activities"
@@ -59,6 +59,7 @@ badge_card:
 {% include promise-law.html 
    colour=page.colour 
    motto=page.motto 
+   section_slug=page.section_slug
    award_title=page.award.title 
    award_name=page.award.name 
    award_description=page.award.description %}

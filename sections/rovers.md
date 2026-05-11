@@ -14,7 +14,7 @@ redirect_from: [/sections/rover-scouts]
 award:
   title: "Award Scheme"
   name: "Baden-Powell Scout Award"
-  description: "The highest award available to members of the Rover Section, recognized worldwide. Rovers can also earn the St George Award and the World Scout Award."
+  description: "The highest award available to members of the Rover Section, recognized worldwide. The Baden-Powell Scout Award is earned through service, adventure, and personal development."
 features:
   - icon: directions_car
     title: "Motorsports"
@@ -58,6 +58,7 @@ badge_card:
 {% include promise-law.html 
    colour=page.colour 
    motto=page.motto 
+   section_slug=page.section_slug
    award_title=page.award.title 
    award_name=page.award.name 
    award_description=page.award.description %}

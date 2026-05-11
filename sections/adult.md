@@ -11,6 +11,10 @@ colour_dark: "#100e4c"
 icon: volunteer_activism
 section_slug: adult
 leader_slug: group
+award:
+  title: "Leader Training"
+  name: "The Wood Badge"
+  description: "The Wood Badge is the internationally recognized symbol of advanced training for Scouting leaders. To earn it, Leaders complete training and practical application to develop their leadership skills."
 features:
   - icon: psychology
     title: Section Leaders
@@ -49,7 +53,10 @@ intro:
 
 {% include promise-law.html 
    colour=page.colour 
-   motto="Lead the Adventure" %}
+   motto="Lead the Adventure"
+   award_title=page.award.title 
+   award_name=page.award.name 
+   award_description=page.award.description %}
 
 {% include testimonial-grid.html testimonials=page.testimonials colour=page.colour %}
 

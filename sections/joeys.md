@@ -12,9 +12,9 @@ icon: child_care
 section_slug: joeys
 motto: "Discover Adventure"
 award:
-  title: "Participation & Awards"
-  name: "Promise Challenge Badge"
-  description: "The peak achievement for Joey Scouts. It allows older Joeys to gain a greater understanding of the Scout Promise and Law, and discover the history of Scouting."
+  title: "Award Scheme"
+  name: "Joey Scout Challenge Award"
+  description: "The peak achievement for Joey Scouts. To earn the Joey Scout Challenge Award, a Joey Scout completes their Achievement Pathway, including personal development, outdoor adventures, and community projects."
 features:
   - icon: sports_esports
     title: "Games & Activities"
@@ -60,6 +60,7 @@ badge_card:
 {% include promise-law.html 
    colour=page.colour 
    motto=page.motto 
+   section_slug=page.section_slug
    award_title=page.award.title 
    award_name=page.award.name 
    award_description=page.award.description %}

@@ -14,7 +14,7 @@ motto: "Look Wide"
 award:
   title: "Award Scheme"
   name: "King's Scout Award"
-  description: "The highest achievement for Venturers. It requires setting goals, planning progress, and maintaining determination to complete challenging tasks, often recognized on school exit certificates."
+  description: "The highest achievement for Venturer Scouts. The King's Scout Award recognizes outstanding leadership, initiative, and personal development through a self-directed program."
 features:
   - icon: terrain
     title: "Adventurous Activities"
@@ -59,6 +59,7 @@ badge_card:
 {% include promise-law.html 
    colour=page.colour 
    motto=page.motto 
+   section_slug=page.section_slug
    award_title=page.award.title 
    award_name=page.award.name 
    award_description=page.award.description %}

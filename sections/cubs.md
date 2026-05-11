@@ -14,7 +14,7 @@ motto: "Create the Path"
 award:
   title: "Award Scheme"
   name: "Grey Wolf Award"
-  description: "The pinnacle of achievement in the Cub Scout Section. To earn the Grey Wolf Award a Cub Scout must hold a Gold Boomerang badge, participate in outdoor activities, attend Pack Councils, and complete multiple achievement badges."
+  description: "The pinnacle of achievement in the Cub Scout Section. To earn the Grey Wolf Award, a Cub Scout completes their Achievement Pathway, leading activities, exploring the outdoors, and serving their community."
 features:
   - icon: camping
     title: "Outdoor Adventures"
@@ -58,6 +58,7 @@ badge_card:
 {% include promise-law.html 
    colour=page.colour 
    motto=page.motto 
+   section_slug=page.section_slug
    award_title=page.award.title 
    award_name=page.award.name 
    award_description=page.award.description %}
