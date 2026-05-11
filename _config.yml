@@ -107,6 +107,7 @@ exclude:
   - scratch/
   - scripts/
   - docs/
+  - frontmatter.json
 
 # Build settings
 defaults:

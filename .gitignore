@@ -4,5 +4,6 @@ _site
 .jekyll-metadata
 .vscode
 .cspell
+.frontmatter
 frontmatter.json
 scratch/
