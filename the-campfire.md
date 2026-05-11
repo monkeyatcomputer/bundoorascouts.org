@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "The Campfire – Bundoora Scouts Blog"
+title: "The Campfire Blog"
 permalink: /the-campfire
 description: "Stories from the trail, expert scouting tips, and updates from the Bundoora Scout community. News, event recaps, and skill guides."
 image: /uploads/hero/campfire-2.jpg
