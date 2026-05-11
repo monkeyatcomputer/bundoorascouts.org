@@ -49,7 +49,7 @@ itinerary:
       label: Ferry to Island (Cape Jarvis)
       loc: [ -35.6055, 138.1001 ]
     - date: '2023-09-19T12:45:00+09:30'
-      type: arrive
+      type: travel
       label: Arrive Kangaroo Island (Penneshaw)
       loc: [ -35.718, 137.940 ]
     - date: '2023-09-19T13:00:00+09:30'

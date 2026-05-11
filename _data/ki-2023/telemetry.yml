@@ -43,7 +43,7 @@ telemetry:
   - [1,"2023-09-18T18:30:00+09:30",[],null,null,"dinner","Dinner"]
   - [1,"2023-09-18T20:00:00+09:30",[],null,null,"stationary","Overnight"]
   - [2,"2023-09-19T12:00:00+09:30",[],-35.6055,138.1001,"travel","Ferry to Island (Cape Jarvis)"]
-  - [2,"2023-09-19T12:45:00+09:30",[],-35.718,137.94,"arrive","Arrive Kangaroo Island (Penneshaw)"]
+  - [2,"2023-09-19T12:45:00+09:30",[],-35.718,137.94,null,"Arrive Kangaroo Island (Penneshaw)"]
   - [2,"2023-09-19T13:00:00+09:30",[],null,null,"lunch","Lunch"]
   - [2,"2023-09-19T14:15:00+09:30",[],-35.742965,137.424496,"travel","Moving"]
   - [2,"2023-09-19T14:30:00+09:30",[],-35.7752,136.9438,"arrive","Arrival at KI West Camping ground"]
