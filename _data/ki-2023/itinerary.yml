@@ -47,18 +47,18 @@ itinerary:
     - date: '2023-09-19T12:00:00+09:30'
       type: travel
       label: Ferry to Island (Cape Jarvis)
-      loc: [ -35.6055, 138.1001 ]
+      loc: [ -35.606078, 138.094424 ]
     - date: '2023-09-19T12:45:00+09:30'
       type: travel
       label: Arrive Kangaroo Island (Penneshaw)
-      loc: [ -35.718, 137.940 ]
+      loc: [ -35.717066, 137.942169 ]
     - date: '2023-09-19T13:00:00+09:30'
       type: lunch
       label: Lunch
     - date: '2023-09-19T14:30:00+09:30'
       type: arrive
       label: Arrival at KI West Camping ground
-      loc: [ -35.7752, 136.9438 ]
+      loc: [ -35.960006, 136.808732 ]
     - date: '2023-09-19T18:30:00+09:30'
       type: dinner
       label: Dinner
@@ -71,7 +71,6 @@ itinerary:
     - date: '2023-09-20T07:30:00+09:30'
       type: breakfast
       label: Breakfast
-      loc: [ -35.7752, 136.9438 ]
     - date: '2023-09-20T09:00:00+09:30'
       type: activity
       label: 'Quad Biking'
@@ -120,10 +119,13 @@ itinerary:
       group: ['Yellow']
       loc: [ -35.98398, 137.16808 ]
       dwell: 2.0
+    - date: '2023-09-22T13:00:00+09:30'
+      type: lunch
+      label: Lunch
+      loc: [ -35.960006, 136.808732 ]
     - date: '2023-09-20T18:30:00+09:30'
       type: dinner
       label: Dinner
-      loc: [ -35.7752, 136.9438 ]
       dwell: 1.5
 - day: 4
   title: Activities Day 2
@@ -133,7 +135,6 @@ itinerary:
     - date: '2023-09-21T07:30:00+09:30'
       type: breakfast
       label: Breakfast
-      loc: [ -35.7752, 136.9438 ]
     - date: '2023-09-21T09:00:00+09:30'
       type: activity
       label: 'Rockpools'
@@ -182,10 +183,13 @@ itinerary:
       group: ['Yellow']
       loc: [ -35.976389, 136.940000 ]
       dwell: 2.0
+    - date: '2023-09-22T13:00:00+09:30'
+      type: lunch
+      label: Lunch
+      loc: [ -35.960006, 136.808732 ]
     - date: '2023-09-21T18:30:00+09:30'
       type: dinner
       label: Dinner
-      loc: [ -35.7752, 136.9438 ]
       dwell: 1.5
 - day: 5
   title: Sealions & Apiary
@@ -195,7 +199,6 @@ itinerary:
     - date: '2023-09-22T08:00:00+09:30'
       type: breakfast
       label: Breakfast
-      loc: [ -35.7752, 136.9438 ]
     - date: '2023-09-22T10:45:00+09:30'
       type: activity
       label: Sealions Tour
@@ -204,6 +207,7 @@ itinerary:
     - date: '2023-09-22T13:00:00+09:30'
       type: lunch
       label: Lunch
+      loc: [ -35.960006, 136.808732 ]
     - date: '2023-09-22T15:00:00+09:30'
       type: activity
       label: Apiary Tour
@@ -214,12 +218,12 @@ itinerary:
       type: activity
       label: Beach
       group: ['Lavender', 'Pink']
-      loc: [ -35.624013, 137.206291 ]
+      loc: [ -35.979790, 137.184654 ]
       dwell: 2.0
     - date: '2023-09-22T18:30:00+09:30'
       type: dinner
       label: Dinner
-      loc: [ -35.7752, 136.9438 ]
+      loc: [ -35.960006, 136.808732 ]
       dwell: 1.5
 - day: 6
   title: Free Time & Dune Buggy
@@ -229,7 +233,6 @@ itinerary:
     - date: '2023-09-23T08:00:00+09:30'
       type: breakfast
       label: Breakfast
-      loc: [ -35.7752, 136.9438 ]
     - date: '2023-09-23T12:00:00+09:30'
       type: lunch
       label: Lunch
@@ -246,7 +249,7 @@ itinerary:
     - date: '2023-09-23T18:30:00+09:30'
       type: dinner
       label: Dinner
-      loc: [ -35.7752, 136.9438 ]
+      loc: [ -35.960006, 136.808732 ]
       dwell: 1.5
 - day: 7
   title: Raptor Domain
@@ -256,7 +259,6 @@ itinerary:
     - date: '2023-09-24T08:00:00+09:30'
       type: breakfast
       label: Breakfast
-      loc: [ -35.7752, 136.9438 ]
     - date: '2023-09-24T09:00:00+09:30'
       type: activity
       label: Raptor Domain (All)
@@ -265,6 +267,7 @@ itinerary:
     - date: '2023-09-24T12:00:00+09:30'
       type: lunch
       label: Lunch
+      loc: [ -35.960006, 136.808732 ]
     - date: '2023-09-24T15:00:00+09:30'
       type: activity
       label: Apiary Tour
@@ -275,12 +278,12 @@ itinerary:
       type: activity
       label: Beach
       group: ['Blue', 'Yellow']
-      loc: [ -35.621292, 137.209478 ]
+      loc: [ -35.979790, 137.184654 ]
       dwell: 2.0
     - date: '2023-09-24T18:30:00+09:30'
       type: dinner
       label: Dinner
-      loc: [ -35.7752, 136.9438 ]
+      loc: [ -35.960006, 136.808732 ]
       dwell: 1.5
 - day: 8
   title: Dune Surfing
@@ -290,7 +293,6 @@ itinerary:
     - date: '2023-09-25T08:00:00+09:30'
       type: breakfast
       label: Breakfast
-      loc: [ -35.7752, 136.9438 ]
     - date: '2023-09-25T09:00:00+09:30'
       type: activity
       label: Dune Surfing Rotations
@@ -299,6 +301,7 @@ itinerary:
     - date: '2023-09-25T12:30:00+09:30'
       type: lunch
       label: Lunch
+      loc: [ -35.960006, 136.808732 ]
     - date: '2023-09-25T13:30:00+09:30'
       type: activity
       label: Remarkable Rocks & Admiral's Arch
@@ -307,7 +310,7 @@ itinerary:
     - date: '2023-09-25T18:30:00+09:30'
       type: dinner
       label: Dinner
-      loc: [ -35.7752, 136.9438 ]
+      loc: [ -35.960006, 136.808732 ]
       dwell: 1.5
 - day: 9
   title: Wildlife Park
@@ -317,7 +320,6 @@ itinerary:
     - date: '2023-09-26T08:00:00+09:30'
       type: breakfast
       label: Breakfast
-      loc: [ -35.7752, 136.9438 ]
     - date: '2023-09-26T10:00:00+09:30'
       type: activity
       label: Wildlife Park
@@ -326,7 +328,7 @@ itinerary:
     - date: '2023-09-26T13:00:00+09:30'
       type: lunch
       label: Lunch
-      loc: [ -35.7752, 136.9438 ]
+      loc: [ -35.960006, 136.808732 ]
     - date: '2023-09-26T18:30:00+09:30'
       type: dinner
       label: Dinner
@@ -339,7 +341,6 @@ itinerary:
     - date: '2023-09-27T08:00:00+09:30'
       type: breakfast
       label: Breakfast
-      loc: [ -35.7752, 136.9438 ]
     - date: '2023-09-27T09:00:00+09:30'
       type: activity
       label: 'Ravine Hike'
@@ -355,7 +356,7 @@ itinerary:
     - date: '2023-09-27T13:00:00+09:30'
       type: lunch
       label: Lunch
-      loc: [ -35.7752, 136.9438 ]
+      loc: [ -35.960006, 136.808732 ]
     - date: '2023-09-27T18:30:00+09:30'
       type: dinner
       label: Dinner
@@ -365,24 +366,26 @@ itinerary:
   location: Mt Gambier
   image: "/uploads/trip/ki-2023/blue-lake.jpg"
   events:
+    - date: '2023-09-27T06:00:00+09:30'
+      type: breakfast
+      label: Breakfast
     - date: '2023-09-28T07:00:00+09:30'
-      type: depart
+      type: activity
       label: Pack up campsite
-      dwell: 1.5
+      dwell: 2.0
     - date: '2023-09-28T12:30:00+09:30'
       type: lunch
       label: Lunch
-      loc: [ -35.718, 137.940 ]
     - date: '2023-09-28T13:30:00+09:30'
       type: travel
-      label: Ferry From Island (Penneshaw)
+      label: Ferry From Island
     - date: '2023-09-28T14:15:00+09:30'
       type: arrive
-      label: Arrive Mainland (Cape Jervis)
+      label: Arrive Mainland
       loc: [ -35.6055, 138.1001 ]
     - date: '2023-09-28T20:00:00+09:30'
       type: arrive
-      label: Arrive Mt Gambier (Blue Lake)
+      label: Arrive Mt Gambier
       loc: [ -37.8284, 140.7804 ]
     - date: '2023-09-28T20:30:00+09:30'
       type: dinner
