@@ -106,6 +106,7 @@ exclude:
   - node_modules/
   - scratch/
   - scripts/
+  - docs/
 
 # Build settings
 defaults:
