@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Hall Hire"
+title: "Scout Hall Hire"
 permalink: /about/hall-hire
 redirect_from: [/about-us/hall-hire, /hall-hire/]
 badge: "Venue Hire"
