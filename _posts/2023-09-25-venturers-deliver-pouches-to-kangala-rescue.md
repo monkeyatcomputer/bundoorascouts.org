@@ -6,7 +6,7 @@ image: /uploads/2023-09-25-venturers-deliver-pouches-to-kangala-rescue/rescue-1.
 author:
     - Annette
 categories:
-    - Venturers
+    - Venturer Scouts
 tags:
     - Camp
     - Kangaroo Island 2023
