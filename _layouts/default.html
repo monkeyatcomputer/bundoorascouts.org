@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }}</title>
+  <title>{{ page.title | strip_html | strip_newlines }} – {{ site.title | strip_html | strip_newlines }}</title>
   <meta name="description"
     content="{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 }}" />
 
