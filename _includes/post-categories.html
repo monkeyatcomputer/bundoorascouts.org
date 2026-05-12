@@ -1,0 +1,44 @@
+{% if page.categories %}
+<div class="py-4 flex flex-wrap gap-3 items-center not-prose">
+  {% for category in page.categories %}
+  {% assign section = nil %}
+  {% for s in site.data.sections %}
+  {% if s.name == category or s.shortname == category or s.slug == (category | slugify) %}
+  {% assign section = s %}
+  {% break %}
+  {% endif %}
+  {% endfor %}
+
+  {% assign use_tailwind = true %}
+  {% assign bg_class = 'bg-primary' %}
+  {% assign text_class = 'text-on-primary' %}
+  {% assign logo = '/assets/images/logo.png' %}
+
+  {% if section %}
+  {% if section.slug == 'group' %}
+  <!-- Use fallback defaults (primary blue) from Tailwind -->
+  {% else %}
+  {% assign use_tailwind = false %}
+  {% assign bg_color = section.colour %}
+  {% assign logo = section.logo-crop %}
+  {% if section.slug == 'cubs' or section.slug == 'joeys' %}
+  {% assign text_class = 'text-on-surface' %}
+  {% else %}
+  {% assign text_class = 'text-white' %}
+  {% endif %}
+  {% endif %}
+  {% endif %}
+
+  <a href="/the-campfire/section/{{ category | slugify }}"
+    class="px-4 py-1.5 rounded-full text-xs font-bold hover:opacity-90 transition-all flex items-center gap-2 {{ text_class }} {% if use_tailwind %}{{ bg_class }}{% endif %}"
+    {% unless use_tailwind %}style="background-color: {{ bg_color }};" {% endunless %}>
+    {% if logo %}
+    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+      <img src="{{ logo }}" alt="{{ category }}" class="w-4.5 h-4.5 object-contain" />
+    </div>
+    {% endif %}
+    {{ category }}
+  </a>
+  {% endfor %}
+</div>
+{% endif %}

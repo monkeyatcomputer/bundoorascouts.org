@@ -1,14 +1,15 @@
 <div class="flex flex-wrap gap-2 mt-4 mb-6 not-prose">
   {% assign items = include.items | split: "|" %}
   {% for item in items %}
-    {% assign parts = item | split: ":" %}
-    {% assign icon = parts[0] | strip %}
-    {% assign label = parts[1] | strip %}
-    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-medium border border-outline-variant/30">
-      {% if icon != "" %}
-      <span class="material-symbols-outlined text-[16px]">{{ icon }}</span>
-      {% endif %}
-      {{ label }}
-    </span>
+  {% assign parts = item | split: ":" %}
+  {% assign icon = parts[0] | strip %}
+  {% assign label = parts[1] | strip %}
+  <span
+    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-medium border border-outline-variant/30">
+    {% if icon != "" %}
+    <span class="material-symbols-outlined text-[16px]">{{ icon }}</span>
+    {% endif %}
+    {{ label }}
+  </span>
   {% endfor %}
 </div>
