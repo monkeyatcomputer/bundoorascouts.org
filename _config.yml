@@ -108,17 +108,18 @@ tailwind:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - .jekyll-cache/
-  - README.md
-  - artifacts/
-  - package-lock.json
+  - .ruby-version
+  - frontmatter.json
   - package.json
+  - package-lock.json
+  - README.md
+  - SECURITY.md
+  - .jekyll-cache/
+  - artifacts/
+  - docs/
   - node_modules/
   - scratch/
   - scripts/
-  - docs/
-  - frontmatter.json
-  - .ruby-version
 
 # Build settings
 defaults:
