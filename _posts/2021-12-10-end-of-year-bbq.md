@@ -3,7 +3,7 @@ title: "End of Year BBQ"
 subtitle: "That's a wrap on 2021!"
 image: /uploads/hero/end-of-year-bbq.jpg
 author:
-    - Group
+    - group
 categories:
     - Group
 tags:

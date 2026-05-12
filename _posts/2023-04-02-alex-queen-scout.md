@@ -3,7 +3,7 @@ title: "Alex's Queen's Scout"
 subtitle: "Congratulations!"
 image: /assets/images/hero-rover-scouts.jpg
 author:
-    - Group
+    - group
 categories:
     - Venturer Scouts
     - Handfield Rover Unit

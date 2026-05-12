@@ -5,7 +5,7 @@ subtitle: "Join us for an epic wildlife and adventure expedition"
 description: "Join Bundoora Scouts for an unforgettable adventure to Kangaroo Island in September 2023."
 image: /uploads/trip/ki-2023/hero.png
 author:
-    - Hamish
+    - hamish
 categories:
     - Scouts
     - Venturer Scouts

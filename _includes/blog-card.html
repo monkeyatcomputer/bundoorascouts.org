@@ -41,8 +41,28 @@
 
     <div class="mt-auto flex items-center justify-between pt-4 border-t border-outline-variant/10">
       {% if p.author %}
+      {% assign author_name = p.author | first %}
+      {% assign author_slug = author_name | slugify %}
+      {% assign person = site.people | where: "slug", author_slug | first %}
       <div class="flex items-center gap-2">
-        <span class="text-[10px] font-black text-primary uppercase tracking-tighter">{{ p.author | first }}</span>
+        <div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/20 flex items-center justify-center bg-surface-container-high">
+          {% if person and author_slug != "group" %}
+            <a href="{{ person.url }}" class="w-full h-full">
+              <img src="/assets/images/people/{{ author_slug }}.jpg" alt="{{ person.name }}" class="w-full h-full object-cover" onerror="this.src='/assets/images/logo.png'">
+            </a>
+          {% else %}
+            <img src="/assets/images/logo.png" alt="Bundoora Scouts" class="w-full h-full object-cover">
+          {% endif %}
+        </div>
+        <span class="text-[10px] font-black text-primary tracking-tighter capitalize">
+          {% if person %}
+            <a href="{{ person.url }}" class="hover:text-secondary transition-colors">
+              {{ person.name }}
+            </a>
+          {% else %}
+            {{ author_name }}
+          {% endif %}
+        </span>
       </div>
       {% endif %}
       

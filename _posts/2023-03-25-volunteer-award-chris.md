@@ -4,7 +4,7 @@ subtitle: "Congratulations!"
 description: "Congratulations to Chris on being honoured with the Jagajaga Community Volunteer Award 2023"
 image: /assets/images/hero-3.jpg
 author:
-    - Group
+    - group
 categories:
     - Group
 tags:

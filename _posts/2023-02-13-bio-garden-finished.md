@@ -4,7 +4,7 @@ subtitle: "Promoting Environmental Awareness"
 image: /uploads/hero/bio-garden.jpg
 socialimage: /uploads/social/bio-garden.jpg
 author:
-    - Kate
+    - kate
 categories:
     - Cub Scouts
     - Group

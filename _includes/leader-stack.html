@@ -1,14 +1,28 @@
 <div class="flex gap-4 items-center not-prose">
   <div class="flex -space-x-4">
-    {% assign youth_leaders = site.people | where_exp: "person", "person.section != 'adult'" %}
+    {% assign youth_leaders = site.people | where_exp: "item", "item.section != 'adult'" %}
     {% assign stack_leaders = youth_leaders | limit: 3 %}
     {% for leader in stack_leaders %}
-    <div class="w-12 h-12 rounded-full border-4 {% if include.border %}{{ include.border }}{% else %}border-primary{% endif %} bg-surface-container-highest overflow-hidden shadow-lg transition-transform hover:scale-110 hover:z-10">
-      <img src="{{ '/assets/images/people/' | append: leader.title | downcase | append: '.jpg' | relative_url }}" 
-           alt="{{ leader.title }}" 
-           class="w-full h-full object-cover" 
-           onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'material-symbols-outlined text-primary/20 flex items-center justify-center h-full\'>person</span>'">
-    </div>
+      {% assign leader_posts = site.posts | where_exp: "post", "post.author == leader.name" %}
+      {% assign is_author = false %}
+      {% if leader_posts.size > 0 %}
+        {% assign is_author = true %}
+      {% endif %}
+      <div class="w-12 h-12 rounded-full border-4 {% if include.border %}{{ include.border }}{% else %}border-primary{% endif %} bg-surface-container-highest overflow-hidden shadow-lg transition-transform hover:scale-110 hover:z-10">
+        {% if is_author %}
+          <a href="{{ leader.url }}" class="w-full h-full">
+            <img src="{{ '/assets/images/people/' | append: leader.name | downcase | append: '.jpg' | relative_url }}" 
+                 alt="{{ leader.name }}" 
+                 class="w-full h-full object-cover" 
+                 onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'material-symbols-outlined text-primary/20 flex items-center justify-center h-full\'>person</span>'">
+          </a>
+        {% else %}
+          <img src="{{ '/assets/images/people/' | append: leader.name | downcase | append: '.jpg' | relative_url }}" 
+               alt="{{ leader.name }}" 
+               class="w-full h-full object-cover" 
+               onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'material-symbols-outlined text-primary/20 flex items-center justify-center h-full\'>person</span>'">
+        {% endif %}
+      </div>
     {% endfor %}
   </div>
   {% if include.url %}

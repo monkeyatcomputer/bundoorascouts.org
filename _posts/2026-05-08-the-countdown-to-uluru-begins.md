@@ -4,7 +4,7 @@ subtitle: "From careful planning to the red dust of the outback"
 description: "The Bundoora Scouts Uluru Adventure is almost here. 50 days until we hit the road with our friends from across Victoria."
 image: /uploads/hero/uluru.jpg
 author:
-    - Hamish
+    - hamish
 categories:
     - Scouts
     - Venturer Scouts

@@ -4,7 +4,7 @@ subtitle: "Highlights from our epic adventure"
 description: "Our Scouts and Venturers have returned safely from Kangaroo Island."
 image: /uploads/trip/ki-2023/hero.png
 author:
-    - Group
+    - group
 categories:
     - Scouts
     - Venturer Scouts

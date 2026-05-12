@@ -3,7 +3,7 @@ title: "Cub Scouts End of Year"
 subtitle: "@ Latitude"
 image: /uploads/hero/latitude.jpg
 author:
-    - Group
+    - group
 categories:
     - Cub Scouts
 tags:

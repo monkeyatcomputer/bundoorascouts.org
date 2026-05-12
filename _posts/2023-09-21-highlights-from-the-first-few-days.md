@@ -4,7 +4,7 @@ subtitle: "Snapshots from Kangaroo Island"
 description: "A short slideshow with highlights from the first couple of days."
 image: /uploads/trip/ki-2023/hero.png
 author:
-    - Group
+    - group
 categories:
     - Scouts
     - Venturer Scouts

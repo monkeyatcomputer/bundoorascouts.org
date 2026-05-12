@@ -8,10 +8,7 @@ layout: default
 {% endif %}
 {% assign author_slug = author_name | slugify %}
 
-{% assign person = site.people | where: "title", author_name | first %}
-{% if person == nil %}
 {% assign person = site.people | where: "slug", author_slug | first %}
-{% endif %}
 
 {% if person and author_name != "Group" %}
 {% assign avatar_src = "/assets/images/people/" | append: author_slug | append: ".jpg" %}
@@ -68,10 +65,23 @@ layout: default
           <div class="flex items-center space-x-3">
             <div
               class="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center bg-white/10 overflow-hidden">
-              <img src="{{ avatar_src }}" alt="{{ author_name }}" class="w-full h-full object-cover"
-                onerror="this.src='/assets/images/logo.png'">
+              {% if person %}
+                <a href="{{ person.url }}" class="w-full h-full">
+                  <img src="{{ avatar_src }}" alt="{{ author_name }}" class="w-full h-full object-cover"
+                    onerror="this.src='/assets/images/logo.png'">
+                </a>
+              {% else %}
+                <img src="{{ avatar_src }}" alt="{{ author_name }}" class="w-full h-full object-cover"
+                  onerror="this.src='/assets/images/logo.png'">
+              {% endif %}
             </div>
-            <span class="font-bold text-sm">{{ page.author | join: ", " }}</span>
+            <span class="font-bold text-sm">
+              {% if person %}
+                <a href="{{ person.url }}" class="hover:text-secondary transition-colors">{{ person.name }}</a>
+              {% else %}
+                {{ page.author | join: ", " }}
+              {% endif %}
+            </span>
           </div>
           {% endif %}
 

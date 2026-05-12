@@ -4,7 +4,7 @@ subtitle: "Greetings from Queensland"
 description: "Fantastic to have spies on-site at the Australian Jamboree in Queensland for a 'proof of life' photo!!"
 image: /uploads/2025-01-13-australian-jamboree/proof-of-life.jpg
 author:
-    - Group
+    - group
 categories:
     - Scouts
 tags:

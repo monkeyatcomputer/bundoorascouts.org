@@ -3,7 +3,7 @@ title: "Taneesha's Queen's Scout"
 subtitle: "Congratulations!"
 image: /assets/images/hero-venturer-scouts.jpg
 author:
-    - Group
+    - group
 categories:
     - Venturer Scouts
 tags:

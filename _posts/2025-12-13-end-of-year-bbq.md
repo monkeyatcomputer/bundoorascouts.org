@@ -4,7 +4,7 @@ subtitle: "Celebrating a fantastic 2025"
 description: "A huge thank you to all our amazing youth members, parents, carers, Handfield Rover Unit, and supporters who joined us at our End of Year BBQ."
 image: /uploads/hero/thank-you.jpg
 author:
-    - Bruce
+    - bruce
 categories:
     - Group
     - Joey Scouts

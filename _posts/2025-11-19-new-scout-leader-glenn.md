@@ -4,7 +4,7 @@ subtitle: "A fantastic week for Bundoora Scouts"
 description: "Tonight was a special night for Bundoora Scouts – we officially invested Glenn into our leadership team!"
 image: /uploads/2025-11-19-new-scout-leader-glenn/glenn.jpg
 author:
-    - Bruce
+    - bruce
 categories:
     - Scouts
     - Group

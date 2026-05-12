@@ -3,7 +3,7 @@ title: "Joeys and Beavers Meet"
 subtitle: "Over The Internet!"
 image: /uploads/hero/joeys-video-call.jpg
 author:
-    - Joey Scouts
+    - group
 categories:
     - Joey Scouts
 tags:

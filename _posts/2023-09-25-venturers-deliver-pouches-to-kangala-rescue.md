@@ -4,7 +4,7 @@ subtitle: "Earning Community Badges on Kangaroo Island"
 description: "Our Venturers delivered handmade pouches to Kangala Wildlife Rescue."
 image: /uploads/2023-09-25-venturers-deliver-pouches-to-kangala-rescue/rescue-1.jpg
 author:
-    - Annette
+    - annette
 categories:
     - Venturer Scouts
 tags:

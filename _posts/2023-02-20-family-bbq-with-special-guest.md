@@ -4,7 +4,7 @@ subtitle: "with Special Guest"
 image: /uploads/hero/family-bbq-2023.jpg
 socialimage: /uploads/social/family-bbq-2023.jpg
 author:
-    - Group
+    - group
 categories:
     - Group
 tags:

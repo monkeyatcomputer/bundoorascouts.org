@@ -5,7 +5,7 @@ subtitle: "9 Months to Go!"
 description: "Planning is underway for our epic Kangaroo Island adventure."
 image: /uploads/trip/ki-2023/hero.png
 author:
-    - Hamish
+    - hamish
 categories:
     - Scouts
     - Venturer Scouts

@@ -4,7 +4,7 @@ subtitle: "Get ready for the adventure!"
 description: "Only 50 days until we depart for Kangaroo Island."
 image: /uploads/trip/ki-2023/hero.png
 author:
-    - Hamish
+    - hamish
 categories:
     - Scouts
     - Venturer Scouts

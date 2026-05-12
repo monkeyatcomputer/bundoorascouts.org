@@ -65,62 +65,7 @@ layout: default
     {% if paginator.page == 1 or paginator.page == nil %}
     {% assign featured = posts_to_show | first %}
     <div class="mb-16" data-gsap="reveal">
-      <article
-        class="flex flex-col lg:flex-row bg-surface-container-low rounded-3xl overflow-hidden group hover:shadow-ambient-lg transition-all duration-500 border border-outline-variant/10">
-        <!-- Thumbnail Container -->
-        <div class="lg:w-3/5 aspect-video lg:aspect-auto overflow-hidden relative">
-          {% if featured.image %}
-          <img src="{{ featured.image }}" alt="{{ featured.title }}"
-            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-          {% else %}
-          <div class="w-full h-full bg-primary/10 flex flex-col items-center justify-center text-primary/40">
-            <span class="material-symbols-outlined text-8xl mb-2 filled">local_fire_department</span>
-          </div>
-          {% endif %}
-          <div class="absolute top-6 left-6 flex flex-wrap gap-2">
-            <span
-              class="px-4 py-1.5 bg-secondary text-white text-xs font-black uppercase tracking-tighter rounded-full shadow-lg">
-              Featured Story
-            </span>
-          </div>
-        </div>
-
-        <!-- Content Box -->
-        <div class="lg:w-2/5 p-6 sm:p-8 md:p-12 flex flex-col justify-center">
-          <div
-            class="flex items-center gap-3 mb-6 text-xs font-bold text-on-surface-variant uppercase tracking-widest opacity-60">
-            <span class="material-symbols-outlined text-sm">calendar_today</span>
-            {{ featured.date | date: "%B %d, %Y" }}
-          </div>
-
-          <h2
-            class="text-2xl md:text-5xl font-black text-primary mb-4 sm:mb-6 leading-tight tracking-tighter group-hover:text-secondary transition-colors">
-            <a href="{{ featured.url }}">{{ featured.title }}</a>
-          </h2>
-
-          <p class="text-on-surface-variant text-sm sm:text-lg leading-relaxed mb-6 sm:mb-10">
-            {{ featured.excerpt | strip_html | truncate: 180 }}
-          </p>
-
-          <div class="mt-auto flex items-center justify-between pt-4 sm:pt-8 border-t border-outline-variant/20">
-            <div class="flex items-center gap-2 sm:gap-3">
-              <div
-                class="hidden sm:flex w-10 h-10 rounded-full bg-primary/5 items-center justify-center border border-outline-variant/20">
-                <span class="material-symbols-outlined text-primary text-xl">person</span>
-              </div>
-              <span class="text-[10px] sm:text-sm font-black text-primary uppercase tracking-tighter">{{ featured.author
-                | first
-                }}</span>
-            </div>
-
-            <a href="{{ featured.url }}"
-              class="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-base font-black sm:font-bold text-secondary sm:text-white uppercase sm:normal-case tracking-tighter sm:tracking-normal bg-transparent sm:bg-primary px-0 sm:px-8 py-0 sm:py-3 rounded-none sm:rounded-xl hover:scale-105 transition-all sm:shadow-ambient-md">
-              Read <span class="hidden sm:inline">Full</span> Story <span
-                class="material-symbols-outlined text-xs sm:text-base">arrow_forward</span>
-            </a>
-          </div>
-        </div>
-      </article>
+        {% include featured-card.html post=featured %}
     </div>
     {% endif %}
 

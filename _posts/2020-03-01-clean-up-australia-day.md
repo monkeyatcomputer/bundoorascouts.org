@@ -3,7 +3,7 @@ title: "Clean Up Australia Day"
 subtitle: "@ Gresswell Forest"
 image: /uploads/hero/clean-up-australia.jpg
 author:
-    - Group
+    - group
 categories:
     - Cub Scouts
     - Scouts

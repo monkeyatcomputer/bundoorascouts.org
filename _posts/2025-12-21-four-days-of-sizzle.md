@@ -4,7 +4,7 @@ subtitle: "Fundraising BBQ at Bunnings Thomastown"
 description: "We’re firing up the BBQ at Bunnings for not one, not two, but FOUR big days this December!"
 image: /uploads/hero/bunnings-bbq.jpg
 author:
-    - Group
+    - group
 categories:
     - Group
 tags:

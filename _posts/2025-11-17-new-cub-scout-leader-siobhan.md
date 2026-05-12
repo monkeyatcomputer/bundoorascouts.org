@@ -4,7 +4,7 @@ subtitle: "Great enthusiasm and a passion for helping our Cubs"
 description: "We’re thrilled to announce that Siobhan has joined the Bundoora Scout Group as part of our Cub leadership team."
 image: /uploads/2025-11-17-new-cub-scout-leader-siobhan/siobhan.jpg
 author:
-    - Bruce
+    - bruce
 categories:
     - Cub Scouts
     - Group

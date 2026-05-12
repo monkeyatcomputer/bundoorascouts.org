@@ -4,7 +4,7 @@ subtitle: "Safer, cozier, and greener"
 description: "We’re thrilled to announce that the window upgrade at the Bundoora Scout Centre has been completed!"
 image: /uploads/2024-08-15-window-upgrade/windows.jpg
 author:
-    - Group
+    - group
 categories:
     - Group
 tags:

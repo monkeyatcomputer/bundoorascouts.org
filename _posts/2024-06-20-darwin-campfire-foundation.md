@@ -4,7 +4,7 @@ subtitle: "A rock-solid start to our new campfire space"
 description: "We are excited to share that we are laying the foundation for something that is going to rock your world: the Darwin Campfire Circle!"
 image: /uploads/2024-06-20-darwin-campfire-foundation/campfire-1.jpg
 author:
-    - Group
+    - group
 categories:
     - Group
 tags:

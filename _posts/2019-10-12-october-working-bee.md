@@ -3,7 +3,7 @@ title: "Scout Hall Working Bee"
 subtitle: "October 2019"
 image: /uploads/hero/spring-cleaning.jpg
 author:
-    - Group
+    - group
 categories:
     - Joey Scouts
     - Cub Scouts

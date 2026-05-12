@@ -3,7 +3,7 @@ title: "Group Camp"
 subtitle: "December 2019"
 image: /uploads/hero/medals.jpg
 author:
-    - Group
+    - group
 categories:
     - Joey Scouts
     - Cub Scouts

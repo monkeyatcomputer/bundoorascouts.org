@@ -4,7 +4,7 @@ subtitle: "Caring for the Environment"
 description: "Bundoora Scouts and Banyule Council held a planting day at NJ Telfer reserve in Bundoora"
 image: /uploads/hero/telfer-reserve-planting-day.jpg
 author:
-    - Group
+    - group
 categories:
     - Group
     - Joey Scouts

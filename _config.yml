@@ -72,7 +72,7 @@ autopages:
   categories:
     layouts:
       - blog.html
-    permalink: /the-campfire/section/:cat
+    permalink: /the-campfire/section/:cat/
     slugify:
       mode: pretty
   collections:
@@ -80,18 +80,22 @@ autopages:
   tags:
     layouts:
       - blog.html
-    permalink: /the-campfire/tag/:tag
+    permalink: /the-campfire/tag/:tag/
     slugify:
       mode: pretty
+  
 
 # Collections
 collections:
-  people:
-    output: false
   trips:
     output: true
     sort_field: date
     sort_reverse: true
+    permalink: /trips/:name
+  people:
+    output: true
+    permalink: /people/:name
+    layout: person
 
 # Feed
 feed:
@@ -130,6 +134,12 @@ defaults:
     values:
       layout: post
       permalink: /the-campfire/:year/:month/:title
+  - 
+    scope:
+      path: ""
+      type: people
+    values:
+      layout: person
   - 
     scope:
       path: "assets/images"

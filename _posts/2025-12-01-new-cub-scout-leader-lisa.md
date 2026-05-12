@@ -4,7 +4,7 @@ subtitle: "Christmas comes early for Bundoora Scout Group"
 description: "We’re thrilled to announce that Lisa, an officially booted Handfield Rover, has been invested into our Cub Scouts leadership team!"
 image: /uploads/2025-12-01-new-cub-scout-leader-lisa/lisa.jpg
 author:
-    - Bruce
+    - bruce
 categories:
     - Cub Scouts
     - Group
