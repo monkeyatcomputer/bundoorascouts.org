@@ -11,10 +11,20 @@ formspree_action: "https://formspree.io/f/mbjpklgn"
 recapcha_site_key: "6LdSneEZAAAAALUuwv9omWFHmY2GipMHjMdzBD-D"
 onboarding_url: "https://extranet.scoutsvictoria.com.au/scoutonline/public/onboarding_registration/trial-registration?sectionid="
 
+# SEO
+locale: en_AU
+logo: /assets/images/logo.png
+social:
+  name: Bundoora Scout Group
+  links:
+    - https://facebook.com/bundoorascouts
+facebook:
+  publisher: https://facebook.com/bundoorascouts
+
 # Build settings
 theme: null
 
-#Outputting
+# Outputting
 permalink: /:title
 markdown: kramdown
 highlighter: rouge
@@ -85,7 +95,7 @@ collections:
 
 # Feed
 feed:
-  disable_in_development: true
+  disable_in_development: false
   excerpt_only: true
   tags: true
 
@@ -108,6 +118,7 @@ exclude:
   - scripts/
   - docs/
   - frontmatter.json
+  - .ruby-version
 
 # Build settings
 defaults:

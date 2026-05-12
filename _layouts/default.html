@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title | strip_html | strip_newlines }} – {{ site.title | strip_html | strip_newlines }}</title>
-  <meta name="description"
-    content="{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 }}" />
+
+  {% seo title=false generator=false %}
 
   <!-- Favicons and App Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
@@ -19,14 +19,8 @@
   <meta name="msapplication-config" content="/assets/images/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Bundoora Scouts{% endif %}" />
-  <meta property="og:description"
-    content="{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ page.url | absolute_url }}" />
-  {% if page.image %}
-  <meta property="og:image" content="{{ page.image | absolute_url }}" />{% endif %}
+  <!-- RSS Link -->
+  {% feed_meta %}
 
   <!-- Google Fonts: Nunito Sans + Material Symbols -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,9 +50,6 @@
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-
-  {% feed_meta %}
-  {% seo %}
 </head>
 
 <body
