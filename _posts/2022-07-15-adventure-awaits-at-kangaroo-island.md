@@ -1,9 +1,9 @@
 ---
 layout: trip
 title: "Adventure Awaits at Kangaroo Island"
-subtitle: "9 Months to Go!"
+subtitle: "Join us for an epic adventure to Kangaroo Island"
 description: "Planning is underway for our epic Kangaroo Island adventure."
-image: /uploads/trip/ki-2023/hero.png
+image: /uploads/trip/ki-2023/hero.jpg
 author:
     - hamish
 categories:
@@ -21,7 +21,7 @@ itinerary:
   - image: "/uploads/trip/ki-2023/victor-harbor.jpg"
     title: "Victor Harbor"
     description: "Our first major stopover on the way to the island, exploring the coast."
-  - image: "/uploads/trip/ki-2023/hero.png"
+  - image: "/uploads/trip/ki-2023/hero.jpg"
     title: "Kangaroo Island"
     description: "The main destination, filled with wildlife encounters and adventure activities."
   - image: "/uploads/trip/ki-2023/blue-lake.jpg"
@@ -49,6 +49,27 @@ activities:
   - image: "/uploads/trip/ki-2023/ravine-hike.jpg"
     title: "🥾 Ravine Hike"
     description: "Scenic walks through the wilderness."
+  - image: "/uploads/trip/ki-2023/vivonne-bay.jpg"
+    title: "🥾 Vivonne Bay Hike"
+    description: "Explore the beautiful trails around Vivonne Bay."
+  - image: "/uploads/trip/ki-2023/rockpools.jpg"
+    title: "🌊 Rockpools"
+    description: "Discover marine life in the coastal rockpools."
+  - image: "/uploads/trip/ki-2023/apiary-tour.jpg"
+    title: "🐝 Apiary Tour"
+    description: "Learn about the famous Ligurian bees and honey production."
+  - image: "/uploads/trip/ki-2023/beach-time.jpg"
+    title: "🏖️ Beach Time"
+    description: "Relax and enjoy the pristine beaches of the island."
+  - image: "/uploads/trip/ki-2023/dune-surfing.jpg"
+    title: "🏂 Dune Surfing"
+    description: "Sandboarding down the massive dunes."
+  - image: "/uploads/trip/ki-2023/wildlife-park.jpg"
+    title: "🐨 Wildlife Park"
+    description: "See more of Kangaroo Island's unique wildlife."
+  - image: "/uploads/trip/ki-2023/cape-borda.jpg"
+    title: "🏰 Cape Borda"
+    description: "Visit the historic lighthouse and explore the rugged coast."
 groups:
   - name: "Bundoora Scouts"
     image: "/assets/images/logo.png"
@@ -70,9 +91,3 @@ With 9 months to go, we are finalizing the itinerary and activities. We are look
 
 Stay tuned for more updates as we get closer to the date!
 
-<div class="my-8 text-center not-prose">
-  <a href="/trip/ki-2023" class="inline-flex items-center gap-2 bg-primary text-on-primary-container px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-colors shadow-md">
-    <span class="material-symbols-outlined">explore</span>
-    View Expedition Tracker & Itinerary
-  </a>
-</div>
