@@ -9,7 +9,8 @@ categories:
     - Group
 tags:
     - Award
-    - Queen Scout Award
+    - Queen's Scout Award
+    - King's Scout Award
     - Grey Wolf Award
 ---
 

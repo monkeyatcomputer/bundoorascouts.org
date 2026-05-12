@@ -4,11 +4,13 @@ subtitle: "We're off to Kangaroo Island!"
 description: "Check out our departure video as we head off on our epic adventure."
 image: /uploads/trip/ki-2023/hero.png
 author:
-    - Hamish
+    - Group
 categories:
     - Scouts
+    - Venturer Scouts
 tags:
     - Camp
+    - Expedition
     - Kangaroo Island 2023
     - KI 2026
 ---

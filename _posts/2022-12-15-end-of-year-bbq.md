@@ -25,7 +25,4 @@ Thank you to our dedicated leaders and volunteers who have made it all possible.
 
 Looking ahead to 2023, we have many exciting plans and opportunities in the works, and we can’t wait to see what adventures await us. Happy New Year to all our scouts, leaders, and families!
 
-Yours in Scouting,  
-Chris
-
 {% include image-gallery.html folder='/uploads/2022-12-15-end-of-year-bbq/' %}

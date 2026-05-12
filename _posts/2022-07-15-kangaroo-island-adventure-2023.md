@@ -11,11 +11,12 @@ categories:
     - Venturer Scouts
 tags:
     - Camp
+    - Expedition
     - Kangaroo Island 2023
     - KI 2026
 trip_details:
   dates: "18th September &mdash; 29th September 2023"
-  cost: "$TBC"
+  cost: "$1800"
 itinerary:
   - image: "/uploads/trip/ki-2023/ferry.JPG"
     title: "Ferry to the Island"

@@ -12,6 +12,7 @@ categories:
 tags:
     - Camp
     - Uluru 2026
+    - Expedition
 redirect_from:
     - /the-campfire/uluru-adventure-2026
 trip_details:

@@ -12,6 +12,7 @@ tags:
     - Uluru 2026
     - Adventure
     - Expedition
+    - Camp
 groups:
   - name: "Bundoora Scouts"
     image: "/assets/images/logo.png"

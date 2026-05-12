@@ -7,8 +7,10 @@ author:
     - Hamish
 categories:
     - Scouts
+    - Venturer Scouts
 tags:
     - Camp
+    - Expedition
     - Kangaroo Island 2023
     - KI 2026
 ---

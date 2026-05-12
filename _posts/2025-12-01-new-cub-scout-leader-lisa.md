@@ -7,7 +7,6 @@ author:
     - Bruce
 categories:
     - Cub Scouts
-    - Leaders
     - Group
 tags:
     - New Leader

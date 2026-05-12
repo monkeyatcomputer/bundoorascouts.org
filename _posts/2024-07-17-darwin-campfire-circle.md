@@ -4,7 +4,7 @@ subtitle: "A new gathering space for our community"
 description: "We are excited to share that the Darwin Campfire Circle at the Bundoora Scout Centre is coming to life."
 image: /uploads/2024-07-17-darwin-campfire-circle/campfire-circle-1.jpg
 author:
-    - Chris
+    - Group
 categories:
     - Group
 tags:

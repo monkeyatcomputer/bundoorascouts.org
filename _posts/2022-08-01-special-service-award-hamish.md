@@ -9,7 +9,7 @@ categories:
     - Group
 tags:
     - Award
-    - Silver Service Award
+    - Special Service Award
     - World Scout Day
 ---
 

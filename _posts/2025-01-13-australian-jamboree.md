@@ -4,9 +4,8 @@ subtitle: "Greetings from Queensland"
 description: "Fantastic to have spies on-site at the Australian Jamboree in Queensland for a 'proof of life' photo!!"
 image: /uploads/2025-01-13-australian-jamboree/proof-of-life.jpg
 author:
-    - Chris
-categories:
     - Group
+categories:
     - Scouts
 tags:
     - Jamboree
@@ -22,6 +21,3 @@ Our Scout Leader, Hamish, checked in with some photos from the campsite:
 {% include image-gallery.html folder='/uploads/2025-01-13-australian-jamboree/' %}
 
 It looks like the weather in Queensland has been a bit challenging, but our Scouts are resilient! Despite the mud and water, they are making the most of it. Keep smiling and enjoy the adventure!
-
-Yours in Scouting,  
-Chris

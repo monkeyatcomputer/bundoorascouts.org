@@ -4,7 +4,7 @@ subtitle: "Progress at the Bundoora Scout Centre"
 description: "We are pleased to report that the long-awaited window upgrade at the Bundoora Scout Centre is officially underway."
 image: /uploads/2024-07-25-window-upgrade-progress/windows-2.jpg
 author:
-    - Chris
+    - Group
 categories:
     - Group
 tags:

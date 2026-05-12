@@ -18,10 +18,10 @@ Four Days of Sizzle with Bundoora Scouts!
 We’re firing up the BBQ at Bunnings for not one, not two, but FOUR big days this December! Come down and grab a delicious snag, support your local Scout Group, and spread some festive cheer.
 
 📅 **When?**
-- ✅ Monday 22nd Dec
-- ✅ Tuesday 23rd Dec
-- ✅ Wednesday 24th Dec
-- ✅ Saturday 27th Dec
+- Monday 22nd Dec
+- Tuesday 23rd Dec
+- Wednesday 24th Dec
+- Saturday 27th Dec
 
 Whether you’re picking up last-minute DIY supplies or just craving a tasty bite, we’ve got you covered! Every sausage sold helps us fund amazing activities and adventures for our Scouts.
 

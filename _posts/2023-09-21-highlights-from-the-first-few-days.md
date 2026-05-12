@@ -4,11 +4,13 @@ subtitle: "Snapshots from Kangaroo Island"
 description: "A short slideshow with highlights from the first couple of days."
 image: /uploads/trip/ki-2023/hero.png
 author:
-    - Hamish
+    - Group
 categories:
     - Scouts
+    - Venturer Scouts
 tags:
     - Camp
+    - Expedition
     - Kangaroo Island 2023
     - KI 2026
 ---

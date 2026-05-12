@@ -11,6 +11,7 @@ categories:
     - Venturer Scouts
 tags:
     - Camp
+    - Expedition
     - Kangaroo Island 2023
     - KI 2026
 trip_details:

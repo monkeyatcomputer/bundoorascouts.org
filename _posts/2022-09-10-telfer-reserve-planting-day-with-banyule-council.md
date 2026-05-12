@@ -7,6 +7,10 @@ author:
     - Group
 categories:
     - Group
+    - Joey Scouts
+    - Cub Scouts
+    - Scouts
+    - Venturer Scouts
 tags:
     - Environment
     - Plants

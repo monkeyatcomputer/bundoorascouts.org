@@ -47,5 +47,3 @@ Exploring nature and the great outdoors is a fundamental aspect of Scouting. Des
 ### Conclusion
 The Bundoora Scouts Group Camp at Warringal Scout Camp will be etched in the memories of the Scouts forever. Despite the wet weather, the Scouts demonstrated their resilience, embraced the challenges, and wholeheartedly participated in a range of activities. The campfires, singing, mock emergency first aid training, archery, and hike all played a part in fostering teamwork, personal growth, and the development of lifelong skills. Rain or shine, the Bundoora Scouts embraced the essence of Scouting, creating cherished memories and forging friendships that will endure beyond the boundaries of the camp.
 
-Yours in Scouting,  
-Chris (Rafiki)

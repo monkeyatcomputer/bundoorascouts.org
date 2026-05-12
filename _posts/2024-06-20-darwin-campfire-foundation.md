@@ -4,7 +4,7 @@ subtitle: "A rock-solid start to our new campfire space"
 description: "We are excited to share that we are laying the foundation for something that is going to rock your world: the Darwin Campfire Circle!"
 image: /uploads/2024-06-20-darwin-campfire-foundation/campfire-1.jpg
 author:
-    - Chris
+    - Group
 categories:
     - Group
 tags:
@@ -22,8 +22,5 @@ So, get ready to gravel down memory lane and ignite new stories. We cannot wait 
 We are incredibly grateful to the [Watsonia RSL](https://www.watsoniarsl.com.au/) for their support in making this project possible.
 
 Stay tuned for the grand unveiling. Until then, keep your inner flame kindled and your excitement sedimentary, because we are about to spark up some fun that is absolutely lava-ble!
-
-Stay stoked,  
-Chris
 
 {% include image-gallery.html folder='/uploads/2024-06-20-darwin-campfire-foundation/' %}

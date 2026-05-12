@@ -7,6 +7,11 @@ author:
     - Bruce
 categories:
     - Group
+    - Joey Scouts
+    - Cub Scouts
+    - Scouts
+    - Venturer Scouts
+    - Handfield Rover Unit
 tags:
     - BBQ
     - Celebration
@@ -19,7 +24,7 @@ As we look ahead to a fresh and exciting 2026 with a new group leader and no les
 
 And to everyone who turns up every week - whether you’re a Scout, a parent, or a carer - thank you for being part of this journey. Together, we’ve built a strong, supportive community that makes Scouting thrive.
 
-Here’s to new adventures, learning, and fun in 2026! 🌟
+Here’s to new adventures, learning, and fun in 2026!
 
 Yours in Scouting,  
 Bruce

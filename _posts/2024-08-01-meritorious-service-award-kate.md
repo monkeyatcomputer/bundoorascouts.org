@@ -6,7 +6,6 @@ image: /assets/images/hero-3.jpg
 author:
     - Group
 categories:
-    - Group
     - Cub Scouts
 tags:
     - Award

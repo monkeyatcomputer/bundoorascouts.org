@@ -24,7 +24,4 @@ The Hon. Colin Brooks also took the time to speak to the Scouts and their famili
 
 Overall, the Bundoora Scouts family BBQ was a huge success, thanks to the hard work and dedication of the leaders and the support of the community. The presence of the Hon. Colin Brooks made the event even more special, and the Scouts were honored to have him join us.
 
-Yours in Scouting,  
-Chris
-
 {% include image-gallery.html folder='/uploads/2023-02-20-family-bbq-with-special-guest/' %}

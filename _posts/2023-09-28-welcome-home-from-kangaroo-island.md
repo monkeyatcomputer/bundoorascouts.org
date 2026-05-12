@@ -4,11 +4,13 @@ subtitle: "Highlights from our epic adventure"
 description: "Our Scouts and Venturers have returned safely from Kangaroo Island."
 image: /uploads/trip/ki-2023/hero.png
 author:
-    - Hamish
+    - Group
 categories:
     - Scouts
+    - Venturer Scouts
 tags:
     - Camp
+    - Expedition
     - Kangaroo Island 2023
     - KI 2026
 ---
