@@ -20,15 +20,16 @@ Each card shows: day number, location, title, image, and a timed events list.
         {% endif %}
       </h2>
     </div>
-    <div class="flex gap-2">
+    <div class="flex items-center gap-2">
+      <span class="text-xs text-on-surface-variant opacity-70 hidden md:inline">Navigate itinerary</span>
       <button id="timeline-prev"
         class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-200 shadow-sm"
-        aria-label="Previous days">
+        aria-label="Previous days" title="Skip back 1 day">
         <span class="material-symbols-outlined">chevron_left</span>
       </button>
       <button id="timeline-next"
         class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-200 shadow-sm"
-        aria-label="Next days">
+        aria-label="Next days" title="Skip forward 1 day">
         <span class="material-symbols-outlined">chevron_right</span>
       </button>
     </div>
@@ -341,9 +342,9 @@ Each card shows: day number, location, title, image, and a timed events list.
     // ─── Proximity & Fading ─────────────────────────────────────────────────────
     function updateTimelineProximity() {
       var focusIdx = lastDayIdx;
-    if ((focusIdx === -1 || focusIdx === undefined) && isFullMode) {
-      focusIdx = 0;
-    }
+      if ((focusIdx === -1 || focusIdx === undefined) && isFullMode) {
+        focusIdx = 0;
+      }
 
       if (window.hasScrolledTimeline) {
         // Find card closest to the visual center of the strip

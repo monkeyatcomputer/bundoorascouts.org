@@ -2,24 +2,24 @@
 layout: default
 ---
 {% if page.author %}
-  {% assign author_name = page.author | first %}
-  {% if author_name == nil %}
-    {% assign author_name = page.author %}
-  {% endif %}
-  {% assign author_slug = author_name | slugify %}
-  
-  {% assign person = site.people | where: "title", author_name | first %}
-  {% if person == nil %}
-    {% assign person = site.people | where: "slug", author_slug | first %}
-  {% endif %}
+{% assign author_name = page.author | first %}
+{% if author_name == nil %}
+{% assign author_name = page.author %}
+{% endif %}
+{% assign author_slug = author_name | slugify %}
 
-  {% if person and author_name != "Group" %}
-    {% assign avatar_src = "/assets/images/people/" | append: author_slug | append: ".jpg" %}
-    {% assign show_profile_card = true %}
-  {% else %}
-    {% assign avatar_src = "/assets/images/logo.png" %}
-    {% assign show_profile_card = false %}
-  {% endif %}
+{% assign person = site.people | where: "title", author_name | first %}
+{% if person == nil %}
+{% assign person = site.people | where: "slug", author_slug | first %}
+{% endif %}
+
+{% if person and author_name != "Group" %}
+{% assign avatar_src = "/assets/images/people/" | append: author_slug | append: ".jpg" %}
+{% assign show_profile_card = true %}
+{% else %}
+{% assign avatar_src = "/assets/images/logo.png" %}
+{% assign show_profile_card = false %}
+{% endif %}
 {% endif %}
 <main>
   <!-- Post Hero -->
@@ -68,8 +68,8 @@ layout: default
           <div class="flex items-center space-x-3">
             <div
               class="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center bg-white/10 overflow-hidden">
-              <img src="{{ avatar_src }}" alt="{{ author_name }}" class="w-full h-full object-cover" 
-                   onerror="this.src='/assets/images/logo.png'">
+              <img src="{{ avatar_src }}" alt="{{ author_name }}" class="w-full h-full object-cover"
+                onerror="this.src='/assets/images/logo.png'">
             </div>
             <span class="font-bold text-sm">{{ page.author | join: ", " }}</span>
           </div>
@@ -116,6 +116,8 @@ layout: default
         </div>
       </div>
       {% endif %}
+
+      {% include post-categories.html %}
 
       {% include post-tags.html %}
     </article>
