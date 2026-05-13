@@ -2,7 +2,7 @@
 title: "Welcome Home from Kangaroo Island"
 subtitle: "Highlights from our epic adventure"
 description: "Our Scouts and Venturers have returned safely from Kangaroo Island."
-image: /uploads/trip/ki-2023/hero.png
+image: /uploads/trip/ki-2023/hero.jpg
 author:
     - group
 categories:

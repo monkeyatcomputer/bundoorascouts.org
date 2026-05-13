@@ -2,7 +2,7 @@
 title: "Highlights from the First Few Days"
 subtitle: "Snapshots from Kangaroo Island"
 description: "A short slideshow with highlights from the first couple of days."
-image: /uploads/trip/ki-2023/hero.png
+image: /uploads/trip/ki-2023/hero.jpg
 author:
     - group
 categories:

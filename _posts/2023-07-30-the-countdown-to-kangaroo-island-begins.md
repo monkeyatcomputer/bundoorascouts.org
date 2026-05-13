@@ -2,7 +2,7 @@
 title: "The countdown to Kangaroo Island Begins: 50 Days to Go"
 subtitle: "Get ready for the adventure!"
 description: "Only 50 days until we depart for Kangaroo Island."
-image: /uploads/trip/ki-2023/hero.png
+image: /uploads/trip/ki-2023/hero.jpg
 author:
     - hamish
 categories:

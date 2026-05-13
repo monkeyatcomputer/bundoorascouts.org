@@ -2,7 +2,7 @@
 title: "Departure for Kangaroo Island"
 subtitle: "We're off to Kangaroo Island!"
 description: "Check out our departure video as we head off on our epic adventure."
-image: /uploads/trip/ki-2023/hero.png
+image: /uploads/trip/ki-2023/hero.jpg
 author:
     - group
 categories:
