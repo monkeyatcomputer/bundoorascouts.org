@@ -106,9 +106,9 @@
   leader_tagline: Supporting our 18 to 26 year old Rovers.
   active: true
   show_on_leaders: true
-  logo-light: /assets/images/logo-handfield-rovers.png
-  logo-dark: /assets/images/logo-handfield-rovers.png
-  logo-crop: /assets/images/logo-handfield-rovers.png
+  logo-light: /assets/images/logo-handfield-rovers.svg
+  logo-dark: /assets/images/logo-handfield-rovers.svg
+  logo-crop: /assets/images/logo-handfield-rovers.svg
 
 - name: Adult Volunteers
   shortname: Adults
