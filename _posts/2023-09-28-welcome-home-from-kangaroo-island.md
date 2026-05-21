@@ -17,19 +17,19 @@ tags:
 
 Our combined adventure with Bundoora, Upwey, Gembrook, and Carlton Scouts to Kangaroo Island was a great success. Here are some of the highlights from our trip:
 
-### Flora and Fauna
+## Flora and Fauna
 Kangaroo Island is known for its unique wildlife and plant species. We learned about the local ecosystem and had the chance to observe many native animals in their natural habitat.
 
-### Raptor Domain
+## Raptor Domain
 One of the highlights was visiting the Raptor Domain, where Scouts had the opportunity to hold majestic birds of prey, including eagles.
 
-### Wildlife Encounters
+## Wildlife Encounters
 We also met and fed some of the local kangaroos, which was a memorable experience for everyone.
 
-### Giving Back
+## Giving Back
 As part of our commitment to making a positive impact, we donated handmade pouches to a local animal welfare group to support their wildlife rescue and rehabilitation efforts.
 
-### Campfire Nights
+## Campfire Nights
 Evenings were spent gathered around the campfire, sharing stories under the stars and building strong friendships across the groups.
 
 In addition to these highlights, we went on scenic hikes, visited stunning beaches, and learned about the island's rich indigenous history.

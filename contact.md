@@ -7,9 +7,9 @@ badge: "Get in touch"
 description: "Whether you want to enrol your child, volunteer as a leader, or just find out more – we'd love to hear from you."
 ---
 
-<div class="max-w-[1440px] mx-auto not-prose">
+<div class="site-container-wide not-prose">
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 
     <!-- Contact Form -->
     <div>
@@ -22,19 +22,19 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
             <label for="contact-name" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Your Name <span class="text-error">*</span></label>
             <input id="contact-name" name="name" type="text" required
                    placeholder="Jane Smith"
-                   class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all"/>
+                   class="form-control"/>
           </div>
           <div class="flex flex-col gap-2">
             <label for="contact-email" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Email Address <span class="text-error">*</span></label>
             <input id="contact-email" name="_replyto" type="email" required
                    placeholder="jane@example.com"
-                   class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all"/>
+                   class="form-control"/>
           </div>
           <div class="flex flex-col gap-2">
             <label for="contact-phone" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Phone Number</label>
             <input id="contact-phone" name="phone" type="tel"
                    placeholder="0412 345 678"
-                   class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all"/>
+                   class="form-control"/>
           </div>
         </div>
 
@@ -43,7 +43,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {% assign help_options = "Joey Scouts - 5 to 7 Years,Cub Scouts - 8 to 10 Years,Scouts - 11 to 14 Years,Venturer Scouts - 15 to 17 Years,Rovers - 18 to 25 Years,Leaders and Adult Members,Hall Hire,Other" | split: "," %}
             {% for option in help_options %}
-            <label class="flex items-center gap-3 p-3 rounded-lg border border-outline-variant/20 bg-surface-container-high cursor-pointer hover:bg-surface-container-highest transition-colors">
+            <label class="form-check cursor-pointer">
               <input type="checkbox" name="help_with" value="{{ option }}" class="w-5 h-5 rounded border-outline text-primary focus:ring-secondary/30">
               <span class="text-on-surface text-sm">{{ option }}</span>
             </label>
@@ -52,7 +52,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
         </div>
 
         <div id="extranet-suggestion" class="hidden">
-          <div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/20">
+          <div class="surface-card-muted p-6">
             <h4 class="font-headline font-bold text-primary text-lg mb-1">Ready to start the adventure?</h4>
             <p class="text-on-surface-variant text-sm mb-4">If you're looking to join, you can register your interest directly on the Scouts Victoria extranet. You can still send us a message if you just have a question!</p>
             <div id="extranet-buttons" class="flex flex-wrap gap-3">
@@ -63,7 +63,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
                   <a href="{{ join_url }}"
                     data-section-name="{{ section.name }}"
                     target="_blank" rel="noopener"
-                    class="extranet-btn hidden text-white px-6 py-3 rounded-lg font-headline font-bold text-sm hover:scale-[1.02] transition-transform shadow-sm items-center justify-center gap-2"
+                    class="extranet-btn btn hidden text-white shadow-sm items-center justify-center"
                     style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: section.colour | default: '#100e4c' }});">
                     Join {{ section.name }} <span class="material-symbols-outlined text-sm">arrow_forward</span>
                   </a>
@@ -77,7 +77,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
           <label for="contact-comments" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Message <span class="text-error">*</span></label>
           <textarea id="contact-comments" name="comments" rows="5" required
                     placeholder="Tell us a bit about yourself..."
-                    class="bg-surface-container-high border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all resize-none"></textarea>
+                    class="form-control resize-none"></textarea>
         </div>
         
         <!-- reCAPTCHA -->
@@ -157,7 +157,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
         </script>
 
         <button type="submit" id="contact-submit"
-                class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-lg font-headline font-bold text-base hover:scale-[1.02] transition-transform shadow-[0_10px_30px_rgba(16,14,76,0.2)] g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}" data-callback="onSubmit" data-action="site_contact">
+                class="btn btn-primary g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}" data-callback="onSubmit" data-action="site_contact">
           Send Message <span class="material-symbols-outlined">send</span>
         </button>
 
@@ -176,7 +176,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
 
       <div class="flex flex-col gap-6">
 
-        <div class="flex flex-row gap-6 p-8 bg-surface-container-low rounded-2xl items-start not-prose">
+        <div class="surface-card-muted flex flex-row gap-6 p-6 sm:p-8 items-start not-prose">
           <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
             <span class="material-symbols-outlined text-primary text-2xl">location_on</span>
           </div>
@@ -190,7 +190,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
           </div>
         </div>
 
-        <div class="flex flex-row gap-6 p-8 bg-surface-container-low rounded-2xl items-start not-prose">
+        <div class="surface-card-muted flex flex-row gap-6 p-6 sm:p-8 items-start not-prose">
           <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
             <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
           </div>

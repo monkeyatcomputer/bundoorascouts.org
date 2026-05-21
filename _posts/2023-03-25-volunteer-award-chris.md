@@ -12,7 +12,7 @@ tags:
     - Volunteer
 ---
 
-### CONGRATULATIONS TO: Chris
+## CONGRATULATIONS TO: Chris
 
 It gives us great pleasure to extend our warmest congratulations to Bundoora Scout's own Group Leader, Chris Parr on receiving the [Jagajaga Community Volunteer Award for 2023](https://www.katethwaites.com/volunteer-awards/). This  award recognizes Chris' outstanding contribution to the community and his dedication to making a positive impact on the lives of others.
 

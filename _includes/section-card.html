@@ -2,7 +2,7 @@
 <!-- Usage: include section-card.html section=section_data -->
 {% assign s = include.section %}
 <div
-  class="group bg-surface-container-lowest rounded-xl p-8 relative overflow-hidden flex flex-col justify-between min-h-[300px] shadow-[0_40px_60px_rgba(16,14,76,0.04)] hover:shadow-[0_40px_60px_rgba(16,14,76,0.10)] transition-all duration-300">
+  class="group surface-card p-6 sm:p-8 relative overflow-hidden flex flex-col justify-between min-h-[300px] transition-all duration-300 hover:-translate-y-1 hover:shadow-ambient-lg">
 
   <!-- Decorative colour blob -->
   <div class="absolute -right-12 -top-12 w-48 h-48 rounded-full blur-3xl transition-colors duration-500"
@@ -20,9 +20,7 @@
 
   <div>
     <!-- Age badge -->
-    <span
-      class="inline-block px-3 py-1 text-white text-xs font-bold uppercase tracking-wider rounded-full mb-6 font-label"
-      style="background-color: {{ s.colour }};">
+    <span class="eyebrow mb-6 text-white" style="background-color: {{ s.colour }};">
       Ages {{ s.age_range }}
     </span>
     <h3 class="text-2xl font-headline font-bold text-primary mb-2">{{ s.name }}</h3>
@@ -32,8 +30,8 @@
   <!-- Actions -->
   <div class="mt-auto flex flex-wrap justify-end items-center gap-3">
     <a href="{{ s.url }}"
-      class="inline-block text-center px-5 py-2.5 rounded-lg text-white font-bold font-headline text-xs uppercase tracking-wide hover:scale-[1.05] active:scale-95 transition-all shadow-md"
-      style="background-color: {{ s.colour }};">
+      class="btn text-white"
+      style="background: linear-gradient(135deg, {{ s.colour }}, {{ s.colour_dark | default: s.colour }});">
       Learn more
     </a>
 
@@ -47,7 +45,7 @@
     {% endif %}
 
     <a href="{{ join_url }}"
-      class="inline-block text-center px-5 py-2.5 rounded-lg bg-surface-container-highest text-primary font-bold font-headline text-xs uppercase tracking-wide hover:scale-[1.05] active:scale-95 transition-all shadow-sm">
+      class="btn btn-secondary">
       {{ join_text }}
     </a>
   </div>

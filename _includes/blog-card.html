@@ -1,7 +1,7 @@
 <!-- Blog Card Include -->
 <!-- Usage: include blog-card.html post=post -->
 {% assign p = include.post %}
-<article class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden group hover:shadow-ambient-lg hover:-translate-y-1 transition-all duration-500 h-full">
+<article class="surface-card-muted flex flex-col overflow-hidden group hover:shadow-ambient-lg hover:-translate-y-1 transition-all duration-500 h-full">
   <!-- Thumbnail Container -->
   <div class="aspect-video overflow-hidden relative">
     {% if p.image %}
@@ -17,7 +17,7 @@
     {% if p.categories.size > 0 %}
     <div class="absolute top-4 left-4 flex flex-wrap gap-2">
       {% for category in p.categories %}
-      <a href="/the-campfire/section/{{ category | slugify }}" class="px-3 py-1 bg-secondary/90 backdrop-blur-md text-white text-[10px] font-black uppercase tracking-tighter rounded-full shadow-sm hover:bg-primary transition-colors">
+      <a href="/the-campfire/section/{{ category | slugify }}" class="btn btn-pill min-h-0 bg-secondary/90 text-white shadow-sm hover:bg-primary">
         {{ category }}
       </a>
       {% endfor %}
@@ -26,14 +26,14 @@
   </div>
 
   <!-- Content Box (Overlapping) -->
-  <div class="p-6 flex flex-col flex-grow bg-surface-container-lowest m-2 rounded-lg -mt-12 relative z-10 shadow-sm border border-outline-variant/5">
+  <div class="surface-card-inset p-6 flex flex-col flex-grow m-2 -mt-12 relative z-10">
     <div class="flex items-center gap-2 mb-3 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest opacity-60">
       {{ p.date | date: "%B %d, %Y" }}
     </div>
 
-    <h2 class="font-headline text-xl font-extrabold text-primary mb-3 leading-tight group-hover:text-secondary transition-colors line-clamp-2">
+    <h3 class="font-headline text-xl font-extrabold text-primary mb-3 leading-tight group-hover:text-secondary transition-colors line-clamp-2">
       <a href="{{ p.url }}">{{ p.title }}</a>
-    </h2>
+    </h3>
 
     <p class="text-on-surface-variant text-sm leading-relaxed line-clamp-3 mb-6 flex-grow">
       {{ p.excerpt | strip_html | truncate: 120 }}
@@ -54,7 +54,7 @@
             <img src="/assets/images/logo.png" alt="Bundoora Scouts" class="w-full h-full object-cover">
           {% endif %}
         </div>
-        <span class="text-[10px] font-black text-primary tracking-tighter capitalize">
+        <span class="text-[10px] font-black text-primary capitalize">
           {% if person %}
             <a href="{{ person.url }}" class="hover:text-secondary transition-colors">
               {{ person.name }}
@@ -66,7 +66,7 @@
       </div>
       {% endif %}
       
-      <a href="{{ p.url }}" class="flex items-center gap-1 text-[10px] font-black text-secondary uppercase tracking-tighter group-hover:gap-2 transition-all">
+      <a href="{{ p.url }}" class="btn-text flex items-center gap-1 group-hover:gap-2 transition-all">
         Read Story
         <span class="material-symbols-outlined text-xs">arrow_forward</span>
       </a>

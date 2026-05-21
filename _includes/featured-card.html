@@ -3,7 +3,7 @@
 {% assign p = include.post %}
 
 <article
-  class="flex flex-col lg:flex-row bg-surface-container-low rounded-3xl overflow-hidden group hover:shadow-ambient-lg transition-all duration-500 border border-outline-variant/10">
+  class="surface-card-muted flex flex-col lg:flex-row overflow-hidden group hover:shadow-ambient-lg transition-all duration-500">
   <!-- Thumbnail Container -->
   <div class="lg:w-3/5 aspect-video lg:aspect-auto overflow-hidden relative">
     {% if p.image %}
@@ -16,7 +16,7 @@
     {% endif %}
     <div class="absolute top-6 left-6 flex flex-wrap gap-2">
       <span
-        class="px-4 py-1.5 bg-secondary text-white text-xs font-black uppercase tracking-tighter rounded-full shadow-lg">
+        class="eyebrow bg-secondary text-white mb-0">
         Featured Story
       </span>
     </div>
@@ -30,10 +30,10 @@
       {{ p.date | date: "%B %d, %Y" }}
     </div>
 
-    <h2
-      class="text-2xl md:text-5xl font-black text-primary mb-4 sm:mb-6 leading-tight tracking-tighter group-hover:text-secondary transition-colors">
+    <h3
+      class="text-2xl md:text-5xl font-black text-primary mb-4 sm:mb-6 leading-tight group-hover:text-secondary transition-colors">
       <a href="{{ p.url }}">{{ p.title }}</a>
-    </h2>
+    </h3>
 
     <p class="text-on-surface-variant text-sm sm:text-lg leading-relaxed mb-6 sm:mb-10">
       {{ p.excerpt | strip_html | truncate: 180 }}
@@ -56,7 +56,7 @@
           <img src="/assets/images/logo.png" alt="Bundoora Scouts" class="w-full h-full object-cover">
           {% endif %}
         </div>
-        <span class="text-[10px] sm:text-sm font-black text-primary tracking-tighter capitalize">
+        <span class="text-[10px] sm:text-sm font-black text-primary capitalize">
           {% if person %}
             <a href="{{ person.url }}" class="hover:text-secondary transition-colors">
               {{ person.name }}
@@ -69,7 +69,7 @@
       {% endif %}
 
       <a href="{{ p.url }}"
-        class="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-base font-black sm:font-bold text-secondary sm:text-white uppercase sm:normal-case tracking-tighter sm:tracking-normal bg-transparent sm:bg-primary px-0 sm:px-8 py-0 sm:py-3 rounded-none sm:rounded-xl hover:scale-105 transition-all sm:shadow-ambient-md">
+        class="btn btn-primary">
         Read Story <span class="material-symbols-outlined text-xs sm:text-base">arrow_forward</span>
       </a>
     </div>

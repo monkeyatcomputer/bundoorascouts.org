@@ -20,9 +20,8 @@ layout: default
 {% endif %}
 <main>
   <!-- Post Hero -->
-  <header
-    class="relative w-full min-h-[600px] flex items-center bg-primary-container overflow-hidden shadow-ambient-lg">
-    <div class="absolute inset-0 z-0">
+  <header class="hero-shell hero-shell--tall bg-primary-container">
+    <div class="hero-media">
       {% if page.image %}
       <img src="{{ page.image }}" alt="{{ page.title }}"
         class="w-full h-full object-cover opacity-60 mix-blend-multiply" />
@@ -31,13 +30,13 @@ layout: default
         style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }}); opacity: 0.8;">
       </div>
       {% endif %}
-      <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>
+      <div class="hero-overlay"></div>
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-48 pb-24 md:pt-60 md:pb-32">
-      <div class="max-w-4xl">
+    <div class="site-container hero-content">
+      <div class="hero-copy max-w-4xl">
         <div
-          class="inline-flex items-center space-x-2 bg-secondary text-on-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
+          class="eyebrow eyebrow--light bg-secondary text-on-primary">
           <span class="w-2 h-2 rounded-full bg-tertiary"></span>
           {% if page.categories %}
           <a href="/the-campfire/section/{{ page.categories | first | slugify }}"
@@ -47,7 +46,7 @@ layout: default
           {% endif %}
         </div>
 
-        <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-8 leading-tight tracking-tight">
+        <h1 class="hero-title mb-8">
           {% assign title_words = page.title | split: " " %}
           {% for word in title_words %}
           {% if forloop.last %}
@@ -100,8 +99,8 @@ layout: default
   </header>
 
   <!-- Centered Single Column Content -->
-  <div class="max-w-7xl mx-auto px-4 md:px-12 py-20">
-    <article class="prose prose-lg max-w-none text-on-surface leading-relaxed font-body
+  <div class="site-container page-shell">
+    <article class="prose prose-lg max-w-none content-prose
                     prose-headings:font-headline prose-headings:text-primary prose-headings:tracking-tight prose-headings:font-black
                     prose-p:text-on-surface prose-p:leading-relaxed prose-li:text-on-surface
                     prose-a:text-secondary prose-a:font-bold prose-a:no-underline hover:prose-a:text-primary prose-a:transition-colors

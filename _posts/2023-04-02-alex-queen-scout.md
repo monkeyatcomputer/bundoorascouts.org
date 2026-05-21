@@ -12,7 +12,7 @@ tags:
     - Queen Scout Award
 ---
 
-### CONGRATULATIONS TO: Alex Chung
+## CONGRATULATIONS TO: Alex Chung
 
 We are thrilled to share with you the wonderful news that Alex Chung of Handfield Rover Crew has been awarded the [Queen's Scout Award](https://scoutsvictoria.com.au/activities-events/activity-teams/heritage/kings-and-queens-scout-honour-roll/). This  award is the highest honor that a Venturer Scout in Australia can achieve, and it recognizes Alex's hard work, dedication, and outstanding contribution to the Scouting movement.
 

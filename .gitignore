@@ -7,3 +7,6 @@ _site
 .frontmatter
 frontmatter.json
 scratch/
+vendor/
+node_modules/
+.DS_Store

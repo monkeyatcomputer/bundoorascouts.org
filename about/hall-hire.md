@@ -17,7 +17,7 @@ The hall is available for casual one‑off bookings or longer‑term regular hir
 <section class="py-12 not-prose" data-gsap="reveal">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
     <!-- Main Hall -->
-    <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform durationW-300">
+    <div class="surface-card p-6 sm:p-8 flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
       <div class="flex items-center gap-4 mb-6">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
           <span class="material-symbols-outlined filled text-2xl text-secondary">straighten</span>
@@ -30,7 +30,7 @@ The hall is available for casual one‑off bookings or longer‑term regular hir
     </div>
 
     <!-- Kitchen -->
-    <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
+    <div class="surface-card p-6 sm:p-8 flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
       <div class="flex items-center gap-4 mb-6">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
           <span class="material-symbols-outlined filled text-2xl text-secondary">countertops</span>
@@ -43,7 +43,7 @@ The hall is available for casual one‑off bookings or longer‑term regular hir
     </div>
 
     <!-- Capacity -->
-    <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
+    <div class="surface-card p-6 sm:p-8 flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
       <div class="flex items-center gap-4 mb-6">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
           <span class="material-symbols-outlined filled text-2xl text-secondary">groups</span>
@@ -56,7 +56,7 @@ The hall is available for casual one‑off bookings or longer‑term regular hir
     </div>
 
     <!-- Amenities -->
-    <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-[0_40px_60px_rgba(16,14,76,0.06)] flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
+    <div class="surface-card p-6 sm:p-8 flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
       <div class="flex items-center gap-4 mb-6">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
           <span class="material-symbols-outlined filled text-2xl text-secondary">ac_unit</span>
@@ -96,7 +96,7 @@ Hall hire is available when the venue is not in use by the Bundoora Scout Group,
 {% include image-gallery.html folder="/uploads/hall-hire" %}
 
 <section class="mt-24 mb-20 text-center not-prose" data-gsap="reveal">
-  <div class="bg-gradient-to-br from-primary via-primary-container to-primary rounded-[3rem] p-10 md:p-20 text-white shadow-ambient-lg overflow-hidden relative">
+  <div class="bg-gradient-to-br from-primary via-primary-container to-primary rounded-2xl p-8 md:p-16 text-white shadow-ambient-lg overflow-hidden relative">
     <!-- Enhanced Decorative elements -->
     <div class="absolute -top-32 -right-32 w-96 h-96 bg-secondary/30 rounded-full blur-[100px] animate-pulse"></div>
     <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-tertiary/20 rounded-full blur-[100px]"></div>
@@ -113,13 +113,13 @@ Hall hire is available when the venue is not in use by the Bundoora Scout Group,
       <div class="flex flex-col md:flex-row items-center justify-center gap-6">
         <a href="https://www.spacetoco.com/space/bundoora-scout-hall" 
            target="_blank"
-           class="group inline-flex items-center gap-3 bg-white text-primary px-10 py-5 rounded-2xl font-black text-lg hover:scale-[1.05] active:scale-[0.98] transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_60px_rgba(255,255,255,0.1)]">
-          <span class="material-symbols-outlined filled text-secondary group-hover:rotate-12 transition-transform">event_available</span>
+           class="btn bg-white text-primary shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+          <span class="material-symbols-outlined filled text-secondary">event_available</span>
           Book via SpacetoCo
         </a>
         
         <a href="/contact" 
-           class="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white px-10 py-5 rounded-2xl font-bold text-lg backdrop-blur-xl transition-all border border-white/20 hover:border-white/40 shadow-xl">
+           class="btn btn-ghost">
           Enquire for Long-term Hire
         </a>
       </div>

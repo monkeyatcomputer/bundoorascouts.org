@@ -13,7 +13,7 @@ tags:
     - World Scout Day
 ---
 
-### CONGRATULATIONS TO: Hamish
+## CONGRATULATIONS TO: Hamish
 
 Congratulations to Bundoora's very own amazing scout leader, Hamish, for being awarded the [Scouts Australia](https://scouts.com.au/) [Special Service Award](https://scouts.com.au/about/what-is-scouting/awards/) on [World Scout Day](https://scoutsvictoria.com.au/age-sections-adults/leader-resources/marketing/world-scout-day-2022/). Awarded to both Adult Members and Supporters for the successful support, development or management of a Section or Formation, or for an intense contribution over a period of at least 12 months to the success of a major event or major activity. 'Special Service' is defined as making a noteworthy contribution in their role. This Award can be made in the first three year assignment / period of service.
 

@@ -4,7 +4,7 @@
   role="navigation" aria-label="Main navigation">
 
   <div id="nav-inner"
-    class="flex items-center justify-between px-4 lg:px-12 py-6 max-w-[1440px] mx-auto font-headline tracking-tight font-semibold text-base">
+    class="site-container-wide flex items-center justify-between py-5 lg:py-6 font-headline font-semibold text-base">
 
     <!-- Brand Logo (Left) -->
     <div class="flex-1 flex justify-start items-center">
@@ -64,14 +64,13 @@
     <div class="flex-1 flex justify-end items-center gap-3">
       <!-- Contact Icon Button -->
       <a href="/contact"
-        class="hidden sm:flex w-10 h-10 items-center justify-center rounded-lg border border-outline-variant/30 text-primary hover:bg-surface-container-low hover:border-primary/30 transition-all"
+        class="hidden sm:flex btn btn-secondary w-10 h-10 min-h-0 px-0 py-0 items-center justify-center"
         title="Contact Us">
         <span class="material-symbols-outlined">mail</span>
       </a>
 
       <div class="hidden lg:block">
-        <a href="/contact"
-          class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-bold hover:scale-[1.02] transition-transform shadow-ambient-md whitespace-nowrap">
+        <a href="/contact" class="btn btn-primary whitespace-nowrap">
           Join the Adventure
         </a>
       </div>
@@ -153,7 +152,7 @@
       {% else %}
       {% assign join_url = '/contact' %}
       {% endif %}
-      <a href="{{ join_url }}" class="w-full block text-center bg-primary text-white py-4 rounded-lg font-bold">
+      <a href="{{ join_url }}" class="btn btn-primary w-full">
         Join the Adventure
       </a>
     </div>

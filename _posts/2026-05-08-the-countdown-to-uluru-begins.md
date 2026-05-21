@@ -47,13 +47,13 @@ In a little over **50 days**, the Bundoora Scouts Uluru Adventure shifts from ca
 
 > The countdown is on, the nerves are fluttering, and the excitement is building - Uluru, we’re coming!
 
-### The Excitement is Building
+## The Excitement is Building
 
 There’s a growing mix of excitement, pride, and a little trepidation as this expedition we’ve been preparing for suddenly feels very close. Gear is coming together, final plans are locking in - and the reality of heading to the red heart of Australia is setting in.
 
 We've done the pre-camp shakedown, now there's only one thing left to do...
 
-### A Journey Shared
+## A Journey Shared
 
 We’ve been incredibly fortunate to be planning this journey alongside our friends from **[Heany Park Scouts](https://heanyparkscouts.com.au/)**, whose collaboration and support have been invaluable every step of the way. 
 
@@ -82,7 +82,7 @@ And we won’t be traveling alone! We’re thrilled that Scouts from across Vict
 </section>
 
 
-### Follow the Adventure
+## Follow the Adventure
 
 To help everyone share in the journey, we’ve launched a **countdown timer and live expedition tracker**. Parents, carers, and friends will be able to follow along and see exactly where our adventurers are once we’re on the road.
 

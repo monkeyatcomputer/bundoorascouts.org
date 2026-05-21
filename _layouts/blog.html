@@ -2,9 +2,8 @@
 layout: default
 ---
 <!-- Hero Section -->
-<section
-  class="relative w-full min-h-[500px] flex items-center bg-primary-container overflow-hidden mb-12 shadow-ambient-lg">
-  <div class="absolute inset-0 z-0">
+<section class="hero-shell hero-shell--compact bg-primary-container">
+  <div class="hero-media">
     {% if page.image %}
     <img src="{{ page.image }}" alt="Campfire background"
       class="w-full h-full object-cover opacity-40 mix-blend-multiply" />
@@ -13,20 +12,19 @@ layout: default
       style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }}); opacity: 0.8;">
     </div>
     {% endif %}
-    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>
+    <div class="hero-overlay"></div>
   </div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-32 pb-20 md:pt-48 md:pb-24">
-    <div class="max-w-3xl">
-      <span
-        class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary text-on-primary text-sm font-bold tracking-widest uppercase shadow-sm">
+  <div class="site-container hero-content">
+    <div class="hero-copy">
+      <span class="eyebrow eyebrow--light bg-secondary text-on-primary">
         The Campfire
       </span>
-      <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-6 leading-tight tracking-tight">
+      <h1 class="hero-title">
         Gather 'Round the <span
           class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">Campfire</span>
       </h1>
-      <p class="text-xl text-primary-fixed-dim leading-relaxed mb-10 font-body">
+      <p class="hero-description">
         {% if page.autopage %}
         Exploring stories tagged with <span class="text-secondary font-bold">#{{ page.autopage.display_name }}</span>.
         {% else %}
@@ -35,14 +33,14 @@ layout: default
         {% endif %}
       </p>
 
-      <div class="flex flex-wrap gap-3">
+      <div class="hero-actions">
         <a href="/the-campfire"
-          class="px-4 py-2 rounded-full {% if page.url == '/the-campfire' %}bg-secondary text-on-primary{% else %}bg-surface-container-highest/20 backdrop-blur-sm text-on-primary border border-white/10{% endif %} text-sm font-bold uppercase tracking-widest hover:bg-secondary hover:text-on-primary transition-all">All
+          class="btn btn-pill {% if page.url == '/the-campfire' %}bg-secondary text-on-primary{% else %}bg-surface-container-highest/20 backdrop-blur-sm text-on-primary border border-white/10{% endif %}">All
           Stories</a>
         {% assign categories = site.posts | map: 'categories' | flatten | uniq %}
         {% for category in categories %}
         <a href="/the-campfire/section/{{ category | slugify }}"
-          class="px-4 py-2 rounded-full bg-surface-container-highest/20 backdrop-blur-sm text-on-primary text-sm font-bold uppercase tracking-widest border border-white/10 hover:bg-secondary transition-colors">
+          class="btn btn-pill bg-surface-container-highest/20 backdrop-blur-sm text-on-primary border border-white/10 hover:bg-secondary">
           {{ category }}
         </a>
         {% endfor %}
@@ -51,7 +49,7 @@ layout: default
   </div>
 </section>
 
-<main class="flex-grow w-full max-w-7xl mx-auto px-4 md:px-12 py-12">
+<main class="site-container page-shell">
 
   <!-- Content -->
   <div class="w-full">
@@ -83,9 +81,9 @@ layout: default
       {% endfor %}
     </div>
     {% else %}
-    <div class="text-center py-24 bg-surface-container-low rounded-3xl border border-dashed border-outline-variant">
+    <div class="surface-card-muted text-center py-16 px-6">
       <span class="material-symbols-outlined text-6xl text-outline-variant mb-4">local_fire_department</span>
-      <h3 class="text-2xl font-bold text-primary">No stories found</h3>
+      <h2 class="text-2xl font-bold text-primary">No stories found</h2>
       <p class="text-on-surface-variant">Check back later for more updates from the trail.</p>
     </div>
     {% endif %}
@@ -95,7 +93,7 @@ layout: default
     <div id="pagination-container" class="mt-16 flex justify-center">
       {% if paginator.next_page %}
       <button id="load-more-btn" data-next-page="{{ paginator.next_page_path }}"
-        class="group relative px-12 py-4 bg-primary text-white rounded-2xl font-headline font-bold text-lg hover:shadow-ambient-lg transition-all active:scale-95 flex items-center gap-3 overflow-hidden">
+        class="btn btn-primary group relative overflow-hidden px-8 sm:px-12">
         <span class="relative z-10">Load More Stories</span>
         <span
           class="material-symbols-outlined relative z-10 group-hover:translate-y-1 transition-transform">expand_more</span>

@@ -20,6 +20,15 @@ If you want to run this project locally and explore the trail, follow these step
    ```
 5. **Follow the Map**: Open your browser to `http://localhost:4000`.
 
+### Windows note
+
+On this machine, `tailwindcss-ruby` installs correctly but does not automatically resolve its bundled executable during Jekyll builds. If `bundle exec jekyll build` or `bundle exec jekyll serve` fails with a `Tailwindcss::Ruby::ExecutableNotFoundException`, set `TAILWINDCSS_INSTALL_DIR` to the gem's platform binary directory before running Jekyll:
+
+```powershell
+$env:TAILWINDCSS_INSTALL_DIR="$HOME\.local\share\gem\ruby\3.4.0\gems\tailwindcss-ruby-4.2.4-x64-mingw-ucrt\exe\x64-mingw-ucrt"
+bundle exec jekyll build --trace
+```
+
 ## Trail Map (Project Structure)
 
 This repo is organized to keep things as neat as a well-tied bowline:

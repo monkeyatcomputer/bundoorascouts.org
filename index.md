@@ -6,32 +6,29 @@ image: "/uploads/hero/aerial.jpg"
 ---
 
 <!-- Hero Section -->
-<section
-  class="relative w-full min-h-[700px] flex items-center bg-surface-container-low overflow-hidden shadow-ambient-lg">
-  <div class="absolute inset-0 z-0">
+<section class="hero-shell hero-shell--tall bg-surface-container-low">
+  <div class="hero-media">
     <img src="{{ page.image }}" alt="Scouts hiking" class="w-full h-full object-cover opacity-80 mix-blend-multiply" />
-    <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
+    <div class="hero-overlay"></div>
   </div>
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-40 pb-24 lg:pt-48 lg:pb-32">
-    <div class="max-w-2xl">
-      <span
-        class="inline-block px-4 py-1 mb-6 rounded-full bg-tertiary text-on-tertiary text-sm font-bold tracking-widest uppercase">
+  <div class="site-container hero-content">
+    <div class="hero-copy max-w-2xl">
+      <span class="eyebrow bg-tertiary text-on-tertiary">
         The Modern Trailfinder
       </span>
-      <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-6 leading-tight tracking-tight">
+      <h1 class="hero-title">
         Adventure Awaits in <span
           class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">Bundoora.</span>
       </h1>
-      <p class="text-xl text-primary-fixed-dim mb-10 leading-relaxed font-body">
+      <p class="hero-description">
         Empowering youth through outdoor education, leadership, and community. Join the journey from Joeys to Rovers.
       </p>
-      <div class="flex flex-wrap gap-4">
-        <a href="#scouting-sections"
-          class="bg-secondary text-on-primary px-8 py-4 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-lg">
+      <div class="hero-actions">
+        <a href="#scouting-sections" class="btn text-on-primary"
+          style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
           Find Your Section
         </a>
-        <a href="/about"
-          class="bg-surface-container-highest/20 backdrop-blur-sm text-on-primary px-8 py-4 rounded-lg font-medium border border-outline-variant/30 hover:bg-surface-container-highest/30 transition-all duration-300">
+        <a href="/about" class="btn btn-ghost">
           Learn More
         </a>
       </div>
@@ -40,17 +37,16 @@ image: "/uploads/hero/aerial.jpg"
 </section>
 
 <!-- Sections Bento Grid -->
-<section id="scouting-sections" class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 mt-6 mb-6">
-  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
+<section id="scouting-sections" class="site-container-wide section-shell">
+  <div class="section-header">
     <div>
-      <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter leading-[0.85]">
+      <h2 class="section-title">
         Our <br />
         <span class="text-secondary">Sections.</span>
       </h2>
-      <p class="text-on-surface-variant mt-4 text-lg md:text-xl">A progressive journey of discovery.</p>
+      <p class="section-description mt-4">A progressive journey of discovery.</p>
     </div>
-    <a href="/sections"
-      class="flex-shrink-0 bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-sm hover:scale-105 transition-transform flex items-center justify-center gap-2 border border-outline-variant/10">
+    <a href="/sections" class="btn btn-secondary flex-shrink-0">
       View All Sections <span class="material-symbols-outlined">arrow_forward</span>
     </a>
   </div>
@@ -61,15 +57,14 @@ image: "/uploads/hero/aerial.jpg"
 </section>
 
 <!-- Latest from The Campfire -->
-<section class="bg-surface-container-low rounded-[3xl] mx-2 sm:mx-4 lg:mx-8 mb-6">
-  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 py-4">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-16">
-      <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter leading-[0.85]">
+<section class="site-container-wide section-shell">
+  <div class="surface-band px-4 py-8 sm:px-6 md:px-12">
+    <div class="section-header mb-10 md:mb-16">
+      <h2 class="section-title">
         Latest from <br />
         <span class="text-on-tertiary-container">The Campfire.</span>
       </h2>
-      <a href="/the-campfire"
-        class="flex-shrink-0 bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-sm hover:scale-105 transition-transform flex items-center justify-center gap-2 border border-outline-variant/10">
+      <a href="/the-campfire" class="btn btn-secondary flex-shrink-0">
         Read All Stories <span class="material-symbols-outlined">arrow_forward</span>
       </a>
     </div>
@@ -85,9 +80,9 @@ image: "/uploads/hero/aerial.jpg"
 </section>
 
 <!-- Hall Hire CTA Section -->
-<section class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 mb-12" data-gsap="reveal">
+<section class="site-container-wide pb-12" data-gsap="reveal">
   <div
-    class="relative bg-surface-container-high rounded-[3rem] overflow-hidden shadow-ambient-lg border border-outline-variant/20">
+    class="surface-band relative overflow-hidden shadow-ambient-lg">
     <div class="absolute inset-0 z-0">
       <img src="/uploads/hall-hire/Main-Hall-2.jpg" alt="Bundoora Scout Hall Interior"
         class="w-full h-full object-cover opacity-20 mix-blend-overlay">
@@ -96,25 +91,24 @@ image: "/uploads/hero/aerial.jpg"
 
     <div class="relative z-10 flex flex-col md:flex-row items-center">
       <div class="w-full md:w-1/2 p-6 sm:p-8 md:p-16 lg:p-24">
-        <span
-          class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary/10 text-secondary text-sm font-bold tracking-widest uppercase border border-secondary/20">
+        <span class="eyebrow eyebrow--accent">
           Venue Hire
         </span>
-        <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter leading-[0.9] mb-8">
+        <h2 class="section-title mb-8">
           A Space for the <br />
           <span class="text-secondary">Community.</span>
         </h2>
-        <p class="text-xl text-on-surface-variant leading-relaxed mb-12 max-w-lg">
+        <p class="section-description mb-10 max-w-lg text-lg">
           Our affordable, versatile hall in N.J. Telfer Reserve is the perfect venue for your next class, meeting, or
           event.
         </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="/about/hall-hire"
-            class="bg-primary text-on-primary px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-xl">
+        <div class="hero-actions">
+          <a href="/about/hall-hire" class="btn text-on-primary"
+            style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
             Learn More
           </a>
           <a href="https://www.spacetoco.com/space/bundoora-scout-hall" target="_blank"
-            class="bg-white/50 backdrop-blur-md text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/80 transition-all border border-primary/10 flex items-center gap-3">
+            class="btn btn-secondary bg-white/60 border border-primary/10">
             <span class="material-symbols-outlined">event_available</span>
             Book Now
           </a>
