@@ -6,6 +6,7 @@ section_slug: venturers
 ap_page: leadership-course
 
 leadership_course:
+  source_url: "https://scoutsvictoria.com.au/age-sections-adults/venturers/the-venturer-program/"
   summary: "To achieve your Peak Award, you need to complete a Leadership Course or Personal Development activity. This is usually a fun, interactive weekend where you learn skills to help you lead activities and support your Unit."
   duration: "At least a weekend or equivalent hours."
   target_audience: "Venturers looking to develop their skills and work towards the King's Scout Award."

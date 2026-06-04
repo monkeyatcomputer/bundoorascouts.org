@@ -3,6 +3,7 @@
 
 {% assign section_sia = site.data.sia[page.section_slug] %}
 {% assign intro = site.data.sia.intro | default: page.intro %}
+{% assign source_url = page.source_url | default: section_sia.sv_url %}
 
 <div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12 flex flex-col gap-16">
 
@@ -99,6 +100,8 @@
     </div>
   </section>
   {% endif %}
+
+  {% include achievement-pathway-source-link.html url=source_url label="Scouts Victoria Special Interest Areas overview" %}
 
   <!-- Back to Overview -->
   <div class="text-center">

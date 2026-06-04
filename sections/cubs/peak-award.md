@@ -7,6 +7,7 @@ section_slug: cubs
 ap_page: peak-award
 
 peak_award:
+  source_url: "https://scoutsvictoria.com.au/age-sections-adults/cub-scouts/cub-scout-program/peak-award-grey-wolf-award/"
   name: "The Grey Wolf Award"
   image: "/assets/images/sections/peak-award-cubs.svg"
   subtitle: "The highest achievement in the Cub Scout section."

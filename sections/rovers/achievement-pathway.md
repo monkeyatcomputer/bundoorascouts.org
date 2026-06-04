@@ -15,10 +15,10 @@ pathway:
     image: "/assets/images/sections/peak-award-rovers.svg"
   milestones:
     requirement: "Complete Milestone 3"
-    url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/"
-    milestone_1: { label: "Participate", url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/" }
-    milestone_2: { label: "Assist", url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/" }
-    milestone_3: { label: "Lead", url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/" }
+    url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/program-essentials-milestones/"
+    milestone_1: { label: "Participate", url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/program-essentials-milestones/" }
+    milestone_2: { label: "Assist", url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/program-essentials-milestones/" }
+    milestone_3: { label: "Lead", url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/program-essentials-milestones/" }
   oas:
     summary: "Outdoor Adventure Skills are the link between adventurous activities and the youth program. They enable youth members of all ages to access the basic skills for a range of activities, and progress through to high skill levels across nine broad activity areas."
     url: /sections/rovers/outdoor-skills

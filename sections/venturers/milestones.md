@@ -7,7 +7,8 @@ section_slug: venturers
 ap_page: milestones
 
 milestones:
-  summary: "Milestones are the core of your journey through the Venturer section. They recognize your active participation in the program, as well as your growth in assisting and leading activities."
+  summary: "Milestones are the core of your journey through the Venturer section. They recognise active participation in the program, as well as growth in assisting, leading, and reviewing activities."
+  source_url: "https://scoutsvictoria.com.au/age-sections-adults/venturers/the-venturer-program/program-essentials-milestones/"
   items:
     - name: "Milestone 1"
       image: "/assets/images/sections/milestone-1-venturers.svg"

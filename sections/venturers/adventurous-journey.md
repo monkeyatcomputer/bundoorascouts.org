@@ -4,10 +4,11 @@ title: "Adventurous Journey"
 permalink: /sections/venturers/adventurous-journey
 section_slug: venturers
 ap_page: adventurous-journey
+source_url: "https://scoutsvictoria.com.au/age-sections-adults/venturers/the-venturer-program/"
 
 adventurous_journey:
   requirement: "Plan & lead 4-day, 3-night journey"
-  sv_url: "https://scoutsvictoria.com.au/age-sections-adults/venturers/venturer-program/"
+  sv_url: "https://scoutsvictoria.com.au/age-sections-adults/venturers/the-venturer-program/"
   parameters:
     - { icon: "schedule", title: "Duration & Scale", description: "Minimum 4 days and 3 nights of continuous activity in the field. This is your chance to explore!" }
     - { icon: "group", title: "Leadership", description: "Venturers take a lead role in planning and conducting the journey, with support from leaders." }

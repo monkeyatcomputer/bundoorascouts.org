@@ -7,6 +7,7 @@ section_slug: joeys
 ap_page: peak-award
 
 peak_award:
+  source_url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/"
   name: "The Joey Scout Challenge Award"
   image: "/assets/images/sections/peak-award-joeys.svg"
   subtitle: "The highest achievement in the Joey Scout section."

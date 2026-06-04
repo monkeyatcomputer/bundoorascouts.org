@@ -4,6 +4,7 @@ title: "Adventurous Journey"
 permalink: /sections/cubs/adventurous-journey
 section_slug: cubs
 ap_page: adventurous-journey
+source_url: "https://scoutsvictoria.com.au/age-sections-adults/cub-scouts/cub-scout-program/"
 
 adventurous_journey:
   requirement: "Lead a 4hr journey"

@@ -4,6 +4,7 @@ title: "Outdoor Adventure Skills"
 permalink: /sections/joeys/outdoor-skills
 section_slug: joeys
 ap_page: outdoor-skills
+source_url: "https://scoutsvictoria.com.au/activities-events/outdoor-adventure-skills/what-are-outdoor-adventure-skills/"
 ---
 
 {% include achievement-pathway-oas.html %}

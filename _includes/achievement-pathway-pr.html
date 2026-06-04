@@ -61,6 +61,8 @@
     </div>
   </section>
 
+  {% include achievement-pathway-source-link.html url=page.reflection.source_url label="Scouts Victoria section program overview" %}
+
   <!-- Back to Overview -->
   <div class="text-center">
     <a href="/sections/{{ page.section_slug }}/achievement-pathway#personal-reflection" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">

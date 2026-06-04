@@ -1,6 +1,7 @@
 {% assign section = site.data.sections | where: "slug", page.section_slug | first %}
 {% assign accent = section.colour | default: "#3f5e94" %}
 {% assign section_oas = site.data.oas[page.section_slug] %}
+{% assign source_url = page.source_url | default: section_oas.sv_oas_overview_url %}
 {% assign stage_str = section_oas.stage_requirement | append: "" %}
 {% assign stage_color = site.data.oas.stages[stage_str] | default: "#006649" %}
 
@@ -17,10 +18,6 @@
           {{ para }}
         </p>
         {% endfor %}
-
-        <a href="{{ section_oas.sv_oas_overview_url }}" target="_blank"
-          class="text-center px-4 py-2.5 rounded-lg font-medium hover:bg-surface-dim transition-colors text-sm shadow-[0_2px_8px_rgba(38,38,97,0.04)]">
-          What are the Outdoor Adventure Skills?</a>
       </div>
 
       <div class="bg-surface-container-low p-6 rounded-lg shadow-sm border border-outline-variant/10 md:w-1/3">
@@ -109,6 +106,8 @@
 
     </div>
   </section>
+
+  {% include achievement-pathway-source-link.html url=source_url label="Scouts Victoria Outdoor Adventure Skills overview" %}
 
   <!-- Back to Overview -->
   <div class="mt-12 text-center">

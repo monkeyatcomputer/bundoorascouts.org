@@ -7,6 +7,7 @@ section_slug: rovers
 ap_page: peak-award
 
 peak_award:
+  source_url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/"
   name: "The Baden-Powell Scout Award"
   image: "/assets/images/sections/peak-award-rovers.svg"
   subtitle: "The highest achievement in the Rover section."

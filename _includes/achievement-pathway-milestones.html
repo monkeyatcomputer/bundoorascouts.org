@@ -1,13 +1,15 @@
 {% assign section = site.data.sections | where: "slug", page.section_slug | first %}
 
-<div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12 flex flex-col gap-8">
-  <h2 class="font-display text-3xl font-black text-primary mb-4">Understanding Milestones</h2>
-  
-  <p class="text-on-surface-variant text-lg leading-relaxed">
-    {{ page.milestones.summary }}
-  </p>
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12 flex flex-col gap-10">
+  <div>
+    <h2 class="font-display text-3xl font-black text-primary mb-4">Understanding Milestones</h2>
+    
+    <p class="text-on-surface-variant text-lg leading-relaxed">
+      {{ page.milestones.summary }}
+    </p>
+  </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     {% for item in page.milestones.items %}
       <div class="bg-surface-container-high p-6 rounded-xl text-center flex flex-col items-center">
         <div class="w-34 h-34 mb-4 flex items-center justify-center">
@@ -18,6 +20,24 @@
       </div>
     {% endfor %}
   </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10">
+      <h3 class="font-headline text-xl font-bold text-primary mb-3">How they are earned</h3>
+      <p class="text-on-surface-variant leading-relaxed">
+        Milestones are built into regular section nights, activities, camps, and adventures. Scouts work through them by participating, assisting, leading, and reviewing their experience with their Unit.
+      </p>
+    </div>
+
+    <div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10">
+      <h3 class="font-headline text-xl font-bold text-primary mb-3">Challenge Areas</h3>
+      <p class="text-on-surface-variant leading-relaxed">
+        Progress should include a broad mix of activities across the program, including outdoor, creative, personal growth, and community-focused experiences.
+      </p>
+    </div>
+  </div>
+
+  {% include achievement-pathway-source-link.html url=page.milestones.source_url label="Scouts Victoria Milestones overview" %}
 </div>
 
 <!-- Back to Overview -->

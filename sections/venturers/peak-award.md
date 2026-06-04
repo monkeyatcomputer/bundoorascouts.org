@@ -7,6 +7,7 @@ section_slug: venturers
 ap_page: peak-award
 
 peak_award:
+  source_url: "https://scoutsvictoria.com.au/age-sections-adults/venturers/the-venturer-program/"
   name: "The King's Scout Award"
   image: "/assets/images/sections/peak-award-venturers.svg"
   subtitle: "The highest achievement in the Venturer section."

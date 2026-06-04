@@ -4,6 +4,7 @@ title: "Adventurous Journey"
 permalink: /sections/rovers/adventurous-journey
 section_slug: rovers
 ap_page: adventurous-journey
+source_url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/"
 
 adventurous_journey:
   requirement: "Plan & lead 4-day, 3-night journey"

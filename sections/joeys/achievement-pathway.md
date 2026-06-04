@@ -14,10 +14,10 @@ pathway:
     url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/"
   milestones:
     requirement: "Complete Milestone 3"
-    url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/"
-    milestone_1: { label: "Participate", url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/" }
-    milestone_2: { label: "Assist", url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/" }
-    milestone_3: { label: "Lead", url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/" }
+    url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/program-essentials-milestones/"
+    milestone_1: { label: "Participate", url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/program-essentials-milestones/" }
+    milestone_2: { label: "Assist", url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/program-essentials-milestones/" }
+    milestone_3: { label: "Lead", url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/program-essentials-milestones/" }
   oas:
     summary: "Outdoor Adventure Skills are the link between adventurous activities and the youth program. They enable youth members of all ages to access the basic skills for a range of activities, and progress through to high skill levels across nine broad activity areas."
     url: /sections/joeys/outdoor-skills

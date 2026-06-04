@@ -6,6 +6,7 @@ section_slug: cubs
 ap_page: leadership-course
 
 leadership_course:
+  source_url: "https://scoutsvictoria.com.au/age-sections-adults/cub-scouts/cub-scout-program/"
   summary: "To achieve your Peak Award, you need to complete a Leadership Course or Personal Development activity. This is usually a fun, interactive day where you learn skills to help you lead activities and support your Pack."
   duration: "At least 1 day or equivalent hours."
   target_audience: "Cubs looking to develop their skills and work towards the Grey Wolf Award."

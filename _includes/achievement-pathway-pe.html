@@ -47,12 +47,7 @@
   </div>
 
   {% if page.essentials.source_url %}
-    <div>
-      <a href="{{ page.essentials.source_url }}" class="inline-flex items-center gap-2 text-primary font-bold hover:underline">
-        <span>Scouts Victoria Program Essentials overview</span>
-        <span class="material-symbols-outlined text-sm">open_in_new</span>
-      </a>
-    </div>
+    {% include achievement-pathway-source-link.html url=page.essentials.source_url label="Scouts Victoria Program Essentials overview" %}
   {% endif %}
 </div>
 

@@ -4,6 +4,7 @@ title: "Adventurous Journey"
 permalink: /sections/scouts/adventurous-journey
 section_slug: scouts
 ap_page: adventurous-journey
+source_url: "https://scoutsvictoria.com.au/age-sections-adults/scouts/scout-program/scout-adventurous-journey/"
 
 adventurous_journey:
   requirement: "Plan & lead 3-day, 2-night journey"

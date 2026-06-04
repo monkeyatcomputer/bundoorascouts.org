@@ -40,6 +40,8 @@
       <p class="text-sm">{{ page.leadership_course.registration_info }}</p>
     </div>
 
+    {% include achievement-pathway-source-link.html url=page.leadership_course.source_url label="Scouts Victoria section program overview" %}
+
     <div class="text-center mt-8">
       <a href="/sections/{{ page.section_slug }}/achievement-pathway#leadership-course"
         class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md"
