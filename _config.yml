@@ -124,6 +124,9 @@ exclude:
   - node_modules/
   - scratch/
   - scripts/
+  - AGENTS.md
+  - DESIGN.md
+  - ARCHITECTURE.md
 
 # Build settings
 defaults:
