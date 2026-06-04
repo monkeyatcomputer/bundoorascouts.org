@@ -41,18 +41,51 @@
       </div>
     </div>
 
-    <!-- Pill 1: Foundation -->
+    <!-- Pill 1: Essentials -->
+    <div
+      class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
+      Essentials
+    </div>
+
+    <!-- Station 1: Program Essentials -->
+    <div id="program-essentials"
+      class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+      onclick="window.location.href='/sections/{{ page.section_slug }}/program-essentials'">
+
+      <div
+        class="absolute -right-12 -top-12 w-64 h-64 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center"
+        style="color: {{ accent }};">
+        <span class="material-symbols-outlined" style="font-size: 14rem;">task_alt</span>
+      </div>
+
+      <div class="max-w-3xl relative z-10">
+        <h3 class="font-headline text-2xl font-black text-primary mt-1 mb-4">Program Essentials</h3>
+        <p class="text-on-surface-variant mb-8 leading-relaxed">
+          Introduction to Scouting, Introduction to Section, and Milestones are completed through active participation in the {{ section.name }} program.
+        </p>
+
+        <div class="flex justify-center mt-8">
+          <a href="/sections/{{ page.section_slug }}/program-essentials"
+            class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
+            style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
+            <span>Learn More</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pill 2: Foundation -->
     <div
       class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
       Foundation
     </div>
 
-    <!-- Station 1: Milestones (Foundation) -->
+    <!-- Station 2: Milestones -->
     <div id="milestones"
       class="bg-surface-container-low/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl w-full max-w-3xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow">
 
       <div class="relative z-10">
-        <h2 class="font-display text-3xl font-black text-primary mt-1 mb-8 tracking-tight">Milestones</h2>
+        <h3 class="font-headline text-2xl font-black text-primary mt-1 mb-8">Milestones</h3>
 
         <div class="flex flex-col md:flex-row items-center md:items-start justify-evenly gap-6 relative min-h-[150px]">
           <!-- Milestone 1 -->
@@ -91,7 +124,6 @@
           </div>
         </div>
 
-        <!-- Button: View Milestones -->
         <div class="flex justify-center mt-8">
           <a href="/sections/{{ page.section_slug }}/milestones"
             class="text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md inline-flex items-center gap-2"
@@ -102,7 +134,7 @@
       </div>
     </div>
 
-    <!-- Pill 2: Core Skills -->
+    <!-- Pill 3: Core Skills -->
     <div
       class="bg-primary text-white text-xs font-bold uppercase px-6 py-2 rounded-full z-10 flex items-center justify-center shadow-sm">
       Core Skills

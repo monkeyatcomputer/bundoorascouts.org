@@ -3,6 +3,11 @@
   ap_page: "overview"
   icon: "explore"
 
+- name: "Program Essentials"
+  url: "/sections/:section/program-essentials"
+  ap_page: "program-essentials"
+  icon: "task_alt"
+
 - name: "Milestones"
   url: "/sections/:section/milestones"
   ap_page: "milestones"

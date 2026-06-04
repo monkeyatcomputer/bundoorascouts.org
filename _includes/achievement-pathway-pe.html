@@ -1,0 +1,64 @@
+{% assign section = site.data.sections | where: "slug", page.section_slug | first %}
+
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl mb-12 flex flex-col gap-8">
+  <div>
+    <h2 class="font-display text-3xl font-black text-primary mb-4">{{ page.essentials.heading }}</h2>
+    <p class="text-on-surface-variant text-lg leading-relaxed">
+      {{ page.essentials.summary }}
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {% for item in page.essentials.items %}
+      {% if item.name == "Milestones" %}
+        <a href="/sections/{{ page.section_slug }}/milestones" class="bg-surface-container-high p-6 rounded-xl flex flex-col gap-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface-container-low">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="font-headline text-xl font-bold">{{ item.name }}</h3>
+              <span class="material-symbols-outlined text-primary text-sm">arrow_forward</span>
+            </div>
+            <p class="text-sm text-on-surface-variant leading-relaxed">{{ item.description }}</p>
+          </div>
+          {% include achievement-pathway-milestone-stack.html %}
+        </a>
+      {% else %}
+      <div class="bg-surface-container-high p-6 rounded-xl flex flex-col gap-4">
+        <div>
+          <h3 class="font-headline text-xl font-bold mb-2">{{ item.name }}</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed">{{ item.description }}</p>
+        </div>
+        <div class="mt-auto pt-2 flex items-center">
+          {% if item.name == "Introduction to Scouting" %}
+            <img src="/assets/images/scout-emblem.svg" alt="" class="w-20 h-20 object-contain drop-shadow-sm" />
+          {% elsif item.name == "Introduction to Section" %}
+            <img src="/assets/images/sections/{{ page.section_slug }}-badge.svg" alt="" class="w-20 h-20 object-contain drop-shadow-sm" />
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10">
+    <h3 class="font-headline text-xl font-bold text-primary mb-2">Part of the regular program</h3>
+    <p class="text-on-surface-variant leading-relaxed">
+      Program Essentials are completed through attendance and active participation in the section program. They are not separate badge tasks; they are built into regular Scouting, with reflection helping each Scout notice how they are growing.
+    </p>
+  </div>
+
+  {% if page.essentials.source_url %}
+    <div>
+      <a href="{{ page.essentials.source_url }}" class="inline-flex items-center gap-2 text-primary font-bold hover:underline">
+        <span>Scouts Victoria Program Essentials overview</span>
+        <span class="material-symbols-outlined text-sm">open_in_new</span>
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+<div class="text-center mt-8">
+  <a href="/sections/{{ page.section_slug }}/achievement-pathway#program-essentials" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
+    <span class="material-symbols-outlined text-sm">arrow_back</span>
+    <span>Back to {{ section.name }} Pathway</span>
+  </a>
+</div>
