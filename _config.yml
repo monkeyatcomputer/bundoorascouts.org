@@ -124,6 +124,7 @@ exclude:
   - node_modules/
   - scratch/
   - scripts/
+  - AGENTS.MD
   - AGENTS.md
   - DESIGN.md
   - ARCHITECTURE.md
