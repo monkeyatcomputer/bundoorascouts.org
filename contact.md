@@ -73,6 +73,19 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
           </div>
         </div>
 
+        <div id="hall-hire-suggestion" class="hidden">
+          <div class="surface-card-muted p-6">
+            <h4 class="font-headline font-bold text-primary text-lg mb-1">Short term or long term hire?</h4>
+            <p class="text-on-surface-variant text-sm mb-4">If you're planning to make a single booking, please book via SpacetoCo. For longer term hire, we'd love to hear from you. If you just have a question about our hall, you can still send us a message.</p>
+            <a href="https://www.spacetoco.com/space/bundoora-scout-hall"
+               target="_blank" rel="noopener"
+               class="btn btn-secondary bg-white/80 border border-primary/10">
+              <img src="/assets/images/spacetoco-icon-light.svg" alt="" aria-hidden="true" class="h-5 w-auto shrink-0">
+              Book via SpacetoCo
+            </a>
+          </div>
+        </div>
+
         <div class="flex flex-col gap-2">
           <label for="contact-comments" class="text-sm font-label font-semibold text-on-surface-variant uppercase tracking-wider">Message <span class="text-error">*</span></label>
           <textarea id="contact-comments" name="comments" rows="5" required
@@ -110,6 +123,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
             
             const extranetSuggestion = document.getElementById('extranet-suggestion');
             const extranetButtons = Array.from(document.querySelectorAll('.extranet-btn'));
+            const hallHireSuggestion = document.getElementById('hall-hire-suggestion');
 
             const sectionMap = {
               'Joey Scouts - 5 to 7 Years': 'Joey Scouts',
@@ -144,15 +158,22 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
               }
             }
 
+            function updateHallHireVisibility() {
+              const showHallHire = checkboxes.some(cb => cb.checked && cb.value === 'Hall Hire');
+              hallHireSuggestion.classList.toggle('hidden', !showHallHire);
+            }
+
             checkboxes.forEach(cb => {
               cb.addEventListener('change', () => {
                 checkboxes[0].setCustomValidity('');
                 updateExtranetVisibility();
+                updateHallHireVisibility();
               });
             });
 
             // Initial check
             updateExtranetVisibility();
+            updateHallHireVisibility();
           });
         </script>
 

@@ -114,7 +114,7 @@ Hall hire is available when the venue is not in use by the Bundoora Scout Group,
         <a href="https://www.spacetoco.com/space/bundoora-scout-hall" 
            target="_blank"
            class="btn bg-white text-primary shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-          <span class="material-symbols-outlined filled text-secondary">event_available</span>
+          <img src="/assets/images/spacetoco-icon-light.svg" alt="" aria-hidden="true" class="h-5 w-auto shrink-0">
           Book via SpacetoCo
         </a>
         

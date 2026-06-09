@@ -109,7 +109,7 @@ image: "/uploads/hero/aerial.jpg"
           </a>
           <a href="https://www.spacetoco.com/space/bundoora-scout-hall" target="_blank"
             class="btn btn-secondary bg-white/60 border border-primary/10">
-            <span class="material-symbols-outlined">event_available</span>
+            <img src="/assets/images/spacetoco-icon-light.svg" alt="" aria-hidden="true" class="h-5 w-auto shrink-0">
             Book Now
           </a>
         </div>
