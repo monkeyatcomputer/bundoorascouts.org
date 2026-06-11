@@ -2,7 +2,7 @@
 title: "Honour Wall"
 subtitle: "@ Bundoora Scout Hall"
 description: "New honour wall at Bundoora Scout Hall"
-image: /assets/images/hero-2.jpg
+image: /uploads/2022-08-06-honour-wall/02-honour-wall.jpg
 author:
     - group
 categories:

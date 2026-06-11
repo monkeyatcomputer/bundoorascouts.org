@@ -1,7 +1,7 @@
 ---
 title: "Alex's Queen's Scout"
 subtitle: "Congratulations!"
-image: /assets/images/hero-rover-scouts.jpg
+image: /uploads/2023-04-02-alex-queen-scout/alex.jpg
 author:
     - group
 categories:
