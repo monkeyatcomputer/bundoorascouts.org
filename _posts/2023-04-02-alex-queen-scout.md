@@ -9,7 +9,7 @@ categories:
     - Handfield Rover Unit
 tags:
     - Award
-    - Queen Scout Award
+    - Queen's Scout Award
 ---
 
 ## CONGRATULATIONS TO: Alex Chung

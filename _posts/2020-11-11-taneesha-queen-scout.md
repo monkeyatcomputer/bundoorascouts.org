@@ -8,7 +8,7 @@ categories:
     - Venturer Scouts
 tags:
     - Award
-    - Queen Scout Award
+    - Queen's Scout Award
 last_modified_at: 2020-12-29T00:00:00+10:00
 ---
 
