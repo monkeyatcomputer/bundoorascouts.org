@@ -74,7 +74,7 @@ autopages:
       - blog.html
     permalink: /the-campfire/section/:cat/
     slugify:
-      mode: pretty
+      mode: default
   collections:
     enabled: false
   tags:
@@ -82,7 +82,7 @@ autopages:
       - blog.html
     permalink: /the-campfire/tag/:tag/
     slugify:
-      mode: pretty
+      mode: default
   
 
 # Collections

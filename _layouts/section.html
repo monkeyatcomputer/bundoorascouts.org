@@ -42,14 +42,13 @@ layout: default
       </p>
 
       <!-- Meeting Details -->
-      {% if section.sectionid != blank %}
+      {% if section.sectionid %}
       {% assign encoded_id = section.sectionid | url_encode %}
       {% assign join_url = site.onboarding_url | append: encoded_id %}
-      {% assign join_text = 'Join ' | append: page.title %}
       {% else %}
-      {% assign join_url = '/contact/' %}
-      {% assign join_text = 'Enquire Now' %}
+      {% assign join_url = '/contact' %}
       {% endif %}
+      {% assign join_text = 'Join ' | append: page.title %}
 
       {% if section.time %}
       <div
