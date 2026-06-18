@@ -1,0 +1,437 @@
+views:
+  front:
+    label: Front
+    description: Front panels and scarf - My Involvement
+  left_sleeve:
+    label: Left Sleeve
+    description: Left sleeve - My Journey
+  right_sleeve:
+    label: Right Sleeve
+    description: Right sleeve - My Identity
+
+placement_surfaces:
+  front:
+    pin_origin: [-0.444, 0.544, 3.394]
+    pin_direction: [0.144, -0.176, -0.974]
+    fallback_origin: [-0.012, 0.017, 0.472]
+    fallback_normal: [-0.144, 0.176, 0.974]
+    coordinate_scale: 1
+    width: 1
+    height: 1.25
+  left_sleeve:
+    pin_origin: [3.847, 0.921, 0.357]
+    pin_direction: [-0.955, -0.273, -0.116]
+    fallback_origin: [0.982, 0.103, 0.009]
+    fallback_normal: [0.955, 0.273, 0.116]
+    coordinate_scale: -1
+    width: 0.5
+    height: 0.8
+  right_sleeve:
+    pin_origin: [-3.8, 1.041, -0.249]
+    pin_direction: [0.95, -0.299, 0.086]
+    fallback_origin: [-0.949, 0.144, 0.01]
+    fallback_normal: [-0.95, 0.299, -0.086]
+    coordinate_scale: 1
+    width: 0.58
+    height: 0.8
+
+groups:
+  core_front:
+    label: Front
+    description: Front uniform badges for involvement and recognition.
+    badges:
+      - id: australian-flag
+        label: Australian Flag
+        anchor: front_flag
+        asset: /assets/images/badges/uniform/australian-flag.png
+        shape: rectangle
+        fill: "#ffffff"
+        stroke: "#1f3d7a"
+      - id: world-membership
+        label: World Scout Badge
+        anchor: front_world
+        asset: /assets/images/scout-emblem.svg
+        shape: circle
+        fill: "#5c3fa3"
+        stroke: "#ffffff"
+      - id: years-service-joeys
+        label: Joey Years of Service
+        short_label: 3
+        anchor: front_year_1
+        asset: /assets/images/badges/uniform/service-year.svg
+        only_sections: [joeys, cubs, scouts, venturers, rovers]
+        shape: square
+        fill: "#de8d28"
+        stroke: "#bb6228"
+      - id: years-service-cubs
+        label: Cubs Years of Service
+        short_label: 3
+        anchor: front_year_2
+        asset: /assets/images/badges/uniform/service-year.svg
+        only_sections: [cubs, scouts, venturers, rovers]
+        shape: square
+        fill: "#ffc62f"
+        stroke: "#fbaa19"
+      - id: years-service-scouts
+        label: Scouts Years of Service
+        short_label: 4
+        anchor: front_year_3
+        asset: /assets/images/badges/uniform/service-year.svg
+        only_sections: [scouts, venturers, rovers]
+        shape: square
+        fill: "#7ebc42"
+        stroke: "#2f9e49"
+      - id: years-service-venturers
+        label: Venturers Years of Service
+        short_label: 4
+        anchor: front_year_4
+        asset: /assets/images/badges/uniform/service-year.svg
+        only_sections: [venturers, rovers]
+        shape: square
+        fill: "#a42036"
+        stroke: "#79242f"
+      - id: years-service-rovers
+        label: Rovers Years of Service
+        short_label: 5
+        anchor: front_year_5
+        asset: /assets/images/badges/uniform/service-year.svg
+        only_sections: [rovers]
+        shape: square
+        fill: "#eb6952"
+        stroke: "#ed1d24"
+      - id: milestone-1
+        label: Milestone 1
+        anchor: front_milestone_1
+        section_asset: milestone-1
+        shape: circle
+        fill: "#ffffff"
+        stroke: "#100e4c"
+      - id: milestone-2
+        label: Milestone 2
+        anchor: front_milestone_2
+        section_asset: milestone-2
+        shape: circle
+        fill: "#ffffff"
+        stroke: "#100e4c"
+      - id: milestone-3
+        label: Milestone 3
+        anchor: front_milestone_3
+        section_asset: milestone-3
+        shape: circle
+        fill: "#ffffff"
+        stroke: "#100e4c"
+      - id: event-badge
+        label: Event Badge
+        short_label: EVENT
+        anchor: front_event
+        shape: square
+        fill: "#f6f0df"
+        stroke: "#a6264c"
+      - id: uniform-logo
+        label: Australian Scout Logo
+        anchor: front_pocket_logo
+        asset: /assets/images/badges/uniform/australian-scout-logo.png
+        shape: circle
+        fill: "#ffffff"
+        stroke: "#100e4c"
+
+  journey_sleeve:
+    label: Left Sleeve
+    description: Achievement Pathways badges on the left sleeve.
+    badges:
+      - id: peak-award-joeys
+        label: Joeys Peak Award
+        anchor: left_peak_joeys
+        asset: /assets/images/sections/peak-award-joeys.svg
+        only_sections: [joeys, cubs, scouts, venturers, rovers]
+        shape: circle
+        fill: "#ffffff"
+        stroke: "#100e4c"
+      - id: peak-award-cubs
+        label: Cubs Peak Award
+        anchor: left_peak_cubs
+        asset: /assets/images/sections/peak-award-cubs.svg
+        only_sections: [cubs, scouts, venturers, rovers]
+        shape: circle
+        fill: "#ffffff"
+        stroke: "#100e4c"
+      - id: peak-award-scouts
+        label: Scouts Peak Award
+        anchor: left_peak_scouts
+        asset: /assets/images/sections/peak-award-scouts.svg
+        only_sections: [scouts, venturers, rovers]
+        shape: circle
+        fill: "#ffffff"
+        stroke: "#100e4c"
+      - id: peak-award-venturers
+        label: Venturers Peak Award
+        anchor: left_peak_venturers
+        asset: /assets/images/sections/peak-award-venturers.svg
+        only_sections: [venturers, rovers]
+        shape: circle
+        fill: "#ffffff"
+        stroke: "#100e4c"
+      - id: peak-award-rovers
+        label: Rovers Peak Award
+        anchor: left_peak_rovers
+        asset: /assets/images/sections/peak-award-rovers.svg
+        only_sections: [rovers]
+        shape: circle
+        fill: "#ffffff"
+        stroke: "#100e4c"
+      - id: sia-cluster
+        label: Special Interest Areas
+        anchor: left_sia_cluster
+        icon: sia-all
+        icon_colour: section
+        shape: hex
+        fill: "#ffffff"
+        stroke: "#100e4c"
+      - id: oas-alpine
+        label: OAS Alpine
+        anchor: left_oas_1
+        icon: oas-alpine
+        icon_colour: "#006649"
+        shape: rectangle
+        fill: "#006649"
+        stroke: "#ffffff"
+      - id: oas-cycling
+        label: OAS Cycling
+        anchor: left_oas_2
+        icon: oas-cycling
+        icon_colour: "#006649"
+        shape: rectangle
+        fill: "#006649"
+        stroke: "#ffffff"
+      - id: oas-vertical
+        label: OAS Vertical
+        anchor: left_oas_3
+        icon: oas-vertical
+        icon_colour: "#006649"
+        shape: rectangle
+        fill: "#006649"
+        stroke: "#ffffff"
+      - id: oas-bushcraft
+        label: OAS Bushcraft
+        anchor: left_oas_4
+        icon: oas-bushcraft
+        icon_colour: "#006649"
+        shape: rectangle
+        fill: "#006649"
+        stroke: "#ffffff"
+      - id: oas-bushwalking
+        label: OAS Bushwalking
+        anchor: left_oas_5
+        icon: oas-bushwalking
+        icon_colour: "#006649"
+        shape: rectangle
+        fill: "#006649"
+        stroke: "#ffffff"
+      - id: oas-camping
+        label: OAS Camping
+        anchor: left_oas_6
+        icon: oas-camping
+        icon_colour: "#006649"
+        shape: rectangle
+        fill: "#006649"
+        stroke: "#ffffff"
+      - id: oas-snorkeling
+        label: OAS Snorkeling
+        anchor: left_oas_7
+        icon: oas-snorkeling
+        icon_colour: "#006649"
+        shape: rectangle
+        fill: "#006649"
+        stroke: "#ffffff"
+      - id: oas-paddling
+        label: OAS Paddling
+        anchor: left_oas_8
+        icon: oas-paddling
+        icon_colour: "#006649"
+        shape: rectangle
+        fill: "#006649"
+        stroke: "#ffffff"
+      - id: oas-boating
+        label: OAS Boating
+        anchor: left_oas_9
+        icon: oas-boating
+        icon_colour: "#006649"
+        shape: rectangle
+        fill: "#006649"
+        stroke: "#ffffff"
+
+  identity_sleeve:
+    label: Right Sleeve
+    description: Community, section, and additional awards on the right sleeve.
+    badges:
+      - id: group-tape
+        label: Group Tape
+        short_label: BUNDOORA SCOUT GROUP
+        anchor: right_group_tape
+        shape: tape
+        fill: "#214b82"
+        stroke: "#d8e4f2"
+        text_colour: "#f5c84a"
+      - id: region-tape
+        label: Region Tape
+        short_label: PLENTY VALLEY REGION
+        anchor: right_region_tape
+        shape: tape
+        fill: "#214b82"
+        stroke: "#d8e4f2"
+        text_colour: "#f5c84a"
+      - id: banyule-district
+        label: Banyule District Badge
+        anchor: right_banyule_badge
+        asset: /assets/images/badges/uniform/banyule-district.png
+        shape: diamond
+        fill: "#d7e2ff"
+        stroke: "#3f5e94"
+      - id: sdg-earth-tribe
+        label: Scouts4SDGs
+        short_label: SDG
+        anchor: right_sdg_1
+        shape: circle
+        fill: "#37b6ff"
+        stroke: "#ffffff"
+      - id: sdg-scouts-world
+        label: Scouts4SDGs
+        short_label: SDG
+        anchor: right_sdg_2
+        shape: circle
+        fill: "#8bc34a"
+        stroke: "#ffffff"
+      - id: award-1
+        label: Award 1
+        short_label: Award
+        anchor: right_award_1
+        shape: rectangle
+        fill: "#ef4444"
+        stroke: "#ffffff"
+      - id: award-2
+        label: Award 2
+        short_label: Award
+        anchor: right_award_2
+        shape: rectangle
+        fill: "#f6f0df"
+        stroke: "#100e4c"
+      - id: award-3
+        label: Award 3
+        short_label: Award
+        anchor: right_award_3
+        shape: rectangle
+        fill: "#dbeafe"
+        stroke: "#1e6265"
+      - id: award-4
+        label: Award 4
+        short_label: Award
+        anchor: right_award_4
+        shape: rectangle
+        fill: "#fef3c7"
+        stroke: "#a16207"
+      - id: award-5
+        label: Award 5
+        short_label: Award
+        anchor: right_award_5
+        shape: rectangle
+        fill: "#fee2e2"
+        stroke: "#991b1b"
+      - id: award-6
+        label: Award 6
+        short_label: Award
+        anchor: right_award_6
+        shape: rectangle
+        fill: "#fee2e2"
+        stroke: "#991b1b"
+      - id: intro-joeys
+        label: Introduction to Joeys Section
+        short_label: J
+        anchor: right_intro_1
+        asset: /assets/images/sections/joeys-badge.svg
+        only_sections: [joeys, cubs, scouts, venturers, rovers]
+        shape: square
+        fill: "#ffffff"
+        stroke: "#f4a261"
+      - id: intro-cubs
+        label: Introduction to Cubs Section
+        short_label: C
+        anchor: right_intro_2
+        asset: /assets/images/sections/cubs-badge.svg
+        only_sections: [cubs, scouts, venturers, rovers]
+        shape: square
+        fill: "#ffffff"
+        stroke: "#e9c46a"
+      - id: intro-scouts
+        label: Introduction to Scouts Section
+        short_label: S
+        anchor: right_intro_3
+        asset: /assets/images/sections/scouts-badge.svg
+        only_sections: [scouts, venturers, rovers]
+        shape: square
+        fill: "#ffffff"
+        stroke: "#2a9d8f"
+      - id: intro-venturers
+        label: Introduction to Venturers Section
+        short_label: V
+        anchor: right_intro_4
+        asset: /assets/images/sections/venturers-badge.svg
+        only_sections: [venturers, rovers]
+        shape: square
+        fill: "#ffffff"
+        stroke: "#a6264c"
+      - id: intro-rovers
+        label: Introduction to Rovers Section
+        short_label: R
+        anchor: right_intro_5
+        asset: /assets/images/sections/rovers-badge.svg
+        only_sections: [rovers]
+        shape: square
+        fill: "#ffffff"
+        stroke: "#dc291e"
+
+anchors:
+  front_flag: { surface: front, x: 0.27, y: 0.404, w: 0.18, h: 0.11 }
+  front_world: { surface: front, x: 0.423, y: 0.403, w: 0.1, h: 0.1 }
+  front_year_1: { surface: front, x: 0.227, y: 0.32, w: 0.04, h: 0.04 }
+  front_year_2: { surface: front, x: 0.278, y: 0.32, w: 0.04, h: 0.04 }
+  front_year_3: { surface: front, x: 0.328, y: 0.32, w: 0.04, h: 0.04 }
+  front_year_4: { surface: front, x: 0.378, y: 0.32, w: 0.04, h: 0.04 }
+  front_year_5: { surface: front, x: 0.427, y: 0.32, w: 0.04, h: 0.04 }
+  front_pocket_logo: { surface: front, x: 0.361, y: 0.024, w: 0.18, h: 0.18 }
+  front_milestone_1: { surface: front, x: -0.402, y: 0.337, w: 0.11, h: 0.11 }
+  front_milestone_2: { surface: front, x: -0.287, y: 0.337, w: 0.11, h: 0.11 }
+  front_milestone_3: { surface: front, x: -0.168, y: 0.338, w: 0.11, h: 0.11 }
+  front_event: { surface: front, x: -0.246, y: 0.054, offset: 0.035, w: 0.22, h: 0.22 }
+
+  left_peak_joeys: { surface: left_sleeve, y: 0.318, z: 0.122, w: 0.11, h: 0.11 }
+  left_peak_cubs: { surface: left_sleeve, y: 0.318, z: 0.012, w: 0.11, h: 0.11 }
+  left_peak_scouts: { surface: left_sleeve, y: 0.318, z: -0.1, w: 0.11, h: 0.11 }
+  left_peak_venturers: { surface: left_sleeve, y: 0.374, z: 0.067, w: 0.11, h: 0.11 }
+  left_peak_rovers: { surface: left_sleeve, y: 0.374, z: -0.043, w: 0.11, h: 0.11 }
+  left_sia_cluster: { surface: left_sleeve, y: 0.172, z: 0.012, w: 0.18, h: 0.18 }
+  left_oas_1: { surface: left_sleeve, y: 0.065, z: 0.101, w: 0.08, h: 0.06 }
+  left_oas_2: { surface: left_sleeve, y: 0.065, z: 0.018, w: 0.08, h: 0.06 }
+  left_oas_3: { surface: left_sleeve, y: 0.065, z: -0.065, w: 0.08, h: 0.06 }
+  left_oas_4: { surface: left_sleeve, y: 0.026, z: 0.101, w: 0.08, h: 0.06 }
+  left_oas_5: { surface: left_sleeve, y: 0.026, z: 0.018, w: 0.08, h: 0.06 }
+  left_oas_6: { surface: left_sleeve, y: 0.026, z: -0.065, w: 0.08, h: 0.06 }
+  left_oas_7: { surface: left_sleeve, y: -0.014, z: 0.101, w: 0.08, h: 0.06 }
+  left_oas_8: { surface: left_sleeve, y: -0.014, z: 0.018, w: 0.08, h: 0.06 }
+  left_oas_9: { surface: left_sleeve, y: -0.014, z: -0.065, w: 0.08, h: 0.06 }
+
+  right_group_tape: { surface: right_sleeve, y: 0.356, z: 0.07, w: 0.3, h: 0.05 }
+  right_region_tape: { surface: right_sleeve, y: 0.3, z: 0.07, w: 0.3, h: 0.05 }
+  right_banyule_badge: { surface: right_sleeve, y: 0.19, z: 0.07, w: 0.15, h: 0.15 }
+  right_sdg_1: { surface: right_sleeve, y: 0.05, z: 0.011, w: 0.14, h: 0.14 }
+  right_sdg_2: { surface: right_sleeve, y: 0.05, z: 0.137, w: 0.14, h: 0.14 }
+  right_award_1: { surface: right_sleeve, y: -0.036, z: -0.019, w: 0.1, h: 0.08 }
+  right_award_2: { surface: right_sleeve, y: -0.036, z: 0.07, w: 0.1, h: 0.08 }
+  right_award_3: { surface: right_sleeve, y: -0.036, z: 0.158, w: 0.1, h: 0.08 }
+  right_award_4: { surface: right_sleeve, y: -0.081, z: -0.019, w: 0.1, h: 0.08 }
+  right_award_5: { surface: right_sleeve, y: -0.081, z: 0.07, w: 0.1, h: 0.08 }
+  right_award_6: { surface: right_sleeve, y: -0.081, z: 0.158, w: 0.1, h: 0.08 }
+  right_intro_1: { surface: right_sleeve, y: -0.132, z: -0.036, w: 0.05, h: 0.05 }
+  right_intro_2: { surface: right_sleeve, y: -0.132, z: 0.017, w: 0.05, h: 0.05 }
+  right_intro_3: { surface: right_sleeve, y: -0.132, z: 0.07, w: 0.05, h: 0.05 }
+  right_intro_4: { surface: right_sleeve, y: -0.132, z: 0.121, w: 0.05, h: 0.05 }
+  right_intro_5: { surface: right_sleeve, y: -0.132, z: 0.174, w: 0.05, h: 0.05 }

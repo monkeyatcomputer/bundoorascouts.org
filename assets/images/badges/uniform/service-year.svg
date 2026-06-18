@@ -1,0 +1,9 @@
+<svg width="600" height="600" version="1.1" viewBox="0 0 158.75 158.75" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(-24.843 -37.826)">
+    <rect id="outer-rect" x="24.843" y="37.826" width="159" height="159" fill="#de8228"/>
+    <rect id="inner-rect" x="41.513" y="55.617" width="125" height="125" fill="#bb6228"/>
+    <text x="67.431778" y="158.19698" fill="#000000" font-family="'Nunito Sans'" font-size="122px" xml:space="preserve">
+      <tspan id="text" x="67.431778" y="158.19698" fill="#ffffff" font-family="'Nunito Sans'" font-size="122px" font-weight="bold">1</tspan>
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,83 @@
+{% assign uniform_sections = site.data.sections | where_exp: "section", "section.slug == 'joeys' or section.slug == 'cubs' or section.slug == 'scouts' or section.slug == 'venturers' or section.slug == 'rovers'" %}
+{% capture badge_icon_sia_all %}{% include icons/sia-all.svg %}{% endcapture %}
+{% capture badge_icon_oas_alpine %}{% include icons/oas-alpine.svg stage="1" %}{% endcapture %}
+{% capture badge_icon_oas_boating %}{% include icons/oas-boating.svg stage="1" %}{% endcapture %}
+{% capture badge_icon_oas_bushcraft %}{% include icons/oas-bushcraft.svg stage="1" %}{% endcapture %}
+{% capture badge_icon_oas_bushwalking %}{% include icons/oas-bushwalking.svg stage="1" %}{% endcapture %}
+{% capture badge_icon_oas_camping %}{% include icons/oas-camping.svg stage="1" %}{% endcapture %}
+{% capture badge_icon_oas_cycling %}{% include icons/oas-cycling.svg stage="1" %}{% endcapture %}
+{% capture badge_icon_oas_paddling %}{% include icons/oas-paddling.svg stage="1" %}{% endcapture %}
+{% capture badge_icon_oas_snorkeling %}{% include icons/oas-snorkeling.svg stage="1" %}{% endcapture %}
+{% capture badge_icon_oas_vertical %}{% include icons/oas-vertical.svg stage="1" %}{% endcapture %}
+{% assign uniform_debug_enabled = false %}
+{% if page.badge_debug and jekyll.environment != "production" %}
+  {% assign uniform_debug_enabled = true %}
+{% endif %}
+
+<section class="uniform-viewer not-prose" data-uniform-viewer data-gsap="reveal" aria-labelledby="uniform-viewer-title">
+  <div class="uniform-viewer__intro">
+    <div>
+      <h2 id="uniform-viewer-title" class="section-title">Explore the uniform in 3D</h2>
+      <p class="section-description">
+        Switch section colours and rotate to the key placement areas described in the guide below.
+      </p>
+    </div>
+  </div>
+
+  <div class="uniform-viewer__shell">
+    <div class="uniform-viewer__stage">
+      <div class="uniform-viewer__status" data-uniform-status role="status">Loading 3D uniform viewer...</div>
+      <canvas data-uniform-canvas aria-label="3D Scout uniform badge placement viewer"></canvas>
+      <noscript>
+        <p class="uniform-viewer__noscript">The 3D viewer needs JavaScript. The written badge placement guide is available below.</p>
+      </noscript>
+    </div>
+
+    <div class="uniform-viewer__controls" aria-label="Uniform viewer controls">
+      <div class="uniform-control">
+        <p class="uniform-control__label">Section</p>
+        <div class="uniform-segmented" role="radiogroup" aria-label="Choose section">
+          {% for section in uniform_sections %}
+          <button type="button" class="uniform-chip{% if forloop.first %} is-active{% endif %}" data-uniform-section="{{ section.slug }}" role="radio" aria-checked="{% if forloop.first %}true{% else %}false{% endif %}" style="--chip-accent: {{ section.colour }};">
+            {{ section.shortname }}
+          </button>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="uniform-control">
+        <p class="uniform-control__label">View</p>
+        <div class="uniform-segmented" role="radiogroup" aria-label="Choose uniform view">
+          {% for view_hash in site.data.badge_placement.views %}
+          {% assign view_id = view_hash[0] %}
+          {% assign view = view_hash[1] %}
+          <button type="button" class="uniform-chip{% if forloop.first %} is-active{% endif %}" data-uniform-view="{{ view_id }}" role="radio" aria-checked="{% if forloop.first %}true{% else %}false{% endif %}">
+            {{ view.label }}
+          </button>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="application/json" data-uniform-config>
+    {
+      "debugEnabled": {{ uniform_debug_enabled | jsonify }},
+      "sections": {{ uniform_sections | jsonify }},
+      "badgePlacement": {{ site.data.badge_placement | jsonify }},
+      "badgeIcons": {
+        "sia-all": {{ badge_icon_sia_all | strip | jsonify }},
+        "oas-alpine": {{ badge_icon_oas_alpine | strip | jsonify }},
+        "oas-boating": {{ badge_icon_oas_boating | strip | jsonify }},
+        "oas-bushcraft": {{ badge_icon_oas_bushcraft | strip | jsonify }},
+        "oas-bushwalking": {{ badge_icon_oas_bushwalking | strip | jsonify }},
+        "oas-camping": {{ badge_icon_oas_camping | strip | jsonify }},
+        "oas-cycling": {{ badge_icon_oas_cycling | strip | jsonify }},
+        "oas-paddling": {{ badge_icon_oas_paddling | strip | jsonify }},
+        "oas-snorkeling": {{ badge_icon_oas_snorkeling | strip | jsonify }},
+        "oas-vertical": {{ badge_icon_oas_vertical | strip | jsonify }}
+      }
+    }
+  </script>
+</section>

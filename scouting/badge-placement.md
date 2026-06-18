@@ -3,29 +3,29 @@ layout: page
 title: "Badge Placement"
 permalink: /scouting/badge-placement
 badge: "The Uniform"
+badge_debug: true
 description: "A guide to where badges should be placed on the Scout uniform, representing your journey, identity, and involvement in the movement."
 ---
 
 The Scout uniform is a source of pride for members, displaying their achievements, their local community, and their participation in major events. This guide helps ensure badges are placed correctly according to Scouts Victoria standards.
 
-> [!NOTE]
-> For more visual diagrams and specific measurements, please refer to the official [Scouts Victoria Uniform & Badge Placement guide](https://scoutsvictoria.com.au/age-sections-adults/uniform-and-badge-placement/).
+{% include uniform-badge-viewer.html %}
 
 <section class="py-4 not-prose" data-gsap="reveal">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Right Sleeve -->
+    <!-- Front -->
     <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/30 relative overflow-hidden group">
-      <div class="absolute -right-8 -top-8 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
-      <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center mb-6 shadow-ambient-md">
-        <span class="material-symbols-outlined text-white filled">location_on</span>
+      <div class="absolute -right-8 -top-8 w-24 h-24 bg-tertiary/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+      <div class="w-12 h-12 rounded-2xl bg-tertiary flex items-center justify-center mb-6 shadow-ambient-md">
+        <span class="material-symbols-outlined text-white filled">person</span>
       </div>
-      <h3 class="text-2xl font-black text-primary mb-4 tracking-tight">Right Sleeve</h3>
-      <p class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">My Identity</p>
+      <h3 class="text-2xl font-black text-primary mb-4 tracking-tight">Front</h3>
+      <p class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">My Involvement</p>
       <ul class="space-y-3 text-on-surface-variant">
-        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Name Tapes, District & Region badges</li>
-        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> <a href="https://scouts.com.au/blog/2019/05/29/scouts4sdgs/" alt="Scouts4SDGs">Scouts4SDGs</a> Initiatives</li>
-        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Additional Awards (Camper, First Aid, SES)</li>
-        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Introduction to Section badges</li>
+        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> World Scout Badge & Australian Flag</li>
+        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Messengers of Peace Ring</li>
+        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Years of Service & Milestone badges</li>
+        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Unit Leader badge (on pocket flap)</li>
       </ul>
     </div>
 
@@ -45,19 +45,19 @@ The Scout uniform is a source of pride for members, displaying their achievement
       </ul>
     </div>
 
-    <!-- Front -->
+    <!-- Right Sleeve -->
     <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/30 relative overflow-hidden group">
-      <div class="absolute -right-8 -top-8 w-24 h-24 bg-tertiary/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
-      <div class="w-12 h-12 rounded-2xl bg-tertiary flex items-center justify-center mb-6 shadow-ambient-md">
-        <span class="material-symbols-outlined text-white filled">person</span>
+      <div class="absolute -right-8 -top-8 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+      <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center mb-6 shadow-ambient-md">
+        <span class="material-symbols-outlined text-white filled">location_on</span>
       </div>
-      <h3 class="text-2xl font-black text-primary mb-4 tracking-tight">Front</h3>
-      <p class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">My Involvement</p>
+      <h3 class="text-2xl font-black text-primary mb-4 tracking-tight">Right Sleeve</h3>
+      <p class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">My Identity</p>
       <ul class="space-y-3 text-on-surface-variant">
-        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> World Scout Badge & Australian Flag</li>
-        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Messengers of Peace Ring</li>
-        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Years of Service & Milestone badges</li>
-        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Unit Leader badge (on pocket flap)</li>
+        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Name Tapes, District & Region badges</li>
+        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> <a href="https://scouts.com.au/blog/2019/05/29/scouts4sdgs/" alt="Scouts4SDGs">Scouts4SDGs</a> Initiatives</li>
+        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Additional Awards (Camper, First Aid, SES)</li>
+        <li class="flex gap-3 items-start"><span class="text-primary font-bold">•</span> Introduction to Section badges</li>
       </ul>
     </div>
   </div>
@@ -92,5 +92,8 @@ This sleeve represents your local Scout group and your engagement with broader i
 
 > [!TIP]
 > **OAS Badges:** Outdoor Adventure Skills stages follow a young person through their entire Scouting journey. When you move to a new section (e.g., Cubs to Scouts), you should move your highest OAS badges to your new uniform.
+
+> [!NOTE]
+> For more visual diagrams and specific measurements, please refer to the official [Scouts Victoria Uniform & Badge Placement guide](https://scoutsvictoria.com.au/age-sections-adults/uniform-and-badge-placement/).
 
 {% include scouting-page-nav.html %}
