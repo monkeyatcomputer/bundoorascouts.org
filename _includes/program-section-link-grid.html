@@ -1,0 +1,112 @@
+{% assign sections = include.sections %}
+{% assign href_suffix = include.href_suffix %}
+{% assign action = include.action %}
+{% assign compact = include.compact | default: false %}
+{% assign visual = include.visual | default: 'section' %}
+
+{% if visual == 'section' %}
+<div class="not-prose relative my-8 overflow-hidden rounded-2xl p-4 sm:p-6">
+  <img src="/assets/images/sections/mountain-bg.svg" alt=""
+    class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-90">
+  <span class="pointer-events-none absolute inset-0 bg-surface-container-low/70"></span>
+  <div class="relative flex flex-wrap justify-center gap-4">
+{% elsif visual == 'pills' or visual == 'oas' or visual == 'sia' %}
+<div class="not-prose my-6 flex flex-wrap justify-center gap-3">
+{% else %}
+<div class="not-prose flex flex-wrap justify-center gap-4 {% if compact %}my-6{% else %}my-8{% endif %}">
+{% endif %}
+  {% for section in sections %}
+  {% assign accent = section.colour | default: '#3f5e94' %}
+  {% assign accent_dark = section.colour_dark | default: accent %}
+  {% case section.slug %}
+    {% when 'joeys' %}
+      {% assign logo_path = '/assets/images/logo-joey-crop.svg' %}
+      {% assign oas_icon = 'camping' %}
+      {% assign sia_icon = 'creative' %}
+      {% assign peak_name = 'Joey Scout Challenge Award' %}
+    {% when 'cubs' %}
+      {% assign logo_path = '/assets/images/logo-cub-crop.svg' %}
+      {% assign oas_icon = 'bushwalking' %}
+      {% assign sia_icon = 'environment' %}
+      {% assign peak_name = 'Grey Wolf Award' %}
+    {% when 'scouts' %}
+      {% assign logo_path = '/assets/images/logo-scout-crop.svg' %}
+      {% assign oas_icon = 'bushcraft' %}
+      {% assign sia_icon = 'stem' %}
+      {% assign peak_name = 'Australian Scout Award' %}
+    {% when 'venturers' %}
+      {% assign logo_path = '/assets/images/logo-venturer-crop.svg' %}
+      {% assign oas_icon = 'vertical' %}
+      {% assign sia_icon = 'sport' %}
+      {% assign peak_name = "King's Scout Award" %}
+    {% when 'rovers' %}
+      {% assign logo_path = '/assets/images/logo-rover-crop.svg' %}
+      {% assign oas_icon = 'paddling' %}
+      {% assign sia_icon = 'world' %}
+      {% assign peak_name = 'Baden-Powell Scout Award' %}
+    {% else %}
+      {% assign logo_path = section.logo-crop %}
+      {% assign oas_icon = 'camping' %}
+      {% assign sia_icon = 'all' %}
+      {% assign peak_name = action %}
+  {% endcase %}
+
+  {% if visual == 'pills' or visual == 'oas' or visual == 'sia' %}
+  <a href="/sections/{{ section.slug }}/{{ href_suffix }}"
+    class="inline-flex items-center rounded-full px-4 py-2 text-sm font-black text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface"
+    style="background: linear-gradient(135deg, {{ accent }}, {{ accent_dark }});">
+    {{ section.name }}
+  </a>
+  {% else %}
+  <a href="/sections/{{ section.slug }}/{{ href_suffix }}"
+    class="group relative flex min-h-36 w-full overflow-hidden rounded-2xl sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)] {% if visual == 'section' %}bg-white/55 p-6 shadow-sm backdrop-blur-sm hover:bg-white/70 hover:shadow-md{% else %}border bg-surface-container-low p-5 shadow-sm hover:shadow-lg{% endif %} transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface"
+    {% unless visual == 'section' %}style="border-color: {{ accent }}66;"{% endunless %}>
+    {% if visual == 'section' %}
+    <span class="pointer-events-none absolute inset-x-0 bottom-0 h-1.5 opacity-80"
+      style="background: linear-gradient(90deg, {{ accent }}, {{ accent_dark }});"></span>
+    {% else %}
+    <span class="absolute inset-x-0 bottom-0 h-1.5" style="background: linear-gradient(90deg, {{ accent }}, {{ accent_dark }});"></span>
+    {% endif %}
+
+    {% if visual == 'peak' %}
+    <img src="/assets/images/sections/peak-award-{{ section.slug }}.svg" alt=""
+      class="pointer-events-none absolute -right-8 -top-10 h-40 w-40 object-contain opacity-10 transition-all duration-500 group-hover:scale-105 group-hover:opacity-20">
+    {% elsif visual == 'sia' %}
+    <span class="pointer-events-none absolute -right-8 -top-10 h-40 w-40 text-primary opacity-10 transition-all duration-500 group-hover:scale-105 group-hover:opacity-20">
+      {% include icons/sia-{{ sia_icon }}.svg %}
+    </span>
+    {% elsif visual == 'oas' %}
+    {% assign section_oas = site.data.oas[section.slug] %}
+    {% assign oas_stage = section_oas.stage_requirement | default: 1 %}
+    <span class="pointer-events-none absolute -right-8 -top-10 h-40 w-40 text-primary opacity-10 transition-all duration-500 group-hover:scale-105 group-hover:opacity-20">
+      {% include icons/oas-{{ oas_icon }}.svg stage=oas_stage %}
+    </span>
+    {% endif %}
+
+    <span class="relative flex w-full items-start">
+      <span class="min-w-0 {% if visual == 'section' %}max-w-[15rem]{% endif %}">
+        <span class="inline-flex rounded-full px-3 py-1 text-xs font-black uppercase tracking-wide text-white"
+          style="background-color: {{ accent }};">
+          {{ section.shortname }}
+        </span>
+        <span class="mt-3 block font-headline {% if compact %}text-lg{% else %}text-xl{% endif %} font-black leading-tight text-primary">
+          {% if visual == 'peak' %}{{ peak_name }}{% else %}{{ action }}{% endif %}
+        </span>
+        {% unless compact %}
+        <span class="mt-2 block text-sm leading-relaxed text-on-surface-variant">
+          {{ section.tagline }}
+        </span>
+        {% endunless %}
+        <span class="mt-4 inline-flex rounded-lg px-4 py-2 text-sm font-bold text-white shadow-sm transition-all duration-300 group-hover:shadow-md"
+          style="background: linear-gradient(135deg, {{ accent }}, {{ accent_dark }});">
+          More Info
+        </span>
+      </span>
+    </span>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+{% if visual == 'section' %}
+</div>
+{% endif %}
