@@ -2,6 +2,7 @@
 layout: expedition
 start_date: 2026-06-28
 end_date: 2026-07-11
+overlay_start_date: "2026-06-27T00:00:00+10:00"
 title: "Uluru Adventure 2026"
 subtitle: "Expedition Tracker"
 description: "Follow our 15-day journey from Bundoora to the red centre of Australia."

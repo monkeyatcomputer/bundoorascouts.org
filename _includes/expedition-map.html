@@ -241,16 +241,20 @@ Renders a Leaflet.js map showing the expedition route.
       }
     });
 
-    // Calculate Expedition Start Time for countdown (First event of Day 0)
-    var expStart = Infinity;
-    itinerary.forEach(function (day) {
-      if (day.events && day.events.length > 0) {
-        day.events.forEach(function (ev) {
-          var t = parseSafe(ev.date).getTime();
-          if (t < expStart) expStart = t;
-        });
-      }
-    });
+    // Calculate Expedition Start Time for countdown.
+    // Trips can expose the tracker from muster day before the first itinerary event.
+    var configuredOverlayStart = data.overlay_start_date ? parseSafe(data.overlay_start_date).getTime() : null;
+    var expStart = configuredOverlayStart || Infinity;
+    if (!configuredOverlayStart) {
+      itinerary.forEach(function (day) {
+        if (day.events && day.events.length > 0) {
+          day.events.forEach(function (ev) {
+            var t = parseSafe(ev.date).getTime();
+            if (t < expStart) expStart = t;
+          });
+        }
+      });
+    }
     window.expeditionStartTime = expStart;
 
     // ─── Helpers ──────────────────────────────────────────────────────────────────

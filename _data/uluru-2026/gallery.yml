@@ -1,26 +1,18 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
-- image: "/uploads/2025-08-16-uluru-adventure-2026/hike-uluru.jpg"
-  alt: Scouts hiking at Uluru
-  caption: Uluru Base Walk, Day 11
+- image: "/uploads/trip/uluru-2026/20260627_144949.jpg"
+  alt: Uluru expedition muster day
+  caption: Muster day check-in
   span: large
-- image: "/uploads/2025-08-16-uluru-adventure-2026/camel-ride.jpg"
-  alt: Venturers on camel ride at sunrise
-  caption: Sunrise Camel Ride
+- image: "/uploads/trip/uluru-2026/20260627_143527.jpg"
+  alt: Uluru expedition gear and vehicles
+  caption: The chariots are ready
   span: normal
-- image: "/uploads/2025-08-16-uluru-adventure-2026/hike-kings-canyon.jpg"
-  alt: Kings Canyon rim walk
-  caption: Kings Canyon, Day 10
+- image: "/uploads/trip/uluru-2026/20260627_143535.jpg"
+  alt: Uluru expedition final preparations
+  caption: Final checks before departure
   span: normal
-- image: "/uploads/2025-08-16-uluru-adventure-2026/opal-mining.jpg"
-  alt: Opal mining in Coober Pedy
-  caption: Opal Mining, Day 5
+- image: "/uploads/trip/uluru-2026/20260627_145054.jpg"
+  alt: Uluru expedition trip merch
+  caption: Trip merch ready for the road
   span: wide
-- image: "/uploads/2025-08-16-uluru-adventure-2026/silver-mine.jpg"
-  alt: Underground silver mine tour
-  caption: Mine Tour, Broken Hill
-  span: normal
-- image: "/uploads/2025-08-16-uluru-adventure-2026/salt-lake.jpg"
-  alt: Venturers at the salt lake
-  caption: Salt Lake Stop
-  span: normal

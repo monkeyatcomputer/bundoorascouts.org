@@ -12,6 +12,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
     "gallery":   {{ site.data[page.data_location][page.data_gallery].gallery | jsonify | default: 'null' }},
     "telemetry": {{ site.data[page.data_location][page.data_telemetry].telemetry | jsonify | default: 'null' }},
     "route": {{ site.data[page.data_location][page.data_route].route | jsonify | default: 'null' }},
+    "overlay_start_date": {{ page.overlay_start_date | jsonify }},
     "test_date": {{ page.test_date | jsonify }},
     "test_mode": {{ page.test_mode | default: false | jsonify }},
     "data_mode": {{ page.data_mode | default: 'live' | jsonify }}
