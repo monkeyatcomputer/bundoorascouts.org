@@ -1,5 +1,21 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- youtube_id: "bR0ADhOGhCc"
+  title: Uluru Adventure 2026 departure video
+  caption: Departure video
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260628_062604.jpg"
+  alt: Uluru expedition morning departure
+  caption: Day 1 on the road
+  span: large
+- image: "/uploads/trip/uluru-2026/20260628_054150.jpg"
+  alt: Uluru expedition early morning preparations
+  caption: Early start for the convoy
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260627_194314.jpg"
+  alt: Uluru expedition final evening preparations
+  caption: Final evening preparations
+  span: normal
 - image: "/uploads/trip/uluru-2026/20260627_144949.jpg"
   alt: Uluru expedition muster day
   caption: Muster day check-in

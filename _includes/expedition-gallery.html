@@ -4,7 +4,7 @@ Bento-grid snapshot gallery. Driven by page.gallery array.
 span: large → col-span-2 row-span-2
 span: wide → col-span-2
 span: normal → col-span-1 (default)
-Images zoom on hover; caption overlaid at bottom.
+Images zoom on hover; videos render inline; caption overlaid at bottom.
 GSAP stagger reveal on scroll.
 {% endcomment %}
 
@@ -24,7 +24,7 @@ GSAP stagger reveal on scroll.
       </h2>
     </div>
     <p class="text-on-surface-variant max-w-xs text-sm leading-relaxed">
-      Photos from our Scout Leaders and participants throughout the adventure.
+      Photos and videos from our Scout Leaders and participants throughout the adventure.
     </p>
   </div>
 
@@ -44,7 +44,17 @@ GSAP stagger reveal on scroll.
       {%- endif -%}
 
       <div class="group relative overflow-hidden rounded-2xl {{ col_span }} {{ row_span }} bg-surface-container">
-        {% if item.image %}
+        {% if item.youtube_id %}
+        <iframe
+          src="https://www.youtube.com/embed/{{ item.youtube_id }}?enablejsapi=1&mute=1&playsinline=1&rel=0"
+          title="{{ item.title | default: item.caption | default: 'Expedition video' }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+          class="w-full h-full expedition-gallery-video">
+        </iframe>
+        {% elsif item.image %}
         <img src="{{ item.image }}" alt="{{ item.alt | default: item.caption }}"
           class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
           loading="lazy" />
@@ -53,7 +63,7 @@ GSAP stagger reveal on scroll.
         {% if item.caption %}
         <div
           class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/60 via-black/20 to-transparent
-                      translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                      translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
           <p class="text-white text-sm font-bold">{{ item.caption }}</p>
         </div>
         {% endif %}
@@ -133,6 +143,39 @@ GSAP stagger reveal on scroll.
   window.addEventListener('expeditionTimeUpdate', function(e) {
     updateGalleryUI(e.detail.time);
   });
+
+  function sendYouTubeCommand(iframe, command) {
+    if (!iframe || !iframe.contentWindow) return;
+    iframe.contentWindow.postMessage(JSON.stringify({
+      event: 'command',
+      func: command,
+      args: []
+    }), 'https://www.youtube.com');
+  }
+
+  function initVideoAutoplay() {
+    var videos = document.querySelectorAll('.expedition-gallery-video');
+    if (!videos.length || !('IntersectionObserver' in window)) return;
+
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        sendYouTubeCommand(entry.target, entry.isIntersecting ? 'playVideo' : 'pauseVideo');
+      });
+    }, { threshold: 0.65 });
+
+    videos.forEach(function(video) {
+      observer.observe(video);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initVideoAutoplay);
+  } else {
+    initVideoAutoplay();
+  }
 })();
 </script>
 
