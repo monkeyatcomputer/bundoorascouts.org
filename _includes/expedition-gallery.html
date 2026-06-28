@@ -3,6 +3,7 @@ expedition-gallery.html
 Bento-grid snapshot gallery. Driven by page.gallery array.
 span: large → col-span-2 row-span-2
 span: wide → col-span-2
+span: tall → row-span-2
 span: normal → col-span-1 (default)
 Images zoom on hover; videos render inline; caption overlaid at bottom.
 GSAP stagger reveal on scroll.
@@ -41,6 +42,8 @@ GSAP stagger reveal on scroll.
       {%- assign row_span = "row-span-2" -%}
       {%- elsif item.span == "wide" -%}
       {%- assign col_span = "col-span-2" -%}
+      {%- elsif item.span == "tall" -%}
+      {%- assign row_span = "row-span-2" -%}
       {%- endif -%}
 
       <div class="group relative overflow-hidden rounded-2xl {{ col_span }} {{ row_span }} bg-surface-container">

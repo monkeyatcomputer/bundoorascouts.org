@@ -6,29 +6,29 @@ gallery:
   span: wide
 - image: "/uploads/trip/uluru-2026/20260628_062604.jpg"
   alt: Uluru expedition morning departure
-  caption: Day 1 on the road
-  span: large
+  caption: Ready for departure
+  span: wide
 - image: "/uploads/trip/uluru-2026/20260628_054150.jpg"
   alt: Uluru expedition early morning preparations
   caption: Early start for the convoy
   span: normal
 - image: "/uploads/trip/uluru-2026/20260627_194314.jpg"
   alt: Uluru expedition final evening preparations
-  caption: Final evening preparations
-  span: normal
+  caption: Leaning tower of pizza
+  span: tall
 - image: "/uploads/trip/uluru-2026/20260627_144949.jpg"
   alt: Uluru expedition muster day
   caption: Muster day check-in
-  span: large
+  span: normal
 - image: "/uploads/trip/uluru-2026/20260627_143527.jpg"
   alt: Uluru expedition gear and vehicles
-  caption: The chariots are ready
-  span: normal
+  caption: Trip merch ready for the road
+  span: tall
 - image: "/uploads/trip/uluru-2026/20260627_143535.jpg"
   alt: Uluru expedition final preparations
   caption: Final checks before departure
-  span: normal
+  span: tall
 - image: "/uploads/trip/uluru-2026/20260627_145054.jpg"
   alt: Uluru expedition trip merch
-  caption: Trip merch ready for the road
+  caption: The chariots are ready
   span: wide
