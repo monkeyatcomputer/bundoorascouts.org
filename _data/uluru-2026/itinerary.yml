@@ -13,7 +13,6 @@ itinerary:
     - date: '2026-06-27T18:30:00+10:00'
       type: dinner
       label: Group Dinner
-      loc: [ -37.70465, 145.0631543 ]
 - day: 1
   title: Bundoora to Broken Hill
   location: Broken Hill
@@ -22,7 +21,6 @@ itinerary:
     - date: '2026-06-28T06:00:00+10:00'
       type: depart
       label: Depart Bundoora Hall
-      loc: [ -37.70465, 145.0631543 ]
     - date: '2026-06-28T09:30:00+10:00'
       type: rest
       label: Charlton Rest Stop
@@ -37,7 +35,7 @@ itinerary:
       type: travel
       label: Wentworth Turnoff
       loc: [ -34.10312, 141.91424 ]
-    - date: '2026-06-28T17:30:00+10:00'
+    - date: '2026-06-28T17:00:00+10:00'
       type: arrive
       label: Arrive Broken Hill
       loc: [ -31.95681, 141.46502 ]
@@ -45,40 +43,25 @@ itinerary:
       type: dinner
       label: 'Dinner at Broken Hill'
 - day: 2
-  title: Mine Tour & Living Desert
+  title: Mine Tour & Broken Hill
   location: Broken Hill
   image: "/uploads/2025-08-16-uluru-adventure-2026/silver-mine.jpg"
   events:
-    - date: '2026-06-29T08:30:00+10:00'
-      type: depart
-      label: Depart Broken Hill
-      loc: [ -31.956795, 141.464975 ]
-    - date: '2026-06-29T09:00:00+10:00'
-      type: activity
-      label: Living Desert Sculptures
-      dwell: 2
-      loc: [ -31.89504, 141.43201 ]
-    - date: '2026-06-29T11:30:00+10:00'
+    - date: '2026-06-29T10:00:00+10:00'
       type: activity
       label: Underground Mine Tour
-      dwell: 2
+      dwell: 1.5
       loc: [ -31.956795, 141.464975 ]
-    - date: '2026-06-29T13:00:00+10:00'
+      detail: Scones afterwards.
+    - date: '2026-06-29T12:30:00+10:00'
       type: lunch
-      label: 'Lunch in Town'
+      label: Hot dogs on the run
       dwell: 0.5
-    - date: '2026-06-29T15:00:00+10:00'
-      type: activity
-      label: Royal Flying Doctor Service
-      dwell: 2
-      loc: [ -31.99602, 141.46803 ]
-    - date: '2026-06-29T17:30:00+10:00'
-      type: arrive
-      label: Return to Broken Hill
-      loc: [ -31.956795, 141.464975 ]
+      detail: Food collection from Broken Hill depot.
     - date: '2026-06-29T18:30:00+10:00'
       type: dinner
-      label: 'Dinner'
+      label: Second night at Broken Hill
+      loc: [ -31.956795, 141.464975 ]
 - day: 3
   title: Broken Hill to Coober Pedy
   location: Coober Pedy
@@ -95,15 +78,15 @@ itinerary:
       loc: [ -32.97541, 138.84122 ]
     - date: '2026-06-30T12:30:00+09:30'
       type: lunch
-      label: Lunch - Port Augusta
+      label: Lunch on the bus
       dwell: 0.5
-      loc: [ -32.49301, 137.76602 ]
+      detail: Glendambo stop is at 2:30pm.
     - date: '2026-06-30T15:30:00+09:30'
       type: rest
       label: Glendambo
       dwell: 0.25
       loc: [ -30.98801, 135.75701 ]
-    - date: '2026-06-30T18:30:00+09:30'
+    - date: '2026-06-30T18:00:00+09:30'
       type: arrive
       label: Arrive Coober Pedy
       loc: [ -29.01402, 134.75303 ]
@@ -112,7 +95,7 @@ itinerary:
       label: 'Underground Dinner'
       dwell: 2.0
 - day: 4
-  title: Opal Mining & Breakaways
+  title: Opal Mining
   location: Coober Pedy
   image: "/uploads/2025-08-16-uluru-adventure-2026/opal-mining.jpg"
   events:
@@ -127,16 +110,10 @@ itinerary:
       loc: [ -29.01402, 134.75303 ]
     - date: '2026-07-01T12:30:00+09:30'
       type: lunch
-      label: 'Lunch'
+      label: Lunch Stop
       dwell: 0.5
-    - date: '2026-07-01T14:30:00+09:30'
-      type: activity
-      label: The Breakaways Lookout
-      loc: [ -28.84701, 134.65402 ]
-    - date: '2026-07-01T17:30:00+09:30'
-      type: arrive
-      label: Return to Coober Pedy
       loc: [ -29.01402, 134.75303 ]
+      detail: Food collection from Coober Pedy depot.
     - date: '2026-07-01T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
@@ -156,225 +133,362 @@ itinerary:
       loc: [ -27.29741, 133.62122 ]
     - date: '2026-07-02T12:30:00+09:30'
       type: lunch
-      label: Lunch - Erldunda
+      label: Lunch on the Road
       dwell: 0.5
       loc: [ -25.22301, 133.19502 ]
     - date: '2026-07-02T15:30:00+09:30'
       type: arrive
-      label: 'Arrive Curtin Springs'
+      label: 'Arrive Curtin Springs - Camp Setup'
       loc: [ -25.311207, 131.760597 ]
-      group: ['Bus 2', 'Bus 3']
+      group: ['Charlie', 'Mike']
     - date: '2026-07-02T17:30:00+09:30'
       type: arrive
       label: 'Arrive Alice Springs'
       loc: [ -23.702787, 133.882834 ]
-      group: ['Bus 1']
+      group: ['Romeo']
     - date: '2026-07-02T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
-      group: ['Bus 1']
+      group: ['Romeo']
     - date: '2026-07-02T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
-      group: ['Bus 2', 'Bus 3']
+      group: ['Charlie', 'Mike']
 - day: 6
-  title: Ranges & Stations
+  title: Rotation Day 1
   location: Alice Springs / Curtin Springs
   image: "/uploads/2025-08-16-uluru-adventure-2026/swim-waterhole.jpg"
   events:
-    - date: '2026-07-03T09:00:00+09:30'
+    - date: '2026-07-03T06:00:00+09:30'
       type: activity
-      label: 'West MacDonnell Ranges'
+      label: Uluru Sunrise Camel Ride
       dwell: 2
-      loc: [ -23.67001, 133.27002 ]
-      group: ['Bus 1']
-    - date: '2026-07-03T09:00:00+09:30'
+      loc: [ -25.24221, 130.98322 ]
+      group: ['Romeo']
+    - date: '2026-07-03T08:00:00+09:30'
       type: activity
-      label: 'Mount Conner Lookout'
-      dwell: 2
-      loc: [ -25.30001, 131.90002 ]
-      group: ['Bus 2', 'Bus 3']
-    - date: '2026-07-03T12:30:00+09:30'
-      type: lunch
-      label: 'Lunch'
-      dwell: 0.5
-      group: ['Bus 1']
-      loc: [ -23.67001, 133.27002 ]
-    - date: '2026-07-03T12:30:00+09:30'
-      type: lunch
-      label: 'Lunch'
-      dwell: 0.5
-      group: ['Bus 2', 'Bus 3']
-      loc: [ -25.30001, 131.90002 ]
-    - date: '2026-07-03T14:00:00+09:30'
-      type: activity
-      label: 'Simpson''s Gap'
-      dwell: 2.0
-      loc: [ -23.67801, 133.72202 ]
-      group: ['Bus 1']
-    - date: '2026-07-03T14:00:00+09:30'
-      type: arrive
-      label: 'Curtin Springs Station'
-      dwell: 2.0
+      label: Station Tour
+      dwell: 5
       loc: [ -25.311207, 131.760597 ]
-      group: ['Bus 2', 'Bus 3']
+      group: ['Charlie']
+    - date: '2026-07-03T09:00:00+09:30'
+      type: activity
+      label: MacDonnell Ranges
+      dwell: 3.5
+      loc: [ -23.67001, 133.27002 ]
+      group: ['Mike']
+    - date: '2026-07-03T12:30:00+09:30'
+      type: lunch
+      label: Explore The Olgas
+      dwell: 3
+      loc: [ -25.284729, 130.725911 ]
+      group: ['Romeo']
+    - date: '2026-07-03T12:30:00+09:30'
+      type: lunch
+      label: Lunch at Camp - Duty Patrol Duties
+      dwell: 0.5
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Charlie']
+    - date: '2026-07-03T12:30:00+09:30'
+      type: lunch
+      label: Lunch on the road
+      dwell: 0.5
+      group: ['Mike']
+      loc: [ -23.67001, 133.27002 ]
+    - date: '2026-07-03T14:00:00+09:30'
+      type: activity
+      label: Alice Springs Nature Park
+      dwell: 2.0
+      loc: [ -23.702787, 133.882834 ]
+      group: ['Mike']
+    - date: '2026-07-03T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Romeo']
+      loc: [ -25.311207, 131.760597 ]
+    - date: '2026-07-03T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Charlie']
     - date: '2026-07-03T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
       loc: [ -23.67801, 133.72202 ]
-      group: ['Bus 1']
-    - date: '2026-07-03T18:30:00+09:30'
-      type: dinner
-      label: 'Dinner'
-      group: ['Bus 2', 'Bus 3']
+      group: ['Mike']
 - day: 7
-  title: Reunion at Curtin Springs
-  location: Curtin Springs
+  title: Rotation Day 2
+  location: Alice Springs / Curtin Springs
   image: "/uploads/2025-08-16-uluru-adventure-2026/desert-camp.jpg"
   events:
     - date: '2026-07-04T08:00:00+09:30'
-      type: depart
-      label: 'Depart Alice Springs'
-      loc: [ -23.702787, 133.882834 ]
-      group: ['Bus 1']
-    - date: '2026-07-04T10:30:00+09:30'
-      type: rest
-      label: 'Erldunda'
-      dwell: 0.25
-      loc: [ -25.22301, 133.19502 ]
-      group: ['Bus 1']
-    - date: '2026-07-04T12:30:00+09:30'
-      type: arrive
-      label: Reunion at Curtin Springs
-      loc: [ -25.311207, 131.760597 ]
-    - date: '2026-07-04T14:00:00+09:30'
       type: activity
-      label: Camp Prep & Skills
-      dwell: 2.5
+      label: Relax
+      dwell: 4
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Romeo']
+    - date: '2026-07-04T08:00:00+09:30'
+      type: activity
+      label: Kings Canyon Hike / Helicopter Ride
+      dwell: 6
+      loc: [ -24.255754, 131.57027 ]
+      group: ['Charlie']
+    - date: '2026-07-04T09:00:00+09:30'
+      type: activity
+      label: Alice Springs Activities
+      dwell: 3
+      loc: [ -23.702787, 133.882834 ]
+      group: ['Mike']
+    - date: '2026-07-04T12:30:00+09:30'
+      type: lunch
+      label: Lunch before departing
+      dwell: 0.5
+      group: ['Mike']
+    - date: '2026-07-04T14:00:00+09:30'
+      type: arrive
+      label: Arrive Alice Springs Overnight
+      loc: [ -23.702787, 133.882834 ]
+      group: ['Romeo']
+    - date: '2026-07-04T14:00:00+09:30'
+      type: travel
+      label: Pickup Food - Travel to Curtin Springs
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Mike']
     - date: '2026-07-04T18:30:00+09:30'
       type: dinner
-      label: 'Camp Oven Dinner'
-      dwell: 2.0
-- day: 8
-  title: The Heart of Australia
-  location: Uluru
-  image: "/uploads/2025-08-16-uluru-adventure-2026/sunset-uluru.jpg"
-  events:
-    - date: '2026-07-05T08:00:00+09:30'
-      type: depart
-      label: Depart Curtin Springs
-      loc: [ -25.311207, 131.760597 ]
-    - date: '2026-07-05T09:30:00+09:30'
-      type: arrive
-      label: Uluru Cultural Centre
-      dwell: 2.0
-      loc: [ -25.35001, 131.02002 ]
-    - date: '2026-07-05T12:30:00+09:30'
-      type: lunch
-      label: Lunch - Uluru Base
-      dwell: 0.5
-      loc: [ -25.34441, 131.03692 ]
-    - date: '2026-07-05T14:00:00+09:30'
-      type: activity
-      label: Uluru Base Walk
-      dwell: 3.0
-      loc: [ -25.34441, 131.03692 ]
-    - date: '2026-07-05T17:30:00+09:30'
-      type: activity
-      label: Sunset Viewing
-      dwell: 0.5
-      loc: [ -25.338333, 131.005833 ]
-    - date: '2026-07-05T19:00:00+09:30'
-      type: arrive
-      label: Yulara Resort
-      loc: [ -25.24221, 130.98322 ]
-    - date: '2026-07-05T19:30:00+09:30'
+      label: 'Dinner'
+      group: ['Romeo']
+    - date: '2026-07-04T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
+      group: ['Charlie']
+    - date: '2026-07-04T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Mike']
+- day: 8
+  title: Rotation Day 3
+  location: Alice Springs / Curtin Springs
+  image: "/uploads/2025-08-16-uluru-adventure-2026/sunset-uluru.jpg"
+  events:
+    - date: '2026-07-05T06:00:00+09:30'
+      type: activity
+      label: Uluru Sunrise Camel Ride
+      dwell: 2
+      loc: [ -25.24221, 130.98322 ]
+      group: ['Charlie']
+    - date: '2026-07-05T08:00:00+09:30'
+      type: activity
+      label: Station Tour
+      dwell: 5
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Mike']
+    - date: '2026-07-05T09:00:00+09:30'
+      type: activity
+      label: MacDonnell Ranges
+      dwell: 3.5
+      loc: [ -23.67001, 133.27002 ]
+      group: ['Romeo']
+    - date: '2026-07-05T12:30:00+09:30'
+      type: lunch
+      label: Lunch on the road
+      dwell: 0.5
+      group: ['Romeo']
+      loc: [ -23.67001, 133.27002 ]
+    - date: '2026-07-05T12:30:00+09:30'
+      type: lunch
+      label: Explore The Olgas
+      dwell: 3
+      loc: [ -25.284729, 130.725911 ]
+      group: ['Charlie']
+    - date: '2026-07-05T12:30:00+09:30'
+      type: lunch
+      label: Lunch at Camp - Duty Patrol Duties
+      dwell: 0.5
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Mike']
+    - date: '2026-07-05T14:00:00+09:30'
+      type: activity
+      label: Alice Springs Nature Park
+      dwell: 2.0
+      loc: [ -23.702787, 133.882834 ]
+      group: ['Romeo']
+    - date: '2026-07-05T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Romeo']
+    - date: '2026-07-05T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Charlie']
+    - date: '2026-07-05T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Mike']
 - day: 9
-  title: Sunrise & Kata Tjuta
-  location: Uluru / Kata Tjuta
+  title: Rotation Day 4
+  location: Alice Springs / Curtin Springs
   image: "/uploads/2025-08-16-uluru-adventure-2026/kata-tjuta.jpg"
   events:
-    - date: '2026-07-06T05:30:00+09:30'
-      type: depart
-      label: Depart for Sunrise
-      loc: [ -25.24221, 130.98322 ]
-    - date: '2026-07-06T06:30:00+09:30'
+    - date: '2026-07-06T08:00:00+09:30'
       type: activity
-      label: Sunrise at Uluru
-      dwell: 0.5
-      loc: [ -25.33833, 131.00583 ]
-    - date: '2026-07-06T10:00:00+09:30'
+      label: Relax
+      dwell: 4
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Charlie']
+    - date: '2026-07-06T08:00:00+09:30'
       type: activity
-      label: Kata Tjuta - Valley of the Winds
-      dwell: 2.0
-      loc: [ -25.284729, 130.725911 ]
+      label: Kings Canyon Hike / Helicopter Ride
+      dwell: 6
+      loc: [ -24.255754, 131.57027 ]
+      group: ['Mike']
+    - date: '2026-07-06T09:00:00+09:30'
+      type: activity
+      label: Alice Springs Activities
+      dwell: 3
+      loc: [ -23.702787, 133.882834 ]
+      group: ['Romeo']
     - date: '2026-07-06T12:30:00+09:30'
       type: lunch
-      label: 'Lunch at Kata Tjuta'
-    - date: '2026-07-06T17:30:00+09:30'
+      label: Lunch before departing
+      dwell: 0.5
+      group: ['Romeo']
+    - date: '2026-07-06T12:30:00+09:30'
+      type: lunch
+      label: Lunch before departing
+      dwell: 0.5
+      group: ['Mike']
+    - date: '2026-07-06T14:00:00+09:30'
+      type: travel
+      label: Pickup Food - Travel to Curtin Springs
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Romeo']
+      detail: Order by 30 June.
+    - date: '2026-07-06T14:00:00+09:30'
       type: arrive
-      label: Return to Resort
-      loc: [ -25.24221, 130.98322 ]
+      label: Arrive Alice Springs Overnight
+      loc: [ -23.702787, 133.882834 ]
+      group: ['Charlie']
     - date: '2026-07-06T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
+      group: ['Romeo']
+    - date: '2026-07-06T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Charlie']
+    - date: '2026-07-06T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Mike']
 - day: 10
-  title: Uluru to Kings Canyon
-  location: Kings Canyon
+  title: Rotation Day 5
+  location: Alice Springs / Curtin Springs
   image: "/uploads/2025-08-16-uluru-adventure-2026/kings-canyon.jpg"
   events:
-    - date: '2026-07-07T08:00:00+09:30'
-      type: depart
-      label: Depart Uluru Resort
+    - date: '2026-07-07T06:00:00+09:30'
+      type: activity
+      label: Uluru Sunrise Camel Ride
+      dwell: 2
       loc: [ -25.24221, 130.98322 ]
-    - date: '2026-07-07T10:30:00+09:30'
-      type: rest
-      label: Angas Downs
-      dwell: 0.25
-      loc: [ -25.02941, 132.26122 ]
+      group: ['Mike']
+    - date: '2026-07-07T08:00:00+09:30'
+      type: activity
+      label: Station Tour
+      dwell: 5
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Romeo']
+    - date: '2026-07-07T09:00:00+09:30'
+      type: activity
+      label: MacDonnell Ranges
+      dwell: 3.5
+      loc: [ -23.67001, 133.27002 ]
+      group: ['Charlie']
     - date: '2026-07-07T12:30:00+09:30'
       type: lunch
-      label: Lunch - Kings Creek Station
+      label: Lunch at Camp - Duty Patrol Duties
       dwell: 0.5
-      loc: [ -24.40201, 131.81502 ]
-    - date: '2026-07-07T14:30:00+09:30'
-      type: arrive
-      label: Arrive Kings Canyon Resort
-      loc: [ -24.255754, 131.57027 ]
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Romeo']
+    - date: '2026-07-07T12:30:00+09:30'
+      type: lunch
+      label: Lunch on the road
+      dwell: 0.5
+      group: ['Charlie']
+      loc: [ -23.67001, 133.27002 ]
+    - date: '2026-07-07T12:30:00+09:30'
+      type: lunch
+      label: Explore The Olgas
+      dwell: 3
+      loc: [ -25.284729, 130.725911 ]
+      group: ['Mike']
+    - date: '2026-07-07T14:00:00+09:30'
+      type: activity
+      label: Alice Springs Nature Park
+      dwell: 2.0
+      loc: [ -23.702787, 133.882834 ]
+      group: ['Charlie']
     - date: '2026-07-07T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
+      group: ['Romeo']
+    - date: '2026-07-07T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Charlie']
+    - date: '2026-07-07T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Mike']
 - day: 11
-  title: Kings Canyon Rim Walk
-  location: Kings Canyon
+  title: Rotation Day 6
+  location: Alice Springs / Curtin Springs
   image: "/uploads/2025-08-16-uluru-adventure-2026/hike-kings-canyon.jpg"
   events:
-    - date: '2026-07-08T08:30:00+09:30'
-      type: depart
-      label: Depart Resort
+    - date: '2026-07-08T08:00:00+09:30'
+      type: activity
+      label: Kings Canyon Hike / Helicopter Ride
+      dwell: 6
       loc: [ -24.255754, 131.57027 ]
+      group: ['Romeo']
+    - date: '2026-07-08T08:00:00+09:30'
+      type: activity
+      label: Relax
+      dwell: 4
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Mike']
     - date: '2026-07-08T09:00:00+09:30'
       type: activity
-      label: Kings Canyon Rim Walk
-      dwell: 4.0
-      loc: [ -24.255754, 131.57027 ]
+      label: Alice Springs Activities
+      dwell: 3
+      loc: [ -23.702787, 133.882834 ]
+      group: ['Charlie']
     - date: '2026-07-08T13:30:00+09:30'
       type: lunch
-      label: 'Lunch'
-    - date: '2026-07-08T15:00:00+09:30'
+      label: Lunch before departing
+      group: ['Charlie']
+    - date: '2026-07-08T14:00:00+09:30'
+      type: travel
+      label: Pickup Food - Travel to Curtin Springs
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Charlie']
+      detail: Order by 1 July.
+    - date: '2026-07-08T14:00:00+09:30'
       type: activity
-      label: Garden of Eden
-      dwell: 2.0
-      loc: [ -24.255754, 131.57027 ]
-    - date: '2026-07-08T17:30:00+09:30'
-      type: arrive
-      label: Return to Resort
-      loc: [ -24.255754, 131.57027 ]
+      label: Pack Down
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Mike']
     - date: '2026-07-08T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
+      group: ['Romeo']
+    - date: '2026-07-08T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Charlie']
+    - date: '2026-07-08T18:30:00+09:30'
+      type: dinner
+      label: 'Dinner'
+      group: ['Mike']
 - day: 12
   title: The Long Drive South
   location: Coober Pedy
@@ -382,23 +496,13 @@ itinerary:
   events:
     - date: '2026-07-09T06:00:00+09:30'
       type: depart
-      label: Depart Kings Canyon
-      loc: [ -24.255754, 131.57027 ]
-    - date: '2026-07-09T10:30:00+09:30'
-      type: rest
-      label: Erldunda
-      dwell: 0.25
-      loc: [ -25.22301, 133.19502 ]
-    - date: '2026-07-09T13:00:00+09:30'
+      label: Depart Curtin Springs
+      loc: [ -25.311207, 131.760597 ]
+    - date: '2026-07-09T12:30:00+09:30'
       type: lunch
-      label: Lunch - Marla
+      label: Lunch Stop??
       dwell: 0.5
       loc: [ -27.29741, 133.62122 ]
-    - date: '2026-07-09T15:30:00+09:30'
-      type: rest
-      label: Cadney Park
-      dwell: 0.25
-      loc: [ -28.25401, 134.16802 ]
     - date: '2026-07-09T18:00:00+09:30'
       type: arrive
       label: Arrive Coober Pedy
@@ -407,63 +511,43 @@ itinerary:
       type: dinner
       label: 'Dinner'
 - day: 13
-  title: Coober Pedy to Gawler
-  location: Gawler
+  title: Coober Pedy to 1st Gawler Hall
+  location: 1st Gawler Hall
   image: "/uploads/2025-08-16-uluru-adventure-2026/salt-lake.jpg"
   events:
     - date: '2026-07-10T06:00:00+09:30'
       type: depart
       label: Depart Coober Pedy
       loc: [ -29.01402, 134.75303 ]
-    - date: '2026-07-10T09:00:00+09:30'
-      type: rest
-      label: Glendambo
-      dwell: 0.25
-      loc: [ -30.98801, 135.75701 ]
     - date: '2026-07-10T12:30:00+09:30'
       type: lunch
-      label: Lunch - Port Augusta
+      label: Lunch Stop??
       dwell: 0.5
       loc: [ -32.49301, 137.76602 ]
-    - date: '2026-07-10T15:00:00+09:30'
-      type: rest
-      label: Port Pirie
-      dwell: 0.25
-      loc: [ -33.18121, 138.01692 ]
     - date: '2026-07-10T17:30:00+09:30'
       type: arrive
-      label: Arrive Gawler
+      label: Arrive 1st Gawler Hall
       loc: [ -34.60301, 138.74902 ]
     - date: '2026-07-10T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
 - day: 14
-  title: Gawler to Home
+  title: 1st Gawler Hall to Home
   location: Bundoora Scout Hall
   image: "/uploads/2025-08-16-uluru-adventure-2026/bus.jpg"
   events:
     - date: '2026-07-11T05:30:00+09:30'
       type: depart
-      label: Depart Gawler
+      label: Depart 1st Gawler Hall
       loc: [ -34.60301, 138.74902 ]
-    - date: '2026-07-11T08:30:00+09:30'
-      type: rest
-      label: Bordertown
-      dwell: 0.25
-      loc: [ -36.31211, 140.76812 ]
     - date: '2026-07-11T12:30:00+10:00'
       type: lunch
-      label: Lunch - Horsham
+      label: Lunch Stop??
       dwell: 0.5
       loc: [ -36.71351, 142.19982 ]
-    - date: '2026-07-11T15:30:00+10:00'
-      type: rest
-      label: Ballarat
-      dwell: 0.25
-      loc: [ -37.56221, 143.85032 ]
     - date: '2026-07-11T18:00:00+10:00'
       type: arrive
-      label: Arrive Home - Bundoora Scout Hall
+      label: Arrive Bundoora Scout Hall
       loc: [ -37.70465, 145.0631543 ]
     - date: '2026-07-11T19:00:00+10:00'
       type: arrive
