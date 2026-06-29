@@ -1,5 +1,13 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260630_2.jpg"
+  alt: Uluru expedition convoy driving through wet conditions on the road from Broken Hill to Coober Pedy
+  caption: Wet roads on the way to Coober Pedy
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260630_1.jpg"
+  alt: Getting ready to depart our accomodation at Broken Hill
+  caption: Early departure from Broken Hill
+  span: normal
 - image: "/uploads/trip/uluru-2026/20260629_4.jpg"
   alt: Daydream Mine equipment with mulga trees near Broken Hill
   caption: Daydream Mine and the mulga trees
