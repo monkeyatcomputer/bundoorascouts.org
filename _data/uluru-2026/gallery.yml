@@ -7,7 +7,7 @@ gallery:
 - image: "/uploads/trip/uluru-2026/20260629_3.jpg"
   alt: Uluru expedition mascot below ground on the Broken Hill mine tour
   caption: Below ground on the Broken Hill mine tour
-  span: wide
+  span: normal
 - image: "/uploads/trip/uluru-2026/20260629_2.jpg"
   alt: Uluru expedition convoy travelling to the Broken Hill mine tour
   caption: Heading to the Broken Hill mine tour
@@ -16,12 +16,16 @@ gallery:
   alt: Uluru expedition mascot riding in the vehicle before the Broken Hill mine tour
   caption: Above ground before the mine tour
   span: normal
+- image: "/uploads/trip/uluru-2026/20260628_170000.jpg"
+  alt: Uluru expedition convoy parked at night in Broken Hill
+  caption: First night in Broken Hill
+  span: wide
 - youtube_id: "bR0ADhOGhCc"
-  title: Uluru Adventure 2026 departure video
+  title: Convoy on the move
   caption: Departure video
   span: wide
 - image: "/uploads/trip/uluru-2026/20260628_062604.jpg"
-  alt: Uluru expedition morning departure
+  alt: Ready to depart Bundoora for Uluru
   caption: Ready for departure
   span: wide
 - image: "/uploads/trip/uluru-2026/20260628_054150.jpg"
