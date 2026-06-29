@@ -15,11 +15,11 @@ tags:
     - Camp
 ---
 
-Monday 29 June 2026 was a Broken Hill day for the Uluru expedition, with the group swapping long highway kilometres for mine history, red dirt, rocky ground, and a closer look at the country around them.
+Monday 29 June 2026 gave everyone a break from sitting on buses and a chance to get properly dusty. The Uluru crew spent the day around Broken Hill, learning a bit of the mining story that shaped the place.
 
-The crew toured the Broken Hill mine area both above and below ground, getting a feel for the scale of the mining story that shaped the region. It was a different kind of adventure from the road trip itself: darker, dustier, and full of old workings, equipment, and local history.
+The mine tour took the group above ground and below ground. Above ground, there was old equipment, red dirt, open country, and plenty to look at. Below ground, the rock walls did most of the talking. It is one thing to hear about mining history. It is another thing to stand inside it with a helmet on.
 
-The day also included Daydream Mine and the mulga trees, with the convoy moving through red dirt roads and wide open country between stops.
+The day also included Daydream Mine and the mulga trees. The convoy moved between stops on red dirt roads, with the country opening up around us and the vehicles looking more like an expedition convoy by the hour.
 
 {% include image-gallery.html folder='/uploads/2026-06-29-broken-hill-mine-tour/' %}
 

@@ -41,17 +41,17 @@ groups:
     url: "https://www.watsoniascoutcentre.org.au"
 ---
 
-The Uluru expedition is now just **14 days away**. On **Saturday 27 June 2026**, our Scouts, Venturer Scouts, leaders, buses, support vehicles, and a mountain of gear will gather at Bundoora Scout Hall for muster day. Then, bright and early on **Sunday 28 June 2026**, the adventure begins as we head for Broken Hill and the long trail towards the red centre.
+The Uluru expedition is now **14 days away**, which is close enough that the packing lists have stopped being theoretical. On **Saturday 27 June 2026**, Scouts, Venturer Scouts, leaders, buses, support vehicles, and a mountain of gear will gather at Bundoora Scout Hall for muster day. On **Sunday 28 June 2026**, we point the convoy towards Broken Hill and start the long run to the red centre.
 
-There is plenty happening before we roll out. Bags are being checked, sleeping gear is being packed, menus are being reviewed, and everyone is making sure they are ready for a big outback journey. It is the kind of moment where "be prepared" moves from motto to mission, and yes, we are trying not to get tied up in knots over the final details.
+There is still plenty to do before we roll out. Bags need checking, sleeping gear needs sorting, menus need one more look, and leaders are asking the same useful questions in five different ways. This is the point where "be prepared" stops being a motto on a wall and starts sounding like someone checking batteries.
 
-Expeditioners should also remember that **first aid training and catch-up is tomorrow, Sunday 14 June 2026, at Bundoora Scout Hall**. Please make sure you are there if you need to complete the session or catch up on anything before departure. It is one more important step in making sure everyone is ready to look after themselves and each other on the road.
+Expeditioners should also remember that **first aid training and catch-up is tomorrow, Sunday 14 June 2026, at Bundoora Scout Hall**. If you need to finish the session or catch up before departure, please be there. A good trip starts with people who know how to look after themselves and the person next to them.
 
-This trip has been a huge team effort, with Scouts and leaders working together across the planning, fundraising, logistics, safety checks, and route preparation. Every little job matters, from checking a torch battery to making sure the convoy plans are ready. It is shaping up to be a badge-worthy adventure, and the excitement around the Group is easy to spot.
+This trip has taken a lot of hands. Scouts and leaders have worked through planning, fundraising, logistics, safety checks, and route preparation. Some jobs are big and obvious. Some jobs are as small as checking a torch battery before it becomes someone else's problem at bedtime.
 
 {% include trip-groups.html title="Scout Groups Joining Us" subtitle="A combined adventure with friends from across Victoria" class="my-12 py-12 bg-surface-container-lowest rounded-[3rem] border border-outline-variant/10 shadow-sm" %}
 
-Families and friends will be able to follow along once the expedition is underway using our live trip tracker. For now, the countdown is well and truly on. We are almost at the pointy end of the compass, and Uluru is no longer a far-off idea on the map. It is just down the track.
+Families and friends will be able to follow along once the expedition is underway using our live trip tracker. For now, the countdown is on. Uluru has moved from "one day" to "pack your bag properly, because this is happening."
 
 <div class="flex flex-wrap gap-4 not-prose">
     <a href="/trip/uluru-2026"

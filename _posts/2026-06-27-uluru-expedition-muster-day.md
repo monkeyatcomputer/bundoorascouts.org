@@ -41,13 +41,13 @@ groups:
     url: "https://www.watsoniascoutcentre.org.au"
 ---
 
-Today is muster day for our Uluru expeditioners, and Bundoora Scout Hall is full of bags, checklists, maps, nerves, and grins. People are being checked in, gear is being sorted, and the three chariots, also known as our buses, are ready to roll before tomorrow's big push north.
+Today is muster day for our Uluru expeditioners, which means Bundoora Scout Hall has turned into a very organised pile of bags, checklists, nerves, and excited faces. Scouts and Venturers are checking in, leaders are counting things twice, and the buses are sitting out the front waiting for tomorrow's big push north.
 
-There is a real mix of excitement and caution in the air. Everyone knows this is going to be a huge adventure, but the road ahead is long and the outback does not hand out easy badges. I even did my best modelling for the Uluru trip merch, which is not something I usually volunteer for. Usually.
+Everyone knows this trip will be big. The road is long, the days will be full, and the outback has a habit of testing whether you packed the useful thing or just the thing you liked. I even did some modelling for the Uluru trip merch, which is not a sentence I expected to write as a Scout Leader.
 
-Tonight will be an early one, at least in theory. If anyone can actually sleep, they will be up at 4.30am for a 6.00am push off. That is not just an early start, it is a full-on dawn patrol, with the compass pointing towards Broken Hill first and Uluru further down the track.
+Tonight should be an early one. In theory. If anyone manages to sleep, alarms will start going off around 4.30am so we can push off at 6.00am. First stop is Broken Hill, with Uluru waiting much further up the track.
 
-To all our expeditioners, leaders, helpers, families, and friends: thank you for the work that has brought us to this point. The trail has been planned, the patrol spirit is packed, and the adventure is almost ready to roll. Uluru, we are knot far away now.
+To every expeditioner, leader, helper, parent, carer, and friend who helped get us to this point: thank you. The route is planned, the gear is packed, and the adventure is ready to roll. Uluru, we are knot far away now.
 
 {% include image-gallery.html folder='/uploads/2026-06-27-uluru-expedition-muster-day/' %}
 

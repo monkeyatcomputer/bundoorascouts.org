@@ -98,6 +98,6 @@ custom_js:
     - "//www.google.com/recaptcha/api.js"
 ---
 
-Get ready for an expedition to the spiritual heart of Australia! Bundoora Scouts is planning a major trip to Uluru and the surrounding Central Australian landscape in 2026. This is a fantastic opportunity for our Scouts and Venturer Scouts to experience the rich culture and breathtaking scenery of the Australian Outback.
+In 2026, Bundoora Scouts is heading for Uluru and Central Australia. This will be a major expedition for Scouts and Venturer Scouts, with long travel days, red dirt, big country, and the kind of shared adventure that people remember long after the bus has been cleaned out.
 
-This trip is open to registered members of the <b>Scout</b> and <b>Venturer Scout</b> sections who will be of age at the time of the trip. This is a significant expedition and will require a good level of maturity, fitness, and a commitment to teamwork.
+The trip is open to registered members of the <b>Scout</b> and <b>Venturer Scout</b> sections who will be of age at the time of the trip. It is a serious expedition, so youth members will need maturity, fitness, and a willingness to work as part of the crew. The outback is not the place to discover you only packed enthusiasm.

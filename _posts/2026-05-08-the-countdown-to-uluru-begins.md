@@ -41,23 +41,23 @@ groups:
     url: "https://www.watsoniascoutcentre.org.au"
 ---
 
-It’s getting real… very real!
+It is starting to feel real now.
 
-In a little over **50 days**, the Bundoora Scouts Uluru Adventure shifts from careful planning into red dust, long roads, and an experience of a lifetime.
+In a little over **50 days**, the Bundoora Scouts Uluru Adventure moves from spreadsheets, permission notes, gear lists, and leader meetings into red dirt, long roads, and Scouts learning what a big expedition actually feels like.
 
-> The countdown is on, the nerves are fluttering, and the excitement is building - Uluru, we’re coming!
+> The countdown is on. Uluru, we are coming.
 
 ## The Excitement is Building
 
-There’s a growing mix of excitement, pride, and a little trepidation as this expedition we’ve been preparing for suddenly feels very close. Gear is coming together, final plans are locking in - and the reality of heading to the red heart of Australia is setting in.
+The expedition has been sitting on calendars for a long time, but it has started to feel close. Gear is coming together. Final plans are locking in. Scouts are asking good questions, parents are asking even better ones, and leaders are doing that thing where we pretend a list with 47 items is under control.
 
-We've done the pre-camp shakedown, now there's only one thing left to do...
+The pre-camp shakedown is done. Now we keep tightening the details until departure day arrives.
 
 ## A Journey Shared
 
-We’ve been incredibly fortunate to be planning this journey alongside our friends from **[Heany Park Scouts](https://heanyparkscouts.com.au/)**, whose collaboration and support have been invaluable every step of the way. 
+We have planned this journey alongside our friends from **[Heany Park Scouts](https://heanyparkscouts.com.au/)**. Their leaders have put in a mountain of work, and the trip is stronger because we are doing it together.
 
-And we won’t be traveling alone! We’re thrilled that Scouts from across Victoria will be joining us on this truly epic adventure:
+We also will not be travelling alone. Scouts from across Victoria will join the convoy, which should make the stories better and the bus loading more interesting.
 
 <section class="my-12 py-12 bg-surface-container-lowest rounded-[3rem] border border-outline-variant/10 shadow-sm not-prose">
   <div class="flex flex-wrap justify-center gap-x-12 gap-y-10 px-6">
@@ -84,7 +84,7 @@ And we won’t be traveling alone! We’re thrilled that Scouts from across Vict
 
 ## Follow the Adventure
 
-To help everyone share in the journey, we’ve launched a **countdown timer and live expedition tracker**. Parents, carers, and friends will be able to follow along and see exactly where our adventurers are once we’re on the road.
+To help families and friends follow along, we have launched a **countdown timer and live expedition tracker**. Once the convoy is on the road, you will be able to see where the group is and follow the trip as it unfolds.
 
 <div class="flex flex-wrap gap-4 not-prose">
     <a href="/trip/uluru-2026" 
@@ -96,6 +96,6 @@ To help everyone share in the journey, we’ve launched a **countdown timer and 
     </a>
 </div>
 
-The countdown is on, and the excitement is building — **Uluru, here we come!**
+The countdown is on. Time to check the gear pile one more time.
 
 

@@ -15,13 +15,13 @@ tags:
     - Camp
 ---
 
-The Uluru Adventure 2026 convoy rolled out from Bundoora Scout Hall on Sunday 28 June 2026, with three buses, support vehicles, leaders, Scouts, Venturer Scouts, and a lot of carefully packed gear pointing north.
+The Uluru Adventure 2026 convoy left Bundoora Scout Hall on Sunday 28 June 2026. Three buses, support vehicles, leaders, Scouts, Venturer Scouts, and enough bags to make you question every packing list, rolled out together and pointed north.
 
-It was an early foggy start, but the energy around the hall made it clear that this was not just another Sunday morning. Final checks were finished, and the buses started the long first leg from Bundoora to Broken Hill.
+The morning started early and foggy. That helped the mood, in a strange way. Everyone was a bit sleepy, everyone was trying to remember one last thing, and somehow the whole place still had that buzz you get before a proper Scout adventure.
 
-The day was all about settling into the rhythm of the road. The convoy made stops along the way, giving everyone a chance to stretch, reset, check in, and keep the trip moving steadily towards the first overnight stop.
+Once the final checks were done, the first leg began: Bundoora Scout Hall to Broken Hill, with stops along the way to stretch legs, check the convoy, find snacks, and remind a few people that bus seats are not beds, no matter how hard they try.
 
-By the end of the day the group had reached Broken Hill, with the first big travel day complete and the red centre feeling a little closer.
+By the time the group reached Broken Hill, the first big travel day was behind us. The red centre still sat a long way up the road, but it felt closer than it did at 6.00am.
 
 {% include youtube.html id="bR0ADhOGhCc" title="Uluru Adventure 2026 departure video" %}
 
