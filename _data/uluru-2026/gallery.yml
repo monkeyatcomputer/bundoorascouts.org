@@ -1,5 +1,21 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260629_4.jpg"
+  alt: Daydream Mine equipment with mulga trees near Broken Hill
+  caption: Daydream Mine and the mulga trees
+  span: tall
+- image: "/uploads/trip/uluru-2026/20260629_3.jpg"
+  alt: Uluru expedition mascot below ground on the Broken Hill mine tour
+  caption: Below ground on the Broken Hill mine tour
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260629_2.jpg"
+  alt: Uluru expedition convoy travelling to the Broken Hill mine tour
+  caption: Heading to the Broken Hill mine tour
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260629_1.jpg"
+  alt: Uluru expedition mascot riding in the vehicle before the Broken Hill mine tour
+  caption: Above ground before the mine tour
+  span: normal
 - youtube_id: "bR0ADhOGhCc"
   title: Uluru Adventure 2026 departure video
   caption: Departure video

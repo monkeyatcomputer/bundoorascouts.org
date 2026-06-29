@@ -1,0 +1,60 @@
+{% comment %}
+Full-width homepage feature band for a live trip.
+Usage: {% include home-trip-banner.html trip_url="/trip/uluru-2026" post=latest_campfire_post %}
+{% endcomment %}
+
+{% assign trip_page = site.trips | where: "permalink", include.trip_url | first %}
+{% if trip_page %}
+{% assign latest_post = include.post %}
+<section class="relative overflow-hidden bg-tertiary text-white shadow-ambient-lg">
+  <div class="absolute inset-0 z-0">
+    <img src="/uploads/trip/uluru-2026/20260629_2.jpg" alt="Uluru expedition convoy on a red dirt road"
+      class="h-full w-full object-cover opacity-55 mix-blend-screen">
+    <div class="absolute inset-0 bg-gradient-to-r from-tertiary via-tertiary/88 to-primary-container/72"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[length:88px_100%] opacity-30"></div>
+  </div>
+
+  <div class="site-container-wide relative z-10 py-8 md:py-12">
+    <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+      <div class="max-w-4xl">
+        <div class="mb-4 flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/12 px-3 py-1.5 text-xs font-black uppercase tracking-[0.08em] text-secondary-fixed-dim backdrop-blur">
+            <span class="relative inline-flex h-5 w-5 items-center justify-center">
+              <span class="material-symbols-outlined filled text-[18px]">sensors</span>
+              <span class="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-error ring-2 ring-tertiary"></span>
+              <span class="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 animate-ping rounded-full bg-error"></span>
+            </span>
+            Expedition Live
+          </span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-black uppercase tracking-[0.08em] text-white/80 backdrop-blur">
+            <span class="material-symbols-outlined text-[18px]">route</span>
+            {{ trip_page.trip_stats }}
+          </span>
+        </div>
+
+        <h2 class="font-headline text-3xl font-black leading-[0.98] tracking-normal text-white sm:text-4xl md:text-5xl">
+          Follow {{ trip_page.title }}
+        </h2>
+        <p class="mt-4 max-w-2xl text-base font-semibold leading-7 text-white/78 md:text-lg">
+          The convoy is on the road to the red centre. Track the route, timeline, live updates, and new photos as the expedition unfolds.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-stretch">
+        <a href="{{ trip_page.url | relative_url }}"
+          class="btn bg-white text-primary shadow-xl hover:bg-secondary-fixed">
+          Track Now
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+        {% if latest_post and latest_post.url != page.url %}
+        <a href="{{ latest_post.url | relative_url }}"
+          class="btn border border-white/18 bg-white/10 text-white backdrop-blur hover:bg-white/16">
+          Latest Update
+          <span class="material-symbols-outlined">forum</span>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

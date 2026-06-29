@@ -36,6 +36,9 @@ image: "/uploads/hero/aerial.jpg"
   </div>
 </section>
 
+{% assign latest_campfire_post = site.tags['Uluru 2026'] | first %}
+{% include home-trip-banner.html trip_url="/trip/uluru-2026" post=latest_campfire_post %}
+
 <!-- Sections Bento Grid -->
 <section id="scouting-sections" class="site-container-wide section-shell">
   <div class="section-header">
