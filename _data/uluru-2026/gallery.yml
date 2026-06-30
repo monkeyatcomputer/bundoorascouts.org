@@ -1,5 +1,13 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260630_4.jpg"
+  alt: Uluru expedition group stopped for lunch in Port Augusta
+  caption: Lunch stop in Port Augusta
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260630_3.jpg"
+  alt: Uluru expedition convoy waiting for a long freight train to pass
+  caption: Waiting for a looooong freight train
+  span: normal
 - youtube_id: "mxlzi4whFJU"
   title: Signing on the bus
   caption: Departure video
