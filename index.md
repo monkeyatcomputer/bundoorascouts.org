@@ -41,7 +41,7 @@ image: "/uploads/hero/aerial.jpg"
 
 <!-- Sections Bento Grid -->
 <section id="scouting-sections" class="site-container-wide section-shell">
-  <div class="section-header">
+  <div class="section-header max-w-7xl mx-auto">
     <div>
       <h2 class="section-title">
         Our <br />
@@ -61,7 +61,7 @@ image: "/uploads/hero/aerial.jpg"
 
 <!-- Latest from The Campfire -->
 <section class="site-container-wide section-shell">
-  <div class="surface-band px-4 py-8 sm:px-6 md:px-12">
+  <div class="surface-band px-4 py-8 sm:px-6 md:px-8">
     <div class="section-header mb-10 md:mb-16">
       <h2 class="section-title">
         Latest from <br />
