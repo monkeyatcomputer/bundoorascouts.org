@@ -17,7 +17,7 @@ tags:
 
 On Monday 29 June 2026, our Uluru expedition group visited the Royal Flying Doctor Service museum in Broken Hill.
 
-I had heard of the Flying Doctor before, but seeing the story up close made it feel much more real. Out here, distance is not a small thing. A trip to hospital can mean hundreds of kilometres, and help may need to come by plane.
+I had heard of the Flying Doctor before, but seeing the story up close made it feel much more real. Out here, distance is not a small thing. A trip to hospital can mean thousands of kilometres, and help may need to come by plane.
 
 The museum helped our Scouts and Venturer Scouts understand how important the service is for people living and working in remote Australia. We saw how doctors, nurses, pilots, radio operators, and support teams have worked together to get help to people who need it.
 
