@@ -32,8 +32,9 @@ itinerary:
       dwell: 0.5
       loc: [ -34.18523, 142.16301 ]
     - date: '2026-06-28T15:30:00+10:00'
-      type: travel
+      type: rest
       label: Wentworth Turnoff
+      dwell: 0.25
       loc: [ -34.10312, 141.91424 ]
     - date: '2026-06-28T17:00:00+10:00'
       type: arrive
@@ -251,14 +252,14 @@ itinerary:
       group: ['Mike']
     - date: '2026-07-04T14:00:00+09:30'
       type: arrive
+      label: Arrive Curtin Springs
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Mike']
+    - date: '2026-07-04T14:00:00+09:30'
+      type: arrive
       label: Arrive Alice Springs Overnight
       loc: [ -23.702787, 133.882834 ]
       group: ['Romeo']
-    - date: '2026-07-04T14:00:00+09:30'
-      type: travel
-      label: Pickup Food - Travel to Curtin Springs
-      loc: [ -25.311207, 131.760597 ]
-      group: ['Mike']
     - date: '2026-07-04T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
@@ -358,17 +359,17 @@ itinerary:
       label: Lunch before departing
       dwell: 0.5
       group: ['Romeo']
+    - date: '2026-07-06T14:00:00+09:30'
+      type: arrive
+      label: Arrive Curtin Springs
+      loc: [ -25.311207, 131.760597 ]
+      group: ['Romeo']
+      detail: Order by 30 June.
     - date: '2026-07-06T12:30:00+09:30'
       type: lunch
       label: Lunch before departing
       dwell: 0.5
       group: ['Mike']
-    - date: '2026-07-06T14:00:00+09:30'
-      type: travel
-      label: Pickup Food - Travel to Curtin Springs
-      loc: [ -25.311207, 131.760597 ]
-      group: ['Romeo']
-      detail: Order by 30 June.
     - date: '2026-07-06T14:00:00+09:30'
       type: arrive
       label: Arrive Alice Springs Overnight
@@ -471,10 +472,11 @@ itinerary:
     - date: '2026-07-08T13:30:00+09:30'
       type: lunch
       label: Lunch before departing
+      dwell: 0.5
       group: ['Charlie']
     - date: '2026-07-08T14:00:00+09:30'
-      type: travel
-      label: Pickup Food - Travel to Curtin Springs
+      type: arrive
+      label: Arrive Curtin Springs
       loc: [ -25.311207, 131.760597 ]
       group: ['Charlie']
       detail: Order by 1 July.
@@ -527,13 +529,13 @@ itinerary:
       loc: [ -29.01402, 134.75303 ]
     - date: '2026-07-10T12:30:00+09:30'
       type: lunch
-      label: Lunch Stop??
+      label: Lunch Stop
       dwell: 0.5
       loc: [ -32.49301, 137.76602 ]
     - date: '2026-07-10T17:30:00+09:30'
       type: arrive
       label: Arrive 1st Gawler Hall
-      loc: [ -34.60301, 138.74902 ]
+      loc: [ -34.5890642, 138.7369905 ]
     - date: '2026-07-10T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
@@ -545,10 +547,10 @@ itinerary:
     - date: '2026-07-11T05:30:00+09:30'
       type: depart
       label: Depart 1st Gawler Hall
-      loc: [ -34.60301, 138.74902 ]
+      loc: [ -34.5890642, 138.7369905 ]
     - date: '2026-07-11T12:30:00+10:00'
       type: lunch
-      label: Lunch Stop??
+      label: Lunch Stop
       dwell: 0.5
       loc: [ -36.71351, 142.19982 ]
     - date: '2026-07-11T18:00:00+10:00'

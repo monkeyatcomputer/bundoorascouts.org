@@ -143,11 +143,13 @@ function parseItinerary(text) {
                 const tzMatch = dateStr.match(/[+-]\d{2}:\d{2}$/);
                 const tz = tzMatch ? tzMatch[0] : '+10:00';
                 
+                const type = typeMatch ? typeMatch[1] : '';
+                const defaultDwell = ['depart', 'arrive', 'travel'].includes(type) ? 0 : 1.0;
                 const event = {
                     dateStr: dateStr,
-                    type: typeMatch ? typeMatch[1] : '',
+                    type: type,
                     label: labelMatch ? labelMatch[1].trim().replace(/^'|'$/g, '') : '',
-                    dwell: dwellMatch ? parseFloat(dwellMatch[1]) : (['depart', 'arrive'].includes(typeMatch ? typeMatch[1] : '') ? 0 : 1.0),
+                    dwell: dwellMatch ? parseFloat(dwellMatch[1]) : defaultDwell,
                     lat: locMatch ? parseFloat(locMatch[1]) : null,
                     lng: locMatch ? parseFloat(locMatch[2]) : null,
                     group: groups,
@@ -367,11 +369,13 @@ async function run() {
                 pathWithTimes.push({ time: a1.time, pos: groupPoints[a1.idx], type: a1.type, label: a1.label, tz: a1.tz });
                 if (a1.dwell > 0) {
                     const isLast = (i === anchors.length - 1);
+                    const nextAnchor = anchors.slice(i + 1).find(a => a.time > dwellEnd);
+                    const nextIsElsewhere = nextAnchor && nextAnchor.idx > a1.idx;
                     pathWithTimes.push({ 
                         time: dwellEnd, 
                         pos: groupPoints[a1.idx], 
-                        type: isLast ? 'stationary' : a1.type, 
-                        label: isLast ? 'Overnight' : a1.label, 
+                        type: isLast || !nextIsElsewhere ? 'stationary' : 'travel',
+                        label: isLast || !nextIsElsewhere ? a1.label : 'Moving',
                         tz: a1.tz 
                     });
                 }
