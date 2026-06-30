@@ -1,5 +1,9 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- youtube_id: "mxlzi4whFJU"
+  title: Signing on the bus
+  caption: Departure video
+  span: tall
 - image: "/uploads/trip/uluru-2026/20260630_2.jpg"
   alt: Uluru expedition convoy driving through wet conditions on the road from Broken Hill to Coober Pedy
   caption: Wet roads on the way to Coober Pedy
@@ -7,6 +11,14 @@ gallery:
 - image: "/uploads/trip/uluru-2026/20260630_1.jpg"
   alt: Getting ready to depart our accomodation at Broken Hill
   caption: Early departure from Broken Hill
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260629_6.jpg"
+  alt: Uluru expedition group watching a Royal Flying Doctor Service aircraft display at the Broken Hill museum
+  caption: Learning about the Royal Flying Doctor Service
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260629_5.jpg"
+  alt: Two Bundoora Scout leaders standing in front of a Royal Flying Doctor Service aircraft at the Broken Hill museum
+  caption: At the RFDS museum in Broken Hill
   span: normal
 - image: "/uploads/trip/uluru-2026/20260629_4.jpg"
   alt: Daydream Mine equipment with mulga trees near Broken Hill
