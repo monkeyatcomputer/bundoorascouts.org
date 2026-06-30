@@ -86,6 +86,7 @@ itinerary:
       label: Lunch on the bus
       dwell: 0.5
       detail: Glendambo stop is at 2:30pm.
+      loc: [ -32.0346474, 137.4426466 ]
     - date: '2026-06-30T15:30:00+09:30'
       type: rest
       label: Glendambo
