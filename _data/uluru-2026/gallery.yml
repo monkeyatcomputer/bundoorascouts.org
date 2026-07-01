@@ -1,9 +1,5 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
-- image: "/uploads/trip/uluru-2026/20260630_11.jpg"
-  alt: Uluru expedition convoy driving at dusk under a pink sunset sky
-  caption: Sunset on the road to Coober Pedy
-  span: wide
 - image: "/uploads/trip/uluru-2026/20260630_10.jpg"
   alt: Uluru expedition convoy driving at dusk under a pink sunset sky
   caption: Sunset on the road to Coober Pedy
