@@ -1,5 +1,33 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260630_11.jpg"
+  alt: Uluru expedition convoy driving at dusk under a pink sunset sky
+  caption: Sunset on the road to Coober Pedy
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260630_10.jpg"
+  alt: Uluru expedition convoy driving at dusk under a pink sunset sky
+  caption: Sunset on the road to Coober Pedy
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260630_9.jpg"
+  alt: Wind turbines and power infrastructure beside the road during the Uluru expedition
+  caption: Wind farms on the road north
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260630_8.jpg"
+  alt: Bridge and red earth landscape seen from the Uluru expedition convoy
+  caption: Red earth and open country
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260630_7.jpg"
+  alt: Southern Cross windmill under cloudy skies during the Uluru expedition
+  caption: Southern Cross windmill
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260630_6.jpg"
+  alt: Historic elevated water tower in Port Augusta
+  caption: Port Augusta water tower
+  span: tall
+- image: "/uploads/trip/uluru-2026/20260630_5.jpg"
+  alt: Salt lake and distant hills seen from the Uluru expedition convoy
+  caption: Salt lake views from the road
+  span: wide
 - image: "/uploads/trip/uluru-2026/20260630_4.jpg"
   alt: Uluru expedition group stopped for lunch in Port Augusta
   caption: Lunch stop in Port Augusta
