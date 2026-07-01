@@ -1,9 +1,13 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
-- image: "/uploads/trip/uluru-2026/20260701_1.jpg"
-  alt: Coober Pedy sign on a hillside above the town during the Uluru expedition
-  caption: Coober Pedy morning
+- image: "/uploads/trip/uluru-2026/20260702_2.jpg"
+  alt: Uluru expedition convoy driving before dawn on the road to the red centre
+  caption: Early start to the red centre
   span: wide
+- image: "/uploads/trip/uluru-2026/20260702_1.jpg"
+  alt: Uluru expedition group gathered around food supplies in an underground room at Coober Pedy
+  caption: Underground meal prep in Coober Pedy
+  span: tall
 - image: "/uploads/trip/uluru-2026/20260701_4.jpg"
   alt: Underground passage cut into the sandstone in Coober Pedy
   caption: Underground in Coober Pedy
@@ -16,6 +20,10 @@ gallery:
   alt: Polished opal samples displayed in a glass cabinet at Coober Pedy
   caption: Opal samples on display
   span: tall
+- image: "/uploads/trip/uluru-2026/20260701_1.jpg"
+  alt: Coober Pedy sign on a hillside above the town during the Uluru expedition
+  caption: Coober Pedy morning
+  span: wide
 - image: "/uploads/trip/uluru-2026/20260630_10.jpg"
   alt: Uluru expedition convoy driving at dusk under a pink sunset sky
   caption: Sunset on the road to Coober Pedy
