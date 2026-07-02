@@ -3,7 +3,7 @@ gallery:
 - image: "/uploads/trip/uluru-2026/20260702_2.jpg"
   alt: Uluru expedition convoy driving before dawn on the road to the red centre
   caption: Early start to the red centre
-  span: wide
+  span: tall
 - image: "/uploads/trip/uluru-2026/20260702_1.jpg"
   alt: Uluru expedition group gathered around food supplies in an underground room at Coober Pedy
   caption: Underground meal prep in Coober Pedy
@@ -23,7 +23,7 @@ gallery:
 - image: "/uploads/trip/uluru-2026/20260701_3.jpg"
   alt: Scouts prospecting for opals in a gravel car park at Coober Pedy
   caption: Prospecting in the car park
-  span: normal
+  span: tall
 - image: "/uploads/trip/uluru-2026/20260701_2.jpg"
   alt: Polished opal samples displayed in a glass cabinet at Coober Pedy
   caption: Opal samples on display
@@ -47,7 +47,7 @@ gallery:
 - image: "/uploads/trip/uluru-2026/20260630_7.jpg"
   alt: Southern Cross windmill under cloudy skies during the Uluru expedition
   caption: Southern Cross windmill
-  span: normal
+  span: tall
 - image: "/uploads/trip/uluru-2026/20260630_6.jpg"
   alt: Historic elevated water tower in Port Augusta
   caption: Port Augusta water tower
