@@ -1,5 +1,9 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260702_3.jpg"
+  alt: Erldunda Roadhouse motel sign beside red dirt on the Uluru expedition route
+  caption: Erldunda Roadhouse stop
+  span: tall
 - image: "/uploads/trip/uluru-2026/20260702_2.jpg"
   alt: Uluru expedition convoy driving before dawn on the road to the red centre
   caption: Early start to the red centre
