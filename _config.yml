@@ -99,7 +99,7 @@ collections:
 
 # Feed
 feed:
-  disable_in_development: false
+  disable_in_development: true
   excerpt_only: true
   tags: true
 
