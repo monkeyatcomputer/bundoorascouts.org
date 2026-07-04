@@ -1,5 +1,25 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260704_4.jpg"
+  alt: Red dirt road leading towards Kings Canyon during the Uluru expedition
+  caption: Road to Kings Canyon
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260704_3.jpg"
+  alt: Red rock walls and scrub inside Kings Canyon during the Uluru expedition
+  caption: Kings Canyon views
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260704_2.jpg"
+  alt: Creek running through red rocks and gum trees at Kings Canyon
+  caption: Creek bed at Kings Canyon
+  span: wide
+- youtube_id: "OxdNTQJydgs"
+  title: First helicopter ride
+  caption: First helicopter ride
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260704_1.jpg"
+  alt: Helicopter waiting on the helipad during the Uluru expedition
+  caption: Helicopter tour
+  span: wide
 - image: "/uploads/trip/uluru-2026/20260702_3.jpg"
   alt: Erldunda Roadhouse motel sign beside red dirt on the Uluru expedition route
   caption: Erldunda Roadhouse stop
