@@ -1,5 +1,33 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260705_7.jpg"
+  alt: Kata Tjuṯa viewed from the road during the Uluru expedition
+  caption: Kata Tjuṯa from the road
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260705_6.jpg"
+  alt: Uluru expedition group riding camels along a red dirt track in the early morning
+  caption: Early morning camel ride
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260705_5.jpg"
+  alt: Uluru seen across spinifex and desert trees during the Uluru expedition
+  caption: Uluru across the desert
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260705_4.jpg"
+  alt: Young camels standing in the camel yard before the Uluru expedition camel ride
+  caption: Meeting the camels
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260705_3.jpg"
+  alt: Close view of Uluru rock formations and shaded overhangs
+  caption: Rock formations at Uluru
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260705_2.jpg"
+  alt: Uluru expedition mascot in front of red rock at Uluru
+  caption: Mascot at Uluru
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260705_1.jpg"
+  alt: Uluru rising above grass and desert plants on a cloudy day
+  caption: First look at Uluru
+  span: wide
 - image: "/uploads/trip/uluru-2026/20260704_4.jpg"
   alt: Red dirt road leading towards Kings Canyon during the Uluru expedition
   caption: Road to Kings Canyon
@@ -20,6 +48,14 @@ gallery:
   alt: Helicopter waiting on the helipad during the Uluru expedition
   caption: Helicopter tour
   span: wide
+- image: "/uploads/trip/uluru-2026/20260703_2.jpg"
+  alt: Desert trees and red earth beside the road on the way to Kings Canyon
+  caption: Red centre road views
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260703_1.jpg"
+  alt: Lassetter Highway sign pointing towards Uluru and Ayers Rock
+  caption: Turn-off to Uluru
+  span: normal
 - image: "/uploads/trip/uluru-2026/20260702_3.jpg"
   alt: Erldunda Roadhouse motel sign beside red dirt on the Uluru expedition route
   caption: Erldunda Roadhouse stop
