@@ -1,5 +1,45 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260707_8.jpg"
+  alt: Short-beaked echidna seen under red light during nighttime spotlighting near Alice Springs
+  caption: Spotlighting near Alice Springs
+  span: tall
+- image: "/uploads/trip/uluru-2026/20260707_7.jpg"
+  alt: Short-beaked echidna visiting at night during the Uluru expedition Alice Springs stop
+  caption: Nighttime visitor in Alice Springs
+  span: tall
+- image: "/uploads/trip/uluru-2026/20260707_6.jpg"
+  alt: Ormiston Gorge and red rock walls in the West MacDonnell Ranges during the Uluru expedition
+  caption: Ormiston Gorge lookout
+  span: tall
+- image: "/uploads/trip/uluru-2026/20260707_5.jpg"
+  alt: Walking track through scrub and red hills in the West MacDonnell Ranges
+  caption: Walking in the West MacDonnell Ranges
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260707_4.jpg"
+  alt: Uluru expedition mascot beside an echidna toy at dinner in Alice Springs
+  caption: A friendly echidna joins dinner
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260707_3.jpg"
+  alt: Red cliffs reflected in the water at Ormiston Gorge
+  caption: Reflections at Ormiston Gorge
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260707_2.jpg"
+  alt: Waterhole, gum trees, and red rock walls at Ormiston Gorge
+  caption: Ormiston Gorge waterhole
+  span: tall
+- image: "/uploads/trip/uluru-2026/20260707_1.jpg"
+  alt: Wide view across Ormiston Gorge in the West MacDonnell Ranges
+  caption: Ormiston Gorge
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260706_2.jpg"
+  alt: Sunset over Alice Springs and the surrounding ranges during the Uluru expedition
+  caption: Sunset in Alice Springs
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260706_1.jpg"
+  alt: Uluru expedition vehicle travelling along the road towards Alice Springs
+  caption: On the road to Alice Springs
+  span: wide
 - image: "/uploads/trip/uluru-2026/20260705_7.jpg"
   alt: Kata Tjuṯa viewed from the road during the Uluru expedition
   caption: Kata Tjuṯa from the road
