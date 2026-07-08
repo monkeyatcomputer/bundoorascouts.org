@@ -106,6 +106,12 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
   </section>
   {% endif %}
 
+  <section class="bg-surface not-prose">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pb-20">
+      {% include trip-contact.html %}
+    </div>
+  </section>
+
   {%- comment %} ─── Time Machine (Test Mode Only) ────────────────────────────────────── {% endcomment %}
   {% if page.test_mode %}
   <div id="time-machine"

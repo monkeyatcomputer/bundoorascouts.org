@@ -16,6 +16,24 @@ layout: default
 {% assign avatar_src = "/assets/images/logo.png" %}
 {% endif %}
 {% endif %}
+{% assign current_date = "now" | date: "%Y-%m-%d" %}
+{% assign trip_started = false %}
+{% assign trip_completed = false %}
+{% if page.start_date %}
+{% assign trip_start_date = page.start_date | date: "%Y-%m-%d" %}
+{% if current_date >= trip_start_date %}
+{% assign trip_started = true %}
+{% endif %}
+{% endif %}
+{% if page.end_date %}
+{% assign trip_end_date = page.end_date | date: "%Y-%m-%d" %}
+{% if current_date > trip_end_date %}
+{% assign trip_completed = true %}
+{% endif %}
+{% endif %}
+{% if page.completed %}
+{% assign trip_completed = true %}
+{% endif %}
 <main>
   <!-- Post Hero -->
   <header
@@ -86,7 +104,7 @@ layout: default
     </div>
   </header>
 
-  {% if page.trip_full_banner %}
+  {% if page.trip_full_banner and trip_started != true and trip_completed != true %}
   <!-- Trip Full Banner -->
   <section class="bg-error-container text-on-error-container border-y border-error/20">
     <div class="max-w-7xl mx-auto px-6 py-6 text-center">
@@ -102,7 +120,22 @@ layout: default
   </section>
   {% endif %}
 
-  {% if page.completed %}
+  {% if trip_started and trip_completed != true %}
+  <!-- Trip Started Banner -->
+  <section class="bg-primary-container text-on-primary-container border-y border-primary/20">
+    <div class="max-w-7xl mx-auto px-6 py-6 text-center">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <span class="material-symbols-outlined text-primary text-3xl">directions_bus</span>
+        <div>
+          <h4 class="text-xl font-black font-headline uppercase tracking-tight">Expedition Underway</h4>
+          <p class="font-medium opacity-90">This expedition has started. You can register your interest for the next one below.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if trip_completed %}
   <!-- Trip Completed Banner -->
   <section class="bg-secondary-container text-on-secondary-container border-y border-secondary/20">
     <div class="max-w-7xl mx-auto px-6 py-6 text-center">

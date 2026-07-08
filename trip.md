@@ -39,6 +39,7 @@ permalink: /trip/
           {% include trip-card.html trip=trip %}
         {% endfor %}
       </div>
+      {% include trip-contact.html variant="next_adventure" %}
     {% else %}
       <div class="text-center py-24 bg-surface-container-low rounded-3xl border border-dashed border-outline-variant">
         <span class="material-symbols-outlined text-6xl text-outline-variant mb-4">explore</span>

@@ -4,6 +4,8 @@ title: "Adventure Awaits at Uluru!"
 subtitle: "Join us for the ultimate outback adventure"
 description: "Join Bundoora Scouts for an unforgettable adventure to the heart of Australia, Uluru, in 2026."
 image: /uploads/hero/uluru.jpg
+start_date: 2026-06-28
+end_date: 2026-07-11
 author:
     - hamish
 categories:
@@ -31,6 +33,9 @@ itinerary:
   - image: "/uploads/2025-08-16-uluru-adventure-2026/curtin-springs.jpg"
     title: Curtin Springs
     description: "Our home base! Perfect location for day trips to Uluru and all the amazing activities we have planned."
+  - image: "/uploads/2025-08-16-uluru-adventure-2026/alice-springs.jpg"
+    title: Alice Springs
+    description: "Alice Spring Scout Group is our host for day trips to the MacDonnell Ranges and Ormiston Gorge"
 activities:
   - image: "/uploads/2025-08-16-uluru-adventure-2026/helicopter-tour.jpg"
     title: "🚁 Helicopter Tour"

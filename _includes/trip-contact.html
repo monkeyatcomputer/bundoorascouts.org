@@ -1,25 +1,52 @@
+{% assign contact_trip = include.trip | default: page %}
+{% assign current_date = "now" | date: "%Y-%m-%d" %}
+{% assign trip_started = false %}
+{% assign trip_completed = false %}
+{% if contact_trip.start_date %}
+  {% assign contact_start_date = contact_trip.start_date | date: "%Y-%m-%d" %}
+  {% if current_date >= contact_start_date %}
+    {% assign trip_started = true %}
+  {% endif %}
+{% endif %}
+{% if contact_trip.end_date %}
+  {% assign contact_end_date = contact_trip.end_date | date: "%Y-%m-%d" %}
+  {% if current_date > contact_end_date %}
+    {% assign trip_completed = true %}
+  {% endif %}
+{% endif %}
+{% if contact_trip.completed %}
+  {% assign trip_completed = true %}
+{% endif %}
+
+{% assign contact_heading = "Register your interest for this adventure" %}
+{% assign contact_description = "Send us your details and we will let you know what happens next." %}
+{% if include.variant == "next_adventure" %}
+  {% assign contact_heading = "Interested in joining the next adventure?" %}
+  {% assign contact_description = "Send us your details and we will keep you in mind when the next expedition is planned." %}
+{% elsif trip_completed %}
+  {% assign contact_heading = "Interested in joining the next adventure?" %}
+  {% assign contact_description = "Send us your details and we will keep you in mind when the next expedition is planned." %}
+{% elsif trip_started %}
+  {% assign contact_heading = "This expedition has started" %}
+  {% assign contact_description = "You can still register your interest and we will contact you about the next adventure." %}
+{% elsif contact_trip.trip_full_banner %}
+  {% assign contact_heading = "Join the waiting list" %}
+  {% assign contact_description = "Send us your details and we will contact you if a place opens up." %}
+{% endif %}
+
 <div class="mt-20 p-8 md:p-12 bg-surface-container-low rounded-3xl border border-outline-variant/10 shadow-ambient-lg">
   <div class="max-w-3xl mx-auto not-prose">
     <div class="text-center mb-10">
       <h3 class="font-headline text-3xl font-bold text-primary mb-4">
-        {% if page.trip_full_banner %}
-        Join the Waiting List
-        {% else %}
-        Interested in this Adventure?
-        {% endif %}
+        {{ contact_heading }}
       </h3>
       <p class="text-on-surface-variant text-lg">
-        {% if page.trip_full_banner %}
-        To be added to the cancellation list for this trip, simply fill in your details below and we will get in touch
-        if a spot becomes available.
-        {% else %}
-        For more information about our trip, simply fill in your details below and we will get in touch soon.
-        {% endif %}
+        {{ contact_description }}
       </p>
     </div>
 
     <form id="trip-contact-form" class="flex flex-col gap-6" action="{{ site.formspree_action }}" method="POST">
-      <input type="hidden" name="_subject" value="New inquiry for: {{ page.title }}">
+      <input type="hidden" name="_subject" value="New inquiry for: {{ contact_trip.title }}">
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div class="flex flex-col gap-2 sm:col-span-2">
