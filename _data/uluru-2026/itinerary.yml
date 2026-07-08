@@ -479,7 +479,6 @@ itinerary:
       label: Arrive Curtin Springs
       loc: [ -25.311207, 131.760597 ]
       group: ['Charlie']
-      detail: Order by 1 July.
     - date: '2026-07-08T14:00:00+09:30'
       type: activity
       label: Pack Down
@@ -488,15 +487,7 @@ itinerary:
     - date: '2026-07-08T18:30:00+09:30'
       type: dinner
       label: 'Dinner'
-      group: ['Romeo']
-    - date: '2026-07-08T18:30:00+09:30'
-      type: dinner
-      label: 'Dinner'
-      group: ['Charlie']
-    - date: '2026-07-08T18:30:00+09:30'
-      type: dinner
-      label: 'Dinner'
-      group: ['Mike']
+      loc: [ -25.311207, 131.760597 ]
 - day: 12
   title: The Long Drive South
   location: Coober Pedy
@@ -508,7 +499,7 @@ itinerary:
       loc: [ -25.311207, 131.760597 ]
     - date: '2026-07-09T12:30:00+09:30'
       type: lunch
-      label: Lunch Stop??
+      label: Lunch Stop
       dwell: 0.5
       loc: [ -27.29741, 133.62122 ]
     - date: '2026-07-09T18:00:00+09:30'
@@ -547,7 +538,6 @@ itinerary:
     - date: '2026-07-11T05:30:00+09:30'
       type: depart
       label: Depart 1st Gawler Hall
-      loc: [ -34.5890642, 138.7369905 ]
     - date: '2026-07-11T12:30:00+10:00'
       type: lunch
       label: Lunch Stop
