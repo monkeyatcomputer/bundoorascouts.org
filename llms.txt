@@ -1,4 +1,8 @@
+---
+layout: null
+---
 # Bundoora Scout Group
+_Generated: {{ site.time | date_to_rfc822 }}_
 
 Website: https://bundoorascouts.org/
 Purpose: Public website for Bundoora Scout Group in Bundoora, Victoria, Australia.
@@ -22,6 +26,11 @@ Contact: https://bundoorascouts.org/contact
 - Hall hire: https://bundoorascouts.org/about/hall-hire
 - Leaders: https://bundoorascouts.org/about/our-leaders
 - Campfire news: https://bundoorascouts.org/the-campfire/
+
+## All posts
+
+{% for post in site.posts %}- [{{ post.title }}](https://raw.githubusercontent.com/monkeyatcomputer/bundoorascouts.org/refs/heads/master/{{ post.path }})
+{% endfor %}
 
 ## Notes
 
