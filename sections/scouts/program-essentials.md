@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Scout Program Essentials"
 permalink: /sections/scouts/program-essentials
-description: "Program Essentials for the Scout section."
+description: "Learn about Scout Program Essentials, including introduction activities, Milestones, participation, and reflection."
 section_slug: scouts
 ap_page: program-essentials
 

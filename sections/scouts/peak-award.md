@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Australian Scout Award"
 permalink: /sections/scouts/peak-award
-description: "Information about the Australian Scout Award, the peak award for Scouts."
+description: "Explore the Australian Scout Award, the peak award for Scouts, and how it fits into personal progression."
 section_slug: scouts
 ap_page: peak-award
 

@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "King's Scout Award"
 permalink: /sections/venturers/peak-award
-description: "Information about the King's Scout Award, the peak award for Venturers."
+description: "Explore the King's Scout Award, the peak award for Venturer Scouts, and how it reflects leadership and growth."
 section_slug: venturers
 ap_page: peak-award
 

@@ -14,11 +14,11 @@
   <div class="w-40 h-40 rounded-full overflow-hidden mb-6 bg-surface-container-high shadow-sm flex-shrink-0">
     {% if is_author %}
       <a href="{{ p.url }}" class="w-full h-full">
-        <img src="/assets/images/people/{{ p.name | downcase }}.jpg" alt="{{ p.name }}" class="w-full h-full object-cover"
+        <img src="/assets/images/people/{{ p.name | downcase }}.jpg" alt="{{ p.name }}" width="320" height="320" loading="lazy" decoding="async" class="w-full h-full object-cover"
           onerror="this.src='/assets/images/people/nophoto.jpg'">
       </a>
     {% else %}
-      <img src="/assets/images/people/{{ p.name | downcase }}.jpg" alt="{{ p.name }}" class="w-full h-full object-cover"
+      <img src="/assets/images/people/{{ p.name | downcase }}.jpg" alt="{{ p.name }}" width="320" height="320" loading="lazy" decoding="async" class="w-full h-full object-cover"
         onerror="this.src='/assets/images/people/nophoto.jpg'">
     {% endif %}
   </div>

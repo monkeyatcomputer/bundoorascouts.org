@@ -8,7 +8,7 @@ description: "Explore all five Bundoora Scouts youth sections – from Joey Scou
 <!-- Hero Section -->
 <section class="hero-shell hero-shell--compact bg-primary-container">
   <div class="hero-media">
-    <img src="{{ page.image }}" 
+    <img src="/assets/images/hero-scouts.jpg" width="1600" height="900" loading="eager" fetchpriority="high"
          alt="Scouting discovery background" 
          class="w-full h-full object-cover opacity-40 mix-blend-multiply"/>
     <div class="hero-overlay"></div>

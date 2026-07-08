@@ -309,7 +309,7 @@ Each card shows: day number, location, title, image, and a timed events list.
         }
 
         var html = [
-          day.image ? '<div class="relative h-36 overflow-hidden"><img src="' + day.image + '" alt="' + day.title + '" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy"></div>' : '<div class="h-36 bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-4xl text-outline-variant">image_not_supported</span></div>',
+          day.image ? '<div class="relative h-36 overflow-hidden"><img src="' + day.image + '" alt="' + day.title + '" width="800" height="450" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async"></div>' : '<div class="h-36 bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-4xl text-outline-variant">image_not_supported</span></div>',
           '<div class="p-4">',
           '  <div class="flex items-center mb-1"><span class="text-[10px] font-black uppercase tracking-widest ' + badgeColour + '">Day ' + day.day + '</span>' + statusChip + '</div>',
           '  <div class="text-[10px] font-bold text-on-tertiary-container uppercase tracking-tight mb-1">' + day.location + '</div>',

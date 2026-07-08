@@ -1,0 +1,28 @@
+# Bundoora Scout Group
+
+Website: https://bundoorascouts.org/
+Purpose: Public website for Bundoora Scout Group in Bundoora, Victoria, Australia.
+Address: 20 Noorong Ave, Bundoora VIC 3083, Australia.
+Contact: https://bundoorascouts.org/contact
+
+## Key Pages
+
+- Home: https://bundoorascouts.org/
+- Contact and joining enquiries: https://bundoorascouts.org/contact
+- Sections overview: https://bundoorascouts.org/sections
+- Joey Scouts: https://bundoorascouts.org/sections/joeys
+- Cub Scouts: https://bundoorascouts.org/sections/cubs
+- Scouts: https://bundoorascouts.org/sections/scouts
+- Venturer Scouts: https://bundoorascouts.org/sections/venturers
+- Rover Scouts: https://bundoorascouts.org/sections/rovers
+- Adult volunteers: https://bundoorascouts.org/sections/adult
+- About Scouting: https://bundoorascouts.org/scouting
+- Costs and uniform: https://bundoorascouts.org/scouting/costs-and-uniform
+- Child safety: https://bundoorascouts.org/scouting/child-safety
+- Hall hire: https://bundoorascouts.org/about/hall-hire
+- Leaders: https://bundoorascouts.org/about/our-leaders
+- Campfire news: https://bundoorascouts.org/the-campfire/
+
+## Notes
+
+Bundoora Scout Group is a local Scout group run by volunteers. The site provides practical information for families, youth members, leaders, volunteers, hall hire visitors, sponsors, and the local community.

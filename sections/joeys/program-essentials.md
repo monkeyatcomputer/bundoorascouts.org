@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Joey Scout Program Essentials"
 permalink: /sections/joeys/program-essentials
-description: "Program Essentials for the Joey Scout section."
+description: "Learn about Joey Scout Program Essentials, including introduction activities, Milestones, participation, and reflection."
 section_slug: joeys
 ap_page: program-essentials
 

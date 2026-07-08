@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Rover Scout Milestones"
 permalink: /sections/rovers/milestones
-description: "Information about the Milestones in the Rover section."
+description: "Learn how Rover Scout Milestones recognise participation, assisting, leading, and reflection in the regular program."
 section_slug: rovers
 ap_page: milestones
 

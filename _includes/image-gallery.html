@@ -121,7 +121,7 @@ file.extname == '.jpeg' or file.extname == '.JPEG' or file.extname == '.webp' or
         <a href="{{ image.path }}" class="gallery-thumb-link block w-full h-full"
           data-src="{{ image.path }}" onclick="openLightbox('{{ image.path }}', '{{ gallery_id }}'); return false;">
           <img src="{{ image.path }}" alt="{{ image_name | capitalize }}"
-            loading="lazy" decoding="async"
+            width="600" height="600" loading="lazy" decoding="async"
             class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110">
         </a>
       </div>
@@ -150,7 +150,7 @@ file.extname == '.jpeg' or file.extname == '.JPEG' or file.extname == '.webp' or
     <span class="material-symbols-outlined text-4xl">chevron_right</span>
   </button>
   <div class="relative w-full h-full flex items-center justify-center pointer-events-none">
-    <img id="lightbox-img" src="" alt="Lightbox image"
+    <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Expanded gallery image"
       class="max-w-full max-h-[85vh] md:max-h-[90vh] rounded-2xl shadow-2xl object-contain select-none pointer-events-auto transition-transform duration-300">
   </div>
 </div>

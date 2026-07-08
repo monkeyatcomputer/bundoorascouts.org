@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Cub Scout Milestones"
 permalink: /sections/cubs/milestones
-description: "Information about the Milestones in the Cub Scout section."
+description: "Learn how Cub Scout Milestones recognise participation, assisting, leading, and reflection in the regular program."
 section_slug: cubs
 ap_page: milestones
 

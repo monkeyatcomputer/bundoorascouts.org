@@ -11,3 +11,6 @@ vendor/
 node_modules/
 .DS_Store
 artifacts/
+.seo-cache/
+ACTION-PLAN.md
+FULL-AUDIT-REPORT.md

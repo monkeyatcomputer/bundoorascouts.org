@@ -7,7 +7,7 @@
   <!-- Thumbnail Container -->
   <div class="lg:w-3/5 aspect-video lg:aspect-auto overflow-hidden relative">
     {% if p.image %}
-    <img src="{{ p.image }}" alt="{{ p.title }}"
+    <img src="{{ p.image }}" alt="{{ p.title }}" width="1200" height="675" loading="lazy" decoding="async"
       class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
     {% else %}
     <div class="w-full h-full bg-primary/10 flex flex-col items-center justify-center text-primary/40">
@@ -49,11 +49,11 @@
           class="hidden sm:flex w-10 h-10 rounded-full overflow-hidden border border-outline-variant/20 items-center justify-center bg-surface-container-high">
           {% if person and author_slug != "group" %}
             <a href="{{ person.url }}" class="w-full h-full">
-              <img src="/assets/images/people/{{ author_slug }}.jpg" alt="{{ person.name }}"
+              <img src="/assets/images/people/{{ author_slug }}.jpg" alt="{{ person.name }}" width="80" height="80" loading="lazy" decoding="async"
                 class="w-full h-full object-cover" onerror="this.src='/assets/images/logo.png'">
             </a>
           {% else %}
-          <img src="/assets/images/logo.png" alt="Bundoora Scouts" class="w-full h-full object-cover">
+          <img src="/assets/images/logo.png" alt="Bundoora Scouts" width="80" height="80" loading="lazy" decoding="async" class="w-full h-full object-cover">
           {% endif %}
         </div>
         <span class="text-[10px] sm:text-sm font-black text-primary capitalize">

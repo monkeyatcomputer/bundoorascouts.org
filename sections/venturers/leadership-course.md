@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Venturer Scout Leadership Course"
 permalink: /sections/venturers/leadership-course
+description: "Find out how Venturer Scouts develop leadership through courses, planning, mentoring, and self-directed challenges."
 section_slug: venturers
 ap_page: leadership-course
 

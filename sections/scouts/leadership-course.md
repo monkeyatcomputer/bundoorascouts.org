@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Scout Leadership Course"
 permalink: /sections/scouts/leadership-course
+description: "Find out how Scouts develop leadership skills through courses, patrol roles, planning, and reflection."
 section_slug: scouts
 ap_page: leadership-course
 

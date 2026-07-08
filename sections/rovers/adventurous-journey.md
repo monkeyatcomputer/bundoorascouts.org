@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Rover Scout Adventurous Journey"
 permalink: /sections/rovers/adventurous-journey
+description: "Learn how Rover Scouts plan and complete Adventurous Journeys as part of their personal progression."
 section_slug: rovers
 ap_page: adventurous-journey
 source_url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/"

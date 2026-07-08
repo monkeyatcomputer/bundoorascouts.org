@@ -7,7 +7,7 @@
     <!-- Thumbnail Container -->
     <div class="lg:w-3/5 aspect-video lg:aspect-auto overflow-hidden relative">
       {% if t.image %}
-      <img src="{{ t.image }}" alt="{{ t.title }}"
+      <img src="{{ t.image }}" alt="{{ t.title }}" width="800" height="450" loading="lazy" decoding="async"
         class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
       {% else %}
       <div class="w-full h-full bg-primary/10 flex flex-col items-center justify-center text-primary/40">

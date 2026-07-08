@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Venturer Scout Program Essentials"
 permalink: /sections/venturers/program-essentials
-description: "Program Essentials for the Venturer Scout section."
+description: "Learn about Venturer Scout Program Essentials, including introduction activities, Milestones, participation, and reflection."
 section_slug: venturers
 ap_page: program-essentials
 

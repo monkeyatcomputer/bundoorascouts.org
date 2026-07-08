@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Cub Scout Personal Reflection"
 permalink: /sections/cubs/personal-reflection
+description: "Understand how Cub Scouts use Personal Reflection to think about their learning, effort, and growth."
 section_slug: cubs
 ap_page: personal-reflection
 

@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Grey Wolf Award"
 permalink: /sections/cubs/peak-award
-description: "Information about the Grey Wolf Award, the peak award for Cub Scouts."
+description: "Explore the Grey Wolf Award, the peak award for Cub Scouts, and how it connects to the Achievement Pathway."
 section_slug: cubs
 ap_page: peak-award
 

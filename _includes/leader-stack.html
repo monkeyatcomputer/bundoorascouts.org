@@ -13,12 +13,14 @@
           <a href="{{ leader.url }}" class="w-full h-full">
             <img src="{{ '/assets/images/people/' | append: leader.name | downcase | append: '.jpg' | relative_url }}" 
                  alt="{{ leader.name }}" 
+                 width="96" height="96" loading="lazy" decoding="async"
                  class="w-full h-full object-cover" 
                  onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'material-symbols-outlined text-primary/20 flex items-center justify-center h-full\'>person</span>'">
           </a>
         {% else %}
           <img src="{{ '/assets/images/people/' | append: leader.name | downcase | append: '.jpg' | relative_url }}" 
                alt="{{ leader.name }}" 
+               width="96" height="96" loading="lazy" decoding="async"
                class="w-full h-full object-cover" 
                onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'material-symbols-outlined text-primary/20 flex items-center justify-center h-full\'>person</span>'">
         {% endif %}

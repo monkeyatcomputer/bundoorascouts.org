@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Scout Personal Reflection"
 permalink: /sections/scouts/personal-reflection
+description: "Understand how Scouts use Personal Reflection to review progress, leadership, teamwork, and personal growth."
 section_slug: scouts
 ap_page: personal-reflection
 

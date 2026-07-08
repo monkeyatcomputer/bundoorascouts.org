@@ -22,7 +22,7 @@ layout: default
     class="relative w-full min-h-[600px] flex items-center bg-primary-container overflow-hidden shadow-ambient-lg">
     <div class="absolute inset-0 z-0">
       {% if page.image %}
-      <img src="{{ page.image }}" alt="{{ page.title }}"
+      <img src="{{ page.image }}" alt="{{ page.title }}" width="1600" height="900" loading="eager" fetchpriority="high"
         class="w-full h-full object-cover opacity-60 mix-blend-multiply" />
       {% else %}
       <div class="w-full h-full"
@@ -60,7 +60,7 @@ layout: default
               class="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center bg-white/10 overflow-hidden">
               {% if person %}
               <a href="{{ person.url }}" class="w-full h-full">
-                <img src="{{ avatar_src }}" alt="{{ author_name }}" class="w-full h-full object-cover"
+                <img src="{{ avatar_src }}" alt="{{ author_name }}" width="80" height="80" loading="lazy" decoding="async" class="w-full h-full object-cover"
                   onerror="this.src='/assets/images/logo.png'">
               </a>
               {% else %}
@@ -209,7 +209,7 @@ layout: default
         <div
           class="group bg-surface-container-low rounded-3xl overflow-hidden border border-outline-variant/10 hover:shadow-ambient-xl transition-all duration-500 hover:-translate-y-2">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="{{ item.image }}" alt="{{ item.title }}"
+            <img src="{{ item.image }}" alt="{{ item.title }}" width="800" height="450" loading="lazy" decoding="async"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
           </div>
           <div class="p-8">
@@ -235,7 +235,7 @@ layout: default
         <div
           class="flex gap-6 p-6 bg-surface-container-lowest rounded-3xl border border-outline-variant/5 shadow-sm items-center">
           <div class="w-20 h-20 rounded-2xl overflow-hidden shrink-0 shadow-md">
-            <img src="{{ item.image }}" alt="{{ item.title }}" class="w-full h-full object-cover">
+            <img src="{{ item.image }}" alt="{{ item.title }}" width="800" height="450" loading="lazy" decoding="async" class="w-full h-full object-cover">
           </div>
           <div>
             <h3 class="font-headline text-lg font-bold text-primary mb-1">{{ item.title }}</h3>
@@ -264,7 +264,7 @@ layout: default
             <div
               class="w-24 h-24 rounded-full bg-white shadow-ambient-md border border-outline-variant/10 flex items-center justify-center overflow-hidden mb-4 group-hover/item:scale-110 transition-transform duration-300">
               {% if group.image %}
-              <img src="{{ group.image }}" alt="{{ group.name }}" class="w-16 h-16 object-contain">
+              <img src="{{ group.image }}" alt="{{ group.name }}" width="64" height="64" loading="lazy" decoding="async" class="w-16 h-16 object-contain">
               {% else %}
               <span class="text-2xl font-black text-primary">{{ group.initials }}</span>
               {% endif %}

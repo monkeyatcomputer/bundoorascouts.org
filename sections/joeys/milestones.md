@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Joey Scout Milestones"
 permalink: /sections/joeys/milestones
-description: "Information about the Milestones in the Joey Scout section."
+description: "Learn how Joey Scout Milestones recognise participation, assisting, leading, and reflection in the regular program."
 section_slug: joeys
 ap_page: milestones
 

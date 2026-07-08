@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Scout Adventurous Journey"
 permalink: /sections/scouts/adventurous-journey
+description: "Learn how Scouts plan and complete Adventurous Journeys as part of the Achievement Pathway."
 section_slug: scouts
 ap_page: adventurous-journey
 source_url: "https://scoutsvictoria.com.au/age-sections-adults/scouts/scout-program/scout-adventurous-journey/"

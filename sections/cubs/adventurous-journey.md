@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Cub Scout Adventurous Journey"
 permalink: /sections/cubs/adventurous-journey
+description: "Learn how Adventurous Journey experiences fit into the Cub Scout Achievement Pathway at Bundoora Scouts."
 section_slug: cubs
 ap_page: adventurous-journey
 source_url: "https://scoutsvictoria.com.au/age-sections-adults/cub-scouts/cub-scout-program/"

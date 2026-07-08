@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Rover Scout Leadership Course"
 permalink: /sections/rovers/leadership-course
+description: "Find out how Rover Scouts build leadership capability through courses, service, planning, and reflection."
 section_slug: rovers
 ap_page: leadership-course
 

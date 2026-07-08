@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Venturer Scout Adventurous Journey"
 permalink: /sections/venturers/adventurous-journey
+description: "Learn how Venturer Scouts plan and complete Adventurous Journeys that build independence and expedition skills."
 section_slug: venturers
 ap_page: adventurous-journey
 source_url: "https://scoutsvictoria.com.au/age-sections-adults/venturers/the-venturer-program/"

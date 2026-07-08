@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Venturer Scout Personal Reflection"
 permalink: /sections/venturers/personal-reflection
+description: "Understand how Venturer Scouts use Personal Reflection to review goals, leadership, service, and personal growth."
 section_slug: venturers
 ap_page: personal-reflection
 

@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Cub Scout Program Essentials"
 permalink: /sections/cubs/program-essentials
-description: "Program Essentials for the Cub Scout section."
+description: "Learn about Cub Scout Program Essentials, including introduction activities, Milestones, participation, and reflection."
 section_slug: cubs
 ap_page: program-essentials
 

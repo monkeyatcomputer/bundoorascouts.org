@@ -5,7 +5,7 @@ layout: default
 <section class="hero-shell hero-shell--compact bg-primary-container">
   <div class="hero-media">
     {% if page.image %}
-    <img src="{{ page.image }}" alt="Campfire background"
+    <img src="{{ page.image }}" alt="Campfire background" width="1600" height="900" loading="eager" fetchpriority="high"
       class="w-full h-full object-cover opacity-40 mix-blend-multiply" />
     {% else %}
     <div class="w-full h-full"

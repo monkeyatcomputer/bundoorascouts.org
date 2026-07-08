@@ -16,7 +16,7 @@
               <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden shadow-ambient-md group hover:shadow-ambient-lg transition-all duration-300 transform-gpu opacity-0 intro-gallery-item">
                 <img src="{{ item.image | relative_url }}" 
                      alt="{{ item.alt }}" 
-                     loading="lazy"
+                     width="600" height="800" loading="lazy" decoding="async"
                      class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"/>
               </div>
             {% endfor %}
@@ -50,7 +50,7 @@
           </script>
         {% else %}
           <div class="aspect-square rounded-3xl overflow-hidden shadow-ambient-lg {{ include.rotation | default: 'rotate-2' }} group hover:rotate-0 transition-transform duration-500">
-            <img src="{{ s.logo-light | relative_url }}" class="w-full h-full object-contain p-12 bg-surface-container-low" alt="{{ s.name }} Logo"/>
+            <img src="{{ s.logo-light | relative_url }}" width="512" height="512" loading="lazy" decoding="async" class="w-full h-full object-contain p-12 bg-surface-container-low" alt="{{ s.name }} Logo"/>
           </div>
         {% endif %}
       </div>

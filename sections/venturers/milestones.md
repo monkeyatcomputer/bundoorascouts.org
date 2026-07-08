@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Venturer Scout Milestones"
 permalink: /sections/venturers/milestones
-description: "Information about the Milestones in the Venturer section."
+description: "Learn how Venturer Scout Milestones recognise participation, assisting, leading, and reflection in the regular program."
 section_slug: venturers
 ap_page: milestones
 

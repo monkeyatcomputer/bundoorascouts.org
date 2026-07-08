@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Rover Scout Personal Reflection"
 permalink: /sections/rovers/personal-reflection
+description: "Understand how Rover Scouts use Personal Reflection to review goals, service, leadership, and personal growth."
 section_slug: rovers
 ap_page: personal-reflection
 

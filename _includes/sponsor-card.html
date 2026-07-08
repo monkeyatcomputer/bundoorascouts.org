@@ -14,7 +14,7 @@
     <div
       class="h-40 mb-8 bg-surface-container-lowest flex items-center justify-center p-8 shadow-inner border border-outline-variant/5 group-hover:border-secondary/20 transition-colors">
       {% if s.logo %}
-      <img src="/assets/images/sponsors/{{ s.logo }}" alt="{{ s.name }}"
+      <img src="/assets/images/sponsors/{{ s.logo }}" alt="{{ s.name }}" width="320" height="160" loading="lazy" decoding="async"
         class="max-h-full max-w-full object-contain transition-all duration-700 transform group-hover:scale-105 !rounded-none !shadow-none">
       {% else %}
       <div class="flex flex-col items-center gap-2 opacity-20 group-hover:opacity-40 transition-opacity">

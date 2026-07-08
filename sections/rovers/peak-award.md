@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Baden-Powell Scout Award"
 permalink: /sections/rovers/peak-award
-description: "Information about the Baden-Powell Scout Award, the peak award for Rovers."
+description: "Explore the Baden-Powell Scout Award, the peak award for Rover Scouts, and how it recognises service and growth."
 section_slug: rovers
 ap_page: peak-award
 

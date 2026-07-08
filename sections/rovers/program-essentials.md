@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Rover Scout Program Essentials"
 permalink: /sections/rovers/program-essentials
-description: "Program Essentials for the Rover Scout section."
+description: "Learn about Rover Scout Program Essentials, including introduction activities, Milestones, participation, and reflection."
 section_slug: rovers
 ap_page: program-essentials
 

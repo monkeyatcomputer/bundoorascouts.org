@@ -2,6 +2,7 @@
 layout: achievement-pathway
 title: "Cub Scout Leadership Course"
 permalink: /sections/cubs/leadership-course
+description: "Find out how Cub Scouts begin building practical leadership skills through the Achievement Pathway."
 section_slug: cubs
 ap_page: leadership-course
 

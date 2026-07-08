@@ -2,7 +2,7 @@
 layout: achievement-pathway
 title: "Joey Scout Challenge Award"
 permalink: /sections/joeys/peak-award
-description: "Information about the Joey Scout Challenge Award, the peak award for Joey Scouts."
+description: "Explore the Joey Scout Challenge Award, the peak award for Joey Scouts, and how youth work toward it."
 section_slug: joeys
 ap_page: peak-award
 

@@ -10,7 +10,7 @@ layout: default
 <section class="hero-shell hero-shell--compact bg-surface-container-low">
   <div class="hero-media">
     {% if page.image %}
-    <img src="{{ page.image }}" alt="{{ page.title }} scouts in action"
+    <img src="{{ page.image }}" alt="{{ page.title }} scouts in action" width="1600" height="900" loading="eager" fetchpriority="high"
       class="w-full h-full object-cover opacity-80 mix-blend-multiply" />
     {% else %}
     <div class="w-full h-full"
@@ -24,7 +24,7 @@ layout: default
     <div class="hero-copy max-w-2xl">
       {% if section.logo-dark %}
       <div class="mb-8 hidden lg:block">
-        <img src="{{ section.logo-dark }}" alt="{{ page.title }} Logo"
+        <img src="{{ section.logo-dark }}" alt="{{ page.title }} Logo" width="320" height="320" loading="eager"
           class="h-32 md:h-40 w-auto filter drop-shadow-lg" />
       </div>
       {% endif %}
