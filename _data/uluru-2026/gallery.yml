@@ -1,5 +1,9 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260708_1.jpg"
+  alt: Sunrise over Alice Springs from the hill behind the Alice Springs Scout Group grounds
+  caption: Alice Springs sunrise from the Scout grounds
+  span: wide
 - image: "/uploads/trip/uluru-2026/20260707_8.jpg"
   alt: Short-beaked echidna seen under red light during nighttime spotlighting near Alice Springs
   caption: Spotlighting near Alice Springs
