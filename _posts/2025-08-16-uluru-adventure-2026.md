@@ -15,8 +15,6 @@ tags:
     - Camp
     - Uluru 2026
     - Expedition
-redirect_from:
-    - /the-campfire/uluru-adventure-2026
 trip_details:
   dates: "28th June &mdash; 11th July 2026"
   cost: "$1900 per scout"
