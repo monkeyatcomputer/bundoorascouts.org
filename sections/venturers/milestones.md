@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Milestones"
+title: "Venturer Scout Milestones"
 permalink: /sections/venturers/milestones
 description: "Information about the Milestones in the Venturer section."
 section_slug: venturers

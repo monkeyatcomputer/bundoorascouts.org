@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Leadership Course"
+title: "Cub Scout Leadership Course"
 permalink: /sections/cubs/leadership-course
 section_slug: cubs
 ap_page: leadership-course

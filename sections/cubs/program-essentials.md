@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Program Essentials"
+title: "Cub Scout Program Essentials"
 permalink: /sections/cubs/program-essentials
 description: "Program Essentials for the Cub Scout section."
 section_slug: cubs

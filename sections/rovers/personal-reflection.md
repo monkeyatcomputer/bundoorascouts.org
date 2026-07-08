@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Personal Reflection"
+title: "Rover Scout Personal Reflection"
 permalink: /sections/rovers/personal-reflection
 section_slug: rovers
 ap_page: personal-reflection

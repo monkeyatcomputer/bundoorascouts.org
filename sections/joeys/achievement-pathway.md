@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Achievement Pathway"
+title: "Joey Scout Achievement Pathway"
 permalink: /sections/joeys/achievement-pathway
 description: "Follow the path up the mountain – the Achievement Pathway is your personal progression through the Joey Scout program."
 section_slug: joeys

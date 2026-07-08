@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Personal Reflection"
+title: "Venturer Scout Personal Reflection"
 permalink: /sections/venturers/personal-reflection
 section_slug: venturers
 ap_page: personal-reflection

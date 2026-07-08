@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Adventurous Journey"
+title: "Cub Scout Adventurous Journey"
 permalink: /sections/cubs/adventurous-journey
 section_slug: cubs
 ap_page: adventurous-journey

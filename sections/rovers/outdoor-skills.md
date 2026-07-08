@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Outdoor Adventure Skills"
+title: "Rover Scout Outdoor Adventure Skills"
 permalink: /sections/rovers/outdoor-skills
 section_slug: rovers
 ap_page: outdoor-skills

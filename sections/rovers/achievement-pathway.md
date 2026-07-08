@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Achievement Pathway"
+title: "Rover Scout Achievement Pathway"
 permalink: /sections/rovers/achievement-pathway
 description: "Follow the path up the mountain – the Achievement Pathway is your personal progression through the Rover program."
 section_slug: rovers

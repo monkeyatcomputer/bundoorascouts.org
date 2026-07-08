@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Leadership Course"
+title: "Venturer Scout Leadership Course"
 permalink: /sections/venturers/leadership-course
 section_slug: venturers
 ap_page: leadership-course

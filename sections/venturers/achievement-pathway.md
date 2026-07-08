@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Achievement Pathway"
+title: "Venturer Scout Achievement Pathway"
 permalink: /sections/venturers/achievement-pathway
 description: "Follow the path up the mountain – the Achievement Pathway is your personal progression through the Venturer Scout program."
 section_slug: venturers

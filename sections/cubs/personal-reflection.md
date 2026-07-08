@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Personal Reflection"
+title: "Cub Scout Personal Reflection"
 permalink: /sections/cubs/personal-reflection
 section_slug: cubs
 ap_page: personal-reflection

@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Milestones"
+title: "Scout Milestones"
 permalink: /sections/scouts/milestones
 description: "Information about the Milestones in the Scout section."
 section_slug: scouts

@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Special Interest Areas"
+title: "Rover Scout Special Interest Areas"
 permalink: /sections/rovers/special-interests
 section_slug: rovers
 ap_page: special-interests

@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Achievement Pathway"
+title: "Scout Achievement Pathway"
 permalink: /sections/scouts/achievement-pathway
 description: "Follow the path up the mountain – the Achievement Pathway is your personal progression through the Scout program."
 section_slug: scouts

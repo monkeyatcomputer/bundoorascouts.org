@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Program Essentials"
+title: "Venturer Scout Program Essentials"
 permalink: /sections/venturers/program-essentials
 description: "Program Essentials for the Venturer Scout section."
 section_slug: venturers

@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Outdoor Adventure Skills"
+title: "Venturer Scout Outdoor Adventure Skills"
 permalink: /sections/venturers/outdoor-skills
 section_slug: venturers
 ap_page: outdoor-skills

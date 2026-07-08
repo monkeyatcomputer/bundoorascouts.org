@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Leadership Course"
+title: "Rover Scout Leadership Course"
 permalink: /sections/rovers/leadership-course
 section_slug: rovers
 ap_page: leadership-course

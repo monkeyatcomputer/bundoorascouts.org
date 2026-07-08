@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Special Interest Areas"
+title: "Joey Scout Special Interest Areas"
 permalink: /sections/joeys/special-interests
 section_slug: joeys
 ap_page: special-interests

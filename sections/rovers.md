@@ -1,6 +1,6 @@
 ---
 layout: section
-title: "Handfield Rover Unit"
+title: "Rover Scouts"
 permalink: /sections/rovers
 description: "Service, adventure, and fellowship. Rovers are self-governing young adults (18-25) who create their own adventures and give back to the community."
 tagline: "Service, adventure, fellowship."

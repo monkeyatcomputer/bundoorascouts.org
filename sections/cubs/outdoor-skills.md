@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Outdoor Adventure Skills"
+title: "Cub Scout Outdoor Adventure Skills"
 permalink: /sections/cubs/outdoor-skills
 section_slug: cubs
 ap_page: outdoor-skills

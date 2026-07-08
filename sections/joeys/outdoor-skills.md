@@ -1,6 +1,6 @@
 ---
 layout: achievement-pathway
-title: "Outdoor Adventure Skills"
+title: "Joey Scout Outdoor Adventure Skills"
 permalink: /sections/joeys/outdoor-skills
 section_slug: joeys
 ap_page: outdoor-skills
