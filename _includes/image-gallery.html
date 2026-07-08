@@ -112,19 +112,20 @@ file.extname == '.jpeg' or file.extname == '.JPEG' or file.extname == '.webp' or
 
 {% assign gallery_id = gallery_folder | slugify | default: "default-gallery" %}
 {% if gallery_images.size > 0 %}
-<section class="my-8" id="{{ gallery_id }}">
+<section class="my-8 not-prose" id="{{ gallery_id }}" aria-label="Image gallery">
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     {% for image in gallery_images %}
-    <div class="group relative" data-gsap="reveal" data-delay="{{ forloop.index0 | modulo: 4 | times: 0.1 }}">
+    {% assign image_name = image.basename | replace: '-', ' ' | replace: '_', ' ' %}
+    <figure class="group relative m-0" data-gsap="reveal" data-delay="{{ forloop.index0 | modulo: 4 | times: 0.1 }}">
       <div class="aspect-square overflow-hidden rounded-2xl cursor-zoom-in isolate transform-gpu">
-        <a href="javascript:void(0)" class="gallery-thumb-link block w-full h-full"
-          data-src="{{ image.path }}" onclick="openLightbox('{{ image.path }}', '{{ gallery_id }}')">
-          <div class="w-full h-full bg-cover bg-center transition-all duration-500 ease-in-out group-hover:scale-110"
-            style="background-image: url('{{ image.path }}');" role="img" aria-label="Gallery image">
-          </div>
+        <a href="{{ image.path }}" class="gallery-thumb-link block w-full h-full"
+          data-src="{{ image.path }}" onclick="openLightbox('{{ image.path }}', '{{ gallery_id }}'); return false;">
+          <img src="{{ image.path }}" alt="{{ image_name | capitalize }}"
+            loading="lazy" decoding="async"
+            class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110">
         </a>
       </div>
-    </div>
+    </figure>
     {% endfor %}
   </div>
 </section>

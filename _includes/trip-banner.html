@@ -85,15 +85,11 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
     </div>
 
     <!-- Right: Action Button -->
-    <div class="w-full lg:w-auto flex justify-center items-center gap-2 lg:gap-4">
+    <div class="w-full lg:w-auto flex justify-center items-center gap-2 lg:gap-3">
       <a id="trip-banner-link" href="{{ trip_page.url }}"
-        class="group/btn relative overflow-hidden bg-white text-primary px-4 py-2 lg:px-8 lg:py-4 rounded-lg lg:rounded-2xl font-black text-sm lg:text-lg hover:scale-105 transition-all duration-300 shadow-xl flex items-center gap-2 lg:gap-3">
-        <span class="relative z-10" id="trip-banner-btn-text">Track Trip</span>
-        <span
-          class="material-symbols-outlined relative z-10 transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-secondary/10 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity">
-        </div>
+        class="btn group/btn min-w-40 whitespace-nowrap bg-white text-primary shadow-xl hover:bg-secondary-fixed">
+        <span id="trip-banner-btn-text">Track Trip</span>
+        <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
       </a>
 
       <!-- Close Button -->

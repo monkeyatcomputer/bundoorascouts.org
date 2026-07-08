@@ -1,13 +1,21 @@
 {% assign video_id = include.id | default: include.code %}
 {% if video_id %}
-<div class="my-8 rounded-xl overflow-hidden aspect-video shadow-[0_40px_60px_rgba(16,14,76,0.08)]">
-  <iframe
-    src="https://www.youtube.com/embed/{{ video_id }}"
-    title="{{ include.title | default: 'YouTube video' }}"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    class="w-full h-full">
-  </iframe>
-</div>
+{% assign video_title = include.title | default: 'YouTube video' %}
+<figure class="my-8">
+  <div class="rounded-xl overflow-hidden aspect-video shadow-[0_40px_60px_rgba(16,14,76,0.08)]">
+    <iframe
+      src="https://www.youtube.com/embed/{{ video_id }}"
+      title="{{ video_title }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      class="w-full h-full">
+    </iframe>
+  </div>
+  <figcaption class="mt-3 text-sm text-on-surface-variant">
+    <a href="https://www.youtube.com/watch?v={{ video_id }}" class="font-bold text-secondary">
+      Watch {{ video_title }} on YouTube
+    </a>
+  </figcaption>
+</figure>
 {% endif %}
