@@ -8,7 +8,7 @@ ap_page: peak-award
 
 peak_award:
   source_url: "https://scoutsvictoria.com.au/age-sections-adults/rovers/rover-program/"
-  name: "The Baden-Powell Scout Award"
+  name: "Baden-Powell Scout Award"
   image: "/assets/images/sections/peak-award-rovers.svg"
   subtitle: "The highest achievement in the Rover section."
   summary: "To earn the Baden-Powell Scout Award, a Rover must complete a series of challenges that demonstrate their dedication, leadership, and commitment to personal growth."

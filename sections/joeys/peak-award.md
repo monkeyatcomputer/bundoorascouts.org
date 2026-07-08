@@ -8,7 +8,7 @@ ap_page: peak-award
 
 peak_award:
   source_url: "https://scoutsvictoria.com.au/age-sections-adults/joey-scouts/joey-scout-program/"
-  name: "The Joey Scout Challenge Award"
+  name: "Joey Scout Challenge Award"
   image: "/assets/images/sections/peak-award-joeys.svg"
   subtitle: "The highest achievement in the Joey Scout section."
   summary: "To earn the Joey Scout Challenge Award, a Joey Scout must complete a series of challenges that demonstrate their dedication, leadership, and commitment to personal growth."

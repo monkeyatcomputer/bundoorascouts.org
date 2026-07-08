@@ -1,10 +1,15 @@
 {% assign section = include.section %}
 {% assign accent = section.colour | default: "#3f5e94" %}
+{% assign active_item = site.data.achievement_pathway_nav | where: "ap_page", page.ap_page | first %}
+{% assign hero_title = page.display_title | default: active_item.name | default: page.title %}
+{% if page.ap_page == "peak-award" and page.peak_award.name %}
+  {% assign hero_title = page.display_title | default: page.peak_award.name %}
+{% endif %}
 
 <section class="relative w-full min-h-[500px] flex items-center bg-primary-container overflow-hidden shadow-ambient-lg">
   <div class="absolute inset-x-0 bottom-0 top-20 z-0">
     <!-- SVG Background requested by user -->
-    <img src="/assets/images/sections/mountain-horiz.svg" alt="{{ page.title }}"
+    <img src="/assets/images/sections/mountain-horiz.svg" alt="{{ hero_title }}"
       class="w-full h-full object-cover object-top opacity-40 mix-blend-multiply" />
     <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>
   </div>
@@ -18,7 +23,7 @@
       </span>
 
       <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-6 leading-tight tracking-tight">
-        {% assign title_words = page.title | split: " " %}
+        {% assign title_words = hero_title | split: " " %}
         {% for word in title_words %}
         {% if forloop.last %}
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">{{ word

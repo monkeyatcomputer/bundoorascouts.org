@@ -8,7 +8,7 @@ ap_page: peak-award
 
 peak_award:
   source_url: "https://scoutsvictoria.com.au/age-sections-adults/scouts/scout-program/"
-  name: "The Australian Scout Award"
+  name: "Australian Scout Award"
   image: "/assets/images/sections/peak-award-scouts.svg"
   subtitle: "The highest achievement in the Scout section."
   summary: "To earn the Australian Scout Award, a Scout must complete a series of challenges that demonstrate their dedication, leadership, and commitment to personal growth."

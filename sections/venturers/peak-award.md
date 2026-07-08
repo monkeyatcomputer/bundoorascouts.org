@@ -8,7 +8,7 @@ ap_page: peak-award
 
 peak_award:
   source_url: "https://scoutsvictoria.com.au/age-sections-adults/venturers/the-venturer-program/"
-  name: "The King's Scout Award"
+  name: "King's Scout Award"
   image: "/assets/images/sections/peak-award-venturers.svg"
   subtitle: "The highest achievement in the Venturer section."
   summary: "To earn the King's Scout Award, a Venturer must complete a series of challenges that demonstrate their dedication, leadership, and commitment to personal growth."
