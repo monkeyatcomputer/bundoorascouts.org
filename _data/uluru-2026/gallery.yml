@@ -1,5 +1,13 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260709_1.jpg"
+  alt: Uluru expedition convoy lined up with headlights on in foggy conditions before leaving Coober Pedy
+  caption: Leaving Coober Pedy for the road home
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260709_2.jpg"
+  alt: Entrance to an underground dugout building in Coober Pedy cut into the red and white rock
+  caption: Coober Pedy dugout entrance
+  span: normal
 - image: "/uploads/trip/uluru-2026/20260708_1.jpg"
   alt: Sunrise over Alice Springs from the hill behind the Alice Springs Scout Group grounds
   caption: Alice Springs sunrise from the Scout grounds
