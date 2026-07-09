@@ -507,6 +507,11 @@
     background: var(--color-surface-container-highest);
   }
 
+  .grecaptcha-badge {
+    transform: scale(0.88) !important;
+    transform-origin: bottom right !important;
+  }
+
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     font-size: 1.5rem;
@@ -934,3 +939,10 @@
   }
 }
 
+@media (max-width: 480px) {
+  @layer components {
+    .grecaptcha-badge {
+      transform: scale(0.77) !important;
+    }
+  }
+}
