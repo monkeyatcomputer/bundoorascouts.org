@@ -8,7 +8,7 @@ description: "Bundoora Scouts has been empowering young people in Melbourne's no
 
 ## Our Story
 
-Bundoora Scout Group has been part of the local community for over 50 years. We're a volunteer-run group operating under [Scouts Victoria](https://scoutsvictoria.com.au), proudly located in Melbourne's northern suburbs.
+Bundoora Scout Group has been part of the local community for over 50 years. We're a volunteer-run group operating under [Scouts Victoria](https://scoutsvictoria.com.au), proudly located in Melbourne's northern suburbs. Our group is part of the [Banyule District](https://www.banyulescouts.org.au/), in the Plenty Valley Region within the [Victorian Branch](https://scoutsvictoria.com.au/) of the [Scout Association of Australia](https://scouts.com.au/).
 
 From the earliest campfires in the 1960s to today's multi-day expeditions and community projects, we've been committed to one thing: **helping young people grow**.
 
