@@ -1,5 +1,21 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260710_4.jpg"
+  alt: Open highway through red dirt and scrub on the Uluru expedition journey from Coober Pedy to Gawler
+  caption: Open road towards Gawler
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260710_3.jpg"
+  alt: Sunrise over the flat outback landscape during the Uluru expedition journey home
+  caption: Sunrise on the road home
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260710_2.jpg"
+  alt: Road train passing the Uluru expedition convoy in the early morning light
+  caption: Sharing the highway with a road train
+  span: normal
+- image: "/uploads/trip/uluru-2026/20260710_1.jpg"
+  alt: Two Uluru expedition mascots wrapped in miniature sleeping bags during the cold journey home
+  caption: The mascots keeping warm on the road
+  span: normal
 - image: "/uploads/trip/uluru-2026/20260709_1.jpg"
   alt: Uluru expedition convoy lined up with headlights on in foggy conditions before leaving Coober Pedy
   caption: Leaving Coober Pedy for the road home

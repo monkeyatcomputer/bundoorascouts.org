@@ -29,6 +29,8 @@ Two of the three buses still have one more job after that. On Sunday 12 July, on
 
 For now, we are focusing on today: Coober Pedy to Gawler, one stop at a time, and one step closer to home.
 
+{% include image-gallery.html folder='/uploads/2026-07-10-on-the-road-home-from-coober-pedy/' %}
+
 <div class="flex flex-wrap gap-4 not-prose">
     <a href="/trip/uluru-2026"
        class="text-on-primary px-8 py-4 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2"
