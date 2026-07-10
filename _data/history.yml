@@ -1,0 +1,162 @@
+# Events are displayed in this authored order. Keep them chronological and quote
+# dates so YAML preserves YYYY, YYYY-MM, and YYYY-MM-DD precision.
+events:
+  - date: "1960"
+    label: "Bundoora Group begins"
+    description: "Bundoora Scout Group was established in 1960, beginning more than six decades of local Scouting for young people and families in Melbourne's north."
+    icon: flag
+    link: "https://www.nationalredress.gov.au/institutions/bundoora-group"
+
+  - date: "1994"
+    label: "A new Banyule District"
+    description: "Local government changes brought Bundoora, Watsonia and Greensborough back together in the new City of Banyule. The local Scouting district followed and adopted the Banyule name still used today."
+    icon: map
+    link: "https://www.banyulescouts.org.au/district-history.html"
+
+  - date: "2018-01"
+    label: "Chris Parr joins as Group Leader"
+    description: "Chris Parr joined Bundoora Scouts as Group Leader and guided the Group through a period of rebuilding and growth."
+    icon: person
+
+  - date: "2018-06"
+    label: "Kate joins the Cub Pack"
+    description: "Bundoora Scouts welcomed Kate as Cub Scout Leader, beginning years of service to the Cub Pack and wider Group."
+    icon: child_care
+    link: "/people/kate"
+
+  - date: "2018-11"
+    label: "Solar plans for the hall"
+    description: "Banyule City Council awarded Bundoora Scouts a Sustainability Grant for a planned 6.1 kW solar system at the Scout hall."
+    icon: lightbulb
+
+  - date: "2019-06"
+    label: "A new front fence"
+    description: "Bundoora Scouts replaced the hall's chain-link front fence with a powder-coated black fence, improving the entrance and security of the grounds."
+    icon: build
+    link: "/the-campfire/2019/10/october-working-bee"
+
+  - date: "2019-10"
+    label: "A new website goes live"
+    description: "Bundoora Scouts launched a new website to give families and the local community easier access to section information and Group news."
+    icon: public
+
+  - date: "2020-04"
+    label: "Scouting continues through COVID-19"
+    description: "COVID-19 restrictions disrupted regular meetings, but Bundoora Scouts kept young people connected through remote activities and online Scouting."
+    icon: video_call
+
+  - date: "2020-11"
+    label: "A Queen's Scout after 28 years"
+    description: "Taneesha Pattison became Bundoora's first Queen's Scout since 1992, completing the award's demanding requirements during a year disrupted by COVID-19."
+    icon: workspace_premium
+    link: "/the-campfire/2020/11/taneesha-queen-scout"
+
+  - date: "2020-12"
+    label: "Scouting recognised in civic life"
+    description: "Banyule councillor Rick Garotti thanked Bundoora Scout Group after being formally scarfed, recognising the contribution Scout groups make across the local community."
+    icon: handshake
+    link: "https://www.banyule.vic.gov.au/files/assets/public/v/1/about-us/meetings/2020/minutes/ordinary-council-meeting-minutes-14-december-2020.pdf"
+
+  - date: "2021"
+    label: "An 11 kWh battery for the hall"
+    description: "NAB awarded Bundoora Scouts a grant to install an 11 kW battery at the Scout Hall, expanding the Group's investment in sustainable energy infrastructure."
+    icon: battery_charging_full
+
+  - date: "2022-08"
+    label: "A Silver Kangaroo for Joan"
+    description: "Assistant Group Leader Joan received Scouts Australia's Silver Kangaroo Service Award for eminent achievement and exceptional service to Scouting over many years."
+    icon: military_tech
+    link: "/the-campfire/2022/08/silver-kangaroo-award-joan"
+
+  - date: "2022-11"
+    label: "Rovers return to Bundoora"
+    description: "Bundoora Scouts welcomed the Handfield Rover Crew into the Scout Centre's Rover Den, bringing a Rover section back to the Group."
+    icon: directions_bike
+    link: "/sections/rovers"
+
+  - date: "2023-02"
+    label: "$100,000 for the Scout Centre"
+    description: "A $100,000 grant from the Andrews Labor Government made it possible to replace the hall's rotten windows and build a new Quartermaster Store shed."
+    icon: payments
+    link: "/the-campfire/2023/02/family-bbq-with-special-guest"
+
+  - date: "2023-03"
+    label: "A garden shaped by Cub Scouts"
+    description: "Cub Scouts led a biodiversity garden project inspired by nearby Gresswell Forest, planting around 100 indigenous plants and creating a place to learn about living respectfully with nature."
+    icon: forest
+    link: "https://juniorlandcare.org.au/case_studies/biodiversity-garden-inspires-respect-for-nature/"
+
+  - date: "2023-09"
+    label: "Kangaroo Island expedition"
+    description: "Scouts and Venturer Scouts returned from a shared Kangaroo Island expedition filled with hiking, wildlife encounters and service, including handmade pouches donated to a wildlife rescue group."
+    icon: hiking
+    link: "/the-campfire/2023/09/welcome-home-from-kangaroo-island"
+
+  - date: "2024-06"
+    label: "Renewing our hall grounds"
+    description: "Banyule Council recorded completion of a fence replacement project for Bundoora Scout Group, helping maintain the hall and grounds for future generations."
+    icon: build
+    link: "https://www.banyule.vic.gov.au/files/assets/public/v/1/about-us/meetings/2024/minutes/ordinary-council-meeting-minutes-24-june-2024.pdf"
+
+  - date: "2024-07"
+    label: "The Darwin Campfire Circle"
+    description: "With support from Eden Building & Landscaping and Watsonia RSL, a new outdoor campfire circle took shape at the Scout Centre as a gathering place for future stories and songs."
+    icon: local_fire_department
+    link: "/the-campfire/2024/07/darwin-campfire-circle"
+
+  - date: "2024-07"
+    label: "New windows for the Scout Hall"
+    description: "Bundoora Scouts used funding from the Victorian Government grant to replace the hall's rotten windows, improving safety, insulation and energy efficiency."
+    icon: window
+    link: "/the-campfire/2024/08/window-upgrade"
+
+  - date: "2025-02"
+    label: "A new store and activity shed"
+    description: "The Group completed a new shed with a dedicated Quartermaster Store and activity space, giving equipment a secure home and youth members more room for hands-on programs."
+    icon: warehouse
+
+  - date: "2025-08"
+    label: "Thank you, Chris"
+    description: "Bundoora Scouts farewelled Group Leader Chris Parr and thanked him for more than seven years of leadership and service to the Group."
+    icon: waving_hand
+
+  - date: "2025-11-17"
+    label: "Siobhan joins the Cub leadership team"
+    description: "Bundoora Scouts invested Siobhan 'Kaa' into the Cub Scout leadership team, where she helps Cubs build skills and explore the outdoors."
+    icon: child_care
+    link: "/the-campfire/2025/11/new-cub-scout-leader-siobhan"
+
+  - date: "2025-11-19"
+    label: "Glenn joins the Scout leadership team"
+    description: "Bundoora Scouts invested Glenn 'Varmint' into the Scout Troop leadership team. He joined Hamish in supporting the Troop's youth-led program."
+    icon: hiking
+    link: "/the-campfire/2025/11/new-scout-leader-glenn"
+
+  - date: "2025-12-01"
+    label: "Lisa joins the Cub leadership team"
+    description: "Bundoora Scouts welcomed former Handfield Rover Lisa 'Fox' into the Cub Scout leadership team."
+    icon: child_care
+    link: "/the-campfire/2025/12/new-cub-scout-leader-lisa"
+
+  - date: "2026-01"
+    label: "Bruce becomes Group Leader"
+    description: "Bundoora Scouts welcomed Bruce as Group Leader to lead the Group and support its volunteers and families."
+    icon: groups
+    link: "/people/bruce"
+
+  - date: "2026-04"
+    label: "Ainsley joins the Scout leadership team"
+    description: "Bundoora Scouts welcomed Ainsley to the Scout leadership team to help guide the Troop's youth-led program."
+    icon: hiking
+    link: "/people/ainsley"
+
+  - date: "2026-05"
+    label: "The website gets a fresh look"
+    description: "Bundoora Scouts refreshed its website with a new visual design and easier access to section information and Campfire stories."
+    icon: public
+
+  - date: "2026-06"
+    label: "The trail leads to Uluru"
+    description: "Scouts and Venturer Scouts set out on a major expedition through Central Australia, sharing their route, stories and photographs with the wider community."
+    icon: explore
+    link: "/trip/uluru-2026"
