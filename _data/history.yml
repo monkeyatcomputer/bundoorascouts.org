@@ -5,7 +5,6 @@ events:
     label: "Bundoora Group begins"
     description: "Bundoora Scout Group was established in 1960, beginning more than six decades of local Scouting for young people and families in Melbourne's north."
     icon: flag
-    link: "https://www.nationalredress.gov.au/institutions/bundoora-group"
 
   - date: "1994"
     label: "A new Banyule District"
