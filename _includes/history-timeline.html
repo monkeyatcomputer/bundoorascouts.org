@@ -23,21 +23,20 @@
     </div>
   </div>
 
-  <div data-history-scroller tabindex="0" aria-label="Bundoora Scout Group history. Use arrow keys to move between events."
-    class="relative h-[36rem] snap-y snap-mandatory overflow-x-hidden overflow-y-auto overscroll-y-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden focus-visible:rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary lg:h-auto lg:snap-x lg:overflow-x-auto lg:overflow-y-hidden lg:overscroll-x-contain lg:scroll-px-[calc(50%-10.5rem)]">
-    <ol class="relative m-0 flex list-none flex-col p-0 before:absolute before:bottom-10 before:left-[6.5rem] before:top-10 before:w-1 before:rounded-full before:bg-gradient-to-b before:from-primary before:via-secondary before:to-tertiary-fixed before:content-[''] lg:h-[27rem] lg:min-w-max lg:flex-row lg:gap-0 lg:px-[calc(50%-10.5rem)] lg:before:bottom-auto lg:before:left-0 lg:before:right-0 lg:before:top-20 lg:before:h-1 lg:before:w-auto lg:before:-translate-y-1/2 lg:before:bg-gradient-to-r">
+  <div data-history-scroller aria-label="Bundoora Scout Group history. Use the Previous and Next buttons to move between events."
+    class="relative h-[36rem] touch-pan-y snap-y snap-mandatory overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden focus-visible:rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary lg:h-auto lg:touch-auto lg:snap-x lg:overflow-x-auto lg:overflow-y-hidden lg:overscroll-x-contain lg:scroll-px-[calc(50%-10.5rem)]">
+    <ol class="relative m-0 flex list-none flex-col gap-8 p-0 before:absolute before:bottom-10 before:left-[5rem] before:top-10 before:w-1 before:rounded-full before:bg-gradient-to-b before:from-primary before:via-secondary before:to-tertiary-fixed before:content-[''] lg:h-[27rem] lg:min-w-max lg:flex-row lg:gap-0 lg:px-[calc(50%-10.5rem)] lg:before:bottom-auto lg:before:left-0 lg:before:right-0 lg:before:top-20 lg:before:h-1 lg:before:w-auto lg:before:-translate-y-1/2 lg:before:bg-gradient-to-r">
       {% for event in history_events %}
       {% assign date_text = event.date | append: '' %}
       {% assign date_length = date_text | size %}
-      {% if date_length == 4 %}
-        {% assign formatted_date = date_text %}
-      {% else %}
+      {% if date_length != 4 %}
         {% if date_length == 7 %}
           {% assign display_date = date_text | append: '-01' %}
         {% else %}
           {% assign display_date = date_text %}
         {% endif %}
-        {% assign formatted_date = display_date | date: '%b %Y' | upcase %}
+        {% assign formatted_month = display_date | date: '%b' | upcase %}
+        {% assign formatted_year = display_date | date: '%Y' %}
       {% endif %}
       {% assign external_link = false %}
       {% if event.link contains '://' %}{% assign external_link = true %}{% endif %}
@@ -45,8 +44,15 @@
       <li data-history-event data-index="{{ forloop.index0 }}"
         data-active="{% if forloop.first %}true{% else %}false{% endif %}"
         {% if forloop.first %}aria-current="step"{% endif %}
-        class="relative m-0 grid min-h-[18rem] min-w-0 snap-center grid-cols-[4.5rem_3rem_minmax(0,1fr)] items-start gap-2 p-0 lg:block lg:h-full lg:min-h-0 lg:w-[21rem] lg:shrink-0">
-        <time datetime="{{ date_text }}" class="pt-6 text-right text-[10px] font-black uppercase leading-tight tracking-[0.1em] text-secondary lg:absolute lg:inset-x-3 lg:top-8 lg:block lg:p-0 lg:text-center lg:text-xs lg:tracking-[0.16em]">{{ formatted_date }}</time>
+        class="relative m-0 grid min-w-0 snap-center grid-cols-[3rem_3rem_minmax(0,1fr)] items-start gap-2 p-0 lg:block lg:h-full lg:min-h-0 lg:w-[21rem] lg:shrink-0">
+        <time datetime="{{ date_text }}" class="pt-4 text-right text-[10px] font-black uppercase leading-tight tracking-[0.1em] text-secondary lg:absolute lg:inset-x-3 lg:top-8 lg:block lg:p-0 lg:text-center lg:text-xs lg:tracking-[0.16em]">
+          {% if date_length == 4 %}
+          <span>{{ date_text }}</span>
+          {% else %}
+          <span class="block lg:inline">{{ formatted_month }}</span>
+          <span class="block lg:inline">{{ formatted_year }}</span>
+          {% endif %}
+        </time>
 
         <div data-history-dot data-active="{% if forloop.first %}true{% else %}false{% endif %}"
           class="relative z-20 mt-4 flex size-12 items-center justify-center rounded-full border-4 border-surface-container-low bg-surface text-primary shadow-md transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-on-primary lg:absolute lg:left-1/2 lg:top-20 lg:mt-0 lg:-translate-x-1/2 lg:-translate-y-1/2">
@@ -73,9 +79,10 @@
       {% endfor %}
 
       <li data-history-event data-index="{{ history_events.size }}" data-active="false"
-        class="relative m-0 grid min-h-[18rem] min-w-0 snap-center grid-cols-[4.5rem_3rem_minmax(0,1fr)] items-start gap-2 p-0 lg:block lg:h-full lg:min-h-0 lg:w-[21rem] lg:shrink-0">
-        <span class="pt-6 text-right text-[10px] font-black uppercase leading-tight tracking-[0.1em] text-secondary lg:absolute lg:inset-x-3 lg:top-8 lg:block lg:p-0 lg:text-center lg:text-xs lg:tracking-[0.16em]">
-          Your turn
+        class="relative m-0 grid min-w-0 snap-center grid-cols-[3rem_3rem_minmax(0,1fr)] items-start gap-2 p-0 lg:block lg:h-full lg:min-h-0 lg:w-[21rem] lg:shrink-0">
+        <span class="pt-5 text-right text-[10px] font-black uppercase leading-tight tracking-[0.1em] text-secondary lg:absolute lg:inset-x-3 lg:top-8 lg:block lg:p-0 lg:text-center lg:text-xs lg:tracking-[0.16em]">
+          <span class="block lg:inline">Your</span>
+          <span class="block lg:inline">turn</span>
         </span>
 
         <div data-history-dot data-active="false"
@@ -109,7 +116,7 @@
     </ol>
   </div>
 
-  <p class="mb-0 mt-6 text-center text-xs font-bold uppercase tracking-[0.14em] text-on-surface-variant/70 lg:hidden">Swipe the timeline or use the controls to explore</p>
+  <p class="mb-0 mt-6 text-center text-xs font-bold uppercase tracking-[0.14em] text-on-surface-variant/70 lg:hidden">Use the controls to explore the timeline</p>
 </section>
 
 <script src="/assets/js/history-timeline.js" defer></script>

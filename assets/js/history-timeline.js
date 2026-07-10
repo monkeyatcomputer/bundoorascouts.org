@@ -201,7 +201,7 @@
   });
 
   scroller.addEventListener('keydown', function (event) {
-    if (event.target !== scroller) return;
+    if (!isDesktop || event.target !== scroller) return;
     var backwards = event.key === 'ArrowLeft' || (!isDesktop && event.key === 'ArrowUp');
     var forwards = event.key === 'ArrowRight' || (!isDesktop && event.key === 'ArrowDown');
     if (!backwards && !forwards) return;
@@ -258,6 +258,7 @@
     }, function (context) {
       isDesktop = context.conditions.desktop;
       reduceMotion = context.conditions.reduceMotion;
+      scroller.tabIndex = isDesktop ? 0 : -1;
       stopAutoplay();
       cancelResume();
       cancelScrollAnimation();
@@ -295,5 +296,6 @@
     }
   }
 
+  scroller.tabIndex = isDesktop ? 0 : -1;
   setActive(0, false);
 }());
