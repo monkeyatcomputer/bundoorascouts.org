@@ -1,5 +1,9 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- image: "/uploads/trip/uluru-2026/20260711_1.jpg"
+  alt: Gilbert, the Uluru expedition mascot, tucked into a miniature sleeping bag with a 1st Eltham Scouts badge
+  caption: Gilbert ready for the final leg home
+  span: normal
 - image: "/uploads/trip/uluru-2026/20260710_4.jpg"
   alt: Open highway through red dirt and scrub on the Uluru expedition journey from Coober Pedy to Gawler
   caption: Open road towards Gawler
