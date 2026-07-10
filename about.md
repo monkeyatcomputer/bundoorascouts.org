@@ -12,6 +12,10 @@ Bundoora Scout Group has been part of the local community for over 50 years. We'
 
 From the earliest campfires in the 1960s to today's multi-day expeditions and community projects, we've been committed to one thing: **helping young people grow**.
 
+## Our History
+
+More than six decades of adventure, service and community - one milestone at a time.
+
 {% include history-timeline.html %}
 
 ## What We Stand For

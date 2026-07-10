@@ -1,7 +1,7 @@
 {% assign history_events = site.data.history.events %}
 {% if history_events and history_events.size > 0 %}
 <section id="group-history" data-history-timeline
-  class="not-prose relative isolate my-14 overflow-hidden rounded-3xl border border-outline-variant/60 bg-surface-container-low px-4 py-8 shadow-ambient sm:px-6 lg:px-8 lg:py-10"
+  class="not-prose relative isolate my-2 overflow-hidden rounded-3xl border border-outline-variant/60 bg-surface-container-low p-4 shadow-ambient sm:px-6 lg:p-8"
   aria-labelledby="group-history-title">
   <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
     <div class="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-secondary-container/25 blur-3xl"></div>
@@ -9,12 +9,6 @@
   </div>
 
   <div class="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between lg:mb-4">
-    <div class="max-w-2xl">
-      <span class="mb-3 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-on-primary">Since 1960</span>
-      <h2 id="group-history-title" class="m-0 font-headline text-3xl font-black tracking-tight text-primary sm:text-4xl">Along the Bundoora trail</h2>
-      <p class="mt-3 max-w-xl text-base leading-relaxed text-on-surface-variant">More than six decades of adventure, service and community - one milestone at a time.</p>
-    </div>
-
     <div class="flex items-center gap-2 self-start sm:self-auto" role="group" aria-label="Timeline controls">
       <button type="button" data-history-prev
         class="inline-flex size-11 items-center justify-center rounded-full border border-outline-variant bg-surface text-primary shadow-sm transition-colors hover:border-primary hover:bg-primary hover:text-on-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-35"
@@ -30,7 +24,7 @@
   </div>
 
   <div data-history-scroller tabindex="0" aria-label="Bundoora Scout Group history. Use arrow keys to move between events."
-    class="relative h-[36rem] snap-y snap-mandatory overflow-x-hidden overflow-y-auto overscroll-y-contain scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden focus-visible:rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary lg:h-auto lg:snap-x lg:overflow-x-auto lg:overflow-y-hidden lg:overscroll-x-contain lg:scroll-px-[calc(50%-10.5rem)]">
+    class="relative h-[36rem] snap-y snap-mandatory overflow-x-hidden overflow-y-auto overscroll-y-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden focus-visible:rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary lg:h-auto lg:snap-x lg:overflow-x-auto lg:overflow-y-hidden lg:overscroll-x-contain lg:scroll-px-[calc(50%-10.5rem)]">
     <ol class="relative m-0 flex list-none flex-col p-0 before:absolute before:bottom-10 before:left-[6.5rem] before:top-10 before:w-1 before:rounded-full before:bg-gradient-to-b before:from-primary before:via-secondary before:to-tertiary-fixed before:content-[''] lg:h-[27rem] lg:min-w-max lg:flex-row lg:gap-0 lg:px-[calc(50%-10.5rem)] lg:before:bottom-auto lg:before:left-0 lg:before:right-0 lg:before:top-20 lg:before:h-1 lg:before:w-auto lg:before:-translate-y-1/2 lg:before:bg-gradient-to-r">
       {% for event in history_events %}
       {% assign date_text = event.date | append: '' %}
@@ -77,6 +71,41 @@
         </article>
       </li>
       {% endfor %}
+
+      <li data-history-event data-index="{{ history_events.size }}" data-active="false"
+        class="relative m-0 grid min-h-[18rem] min-w-0 snap-center grid-cols-[4.5rem_3rem_minmax(0,1fr)] items-start gap-2 p-0 lg:block lg:h-full lg:min-h-0 lg:w-[21rem] lg:shrink-0">
+        <span class="pt-6 text-right text-[10px] font-black uppercase leading-tight tracking-[0.1em] text-secondary lg:absolute lg:inset-x-3 lg:top-8 lg:block lg:p-0 lg:text-center lg:text-xs lg:tracking-[0.16em]">
+          Your turn
+        </span>
+
+        <div data-history-dot data-active="false"
+          class="relative z-20 mt-4 flex size-12 items-center justify-center rounded-full border-4 border-surface-container-low bg-surface text-primary shadow-md transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-on-primary lg:absolute lg:left-1/2 lg:top-20 lg:mt-0 lg:-translate-x-1/2 lg:-translate-y-1/2">
+          <span class="material-symbols-outlined text-[22px]" aria-hidden="true">auto_awesome</span>
+        </div>
+
+        <article data-history-bubble data-active="false"
+          class="relative rounded-2xl border border-outline-variant/70 bg-primary-fixed/60 p-5 shadow-sm ring-secondary backdrop-blur-sm transition-[border-color,box-shadow,background-color] duration-300 data-[active=true]:border-secondary data-[active=true]:bg-primary-fixed data-[active=true]:shadow-ambient-md data-[active=true]:ring-2 lg:absolute lg:left-3 lg:right-3 lg:top-28">
+          <span data-history-arrow data-active="false"
+            class="absolute left-[-0.45rem] top-6 size-4 rotate-45 border-b border-l border-outline-variant/70 bg-primary-fixed/60 transition-[border-color,background-color] duration-300 data-[active=true]:border-secondary data-[active=true]:bg-primary-fixed lg:left-1/2 lg:top-[-0.45rem] lg:-translate-x-1/2 lg:border-b-0 lg:border-l lg:border-t"
+            aria-hidden="true"></span>
+          <h3 class="m-0 font-headline text-lg font-black leading-tight text-primary sm:text-xl">Add your story</h3>
+          <p class="mb-0 mt-3 text-xs leading-relaxed text-on-surface-variant sm:text-sm">
+            Have a piece of Bundoora Scouts history to share? Send it to us. You can also join the Group and help write what comes next.
+          </p>
+          <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+            <a href="/contact"
+              class="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-on-primary transition-colors hover:bg-primary-container focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              aria-label="Share a piece of Bundoora Scouts history">
+              <span>Share our history</span>
+              <span class="material-symbols-outlined text-[17px]" aria-hidden="true">arrow_forward</span>
+            </a>
+            <a href="/contact"
+              class="inline-flex min-h-11 items-center justify-center rounded-lg border border-primary/30 px-4 py-2 text-sm font-bold text-primary transition-colors hover:border-primary hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+              Join Bundoora Scouts
+            </a>
+          </div>
+        </article>
+      </li>
     </ol>
   </div>
 

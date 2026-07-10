@@ -10,6 +10,7 @@
   var previousButton = root.querySelector('[data-history-prev]');
   var nextButton = root.querySelector('[data-history-next]');
   var currentIndex = 0;
+  var requestedIndex = 0;
   var isDesktop = window.matchMedia('(min-width: 64rem)').matches;
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var isPlaying = false;
@@ -17,6 +18,7 @@
   var autoplayCall = null;
   var resumeCall = null;
   var scrollFrame = null;
+  var scrollTween = null;
 
   function stopAutoplay() {
     if (autoplayCall) {
@@ -31,6 +33,19 @@
       resumeCall.kill();
       resumeCall = null;
     }
+  }
+
+  function updateControls(index) {
+    previousButton.disabled = index === 0;
+    nextButton.disabled = index === events.length - 1;
+  }
+
+  function cancelScrollAnimation() {
+    if (scrollTween) {
+      scrollTween.kill();
+      scrollTween = null;
+    }
+    scroller.style.removeProperty('scroll-snap-type');
   }
 
   function animateBubble(index) {
@@ -64,8 +79,7 @@
 
     var changed = index !== currentIndex;
     currentIndex = index;
-    previousButton.disabled = index === 0;
-    nextButton.disabled = index === events.length - 1;
+    updateControls(scrollTween ? requestedIndex : index);
     if (animate && changed) animateBubble(index);
     if (index === events.length - 1) {
       stopAutoplay();
@@ -91,6 +105,7 @@
     });
 
     setActive(nearestIndex, nearestIndex !== currentIndex);
+    if (!scrollTween) requestedIndex = nearestIndex;
   }
 
   function queueNearestEvent() {
@@ -111,35 +126,40 @@
     return event.offsetTop - (scroller.clientHeight / 2) + (event.offsetHeight / 2);
   }
 
+  function animateScrollTo(index) {
+    cancelScrollAnimation();
+    scroller.style.scrollSnapType = 'none';
+    var destination = isDesktop ? { x: targetScrollLeft(index) } : { y: targetScrollTop(index) };
+    var tween = window.gsap.to(scroller, {
+      scrollTo: Object.assign(destination, { autoKill: true }),
+      duration: isDesktop ? 0.7 : 0.65,
+      ease: 'power3.inOut',
+      overwrite: true,
+      onComplete: function () {
+        if (scrollTween !== tween) return;
+        scrollTween = null;
+        scroller.style.removeProperty('scroll-snap-type');
+        setActive(index, true);
+        requestedIndex = index;
+        updateControls(index);
+      }
+    });
+    scrollTween = tween;
+  }
+
   function scrollToEvent(index, manual) {
     index = Math.max(0, Math.min(index, events.length - 1));
+    requestedIndex = index;
     if (manual) pauseForManualInteraction();
     setActive(index, true);
+    updateControls(index);
 
-    if (isDesktop) {
-      var left = targetScrollLeft(index);
-      if (typeof window.gsap !== 'undefined' && typeof window.ScrollToPlugin !== 'undefined' && !reduceMotion) {
-        window.gsap.to(scroller, {
-          scrollTo: { x: left, autoKill: true },
-          duration: 0.7,
-          ease: 'power3.inOut',
-          overwrite: 'auto'
-        });
-      } else {
-        scroller.scrollTo({ left: left, behavior: reduceMotion ? 'auto' : 'smooth' });
-      }
+    if (typeof window.gsap !== 'undefined' && typeof window.ScrollToPlugin !== 'undefined' && !reduceMotion) {
+      animateScrollTo(index);
+    } else if (isDesktop) {
+      scroller.scrollTo({ left: targetScrollLeft(index), behavior: reduceMotion ? 'auto' : 'smooth' });
     } else {
-      var top = targetScrollTop(index);
-      if (typeof window.gsap !== 'undefined' && typeof window.ScrollToPlugin !== 'undefined' && !reduceMotion) {
-        window.gsap.to(scroller, {
-          scrollTo: { y: top, autoKill: true },
-          duration: 0.65,
-          ease: 'power3.inOut',
-          overwrite: 'auto'
-        });
-      } else {
-        scroller.scrollTo({ top: top, behavior: reduceMotion ? 'auto' : 'smooth' });
-      }
+      scroller.scrollTo({ top: targetScrollTop(index), behavior: reduceMotion ? 'auto' : 'smooth' });
     }
   }
 
@@ -173,11 +193,11 @@
   }
 
   previousButton.addEventListener('click', function () {
-    scrollToEvent(currentIndex - 1, true);
+    scrollToEvent(requestedIndex - 1, true);
   });
 
   nextButton.addEventListener('click', function () {
-    scrollToEvent(currentIndex + 1, true);
+    scrollToEvent(requestedIndex + 1, true);
   });
 
   scroller.addEventListener('keydown', function (event) {
@@ -186,7 +206,7 @@
     var forwards = event.key === 'ArrowRight' || (!isDesktop && event.key === 'ArrowDown');
     if (!backwards && !forwards) return;
     event.preventDefault();
-    scrollToEvent(currentIndex + (forwards ? 1 : -1), true);
+    scrollToEvent(requestedIndex + (forwards ? 1 : -1), true);
   });
 
   scroller.addEventListener('scroll', function () {
@@ -195,6 +215,8 @@
   }, { passive: true });
 
   scroller.addEventListener('wheel', function (event) {
+    cancelScrollAnimation();
+    requestedIndex = currentIndex;
     pauseForManualInteraction();
     if (!isDesktop || Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
     var movingForward = event.deltaY > 0;
@@ -208,6 +230,8 @@
 
   ['pointerdown', 'touchstart'].forEach(function (eventName) {
     scroller.addEventListener(eventName, function () {
+      cancelScrollAnimation();
+      requestedIndex = currentIndex;
       pauseForManualInteraction();
     }, { passive: true });
   });
@@ -216,6 +240,7 @@
     if (document.hidden) {
       stopAutoplay();
       cancelResume();
+      cancelScrollAnimation();
     } else if (componentInView) {
       startAutoplay(false);
     }
@@ -235,6 +260,8 @@
       reduceMotion = context.conditions.reduceMotion;
       stopAutoplay();
       cancelResume();
+      cancelScrollAnimation();
+      requestedIndex = currentIndex;
       window.requestAnimationFrame(nearestEvent);
     });
 
@@ -256,11 +283,13 @@
           componentInView = false;
           stopAutoplay();
           cancelResume();
+          cancelScrollAnimation();
         },
         onLeaveBack: function () {
           componentInView = false;
           stopAutoplay();
           cancelResume();
+          cancelScrollAnimation();
         }
       });
     }
