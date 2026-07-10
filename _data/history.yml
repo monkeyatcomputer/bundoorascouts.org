@@ -6,6 +6,11 @@ events:
     description: "Bundoora Scout Group was established in 1960, beginning more than six decades of local Scouting for young people and families in Melbourne's north."
     icon: flag
 
+  - date: "1964"
+    label: "Bundoora joins Diamond Valley District"
+    description: "Following changes to council boundaries in 1964, Bundoora Scout Group moved from Heidelberg District into the new Diamond Valley District."
+    icon: map
+
   - date: "1994"
     label: "A new Banyule District"
     description: "Local government changes brought Bundoora, Watsonia and Greensborough back together in the new City of Banyule. The local Scouting district followed and adopted the Banyule name still used today."
