@@ -4,7 +4,7 @@ subtitle: "Red dirt, long roads, and an adventure to remember"
 description: "Our Scouts, Venturer Scouts, and leaders have returned home from their 15-day Uluru Adventure through Central Australia."
 image: /uploads/2026-07-11-welcome-home-from-uluru/20260711_2.jpg
 author:
-    - group
+    - hamish
 categories:
     - Scouts
     - Venturer Scouts
