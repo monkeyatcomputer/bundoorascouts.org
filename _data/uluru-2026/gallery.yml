@@ -1,5 +1,17 @@
 # ─── GALLERY ──────────────────────────────────────────────────────────────────
 gallery:
+- youtube_id: "UQZaZszhqu4"
+  title: Uluru Adventure 2026 highlights
+  caption: Welcome home from Uluru
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260711_3.jpg"
+  alt: Uluru expeditioners collecting their bags and greeting families outside Bundoora Scout Hall after arriving home
+  caption: Home at Bundoora Scout Hall
+  span: wide
+- image: "/uploads/trip/uluru-2026/20260711_2.jpg"
+  alt: Families and expeditioners gathered beside the Uluru expedition vehicles outside Bundoora Scout Hall
+  caption: Reunited with family and friends
+  span: wide
 - image: "/uploads/trip/uluru-2026/20260711_1.jpg"
   alt: Gilbert, the Uluru expedition mascot, tucked into a miniature sleeping bag with a 1st Eltham Scouts badge
   caption: Gilbert ready for the final leg home

@@ -12,14 +12,14 @@ published: true
 sitemap: true
 test_date: #"2026-06-27T00:00:00+10:00"
 test_mode: false
-data_mode: live
+data_mode: full
 data_location: uluru-2026
 data_itinerary: itinerary
 data_gallery: gallery
 data_route: route
 data_telemetry: telemetry
 trip_vehicles: "3 Buses & 3 Support 4WDs"
-trip_stats: "15 Days · ~5,000 km"
+trip_stats: "15 Days · ~7,800 km"
 map_heading: "Bundoora to Uluru"
 timeline_heading: "15-Day Trail"
 ---
