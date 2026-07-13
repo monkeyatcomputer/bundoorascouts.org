@@ -870,20 +870,22 @@ Renders a Leaflet.js map showing the expedition route.
       if (data.route && data.data_mode === 'full') {
         roadData = data.route;
 
-        // Plot full route for the entire trip
-        var fullRoutePoints = [];
+        // Plot each generated route segment independently. Different groups can
+        // split on the same day, so flattening segments into one polyline draws
+        // false straight-line connections between unrelated endpoints.
+        var fullRouteSegments = [];
         roadData.forEach(function (rd) {
           if (rd.segments) {
             rd.segments.forEach(function (seg) {
-              if (seg.points) {
-                fullRoutePoints = fullRoutePoints.concat(seg.points);
+              if (seg.points && seg.points.length > 0) {
+                fullRouteSegments.push(seg.points);
               }
             });
           }
         });
 
-        if (fullRoutePoints.length > 0) {
-          var fullPoly = L.polyline(fullRoutePoints, { color: '#100e4c', weight: 3, opacity: 0.7 }).addTo(map);
+        if (fullRouteSegments.length > 0) {
+          var fullPoly = L.polyline(fullRouteSegments, { color: '#100e4c', weight: 3, opacity: 0.7 }).addTo(map);
           map.fitBounds(fullPoly.getBounds(), { padding: [48, 48] });
         }
       }
