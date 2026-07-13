@@ -5,7 +5,7 @@ permalink: /sections
 description: "Explore all five Bundoora Scouts youth sections – from Joey Scouts (ages 5–8) all the way through to Rovers (18–26). Find the right section for your child."
 ---
 
-<header class="hero-shell hero-shell--compact bg-primary-container">
+<header class="hero-shell bg-primary-container">
   <div class="hero-media">
     <img src="/assets/images/hero-scouts.jpg" width="1600" height="900" loading="eager" fetchpriority="high"
          alt="Scouting discovery background" 
@@ -19,7 +19,7 @@ description: "Explore all five Bundoora Scouts youth sections – from Joey Scou
         Our Sections
       </span>
       <h1 class="hero-title">
-        A Journey of <br/><span class="hero-title-accent">Discovery.</span>
+        A Journey of <span class="hero-title-accent">Discovery.</span>
       </h1>
       <p class="hero-description">
         Scouting is a progressive journey of discovery. Every section builds on the last, developing skills, confidence, and lifelong friendships in a safe and supportive environment.

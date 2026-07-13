@@ -5,14 +5,14 @@ description: "Follow our adventures and expeditions across the country."
 permalink: /trip/
 ---
 
-<header class="hero-shell hero-shell--compact bg-primary-container">
+<header class="hero-shell bg-primary-container">
   <div class="hero-media">
     <div class="hero-fallback" style="--hero-fallback-start: #1e3a8a; --hero-fallback-end: #0f172a;"></div>
     <div class="hero-overlay"></div>
   </div>
 
   <div class="site-container hero-content">
-    <div class="hero-copy hero-copy--medium">
+    <div class="hero-copy">
       <span class="eyebrow eyebrow--tertiary">
         Our Journeys
       </span>

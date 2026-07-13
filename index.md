@@ -5,14 +5,14 @@ description: Bundoora Scouts – The Modern Trailfinder. Preparing youth for the
 image: "/uploads/hero/aerial.jpg"
 ---
 
-<header class="hero-shell hero-shell--tall bg-surface-container-low">
+<header class="hero-shell bg-surface-container-low">
   <div class="hero-media">
     <img src="{{ page.image }}" alt="Scouts hiking" loading="eager" fetchpriority="high"
       class="hero-media-image hero-media-image--strong" />
     <div class="hero-overlay"></div>
   </div>
   <div class="site-container hero-content">
-    <div class="hero-copy hero-copy--medium">
+    <div class="hero-copy">
       <span class="eyebrow eyebrow--tertiary">
         The Modern Trailfinder
       </span>

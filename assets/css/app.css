@@ -188,18 +188,6 @@
     box-shadow: var(--shadow-ambient-lg);
   }
 
-  .hero-shell--compact {
-    min-height: 24rem;
-  }
-
-  .hero-shell--tall {
-    min-height: 36rem;
-  }
-
-  .hero-shell--bottom {
-    align-items: flex-end;
-  }
-
   .hero-media {
     position: absolute;
     inset: 0;
@@ -261,15 +249,8 @@
   }
 
   .hero-copy {
-    max-width: 42rem;
-  }
-
-  .hero-copy--medium {
+    width: 100%;
     max-width: 48rem;
-  }
-
-  .hero-copy--wide {
-    max-width: 56rem;
   }
 
   .eyebrow {
@@ -318,7 +299,6 @@
     font-weight: 800;
     letter-spacing: 0;
     color: var(--color-on-primary);
-    text-wrap: balance;
   }
 
   .hero-title-accent {
@@ -333,7 +313,6 @@
     font-size: clamp(1rem, 2.8vw, 1.25rem);
     line-height: 1.6;
     color: color-mix(in srgb, var(--color-primary-fixed-dim) 88%, white);
-    max-width: 40rem;
   }
 
   .hero-supporting {
@@ -1024,14 +1003,6 @@
 
     .hero-shell {
       min-height: 31rem;
-    }
-
-    .hero-shell--compact {
-      min-height: 28rem;
-    }
-
-    .hero-shell--tall {
-      min-height: 40rem;
     }
 
     .hero-content {
