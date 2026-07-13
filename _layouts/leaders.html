@@ -57,14 +57,14 @@ layout: default
     {% assign section_people = site.people | where: "section", section.slug %}
     {% if section_people.size > 0 %}
     <section data-gsap="reveal">
-      <div class="flex min-h-32 items-center gap-4 sm:gap-6">
+      <div class="flex items-center gap-4 sm:min-h-32 sm:gap-6">
         {% if section.logo-light %}
         <img src="{{ section.logo-light | relative_url }}" alt="" aria-hidden="true" width="192" height="192"
           loading="lazy" decoding="async"
-          class="h-20 w-20 flex-none object-contain sm:h-28 sm:w-28 select-none pointer-events-none">
+          class="hidden h-20 w-20 flex-none object-contain sm:block sm:h-28 sm:w-28 select-none pointer-events-none">
         {% elsif section.shortname %}
         <span aria-hidden="true"
-          class="w-20 flex-none text-center font-black text-4xl sm:w-28 sm:text-6xl select-none uppercase pointer-events-none"
+          class="hidden w-20 flex-none text-center font-black text-4xl sm:block sm:w-28 sm:text-6xl select-none uppercase pointer-events-none"
           style="color: {{ section.colour }};">{{ section.shortname }}</span>
         {% endif %}
         <div class="border-l-4 pl-6" style="border-color: {{ section.colour }};">
