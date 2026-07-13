@@ -1,25 +1,21 @@
-<!-- Section Card Include -->
 <!-- Usage: include section-card.html section=section_data -->
 {% assign s = include.section %}
 <div
   class="group surface-card p-6 sm:p-8 relative overflow-hidden flex flex-col justify-between min-h-[300px] transition-all duration-300 hover:-translate-y-1 hover:shadow-ambient-lg">
 
-  <!-- Decorative colour blob -->
   <div class="absolute -right-12 -top-12 w-48 h-48 rounded-full blur-3xl transition-colors duration-500"
     style="background-color: {{ s.colour }}20;"></div>
 
-  <!-- Decorative Section Logo -->
   {% if s.logo-crop %}
   <div
     class="absolute -right-8 -top-8 md:-right-10 md:-top-10 w-48 h-48 md:w-64 md:h-64 pointer-events-none transition-all duration-700 group-hover:scale-105">
-    <img src="{{ s.logo-crop | relative_url }}" alt="" width="256" height="256" loading="lazy" decoding="async"
+    <img src="{{ s.logo-crop | relative_url }}" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async"
       class="absolute right-3 top-3 md:right-4 md:top-4 w-36 h-36 md:w-48 md:h-48 object-contain opacity-20 group-hover:opacity-35 transition-opacity duration-700"
       style="mask-image: radial-gradient(circle at center, black 30%, transparent 90%); -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 90%);">
   </div>
   {% endif %}
 
   <div>
-    <!-- Age badge -->
     <span class="eyebrow mb-6 text-white" style="background-color: {{ s.colour }};">
       Ages {{ s.age_range }}
     </span>
@@ -27,7 +23,6 @@
     <p class="text-on-surface-variant text-sm leading-relaxed mb-4">{{ s.description }}</p>
   </div>
 
-  <!-- Actions -->
   <div class="mt-auto flex flex-wrap justify-end items-center gap-3">
     <a href="{{ s.url }}"
       class="btn text-white"

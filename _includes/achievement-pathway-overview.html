@@ -6,11 +6,11 @@
 
   <!-- Viewport Background -->
   <div class="absolute inset-0 z-0 pointer-events-none">
-    <img src="/assets/images/sections/mountain-bg.svg" alt="" class="w-full h-full object-cover" />
+    <img src="/assets/images/sections/mountain-bg.svg" alt="" aria-hidden="true" class="w-full h-full object-cover" />
   </div>
 
   <!-- Vertical Connecting Line in the middle (Wavy & Dashed for Desktop) -->
-  <svg class="absolute top-[200px] left-1/2 w-24 h-[calc(100%-200px)] -translate-x-1/2 z-0 hidden lg:block"
+  <svg aria-hidden="true" focusable="false" class="absolute top-[200px] left-1/2 w-24 h-[calc(100%-200px)] -translate-x-1/2 z-0 hidden lg:block"
     viewBox="0 0 100 1000" preserveAspectRatio="none">
     <path d="M 50,0 Q 20,100 50,200 T 50,400 T 50,600 T 50,800 T 50,1000" fill="none"
       stroke="{{ accent | default: '#3f5e94' }}" stroke-width="6" stroke-dasharray="6, 6" />
@@ -91,7 +91,7 @@
           <!-- Milestone 1 -->
           <div class="relative z-10 flex flex-col items-center gap-4 px-4">
             <div class="w-34 h-34 flex items-center justify-center">
-              <img src="/assets/images/sections/milestone-1-{{ page.section_slug }}.svg" alt="Milestone 1"
+              <img src="/assets/images/sections/milestone-1-{{ page.section_slug }}.svg" alt="" aria-hidden="true"
                 class="w-full h-full object-contain drop-shadow-sm" />
             </div>
             <div class="text-center bg-surface-container-low px-3 py-1.5 rounded-lg shadow-sm">
@@ -103,7 +103,7 @@
           <!-- Milestone 2 -->
           <div class="relative z-10 flex flex-col items-center gap-4 px-4">
             <div class="w-34 h-34 flex items-center justify-center">
-              <img src="/assets/images/sections/milestone-2-{{ page.section_slug }}.svg" alt="Milestone 2"
+              <img src="/assets/images/sections/milestone-2-{{ page.section_slug }}.svg" alt="" aria-hidden="true"
                 class="w-full h-full object-contain drop-shadow-sm" />
             </div>
             <div class="text-center bg-surface-container-low px-3 py-1.5 rounded-lg shadow-sm">
@@ -115,7 +115,7 @@
           <!-- Milestone 3 -->
           <div class="relative z-10 flex flex-col items-center gap-4 px-4">
             <div class="w-34 h-34 flex items-center justify-center">
-              <img src="/assets/images/sections/milestone-3-{{ page.section_slug }}.svg" alt="Milestone 3"
+              <img src="/assets/images/sections/milestone-3-{{ page.section_slug }}.svg" alt="" aria-hidden="true"
                 class="w-full h-full object-contain drop-shadow-sm" />
             </div>
             <div class="text-center bg-surface-container-low px-3 py-1.5 rounded-lg shadow-sm">
@@ -167,7 +167,7 @@
           {% assign skill_stage = skill.stage | default: section_oas.stage_requirement %}
           {% assign stage_str = skill_stage | append: "" %}
           {% assign stage_color = site.data.oas.stages[stage_str] | default: "#006649" %}
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
+          <div aria-hidden="true" class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
             {% include icons/oas-{{ filename }}.svg stage=skill_stage %}
           </div>
           {% endfor %}
@@ -176,7 +176,7 @@
           {% assign skill_stage = skill.stage | default: section_oas.stage_requirement %}
           {% assign stage_str = skill_stage | append: "" %}
           {% assign stage_color = site.data.oas.stages[stage_str] | default: "#006649" %}
-          <div class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
+          <div aria-hidden="true" class="aspect-[3/2] [&>svg]:w-full [&>svg]:h-full" style="color: {{ stage_color }};">
             {% include icons/oas-{{ filename }}.svg stage=skill_stage %}
           </div>
           {% endfor %}
@@ -218,7 +218,7 @@
         </p>
 
         <div class="flex justify-center mb-8" id="sia-logo-container">
-          <div class="w-48 h-auto [&>svg]:w-full [&>svg]:h-auto" style="color: {{ accent }};">
+          <div aria-hidden="true" class="w-48 h-auto [&>svg]:w-full [&>svg]:h-auto" style="color: {{ accent }};">
             {% include icons/sia-all.svg %}
           </div>
         </div>
@@ -361,11 +361,11 @@
       <div
         class="absolute -right-8 -top-8 w-48 h-48 pointer-events-none opacity-20 group-hover:opacity-30 transition-all duration-700 group-hover:scale-105 flex items-center justify-center">
         {% if page.pathway.peak_award.image %}
-        <img src="{{ page.pathway.peak_award.image }}" alt="{{ page.pathway.peak_award.name }}"
+        <img src="{{ page.pathway.peak_award.image }}" alt="" aria-hidden="true"
           class="w-full h-full object-contain" />
         {% elsif page.section_slug == 'cubs' or page.section_slug == 'joeys' or page.section_slug == 'scouts' %}
         <img src="/assets/images/sections/peak-award-{{ page.section_slug }}.svg"
-          alt="{{ page.pathway.peak_award.name }}" class="w-full h-full object-contain" />
+          alt="" aria-hidden="true" class="w-full h-full object-contain" />
         {% else %}
         <span class="material-symbols-outlined"
           style="font-size: 12rem; font-variation-settings: 'FILL' 1; color: {{ accent }};">workspace_premium</span>
@@ -494,7 +494,7 @@
           class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 hover:bg-primary-dim transition-colors border-r border-white/20">
           <span class="material-symbols-outlined text-xs">arrow_back</span>
           <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5 flex-shrink-0">
-            <img src="/assets/images/{{ prev_logo }}" alt="{{ prev_name }}" class="w-full h-full object-contain" />
+            <img src="/assets/images/{{ prev_logo }}" alt="" aria-hidden="true" class="w-full h-full object-contain" />
           </div>
           <span>{{ prev_name }} Pathway</span>
         </a>
@@ -504,7 +504,7 @@
           class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 hover:bg-primary-dim transition-colors">
           <span>{{ next_name }} Pathway</span>
           <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5 flex-shrink-0">
-            <img src="/assets/images/{{ next_logo }}" alt="{{ next_name }}" class="w-full h-full object-contain" />
+            <img src="/assets/images/{{ next_logo }}" alt="" aria-hidden="true" class="w-full h-full object-contain" />
           </div>
           <span class="material-symbols-outlined text-xs">arrow_forward</span>
         </a>
@@ -516,7 +516,7 @@
         class="bg-primary hover:bg-primary-dim text-white text-xs font-bold px-6 py-2.5 rounded-full flex items-center justify-center shadow-md gap-2 transition-colors">
         <span class="material-symbols-outlined text-xs">arrow_back</span>
         <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5 flex-shrink-0">
-          <img src="/assets/images/{{ prev_logo }}" alt="{{ prev_name }}" class="w-full h-full object-contain" />
+          <img src="/assets/images/{{ prev_logo }}" alt="" aria-hidden="true" class="w-full h-full object-contain" />
         </div>
         <span>{{ prev_name }} Pathway</span>
       </a>
@@ -526,7 +526,7 @@
         class="bg-primary hover:bg-primary-dim text-white text-xs font-bold px-6 py-2.5 rounded-full flex items-center justify-center shadow-md gap-2 transition-colors">
         <span>{{ next_name }} Pathway</span>
         <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5 flex-shrink-0">
-          <img src="/assets/images/{{ next_logo }}" alt="{{ next_name }}" class="w-full h-full object-contain" />
+          <img src="/assets/images/{{ next_logo }}" alt="" aria-hidden="true" class="w-full h-full object-contain" />
         </div>
         <span class="material-symbols-outlined text-xs">arrow_forward</span>
       </a>

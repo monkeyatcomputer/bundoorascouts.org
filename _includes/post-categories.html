@@ -34,7 +34,7 @@
     {% unless use_tailwind %}style="background-color: {{ bg_color }};" {% endunless %}>
     {% if logo %}
     <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-      <img src="{{ logo }}" alt="{{ category }}" class="w-4.5 h-4.5 object-contain" />
+      <img src="{{ logo }}" alt="" aria-hidden="true" class="w-4.5 h-4.5 object-contain" />
     </div>
     {% endif %}
     {{ category }}

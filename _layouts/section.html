@@ -6,29 +6,28 @@ layout: default
 {% assign accent = page.colour | default: "#3f5e94" %}
 {% assign accent_dark = page.colour_dark | default: accent %}
 
-<!-- Section Hero -->
-<section class="hero-shell hero-shell--compact bg-surface-container-low">
+<header class="hero-shell hero-shell--compact bg-surface-container-low">
   <div class="hero-media">
     {% if page.image %}
     <img src="{{ page.image }}" alt="{{ page.title }} scouts in action" width="1600" height="900" loading="eager" fetchpriority="high"
-      class="w-full h-full object-cover opacity-80 mix-blend-multiply" />
+      class="hero-media-image hero-media-image--strong" />
     {% else %}
-    <div class="w-full h-full"
-      style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }}); opacity: 0.8;">
+    <div class="hero-fallback"
+      style="--hero-fallback-start: {{ page.colour | default: '#3f5e94' }}; --hero-fallback-end: {{ page.colour_dark | default: '#100e4c' }};">
     </div>
     {% endif %}
     <div class="hero-overlay"></div>
   </div>
 
   <div class="site-container hero-content">
-    <div class="hero-copy max-w-2xl">
+    <div class="hero-copy">
       {% if section.logo-dark %}
       <div class="mb-8 hidden lg:block">
-        <img src="{{ section.logo-dark }}" alt="{{ page.title }} Logo" width="320" height="320" loading="eager"
-          class="h-32 md:h-40 w-auto filter drop-shadow-lg" />
+        <img src="{{ section.logo-dark }}" alt="" aria-hidden="true" width="320" height="320" loading="eager"
+          class="hero-logo" />
       </div>
       {% endif %}
-      <span class="eyebrow text-white shadow-sm" style="background-color: {{ page.colour | default: '#3f5e94' }};">
+      <span class="eyebrow eyebrow--section" style="--eyebrow-background: {{ page.colour | default: '#3f5e94' }};">
         Ages {{ page.age_range }}
       </span>
       <h1 class="hero-title">
@@ -51,8 +50,7 @@ layout: default
       {% assign join_text = 'Join ' | append: page.title %}
 
       {% if section.time %}
-      <div
-        class="mt-6 inline-flex items-center gap-3 text-on-primary/80 bg-white/5 backdrop-blur-sm px-4 py-3 rounded-lg border border-white/10">
+      <div class="hero-detail">
         <span class="material-symbols-outlined text-secondary">schedule</span>
         <span class="text-sm font-bold tracking-wide">{{ section.time }}</span>
       </div>
@@ -70,7 +68,7 @@ layout: default
       </div>
     </div>
   </div>
-</section>
+</header>
 
 <div id="explore" class="site-container page-shell">
   <div class="prose prose-lg max-w-none content-prose

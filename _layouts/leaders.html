@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<header class="hero-shell bg-primary-container">
+  <div class="hero-media">
+    {% if page.image %}
+    <img src="{{ page.image }}" alt="{{ page.image_alt | default: page.title }}" width="1600" height="900"
+      loading="eager" fetchpriority="high" class="hero-media-image hero-media-image--subtle" />
+    {% else %}
+    <div class="hero-fallback"
+      style="--hero-fallback-start: {{ page.colour | default: '#3f5e94' }}; --hero-fallback-end: {{ page.colour_dark | default: '#100e4c' }};">
+    </div>
+    {% endif %}
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="site-container hero-content">
+    <div class="hero-copy hero-copy--medium">
+      {% if page.badge %}
+      <span class="eyebrow eyebrow--brand">{{ page.badge }}</span>
+      {% endif %}
+
+      <h1 class="hero-title">
+        {% assign title_words = page.title | split: " " %}
+        {% for word in title_words %}
+        {% if forloop.last %}
+        <span class="hero-title-accent">{{ word }}</span>
+        {% else %}
+        {{ word }}
+        {% endif %}
+        {% endfor %}
+      </h1>
+
+      <p class="hero-description">{{ page.hero_description | default: page.description }}</p>
+
+      <div class="hero-stack">
+        {% include leader-stack.html border="border-primary" bg="bg-white/10" text="text-on-primary" %}
+      </div>
+    </div>
+  </div>
+</header>
+
+{% assign page_content = content | strip %}
+{% if page_content != '' %}
+<div class="site-container page-shell">
+  <div class="prose prose-lg max-w-none content-prose">
+    {{ content }}
+  </div>
+</div>
+{% endif %}
+
+<main class="site-container space-y-32 py-20">
+  {% assign leader_sections = site.data.sections | where: "show_on_leaders", true %}
+
+  {% for section in leader_sections %}
+    {% assign section_people = site.people | where: "section", section.slug %}
+    {% if section_people.size > 0 %}
+    <section data-gsap="reveal">
+      <div class="relative flex items-end justify-between mb-12">
+        <div class="border-l-4 pl-6" style="border-color: {{ section.colour }};">
+          <h2 class="text-3xl font-black text-primary tracking-tight">{{ section.name }}</h2>
+          <p class="text-on-surface-variant">{{ section.leader_tagline }}</p>
+        </div>
+        {% if section.logo-light %}
+        <img src="{{ section.logo-light }}" alt="" aria-hidden="true"
+          class="absolute right-0 top-0 hidden md:block w-28 h-auto select-none pointer-events-none">
+        {% elsif section.shortname %}
+        <span aria-hidden="true"
+          class="absolute right-0 top-0 hidden md:block font-black text-6xl opacity-10 select-none uppercase pointer-events-none"
+          style="color: {{ section.colour }};">{{ section.shortname }}</span>
+        {% endif %}
+      </div>
+
+      <div class="grid grid-cols-1 {% if section.slug == 'group' %}md:grid-cols-3{% else %}md:grid-cols-4{% endif %} gap-8">
+        {% for person in section_people %}
+        {% include leader-card.html person=person colour=section.colour %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  {% endfor %}
+</main>

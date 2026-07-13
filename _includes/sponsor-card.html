@@ -4,13 +4,11 @@
 
 <article
   class="bg-white rounded-2xl p-8 flex flex-col h-full transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_60px_-20px_rgba(16,14,76,0.1)] border border-outline-variant/10 relative group overflow-hidden not-prose">
-  <!-- Subtle background glow on hover -->
   <div
     class="absolute -right-10 -top-10 w-32 h-32 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-colors duration-500">
   </div>
 
   <div class="relative z-10 flex flex-col h-full">
-    <!-- Logo Container -->
     <div
       class="h-40 mb-8 bg-surface-container-lowest flex items-center justify-center p-8 shadow-inner border border-outline-variant/5 group-hover:border-secondary/20 transition-colors">
       {% if s.logo %}
@@ -24,7 +22,6 @@
       {% endif %}
     </div>
 
-    <!-- Content -->
     <div class="flex-grow">
       <div class="flex items-center justify-between gap-4 mb-4">
         <h3
@@ -47,7 +44,6 @@
       {% endif %}
     </div>
 
-    <!-- Special Thanks Note -->
     {% if s.notes and s.notes != "" %}
     <div class="mt-auto pt-6 border-t border-outline-variant/10">
       <div class="flex gap-3">

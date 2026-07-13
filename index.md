@@ -5,20 +5,19 @@ description: Bundoora Scouts – The Modern Trailfinder. Preparing youth for the
 image: "/uploads/hero/aerial.jpg"
 ---
 
-<!-- Hero Section -->
-<section class="hero-shell hero-shell--tall bg-surface-container-low">
+<header class="hero-shell hero-shell--tall bg-surface-container-low">
   <div class="hero-media">
-    <img src="{{ page.image }}" alt="Scouts hiking" class="w-full h-full object-cover opacity-80 mix-blend-multiply" />
+    <img src="{{ page.image }}" alt="Scouts hiking" loading="eager" fetchpriority="high"
+      class="hero-media-image hero-media-image--strong" />
     <div class="hero-overlay"></div>
   </div>
   <div class="site-container hero-content">
-    <div class="hero-copy max-w-2xl">
-      <span class="eyebrow bg-tertiary text-on-tertiary">
+    <div class="hero-copy hero-copy--medium">
+      <span class="eyebrow eyebrow--tertiary">
         The Modern Trailfinder
       </span>
       <h1 class="hero-title">
-        Adventure Awaits in <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">Bundoora.</span>
+        Adventure Awaits in <span class="hero-title-accent">Bundoora.</span>
       </h1>
       <p class="hero-description">
         Empowering youth through outdoor education, leadership, and community. Join the journey from Joeys to Rovers.
@@ -34,7 +33,7 @@ image: "/uploads/hero/aerial.jpg"
       </div>
     </div>
   </div>
-</section>
+</header>
 
 <!-- Sections Bento Grid -->
 <section id="scouting-sections" class="site-container-wide section-shell">

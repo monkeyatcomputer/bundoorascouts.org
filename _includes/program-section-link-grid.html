@@ -6,7 +6,7 @@
 
 {% if visual == 'section' %}
 <div class="not-prose relative my-8 overflow-hidden rounded-2xl p-4 sm:p-6">
-  <img src="/assets/images/sections/mountain-bg.svg" alt=""
+  <img src="/assets/images/sections/mountain-bg.svg" alt="" aria-hidden="true"
     class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-90">
   <span class="pointer-events-none absolute inset-0 bg-surface-container-low/70"></span>
   <div class="relative flex flex-wrap justify-center gap-4">
@@ -69,16 +69,16 @@
     {% endif %}
 
     {% if visual == 'peak' %}
-    <img src="/assets/images/sections/peak-award-{{ section.slug }}.svg" alt=""
+    <img src="/assets/images/sections/peak-award-{{ section.slug }}.svg" alt="" aria-hidden="true"
       class="pointer-events-none absolute -right-8 -top-10 h-40 w-40 object-contain opacity-10 transition-all duration-500 group-hover:scale-105 group-hover:opacity-20">
     {% elsif visual == 'sia' %}
-    <span class="pointer-events-none absolute -right-8 -top-10 h-40 w-40 text-primary opacity-10 transition-all duration-500 group-hover:scale-105 group-hover:opacity-20">
+    <span aria-hidden="true" class="pointer-events-none absolute -right-8 -top-10 h-40 w-40 text-primary opacity-10 transition-all duration-500 group-hover:scale-105 group-hover:opacity-20">
       {% include icons/sia-{{ sia_icon }}.svg %}
     </span>
     {% elsif visual == 'oas' %}
     {% assign section_oas = site.data.oas[section.slug] %}
     {% assign oas_stage = section_oas.stage_requirement | default: 1 %}
-    <span class="pointer-events-none absolute -right-8 -top-10 h-40 w-40 text-primary opacity-10 transition-all duration-500 group-hover:scale-105 group-hover:opacity-20">
+    <span aria-hidden="true" class="pointer-events-none absolute -right-8 -top-10 h-40 w-40 text-primary opacity-10 transition-all duration-500 group-hover:scale-105 group-hover:opacity-20">
       {% include icons/oas-{{ oas_icon }}.svg stage=oas_stage %}
     </span>
     {% endif %}

@@ -2,15 +2,14 @@
 layout: default
 ---
 
-<!-- Page Hero Section -->
-<section class="hero-shell hero-shell--compact bg-primary-container">
+<header class="hero-shell hero-shell--compact bg-primary-container">
   <div class="hero-media">
     {% if page.image %}
     <img src="{{ page.image }}" alt="{{ page.title }}" width="1600" height="900" loading="eager" fetchpriority="high"
-      class="w-full h-full object-cover opacity-40 mix-blend-multiply" />
+      class="hero-media-image hero-media-image--subtle" />
     {% else %}
-    <div class="w-full h-full"
-      style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }}); opacity: 0.8;">
+    <div class="hero-fallback"
+      style="--hero-fallback-start: {{ page.colour | default: '#3f5e94' }}; --hero-fallback-end: {{ page.colour_dark | default: '#100e4c' }};">
     </div>
     {% endif %}
     <div class="hero-overlay"></div>
@@ -19,7 +18,7 @@ layout: default
   <div class="site-container hero-content">
     <div class="hero-copy">
       {% if page.badge %}
-      <span class="eyebrow eyebrow--light bg-secondary text-on-primary">
+      <span class="eyebrow eyebrow--brand">
         {{ page.badge }}
       </span>
       {% endif %}
@@ -27,7 +26,7 @@ layout: default
         {% assign title_words = page.title | split: " " %}
         {% for word in title_words %}
         {% if forloop.last %}
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">{{ word
+        <span class="hero-title-accent">{{ word
           }}</span>
         {% else %}
         {{ word }}
@@ -41,9 +40,8 @@ layout: default
       {% endif %}
     </div>
   </div>
-</section>
+</header>
 
-<!-- Page Content -->
 <div class="site-container page-shell">
   <div class="prose prose-lg max-w-none content-prose
               prose-headings:font-headline prose-headings:text-primary prose-headings:tracking-tight prose-headings:font-black

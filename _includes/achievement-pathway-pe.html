@@ -29,9 +29,9 @@
         </div>
         <div class="mt-auto pt-2 flex items-center">
           {% if item.name == "Introduction to Scouting" %}
-            <img src="/assets/images/scout-emblem.svg" alt="" class="w-20 h-20 object-contain drop-shadow-sm" />
+            <img src="/assets/images/scout-emblem.svg" alt="" aria-hidden="true" class="w-20 h-20 object-contain drop-shadow-sm" />
           {% elsif item.name == "Introduction to Section" %}
-            <img src="/assets/images/sections/{{ page.section_slug }}-badge.svg" alt="" class="w-20 h-20 object-contain drop-shadow-sm" />
+            <img src="/assets/images/sections/{{ page.section_slug }}-badge.svg" alt="" aria-hidden="true" class="w-20 h-20 object-contain drop-shadow-sm" />
           {% endif %}
         </div>
       </div>

@@ -97,7 +97,6 @@ Hall hire is available when the venue is not in use by the Bundoora Scout Group,
 
 <section class="mt-24 mb-20 text-center not-prose" data-gsap="reveal">
   <div class="bg-gradient-to-br from-primary via-primary-container to-primary rounded-2xl p-8 md:p-16 text-white shadow-ambient-lg overflow-hidden relative">
-    <!-- Enhanced Decorative elements -->
     <div class="absolute -top-32 -right-32 w-96 h-96 bg-secondary/30 rounded-full blur-[100px] animate-pulse"></div>
     <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-tertiary/20 rounded-full blur-[100px]"></div>
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-5 mix-blend-overlay"></div>

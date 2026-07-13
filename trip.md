@@ -5,27 +5,26 @@ description: "Follow our adventures and expeditions across the country."
 permalink: /trip/
 ---
 
-<!-- Hero Section -->
-<section class="relative w-full min-h-[400px] flex items-center bg-primary-container overflow-hidden mb-12 shadow-ambient-lg">
-  <div class="absolute inset-0 z-0">
-    <div class="w-full h-full" style="background: linear-gradient(135deg, #1e3a8a, #0f172a); opacity: 0.8;"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>
+<header class="hero-shell hero-shell--compact bg-primary-container">
+  <div class="hero-media">
+    <div class="hero-fallback" style="--hero-fallback-start: #1e3a8a; --hero-fallback-end: #0f172a;"></div>
+    <div class="hero-overlay"></div>
   </div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-32 pb-20 md:pt-40 md:pb-24">
-    <div class="max-w-3xl">
-      <span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary text-on-primary text-sm font-bold tracking-widest uppercase shadow-sm">
+  <div class="site-container hero-content">
+    <div class="hero-copy hero-copy--medium">
+      <span class="eyebrow eyebrow--tertiary">
         Our Journeys
       </span>
-      <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-primary mb-6 leading-tight tracking-tight">
-        Major <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">Expeditions</span>
+      <h1 class="hero-title">
+        Major <span class="hero-title-accent">Expeditions</span>
       </h1>
-      <p class="text-xl text-primary-fixed-dim leading-relaxed font-body">
+      <p class="hero-description">
         Follow our tracks, view live telemetry, and share the adventure of our major trips across Australia.
       </p>
     </div>
   </div>
-</section>
+</header>
 
 <main class="flex-grow w-full max-w-7xl mx-auto px-4 md:px-12 py-12">
   <div class="w-full">

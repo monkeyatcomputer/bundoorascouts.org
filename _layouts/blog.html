@@ -1,15 +1,14 @@
 ---
 layout: default
 ---
-<!-- Hero Section -->
-<section class="hero-shell hero-shell--compact bg-primary-container">
+<header class="hero-shell hero-shell--compact bg-primary-container">
   <div class="hero-media">
     {% if page.image %}
     <img src="{{ page.image }}" alt="Campfire background" width="1600" height="900" loading="eager" fetchpriority="high"
-      class="w-full h-full object-cover opacity-40 mix-blend-multiply" />
+      class="hero-media-image hero-media-image--medium" />
     {% else %}
-    <div class="w-full h-full"
-      style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }}); opacity: 0.8;">
+    <div class="hero-fallback"
+      style="--hero-fallback-start: {{ page.colour | default: '#3f5e94' }}; --hero-fallback-end: {{ page.colour_dark | default: '#100e4c' }};">
     </div>
     {% endif %}
     <div class="hero-overlay"></div>
@@ -17,12 +16,11 @@ layout: default
 
   <div class="site-container hero-content">
     <div class="hero-copy">
-      <span class="eyebrow eyebrow--light bg-secondary text-on-primary">
+      <span class="eyebrow eyebrow--brand">
         The Campfire
       </span>
       <h1 class="hero-title">
-        Gather 'Round the <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-container to-tertiary-fixed">Campfire</span>
+        Gather 'Round the <span class="hero-title-accent">Campfire</span>
       </h1>
       <p class="hero-description">
         {% if page.autopage %}
@@ -47,19 +45,16 @@ layout: default
       </div>
     </div>
   </div>
-</section>
+</header>
 
 <main class="site-container page-shell">
 
-  <!-- Content -->
   <div class="w-full">
     {{ content }}
 
-    <!-- Post Grid -->
     {% assign posts_to_show = paginator.posts | default: posts | default: site.posts %}
     {% if posts_to_show.size > 0 %}
 
-    <!-- Featured Post -->
     {% if paginator.page == 1 or paginator.page == nil %}
     {% assign featured = posts_to_show | first %}
     <div class="mb-16" data-gsap="reveal">

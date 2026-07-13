@@ -67,7 +67,7 @@ We also will not be travelling alone. Scouts from across Victoria will join the 
       <a href="{{ group.url }}" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center">
       {% endif %}
         <div class="w-24 h-24 rounded-full bg-white shadow-ambient-md border border-outline-variant/10 flex items-center justify-center overflow-hidden mb-4 group-hover/item:scale-110 transition-transform duration-300">
-          <img src="{{ group.image }}" alt="{{ group.name }}" class="w-16 h-16 object-contain">
+          <img src="{{ group.image }}" alt="" aria-hidden="true" class="w-16 h-16 object-contain">
         </div>
         <h5 class="font-headline font-bold text-primary text-xs leading-tight">{{ group.name }}</h5>
       {% if group.url %}

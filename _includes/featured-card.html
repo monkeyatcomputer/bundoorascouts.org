@@ -4,7 +4,6 @@
 
 <article
   class="surface-card-muted flex flex-col lg:flex-row overflow-hidden group hover:shadow-ambient-lg transition-all duration-500">
-  <!-- Thumbnail Container -->
   <div class="lg:w-3/5 aspect-video lg:aspect-auto overflow-hidden relative">
     {% if p.image %}
     <img src="{{ p.image }}" alt="{{ p.title }}" width="1200" height="675" loading="lazy" decoding="async"
@@ -22,7 +21,6 @@
     </div>
   </div>
 
-  <!-- Content Box -->
   <div class="lg:w-2/5 p-6 sm:p-8 md:p-12 flex flex-col justify-center">
     <div
       class="flex items-center gap-3 mb-6 text-xs font-bold text-on-surface-variant uppercase tracking-widest opacity-60">

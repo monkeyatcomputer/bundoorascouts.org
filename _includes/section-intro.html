@@ -50,7 +50,7 @@
           </script>
         {% else %}
           <div class="aspect-square rounded-3xl overflow-hidden shadow-ambient-lg {{ include.rotation | default: 'rotate-2' }} group hover:rotate-0 transition-transform duration-500">
-            <img src="{{ s.logo-light | relative_url }}" width="512" height="512" loading="lazy" decoding="async" class="w-full h-full object-contain p-12 bg-surface-container-low" alt="{{ s.name }} Logo"/>
+            <img src="{{ s.logo-light | relative_url }}" alt="" aria-hidden="true" width="512" height="512" loading="lazy" decoding="async" class="w-full h-full object-contain p-12 bg-surface-container-low" />
           </div>
         {% endif %}
       </div>
