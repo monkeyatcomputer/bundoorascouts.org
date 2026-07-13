@@ -50,29 +50,30 @@ layout: default
 </div>
 {% endif %}
 
-<main class="site-container space-y-32 py-20">
+<main class="site-container space-y-8 py-8">
   {% assign leader_sections = site.data.sections | where: "show_on_leaders", true %}
 
   {% for section in leader_sections %}
     {% assign section_people = site.people | where: "section", section.slug %}
     {% if section_people.size > 0 %}
     <section data-gsap="reveal">
-      <div class="relative flex items-end justify-between mb-12">
+      <div class="flex min-h-32 items-center gap-4 sm:gap-6">
+        {% if section.logo-light %}
+        <img src="{{ section.logo-light | relative_url }}" alt="" aria-hidden="true" width="192" height="192"
+          loading="lazy" decoding="async"
+          class="h-20 w-20 flex-none object-contain sm:h-28 sm:w-28 select-none pointer-events-none">
+        {% elsif section.shortname %}
+        <span aria-hidden="true"
+          class="w-20 flex-none text-center font-black text-4xl sm:w-28 sm:text-6xl select-none uppercase pointer-events-none"
+          style="color: {{ section.colour }};">{{ section.shortname }}</span>
+        {% endif %}
         <div class="border-l-4 pl-6" style="border-color: {{ section.colour }};">
           <h2 class="text-3xl font-black text-primary tracking-tight">{{ section.name }}</h2>
           <p class="text-on-surface-variant">{{ section.leader_tagline }}</p>
         </div>
-        {% if section.logo-light %}
-        <img src="{{ section.logo-light }}" alt="" aria-hidden="true"
-          class="absolute right-0 top-0 hidden md:block w-28 h-auto select-none pointer-events-none">
-        {% elsif section.shortname %}
-        <span aria-hidden="true"
-          class="absolute right-0 top-0 hidden md:block font-black text-6xl opacity-10 select-none uppercase pointer-events-none"
-          style="color: {{ section.colour }};">{{ section.shortname }}</span>
-        {% endif %}
       </div>
 
-      <div class="grid grid-cols-1 {% if section.slug == 'group' %}md:grid-cols-3{% else %}md:grid-cols-4{% endif %} gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {% for person in section_people %}
         {% include leader-card.html person=person colour=section.colour %}
         {% endfor %}
