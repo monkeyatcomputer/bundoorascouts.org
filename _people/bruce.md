@@ -5,3 +5,5 @@ description: "Meet Bruce, Group Leader at Bundoora Scout Group, supporting leade
 alias: Shark
 section: group
 ---
+
+Bruce is our new Group Leader. He has stepped into the role after a much-loved predecessor and is working hard to meet the high standard they set.

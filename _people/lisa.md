@@ -5,3 +5,5 @@ description: "Meet Lisa, a Cub Scout Leader with Bundoora Scout Group supporting
 alias: Fox
 section: cubs
 ---
+
+Lisa joined our Cub Scout leadership team from the Handfield Rover Unit. Her Rover experience gives her a valuable perspective as she helps our Cubs grow through Scouting.

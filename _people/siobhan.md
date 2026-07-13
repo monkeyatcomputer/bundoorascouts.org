@@ -5,3 +5,5 @@ description: "Meet Siobhan, a Cub Scout Leader with Bundoora Scout Group support
 alias: Kaa
 section: cubs
 ---
+
+Siobhan (pronounced shih-VAWN) joined our Cub Scout leadership team from Rovers. She brings a lifetime of Scouting experience to the section.

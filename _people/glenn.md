@@ -5,3 +5,5 @@ description: "Meet Glenn, a Scout Leader with Bundoora Scout Group supporting th
 alias: Varmint
 section: scouts
 ---
+
+Glenn returned to our Scout leadership team after a long absence. We are glad to have him back and sharing his experience with our Scouts.

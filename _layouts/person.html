@@ -20,7 +20,7 @@ layout: default
         The Campfire
       </span>
       <h1 class="hero-title">
-        Stories by <span class="hero-title-accent">{{ page.name }}</span>
+        Meet <span class="hero-title-accent">{{ page.name }}</span>
       </h1>
       <p class="hero-description">
         Exploring stories shared by <span class="text-secondary font-bold">{{ page.name }}</span>.
@@ -44,7 +44,17 @@ layout: default
 <main class="site-container page-shell">
 
   <div class="w-full">
-    {{ content }}
+    <section class="mb-16" aria-labelledby="about-{{ page.slug }}">
+      <div class="section-header">
+        <h2 id="about-{{ page.slug }}" class="section-title">
+          About <br />
+          <span class="text-secondary">{{ page.name }}.</span>
+        </h2>
+      </div>
+      <div class="prose prose-lg max-w-none text-on-surface-variant">
+        {{ content }}
+      </div>
+    </section>
 
     {% assign author_slug = page.slug %}
     {% assign person_posts = "" | split: "," %}
@@ -57,7 +67,15 @@ layout: default
     {% endfor %}
 
     {% assign posts_to_show = person_posts %}
-    
+
+    <section aria-labelledby="stories-by-{{ page.slug }}">
+      <div class="section-header">
+        <h2 id="stories-by-{{ page.slug }}" class="section-title">
+          Stories by <br />
+          <span class="text-on-tertiary-container">{{ page.name }}.</span>
+        </h2>
+      </div>
+
     {% if posts_to_show.size > 0 %}
 
     <!-- Featured Post -->
@@ -81,6 +99,7 @@ layout: default
       <p class="text-on-surface-variant">Check back later for more updates from the trail.</p>
     </div>
     {% endif %}
+    </section>
 
   </div>
 </main>

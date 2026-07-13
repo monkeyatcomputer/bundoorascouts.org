@@ -5,3 +5,5 @@ description: "Meet Peter, Rover Advisor with Bundoora Scout Group supporting the
 alias: 
 section: rovers
 ---
+
+Peter is the trusted Rover advisor for our Handfield Rover Unit. He supports the Unit's young adults as they lead their own program and adventures.
