@@ -44,7 +44,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
           <span>Expedition Tracker</span>
         </div>
 
-        <h1 id="expedition-hero-title" class="hero-title">
+        <h1 class="hero-title">
           {% assign title_words = page.title | split: " " %}
           {% for word in title_words %}
           {% if forloop.last %}
@@ -297,17 +297,9 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
   (function () {
     'use strict';
 
-    // ─── Hero title word-by-word GSAP reveal ───────────────────────────────────
+    // ─── Content reveals ───────────────────────────────────────────────────────
     window.addEventListener('load', function () {
       if (typeof gsap === 'undefined') return;
-
-      // Split h1 words into spans for stagger animation
-      const titleEl = document.getElementById('expedition-hero-title');
-      if (titleEl) {
-        gsap.from(titleEl, {
-          y: 40, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.2
-        });
-      }
 
       const revealEls = document.querySelectorAll('[data-gsap="reveal"]');
       if (revealEls.length > 0) {
