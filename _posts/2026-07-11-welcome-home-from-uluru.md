@@ -14,7 +14,7 @@ tags:
     - Uluru 2026
 ---
 
-They're home! After 15 days, thousands of kilometres, three buses, and a great deal of red dirt, our Uluru Adventure crew arrived back at Bundoora Scout Hall today.
+We're home! After 15 days, thousands of kilometres, three buses, and a great deal of red dirt, our Uluru Adventure crew arrived back at Bundoora Scout Hall today.
 
 Scouts, Venturers, and leaders began with muster day on 27 June, then left before sunrise the next morning. The convoy crossed Victoria to Broken Hill, travelled north through Coober Pedy, and reached Curtin Springs and Alice Springs before making the long run home through Gawler.
 
