@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+{% assign profile_image = page.profile_image %}
+{% unless profile_image %}
+  {% capture profile_image %}/assets/images/people/{{ page.slug }}.jpg{% endcapture %}
+{% endunless %}
 <header class="hero-shell bg-primary-container">
   <div class="hero-media">
     {% if page.image %}
@@ -15,27 +19,52 @@ layout: default
   </div>
 
   <div class="site-container hero-content">
-    <div class="hero-copy">
-      <span class="eyebrow eyebrow--brand">
-        The Campfire
-      </span>
-      <h1 class="hero-title">
-        Meet <span class="hero-title-accent">{{ page.name }}</span>
-      </h1>
-      <p class="hero-description">
-        Exploring stories shared by <span class="text-secondary font-bold">{{ page.name }}</span>.
-      </p>
+    <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_22rem]">
+      <div class="hero-copy">
+        <span class="eyebrow eyebrow--brand">
+          The Campfire
+        </span>
+        <h1 class="hero-title">
+          Meet <span class="hero-title-accent">{{ page.name }}</span>
+        </h1>
 
-      <div class="hero-actions">
-        <a href="/the-campfire" class="btn btn-pill bg-surface-container-highest/20 backdrop-blur-sm text-on-primary border border-white/10 hover:bg-secondary">All
-          Stories</a>
-        {% assign categories = site.posts | map: 'categories' | flatten | uniq %}
-        {% for category in categories %}
-        <a href="/the-campfire/section/{{ category | slugify }}"
-          class="btn btn-pill bg-surface-container-highest/20 backdrop-blur-sm text-on-primary border border-white/10 hover:bg-secondary">
-          {{ category }}
-        </a>
-        {% endfor %}
+        <div class="hero-meta">
+          <span class="hero-meta-item">
+            <span class="material-symbols-outlined hero-meta-icon" aria-hidden="true">person</span>
+            <span>{{ page.role }}</span>
+          </span>
+          {% if page.alias and page.alias != "" %}
+          <span class="hero-meta-item">
+            <span class="material-symbols-outlined hero-meta-icon" aria-hidden="true">local_fire_department</span>
+            <span>Known around the campfire as <strong>“{{ page.alias }}”</strong></span>
+          </span>
+          {% endif %}
+        </div>
+
+        <p class="hero-description">
+          Exploring stories shared by <span class="text-secondary font-bold">{{ page.name }}</span>.
+        </p>
+
+        <div class="hero-actions">
+          <a href="/the-campfire" class="btn btn-pill bg-surface-container-highest/20 backdrop-blur-sm text-on-primary border border-white/10 hover:bg-secondary">All
+            Stories</a>
+          {% assign categories = site.posts | map: 'categories' | flatten | uniq %}
+          {% for category in categories %}
+          <a href="/the-campfire/section/{{ category | slugify }}"
+            class="btn btn-pill bg-surface-container-highest/20 backdrop-blur-sm text-on-primary border border-white/10 hover:bg-secondary">
+            {{ category }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <div
+          class="h-48 w-48 overflow-hidden rounded-full border-8 border-white/20 bg-surface-container-high shadow-2xl sm:h-56 sm:w-56 lg:h-80 lg:w-80">
+          <img src="{{ profile_image | strip }}" alt="Portrait of {{ page.name }}" width="450" height="450"
+            loading="eager" fetchpriority="high" class="h-full w-full object-cover"
+            onerror="this.onerror=null;this.src='/assets/images/logo.png'" />
+        </div>
       </div>
     </div>
   </div>
