@@ -49,13 +49,13 @@
 
       <a href="mailto:?subject={{ page.title | url_encode }}&body=Check out this story from Bundoora Scouts: {{ site.url }}{{ page.url }}"
         class="flex h-10 min-w-0 items-center justify-center gap-2 rounded-xl bg-secondary px-3 text-xs font-bold text-white shadow-sm transition-all hover:opacity-90 sm:px-4">
-        <span class="material-symbols-outlined text-sm">mail</span>
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">mail</span>
         <span>Email</span>
       </a>
 
       <button id="copy-link-btn" data-url="{{ site.url }}{{ page.url }}"
         class="flex h-10 min-w-0 items-center justify-center gap-2 rounded-xl border border-outline-variant bg-white px-3 text-xs font-bold text-primary shadow-sm transition-all hover:border-primary sm:px-4">
-        <span class="material-symbols-outlined text-sm">link</span>
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">link</span>
         <span id="copy-btn-text">Copy Link</span>
       </button>
     </div>

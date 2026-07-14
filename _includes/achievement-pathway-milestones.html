@@ -43,7 +43,7 @@
 <!-- Back to Overview -->
 <div class="text-center mt-8">
   <a href="/sections/{{ page.section_slug }}/achievement-pathway#milestones" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
-    <span class="material-symbols-outlined text-sm">arrow_back</span>
+    <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_back</span>
     <span>Back to {{ section.name }} Pathway</span>
   </a>
 </div>

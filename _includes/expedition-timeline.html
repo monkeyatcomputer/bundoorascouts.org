@@ -9,7 +9,7 @@ Each card shows: day number, location, title, image, and a timed events list.
   <div class="flex items-center justify-between">
     <div>
       <div class="text-xs font-bold text-on-tertiary-container uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
-        <span class="material-symbols-outlined text-[14px]">hiking</span>
+        <span class="material-symbols-outlined text-[14px]" aria-hidden="true">hiking</span>
         The Journey
       </div>
       <h2 class="text-3xl md:text-4xl font-black text-primary tracking-tight font-headline">
@@ -25,12 +25,12 @@ Each card shows: day number, location, title, image, and a timed events list.
       <button id="timeline-prev"
         class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-200 shadow-sm"
         aria-label="Previous days" title="Skip back 1 day">
-        <span class="material-symbols-outlined">chevron_left</span>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
       </button>
       <button id="timeline-next"
         class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-200 shadow-sm"
         aria-label="Next days" title="Skip forward 1 day">
-        <span class="material-symbols-outlined">chevron_right</span>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
       </button>
     </div>
   </div>
@@ -61,7 +61,7 @@ Each card shows: day number, location, title, image, and a timed events list.
     <div class="text-center p-8 bg-primary/90 rounded-[2.5rem] border border-white/20 shadow-2xl max-w-xs mx-4">
       <div
         class="w-16 h-16 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-        <span class="material-symbols-outlined text-3xl">schedule</span>
+        <span class="material-symbols-outlined text-3xl" aria-hidden="true">schedule</span>
       </div>
       <div class="text-xl font-black font-headline uppercase tracking-widest mb-1">Coming Soon</div>
       <div class="text-sm opacity-80 leading-relaxed">The expedition hasn't started yet. Check back once the buses
@@ -298,7 +298,7 @@ Each card shows: day number, location, title, image, and a timed events list.
             }
             eventsHtml += [
               '<li class="flex items-start gap-2 text-xs' + currentStyles + '">',
-              '  <span class="material-symbols-outlined text-[14px] shrink-0 mt-0.5 ' + (isEventCurrent ? 'text-[#008F88]' : (ICON_COLOURS[ev.type] || 'text-on-surface-variant')) + '" style="font-variation-settings:\'FILL\' ' + (isEventCurrent ? 1 : 0) + '">',
+              '  <span class="material-symbols-outlined text-[14px] shrink-0 mt-0.5 ' + (isEventCurrent ? 'text-[#008F88]' : (ICON_COLOURS[ev.type] || 'text-on-surface-variant')) + '" style="font-variation-settings:\'FILL\' ' + (isEventCurrent ? 1 : 0) + '" aria-hidden="true">',
               ICONS[ev.type] || 'circle',
               '  </span>',
               '  <span><span class="font-bold text-on-surface-variant tabular-nums">' + timeStr + '</span><span class="ml-1.5 ' + (isEventCurrent ? 'text-primary' : 'text-on-surface') + '">' + ev.label + '</span>' + groupLabel + '</span>',
@@ -309,7 +309,7 @@ Each card shows: day number, location, title, image, and a timed events list.
         }
 
         var html = [
-          day.image ? '<div class="relative h-36 overflow-hidden"><img src="' + day.image + '" alt="' + day.title + '" width="800" height="450" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async"></div>' : '<div class="h-36 bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-4xl text-outline-variant">image_not_supported</span></div>',
+          day.image ? '<div class="relative h-36 overflow-hidden"><img src="' + day.image + '" alt="' + day.title + '" width="800" height="450" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async"></div>' : '<div class="h-36 bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-4xl text-outline-variant" aria-hidden="true">image_not_supported</span></div>',
           '<div class="p-4">',
           '  <div class="flex items-center mb-1"><span class="text-[10px] font-black uppercase tracking-widest ' + badgeColour + '">Day ' + day.day + '</span>' + statusChip + '</div>',
           '  <div class="text-[10px] font-bold text-on-tertiary-container uppercase tracking-tight mb-1">' + day.location + '</div>',

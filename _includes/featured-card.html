@@ -10,7 +10,7 @@
       class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
     {% else %}
     <div class="w-full h-full bg-primary/10 flex flex-col items-center justify-center text-primary/40">
-      <span class="material-symbols-outlined text-8xl mb-2 filled">local_fire_department</span>
+      <span class="material-symbols-outlined text-8xl mb-2 filled" aria-hidden="true">local_fire_department</span>
     </div>
     {% endif %}
     <div class="absolute top-6 left-6 flex flex-wrap gap-2">
@@ -24,7 +24,7 @@
   <div class="lg:w-2/5 p-6 sm:p-8 md:p-12 flex flex-col justify-center">
     <div
       class="flex items-center gap-3 mb-6 text-xs font-bold text-on-surface-variant uppercase tracking-widest opacity-60">
-      <span class="material-symbols-outlined text-sm">calendar_today</span>
+      <span class="material-symbols-outlined text-sm" aria-hidden="true">calendar_today</span>
       {{ p.date | date: "%B %d, %Y" }}
     </div>
 
@@ -68,7 +68,7 @@
 
       <a href="{{ p.url }}"
         class="btn btn-primary">
-        Read Story <span class="material-symbols-outlined text-xs sm:text-base">arrow_forward</span>
+        Read Story <span class="material-symbols-outlined text-xs sm:text-base" aria-hidden="true">arrow_forward</span>
       </a>
     </div>
   </div>

@@ -17,7 +17,7 @@ The Scout uniform is a source of pride for members, displaying their achievement
     <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/30 relative overflow-hidden group">
       <div class="absolute -right-8 -top-8 w-24 h-24 bg-tertiary/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
       <div class="w-12 h-12 rounded-2xl bg-tertiary flex items-center justify-center mb-6 shadow-ambient-md">
-        <span class="material-symbols-outlined text-white filled">person</span>
+        <span class="material-symbols-outlined text-white filled" aria-hidden="true">person</span>
       </div>
       <h3 class="text-2xl font-black text-primary mb-4 tracking-tight">Front</h3>
       <p class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">My Involvement</p>
@@ -33,7 +33,7 @@ The Scout uniform is a source of pride for members, displaying their achievement
     <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/30 relative overflow-hidden group">
       <div class="absolute -right-8 -top-8 w-24 h-24 bg-secondary/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
       <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center mb-6 shadow-ambient-md">
-        <span class="material-symbols-outlined text-white filled">explore</span>
+        <span class="material-symbols-outlined text-white filled" aria-hidden="true">explore</span>
       </div>
       <h3 class="text-2xl font-black text-primary mb-4 tracking-tight">Left Sleeve</h3>
       <p class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">My Journey</p>
@@ -49,7 +49,7 @@ The Scout uniform is a source of pride for members, displaying their achievement
     <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/30 relative overflow-hidden group">
       <div class="absolute -right-8 -top-8 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
       <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center mb-6 shadow-ambient-md">
-        <span class="material-symbols-outlined text-white filled">location_on</span>
+        <span class="material-symbols-outlined text-white filled" aria-hidden="true">location_on</span>
       </div>
       <h3 class="text-2xl font-black text-primary mb-4 tracking-tight">Right Sleeve</h3>
       <p class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">My Identity</p>

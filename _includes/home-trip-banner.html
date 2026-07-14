@@ -20,14 +20,14 @@ Usage: {% include home-trip-banner.html trip_url="/trip/uluru-2026" post=latest_
         <div class="mb-4 flex flex-wrap items-center gap-3">
           <span class="inline-flex items-center gap-2 rounded-full bg-white/12 px-3 py-1.5 text-xs font-black uppercase tracking-[0.08em] text-secondary-fixed-dim backdrop-blur">
             <span class="relative inline-flex h-5 w-5 items-center justify-center">
-              <span class="material-symbols-outlined filled text-[18px]">sensors</span>
+              <span class="material-symbols-outlined filled text-[18px]" aria-hidden="true">sensors</span>
               <span class="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-error ring-2 ring-tertiary"></span>
               <span class="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 animate-ping rounded-full bg-error"></span>
             </span>
             Expedition Live
           </span>
           <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-black uppercase tracking-[0.08em] text-white/80 backdrop-blur">
-            <span class="material-symbols-outlined text-[18px]">route</span>
+            <span class="material-symbols-outlined text-[18px]" aria-hidden="true">route</span>
             {{ trip_page.trip_stats }}
           </span>
         </div>
@@ -44,13 +44,13 @@ Usage: {% include home-trip-banner.html trip_url="/trip/uluru-2026" post=latest_
         <a href="{{ trip_page.url | relative_url }}"
           class="btn bg-white text-primary shadow-xl hover:bg-secondary-fixed">
           Track Now
-          <span class="material-symbols-outlined">arrow_forward</span>
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
         </a>
         {% if latest_post and latest_post.url != page.url %}
         <a href="{{ latest_post.url | relative_url }}"
           class="btn border border-white/18 bg-white/10 text-white backdrop-blur hover:bg-white/16">
           Latest Update
-          <span class="material-symbols-outlined">forum</span>
+          <span class="material-symbols-outlined" aria-hidden="true">forum</span>
         </a>
         {% endif %}
       </div>

@@ -19,7 +19,7 @@
         </p>
         <div class="flex justify-center">
           <a href="{{ page.badge_card.url }}" class="text-white px-8 py-4 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2" style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }});">
-            <span>{{ page.badge_card.button_text | default: 'Learn More' }}</span> <span class="material-symbols-outlined">arrow_forward</span>
+            <span>{{ page.badge_card.button_text | default: 'Learn More' }}</span> <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
           </a>
         </div>
       </div>

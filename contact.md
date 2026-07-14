@@ -65,7 +65,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
                     target="_blank" rel="noopener"
                     class="extranet-btn btn hidden text-white shadow-sm items-center justify-center"
                     style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: section.colour | default: '#100e4c' }});">
-                    Join {{ section.name }} <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    Join {{ section.name }} <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
                   </a>
                 {% endif %}
               {% endfor %}
@@ -179,7 +179,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
 
         <button type="submit" id="contact-submit"
                 class="btn btn-primary g-recaptcha" data-sitekey="{{ site.recapcha_site_key }}" data-callback="onSubmit" data-action="site_contact">
-          Send Message <span class="material-symbols-outlined">send</span>
+          Send Message <span class="material-symbols-outlined" aria-hidden="true">send</span>
         </button>
 
         <div class="text-xs text-on-surface-variant opacity-50">
@@ -199,7 +199,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
 
         <div class="surface-card-muted flex flex-row gap-6 p-6 sm:p-8 items-start not-prose">
           <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
-            <span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+            <span class="material-symbols-outlined text-primary text-2xl" aria-hidden="true">location_on</span>
           </div>
           <div class="flex-1">
             <h3 class="mt-0 font-headline font-bold text-primary text-2xl mb-2 leading-tight">Scout Hall</h3>
@@ -213,7 +213,7 @@ description: "Whether you want to enrol your child, volunteer as a leader, or ju
 
         <div class="surface-card-muted flex flex-row gap-6 p-6 sm:p-8 items-start not-prose">
           <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
-            <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+            <span class="material-symbols-outlined text-primary text-2xl" aria-hidden="true">schedule</span>
           </div>
           <div class="flex-1">
             <h3 class="mt-0 font-headline font-bold text-primary text-2xl mb-3 leading-tight">Meeting Times</h3>

@@ -27,7 +27,7 @@ Stay tuned for more updates as the adventure continues!
 
 <div class="my-8 text-center not-prose">
   <a href="/trip/ki-2023" class="inline-flex items-center gap-2 bg-primary text-on-primary-container px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-colors shadow-md">
-    <span class="material-symbols-outlined">explore</span>
+    <span class="material-symbols-outlined" aria-hidden="true">explore</span>
     View Expedition Tracker & Itinerary
   </a>
 </div>

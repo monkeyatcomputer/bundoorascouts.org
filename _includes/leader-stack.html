@@ -10,7 +10,7 @@
                alt="{{ leader.name }}" 
                width="96" height="96" loading="lazy" decoding="async"
                class="w-full h-full object-cover" 
-               onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'material-symbols-outlined text-primary/20 flex items-center justify-center h-full\'>person</span>'">
+               onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'material-symbols-outlined text-primary/20 flex items-center justify-center h-full\' aria-hidden=\'true\'>person</span>'">
         </a>
       </div>
     {% endfor %}

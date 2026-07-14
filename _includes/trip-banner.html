@@ -48,7 +48,7 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
       <div class="relative flex-shrink-0 hidden md:block">
         <div id="trip-banner-icon-bg"
           class="w-12 h-12 lg:w-14 lg:h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner">
-          <span id="trip-banner-icon" class="material-symbols-outlined filled text-2xl lg:text-3xl">explore</span>
+          <span id="trip-banner-icon" class="material-symbols-outlined filled text-2xl lg:text-3xl" aria-hidden="true">explore</span>
         </div>
         <div id="trip-banner-pulse"
           class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-error rounded-full border-2 border-primary-container hidden animate-ping">
@@ -68,10 +68,10 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
             <span class="text-white/20 text-xs hidden lg:block">•</span>
             <a href="{{ include.post.url }}"
               class="text-[10px] lg:text-xs font-black text-secondary-fixed-dim hover:text-white transition-colors uppercase tracking-widest flex items-center gap-1 group/blog">
-              <span class="material-symbols-outlined text-[14px]">forum</span>
+              <span class="material-symbols-outlined text-[14px]" aria-hidden="true">forum</span>
               Latest Update
               <span
-                class="material-symbols-outlined text-[14px] transition-transform group-hover/blog:-translate-y-0.5 group-hover/blog:translate-x-0.5">north_east</span>
+                class="material-symbols-outlined text-[14px] transition-transform group-hover/blog:-translate-y-0.5 group-hover/blog:translate-x-0.5" aria-hidden="true">north_east</span>
             </a>
           </div>
           {% endif %}
@@ -89,14 +89,14 @@ Usage: {% include trip-banner.html trip_url="/trip/uluru-2026" %}
       <a id="trip-banner-link" href="{{ trip_page.url }}"
         class="btn group/btn min-w-40 whitespace-nowrap bg-white text-primary shadow-xl hover:bg-secondary-fixed">
         <span id="trip-banner-btn-text">Track Trip</span>
-        <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+        <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" aria-hidden="true">arrow_forward</span>
       </a>
 
       <!-- Close Button -->
       <button id="trip-banner-close"
         class="text-white/50 hover:text-white transition-colors flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-black/10 backdrop-blur-sm flex-shrink-0"
         aria-label="Close banner">
-        <span class="material-symbols-outlined text-lg lg:text-xl">close</span>
+        <span class="material-symbols-outlined text-lg lg:text-xl" aria-hidden="true">close</span>
       </button>
     </div>
   </div>

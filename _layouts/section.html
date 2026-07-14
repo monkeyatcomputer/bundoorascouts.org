@@ -51,7 +51,7 @@ layout: default
 
       {% if section.time %}
       <div class="hero-detail">
-        <span class="material-symbols-outlined text-secondary">schedule</span>
+        <span class="material-symbols-outlined text-secondary" aria-hidden="true">schedule</span>
         <span class="text-sm font-bold tracking-wide">{{ section.time }}</span>
       </div>
       {% endif %}
@@ -60,7 +60,7 @@ layout: default
         <a href="{{ join_url }}"
           class="btn text-on-primary"
           style="background: linear-gradient(135deg, {{ page.colour | default: '#3f5e94' }}, {{ page.colour_dark | default: '#100e4c' }});">
-          {{ join_text }} <span class="material-symbols-outlined">arrow_forward</span>
+          {{ join_text }} <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
         </a>
         <a href="#explore" class="btn btn-ghost">
           Learn More

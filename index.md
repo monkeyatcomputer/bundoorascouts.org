@@ -46,7 +46,7 @@ image: "/uploads/hero/aerial.jpg"
       <p class="section-description mt-4">A progressive journey of discovery.</p>
     </div>
     <a href="/sections" class="btn btn-secondary flex-shrink-0">
-      View All Sections <span class="material-symbols-outlined">arrow_forward</span>
+      View All Sections <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
     </a>
   </div>
 
@@ -64,7 +64,7 @@ image: "/uploads/hero/aerial.jpg"
         <span class="text-on-tertiary-container">The Campfire.</span>
       </h2>
       <a href="/the-campfire" class="btn btn-secondary flex-shrink-0">
-        Read All Stories <span class="material-symbols-outlined">arrow_forward</span>
+        Read All Stories <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
       </a>
     </div>
 

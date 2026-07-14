@@ -40,7 +40,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
       <div class="hero-copy">
 
         <div class="eyebrow eyebrow--tertiary">
-          <span class="material-symbols-outlined hero-meta-icon">explore</span>
+          <span class="material-symbols-outlined hero-meta-icon" aria-hidden="true">explore</span>
           <span>Expedition Tracker</span>
         </div>
 
@@ -62,16 +62,16 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
 
         <div class="hero-meta">
           <div class="hero-meta-item">
-            <span class="material-symbols-outlined hero-meta-icon">calendar_today</span>
+            <span class="material-symbols-outlined hero-meta-icon" aria-hidden="true">calendar_today</span>
             <span>{% if page.start_date %}{{ page.start_date | date: "%d %b" }} – {{ page.end_date | date: "%d %b %Y"
               }}{% else %}{{ page.trip_dates }}{% endif %}</span>
           </div>
           <div class="hero-meta-item">
-            <span class="material-symbols-outlined hero-meta-icon">directions_bus</span>
+            <span class="material-symbols-outlined hero-meta-icon" aria-hidden="true">directions_bus</span>
             <span>{{ page.trip_vehicles | default: '3 Buses &amp; 3 Support 4WDs' }}</span>
           </div>
           <div class="hero-meta-item">
-            <span class="material-symbols-outlined hero-meta-icon">route</span>
+            <span class="material-symbols-outlined hero-meta-icon" aria-hidden="true">route</span>
             <span>{{ page.trip_stats | default: '15 Days · ~5,000 km' }}</span>
           </div>
         </div>
@@ -115,8 +115,9 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
     <div class="flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <button id="tm-play"
-          class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center hover:scale-105 transition-transform">
-          <span class="material-symbols-outlined" id="tm-play-icon">play_arrow</span>
+          class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center hover:scale-105 transition-transform"
+          aria-label="Play expedition timeline">
+          <span class="material-symbols-outlined" id="tm-play-icon" aria-hidden="true">play_arrow</span>
         </button>
         <div>
           <div class="text-[10px] font-black uppercase tracking-widest text-on-primary-container">Time Machine</div>
@@ -242,6 +243,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
       playBtn.addEventListener('click', function () {
         isPlaying = !isPlaying;
         icon.textContent = isPlaying ? 'pause' : 'play_arrow';
+        playBtn.setAttribute('aria-label', isPlaying ? 'Pause expedition timeline' : 'Play expedition timeline');
         if (isPlaying) {
           timer = setInterval(function () {
             currentTime += speed;
@@ -250,6 +252,7 @@ Script type="application/json" is never executed by browsers — safe XSS bounda
               isPlaying = false;
               clearInterval(timer);
               icon.textContent = 'play_arrow';
+              playBtn.setAttribute('aria-label', 'Play expedition timeline');
             }
             update();
           }, 400);

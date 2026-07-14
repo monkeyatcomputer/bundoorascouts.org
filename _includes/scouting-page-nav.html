@@ -32,7 +32,7 @@
       <a href="{{ prev_url }}" class="flex-1 group p-4 rounded-xl border border-outline-variant/30 hover:border-primary/30 hover:bg-surface-container-low transition-all">
         <div class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Previous</div>
         <div class="flex items-center gap-2 text-primary group-hover:translate-x-[-4px] transition-transform">
-          <span class="material-symbols-outlined">arrow_back</span>
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
           <span class="font-black">
             {% if prev_page_obj %}{{ prev_page_obj.title }}{% else %}{{ prev_slug | replace: "-", " " | capitalize }}{% endif %}
           </span>
@@ -49,7 +49,7 @@
           <span class="font-black">
             {% if next_page_obj %}{{ next_page_obj.title }}{% else %}{{ next_slug | replace: "-", " " | capitalize }}{% endif %}
           </span>
-          <span class="material-symbols-outlined">arrow_forward</span>
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
         </div>
       </a>
     {% else %}

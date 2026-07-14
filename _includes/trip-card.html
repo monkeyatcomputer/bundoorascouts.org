@@ -10,7 +10,7 @@
         class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
       {% else %}
       <div class="w-full h-full bg-primary/10 flex flex-col items-center justify-center text-primary/40">
-        <span class="material-symbols-outlined text-8xl mb-2 filled">explore</span>
+        <span class="material-symbols-outlined text-8xl mb-2 filled" aria-hidden="true">explore</span>
         <p class="font-headline font-bold text-xs uppercase tracking-widest">Expedition</p>
       </div>
       {% endif %}
@@ -39,7 +39,7 @@
     <div class="lg:w-2/5 p-6 sm:p-8 md:p-12 flex flex-col justify-center">
       <div
         class="flex items-center gap-3 mb-6 text-xs font-bold text-on-surface-variant uppercase tracking-widest opacity-60">
-        <span class="material-symbols-outlined text-sm">calendar_today</span>
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">calendar_today</span>
         {{ t.start_date | date: "%d %b" }} – {{ t.end_date | date: "%d %b %Y" }}
       </div>
 
@@ -56,7 +56,7 @@
         <div class="flex items-center gap-2 sm:gap-3">
           <div
             class="hidden sm:flex w-10 h-10 rounded-full bg-primary/5 items-center justify-center border border-outline-variant/20">
-            <span class="material-symbols-outlined text-primary text-xl">speed</span>
+            <span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">speed</span>
           </div>
           <div>
             <p class="text-[10px] uppercase text-on-surface-variant opacity-60 font-bold">Stats</p>
@@ -68,7 +68,7 @@
         <a href="{{ t.url }}"
           class="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-base font-black sm:font-bold text-secondary sm:text-white uppercase sm:normal-case tracking-tighter sm:tracking-normal bg-transparent sm:bg-primary px-0 sm:px-8 py-0 sm:py-3 rounded-none sm:rounded-xl hover:scale-105 transition-all sm:shadow-ambient-md">
           View <span class="hidden sm:inline">Trip</span> Details <span
-            class="material-symbols-outlined text-xs sm:text-base">arrow_forward</span>
+            class="material-symbols-outlined text-xs sm:text-base" aria-hidden="true">arrow_forward</span>
         </a>
       </div>
     </div>

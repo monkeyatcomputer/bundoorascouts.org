@@ -19,15 +19,15 @@
       <h3 class="text-xl font-headline font-bold text-primary mb-4">The Review Process</h3>
       <ul class="space-y-4">
         <li class="flex items-start gap-3">
-          <span class="material-symbols-outlined mt-1" style="color: {{ accent }};">check_circle</span>
+          <span class="material-symbols-outlined mt-1" style="color: {{ accent }};" aria-hidden="true">check_circle</span>
           <span class="text-on-surface-variant text-sm">Self-evaluation of your journey against the Promise &amp; Law.</span>
         </li>
         <li class="flex items-start gap-3">
-          <span class="material-symbols-outlined mt-1" style="color: {{ accent }};">check_circle</span>
+          <span class="material-symbols-outlined mt-1" style="color: {{ accent }};" aria-hidden="true">check_circle</span>
           <span class="text-on-surface-variant text-sm">Peer review with members of your Unit Council.</span>
         </li>
         <li class="flex items-start gap-3">
-          <span class="material-symbols-outlined mt-1" style="color: {{ accent }};">check_circle</span>
+          <span class="material-symbols-outlined mt-1" style="color: {{ accent }};" aria-hidden="true">check_circle</span>
           <span class="text-on-surface-variant text-sm">Final discussion with your Section Leader.</span>
         </li>
       </ul>
@@ -51,7 +51,7 @@
         <div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-surface-variant/50 hover:-translate-y-1 transition-transform duration-300">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-10 h-10 bg-secondary-container rounded-lg flex items-center justify-center text-on-secondary-container flex-shrink-0">
-              <span class="material-symbols-outlined">{{ icon }}</span>
+              <span class="material-symbols-outlined" aria-hidden="true">{{ icon }}</span>
             </div>
             <h4 class="font-bold text-primary">{{ area.title }}</h4>
           </div>
@@ -66,7 +66,7 @@
   <!-- Back to Overview -->
   <div class="text-center">
     <a href="/sections/{{ page.section_slug }}/achievement-pathway#personal-reflection" class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md" style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
-      <span class="material-symbols-outlined text-sm">arrow_back</span>
+      <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_back</span>
       <span>Back to {{ section.name }} Pathway</span>
     </a>
   </div>

@@ -24,7 +24,7 @@
         <div class="flex items-center gap-4 mb-4">
           <div class="w-12 h-12 rounded-full flex items-center justify-center"
             style="background-color: {{ accent }}1a;">
-            <span class="material-symbols-outlined text-2xl" style="color: {{ accent }};">flag</span>
+            <span class="material-symbols-outlined text-2xl" style="color: {{ accent }};" aria-hidden="true">flag</span>
           </div>
           <div>
             <h3 class="font-bold text-primary">The Goal</h3>
@@ -34,15 +34,15 @@
 
         <ul class="space-y-3 font-body text-sm text-on-surface-variant">
           <li class="flex items-start gap-2">
-            <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+            <span class="material-symbols-outlined text-secondary text-base" aria-hidden="true">check_circle</span>
             <span>Across at least <strong>{{ section_sia.areas_required }} different areas</strong></span>
           </li>
           <li class="flex items-start gap-2">
-            <span class="material-symbols-outlined text-secondary text-base">schedule</span>
+            <span class="material-symbols-outlined text-secondary text-base" aria-hidden="true">schedule</span>
             <span>Minimum <strong>{{ section_sia.hours_per_project }} hours</strong> per project</span>
           </li>
           <li class="flex items-start gap-2">
-            <span class="material-symbols-outlined text-secondary text-base">group</span>
+            <span class="material-symbols-outlined text-secondary text-base" aria-hidden="true">group</span>
             <span>Plan, Do, Review process required</span>
           </li>
         </ul>
@@ -108,7 +108,7 @@
     <a href="/sections/{{ page.section_slug }}/achievement-pathway#sia"
       class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md"
       style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
-      <span class="material-symbols-outlined text-sm">arrow_back</span>
+      <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_back</span>
       <span>Back to {{ section.name }} Pathway</span>
     </a>
   </div>

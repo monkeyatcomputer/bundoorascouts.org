@@ -7,10 +7,10 @@
     <details class="group">
       <summary class="flex items-center justify-between py-2 px-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
         <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary">{{ active_item.icon | default: 'menu' }}</span>
+          <span class="material-symbols-outlined text-primary" aria-hidden="true">{{ active_item.icon | default: 'menu' }}</span>
           <span class="font-bold text-primary">{{ active_item.name | default: 'Pathway Menu' }}</span>
         </div>
-        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_less</span>
+        <span class="material-symbols-outlined transition-transform group-open:rotate-180" aria-hidden="true">expand_less</span>
       </summary>
       
       <nav class="flex flex-col gap-1 p-2 border-t border-outline-variant/10 max-h-[50vh] overflow-y-auto">
@@ -28,7 +28,7 @@
           {% assign url = item.url | replace: ':section', page.section_slug %}
           
           <a href="{{ url }}" class="flex items-center gap-3 py-1.5 px-3 rounded-lg font-medium {% if is_active %}bg-secondary-container text-on-secondary-container{% else %}text-on-surface-variant hover:bg-surface-container-high{% endif %}">
-            <span class="material-symbols-outlined">{{ item.icon }}</span>
+            <span class="material-symbols-outlined" aria-hidden="true">{{ item.icon }}</span>
             <span class="text-label-lg">{{ item.name }}</span>
           </a>
         {% endfor %}
@@ -56,7 +56,7 @@
         {% assign url = item.url | replace: ':section', page.section_slug %}
         
         <a href="{{ url }}" class="flex items-center gap-3 p-3 rounded-lg transition-all hover:translate-x-1 font-medium {% if is_active %}bg-secondary-container text-on-secondary-container{% else %}text-on-surface-variant hover:bg-surface-container-high{% endif %}">
-          <span class="material-symbols-outlined">{{ item.icon }}</span>
+          <span class="material-symbols-outlined" aria-hidden="true">{{ item.icon }}</span>
           <span class="text-label-lg">{{ item.name }}</span>
         </a>
       {% endfor %}

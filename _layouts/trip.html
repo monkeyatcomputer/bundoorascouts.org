@@ -51,7 +51,7 @@ layout: default
     <div class="site-container hero-content">
       <div class="hero-copy">
         <div class="eyebrow eyebrow--tertiary">
-          <span class="material-symbols-outlined hero-meta-icon">explore</span>
+          <span class="material-symbols-outlined hero-meta-icon" aria-hidden="true">explore</span>
           <span>Adventure Trip</span>
         </div>
 
@@ -79,7 +79,7 @@ layout: default
                   onerror="this.src='/assets/images/logo.png'">
               </a>
               {% else %}
-              <span class="material-symbols-outlined text-white">person</span>
+              <span class="material-symbols-outlined text-white" aria-hidden="true">person</span>
               {% endif %}
             </div>
             <span class="font-bold text-sm capitalize">
@@ -93,7 +93,7 @@ layout: default
           {% endif %}
 
           <div class="hero-meta-item">
-            <span class="material-symbols-outlined hero-meta-icon">calendar_today</span>
+            <span class="material-symbols-outlined hero-meta-icon" aria-hidden="true">calendar_today</span>
             <span>{{ page.date | date: "%B %d, %Y" }}</span>
           </div>
         </div>
@@ -106,7 +106,7 @@ layout: default
   <section class="bg-error-container text-on-error-container border-y border-error/20">
     <div class="max-w-7xl mx-auto px-6 py-6 text-center">
       <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-        <span class="material-symbols-outlined text-error text-3xl">event_busy</span>
+        <span class="material-symbols-outlined text-error text-3xl" aria-hidden="true">event_busy</span>
         <div>
           <h4 class="text-xl font-black font-headline uppercase tracking-tight">All Seats Taken!</h4>
           <p class="font-medium opacity-90">All seats for this trip have now been filled. You can join the waiting list
@@ -122,7 +122,7 @@ layout: default
   <section class="bg-primary-container text-on-primary-container border-y border-primary/20">
     <div class="max-w-7xl mx-auto px-6 py-6 text-center">
       <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-        <span class="material-symbols-outlined text-primary text-3xl">directions_bus</span>
+        <span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">directions_bus</span>
         <div>
           <h4 class="text-xl font-black font-headline uppercase tracking-tight">Expedition Underway</h4>
           <p class="font-medium opacity-90">This expedition has started. You can register your interest for the next one below.</p>
@@ -137,7 +137,7 @@ layout: default
   <section class="bg-secondary-container text-on-secondary-container border-y border-secondary/20">
     <div class="max-w-7xl mx-auto px-6 py-6 text-center">
       <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-        <span class="material-symbols-outlined text-secondary text-3xl">task_alt</span>
+        <span class="material-symbols-outlined text-secondary text-3xl" aria-hidden="true">task_alt</span>
         <div>
           <h4 class="text-xl font-black font-headline uppercase tracking-tight">Trip Completed!</h4>
           <p class="font-medium opacity-90">This trip has concluded. Express your interest below for the next one!</p>
@@ -176,7 +176,7 @@ layout: default
         <div class="sticky top-32 space-y-8">
           <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/10 shadow-sm">
             <h3 class="font-headline text-2xl font-bold text-primary mb-6 flex items-center gap-3">
-              <span class="material-symbols-outlined text-secondary">info</span>
+              <span class="material-symbols-outlined text-secondary" aria-hidden="true">info</span>
               Trip Details
             </h3>
 
@@ -184,7 +184,7 @@ layout: default
               {% if page.trip_details.dates %}
               <div class="flex gap-4">
                 <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-on-secondary-container">calendar_month</span>
+                  <span class="material-symbols-outlined text-on-secondary-container" aria-hidden="true">calendar_month</span>
                 </div>
                 <div>
                   <span
@@ -197,7 +197,7 @@ layout: default
               {% if page.trip_details.cost %}
               <div class="flex gap-4">
                 <div class="w-12 h-12 rounded-xl bg-tertiary-container flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-on-tertiary-container">payments</span>
+                  <span class="material-symbols-outlined text-on-tertiary-container" aria-hidden="true">payments</span>
                 </div>
                 <div>
                   <span
@@ -212,7 +212,7 @@ layout: default
           {% if page.safety %}
           <div class="bg-primary/5 p-8 rounded-3xl border border-primary/10">
             <h4 class="font-headline font-bold text-primary mb-4 flex items-center gap-2">
-              <span class="material-symbols-outlined text-sm">verified_user</span>
+              <span class="material-symbols-outlined text-sm" aria-hidden="true">verified_user</span>
               Safety First
             </h4>
             <p class="text-on-surface-variant leading-relaxed">

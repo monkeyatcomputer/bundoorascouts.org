@@ -15,7 +15,7 @@ Renders a Leaflet.js map showing the expedition route.
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
     <div>
       <div class="text-xs font-bold text-on-tertiary-container uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
-        <span class="material-symbols-outlined text-[14px]">route</span>
+        <span class="material-symbols-outlined text-[14px]" aria-hidden="true">route</span>
         The Route
       </div>
       <h2 class="text-3xl md:text-4xl font-black text-primary tracking-tight font-headline">
@@ -45,7 +45,7 @@ Renders a Leaflet.js map showing the expedition route.
       <div class="text-center p-8 bg-primary/90 rounded-[2.5rem] border border-white/20 shadow-2xl max-w-xs mx-4">
         <div
           class="w-16 h-16 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-          <span class="material-symbols-outlined text-3xl">schedule</span>
+          <span class="material-symbols-outlined text-3xl" aria-hidden="true">schedule</span>
         </div>
         <div class="text-[10px] font-black font-headline uppercase tracking-[0.2em] mb-1" id="map-not-started-title">
           Coming Soon</div>
@@ -59,13 +59,13 @@ Renders a Leaflet.js map showing the expedition route.
     <div class="absolute top-4 left-4 flex flex-col gap-2 z-[400]">
       <button id="map-btn-focus"
         class="w-10 h-10 rounded-xl bg-white shadow-lg text-primary flex items-center justify-center hover:bg-[#008F88] hover:text-white transition-all duration-300"
-        title="Focus Group">
-        <span class="material-symbols-outlined">my_location</span>
+        aria-label="Focus map on group" title="Focus Group">
+        <span class="material-symbols-outlined" aria-hidden="true">my_location</span>
       </button>
       <button id="map-btn-full"
         class="w-10 h-10 rounded-xl bg-white shadow-lg text-primary flex items-center justify-center hover:bg-[#008F88] hover:text-white transition-all duration-300"
-        title="Show Full Route">
-        <span class="material-symbols-outlined">route</span>
+        aria-label="Show full route" title="Show Full Route">
+        <span class="material-symbols-outlined" aria-hidden="true">route</span>
       </button>
     </div>
 
@@ -409,7 +409,7 @@ Renders a Leaflet.js map showing the expedition route.
           var isAllGroups = members.length === groupsArray.length;
           var badgeHtml = isAllGroups ? '' : '<div style="position:absolute;top:100%;margin-top:-4px;left:50%;transform:translateX(-50%);background:white;color:' + color + ';font-size:10px;font-weight:900;padding:2px 4px;border-radius:4px;border:1px solid ' + color + ';white-space:nowrap;text-align:center;">' + (isStacked ? members.map(function (m) { return m.id; }).join('<br>') : s.id) + '</div>';
 
-          var iconHtml = '<div style="background:' + color + ';color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);border:2px solid white;"><span class="material-symbols-outlined" style="font-size:20px;">' + s.icon + '</span>' + badgeHtml + '</div>';
+          var iconHtml = '<div style="background:' + color + ';color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);border:2px solid white;"><span class="material-symbols-outlined" style="font-size:20px;" aria-hidden="true">' + s.icon + '</span>' + badgeHtml + '</div>';
 
           var marker = L.marker(s.pos, {
             icon: L.divIcon({ className: '', iconSize: [32, 32], iconAnchor: [16, 16], html: iconHtml }),
@@ -829,7 +829,7 @@ Renders a Leaflet.js map showing the expedition route.
               var isCamp = ev.type === 'arrive' || ev.type === 'camp';
               var iconName = isCamp ? 'camping' : 'star';
               var iconColor = isCamp ? '#100e4c' : '#008F88';
-              var iconHtml = '<div style="background:white;color:' + iconColor + ';width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.2);border:2px solid ' + iconColor + ';"><span class="material-symbols-outlined" style="font-size:16px;">' + iconName + '</span></div>';
+              var iconHtml = '<div style="background:white;color:' + iconColor + ';width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.2);border:2px solid ' + iconColor + ';"><span class="material-symbols-outlined" style="font-size:16px;" aria-hidden="true">' + iconName + '</span></div>';
 
               var m = L.marker([ev.loc[0], ev.loc[1]], {
                 icon: L.divIcon({ html: iconHtml, className: '', iconSize: [24, 24], iconAnchor: [12, 12] })
@@ -851,7 +851,7 @@ Renders a Leaflet.js map showing the expedition route.
         if (day.events) {
           day.events.forEach(function (ev) {
             if (ev.loc && ev.type !== 'arrive' && ev.type !== 'depart') {
-              var iconHtml = '<div style="background:white;color:#008F88;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.2);border:2px solid #008F88;"><span class="material-symbols-outlined" style="font-size:16px;">star</span></div>';
+              var iconHtml = '<div style="background:white;color:#008F88;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.2);border:2px solid #008F88;"><span class="material-symbols-outlined" style="font-size:16px;" aria-hidden="true">star</span></div>';
               var m = L.marker([ev.loc[0], ev.loc[1]], {
                 icon: L.divIcon({ html: iconHtml, className: '', iconSize: [24, 24], iconAnchor: [12, 12] })
               }).bindPopup('<strong>' + ev.label + '</strong><br>' + (ev.detail || ''));
@@ -932,12 +932,12 @@ Renders a Leaflet.js map showing the expedition route.
         eventMarkers.forEach(function (m) {
           if (m.dayIdx === dayIdx) {
             // Highlight!
-            var highlightedIconHtml = '<div style="background:#008F88;color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.3);border:2px solid white;animation:expedition-pulse 2s infinite;"><span class="material-symbols-outlined" style="font-size:20px;">star</span></div>';
+            var highlightedIconHtml = '<div style="background:#008F88;color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.3);border:2px solid white;animation:expedition-pulse 2s infinite;"><span class="material-symbols-outlined" style="font-size:20px;" aria-hidden="true">star</span></div>';
             m.marker.setIcon(L.divIcon({ html: highlightedIconHtml, className: '', iconSize: [32, 32], iconAnchor: [16, 16] }));
             m.marker.setZIndexOffset(1000); // Bring to front!
           } else {
             // Revert to normal!
-            var normalIconHtml = '<div style="background:white;color:#008F88;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.2);border:2px solid #008F88;"><span class="material-symbols-outlined" style="font-size:16px;">star</span></div>';
+            var normalIconHtml = '<div style="background:white;color:#008F88;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.2);border:2px solid #008F88;"><span class="material-symbols-outlined" style="font-size:16px;" aria-hidden="true">star</span></div>';
             m.marker.setIcon(L.divIcon({ html: normalIconHtml, className: '', iconSize: [24, 24], iconAnchor: [12, 12] }));
             m.marker.setZIndexOffset(0);
           }

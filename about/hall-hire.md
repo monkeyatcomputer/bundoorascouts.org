@@ -20,7 +20,7 @@ The hall is available for casual one‑off bookings or longer‑term regular hir
     <div class="surface-card p-6 sm:p-8 flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
       <div class="flex items-center gap-4 mb-6">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
-          <span class="material-symbols-outlined filled text-2xl text-secondary">straighten</span>
+          <span class="material-symbols-outlined filled text-2xl text-secondary" aria-hidden="true">straighten</span>
         </div>
         <h3 class="font-headline font-bold text-xl text-primary">Spacious Hall</h3>
       </div>
@@ -33,7 +33,7 @@ The hall is available for casual one‑off bookings or longer‑term regular hir
     <div class="surface-card p-6 sm:p-8 flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
       <div class="flex items-center gap-4 mb-6">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
-          <span class="material-symbols-outlined filled text-2xl text-secondary">countertops</span>
+          <span class="material-symbols-outlined filled text-2xl text-secondary" aria-hidden="true">countertops</span>
         </div>
         <h3 class="font-headline font-bold text-xl text-primary">Full Kitchen</h3>
       </div>
@@ -46,7 +46,7 @@ The hall is available for casual one‑off bookings or longer‑term regular hir
     <div class="surface-card p-6 sm:p-8 flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
       <div class="flex items-center gap-4 mb-6">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
-          <span class="material-symbols-outlined filled text-2xl text-secondary">groups</span>
+          <span class="material-symbols-outlined filled text-2xl text-secondary" aria-hidden="true">groups</span>
         </div>
         <h3 class="font-headline font-bold text-xl text-primary">Capacity</h3>
       </div>
@@ -59,7 +59,7 @@ The hall is available for casual one‑off bookings or longer‑term regular hir
     <div class="surface-card p-6 sm:p-8 flex flex-col items-start hover:scale-[1.01] transition-transform duration-300">
       <div class="flex items-center gap-4 mb-6">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-secondary/10">
-          <span class="material-symbols-outlined filled text-2xl text-secondary">ac_unit</span>
+          <span class="material-symbols-outlined filled text-2xl text-secondary" aria-hidden="true">ac_unit</span>
         </div>
         <h3 class="font-headline font-bold text-xl text-primary">Modern Comfort</h3>
       </div>

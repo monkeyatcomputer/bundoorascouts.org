@@ -77,7 +77,7 @@ layout: default
     </div>
     {% else %}
     <div class="surface-card-muted text-center py-16 px-6">
-      <span class="material-symbols-outlined text-6xl text-outline-variant mb-4">local_fire_department</span>
+      <span class="material-symbols-outlined text-6xl text-outline-variant mb-4" aria-hidden="true">local_fire_department</span>
       <h2 class="text-2xl font-bold text-primary">No stories found</h2>
       <p class="text-on-surface-variant">Check back later for more updates from the trail.</p>
     </div>
@@ -91,7 +91,7 @@ layout: default
         class="btn btn-primary group relative overflow-hidden px-8 sm:px-12">
         <span class="relative z-10">Load More Stories</span>
         <span
-          class="material-symbols-outlined relative z-10 group-hover:translate-y-1 transition-transform">expand_more</span>
+          class="material-symbols-outlined relative z-10 group-hover:translate-y-1 transition-transform" aria-hidden="true">expand_more</span>
         <div
           class="absolute inset-0 bg-secondary translate-y-full group-hover:translate-y-0 transition-transform duration-300">
         </div>
@@ -112,7 +112,7 @@ layout: default
           // Loading state
           btn.disabled = true;
           const originalText = btn.innerHTML;
-          btn.innerHTML = '<span class="animate-spin material-symbols-outlined">sync</span> Loading...';
+          btn.innerHTML = '<span class="animate-spin material-symbols-outlined" aria-hidden="true">sync</span> Loading...';
 
           try {
             const response = await fetch(nextPageUrl);

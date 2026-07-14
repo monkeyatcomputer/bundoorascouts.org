@@ -112,7 +112,7 @@
           if (type !== 'IMPORTANT') {
             const header = document.createElement('p');
             header.classList.add('markdown-alert-title');
-            header.innerHTML = `<span class="material-symbols-outlined">${config.icon}</span>${type}`;
+            header.innerHTML = `<span class="material-symbols-outlined" aria-hidden="true">${config.icon}</span>${type}`;
             bq.insertBefore(header, firstP);
           }
 

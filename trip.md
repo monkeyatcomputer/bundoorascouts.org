@@ -41,7 +41,7 @@ permalink: /trip/
       {% include trip-contact.html variant="next_adventure" %}
     {% else %}
       <div class="text-center py-24 bg-surface-container-low rounded-3xl border border-dashed border-outline-variant">
-        <span class="material-symbols-outlined text-6xl text-outline-variant mb-4">explore</span>
+        <span class="material-symbols-outlined text-6xl text-outline-variant mb-4" aria-hidden="true">explore</span>
         <h3 class="text-2xl font-bold text-primary">No expeditions found</h3>
         <p class="text-on-surface-variant">Check back later for updates on our upcoming adventures.</p>
       </div>

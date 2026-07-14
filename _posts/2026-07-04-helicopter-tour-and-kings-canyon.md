@@ -33,8 +33,8 @@ It was a big day, but a very good one. These are the moments that make all the p
     <a href="/trip/uluru-2026"
        class="text-on-primary px-8 py-4 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2"
        style="background: linear-gradient(135deg, #3f5e94, #100e4c);">
-        <span class="material-symbols-outlined group-hover:rotate-12 transition-transform">explore</span>
+        <span class="material-symbols-outlined group-hover:rotate-12 transition-transform" aria-hidden="true">explore</span>
         Track the Uluru Expedition
-        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
     </a>
 </div>

@@ -136,18 +136,18 @@ file.extname == '.jpeg' or file.extname == '.JPEG' or file.extname == '.webp' or
   class="fixed inset-0 z-[2000] bg-primary/95 backdrop-blur-xl hidden flex items-center justify-center p-4 md:p-12"
   onclick="closeLightbox()">
   <button class="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[2010]"
-    onclick="closeLightbox()">
-    <span class="material-symbols-outlined text-4xl">close</span>
+    onclick="closeLightbox()" aria-label="Close image viewer">
+    <span class="material-symbols-outlined text-4xl" aria-hidden="true">close</span>
   </button>
   <button
     class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/30 hover:text-white transition-all hover:scale-110 z-[2010] bg-white/5 p-4 rounded-full backdrop-blur-md"
-    onclick="navigateLightbox(-1, event)">
-    <span class="material-symbols-outlined text-4xl">chevron_left</span>
+    onclick="navigateLightbox(-1, event)" aria-label="Previous image">
+    <span class="material-symbols-outlined text-4xl" aria-hidden="true">chevron_left</span>
   </button>
   <button
     class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/30 hover:text-white transition-all hover:scale-110 z-[2010] bg-white/5 p-4 rounded-full backdrop-blur-md"
-    onclick="navigateLightbox(1, event)">
-    <span class="material-symbols-outlined text-4xl">chevron_right</span>
+    onclick="navigateLightbox(1, event)" aria-label="Next image">
+    <span class="material-symbols-outlined text-4xl" aria-hidden="true">chevron_right</span>
   </button>
   <div class="relative w-full h-full flex items-center justify-center pointer-events-none">
     <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Expanded gallery image"
@@ -158,7 +158,7 @@ file.extname == '.jpeg' or file.extname == '.JPEG' or file.extname == '.webp' or
 {% endunless %}
 {% else %}
 <div class="my-8 p-6 bg-surface-container-low rounded-2xl border border-dashed border-outline-variant text-center">
-  <span class="material-symbols-outlined text-4xl text-outline-variant mb-3">image_not_supported</span>
+  <span class="material-symbols-outlined text-4xl text-outline-variant mb-3" aria-hidden="true">image_not_supported</span>
   <p class="text-on-surface-variant font-bold">No images found in {{ gallery_folder }}</p>
   <div class="mt-4 pt-4 border-t border-outline-variant/30 not-prose">
     <p class="text-xs text-on-surface-variant/60">Make sure the path is correct and images are present in the

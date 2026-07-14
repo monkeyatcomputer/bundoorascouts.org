@@ -10,7 +10,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
       <div class="bg-surface-container-high p-4 rounded-lg">
         <div class="flex items-center gap-3 mb-2">
-          <span class="material-symbols-outlined text-primary">schedule</span>
+          <span class="material-symbols-outlined text-primary" aria-hidden="true">schedule</span>
           <p class="font-bold text-on-surface">Duration</p>
         </div>
         <p class="text-on-surface-variant text-sm">{{ page.leadership_course.duration }}</p>
@@ -18,7 +18,7 @@
 
       <div class="bg-surface-container-high p-4 rounded-lg">
         <div class="flex items-center gap-3 mb-2">
-          <span class="material-symbols-outlined text-primary">groups</span>
+          <span class="material-symbols-outlined text-primary" aria-hidden="true">groups</span>
           <p class="font-bold text-on-surface">Who is it for?</p>
         </div>
         <p class="text-on-surface-variant text-sm">{{ page.leadership_course.target_audience }}</p>
@@ -34,7 +34,7 @@
 
     <div class="bg-primary-container p-6 rounded-lg text-on-primary-container mb-6">
       <div class="flex items-center gap-3 mb-2">
-        <span class="material-symbols-outlined text-on-primary-container">info</span>
+        <span class="material-symbols-outlined text-on-primary-container" aria-hidden="true">info</span>
         <p class="font-bold">How to register</p>
       </div>
       <p class="text-sm">{{ page.leadership_course.registration_info }}</p>
@@ -46,7 +46,7 @@
       <a href="/sections/{{ page.section_slug }}/achievement-pathway#leadership-course"
         class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md"
         style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
-        <span class="material-symbols-outlined text-sm">arrow_back</span>
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_back</span>
         <span>Back to {{ section.name }} Pathway</span>
       </a>
     </div>

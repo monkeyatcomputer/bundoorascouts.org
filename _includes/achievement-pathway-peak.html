@@ -40,7 +40,7 @@
           <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant/30 flex items-start gap-4">
         {% endif %}
             <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-primary/5 group-hover:bg-primary/10 transition-colors">
-              <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">stars</span>
+              <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">stars</span>
             </div>
             <p class="text-on-surface leading-relaxed text-sm pt-2 font-medium">{{ req.text }}</p>
         {% if req.url != "" %}
@@ -61,7 +61,7 @@
   <a href="/sections/{{ page.section_slug }}/achievement-pathway#peak-award"
     class="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-md"
     style="background: linear-gradient(135deg, {{ section.colour | default: '#3f5e94' }}, {{ section.colour_dark | default: '#100e4c' }});">
-    <span class="material-symbols-outlined text-sm">arrow_back</span>
+    <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_back</span>
     <span>Back to {{ section.name }} Pathway</span>
   </a>
 </div>

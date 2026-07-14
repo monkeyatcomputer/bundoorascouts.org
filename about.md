@@ -43,7 +43,7 @@ All our leaders are Working with Children Check verified, first-aid trained, and
 <div class="mt-6">
   <a href="/about/our-leaders" class="inline-flex items-center gap-2 text-secondary font-bold hover:text-primary transition-all group">
     <span>Meet our full team of leaders</span>
-    <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+    <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
   </a>
 </div>
 
@@ -65,7 +65,7 @@ We meet regularly at our hall in Bundoora. The hall is also available for hire t
 <div class="mt-6">
   <a href="/about/hall-hire" class="inline-flex items-center gap-2 text-secondary font-bold hover:text-primary transition-all group">
     <span>View hall availability & hire rates</span>
-    <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+    <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
   </a>
 </div>
 
@@ -83,7 +83,7 @@ We are incredibly grateful to the local businesses and organisations that suppor
 <div class="mt-6">
   <a href="/about/our-sponsors" class="inline-flex items-center gap-2 text-secondary font-bold hover:text-primary transition-all group">
     <span>See all our sponsors</span>
-    <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+    <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
   </a>
 </div>
 
