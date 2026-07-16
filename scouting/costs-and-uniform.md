@@ -4,6 +4,9 @@ title: "Costs & Uniform"
 permalink: /scouting/costs-and-uniform
 badge: "Getting Started"
 description: "Practical information about the Scout uniform, where to buy it, and the costs associated with joining Bundoora Scout Group."
+image: /assets/images/scouting/costs-uniform.jpg
+image_alt: "Children roasting marshmallows together around a campfire"
+image_position: "center 42%"
 ---
 
 ## The Scout Uniform
@@ -13,6 +16,8 @@ The basic uniform is a shirt and scarf (which is usually held together by a wogg
 Bundoora Scouts may be able to help you with a secondhand uniform. The scarf is usually supplied by the Group (Bundoora Scouts is proud of its own colours). Check with your Leader if you also need to order a woggle (~$4) and belt (~$17).
 
 *All prices are subject to change.*
+
+{% include scouting-photo.html src="/assets/images/scouting/camping-costs.jpg" alt="A tent pitched beneath tall trees in a forest" caption="Activity fees help make memorable camps and outdoor adventures possible." position="center 52%" %}
 
 ## What is the cost?
 

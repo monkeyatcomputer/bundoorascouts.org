@@ -4,6 +4,9 @@ title: "Benefits & Impact"
 permalink: /scouting/benefits-and-impact
 badge: "Why Scouting?"
 description: "Discover the lifelong advantages of Scouting, from building resilience and leadership to improving mental health and academic outcomes."
+image: /assets/images/scouting/benefits-impact.jpg
+image_alt: "A child building confidence on a high ropes course"
+image_position: "center 40%"
 scouting_effect:
   - icon: "auto_awesome"
     stat: "9.4%"
@@ -61,6 +64,8 @@ scouting_effect:
 ## The benefits of Scouting
 
 There are many lifelong advantages that young people get from their years enjoying Scouting with friends and family. Here are some of the opportunities your child will get:
+
+{% include scouting-photo.html src="/assets/images/scouting/challenge-together.jpg" alt="Friends supporting one another while rock climbing outdoors" caption="Scouting gives every young person room to try, grow and support others." position="center 42%" %}
 
 ### Resilience
 

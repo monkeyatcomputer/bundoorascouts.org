@@ -4,11 +4,16 @@ title: "What is Scouting?"
 permalink: /scouting/what-is-scouting
 badge: "Our Foundations"
 description: "Learn about the Scout Method, our values, and the Promise and Law that underpin everything we do in the global Scouting movement."
+image: /assets/images/scouting/scout-method.jpg
+image_alt: "Young people navigating outdoors with a map and compass"
+image_position: "center 48%"
 ---
 
 ## A Global Movement
 
 Scouting is a non-formal type of education. Young people learn new skills and responsible independence through the **Scout Method**. Although our programs are continually updated to remain contemporary, the Scout Method has stood the test of time.
+
+{% include scouting-photo.html src="/assets/images/scouting/child-safety.jpg" alt="Young people hiking together through a forest" caption="Learning by doing, in nature and as part of a team." position="center 48%" %}
 
 ## The Scout Method
 

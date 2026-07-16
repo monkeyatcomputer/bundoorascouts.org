@@ -4,6 +4,9 @@ title: "The Program"
 permalink: /scouting/the-program
 badge: "One Journey"
 description: "Explore the 'One Journey, One Program' framework that delivers life skills, leadership, and adventure across all sections of Scouting."
+image: /assets/images/scouting/the-program.jpg
+image_alt: "A group of young people mountain biking together outdoors"
+image_position: "center 46%"
 ---
 
 ## One Journey, One Program
@@ -11,6 +14,8 @@ description: "Explore the 'One Journey, One Program' framework that delivers lif
 Every Scout has the opportunity to achieve with our program. Our framework **One Journey, One Program**, features a continuous and progressive series of personal achievements.
 
 The program aims to deliver a consistent developmental structure from Section to Section, providing young people the opportunity to develop their own Scouting Journey. The Achievement Pathways aims to deliver life skills, leadership, and teamwork opportunities, through participation in activities that are adventurous, fun, challenging and inclusive.
+
+{% include scouting-photo.html src="/assets/images/scouting/adventure-skills.jpg" alt="Children paddling canoes together on a river" caption="The program turns shared adventures into practical skills and personal progression." position="center 50%" %}
 
 ## Achievement Pathways
 

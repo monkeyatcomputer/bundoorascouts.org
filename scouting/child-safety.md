@@ -4,11 +4,16 @@ title: "Child Safety"
 permalink: /scouting/child-safety
 badge: "Zero Tolerance"
 description: "Our commitment to ensuring Scouting is a safe place for young people through strict protocols, training, and a zero-tolerance approach to abuse."
+image: /assets/images/scouting/child-safety.jpg
+image_alt: "A group of young people walking together on a forest trail"
+image_position: "center 45%"
 ---
 
 ## Our Commitment to Child Safety
 
 Scouts Victoria is a Child Safe organisation. We take a zero-tolerance approach to any form of abuse or neglect. We dedicate ourselves to ensuring Scouting is a safe place for young people.
+
+{% include scouting-photo.html src="/assets/images/scouting/benefits-impact.jpg" alt="A child safely taking part in a supervised high ropes activity" caption="Safe, supported adventure gives young people confidence to take on new challenges." position="center 40%" %}
 
 ### How we keep Scouting safe:
 

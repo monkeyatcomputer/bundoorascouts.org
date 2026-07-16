@@ -5,6 +5,9 @@ permalink: /scouting/badge-placement
 badge: "The Uniform"
 badge_debug: true
 description: "A guide to where badges should be placed on the Scout uniform, representing your journey, identity, and involvement in the movement."
+image: /assets/images/scouting/badge-placement.jpg
+image_alt: "Hands tying a climbing rope knot during an outdoor activity"
+image_position: "center 54%"
 ---
 
 The Scout uniform is a source of pride for members, displaying their achievements, their local community, and their participation in major events. This guide helps ensure badges are placed correctly according to Scouts Victoria standards.

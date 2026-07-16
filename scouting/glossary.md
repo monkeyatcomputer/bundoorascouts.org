@@ -4,9 +4,14 @@ title: "Scout Talk (Glossary)"
 permalink: /scouting/glossary
 badge: "Lingo"
 description: "A handy guide to the common terms, sections, and roles you'll encounter in the Scouting movement."
+image: /assets/images/scouting/scout-glossary.jpg
+image_alt: "A hiking group celebrating together at a mountain summit"
+image_position: "center 44%"
 ---
 
 ## Common Scouting Terms
+
+{% include scouting-photo.html src="/assets/images/scouting/campfire-community.jpg" alt="Scouts gathered around a campfire at night" caption="Every activity has its own traditions, teams and Scout talk." position="center 58%" %}
 
 *   **Joey Scouts (5-8)**: Meet weekly as a Unit; attend Kangaree. Peak award: Joey Scout Challenge Award.
 *   **Cub Scouts (8-11)**: Meet as a Unit in Patrols; attend Cuboree. Peak award: Grey Wolf Award.

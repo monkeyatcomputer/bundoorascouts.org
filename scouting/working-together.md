@@ -4,6 +4,9 @@ title: "Working Together"
 permalink: /scouting/working-together
 badge: "Community"
 description: "Scouting is a partnership between families and leaders. Learn about our code of conduct, communication, and how we work as a team."
+image: /assets/images/scouting/working-together.jpg
+image_alt: "Friends gathered together around a campfire"
+image_position: "center 54%"
 ---
 
 
@@ -12,6 +15,8 @@ description: "Scouting is a partnership between families and leaders. Learn abou
 Scouting is a friendly and welcoming activity. All youth are welcome to join. Parents are also very welcome to participate. In fact, they are integral to the success of Bundoora Scout Group.
 
 While tempers might get heated on the sidelines of sport, this is never OK in Scouting. No matter what the issues, we sort them out as friends, with respect and honesty. We want our interactions to set a good example for young people.
+
+{% include scouting-photo.html src="/assets/images/scouting/teamwork-on-water.jpg" alt="A group of kayakers paddling together on calm water" caption="Families, Leaders and young people all help move the Group forward." position="center 46%" %}
 
 ## How we treat each other
 

@@ -1,0 +1,13 @@
+{% assign photo_alt = include.alt | default: "Scouts taking part in an outdoor activity" %}
+<figure class="not-prose relative my-10 overflow-hidden rounded-[2rem] bg-primary shadow-ambient-lg" data-gsap="reveal">
+  <div class="aspect-[16/7] min-h-64 overflow-hidden">
+    <img src="{{ include.src }}" alt="{{ photo_alt }}" width="1500" height="1000" loading="lazy" decoding="async"
+      class="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
+      {% if include.position %}style="object-position: {{ include.position }};"{% endif %}>
+  </div>
+  {% if include.caption %}
+  <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/95 via-primary/65 to-transparent px-6 pb-5 pt-16 text-sm font-bold text-white md:px-8 md:pb-7">
+    {{ include.caption }}
+  </figcaption>
+  {% endif %}
+</figure>
