@@ -5,8 +5,6 @@ permalink: /scouting/glossary
 badge: "Lingo"
 description: "A handy guide to the common terms, sections, and roles you'll encounter in the Scouting movement."
 image: /assets/images/scouting/scout-glossary.jpg
-image_alt: "A hiking group celebrating together at a mountain summit"
-image_position: "center 44%"
 ---
 
 ## Common Scouting Terms

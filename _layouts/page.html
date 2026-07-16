@@ -5,9 +5,8 @@ layout: default
 <header class="hero-shell bg-primary-container">
   <div class="hero-media">
     {% if page.image %}
-    <img src="{{ page.image }}" alt="{{ page.image_alt | default: page.title }}" width="1600" height="900" loading="eager"
-      fetchpriority="high" class="hero-media-image hero-media-image--medium"
-      {% if page.image_position %}style="object-position: {{ page.image_position }};"{% endif %} />
+    <img src="{{ page.image }}" alt="{{ page.title }}" width="1600" height="900" loading="eager" fetchpriority="high"
+      class="hero-media-image hero-media-image--subtle" />
     {% else %}
     <div class="hero-fallback"
       style="--hero-fallback-start: {{ page.colour | default: '#3f5e94' }}; --hero-fallback-end: {{ page.colour_dark | default: '#100e4c' }};">

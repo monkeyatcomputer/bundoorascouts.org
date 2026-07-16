@@ -5,8 +5,6 @@ permalink: /scouting/the-program
 badge: "One Journey"
 description: "Explore the 'One Journey, One Program' framework that delivers life skills, leadership, and adventure across all sections of Scouting."
 image: /assets/images/scouting/the-program.jpg
-image_alt: "A group of young people mountain biking together outdoors"
-image_position: "center 46%"
 ---
 
 ## One Journey, One Program

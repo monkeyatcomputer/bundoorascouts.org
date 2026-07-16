@@ -3,11 +3,13 @@ layout: default
 title: Expeditions
 description: "Follow our adventures and expeditions across the country."
 permalink: /trip/
+image: /assets/images/about/expeditions.jpg
 ---
 
 <header class="hero-shell bg-primary-container">
   <div class="hero-media">
-    <div class="hero-fallback" style="--hero-fallback-start: #1e3a8a; --hero-fallback-end: #0f172a;"></div>
+    <img src="{{ page.image }}" alt="" aria-hidden="true" width="1600" height="900" loading="eager"
+      fetchpriority="high" class="hero-media-image hero-media-image--subtle">
     <div class="hero-overlay"></div>
   </div>
 

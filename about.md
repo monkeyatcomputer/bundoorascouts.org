@@ -4,6 +4,7 @@ title: "About Us"
 permalink: /about
 badge: "Meet the Group"
 description: "Bundoora Scouts has been empowering young people in Melbourne's north since the 1960s. Learn about our history, our leaders, and what makes us tick."
+image: /assets/images/about/about-us.jpg
 ---
 
 ## Our Story

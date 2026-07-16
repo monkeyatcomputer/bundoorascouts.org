@@ -5,8 +5,6 @@ permalink: /scouting/what-is-scouting
 badge: "Our Foundations"
 description: "Learn about the Scout Method, our values, and the Promise and Law that underpin everything we do in the global Scouting movement."
 image: /assets/images/scouting/scout-method.jpg
-image_alt: "Young people navigating outdoors with a map and compass"
-image_position: "center 48%"
 ---
 
 ## A Global Movement

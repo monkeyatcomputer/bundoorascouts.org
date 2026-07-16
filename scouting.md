@@ -6,8 +6,6 @@ redirect_from: [/about-scouting/new-program, /about-scouting/parent-caregiver-in
 badge: "Global Movement"
 description: "Discover the worldwide Scouting movement and how Bundoora Scouts partners with families to build resilience and leadership in young people."
 image: /assets/images/scouting/about-scouting.jpg
-image_alt: "Children hiking together through a sunlit forest with an adult close behind"
-image_position: "center 42%"
 ---
 
 <!-- Welcome from Group Leader -->

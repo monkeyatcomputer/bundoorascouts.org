@@ -5,6 +5,7 @@ permalink: /contact
 redirect_from: [/contact-us/]
 badge: "Get in touch"
 description: "Whether you want to enrol your child, volunteer as a leader, or just find out more – we'd love to hear from you."
+image: /assets/images/about/contact-us.jpg
 ---
 
 <div class="site-container-wide not-prose">

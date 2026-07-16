@@ -5,6 +5,7 @@ permalink: /about/our-sponsors
 redirect_from: [/about-us/our-sponsors]
 badge: "Our Partners"
 description: "Bundoora Scouts thrives thanks to the generous support of our local community partners and businesses. Their contributions help us provide life-changing adventures and essential skills to youth in our area."
+image: /assets/images/about/our-sponsors.jpg
 ---
 
 <div class="max-w-[1440px] mx-auto w-full">

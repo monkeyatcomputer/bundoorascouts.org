@@ -5,8 +5,6 @@ permalink: /scouting/costs-and-uniform
 badge: "Getting Started"
 description: "Practical information about the Scout uniform, where to buy it, and the costs associated with joining Bundoora Scout Group."
 image: /assets/images/scouting/costs-uniform.jpg
-image_alt: "Children roasting marshmallows together around a campfire"
-image_position: "center 42%"
 ---
 
 ## The Scout Uniform

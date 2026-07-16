@@ -5,8 +5,6 @@ permalink: /scouting/child-safety
 badge: "Zero Tolerance"
 description: "Our commitment to ensuring Scouting is a safe place for young people through strict protocols, training, and a zero-tolerance approach to abuse."
 image: /assets/images/scouting/child-safety.jpg
-image_alt: "A group of young people walking together on a forest trail"
-image_position: "center 45%"
 ---
 
 ## Our Commitment to Child Safety

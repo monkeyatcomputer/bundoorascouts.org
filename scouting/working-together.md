@@ -5,8 +5,6 @@ permalink: /scouting/working-together
 badge: "Community"
 description: "Scouting is a partnership between families and leaders. Learn about our code of conduct, communication, and how we work as a team."
 image: /assets/images/scouting/working-together.jpg
-image_alt: "Friends gathered together around a campfire"
-image_position: "center 54%"
 ---
 
 
