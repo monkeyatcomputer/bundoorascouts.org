@@ -1,0 +1,21 @@
+{% assign section = site.data.sections | where: "slug", include.section_slug | first %}
+{% if section %}
+<div class="not-prose my-6 flex flex-col gap-4 border-y border-outline-variant/30 py-4 sm:flex-row sm:items-center sm:justify-between">
+  <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-on-surface-variant">
+    <span class="inline-flex items-center gap-2">
+      <span class="material-symbols-outlined text-lg" style="color: {{ section.colour }};" aria-hidden="true">person</span>
+      Ages {{ section.age_range }}
+    </span>
+    <span class="inline-flex items-center gap-2">
+      <span class="material-symbols-outlined text-lg" style="color: {{ section.colour }};" aria-hidden="true">schedule</span>
+      {{ section.time }}
+    </span>
+  </div>
+
+  <a href="{{ section.url }}" class="btn shrink-0 text-white"
+    style="background: linear-gradient(135deg, {{ section.colour }}, {{ section.colour_dark | default: section.colour }});">
+    Explore {{ section.shortname }}
+    <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+  </a>
+</div>
+{% endif %}

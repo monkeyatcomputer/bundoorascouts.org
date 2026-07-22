@@ -1,40 +1,48 @@
 ---
-layout: default
-title: "Our Sections – Bundoora Scouts"
+layout: page
+title: "Our Sections"
 permalink: /sections
-description: "Explore all five Bundoora Scouts youth sections – from Joey Scouts (ages 5–8) all the way through to Rovers (18–26). Find the right section for your child."
+badge: "Find Your Section"
+description: "Explore Bundoora Scouts from Joey Scouts through to Rovers, or discover how adults can volunteer. Find the right place to begin your Scouting journey."
+image: /assets/images/hero-scouts.jpg
 ---
 
-<header class="hero-shell bg-primary-container">
-  <div class="hero-media">
-    <img src="/assets/images/hero-scouts.jpg" width="1600" height="900" loading="eager" fetchpriority="high"
-         alt="Scouting discovery background" 
-         class="hero-media-image hero-media-image--subtle"/>
-    <div class="hero-overlay"></div>
-  </div>
-  
-  <div class="site-container hero-content">
-    <div class="hero-copy">
-      <span class="eyebrow eyebrow--brand">
-        Our Sections
-      </span>
-      <h1 class="hero-title">
-        A Journey of <span class="hero-title-accent">Discovery.</span>
-      </h1>
-      <p class="hero-description">
-        Scouting is a progressive journey of discovery. Every section builds on the last, developing skills, confidence, and lifelong friendships in a safe and supportive environment.
-      </p>
-    </div>
-  </div>
-</header>
+## Find your place in Scouting
 
-<div class="page-shell">
+Each section is designed for a different stage of life, with the program growing alongside its members. Start with the age guide, then explore the section that feels right for you or your family.
 
-  <!-- Smart Section Grid -->
-  <div class="site-container not-prose">
-    {% include section-grid.html %}
-  </div>
+### Joey Scouts
 
-  {% include scouting-journey.html %}
+Joey Scouts introduces our youngest members to Scouting through games, stories, craft, outdoor activities, and plenty of imagination. Joeys learn to work with others, grow in confidence, and discover more about the world around them in a welcoming weekly program.
 
-</div>
+{% include section-cta.html section_slug="joeys" %}
+
+### Cub Scouts
+
+Cub Scouts turn curiosity into practical skills and shared adventures. Working in small teams called Sixes, Cubs learn to make decisions, contribute to their Pack, explore the outdoors, and take on challenges with growing independence.
+
+{% include section-cta.html section_slug="cubs" %}
+
+### Scouts
+
+Scouts take a bigger role in planning their own program and leading their Patrols. Camps, hikes, adventurous activities, creative projects, and community service give Scouts room to test themselves while learning how to rely on - and support - one another.
+
+{% include section-cta.html section_slug="scouts" %}
+
+### Venturer Scouts
+
+Venturer Scouts shape a self-directed program around ambitious adventures, leadership, service, and personal interests. We help young people connect with a nearby Venturer Unit where they can join a strong peer group and pursue challenges that matter to them.
+
+{% include section-cta.html section_slug="venturers" %}
+
+### Rover Scouts
+
+Rover Scouts is a self-governing community for young adults built around service, adventure, and fellowship. Rovers design their own experiences - from major outdoor challenges to social events and community projects - while building friendships and skills for life.
+
+{% include section-cta.html section_slug="rovers" %}
+
+### Adult Volunteers & Leaders
+
+Adults make every part of Bundoora Scouts possible. Whether you can lead a section, help occasionally, support group operations, or share a specialist skill, there is a flexible role where your time can make a practical difference for young people.
+
+{% include section-cta.html section_slug="adult" %}
