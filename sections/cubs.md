@@ -45,15 +45,20 @@ badge_card:
   button_text: "Explore the Pathway"
 ---
 
+## What to Expect
+
 {% include feature-grid.html features=page.features colour=page.colour %}
+
+## {{ page.intro.title }}
 
 {% include section-intro.html 
    section_slug=page.section_slug 
-   title=page.intro.title 
    paragraphs=page.intro.paragraphs 
    rotation=page.intro.rotation %}
 
 {% include badge-card.html %}
+
+## Our Promise and Law
 
 {% include promise-law.html 
    colour=page.colour 
@@ -63,8 +68,15 @@ badge_card:
    award_name=page.award.name 
    award_description=page.award.description %}
 
+## What Our Families Say
+
 {% include testimonial-grid.html testimonials=page.testimonials colour=page.colour %}
 
 {% include info-grid.html colour=page.colour %}
 
+{% assign section_people = site.people | where: "section", page.section_slug %}
+{% if section_people.size > 0 %}
+## Meet the Leaders
+
 {% include leader-grid.html section_slug=page.section_slug colour=page.colour %}
+{% endif %}

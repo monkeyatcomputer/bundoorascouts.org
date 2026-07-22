@@ -1,19 +1,11 @@
 {% assign features = include.features %}
-{% assign title = include.title | default: "What to Expect" %}
 {% assign accent = include.colour | default: "#3f5e94" %}
 
 <section class="py-4 bg-surface-container-low mx-2 sm:mx-4 lg:mx-8 rounded-xl mt-4 not-prose">
   <!-- Feature Grid Include -->
-  <!-- Usage: include feature-grid.html features=page.features title="What to Expect" colour=page.colour -->
+  <!-- Usage: include feature-grid.html features=page.features colour=page.colour -->
 
   <div class="max-w-[1440px] mx-auto px-4 md:px-12">
-    <div class="text-center mb-16">
-      <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight">{{ title }}</h2>
-      {% if include.description %}
-      <p class="text-on-surface-variant text-lg mt-3">{{ include.description }}</p>
-      {% endif %}
-    </div>
-
     {% if features %}
     {% assign count = features | size %}
     {% if count == 4 or count == 2 %}

@@ -39,17 +39,20 @@ intro:
   rotation: "rotate-1"
 ---
 
-{% include feature-grid.html 
-   features=page.features 
-   title="Ways to Get Involved" 
-   description="Whether you have two hours a week or two hours a month, there's a place for you at Bundoora Scouts."
-   colour=page.colour %}
+## Ways to Get Involved
+
+Whether you have two hours a week or two hours a month, there's a place for you at Bundoora Scouts.
+
+{% include feature-grid.html features=page.features colour=page.colour %}
+
+## {{ page.intro.title }}
 
 {% include section-intro.html 
    section_slug=page.section_slug 
-   title=page.intro.title 
    paragraphs=page.intro.paragraphs 
    rotation=page.intro.rotation %}
+
+## Our Promise and Law
 
 {% include promise-law.html 
    colour=page.colour 
@@ -58,6 +61,13 @@ intro:
    award_name=page.award.name 
    award_description=page.award.description %}
 
+## What Our Families Say
+
 {% include testimonial-grid.html testimonials=page.testimonials colour=page.colour %}
 
+{% assign section_people = site.people | where: "section", page.leader_slug %}
+{% if section_people.size > 0 %}
+## Meet the Leaders
+
 {% include leader-grid.html section_slug=page.leader_slug colour=page.colour %}
+{% endif %}
